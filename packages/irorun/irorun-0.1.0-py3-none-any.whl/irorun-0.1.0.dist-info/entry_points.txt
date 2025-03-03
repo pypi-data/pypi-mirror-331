@@ -1,0 +1,2 @@
+[console_scripts]
+irorun = irorun.cli:app
