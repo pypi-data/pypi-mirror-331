@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block head %}
+{% endblock %}
+
+{% block banner_header %}
+{{ super() }}
+<dl>
+  {% if current.authors %}
+  <dt>Authors</dt>
+  <dd>
+    <ul class="alt">
+      {% for author in current.authors %}
+      <li>{{ m.name(author) }}</li>
+      {% endfor %}
+    </ul>
+  </dd>
+  {% endif %}
+</dl>
+{% endblock %}
+
+{% block banner_content %}
+{% endblock %}
+
+{% block banner_other %}
+{% endblock %}
+
+{% block main %}
+{# FIXME
+<section>
+  <header class="major">
+    <h2>Table of Contents</h2>
+  </header>
+  <div class="posts">
+    {% for child in current.children %}
+    <article>
+      <h3>{{ child.title }}</h3>
+      <ul class="actions">
+        <li><a href="{{ m.path(child.path()) }}" class="button">View Article</a></li>
+      </ul>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+#}
+{% endblock %}
+
+{% block sidebar %}
+<section>
+  <header class="major">
+    <h2>Article</h2>
+  </header>
+  <div class="content">
+    <dl>
+      <dt>Title</dt>
+      <dd>{{ current.title }}</dd>
+      {% if current.authors %}
+      <dt>Authors</dt>
+      <dd>{{ m.names(current.authors) }}</dd>
+      {% endif %}
+      {% if current.doi %}
+      <dt>DOI</dt>
+      <dl><a href="{{ m.doi(current.doi) }}">{{ m.doi(current.doi) }}</a></dl>
+      {% endif %}
+    </dl>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,44 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "kind": {
+      "const": "journal-ssue",
+      "title": "Kind",
+      "type": "string"
+    },
+    "id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "integer"
+        }
+      ],
+      "title": "Id"
+    },
+    "name": {
+      "title": "Name",
+      "type": "string"
+    },
+    "publication_date": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Publication Date"
+    }
+  },
+  "required": [
+    "kind",
+    "id",
+    "name"
+  ],
+  "title": "JournalIssueModel",
+  "type": "object"
+}
