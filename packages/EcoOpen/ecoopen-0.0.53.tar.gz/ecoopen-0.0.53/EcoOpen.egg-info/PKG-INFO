@@ -1,0 +1,32 @@
+Metadata-Version: 2.2
+Name: EcoOpen
+Version: 0.0.53
+Summary: A tool for gathering information about data and data in scientific journals.
+Home-page: https://sciom.hr
+Author: Sciom d.o.o.
+Author-email: domagoj@sciom.hr
+License: MIT
+Keywords: scientific journals,open access,data_mining
+Requires-Dist: habanero
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scipy
+Requires-Dist: pdfplumber
+Requires-Dist: beautifulsoup4
+Requires-Dist: scikit-learn
+Requires-Dist: jupyterlab
+Requires-Dist: lxml
+Requires-Dist: requests-html
+Requires-Dist: lxml-html-clean
+Requires-Dist: validators
+Requires-Dist: pyDataverse
+Requires-Dist: pdf2doi
+Requires-Dist: pdfminer.six
+Requires-Dist: pyalex
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: summary

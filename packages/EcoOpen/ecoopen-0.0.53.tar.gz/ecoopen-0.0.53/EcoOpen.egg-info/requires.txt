@@ -1,0 +1,16 @@
+habanero
+numpy
+pandas
+scipy
+pdfplumber
+beautifulsoup4
+scikit-learn
+jupyterlab
+lxml
+requests-html
+lxml-html-clean
+validators
+pyDataverse
+pdf2doi
+pdfminer.six
+pyalex

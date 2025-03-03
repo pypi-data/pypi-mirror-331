@@ -1,0 +1,14 @@
+setup.cfg
+setup.py
+EcoOpen/__init__.py
+EcoOpen/core.py
+EcoOpen/data_download.py
+EcoOpen/paper_download.py
+EcoOpen.egg-info/PKG-INFO
+EcoOpen.egg-info/SOURCES.txt
+EcoOpen.egg-info/dependency_links.txt
+EcoOpen.egg-info/requires.txt
+EcoOpen.egg-info/top_level.txt
+EcoOpen/utils/__init__.py
+EcoOpen/utils/journals.py
+EcoOpen/utils/keywords.py
