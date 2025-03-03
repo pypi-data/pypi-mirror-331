@@ -1,0 +1,17 @@
+lelu_admin_test/__init__.py,sha256=tX2Jt2TuuBNdy3OCpgjZw9YQQDG-KApBe4D06bWbpFc,83
+lelu_admin_test/apps.py,sha256=dIOdmxc9ixwvUkO6hvxkZUwhgRr-Uh1CpAyZmD1fKoc,283
+lelu_admin_test/models.py,sha256=HNY2j9zoha23px8Ngc3J_Aq-VdCsDW3Y8OkIK7Q07TQ,610
+lelu_admin_test/settings.py,sha256=LlwvfbCIoCRI-REmKTrCeoaenRtvasWpEUtO-06PwdM,849
+lelu_admin_test/urls.py,sha256=tkXa5OeXS8MXHOwcd3wi4HbG465wCVpaqkBxmV6Wzws,326
+lelu_admin_test/management/__init__.py,sha256=q953aTXVBBU5O3T6iAHmcyqsZ23CPli8AhCMr0pZPHQ,83
+lelu_admin_test/management/commands/__init__.py,sha256=q953aTXVBBU5O3T6iAHmcyqsZ23CPli8AhCMr0pZPHQ,83
+lelu_admin_test/management/commands/generate_plugins.py,sha256=GwxqMvcg4qNZa5Dt0MlWZuZ0CetqYmHEuQDxtQ6oseY,802
+lelu_admin_test/migrations/0001_initial.py,sha256=rUsgpFYG3dbRs46TkfKGAR0qT0bB48bNNRhr04BrihQ,1144
+lelu_admin_test/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lelu_admin_test/views/__init__.py,sha256=kD1xbRyIDHKTDs4p4ciNkVWLbH7fn2FarYx2lZz3Euk,83
+lelu_admin_test/views/test_plugin.py,sha256=e6iPlzXCmvQjs-dihkQskw1DEi_kt0d2fGoDa2FbY0g,634
+lelu_admin_test-1.0.4.dist-info/LICENSE,sha256=_8zkhQKujG4-125jy3zOo_lEmYmsc855VoHa77hS3Ek,1095
+lelu_admin_test-1.0.4.dist-info/METADATA,sha256=6avdaItUFC7uIS2QsNA6IKKY74_4lxQlSsoZXLG-3eY,591
+lelu_admin_test-1.0.4.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+lelu_admin_test-1.0.4.dist-info/top_level.txt,sha256=6m0Mt-1hqOTjfkH3OiyucjeRUL9zRks8QwqKwQSH2eA,16
+lelu_admin_test-1.0.4.dist-info/RECORD,,
