@@ -1,0 +1,2 @@
+[console_scripts]
+juno-manager = juno_manager.cli:run_cli

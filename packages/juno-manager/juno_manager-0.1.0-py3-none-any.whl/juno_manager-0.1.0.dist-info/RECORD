@@ -1,0 +1,10 @@
+juno_manager/__init__.py,sha256=CNB-A8k97lUY0id_EAhmnI8GNIBfTndDNZUBK2bTgh4,76
+juno_manager/app.py,sha256=NJM06QqlZ4-NBY6Y4fo-gR7ngZSemfP69yQCpawPJdg,31055
+juno_manager/banner.svg,sha256=hLB3J6SOTyAGhd6cyvLUg4dz0k1081K2s3FYbEFNxXg,2045
+juno_manager/cli.py,sha256=ekNb9jh1tKekCFQBuAN1bO4DaFAF8cwJJBenEHxMdUc,1109
+juno_manager-0.1.0.dist-info/LICENSE,sha256=x88fB1Sd9Sz-xcADYqJdFzS2ygid8FTUzUNnkzlmX3o,1065
+juno_manager-0.1.0.dist-info/METADATA,sha256=faqBqXBTKuZrdGCbDshKPaYkkTg-WngZfLLW4mBJif0,4453
+juno_manager-0.1.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+juno_manager-0.1.0.dist-info/entry_points.txt,sha256=ncwZItk8TLiISVRs4Hays1MxzR0nKE5jj7TIg5TC8rA,58
+juno_manager-0.1.0.dist-info/top_level.txt,sha256=Li1Kn5WZlE-ayLsl5eOdzF94LsFJ7H12cA0ifMU5zRM,13
+juno_manager-0.1.0.dist-info/RECORD,,
