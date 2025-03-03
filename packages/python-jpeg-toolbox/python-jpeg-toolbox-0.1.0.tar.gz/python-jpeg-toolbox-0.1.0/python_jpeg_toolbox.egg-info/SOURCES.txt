@@ -1,0 +1,15 @@
+LICENSE-libjpeg.txt
+LICENSE.txt
+README.md
+setup.py
+jpeg_toolbox/__init__.py
+jpeg_toolbox/jpeg_toolbox.py
+jpeg_toolbox/jpeg_toolbox_extension.c
+jpeg_toolbox/../LICENSE-libjpeg.txt
+jpeg_toolbox/jpeg-9c-win/Lib/static_x64/jpeg.lib
+jpeg_toolbox/libs/libjpeg.so.9
+python_jpeg_toolbox.egg-info/PKG-INFO
+python_jpeg_toolbox.egg-info/SOURCES.txt
+python_jpeg_toolbox.egg-info/dependency_links.txt
+python_jpeg_toolbox.egg-info/requires.txt
+python_jpeg_toolbox.egg-info/top_level.txt
