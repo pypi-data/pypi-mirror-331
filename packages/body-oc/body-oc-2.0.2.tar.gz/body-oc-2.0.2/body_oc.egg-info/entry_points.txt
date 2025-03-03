@@ -1,0 +1,3 @@
+[console_scripts]
+body-docs = body.docs.__main__:cli
+
