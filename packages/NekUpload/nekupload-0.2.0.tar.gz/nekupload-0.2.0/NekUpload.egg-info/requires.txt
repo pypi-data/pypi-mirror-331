@@ -1,0 +1,16 @@
+numpy
+h5py
+lxml
+requests
+sympy
+python-dotenv
+click
+iniconfig
+packaging
+pytest
+pytest-mock
+memory_profiler
+sphinx==8.1.3
+sphinx-rtd-theme==3.0.2
+pyyaml
+ruamel.yaml
