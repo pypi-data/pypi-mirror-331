@@ -1,0 +1,10 @@
+mindoptpy/__init__.py,sha256=9iDHDd_fFtJD__68BToO4iSA9tNEdxa3VfiwlfEEWPk,546
+mindoptpy/libgomp.so,sha256=lm80jFjCMuizRlxCo6CtXr-kaLwk9n3qairmEPCUnyg,199112
+mindoptpy/libmindopt.so.2.1.0,sha256=vTbWRFOLKj5hdEVMfaLOEspwy9weHgYugBgbo9-o9nA,21928336
+mindoptpy/mindoptpy.so,sha256=47fgBraW82gfSS9FYhryY5kl89WRGd6SQTttGRO8go8,2226008
+mindoptpy/linux64-aarch/lib/libmindoptmilp.so.2.1.0,sha256=8mvn2tjtph8XQ2AbNMBruqLVpMQ6NcuYsr94tjRFVo4,19216864
+mindoptpy/linux64-aarch/lib/libmindoptmiqcp.so.2.1.0,sha256=TiLDMyfnBG7NuB3DhvKcz1f9fCzRjonnGG4-ZYSQR0M,26040608
+mindoptpy-2.1.0.dist-info/METADATA,sha256=X2oV9MMCw-ufx-S5RjrA2ND99xicpIn8qjlyE-RzNcU,1875
+mindoptpy-2.1.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+mindoptpy-2.1.0.dist-info/top_level.txt,sha256=0KPM6liOQzTSfqpr2HooeF6l6myUNsmlTU-NWzKv0NY,10
+mindoptpy-2.1.0.dist-info/RECORD,,
