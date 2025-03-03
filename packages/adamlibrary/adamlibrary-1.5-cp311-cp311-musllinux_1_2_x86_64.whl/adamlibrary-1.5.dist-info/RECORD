@@ -1,0 +1,10 @@
+adamlibrary/adam.cpython-311-x86_64-linux-gnu.so,sha256=8ZNL_n9dYtXJvdwQNAaFbMinR0L3ov8p5U30pG3FG24,50233
+adamlibrary/adam.cpython-311-x86_64-linux-musl.so,sha256=DEwpe30wDWSa35LJCCWICRmUnGjlTAiXXFSGRuGyk78,40304
+adamlibrary/datasetname.cpython-311-x86_64-linux-gnu.so,sha256=C-Of_M14vNJGTj6PB6da5OfyYnTqX_sumNce_vybvo8,41801
+adamlibrary/datasetname.cpython-311-x86_64-linux-musl.so,sha256=ctta0y_XXFN65lZzcE3ftJhva9bJBeH1JEnx1VJ1v8E,30824
+adamlibrary.libs/libc-e6f4cded.so.6,sha256=Pc3JWaRYU95oERt9nvbz5uLJJuWct-v9UfPb4xpehsA,2207369
+adamlibrary.libs/libpthread-2-a795c2c9.28.so,sha256=wKDP34_N6oMfhLnTRLXxrngzkWmv7h0Ow-j7DwWDzDw,169409
+adamlibrary-1.5.dist-info/METADATA,sha256=OROBRx-4rz-4161Z0-NtGLnj8KcFntg0IgyE8_xy2N8,1485
+adamlibrary-1.5.dist-info/WHEEL,sha256=m6D_qPxg9S5yk7RL3BHmx1_xOxotzGaTLb0w_ZunQoA,112
+adamlibrary-1.5.dist-info/top_level.txt,sha256=Oq1TdrVJ2hTzrny6vlf1tltbGRvo8qNWjIOO_7XIHYQ,12
+adamlibrary-1.5.dist-info/RECORD,,
