@@ -1,0 +1,35 @@
+Metadata-Version: 2.2
+Name: quotient_remainder
+Version: 0.1.0
+Summary: A package for finding remainders and quotients.
+Home-page: https://github.com/DeFiDegenDude/Quotient-Remainder
+Author: Arthur S., John "Soap Ultra" MacTavish
+Author-email: aprofileforwriting@gmail.com, excaliburpendragonii@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-python
+Dynamic: summary
+
+# My Python Project
+
+This repository contains a Python project designed to find remainders and quotients in long division. Utilities can be installed and used via `pip`.
+
+## Installation
+
+To install this project and its dependencies, follow these steps:
+
+1. **Clone the repository** to your local machine:
+   ```bash
+   git clone https://github.com/DeFiDegenDude/Quotient-Remainder
+   ```
