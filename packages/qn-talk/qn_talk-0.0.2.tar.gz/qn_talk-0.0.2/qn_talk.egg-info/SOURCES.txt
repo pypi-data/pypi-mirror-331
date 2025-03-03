@@ -1,0 +1,9 @@
+LICENSE
+README.rst
+setup.py
+qn_talk/__init__.py
+qn_talk/main1.py
+qn_talk.egg-info/PKG-INFO
+qn_talk.egg-info/SOURCES.txt
+qn_talk.egg-info/dependency_links.txt
+qn_talk.egg-info/top_level.txt
