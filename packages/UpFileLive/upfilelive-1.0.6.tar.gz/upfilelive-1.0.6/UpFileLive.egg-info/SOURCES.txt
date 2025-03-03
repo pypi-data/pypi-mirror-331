@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+UpFileLive/__init__.py
+UpFileLive/upfilelive.py
+UpFileLive.egg-info/PKG-INFO
+UpFileLive.egg-info/SOURCES.txt
+UpFileLive.egg-info/dependency_links.txt
+UpFileLive.egg-info/requires.txt
+UpFileLive.egg-info/top_level.txt
