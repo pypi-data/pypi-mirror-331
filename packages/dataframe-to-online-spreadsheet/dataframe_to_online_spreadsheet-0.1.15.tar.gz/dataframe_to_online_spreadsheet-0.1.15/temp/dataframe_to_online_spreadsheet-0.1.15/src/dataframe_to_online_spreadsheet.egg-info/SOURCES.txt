@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/dataframe_to_online_spreadsheet/__init__.py
+src/dataframe_to_online_spreadsheet/feishu.py
+src/dataframe_to_online_spreadsheet/wecom.py
+src/dataframe_to_online_spreadsheet.egg-info/PKG-INFO
+src/dataframe_to_online_spreadsheet.egg-info/SOURCES.txt
+src/dataframe_to_online_spreadsheet.egg-info/dependency_links.txt
+src/dataframe_to_online_spreadsheet.egg-info/requires.txt
+src/dataframe_to_online_spreadsheet.egg-info/top_level.txt
+tests/test_feishu.py
+tests/test_wecom.py
