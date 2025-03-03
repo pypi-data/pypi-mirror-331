@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cortex-axon-py"
+version = "0.1.1"
+description = "Middleware to forward inbound headers automatically"
+dependencies = [
+  "Flask>=2.0",
+  "requests>=2.0",
+]
+
+[tool.setuptools.packages.find]
+# Instruct setuptools to include the package folder that is the valid importable name.
+# This assumes your package directory is named "cortex_axon_py"
+where = ["."]
+include = ["cortex_axon_py*"]
