@@ -1,0 +1,42 @@
+[project]
+name = "netcheck"
+version = "0.5.6"
+description = "Netchecks is a cloud native tool for specifying and regularly checking assertions about network conditions. Use netchecks to proactively verify whether security controls are working as intended, alerting on misconfiguration."
+readme = "README.md"
+authors = [
+    {name = "Brian Thorne", email = "brian@hardbyte.nz"},
+]
+requires-python = "<4.0,>=3.10"
+dependencies = [
+    "dnspython<3.0,>=2.2",
+    "requests<3.0,>=2.28",
+    "typer<1.0,>=0.9",
+    "pydantic<3.0,>=1.10",
+    "rich<14.0.0,>=10.11.0",
+    "cel-python<1.0.0,>=0.1.5",
+]
+
+
+[tool.ruff]
+line-length = 120
+
+[dependency-groups]
+dev = [
+    "pytest<9.0,>=7.2",
+    "coveralls<4.0.0,>=3.3.1",
+    "pytest-cov<5.0.0,>=4.0.0",
+    "ruff<0.3.4,>=0.0.241",
+]
+
+[project.scripts]
+netcheck = "netcheck.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["netcheck", "netcheck.*"]
+exclude = ["operator", "scripts", "tests", "docs"]
+
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
