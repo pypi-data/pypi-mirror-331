@@ -1,0 +1,77 @@
+Metadata-Version: 2.2
+Name: scenegraph
+Version: 1.0.0
+Summary: Simple organisation of shapes in space
+Author-email: revesansparole <revesansparole@gmail.com>
+Maintainer-email: revesansparole <revesansparole@gmail.com>, Jerome Chopard <revesansparole@gmail.com>
+License: cc_by_nc
+Project-URL: repository, https://gitlab.com/revesansparole/scenegraph
+Project-URL: pip, https://pypi.org/project/scenegraph/1.0.0/
+Project-URL: conda, https://anaconda.org/revesansparole/scenegraph
+Project-URL: doc, https://revesansparole.gitlab.io/scenegraph/
+Project-URL: pypi, https://badge.fury.io/py/scenegraph
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.9
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+License-File: AUTHORS.rst
+Requires-Dist: numpy
+Provides-Extra: doc
+Requires-Dist: sphinx; extra == "doc"
+Requires-Dist: sphinx-gallery; extra == "doc"
+Requires-Dist: sphinx-rtd-theme; extra == "doc"
+Provides-Extra: dvlpt
+Requires-Dist: twine; extra == "dvlpt"
+Provides-Extra: example
+Requires-Dist: matplotlib; extra == "example"
+Provides-Extra: test
+Requires-Dist: coverage; extra == "test"
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-cov; extra == "test"
+Requires-Dist: pytest-mock; extra == "test"
+
+========================
+scenegraph
+========================
+
+.. {# pkglts, doc
+
+.. image:: https://revesansparole.gitlab.io/scenegraph/_images/badge_pkging_pip.svg
+    :alt: PyPI version
+    :target: https://pypi.org/project/scenegraph/1.0.0/
+
+.. image:: https://revesansparole.gitlab.io/scenegraph/_images/badge_pkging_conda.svg
+    :alt: Conda version
+    :target: https://anaconda.org/revesansparole/scenegraph
+
+.. image:: https://revesansparole.gitlab.io/scenegraph/_images/badge_doc.svg
+    :alt: Documentation status
+    :target: https://revesansparole.gitlab.io/scenegraph/
+
+.. image:: https://badge.fury.io/py/scenegraph.svg
+    :alt: PyPI version
+    :target: https://badge.fury.io/py/scenegraph
+
+.. #}
+.. {# pkglts, glabpkg_dev, after doc
+
+main: |main_build|_ |main_coverage|_
+
+.. |main_build| image:: https://gitlab.com/revesansparole/scenegraph/badges/main/pipeline.svg
+.. _main_build: https://gitlab.com/revesansparole/scenegraph/commits/main
+
+.. |main_coverage| image:: https://gitlab.com/revesansparole/scenegraph/badges/main/coverage.svg
+.. _main_coverage: https://gitlab.com/revesansparole/scenegraph/commits/main
+.. #}
+
+Simple organisation of shapes in space
+
