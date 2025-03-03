@@ -1,0 +1,3 @@
+[console_scripts]
+credo-ui=credo_runner:main
+
