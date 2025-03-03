@@ -1,0 +1,48 @@
+{
+    "template_file": "",
+    "run_type": "autocen&rec&reg",
+    "aut_xns3d_pars": {
+        "cen_opt": "Absolute",
+        "rec_dir_tplt": "",
+        "rec_fn_tplt": "",
+        "ref_scn_cen": null,
+        "use_dflt_ref_reg_roi": false,
+        "ref_cen_roi": [
+            0,
+            1,
+            0,
+            1
+        ],
+        "ref_cen_sli": null,
+        "use_opt_reg_roi": false,
+        "opt_reg_roi": [
+            0,
+            1,
+            0,
+            1
+        ],
+        "opt_reg_sli": null,
+        "rec_roi": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            1
+        ],
+        "ref_sli_srch_half_wz": null,
+        "ref_cen_srch_half_wz": null,
+        "ref_scn_id": null,
+        "scn_id_lst": [],
+        "scn_id_s": "",
+        "scn_id_e": "",
+        "reg_mode": "single",
+        "reg_chnk_sz": 5,
+        "mrtv_knl_sz": 0.5,
+        "ang_corr": false,
+        "ang_corr_rgn": 3,
+        "reg&rec": true,
+        "xanes3d_sav_trl_reg_fn": "",
+        "XANES_tmp_fn": ""
+    }
+}

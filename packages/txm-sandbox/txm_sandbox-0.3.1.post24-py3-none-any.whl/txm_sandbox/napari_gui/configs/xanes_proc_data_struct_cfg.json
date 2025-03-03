@@ -1,0 +1,48 @@
+{
+    "processed_XANES": {
+        "proc_parameters": {
+            "LCF": {
+                "ref": {},
+                "ref_alias":{},
+                "use_constr": true,
+                "use_lcf": false
+            },
+            "analysis_type": "wl",
+            "bin_fact": 1,
+            "data_shape": [],
+            "edge50_fit_s": 8328.0,
+            "edge50_fit_e": 8338.0,
+            "edge_eng": 8333.0,
+            "edge_fit method": {
+                "method": "polynd",
+                "optimizer": "numpy",
+                "params": {
+                    "eng_offset": 8333.0,
+                    "order": 3,
+                    "spec": "raw"
+                }
+            },
+            "edge_jump_threshold": 1.0,
+            "edge_offset_threshold": 1.0,
+            "element": "Ni",
+            "eng_list": [],
+            "flt_spec": true,
+            "post_edge_s": 100,
+            "pre_edge_e": -50,
+            "pre_post_edge_norm_fit_order": 1,
+            "use_mask": false,
+            "wl_fit method": {
+                "method": "polynd",
+                "optimizer": "numpy",
+                "params": {
+                    "eng_offset": 8341.0,
+                    "order": 4,
+                    "spec": "raw"
+                }
+            },
+            "wl_fit_eng_s": 8337.0,
+            "wl_fit_eng_e": 8345.0
+        },
+        "proc_spectrum": {}
+    }
+}

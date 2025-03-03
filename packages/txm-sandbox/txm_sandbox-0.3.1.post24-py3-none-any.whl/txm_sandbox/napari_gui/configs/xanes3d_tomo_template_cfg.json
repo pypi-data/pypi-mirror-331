@@ -1,0 +1,82 @@
+{
+    "scan id": {
+        "file_params": {
+            "raw_data_top_dir": "",
+            "data_center_dir": "",
+            "recon_top_dir": "",
+            "debug_top_dir": null,
+            "cen_list_file": null,
+            "alt_flat_file": null,
+            "alt_dark_file": null,
+            "wedge_ang_auto_det_ref_fn": "",
+            "io_confg": {                
+            },
+            "use_struc_h5_reader": true,
+            "hardware_trig_type": true,
+            "reader": "",
+            "info_reader": ""
+        },
+        "recon_config": {
+            "recon_type": "Vol Recon",
+            "use_debug": false,
+            "use_alt_flat": false,
+            "use_alt_dark": false,
+            "use_fake_flat": false,
+            "use_fake_dark": false,
+            "use_rm_zinger": false,
+            "use_mask": true,
+            "use_wedge_ang_auto_det": true,
+            "is_wedge": true,
+            "use_flat_blur": false,
+            "use_config_file": false
+        },
+        "flt_params": {
+            "0": {
+                "filter_name": "stripe_removal: vo",
+                "params": {
+                    "snr": 4.0,
+                    "la_size": 81.0,
+                    "sm_size": 21.0
+                }
+            },
+            "1": {
+                "filter_name": "denoise: median",
+                "params": {
+                    "size angle": 1.0,
+                    "size y": 5.0,
+                    "size x": 5.0
+                }
+            }
+        },
+        "data_params": {
+            "scan_id": "",
+            "downsample": 1,
+            "rot_cen": 613.5,
+            "cen_win_s": 600,
+            "cen_win_w": 80,
+            "fake_flat_val": 10000.0,
+            "fake_dark_val": 100.0,
+            "sli_s": 530,
+            "sli_e": 550,
+            "chunk_sz": 200,
+            "margin": 15,
+            "zinger_val": 500.0,
+            "mask_ratio": 1.0,
+            "wedge_missing_s": 500,
+            "wedge_missing_e": 600,
+            "wedge_ang_auto_det_thres": 0.2,
+            "fake_flat_roi": null,
+            "col_s": 0,
+            "col_e": 1279,
+            "blur_kernel": 20,
+            "wedge_col_s": 0,
+            "wedge_col_e": 1279
+        },
+        "alg_params": {
+            "algorithm": "gridrec",
+            "params": {
+                "filter_name": "parzen"
+            }
+        }
+    }
+}

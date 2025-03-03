@@ -1,0 +1,15 @@
+{
+    "processed_diff_imaging": {
+        "proc_parameters": {
+            "reg_img_path": "",
+            "img_shape": [],
+            "eng_list": [],
+            "diff_img_idx": [],
+            "diff_img_eng": [],
+            "bin_fact": 1,
+        },
+        "proc_rlt": {
+            "diff_img": null
+        }
+    }
+}

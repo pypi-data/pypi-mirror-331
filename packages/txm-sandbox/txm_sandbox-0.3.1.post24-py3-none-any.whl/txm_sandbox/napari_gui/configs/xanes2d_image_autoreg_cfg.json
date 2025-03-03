@@ -1,0 +1,40 @@
+{
+    "data_type": "2D_XANES",
+    "reg_type": "auto_reg",
+    "reg": {
+        "alg": "MRTV",
+        "ref_mode": "single",
+        "use_chnk": true,
+        "chnk_sz": 7,
+        "XANES3D_sli_srch_half_range": 10,
+        "XANES3D_fixed_ref_sli": 0,
+        "alg_pars": {
+            "MRTV": {"lvl": 3, "wz": 10, "sp_wz": 3, "smth_knl": 2},
+            "MPC": {"ovlp_r": 0.3},
+            "SR": {"mode": "TRANSLATION"}
+        }
+    },
+    "data": {
+        "im_id_s": 0,
+        "im_id_e": 183,
+        "im_id_fixed": 91,
+        "XANES3D_scn_ids": [],
+        "roi": [144, 701, 370, 844]
+    },
+    "file": {
+        "XANES3D_raw_h5_top_dir": null,
+        "XANES3D_rec_path_tplt": null,
+        "XANES2D_raw_fn": "",
+        "XANES_tmp_fn": "",
+        "sav_fn": ""
+    },
+    "preproc": {
+        "use_mask": false,
+        "mask_thres": 0.0,
+        "use_smth_im": false,
+        "smth_im_sig": 5.0
+    },
+    "meta": {
+        "eng_list": []
+    }
+}

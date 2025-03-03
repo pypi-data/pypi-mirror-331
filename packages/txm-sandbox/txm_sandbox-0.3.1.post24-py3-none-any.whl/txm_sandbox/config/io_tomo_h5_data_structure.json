@@ -1,0 +1,25 @@
+{
+    "use_h5_reader": true,
+    "structured_h5_reader": {
+        "io_data_structure": {
+            "data_path": "/Exchange/data",
+            "flat_path": "/Exchange/flat",
+            "dark_path": "/Exchange/dark",
+            "theta_path": "/Exchange/angle"
+        },
+        "io_data_info": {
+            "item00_path": "/Exchange/data",
+            "item01_path": "/Exchange/angle",
+            "item02_path": "/Experiment/Magnification",
+            "item03_path": "/Experiment/Pixel Size",
+            "item04_path": "/Experiment/X_eng (keV)",
+            "item05_path": "/Experiment/note",
+            "item06_path": "/Experiment/scan_time",
+            "item07_path": ""
+        }
+    },
+    "tomo_raw_fn_template": "tomo_zfly_id_{0}.h5",
+    "customized_reader": {
+        "user_tomo_reader": ""
+    }
+}

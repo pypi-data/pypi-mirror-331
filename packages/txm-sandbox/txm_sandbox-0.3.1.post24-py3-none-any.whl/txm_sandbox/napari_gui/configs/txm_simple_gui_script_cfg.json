@@ -1,0 +1,23 @@
+{
+    "tomo_recon": {
+        "cfg_file": "/media/usb2/TXM_XANES_Quality_Test_2025-1/XH_XANES_test_2025Feb/xanes3d_tomo_tplt_cfg_2025-02-26-23-10-07.json"
+    },
+    "tomo_batch_recon": {
+        "cfg_file": "/media/usb2/StonyBrook_Koga_2024-3/tomo_batch_trial_cen_cfg_2024-12-13-16-21-36.json"
+    },
+    "xanes2d_reg": {
+        "cfg_file": "/media/usb2/Grant_UChicago_2024/LCO30v2eHR_2D_XANES_ang_469/2D_trial_reg_cfg_LCO30v2eHR_899_2024-09-25-12-26-43.json"
+    },
+    "xanes3d_auto_cen": {
+        "cfg_file": "/media/usb2/TXM_XANES_Quality_Test_2025-1/XH_XANES_test_2025Feb/xanes3d_autocenreg-30227-30249_2025-02-27-10-58-20.json"
+    },
+    "xanes2d_fit": {
+        "cfg_file": "/media/usb2/Wenhua_2024-1/2D_trial_reg_multipos_2D_xanes_scan2_id_90392_repeat_00_pos_00_2024-07-04-23-18-01.h5"
+    },
+    "xanes3d_fit": {
+        "cfg_file": "/media/usb2/TXM_XANES_Quality_Test_2025-1/XH_XANES_test_2025Feb/3D_trial_reg_scan_id_29982-30002_2025-02-26-17-21-00_bin3x3.h5"
+    },
+    "diff_imaging": {
+        "cfg_file": "/media/usb2/XANES_test_2024/2D_trial_reg_xanes2D_78024-78206_composed_2024-01-28-12-04-09.h5"
+    }
+}
