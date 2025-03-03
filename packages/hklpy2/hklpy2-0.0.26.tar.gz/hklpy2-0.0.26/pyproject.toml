@@ -1,0 +1,126 @@
+[build-system]
+requires = ["setuptools_scm[toml]>=8", "setuptools>=70.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hklpy2"
+description = "2nd generation diffractometer controls for the Bluesky Framework."
+authors = [
+  { name = "Bluesky Team" },
+  { name = "Pete Jemian", email = "prjemian+hklpy2@gmail.com" },
+]
+maintainers = [{ name = "Pete Jemian", email = "prjemian+hklpy2@gmail.com" }]
+dynamic = ["version"]
+readme = "README.md"
+requires-python = ">=3.10"
+keywords = ["bluesky", "diffraction", "diffractometer"]
+# https://packaging.python.org/en/latest/specifications/declaring-project-metadata/?highlight=license
+license = { file = "LICENSE" }
+# https://pypi.org/classifiers/
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "Environment :: Console",
+  "Environment :: OpenStack",
+  "Intended Audience :: Science/Research",
+  "License :: Freely Distributable",
+  "License :: Public Domain",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python",
+  "Topic :: Scientific/Engineering",
+]
+
+dependencies = [
+  "bluesky",
+  "databroker <1.999",  # TODO: upgrade?
+  "numpy",
+  "ophyd",
+  "packaging", # ophyd needs this
+  "pandas",
+  "pint",
+  "pyRestTable",
+  "tqdm",
+  "ruamel.yaml",
+]
+
+[project.entry-points."hklpy2.solver"]
+no_op = "hklpy2.backends.no_op:NoOpSolver"
+hkl_soleil = "hklpy2.backends.hkl_soleil:HklSolver" # TODO: mark as linux-only
+th_tth = "hklpy2.backends.th_tth_q:ThTthSolver"
+
+[project.optional-dependencies]
+dev = [
+  "build",
+  "isort",
+  "mypy",
+  "pre-commit",
+  "pytest",
+  "ruff",
+]
+doc = [
+  "ipython",
+  "markupsafe",
+  "myst-parser",
+  "nbsphinx",
+  "ophyd",
+  "pydata-sphinx-theme",
+  "setuptools >=70.1",
+  "setuptools-scm >=8",
+  "sphinx >=7",
+  "sphinx-design",
+  "sphinx-tabs",
+]
+all = ["hklpy2[dev,doc]"]
+
+[project.urls]
+homepage = "https://prjemian.github.io/hklpy2"
+issues = "https://github.com/prjemian/hklpy2/issues"
+source = "https://github.com/prjemian/hklpy2"
+
+[tool.black]
+line-length = 115 # matches the value of 'max-line-length' in .flake8
+target-version = ['py312']
+include = '\.pyi?$'
+exclude = '''
+
+(
+  /(
+      \.eggs         # exclude a few common directories in the
+    | \.git          # root of the project
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | examples/archive
+    | build
+    | dist
+  )/
+  | hkl/_version.py
+)
+'''
+
+[tool.copyright]
+copyright = "2023-2025, Argonne National Laboratory"
+
+[tool.flake8]
+max-line-length = 115
+extend-ignore = ["E501"]
+
+[tool.isort]
+profile = "black"
+force_single_line = "True"
+line_length = 115
+multi_line_output = "NOQA"
+src_paths = ["hkl"]
+
+[tool.pytest.ini_options]
+addopts = ["--import-mode=importlib"]
+filterwarnings = [
+  # Warnings inherited from upstream packages.
+  "ignore:.*'wheel' package is no longer the canonical*:DeprecationWarning",
+]
+
+[tool.setuptools_scm]
