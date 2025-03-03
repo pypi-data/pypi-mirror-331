@@ -1,0 +1,64 @@
+Metadata-Version: 2.2
+Name: fasthtml-sqlalchemy
+Version: 0.1.0
+Summary: SQLAlchemy integration for FastHTML
+Home-page: https://github.com/jmsanchez-ibiza/fasthtml-sqlalchemy
+Author: José María Sánchez González
+Author-email: jmsanchez.ibiza@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: python-fasthtml
+Requires-Dist: sqlalchemy
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# fasthtml-sqlalchemy
+IntegraciÃ³n de SqlAlchemy con el framework fastHTML
+
+## InstalaciÃ³n
+pip install fasthtml-sqlalchemy
+
+## Ejemplo de uso:
+
+```python:
+from fasthtml import FastHTML
+from fasthtml_sqlalchemy import SQLAlchemy, BaseModel
+
+app = FastHTML()
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app.db'
+
+db = SQLAlchemy(app)
+
+class User(BaseModel):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(80), unique=True, nullable=False)
+
+db.create_all()
+
+@app.route("/")
+def get():
+    users = db.session.query(User).all()
+    return str(users)
+
+@app.route("/add/<username>")
+def add(username):
+    user = User(username=username)
+    user.save()
+    return f"User {username} added!"
+
+if __name__ == "__main__":
+    app.serve()
+```
+
+y la ayuda sigue por aquÃ­ ...

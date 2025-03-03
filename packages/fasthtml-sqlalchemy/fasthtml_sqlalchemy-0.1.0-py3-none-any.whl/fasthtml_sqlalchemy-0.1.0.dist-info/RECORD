@@ -1,0 +1,11 @@
+fasthtml_sqlalchemy/__init__.py,sha256=aC97ekfGN7pkedf8HxUfrUS7ycP-HYI3t51RimlYg1g,100
+fasthtml_sqlalchemy/core.py,sha256=wAQ1AGc3IBYzIHDC3o8fVlUG9Cbd5WlQ_o1Kakx9luY,1369
+fasthtml_sqlalchemy/models.py,sha256=UsLfjA2dMrwCaUKG0A2tzwZmHZ4dB67ag4azVJHSQj8,380
+fasthtml_sqlalchemy/utils.py,sha256=Q5T44vDlrEjzZtwF7OdmmAFnTKuL4poSgzNFO_oeWE8,190
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/test_core.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fasthtml_sqlalchemy-0.1.0.dist-info/LICENSE,sha256=QmTw_1vEZC3J1k870_f_y4wWALEK6GzulLSg4FNhSbQ,1112
+fasthtml_sqlalchemy-0.1.0.dist-info/METADATA,sha256=jNnSooxlsjl480zSLmKDCkrEpbUKjh_2Tcvr_nd15f0,1617
+fasthtml_sqlalchemy-0.1.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+fasthtml_sqlalchemy-0.1.0.dist-info/top_level.txt,sha256=mLNhZz0s6dwrlOjLHnttjFAP4QsY0kxql9ipv7Q6FKY,25
+fasthtml_sqlalchemy-0.1.0.dist-info/RECORD,,
