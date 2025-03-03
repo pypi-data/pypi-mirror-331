@@ -1,0 +1,8 @@
+# This requirements file should only include dependencies for testing
+pytest                                  # test framework
+pytest-cov                              # coverage test
+requests
+beautifulsoup4
+pyatlassian
+diskcache
+rich
