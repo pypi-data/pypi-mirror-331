@@ -1,0 +1,102 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "kind": {
+      "const": "journal",
+      "title": "Kind",
+      "type": "string"
+    },
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "name": {
+      "title": "Name",
+      "type": "string"
+    },
+    "alternate-names": {
+      "anyOf": [
+        {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Alternate-Names"
+    },
+    "variant-names": {
+      "anyOf": [
+        {
+          "items": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "format": "regex",
+                "type": "string"
+              }
+            ]
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Variant-Names"
+    },
+    "issn": {
+      "anyOf": [
+        {
+          "pattern": "^[0-9]{4}-[0-9]{3}[0-9X]$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Issn"
+    },
+    "eissn": {
+      "anyOf": [
+        {
+          "pattern": "^[0-9]{4}-[0-9]{3}[0-9X]$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Eissn"
+    },
+    "issn-l": {
+      "anyOf": [
+        {
+          "pattern": "^[0-9]{4}-[0-9]{3}[0-9X]$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Issn-L"
+    }
+  },
+  "required": [
+    "kind",
+    "id",
+    "name"
+  ],
+  "title": "JournalModel",
+  "type": "object"
+}
