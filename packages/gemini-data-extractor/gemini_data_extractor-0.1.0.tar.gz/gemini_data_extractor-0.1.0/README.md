@@ -1,0 +1,42 @@
+# Gemini Data Extractor
+
+This tool is a prof-of-concept for extracting data from PDFs and images, using the `gemini-2.0-flash-001` LLM from Google. This model attracted a lot of attention lately due to its good performances ad affordable API prices.
+
+It uses Google's GenAI library to interact with the model and extract data from a given document using your prompt. The extracted date is returned in JSON format.
+
+## Installation
+
+You can install the tool using pip:
+
+```bash
+pip install gemini-data-extractor
+```
+
+## Usage
+
+You can use the tool by running the following command:
+
+```bash
+gemini-data-extractor --path path/to/your/file.pdf --prompt "Your prompt here"
+```
+
+The tool will return the extracted data in JSON format to the standard output. You can also save the output to a file using the `--output` argument:
+
+```bash
+gemini-data-extractor --path path/to/your/file.jpg --prompt "Your prompt here" --output output.json
+```
+
+In case of a long prompt, you can save it to a file and pass the path to the file using the `--prompt-file` argument:
+
+```bash
+gemini-data-extractor --path path/to/your/file.png --prompt-file path/to/your/prompt.txt
+```
+
+## License
+
+This tool is licensed under the MIT license. You can find more information in the [LICENSE](LICENSE) file.
+
+## Disclaimer
+
+Gemini is a trademark of Google LLC. This project is not affiliated with Google LLC. The tool uses the GenAI library to interact with the `gemini-2.0-flash-001` LLM from Google.
+ The tool is provided as-is and is not officially supported by Google LLC. Use it at your own risk.
