@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+src/age_alyser.egg-info/PKG-INFO
+src/age_alyser.egg-info/SOURCES.txt
+src/age_alyser.egg-info/dependency_links.txt
+src/age_alyser.egg-info/requires.txt
+src/age_alyser.egg-info/top_level.txt
+src/agealyser/__init__.py
+src/agealyser/agealyser_enums.py
+src/agealyser/main.py
+src/agealyser/module.py
+src/agealyser/utils.py
+tests/test_.py
