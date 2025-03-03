@@ -1,0 +1,8 @@
+good_clickhouse/__init__.py,sha256=Q1Yy4c_l3_BDJC6ANTJ3-NLhJoxvN0on7-AMtvsk6eM,373
+good_clickhouse/_client.py,sha256=Buzv81YQku5JfS5chVxm5ENTjNsBbX2uPfkC3DiuTW0,5646
+good_clickhouse/chdb.py,sha256=JrS9PPHB7GX6704W1inT1Z56czmzI_TY-p0-KILJm_s,1320
+good_clickhouse/collection.py,sha256=uKucVtg_fthaU8jIyLSix5OFwHCCpRd2ekLTLoHvH_w,5478
+good_clickhouse/query.py,sha256=oEhwjzAyM0VdY_CK9ZoTroLUIxZzL2IKZImNP0grGgc,11144
+good_clickhouse-0.2.7.dist-info/METADATA,sha256=1GT9f3IWvLf_zyQVTP4zkF3teNAlJG6XX35iaM0Srns,1916
+good_clickhouse-0.2.7.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+good_clickhouse-0.2.7.dist-info/RECORD,,
