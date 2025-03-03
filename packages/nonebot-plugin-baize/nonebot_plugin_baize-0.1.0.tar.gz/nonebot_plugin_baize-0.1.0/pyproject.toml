@@ -1,0 +1,34 @@
+[project]
+name = "nonebot-plugin-baize"
+dynamic = []
+description = "A group authentication plugin based on the Baize myth"
+dependencies = [
+    "nonebot2>=2.4.1",
+]
+requires-python = ">=3.9,<4.0"
+readme = "README.md"
+version = "0.1.0"
+
+[project.license]
+text = "MIT"
+
+[project.urls]
+homepage = "https://github.com/afterow/nonebot-plugin-baize"
+
+[dependency-groups]
+dev = []
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm.build]
+includes = [
+    "nonebot_plugin_baize",
+]
+
+[tool.pdm.version]
+source = "file"
+path = "nonebot_plugin_baize/__init__.py"
