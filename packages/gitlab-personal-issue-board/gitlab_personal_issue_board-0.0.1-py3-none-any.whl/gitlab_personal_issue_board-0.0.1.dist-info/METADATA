@@ -1,0 +1,45 @@
+Metadata-Version: 2.4
+Name: gitlab-personal-issue-board
+Version: 0.0.1
+Project-URL: Documentation, https://github.com/carlijoy/gitlab-personal-issue-board#readme
+Project-URL: Issues, https://github.com/carlijoy/gitlab-personal-issue-board/issues
+Project-URL: Source, https://github.com/carlijoy/gitlab-personal-issue-board
+Author-email: Carli Freudenberg <carli.freudenberg@energymeteo.de>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.12
+Requires-Dist: attrs>=24.3.0
+Requires-Dist: nicegui>=2.9.0
+Requires-Dist: orjson>=3.10.7
+Requires-Dist: platformdirs>=4.3.6
+Requires-Dist: pydantic>=2.9.2
+Requires-Dist: python-gitlab>=5.2.0
+Requires-Dist: typed-settings>=24.6.0
+Description-Content-Type: text/markdown
+
+# Gitlab Personal Issue Board
+
+[![PyPI - Version](https://img.shields.io/pypi/v/gitlab-personal-issue-board.svg)](https://pypi.org/project/gitlab-personal-issue-board)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/gitlab-personal-issue-board.svg)](https://pypi.org/project/gitlab-personal-issue-board)
+
+-----
+
+## Table of Contents
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install gitlab-personal-issue-board
+```
+
+## License
+
+`gitlab-personal-issue-board` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
