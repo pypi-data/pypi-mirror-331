@@ -1,0 +1,600 @@
+Metadata-Version: 2.4
+Name: deepsearcher
+Version: 0.0.1rc1
+Summary: None
+Project-URL: Homepage, https://github.com/zilliztech/deep-searcher
+Author-email: Cheney Zhang <277584121@qq.com>
+License:                                  Apache License
+                                   Version 2.0, January 2004
+                                http://www.apache.org/licenses/
+        
+           TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+        
+           1. Definitions.
+        
+              "License" shall mean the terms and conditions for use, reproduction,
+              and distribution as defined by Sections 1 through 9 of this document.
+        
+              "Licensor" shall mean the copyright owner or entity authorized by
+              the copyright owner that is granting the License.
+        
+              "Legal Entity" shall mean the union of the acting entity and all
+              other entities that control, are controlled by, or are under common
+              control with that entity. For the purposes of this definition,
+              "control" means (i) the power, direct or indirect, to cause the
+              direction or management of such entity, whether by contract or
+              otherwise, or (ii) ownership of fifty percent (50%) or more of the
+              outstanding shares, or (iii) beneficial ownership of such entity.
+        
+              "You" (or "Your") shall mean an individual or Legal Entity
+              exercising permissions granted by this License.
+        
+              "Source" form shall mean the preferred form for making modifications,
+              including but not limited to software source code, documentation
+              source, and configuration files.
+        
+              "Object" form shall mean any form resulting from mechanical
+              transformation or translation of a Source form, including but
+              not limited to compiled object code, generated documentation,
+              and conversions to other media types.
+        
+              "Work" shall mean the work of authorship, whether in Source or
+              Object form, made available under the License, as indicated by a
+              copyright notice that is included in or attached to the work
+              (an example is provided in the Appendix below).
+        
+              "Derivative Works" shall mean any work, whether in Source or Object
+              form, that is based on (or derived from) the Work and for which the
+              editorial revisions, annotations, elaborations, or other modifications
+              represent, as a whole, an original work of authorship. For the purposes
+              of this License, Derivative Works shall not include works that remain
+              separable from, or merely link (or bind by name) to the interfaces of,
+              the Work and Derivative Works thereof.
+        
+              "Contribution" shall mean any work of authorship, including
+              the original version of the Work and any modifications or additions
+              to that Work or Derivative Works thereof, that is intentionally
+              submitted to Licensor for inclusion in the Work by the copyright owner
+              or by an individual or Legal Entity authorized to submit on behalf of
+              the copyright owner. For the purposes of this definition, "submitted"
+              means any form of electronic, verbal, or written communication sent
+              to the Licensor or its representatives, including but not limited to
+              communication on electronic mailing lists, source code control systems,
+              and issue tracking systems that are managed by, or on behalf of, the
+              Licensor for the purpose of discussing and improving the Work, but
+              excluding communication that is conspicuously marked or otherwise
+              designated in writing by the copyright owner as "Not a Contribution."
+        
+              "Contributor" shall mean Licensor and any individual or Legal Entity
+              on behalf of whom a Contribution has been received by Licensor and
+              subsequently incorporated within the Work.
+        
+           2. Grant of Copyright License. Subject to the terms and conditions of
+              this License, each Contributor hereby grants to You a perpetual,
+              worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+              copyright license to reproduce, prepare Derivative Works of,
+              publicly display, publicly perform, sublicense, and distribute the
+              Work and such Derivative Works in Source or Object form.
+        
+           3. Grant of Patent License. Subject to the terms and conditions of
+              this License, each Contributor hereby grants to You a perpetual,
+              worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+              (except as stated in this section) patent license to make, have made,
+              use, offer to sell, sell, import, and otherwise transfer the Work,
+              where such license applies only to those patent claims licensable
+              by such Contributor that are necessarily infringed by their
+              Contribution(s) alone or by combination of their Contribution(s)
+              with the Work to which such Contribution(s) was submitted. If You
+              institute patent litigation against any entity (including a
+              cross-claim or counterclaim in a lawsuit) alleging that the Work
+              or a Contribution incorporated within the Work constitutes direct
+              or contributory patent infringement, then any patent licenses
+              granted to You under this License for that Work shall terminate
+              as of the date such litigation is filed.
+        
+           4. Redistribution. You may reproduce and distribute copies of the
+              Work or Derivative Works thereof in any medium, with or without
+              modifications, and in Source or Object form, provided that You
+              meet the following conditions:
+        
+              (a) You must give any other recipients of the Work or
+                  Derivative Works a copy of this License; and
+        
+              (b) You must cause any modified files to carry prominent notices
+                  stating that You changed the files; and
+        
+              (c) You must retain, in the Source form of any Derivative Works
+                  that You distribute, all copyright, patent, trademark, and
+                  attribution notices from the Source form of the Work,
+                  excluding those notices that do not pertain to any part of
+                  the Derivative Works; and
+        
+              (d) If the Work includes a "NOTICE" text file as part of its
+                  distribution, then any Derivative Works that You distribute must
+                  include a readable copy of the attribution notices contained
+                  within such NOTICE file, excluding those notices that do not
+                  pertain to any part of the Derivative Works, in at least one
+                  of the following places: within a NOTICE text file distributed
+                  as part of the Derivative Works; within the Source form or
+                  documentation, if provided along with the Derivative Works; or,
+                  within a display generated by the Derivative Works, if and
+                  wherever such third-party notices normally appear. The contents
+                  of the NOTICE file are for informational purposes only and
+                  do not modify the License. You may add Your own attribution
+                  notices within Derivative Works that You distribute, alongside
+                  or as an addendum to the NOTICE text from the Work, provided
+                  that such additional attribution notices cannot be construed
+                  as modifying the License.
+        
+              You may add Your own copyright statement to Your modifications and
+              may provide additional or different license terms and conditions
+              for use, reproduction, or distribution of Your modifications, or
+              for any such Derivative Works as a whole, provided Your use,
+              reproduction, and distribution of the Work otherwise complies with
+              the conditions stated in this License.
+        
+           5. Submission of Contributions. Unless You explicitly state otherwise,
+              any Contribution intentionally submitted for inclusion in the Work
+              by You to the Licensor shall be under the terms and conditions of
+              this License, without any additional terms or conditions.
+              Notwithstanding the above, nothing herein shall supersede or modify
+              the terms of any separate license agreement you may have executed
+              with Licensor regarding such Contributions.
+        
+           6. Trademarks. This License does not grant permission to use the trade
+              names, trademarks, service marks, or product names of the Licensor,
+              except as required for reasonable and customary use in describing the
+              origin of the Work and reproducing the content of the NOTICE file.
+        
+           7. Disclaimer of Warranty. Unless required by applicable law or
+              agreed to in writing, Licensor provides the Work (and each
+              Contributor provides its Contributions) on an "AS IS" BASIS,
+              WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+              implied, including, without limitation, any warranties or conditions
+              of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+              PARTICULAR PURPOSE. You are solely responsible for determining the
+              appropriateness of using or redistributing the Work and assume any
+              risks associated with Your exercise of permissions under this License.
+        
+           8. Limitation of Liability. In no event and under no legal theory,
+              whether in tort (including negligence), contract, or otherwise,
+              unless required by applicable law (such as deliberate and grossly
+              negligent acts) or agreed to in writing, shall any Contributor be
+              liable to You for damages, including any direct, indirect, special,
+              incidental, or consequential damages of any character arising as a
+              result of this License or out of the use or inability to use the
+              Work (including but not limited to damages for loss of goodwill,
+              work stoppage, computer failure or malfunction, or any and all
+              other commercial damages or losses), even if such Contributor
+              has been advised of the possibility of such damages.
+        
+           9. Accepting Warranty or Additional Liability. While redistributing
+              the Work or Derivative Works thereof, You may choose to offer,
+              and charge a fee for, acceptance of support, warranty, indemnity,
+              or other liability obligations and/or rights consistent with this
+              License. However, in accepting such obligations, You may act only
+              on Your own behalf and on Your sole responsibility, not on behalf
+              of any other Contributor, and only if You agree to indemnify,
+              defend, and hold each Contributor harmless for any liability
+              incurred by, or claims asserted against, such Contributor by reason
+              of your accepting any such warranty or additional liability.
+        
+           END OF TERMS AND CONDITIONS
+        
+           APPENDIX: How to apply the Apache License to your work.
+        
+              To apply the Apache License to your work, attach the following
+              boilerplate notice, with the fields enclosed by brackets "[]"
+              replaced with your own identifying information. (Don't include
+              the brackets!)  The text should be enclosed in the appropriate
+              comment syntax for the file format. We also recommend that a
+              file or class name and description of purpose be included on the
+              same "printed page" as the copyright notice for easier
+              identification within third-party archives.
+        
+           Copyright 2019 Zilliz
+        
+           Licensed under the Apache License, Version 2.0 (the "License");
+           you may not use this file except in compliance with the License.
+           You may obtain a copy of the License at
+        
+               http://www.apache.org/licenses/LICENSE-2.0
+        
+           Unless required by applicable law or agreed to in writing, software
+           distributed under the License is distributed on an "AS IS" BASIS,
+           WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+           See the License for the specific language governing permissions and
+           limitations under the License.
+License-File: LICENSE
+Requires-Python: >=3.10
+Requires-Dist: argparse>=1.4.0
+Requires-Dist: fastapi>=0.115.9
+Requires-Dist: firecrawl-py>=1.12.0
+Requires-Dist: langchain-text-splitters>=0.3.6
+Requires-Dist: numpy>=2.2.3
+Requires-Dist: openai>=1.65.1
+Requires-Dist: pdfplumber>=0.11.5
+Requires-Dist: pymilvus>=2.5.4
+Requires-Dist: termcolor>=2.5.0
+Requires-Dist: tqdm>=4.67.1
+Requires-Dist: uvicorn>=0.34.0
+Description-Content-Type: text/markdown
+
+# DeepSearcher
+
+DeepSearcher combines reasoning LLMs (OpenAI o1, o3-mini, DeepSeek, Grok 3, Claude 3.7 Sonnet, etc.) and Vector Databases (Milvus, Zilliz Cloud etc.) to perform search, evaluation, and reasoning based on private data, providing highly accurate answer and comprehensive report. This project is suitable for enterprise knowledge management, intelligent Q&A systems, and information retrieval scenarios.
+
+![Architecture](./assets/pic/deep-searcher-arch.png)
+
+## 🚀 Features
+
+- **Private Data Search**: Maximizes the utilization of enterprise internal data while ensuring data security. When necessary, it can integrate online content for more accurate answers.
+- **Vector Database Management**: Supports Milvus and other vector databases, allowing data partitioning for efficient retrieval.
+- **Flexible Embedding Options**: Compatible with multiple embedding models for optimal selection.
+- **Multiple LLM Support**: Supports DeepSeek, OpenAI, and other large models for intelligent Q&A and content generation.
+- **Document Loader**: Supports local file loading, with web crawling capabilities under development.
+
+---
+
+## 🎉 Demo
+![demo](./assets/pic/demo.gif)
+
+
+## 📖 Quick Start
+
+### Installation
+Install DeepSearcher using pip:
+```bash
+# Clone the repository
+git clone https://github.com/zilliztech/deep-searcher.git
+
+# MAKE SURE the python version is greater than or equal to 3.10
+# Recommended: Create a Python virtual environment
+cd deep-searcher
+python3 -m venv .venv
+source .venv/bin/activate
+
+# Install dependencies
+pip install -e .
+```
+Prepare your `OPENAI_API_KEY` in your environment variables. If you change the LLM in the configuration, make sure to prepare the corresponding API key.
+
+### Quick start demo
+```python
+from deepsearcher.configuration import Configuration, init_config
+from deepsearcher.online_query import query
+
+config = Configuration()
+
+# Customize your config here,
+# more configuration see the Configuration Details section below.
+config.set_provider_config("llm", "OpenAI", {"model": "gpt-4o-mini"})
+config.set_provider_config("embedding", "OpenAIEmbedding", {"model": "text-embedding-ada-002"})
+init_config(config = config)
+
+# Load your local data
+from deepsearcher.offline_loading import load_from_local_files
+load_from_local_files(paths_or_directory=your_local_path)
+
+# (Optional) Load from web crawling (`FIRECRAWL_API_KEY` env variable required)
+from deepsearcher.offline_loading import load_from_website
+load_from_website(urls=website_url)
+
+# Query
+result = query("Write a report about xxx.") # Your question here
+```
+### Configuration Details:
+#### LLM Configuration
+
+<pre><code>config.set_provider_config("llm", "(LLMName)", "(Arguments dict)")</code></pre>
+<p>The "LLMName" can be one of the following: ["DeepSeek", "OpenAI", "XAI", "SiliconFlow", "PPIO", "TogetherAI", "Gemini", "Ollama"]</p>
+<p> The "Arguments dict" is a dictionary that contains the necessary arguments for the LLM class.</p>
+
+<details>
+  <summary>Example (OpenAI)</summary>
+    <p> Make sure you have prepared your OPENAI API KEY as an env variable <code>OPENAI_API_KEY</code>.</p>
+    <pre><code>config.set_provider_config("llm", "OpenAI", {"model": "gpt-4o"})</code></pre>
+    <p> More details about OpenAI models: https://platform.openai.com/docs/models </p>
+</details>
+
+<details>
+  <summary>Example (DeepSeek from official)</summary>
+    <p> Make sure you have prepared your DEEPSEEK API KEY as an env variable <code>DEEPSEEK_API_KEY</code>.</p>
+    <pre><code>config.set_provider_config("llm", "DeepSeek", {"model": "deepseek-chat"})</code></pre>
+    <p> More details about DeepSeek: https://api-docs.deepseek.com/ </p>
+</details>
+
+<details>
+  <summary>Example (DeepSeek from SiliconFlow)</summary>
+    <p> Make sure you have prepared your SILICONFLOW API KEY as an env variable <code>SILICONFLOW_API_KEY</code>.</p>
+    <pre><code>config.set_provider_config("llm", "SiliconFlow", {"model": "deepseek-ai/DeepSeek-V3"})</code></pre>
+    <p> More details about SiliconFlow: https://docs.siliconflow.cn/quickstart </p>
+</details>
+
+<details>
+  <summary>Example (DeepSeek from TogetherAI)</summary>
+    <p> Make sure you have prepared your TOGETHER API KEY as an env variable <code>TOGETHER_API_KEY</code>.</p>
+    <pre><code>config.set_provider_config("llm", "TogetherAI", {"model": "deepseek-ai/DeepSeek-V3"})</code></pre>
+    <p> You need to install together before running, execute: <code>pip install together</code>. More details about TogetherAI: https://www.together.ai/ </p>
+</details>
+
+<details>
+  <summary>Example (XAI Grok)</summary>
+    <p> Make sure you have prepared your XAI API KEY as an env variable <code>XAI_API_KEY</code>.</p>
+    <pre><code>config.set_provider_config("llm", "XAI", {"model": "grok-2-latest"})</code></pre>
+    <p> More details about XAI Grok: https://docs.x.ai/docs/overview#featured-models </p>
+</details>
+
+<details>
+  <summary>Example (Claude)</summary>
+    <p> Make sure you have prepared your ANTHROPIC API KEY as an env variable <code>ANTHROPIC_API_KEY</code>.</p>
+    <pre><code>config.set_provider_config("llm", "Anthropic", {"model": "claude-3-5-sonnet-latest"})</code></pre>
+    <p> More details about Anthropic Claude: https://docs.anthropic.com/en/home </p>
+</details>
+
+<details>
+  <summary>Example (Google Gemini)</summary>
+    <p> Make sure you have prepared your GEMINI API KEY as an env variable <code>GEMINI_API_KEY</code>.</p>
+    <pre><code>config.set_provider_config('llm', 'Gemini', { 'model': 'gemini-2.0-flash' })</code></pre>
+    <p> You need to install gemini before running, execute: <code>pip install google-genai</code>. More details about Gemini: https://ai.google.dev/gemini-api/docs </p>
+</details>
+
+<details>
+  <summary>Example (DeepSeek from PPIO)</summary>
+    <p> Make sure you have prepared your PPIO API KEY as an env variable <code>PPIO_API_KEY</code>. You can create an API Key <a href="https://ppinfra.com/settings/key-management?utm_source=github_deep-searcher">here</a>. </p>
+    <pre><code>config.set_provider_config("llm", "PPIO", {"model": "deepseek/deepseek-v3/community"})</code></pre>
+    <p> More details about PPIO: https://ppinfra.com/docs/get-started/quickstart.html?utm_source=github_deep-searcher </p>
+</details>
+
+<details>
+  <summary>Example (Ollama)</summary>
+  <p> Follow <a href="https://github.com/jmorganca/ollama">these instructions</a> to set up and run a local Ollama instance:</p>
+  <p> <a href="https://ollama.ai/download">Download</a> and install Ollama onto the available supported platforms (including Windows Subsystem for Linux).</p>
+  <p> View a list of available models via the <a href="https://ollama.ai/library">model library</a>.</p>
+  <p> Fetch available LLM models via <code>ollama pull &lt;name-of-model&gt;</code></p>
+  <p> Example: <code>ollama pull qwen2.5:3b</code></p>
+  <p> To chat directly with a model from the command line, use <code>ollama run &lt;name-of-model&gt;</code>.</p>
+  <p> By default, Ollama has a REST API for running and managing models on <a href="http://localhost:11434">http://localhost:11434</a>.</p>
+</details>
+
+#### Embedding Model Configuration
+<pre><code>config.set_provider_config("embedding", "(EmbeddingModelName)", "(Arguments dict)")</code></pre>
+<p>The "EmbeddingModelName" can be one of the following: ["MilvusEmbedding", "OpenAIEmbedding", "VoyageEmbedding", "SiliconflowEmbedding"]</p>
+<p> The "Arguments dict" is a dictionary that contains the necessary arguments for the embedding model class.</p>
+
+<details>
+  <summary>Example (OpenAI embedding)</summary>
+    <p> Make sure you have prepared your OpenAI API KEY as an env variable <code>OPENAI_API_KEY</code>.</p>
+    <pre><code>config.set_provider_config("embedding", "OpenAIEmbedding", {"model": "text-embedding-3-small"})</code></pre>
+    <p> More details about OpenAI models: https://platform.openai.com/docs/guides/embeddings/use-cases </p>
+</details>
+
+<details>
+  <summary>Example (Pymilvus built-in embedding model)</summary>
+    <p> Use the built-in embedding model in Pymilvus, you can set the model name as <code>"default"</code>, <code>"BAAI/bge-base-en-v1.5"</code>, <code>"BAAI/bge-large-en-v1.5"</code>, <code>"jina-embeddings-v3"</code>, etc. <br/>
+    See [milvus_embedding.py](deepsearcher/embedding/milvus_embedding.py) for more details.  </p>
+    <pre><code>config.set_provider_config("embedding", "MilvusEmbedding", {"model": "BAAI/bge-base-en-v1.5"})</code></pre>
+    <pre><code>config.set_provider_config("embedding", "MilvusEmbedding", {"model": "jina-embeddings-v3"})</code></pre>
+    <p> For Jina's embedding model, you need<code>JINAAI_API_KEY</code>.</p>
+    <p> You need to install pymilvus model before running, execute: <code>pip install pymilvus.model</code>. More details about Pymilvus: https://milvus.io/docs/embeddings.md </p>
+
+</details>
+
+<details>
+  <summary>Example (VoyageAI embedding)</summary>
+    <p> Make sure you have prepared your VOYAGE API KEY as an env variable <code>VOYAGE_API_KEY</code>.</p>
+    <pre><code>config.set_provider_config("embedding", "VoyageEmbedding", {"model": "voyage-3"})</code></pre>
+    <p> You need to install voyageai before running, execute: <code>pip install voyageai</code>. More details about VoyageAI: https://docs.voyageai.com/embeddings/ </p>
+</details>
+
+<details>
+  <summary>Example (Amazon Bedrock embedding)</summary>
+  <pre><code>config.set_provider_config("embedding", "BedrockEmbedding", {"model": "amazon.titan-embed-text-v2:0"})</code></pre>
+  <p> You need to install boto3 before running, execute: <code>pip install boto3</code>. More details about Amazon Bedrock: https://docs.aws.amazon.com/bedrock/ </p>
+</details>
+
+<details>
+  <summary>Example (Siliconflow embedding)</summary>
+    <p> Make sure you have prepared your Siliconflow API KEY as an env variable <code>SILICONFLOW_API_KEY</code>.</p>
+    <pre><code>config.set_provider_config("embedding", "SiliconflowEmbedding", {"model": "BAAI/bge-m3"})</code></pre>
+    <p> More details about Siliconflow: https://docs.siliconflow.cn/en/api-reference/embeddings/create-embeddings </p>
+</details>
+
+#### Vector Database Configuration
+<pre><code>config.set_provider_config("vector_db", "(VectorDBName)", "(Arguments dict)")</code></pre>
+<p>The "VectorDBName" can be one of the following: ["Milvus"] (Under development)</p>
+<p> The "Arguments dict" is a dictionary that contains the necessary arguments for the Vector Database class.</p>
+
+<details>
+  <summary>Example (Milvus)</summary>
+    <pre><code>config.set_provider_config("vector_db", "Milvus", {"uri": "./milvus.db", "token": ""})</code></pre>
+    <p> More details about Milvus Config:</p>
+    <ul>
+        <li>
+            Setting the <code>uri</code> as a local file, e.g. <code>./milvus.db</code>, is the most convenient method, as it automatically utilizes <a href="https://milvus.io/docs/milvus_lite.md" target="_blank">Milvus Lite</a> to store all data in this file.
+        </li>
+    </ul>
+    <ul>
+      <li>
+          If you have a large-scale dataset, you can set up a more performant Milvus server using 
+          <a href="https://milvus.io/docs/quickstart.md" target="_blank">Docker or Kubernetes</a>. 
+          In this setup, use the server URI, e.g., <code>http://localhost:19530</code>, as your <code>uri</code>.
+        </li>
+    </ul>
+    <ul>
+        <li>
+            If you want to use <a href="https://zilliz.com/cloud" target="_blank">Zilliz Cloud</a>, 
+            the fully managed cloud service for Milvus, adjust the <code>uri</code> and <code>token</code> 
+            according to the <a href="https://docs.zilliz.com/docs/on-zilliz-cloud-console#free-cluster-details" 
+            target="_blank">Public Endpoint and API Key</a> in Zilliz Cloud.
+        </li>
+    </ul>
+
+</details>
+
+#### File Loader Configuration
+<pre><code>config.set_provider_config("file_loader", "(FileLoaderName)", "(Arguments dict)")</code></pre>
+<p>The "FileLoaderName" can be one of the following: ["PDFLoader", "TextLoader", "UnstructuredLoader"]</p>
+<p> The "Arguments dict" is a dictionary that contains the necessary arguments for the File Loader class.</p>
+
+<details>
+  <summary>Example (Unstructured)</summary>
+    <p> Make sure you have prepared your Unstructured API KEY and API URL as env variables <code>UNSTRUCTURED_API_KEY</code> and <code>UNSTRUCTURED_API_URL</code>.</p>
+    <pre><code>config.set_provider_config("file_loader", "UnstructuredLoader", {})</code></pre>
+    <p> Currently supported file types: ["pdf"] (Under development) </p>
+    <p> You need to install unstructured-ingest before running, execute: <code>pip install unstructured-ingest</code>. More details about Unstructured: https://docs.unstructured.io/ingestion/overview </p>
+</details>
+
+#### Web Crawler Configuration
+<pre><code>config.set_provider_config("web_crawler", "(WebCrawlerName)", "(Arguments dict)")</code></pre>
+<p>The "WebCrawlerName" can be one of the following: ["FireCrawlCrawler", "Crawl4AICrawler", "JinaCrawler"]</p>
+<p> The "Arguments dict" is a dictionary that contains the necessary arguments for the Web Crawler class.</p>
+
+<details>
+  <summary>Example (FireCrawl)</summary>
+    <p> Make sure you have prepared your FireCrawl API KEY as an env variable <code>FIRECRAWL_API_KEY</code>.</p>
+    <pre><code>config.set_provider_config("web_crawler", "FireCrawlCrawler", {})</code></pre>
+    <p> More details about FireCrawl: https://docs.firecrawl.dev/introduction </p>
+</details>
+
+<details>
+  <summary>Example (Crawl4AI)</summary>
+    <p> Make sure you have run <code>crawl4ai-setup</code> in your environment.</p>
+    <pre><code>config.set_provider_config("web_crawler", "Crawl4AICrawler", {})</code></pre>
+    <p> You need to install crawl4ai before running, execute: <code>pip install crawl4ai</code>. More details about Crawl4AI: https://docs.crawl4ai.com/ </p>
+</details>
+
+<details>
+  <summary>Example (Jina Reader)</summary>
+    <p> Make sure you have prepared your Jina Reader API KEY as an env variable <code>JINA_API_TOKEN</code> or <code>JINAAI_API_KEY</code>.</p>
+    <pre><code>config.set_provider_config("web_crawler", "JinaCrawler", {})</code></pre>
+    <p> More details about Jina Reader: https://jina.ai/reader/ </p>
+</details>
+
+
+### Python CLI Mode
+#### Load
+```shell
+deepsearcher --load "your_local_path_or_url"
+# load into a specific collection
+deepsearcher --load "your_local_path_or_url" --collection_name "your_collection_name" --collection_desc "your_collection_description"
+```
+Example loading from local file:
+```shell
+deepsearcher --load "/path/to/your/local/file.pdf"
+# or more files at once
+deepsearcher --load "/path/to/your/local/file1.pdf" "/path/to/your/local/file2.md"
+```
+Example loading from url (*Set `FIRECRAWL_API_KEY` in your environment variables, see [FireCrawl](https://docs.firecrawl.dev/introduction) for more details*):
+
+```shell
+deepsearcher --load "https://www.wikiwand.com/en/articles/DeepSeek"
+```
+
+#### Query
+```shell
+deepsearcher --query "Write a report about xxx."
+```
+
+More help information
+```shell
+deepsearcher --help
+```
+### Deployment
+
+#### Configure modules
+
+You can configure all arguments by modifying [config.yaml](./config.yaml) to set up your system with default modules.
+For example, set your `OPENAI_API_KEY` in the `llm` section of the YAML file.
+
+#### Start service
+The main script will run a FastAPI service with default address `localhost:8000`.
+
+```shell
+$ python main.py
+```
+
+#### Access via browser
+
+You can open url http://localhost:8000/docs in browser to access the web service.
+Click on the button "Try it out", it allows you to fill the parameters and directly interact with the API.
+
+
+---
+
+## ❓ Q&A
+
+**Q1**: 
+OSError: We couldn't connect to 'https://huggingface.co' to load this file, couldn't find it in the cached files and it looks like GPTCache/paraphrase-albert-small-v2 is not the path to a directory containing a file named config.json.
+Checkout your internet connection or see how to run the library in offline mode at 'https://huggingface.co/docs/transformers/installation#offline-mode'.
+
+**A1**: This is mainly due to abnormal access to huggingface, which may be a network or permission problem. You can try the following two methods:
+1. If there is a network problem, set up a proxy, try adding the following environment variable.
+```bash
+export HF_ENDPOINT=https://hf-mirror.com
+```
+2. If there is a permission problem, set up a personal token, try adding the following environment variable.
+```bash
+export HUGGING_FACE_HUB_TOKEN=xxxx
+```
+
+---
+
+**Q2**: DeepSearcher doesn't run in Jupyter notebook.
+
+**A2**: Install `nest_asyncio` and then put this code block in front of your jupyter notebook.
+
+```
+pip install nest_asyncio
+```
+
+```
+import nest_asyncio
+nest_asyncio.apply()
+```
+
+---
+
+## 🔧 Module Support
+
+### 🔹 Embedding Models
+- [Open-source embedding models](https://milvus.io/docs/embeddings.md)
+- [OpenAI](https://platform.openai.com/docs/guides/embeddings/use-cases) (`OPENAI_API_KEY` env variable required)
+- [VoyageAI](https://docs.voyageai.com/embeddings/) (`VOYAGE_API_KEY` env variable required)
+- [Amazon Bedrock](https://docs.aws.amazon.com/bedrock/) (`AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` env variable required)
+
+### 🔹 LLM Support
+- [OpenAI](https://platform.openai.com/docs/models) (`OPENAI_API_KEY` env variable required)
+- [DeepSeek](https://api-docs.deepseek.com/) (`DEEPSEEK_API_KEY` env variable required)
+- [XAI Grok](https://x.ai/blog/grok-3) (`XAI_API_KEY` env variable required)
+- [Anthropic Claude](https://docs.anthropic.com/en/home) (`ANTHROPIC_API_KEY` env variable required)
+- [SiliconFlow Inference Service](https://docs.siliconflow.cn/en/userguide/introduction) (`SILICONFLOW_API_KEY` env variable required)
+- [PPIO](https://ppinfra.com/model-api/product/llm-api?utm_source=github_deep-searcher) (`PPIO_API_KEY` env variable required)
+- [TogetherAI Inference Service](https://docs.together.ai/docs/introduction) (`TOGETHER_API_KEY` env variable required)
+- [Google Gemini](https://ai.google.dev/gemini-api/docs) (`GEMINI_API_KEY` env variable required)
+- [SambaNova Cloud Inference Service](https://docs.together.ai/docs/introduction) (`SAMBANOVA_API_KEY` env variable required)
+- [Ollama](https://ollama.com/)
+
+### 🔹 Document Loader
+- Local File
+  - PDF(with txt/md) loader
+  - [Unstructured](https://unstructured.io/) (under development) (`UNSTRUCTURED_API_KEY` and `UNSTRUCTURED_URL` env variables required)
+- Web Crawler
+  - [FireCrawl](https://docs.firecrawl.dev/introduction) (`FIRECRAWL_API_KEY` env variable required)
+  - [Jina Reader](https://jina.ai/reader/) (`JINA_API_TOKEN` env variable required)
+  - [Crawl4AI](https://docs.crawl4ai.com/) (You should run command `crawl4ai-setup` for the first time)
+### 🔹 Vector Database Support
+- [Milvus](https://milvus.io/) (the same as [Zilliz](https://www.zilliz.com/))
+
+---
+## 📊 Evaluation 
+See the [Evaluation](./evaluation) directory for more details.
+
+---
+## 📌 Future Plans
+- Enhance web crawling functionality
+- Support more vector databases (e.g., FAISS...)
+- Add support for additional large models
+- Provide RESTful API interface (**DONE**)
+
+We welcome contributions! Star & Fork the project and help us build a more powerful DeepSearcher! 🎯
