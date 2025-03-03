@@ -1,0 +1,141 @@
+mutation CreateUserApiKey($name: String!, $durationDays: Int) {
+  user {
+    createUserApiKey(name: $name, durationDays: $durationDays) {
+      apiKey {
+        apiKey
+      }
+      ...Result
+    }
+  }
+}
+
+mutation CreateUser($username: String!, $password: String!, $isAdmin: Boolean!, $displayName: String) {
+  user {
+    create(
+      userData: {username: $username, password: $password, isSysadmin: false, isAdmin: $isAdmin, displayName: $displayName}
+    ) {
+      ...Result
+      user {
+        ...ReturnsUser
+      }
+    }
+  }
+}
+
+mutation DeleteUserApiKey($apiKeyId: Uuid!) {
+  user {
+    deleteUserApiKey(apiKeyId: $apiKeyId) {
+      ...Result
+    }
+  }
+}
+
+mutation DeleteUser($userId: Uuid!) {
+  user {
+    delete(id: $userId) {
+      ...Result
+    }
+  }
+}
+
+mutation AddUserToWorkspace($userId: Uuid!, $workspaceId: Uuid!, $role: WorkspaceRoleEnum!) {
+  workspace {
+    addUser(
+      workspaceUser: {userId: $userId, workspaceId: $workspaceId, role: $role}
+    ) {
+      ...Result
+    }
+  }
+}
+
+mutation ChangeWorkspaceUserRole($role: WorkspaceRoleEnum!, $userId: Uuid!, $workspaceId: Uuid!) {
+  workspace {
+    changeWorkspaceUserRole(
+      newRole: $role
+      userId: $userId
+      workspaceId: $workspaceId
+    ) {
+      ...Result
+    }
+  }
+}
+
+mutation CreateServiceApiKey($name: String!, $permission: ApiKeyPermissionEnum!, $workspaceId: Uuid!, $durationDays: Int) {
+  workspace {
+    createServiceApiKey(
+      name: $name
+      permission: $permission
+      workspaceId: $workspaceId
+      durationDays: $durationDays
+    ) {
+      ...Result
+      apiKey {
+        apiKey
+      }
+    }
+  }
+}
+
+mutation DeleteServiceApiKey($apiKeyId: Uuid!, $workspaceId: Uuid!) {
+  workspace {
+    deleteServiceApiKey(apiKeyId: $apiKeyId, workspaceId: $workspaceId) {
+      ...Result
+    }
+  }
+}
+
+mutation CreateWorkspace($name: String!, $description: String, $adminUserId: Uuid!) {
+  workspace {
+    create(
+      workspaceData: {name: $name, description: $description}
+      adminUserId: $adminUserId
+    ) {
+      ...Result
+      workspace {
+        ...ReturnsWorkspace
+      }
+    }
+  }
+}
+
+mutation RemoveUserFromWorkspace($userId: Uuid!, $workspaceId: Uuid!) {
+  workspace {
+    removeUser(userId: $userId, workspaceId: $workspaceId) {
+      ...Result
+    }
+  }
+}
+
+mutation DeleteWorkspace($workspaceId: Uuid!) {
+  workspace {
+    delete(workspaceId: $workspaceId) {
+      ...Result
+    }
+  }
+}
+
+fragment ReturnsUser on User {
+  displayName
+  id
+  isAdmin
+  isSysadmin
+  status
+  username
+}
+
+fragment Result on GQLResult {
+  error {
+    field
+    message
+  }
+  success
+}
+
+fragment ReturnsWorkspace on Workspace {
+  id
+  name
+  description
+  archived
+  createdAt
+  updatedAt
+}
