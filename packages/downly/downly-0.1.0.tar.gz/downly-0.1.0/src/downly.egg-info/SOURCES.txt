@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/downly/__init__.py
+src/downly/download.py
+src/downly.egg-info/PKG-INFO
+src/downly.egg-info/SOURCES.txt
+src/downly.egg-info/dependency_links.txt
+src/downly.egg-info/requires.txt
+src/downly.egg-info/top_level.txt
