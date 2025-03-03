@@ -1,0 +1,10 @@
+mo-dots==10.678.25061
+mo-future==7.678.25061
+mo-logs==8.678.25061
+mo-math==7.678.25061
+pytz
+
+[tests]
+mo-testing>=8.667.25032
+mo-math>=7.671.25036
+mo-threads>=6.671.25036
