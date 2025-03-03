@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+src/tados-sysnet/__init__.py
+src/tados_sysnet.egg-info/PKG-INFO
+src/tados_sysnet.egg-info/SOURCES.txt
+src/tados_sysnet.egg-info/dependency_links.txt
+src/tados_sysnet.egg-info/top_level.txt
