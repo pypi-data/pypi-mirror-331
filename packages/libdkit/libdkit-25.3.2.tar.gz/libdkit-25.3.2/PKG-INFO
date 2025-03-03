@@ -1,0 +1,76 @@
+Metadata-Version: 2.2
+Name: libdkit
+Version: 25.3.2
+Summary: Data Processing Toolkit
+Author: Cobus Nel
+Project-URL: Homepage, https://github.com/cobusn/dkit
+Project-URL: Issues, https://github.com/cobusn/dkit/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: cffi>=1.4.0
+Requires-Dist: boltons
+Requires-Dist: cerberus
+Requires-Dist: collections_extended
+Requires-Dist: cryptography
+Requires-Dist: cython
+Requires-Dist: inflect
+Requires-Dist: jinja2
+Requires-Dist: lz4
+Requires-Dist: matplotlib
+Requires-Dist: mistune==0.8.4
+Requires-Dist: pdfrw
+Requires-Dist: pyarrow
+Requires-Dist: pyparsing
+Requires-Dist: pyperclip
+Requires-Dist: python-dateutil
+Requires-Dist: python-snappy
+Requires-Dist: pyyaml
+Requires-Dist: reportlab
+Requires-Dist: requests
+Requires-Dist: sqlalchemy<2.0,>=1.4.46
+Requires-Dist: squarify
+Requires-Dist: tabulate
+Requires-Dist: tdigest
+
+DKit (Data Toolkit) 
+==================
+
+Data processing toolkit.  General purpose data
+processing library in Python:
+
+* ETL
+  - maintain schemas
+  - schema transforms
+  - transform from one format to the other
+  - support many different formats (see below)
+* Data Exploration
+* Data manipulation
+* Report generation using Latex and Reportlab
+* Extensive test coverage (>70%)
+
+# Data formats
+Include extensions that facilitate reading data, 
+transforming it and then and writing to any of the 
+following formats:
+
+* Parquet (using pyarrow)
+* SQL (using any SQLAlchemy enabled database)
+* Messagepack
+* HDF5
+* XML
+* json and jsonl
+* CSV
+* Excel
+* Apache Avro
+
+# Schema Generation 
+Support schema generation for the following:
+
+* Apache Arrow
+* Apache Avro
+* SQL (via Sqlalchemy)
+* Spark
