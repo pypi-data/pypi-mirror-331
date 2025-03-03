@@ -1,0 +1,2 @@
+[console_scripts]
+gemini-data-extractor = gemini_data_extractor:main
