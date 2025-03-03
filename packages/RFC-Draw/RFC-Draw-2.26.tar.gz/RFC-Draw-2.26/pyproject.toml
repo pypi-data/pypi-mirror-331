@@ -1,0 +1,31 @@
+[build-system]
+#requires = ["hatchling==1.26.3", "setuptools>=61"]
+requires = ["hatchling", "setuptools>=61"]
+build-backend = "hatchling.build"
+
+[project]
+name="RFC-Draw"
+version="2.26"
+authors= [
+    {name="Nevil Brownlee", email="nevil.brownlee@gmail.com"},
+    {name="Brian Carpenter", email="brianecarpenter@gmail.com"},
+    ]
+maintainers = [{name="Nevil Brownlee", email="nevil.brownlee@gmail.com"}]
+description = "Makes svg, ascii and xml diagrams for IETF RFCs"
+readme = "README.md"
+classifiers = [
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: MacOS",
+    "Development Status :: 5 - Production/Stable",
+    ]
+keywords = ["SVG", "IETF", "RFC"]
+requires-python = ">=3.6"
+dependencies = [
+    "os", "path", "re", "math", "sys", "time", "datetime",
+    #"threading", "tkinter", "playsound", "termios", "msvcrt"
+    "playsound", "termios", "msvcrt"
+    ]
