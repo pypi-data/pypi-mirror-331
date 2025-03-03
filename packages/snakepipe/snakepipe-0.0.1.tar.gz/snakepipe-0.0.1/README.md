@@ -1,0 +1,3 @@
+# snakepipe
+
+Reserved package name.

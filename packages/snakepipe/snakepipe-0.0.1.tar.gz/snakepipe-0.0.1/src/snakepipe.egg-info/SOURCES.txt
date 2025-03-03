@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+src/snakepipe/__init__.py
+src/snakepipe.egg-info/PKG-INFO
+src/snakepipe.egg-info/SOURCES.txt
+src/snakepipe.egg-info/dependency_links.txt
+src/snakepipe.egg-info/top_level.txt
