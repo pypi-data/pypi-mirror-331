@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: pyvfp64
+Version: 0.0.4
+Summary: A Python wrapper for vfp_to_json.exe to convert VFP data to pandas DataFrame
+Author: Lewis Morris
+Author-email: lewis@arched.dev
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Database
+Requires-Python: >=3.6
+Requires-Dist: pandas
+

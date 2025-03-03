@@ -1,0 +1,10 @@
+pyvfp/__init__.py,sha256=g34L_o7xAqX-pD77KZ7O1iKwZ2uRwQsNyaRXmjB-7aU,40
+pyvfp/pyvfp.py,sha256=cSuLQs9frnZ_bLprvGuAETclqjap3rFkLhXKLyhthEg,4385
+pyvfp/bin/vfp_to_json.exe,sha256=RqyDO9DlEFxoqHOptmeWHLngzthbC7vxPg4ucQoTgu0,185856
+pyvfp64/__init__.py,sha256=g34L_o7xAqX-pD77KZ7O1iKwZ2uRwQsNyaRXmjB-7aU,40
+pyvfp64/pyvfp.py,sha256=10xM_YXv2asjH0Ey1yhKzxVnh-bP5J33Tvkt4vQKBlI,3907
+pyvfp64/bin/vfp_to_json.exe,sha256=RqyDO9DlEFxoqHOptmeWHLngzthbC7vxPg4ucQoTgu0,185856
+pyvfp64-0.0.4.dist-info/METADATA,sha256=jnDhQnulQ4Rwbm-yBSaQczfOs3v0bPKREbLxTUQwvpE,430
+pyvfp64-0.0.4.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+pyvfp64-0.0.4.dist-info/top_level.txt,sha256=HWRlbpvq7IvcX61PWOF10rvxcmfPlhVq0CtL0FBTp1w,8
+pyvfp64-0.0.4.dist-info/RECORD,,
