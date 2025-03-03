@@ -1,0 +1,15 @@
+prosegrinder/__init__.py,sha256=l-HCfUTjtWdZDOi0b97MTXUJSFwY2r6Oxpd4J7DwHXA,498
+prosegrinder/__main__.py,sha256=GEoRHIJ-0FRztyOIU9-nVVQHnDNgJJaHQFccisrS7Ls,893
+prosegrinder/dictionary.py,sha256=-i5DdScnLQspWQwoqeZgKjWgtYtIAe2MyQE-rqraSr4,3402
+prosegrinder/fragment.py,sha256=_5-58bZlBagmOeKIKvRsPgEFvwZnRlcZ3ovNP7o7hJo,3334
+prosegrinder/fragment_container.py,sha256=An68AsOrMyHAjwbSMerXk42r4xBZ4-GqZa_TKpFvl90,2644
+prosegrinder/paragraph.py,sha256=0KyzHdgIxChwOZ58IjUn8-V8hyzRsxaFmowgKnt8eNA,2398
+prosegrinder/prose.py,sha256=ySbik08L3zi0x_lnxio_wq2qe9ZMTYuVtL1PGkNaDLE,4832
+prosegrinder/readability_scores.py,sha256=ubuKC2R9XV5X6c8WLc2qmtrr1j46AgPZqiDxGiAmfW0,6701
+prosegrinder/sentence.py,sha256=gk9NcO44AaWQe8RyhWZeWeSEiB6LLIcXohiLwXynDko,1364
+prosegrinder/word.py,sha256=WK9eWJQQC9ts4nRFXYccE-Wi-Jq6xdg2DF1_CBwqyKw,3404
+prosegrinder-1.3.8.dist-info/LICENSE,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+prosegrinder-1.3.8.dist-info/METADATA,sha256=kbHOSCSkiOCe1OdAKv9B2-2wK3gnqJK4wgA4Wt3iToo,4583
+prosegrinder-1.3.8.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+prosegrinder-1.3.8.dist-info/entry_points.txt,sha256=1x_eiN11gOSYip9lmsgMqnJMouJOkhF-GMrF-I1H2Ak,58
+prosegrinder-1.3.8.dist-info/RECORD,,
