@@ -1,0 +1,27 @@
+Metadata-Version: 2.4
+Name: libyamlconf
+Version: 0.1.0
+Summary: Load and verify hierarchical yaml config files.
+Project-URL: Homepage, https://github.com/eLiSCHe/libyamlconf
+Author-email: Thomas Irgang <thomas@irgang.eu>
+License-File: LICENSE
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Requires-Dist: pydantic>=2.10.6
+Requires-Dist: pyyaml>=6.0.2
+Description-Content-Type: text/markdown
+
+# libyamlconf
+
+Libyamlconf supports loading configruation form hierarchical YAML files.
+
+## Contribute
+
+This library makes use of [uv](https://github.com/astral-sh/uv) and [ruff](https://github.com/astral-sh/ruff).
+
+Use the following steps to prepare your development enviroment:
+
+- Prepare a virtual environment and install development dependencies: `uv sync`
+- Activate the virtual environment: `source .venv/bin/activate`
