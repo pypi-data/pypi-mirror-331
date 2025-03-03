@@ -1,0 +1,3 @@
+[console_scripts]
+patchcommander = cli:main
+pcmd = cli:main
