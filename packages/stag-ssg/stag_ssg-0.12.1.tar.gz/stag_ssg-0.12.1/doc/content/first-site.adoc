@@ -1,0 +1,430 @@
+= Your First Site
+:author: Michał Góral
+:toc: left
+:inheritance: https://jinja.palletsprojects.com/en/3.1.x/templates/#template-inheritance
+
+{% from "stag.html" import ref %}
+
+If you followed the link:{{ ref("quickstart") }}[Quick Start]
+guide, you should have a stub of your new page. It is really good place to
+start your journey with Stag!
+
+== Content
+
+Websites don't exist without content. Static site generators use some markup
+files to create HTML documents. These days Markdown is hands down the most
+commonly used markup language. Besides Markdown, Stag also supports Asciidoc,
+through https://asciidoctor.org[Asciidoctor]. You can integrate other markup
+languages by creating a custom link:{{ ref("writing-plugins") }}[plugin].
+
+Stag reads input files from _content_ directory and writes output documents
+to __output_ directory.
+
+For now, let's suppose that we'll stick with Markdown. Inside the _content_
+directory there's _index.md_ file will generate the front page. We can put
+other files and each one will generate another page. Subdirectories inside
+_content_ also have a meaning: they structure our site.
+
+=== Metadata
+
+Each page should provide at least some minimal metadata. For *Markdown*
+metadata is encoded in a _front-matter_, which is a special section of TOML
+at the beginning of Markdown file. It looks like this:
+
+[source,toml]
+----
++++
+title = "My First Post"
+date = 2023-09-16
+tags = ["foo", "bar"]
++++
+----
+
+For *Asciidoc* we can may its metadata fields specified by the format itself:
+
+[source,asciidoc]
+----
+= My First Post
+:date: 2023-09-16
+:tags: [foo, bar]
+----
+
+We may put anything in metadata blocks, but some fields are more important
+than the others (sorry, there's no democracy here):
+
+* `title` - page title;
+* `date` - page publication date, or its first publication date in https://en.wikipedia.org/wiki/ISO_8601[ISO 8601]
+  format;
+* `lastmod` - date of last modification; if not set, it'll be automatically
+  copied from `date`;
+* `type` - page type, used to select a different template than the default
+  one.
+
+Metadata fields may be accessed in templates by either `page.metadata` or
+shortcut: `page.md`. For example, we can set page's title like that:
+
+[source,html]
+----
+<title>{{ page.md.title }}</title>
+----
+
+== Template
+
+When you run `stag build` or `stag serve`, Stag renders the content through
+https://jinja.palletsprojects.com/en/3.1.x/[Jinja] templating engine.
+Rendered output will be put in __output_ directory.
+
+Stag passes 3 variables to each template:
+
+* `content` - rendered output of page; in fact, it is the same as
+  `page.output.content`;
+* `page` - all informations about page gathered by Stag and plugins before
+  rendering
+* `site` - collection of pages and data about them.
+
+Besides these variables, templates may also use link:{{ ref("template-functions") }}[template functions]
+and link:{{ ref("macros") }}[macros].
+
+Default theme is rather barebones so we probably need to create a new one. We
+can place it in a link:{{ ref("config") }}[configurable] _themes/default_
+directory. We may also want to run a built-in development web server, which
+automatically rebuilds __output_ when it detects any changes. To do this, run
+`stag serve`.
+
+TIP: When you're running `stag serve` and you don't see your changes updated,
+check the console output to see if it had regenerated correctly.
+
+=== Template Structure
+
+In Stag each page has its own type, configured by a `type` metadata field.
+Default type is `page` for ordinary pages and `list` for listing pages, like
+xref:_taxonomies[taxonomies].
+
+Stag chooses templates based on `page.metadata.type` and desired output
+format (HTML in our case). For ordinary pages it'll use
+_themes/default.page.html_ and for listing pages it'll use
+_themes/default/list.html_.
+
+Besides templates, themes need static files, like CSS or JavaScript files.
+Stag copies them from _static_ subdirectory.
+
+The overview of basic theme structure looks like this:
+
+----
+themes/
+  default/
+    static/
+      favicon.png
+      style.css
+    base.html
+    index.html
+    list.html
+    page.html
+    rss.xml
+----
+
+=== Base Template
+
+If we use several page types, we'll inevitably of repeating the same HTML
+skeleton over and over again. To prevent it, we may use
+{inheritance}[template inheritance]. In our example we're going to define a
+base template, _base.html_, which defines certain _blocks_ filled by specific
+templates. There will be 3 blocks in our skeleton:
+
+* `header` - optional header, which will use the default greeting if child
+  template doesn't provide it
+* `sidebar` - optional sidebar, which will be empty if child template doesn't
+  provide it
+* `main` - main section for page content
+
+{% raw %}
+[source,html]
+----
+{% from "stag.html" import absurl with context %} <1>
+
+<!DOCTYPE html>
+<html lang="{{ site.config.language }}"> <2>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% if page.md.author -%}<meta name="author" content="{{ page.md.author }}">{% endif %} <3>
+
+<title>{%- if page.metadata.title -%}{{ page.metadata.title }} &middot; {% endif %}{{ site.config.title }}</title> <4>
+
+<link rel="stylesheet" href="{{ absurl("style.css") }}"> <5>
+<link rel="icon" type="image/png" sizes="16x16" href="absurl("favicon.png")">
+</head>
+
+<body>
+<div id="layout" class="layout-center">
+
+  {% block header %} <6>
+  <header>
+    <h1>Hello!</h1>
+  </header>
+  {% endblock %}
+
+  {% block sidebar %}{% endblock %} <7>
+  {% block main required %}{% endblock %} <8>
+
+</div>
+</body>
+</html>
+----
+<1> First, we import `absurl` macro from built-in macros. Most macros require
+importing them `with context` in templates, which enables them to use `site`
+and `page` variables.
+<2> Set page language to the value of `language`, which is configured in
+_config.toml_
+<3> Check whether page has an author and add it to page's `<meta>`.
+<4> Check whether page has a title and use it to create the HTML `<title>`
+tag.
+{% endraw %}
+<5> Use `absurl` macro to create absolute URL to style.css. You should prefer
+to create all inter-site links with either link:{{ ref("macros#ref") }}[ref],
+link:{{ ref("macros#absref") }}[absref] or link:{{ ref("macros#absurl") }}[absurl]
+macros which allows to correctly create URLs relatively to configured base
+URL, and also when using `stag serve`.
+{% raw %}
+<6> Start of header block. If not provided in child templates, header block
+will render its contents from _base.html_ template. Blocks start with
+`{% block name %}` and end with `{% endblock %}`.
+<7> Start and end of sidebar block.
+<8> Start and end of main block. Main block is required: it is an error of
+child template to not provide it.
+{% endraw %}
+
+Each template which wants to reuse this skeleton must extend it by
+putting {% raw %}`{% extends "base.html" %}`{% endraw %} inside.
+
+=== Ordinary Pages
+
+Ordinary pages render from _page.html_ template.
+
+Here, _page.html_ template extends all of the blocks which _base.html_ skeleton
+defines:
+
+* inside `header` we'll put page's title;
+* inside `sidebar` we'll put page's table of contents, if it is available and
+  when it isn't disabled;
+* inside `main` we'll put page's contents.
+
+{% raw %}
+[source,html]
+----
+{% extends "base.html" %} <1>
+
+<2>
+{% block header %}
+<div id="header"><h1>{{ page.md.title }}</h1></div>
+{% endblock %}
+
+<2>
+{% block sidebar %}
+{%- if page.toc and page.md.get("toc", True) -%} <3>
+<aside id="sidebar">
+  {{ page.toc.content }}
+</aside>
+{%- endif -%}
+{% endblock %}
+
+<2>
+{% block main %}
+<main>
+  {% if page.md.get("tags") -%}
+  <div class="taglist">
+    Tags:
+    {%- for tag in page.md["tags"] -%}
+      <a class="tag" href="{ ref("tags/" + slugify(tag)) }">{{ tag }}</a>{%- if loop.nextitem -%}, {%- endif -%} <4>
+    {%- endfor %}
+  </div>
+  {%- endif %}
+
+  <article id="post" class="content">
+    {{ content }} <5>
+  </article>
+</main>
+{% endblock %}
+----
+<1> Mark that this template extends _base.html_ skeleton.
+<2> Beginnings of overridden blocks.
+<3> Generate table of contents in the sidebar. Table of contents is stored
+separately from page contents inside `page.toc.content`. Additionally, our
+template checks if table of contents is disabled for a particular page
+through page's metadata.
+<4> Use tags assigned to the page to generate links to xref:_taxonomies[taxonomy] terms.
+We're using `slugify()` function to create a string passed to `ref()` macro.
+It isn't perfect, but works and is rather straightforward.
+<5> Enter page's content
+
+{% endraw %}
+
+=== Front Page
+
+Many web pages have a front page which looks different from the other pages.
+We can achieve this in Stag by assigning a specific page type for
+_content/index.md_ file. For example, something like this will force Stag to
+use _index.html_ template to render the page:
+
+[source,markdown]
+----
++++
+type = "startpage"
++++
+
+Hello and welcome to my front page!
+----
+
+Then we can follow the same techniques which we have used previously to
+create a separate theme for the front page.
+
+=== Taxonomies
+
+Pages can be grouped in taxonomies which we define in _config.toml_. This
+improves navigation for users, who can view similar pages. For example, we
+may create two taxonomies: _category_  and _tags_.
+
+[source,toml]
+----
+[[taxonomies]]
+key = "tags"
+singular = "tag"
+plural = "tags"
+
+[[taxonomies]]
+key = "category"
+singular = "category"
+plural = "categories"
+----
+
+We add page to taxonomy by assigning it in metadata:
+
+[source,toml]
+----
++++
+tags = ["personal", "cooking"]
+category = "Recipes"
++++
+----
+
+Taxonomies are "special" kinds of pages, because they are virtual. It means
+that they do not have a physical file which represents each taxonomy in
+_content_ directory. Instead, stag groups them under the path constructed
+from their plural form (so for example under _/tags/personal_,
+_/tags/cooking_ and _/categories/recipes_).
+
+NOTE: If Stag encounters a file which is named after the name of taxonomy, it
+incorporates it. See description of
+link:{{ ref("plugin-list#_taxonomies") }}[Taxonomies Plugin] for details.
+
+There are three ways we use taxonomies in templates. First, we can get *list
+all taxonomy terms assigned to a particular page*. For example, if we'd like
+to list all tags assigned to a page, we could do it like that:
+
+{% raw %}
+.page.html
+[source,html]
+----
+{% from "stag.html" import ref with context %}
+
+{% if "tags" in page.metadata -%}
+<ul>
+{% for tag in page.metadata["tags"] -%}
+  <li><a href="{ ref("tags/" + slugify(tag)) }">{{ tag }}</a></li>
+{%- endfor %}
+</ul>
+{% endif %}
+----
+{% endraw %}
+
+We may also *list all pages assigned to taxonomy term*. Such list is by
+default rendered by a `list` template:
+
+{% raw %}
+.list.html
+[source,html]
+----
+{% if page.term %}
+<ul>
+{% for termpage in page.term.pages -%}
+  <li><a href="{{ termpage.relurl }}">{{ termpage.md.title }}</a></li>
+{%- endfor %}
+</ul>
+{% endif %}
+----
+{% endraw %}
+
+Finally, we can *list all of taxonomy terms*. Pages which group taxonomy
+terms (so for example _/tags_ and _/categories_) have a separate type:
+`taxonomy`. This way we can have a separate template for them, instead of
+placing a complex logic in e.g _list.html_ template:
+
+{% raw %}
+.taxonomy.html
+[source,html]
+----
+<h1>List of {{ page.taxonomy.plural }}</h1>
+
+<ul>
+{% for term in page.taxonomy.terms -%}
+    {%- set no = term.term.pages | length -%}
+    <li>
+        <a href="{{ term.relurl }}">{{ term.metadata.title }}</a>
+        <small>({{ no }})</small>
+    </li>
+{%- endfor %}
+</ul>
+----
+{% endraw %}
+
+=== RSS Feed
+
+RSS feeds are XML files which are used to notify about changes on your
+website. To create one, we should add 2 files:
+
+* _content/rss.xml_ - source for our RSS feed, which will change the type of
+  this page to _rss_; this file can be otherwise empty;
+* _themes/default/rss.xml_ - template used for generating pages of type
+  _rss_.
+
+.content/rss.xml
+[source,xml]
+----
++++
+title = "Recent changes"
+type = "rss"
++++
+----
+
+{% raw %}
+.themes/default/rss.xml
+[source,xml]
+----
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>{{ page.md.title }}</title>
+      <link>{{ site.config.url }}</link>
+      <description>{{ site.config.title }} - recent content</description>
+      <generator>stag - git.goral.net.pl/stag.git</generator>
+      {%- if site.config.language -%}<language>{{ site.config.language }}</language>{%- endif -%}
+      <lastBuildDate>{{ page.md.date | rfc822format }}</lastBuildDate>
+      <atom:link href="{{ page.url }}" rel="self" type="application/rss+xml" />
+
+      {%- set subdir = page.source.reldirname -%}
+      {% for item in (site.subpages_of(subdir, recursive=True) |
+          pagetype("html") |
+          selectattr("md.lastmod") |
+          sort(attribute="md.lastmod_timestamp", reverse=True))[site.config.get("maxfeeds", 20)] %}
+      <item>
+        <title>{{ item.md.title }}</title>
+        <link>{{ item.url }}</link>
+        <guid>{{ item.url }}</guid>
+        <pubDate>{{ item.md.lastmod | rfc822format }}</pubDate>
+        <description>{{ item.output.content | escape }}</description>
+      </item>
+      {% endfor %}
+  </channel>
+</rss>
+----
+{% endraw %}

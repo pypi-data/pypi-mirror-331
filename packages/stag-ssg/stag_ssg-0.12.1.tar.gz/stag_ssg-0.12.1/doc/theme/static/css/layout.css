@@ -1,0 +1,29 @@
+#main {
+    display: flex; 
+    flex-direction: column;
+}
+
+.sidebar { order: 3; flex: 100%; }
+.content { order: 2; flex: 100%; }
+.tocwrap { order: 1; flex: 100%; display: none; visibility: hidden; }
+
+@media (min-width: 970px) {
+    #main { flex-direction: row;  gap: 20px; }
+    .sidebar { order: 1; flex: 20%; padding-right: 10px; max-width: 270px; }
+    .content { order: 2; flex: 60%; max-width: 730px; }
+    .tocwrap { order: 3; flex: 20%; padding-left: 10px; }
+
+    .sidebar, .tocwrap {
+        top: 0;
+        bottom: 0;
+        position: sticky;
+        height: 100%;
+        overflow-y: scroll;
+        max-height: 100vh;
+    }
+
+}
+
+@media (min-width: 1170px) {
+    .tocwrap { display: block; visibility: visible; }
+}

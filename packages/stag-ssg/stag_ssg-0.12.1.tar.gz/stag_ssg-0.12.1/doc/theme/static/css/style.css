@@ -1,0 +1,65 @@
+dt {
+    font-weight: bold;
+}
+
+.title {
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+#hometitle {
+    display: none;
+    visibility: hidden;
+    font-weight: bold;
+    font-size: 2em;
+    margin-top: 24px;
+    margin-bottom: 20px;
+    font-variant-caps: small-caps;
+}
+
+#toctitle {
+    font-weight: bold;
+    margin-top: 24px;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    font-variant-caps: small-caps;
+}
+
+.sidebar .menutoc {
+    padding-top: 1.5em;
+    border-top: 1px solid #eaecef;
+}
+
+@media (min-width: 800px) {
+    #hometitle {
+        display: block;
+        visibility: visible;
+    }
+}
+
+.sidebar ul {
+    list-style: none;
+    margin-left: -0.5em;
+}
+
+.sidebar > ul {
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar .part-title {
+    padding-top: 0.8em;
+    font-weight: bold
+}
+
+li p {
+    margin: 0;
+}
+
+.conum {
+  -webkit-user-select: none;  
+  -moz-user-select: none;    
+  -ms-user-select: none;      
+  user-select: none;
+}
