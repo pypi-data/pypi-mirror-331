@@ -1,0 +1,6 @@
+asgi_request_logger/__init__.py,sha256=U3MYYn3aAbvfzG2iNsT8jSXKnqGQVJK0Ojn18BMsegQ,118
+asgi_request_logger/json_request_logger_middleware.py,sha256=FAWEzXY2lM5vcEDkRkfI_JIXc_LUVilakxeBl9Rurkc,6194
+asgi_request_logger-0.1.1.dist-info/LICENSE,sha256=JIO_xwclhsZ5HMejzoCLcJPFrvItaI0lqHYYxwy6cDM,1065
+asgi_request_logger-0.1.1.dist-info/METADATA,sha256=Y6D5n4pBAvoORAA3y7CQkRqJ22msGUsS_UemRifAZqw,4731
+asgi_request_logger-0.1.1.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+asgi_request_logger-0.1.1.dist-info/RECORD,,
