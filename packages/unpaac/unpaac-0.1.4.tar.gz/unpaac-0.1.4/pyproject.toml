@@ -1,0 +1,45 @@
+[tool.poetry]
+name = "unpaac"
+version = "0.1.4"
+description = "Pandas DataFrame and Series accessors to handle quantities with uncertainties."
+authors = ["Christian Schreinemachers (Cs137)"]
+license = "MIT"
+readme = "README.md"
+keywords = [
+    "physical", "quantities", "unit", "conversion", "error propagation",
+    "uncertainties", "uncertainty", "uncertainty calculations",
+    "standard deviation", "science", "pandas", "series", "dataframe"
+]
+classifiers = [
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Education",
+    "Topic :: Scientific/Engineering",
+]
+
+[tool.poetry.urls]
+repository = "https://codeberg.org/Cs137/UnPaAc"
+"Issues" = "https://codeberg.org/Cs137/UnPaAc/issues"
+"Changelog" = "https://codeberg.org/Cs137/UnPaAc/src/branch/main/CHANGELOG.md"
+
+[tool.poetry.dependencies]
+python = ">=3.9"
+pint = "^0.24.4"
+pint-pandas = "^0.7.1"
+uncertainties = "^3.2.2"
+uncertainties-pandas = "^0.1.2"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+pytest-cov = "^6.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

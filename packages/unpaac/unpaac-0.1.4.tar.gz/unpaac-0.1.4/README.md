@@ -1,0 +1,286 @@
+[![License](https://img.shields.io/pypi/l/UnPaAc?color=blue)](https://codeberg.org/Cs137/UnPaAc/src/branch/main/LICENSE)
+[![PyPI version](https://img.shields.io/pypi/v/UnPaAc.svg)](https://pypi.org/project/UnPaAc/)
+[![PyPI Downloads](https://static.pepy.tech/badge/unpaac)](https://pepy.tech/projects/unpaac)
+
+
+# UnPaAc - Uncertainties Pandas Accessors
+
+This python package provides accessors to handle quantities with uncertainties
+in pandas [`Series`](https://pandas.pydata.org/pandas-docs/stable/reference/series.html#series)
+and [`DataFrame`](https://pandas.pydata.org/pandas-docs/stable/reference/frame.html#dataframe)
+objects using the packages [`Pint`](https://github.com/hgrecco/pint)
+and [`Uncertainties`](https://github.com/lebigot/uncertainties).
+The accessors combine some of the functionalities provided by their pandas
+integrations [`pint-pandas`](https://github.com/hgrecco/pint-pandas) and
+[`uncertainties-pandas`](https://github.com/andrewgsavage/uncertainties-pandas/tree/main).
+
+
+```{warning}
+The project is currently under development and changes in its behaviour might be introduced.
+```
+
+
+## Glossary
+
+- __Pint Series__ are pandas Series that contain a `PintArray` as values. The
+  `PintArray` is a Pandas [`ExtensionArray`](https://pandas.pydata.org/pandas-docs/stable/development/extending.html#extensionarray)
+  provided by the [`pint-pandas` package](https://github.com/hgrecco/pint-pandas)
+  and allows performing unit-aware operations where appropriate. The units are
+  reflected in the Series' `dtype` attribute, e.g. `pint[milligram][Float64]`.
+  The `subdtype` corresponds to the `dtype` of the magnitudes. For detailed information
+  consult the [`pint-pandas` documentation](https://pint-pandas.readthedocs.io/en/latest).
+
+- __Pint Uncertainty Series__ are Pint Series where the `PintArray` holds an `UncertaintyArray`.
+  The latter is provided by the [`uncertainties-pandas` package](https://github.com/andrewgsavage/uncertainties-pandas/tree/main)
+  and results in a `subdtype` corresponding to `UncertaintyDtype`.
+  Pint Uncertainty Series allow calculations with quantities having uncertainties.
+  Detailed information on the `uncertainties` package can be found in
+  [its documentation](http://uncertainties.readthedocs.io/), and an example for
+  the combination with a `PintArray` in [this section](https://pint-pandas.readthedocs.io/en/latest/user/initializing.html#non-native-pandas-dtypes)
+  of the pint-pandas documentation.
+
+
+## Installation
+
+Install the latest release of UnPaAc from [PyPI](https://pypi.org/project/unpaac/)
+via `pip`:
+
+```sh
+pip install unpaac
+```
+
+The development version can be installed from
+[the Git repository](https://codeberg.org/Cs137/unpaac) using `pip`:
+
+```sh
+# Via https
+pip install git+https://codeberg.org/Cs137/unpaac.git
+
+# Via ssh
+pip install git+ssh://git@codeberg.org:Cs137/unpaac.git
+```
+
+
+## Usage
+
+The pandas `Series` and `DataFrame` accessors are available via the `uncrts`
+attribute of instances of the aforementioned object classes. In order to make
+use of the accessors, import the module `uncrts` from the package `unpaac`:
+
+```python
+from unpaac import uncrts
+```
+
+The available methods provide detailed docstrings, including examples.
+However, the following subsection demonstrates a couple of use cases, including
+a workflow that can be adopted to store and restore pandas DataFrames that contain
+quantities with uncertainties.
+
+If you have any questions or need assistance, feel free to
+[open an issue on the repository](https://codeberg.org/Cs137/unpaac/issues).
+
+### Examples
+
+#### Create a Pint Series
+
+A Pint Series can be created via the `create_pint_series()` function.
+The creation with the mandatory attributes `values` and `unit`, is shown underneath.
+
+```python
+from unpaac.uncrts import create_pint_series
+
+p_series = create_pint_series([1.0, 2.0, 3.0], "mg")
+print(p_series)
+```
+
+    0    1.0
+    1    2.0
+    2    3.0
+    dtype: pint[milligram][Float64]
+
+Optionally, you can declare `uncertainties` and/or
+[further keyword arguments](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html)
+that are passed to the pandas Series constructor, e.g. `name`.
+If uncertainties are provided, a Pint Uncertainty Series is created.
+
+```python
+pu_series = create_pint_series([1.0, 2.0, 3.0], "m", uncertainties=[0.1, 0.2, 0.3], name="length")
+print(pu_series)
+```
+
+    0    1.00+/-0.10
+    1    2.00+/-0.20
+    2    3.00+/-0.30
+    Name: length, dtype: pint[meter][UncertaintyDtype]
+
+#### Retrieve nominal values and standard deviations as Pint Series
+
+You can obtain Pint Series of the nominal values and standard deviations via the
+series accessor properties `nominal_values` and `std_devs`, or their shortcuts
+`n` and `s`, respectively.
+
+```python
+pu_series.uncrts.n
+```
+
+    0    1.0
+    1    2.0
+    2    3.0
+    Name: length, dtype: pint[meter][Float64]
+
+```python
+pu_series.uncrts.s
+```
+
+    0    0.1
+    1    0.2
+    2    0.3
+    Name: δ(length), dtype: pint[meter][Float64]
+
+The method `to_series()` returns a tuple with both Pint Series:
+
+```python
+n, s = pu_series.uncrts.to_series()
+```
+
+#### Add Uncertainties to a Pint Series in a DataFrame
+
+The DataFrame accessor allows assigning uncertainties to a column that holds a
+Pint Series via the `add()` method, as shows underneath.
+
+```python
+df = pd.DataFrame({"mass": p_series})
+df.uncrts.add("mass", [0.1, 0.2, 0.3])
+print(df)
+```
+
+              mass
+    0  1.00+/-0.10
+    1  2.00+/-0.20
+    2  3.00+/-0.30
+
+#### Deconvolute Pint Uncertainty Series Columns
+
+The `deconvolute()` method allows splitting a column with a Pint Uncertainty Series
+into separate columns for nominal values and uncertainties containing Pint Series.
+
+```python
+deconv_df = df.uncrts.deconvolute()
+print(deconv_df)
+```
+
+       mass  δ(mass)
+    0   1.0      0.1
+    1   2.0      0.2
+    2   3.0      0.3
+
+#### Convolute Pint Series Columns
+
+The `convolute()` method allows combining nominal values and standard deviations
+from separate columns containing Pint Series into a single column holding a Pint
+Uncertainty Series. In case your standard deviation column uses custom `prefix`
+and `suffix` values, those can be specified as keyword arguments to a call of the
+method.
+
+```python
+deconv_df.uncrts.convolute()
+```
+
+              mass
+    0  1.00+/-0.10
+    1  2.00+/-0.20
+    2  3.00+/-0.30
+
+### Save a DataFrame to CSV and restore DataFrame from CSV
+
+After using the `deconvolute()` method to split a Pint Uncertainty Series column
+into Pint Series with the nominal values and uncertainties, you can save the data
+to a CSV file. However, you should first apply `pint.dequantify()` method to add
+the units to the column headers before saving. When reading the data back, use
+`pint.quantify()` to restore the units, followed by the `convolute()` method to
+combine the nominal values and uncertainties again.
+
+#### Example Workflow
+
+```python
+# Dequantify DataFrame and saving as CSV
+df_dequantified = deconv_df.pint.dequantify()
+df_dequantified.to_csv("data_with_uncertainties_and_units.csv")
+
+# Read back from CSV
+df_read = pd.read_csv("data_with_uncertainties_and_units.csv", header=[0,1], index_col=0)
+print(df_read)
+```
+              mass   δ(mass)
+    unit milligram milligram
+    0          1.0       0.1
+    1          2.0       0.2
+    2          3.0       0.3
+
+```python
+# Restore units
+df_quantified = df_read.pint.quantify(level=-1)
+
+# Restore uncertainties
+df_restored = df_quantified.uncrts.convolute()
+print(df_restored)
+```
+
+              mass
+    0  1.00+/-0.10
+    1  2.00+/-0.20
+    2  3.00+/-0.30
+
+
+## Changes
+
+All notable changes to this project are documented in the file
+[`CHANGELOG.md`](https://codeberg.org/Cs137/unpaac/src/branch/main/CHANGELOG.md).
+
+
+## Contributing
+
+Contributions to the `UnPaAc` package are very welcomed. Feel free to submit a
+pull request, if you would like to contribute to the project. In case you are
+unfamiliar with the process, consult the
+[forgejo documentation](https://forgejo.org/docs/latest/user/pull-requests-and-git-flow/)
+and follow the steps using this repository instead of the `example` repository.
+
+Create your [pull request (PR)](https://codeberg.org/Cs137/unpaac/pulls) to
+inform that you start working on a contribution. Provide a clear description
+of your envisaged changes and the motivation behind them, prefix the PR's title
+with ``WIP: `` until your changes are finalised.
+
+All kind of contributions are appreciated, whether they are
+bug fixes, new features, or improvements to the documentation.
+
+
+## Development
+
+### Installing for development
+
+To install the package in development mode, clone the Git repository and install
+the package using Poetry, as shown in the code block underneath. To install Poetry,
+which is required for virtual environment and dependency management, follow the
+instructions on the [Poetry website](https://python-poetry.org/docs/#installation).
+
+```bash
+git clone https://codeberg.org/Cs137/unpaac.git
+cd unpaac
+poetry install
+```
+
+This will create a virtual environment and install the package dependencies and
+the package itself in editable mode, allowing you to make changes to the code and
+see the effects immediately in the corresponding virtual environment. Alternatively,
+you can install it via `pip install -e` in an existing virtual environment.
+
+
+## License
+
+UnPaAc is open source software released under the MIT License.
+See [LICENSE](https://codeberg.org/Cs137/UnPaAc/src/branch/main/LICENSE) file for details.
+
+---
+
+This package was created and is maintained by Christian Schreinemachers, (C) 2025.
