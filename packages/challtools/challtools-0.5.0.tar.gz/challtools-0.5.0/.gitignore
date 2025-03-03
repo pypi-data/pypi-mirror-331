@@ -1,0 +1,6 @@
+todo.md
+*.egg-info
+__pycache__
+.coverage
+coverage.xml
+build

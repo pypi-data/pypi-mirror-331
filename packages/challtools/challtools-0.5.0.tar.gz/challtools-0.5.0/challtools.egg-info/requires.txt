@@ -1,0 +1,13 @@
+PyYAML
+jsonschema>=3.0.0
+docker!=3.1.2,!=5.0.0,>=2.3.0
+requests>=2.0.0
+argcomplete>=2.0.0
+
+[:platform_system == "Windows"]
+pypiwin32
+
+[dev]
+pytest
+pytest-cov
+pwntools

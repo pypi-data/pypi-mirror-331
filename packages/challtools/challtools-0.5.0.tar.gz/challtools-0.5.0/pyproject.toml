@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=64", "setuptools_scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "challtools"
+authors = [{ name = "Mateusz Drwal", email = "challtools@mateuszdrwal.com" }]
+description = "A tool for managing CTF challenges and challenge repositories using the OpenChallSpec"
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "PyYAML",
+    "jsonschema>=3.0.0",
+    "docker>=2.3.0,!=3.1.2,!=5.0.0",
+    "requests>=2.0.0",
+    'pypiwin32;platform_system=="Windows"',
+    "argcomplete>=2.0.0",
+]
+optional-dependencies = {"dev" = ["pytest", "pytest-cov", "pwntools"]}
+scripts = { challtools = "challtools.entry:main" }
+urls = { repository = "https://github.com/mateuszdrwal/challtools" }
+dynamic = ["version"]
+
+[tool.setuptools_scm]
+
+[tool.basedpyright]
+reportAny = false
+reportExplicitAny = false
+
+[tool.pylint."messages control"]
+disable = ["line-too-long", "missing-module-docstring", "too-few-public-methods", "fixme"]
+
+[tool.isort]
+profile = "black"
