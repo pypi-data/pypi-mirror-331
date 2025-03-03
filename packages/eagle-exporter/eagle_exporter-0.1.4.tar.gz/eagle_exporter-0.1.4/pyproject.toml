@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "eagle-exporter"
+version = "0.1.4"
+description = "CLI tool and library for exporting metadata from Eagle app JSON into parquet or huggingface dataset."
+authors = ["yada <trojblue@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [
+    { include = "eagle_exporter", from = "src" }
+]
+
+
+[tool.poetry.dependencies]
+python = "^3.10"
+unibox = "^0.8.2"
+datasets = "^3.2.0"
+pandas = "^2.2.3"
+tqdm = "^4.67.1"
+click = "^8.1.8"
+pillow = "*"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+eagle-exporter = "eagle_exporter.cli:main"
