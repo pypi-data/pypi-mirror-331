@@ -1,0 +1,12 @@
+mlog/__init__.py,sha256=_qGnN-1xdHgJrHaxSxjAUneaSb8-_lpXdknoXjboZAw,44
+mlog/mlog.py,sha256=sYnvlj3_WJ9Ym09cqh-Ss0QVa2VHE_ah3IIbSXMZIYY,2898
+mlog/test.py,sha256=dkkuzCCNVeG9k2wDdfrCa_1V5Uz6h2LEfBqLf30-qVA,368
+tests/__init__.py,sha256=gnwHgapjxUXKQ3oP-3dv5_7DNfXWDAhsLlJLKXd3_1E,30
+tests/test_mlog.py,sha256=i_uYu__NYDEqY8z8O2UVzcSIv8fVHv-ARF0hKbpfpNw,2161
+tracecolor/__init__.py,sha256=08dBrWsROxNon3xWr4bxgaBsh5Ft1dXaXFVJ8iVTOuM,42
+tracecolor/mlog.py,sha256=fmpe2h40a27qTbkem6FQxjPBtTq0E4uV1dMnQOLLKbs,2822
+tracecolor-0.1.0.dist-info/LICENSE,sha256=Bz3T_xQQpUI8cq1WZtwJPd3F1thisV_1SVKzZURbHwQ,1089
+tracecolor-0.1.0.dist-info/METADATA,sha256=nZaLeIqI75CGdzJaSPj-0uuWgl4UDU_nO-8-YbzdEyg,2649
+tracecolor-0.1.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+tracecolor-0.1.0.dist-info/top_level.txt,sha256=7_6BFAMjfyTjHJcwPi6005a8mE57Q_3F3OAHzkXM-Dg,22
+tracecolor-0.1.0.dist-info/RECORD,,
