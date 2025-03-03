@@ -1,0 +1,11 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "markdom"
+version = "0.0.1"
+description = "Reserved package name on PyPI"
+readme = "README.md"
+authors = [{name = "Package Maintainer", email = "maintainer@example.com"}]
+requires-python = ">=3.7"
