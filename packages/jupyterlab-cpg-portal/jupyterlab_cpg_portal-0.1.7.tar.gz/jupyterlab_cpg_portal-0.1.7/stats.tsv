@@ -1,0 +1,2 @@
+file	format	type	num_seqs	sum_len	min_len	avg_len	max_len	Q1	Q2	Q3	sum_gap	N50	N50_num	Q20(%)	Q30(%)	AvgQual	GC(%)	sum_n
+1b5daf8c-4fe4-4c28-814c-d4ab742f18d6_nepal.fasta	FASTA	DNA	1226	36661078	29903	29903.0	29903	29903.0	29903.0	29903.0	20962	29903	1	0.00	0.00	0.00	37.54	374684
