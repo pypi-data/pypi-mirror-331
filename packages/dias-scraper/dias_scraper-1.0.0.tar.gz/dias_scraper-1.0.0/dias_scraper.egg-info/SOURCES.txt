@@ -1,0 +1,9 @@
+setup.py
+dias_scraper/__init__.py
+dias_scraper/diasScraper.py
+dias_scraper.egg-info/PKG-INFO
+dias_scraper.egg-info/SOURCES.txt
+dias_scraper.egg-info/dependency_links.txt
+dias_scraper.egg-info/entry_points.txt
+dias_scraper.egg-info/requires.txt
+dias_scraper.egg-info/top_level.txt

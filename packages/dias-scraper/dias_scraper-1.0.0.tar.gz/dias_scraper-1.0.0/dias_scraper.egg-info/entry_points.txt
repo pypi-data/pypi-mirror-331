@@ -1,0 +1,2 @@
+[console_scripts]
+dias-scraper = dias_scraper:diasScraper
