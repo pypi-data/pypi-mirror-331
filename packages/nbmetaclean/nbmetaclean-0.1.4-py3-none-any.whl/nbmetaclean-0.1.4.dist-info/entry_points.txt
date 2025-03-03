@@ -1,0 +1,9 @@
+[console_scripts]
+nbcheck = nbmetaclean.app_check:app_check
+nbclean = nbmetaclean.app_clean:app_clean
+nbmetaclean = nbmetaclean.app_clean:app_clean
+
+[pipx.run]
+nbcheck = nbmetaclean.app_check:app_check
+nbclean = nbmetaclean.app_clean:app_clean
+nbmetaclean = nbmetaclean.app_clean:app_clean
