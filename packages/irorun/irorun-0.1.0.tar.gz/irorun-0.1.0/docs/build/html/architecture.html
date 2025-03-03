@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Project Architecture &#8212; irorun  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=47202671" />
+    <link rel="stylesheet" type="text/css" href="_static/haiku.css?v=fce32b03" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Configuration" href="configuration.html" />
+    <link rel="prev" title="Installation and Development Setup" href="installation.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="index.html">
+          <span>irorun  documentation</span></a></h1>
+        <h2 class="heading"><span>Project Architecture</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="Top">
+      
+        <p>
+        «&#160;&#160;<a href="installation.html">Installation and Development Setup</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="configuration.html">Configuration</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section id="project-architecture">
+<h1>Project Architecture<a class="headerlink" href="#project-architecture" title="Link to this heading">¶</a></h1>
+<p>This section describes the design and structure of the irorun project.</p>
+<section id="directory-layout">
+<h2>Directory Layout<a class="headerlink" href="#directory-layout" title="Link to this heading">¶</a></h2>
+<p>A typical directory structure is as follows:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>irorun/
+├── irorun/              # Main package directory
+│   ├── __init__.py
+│   ├── cli.py           # Entry point for the CLI
+│   ├── helpers.py       # Helper functions for project creation and command execution
+│   └── logger_setup.py  # Custom logging configuration and handler
+├── tests/               # Unit and integration tests
+├── docs/                # Sphinx documentation sources
+├── project_config.toml  # Configuration for project bootstrapping
+├── logging.conf         # Logging configuration file
+└── pyproject.toml       # Build and metadata configuration
+</pre></div>
+</div>
+</section>
+<section id="key-modules">
+<h2>Key Modules<a class="headerlink" href="#key-modules" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>cli.py:</strong>
+Implements the Typer-based CLI, defining commands such as <code class="docutils literal notranslate"><span class="pre">init</span></code>, <code class="docutils literal notranslate"><span class="pre">check</span></code>, and others.</p></li>
+<li><p><strong>helpers.py:</strong>
+Contains functions to create projects using various environment managers and manage subdirectory creation.</p></li>
+<li><p><strong>logger_setup.py:</strong>
+Configures logging using a custom <code class="docutils literal notranslate"><span class="pre">TyperLoggerHandler</span></code> that outputs elegant, color-coded logs.</p></li>
+<li><p><strong>Configuration Files:</strong>
+- <em>project_config.toml</em> defines project setup parameters.
+- <em>logging.conf</em> controls logging output and format.</p></li>
+</ul>
+</section>
+<section id="design-principles">
+<h2>Design Principles<a class="headerlink" href="#design-principles" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Modularity:</strong> Each component (CLI, logging, configuration) is isolated for easy maintenance.</p></li>
+<li><p><strong>Extensibility:</strong> New commands and features can be added with minimal changes to existing code.</p></li>
+<li><p><strong>Configurability:</strong> Project behavior and logging are driven by external configuration files.</p></li>
+</ul>
+</section>
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="Bottom">
+      
+        <p>
+        «&#160;&#160;<a href="installation.html">Installation and Development Setup</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="configuration.html">Configuration</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2025, Faith O. Oyedemi.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.1.
+    </div>
+  </body>
+</html>

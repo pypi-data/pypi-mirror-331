@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Configuration &#8212; irorun  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=47202671" />
+    <link rel="stylesheet" type="text/css" href="_static/haiku.css?v=fce32b03" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Logging" href="logging.html" />
+    <link rel="prev" title="Project Architecture" href="architecture.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="index.html">
+          <span>irorun  documentation</span></a></h1>
+        <h2 class="heading"><span>Configuration</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="Top">
+      
+        <p>
+        «&#160;&#160;<a href="architecture.html">Project Architecture</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="logging.html">Logging</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section id="configuration">
+<h1>Configuration<a class="headerlink" href="#configuration" title="Link to this heading">¶</a></h1>
+<p>irorun relies on external configuration files to dictate its behavior. The two primary configuration files are:</p>
+<ol class="arabic simple">
+<li><p><strong>project_config.toml:</strong>
+Controls project bootstrapping parameters such as project directory, environment manager, subdirectories, dependencies, and additional options like Git initialization.</p></li>
+<li><p><strong>logging.conf:</strong>
+Defines the logging setup, including loggers, handlers, and formatters. It uses a custom handler to output color-coded logs.</p></li>
+</ol>
+<section id="example-project-config-toml">
+<h2>Example: project_config.toml<a class="headerlink" href="#example-project-config-toml" title="Link to this heading">¶</a></h2>
+<div class="highlight-toml notranslate"><div class="highlight"><pre><span></span><span class="k">[init]</span>
+<span class="n">project_directory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;apriquot&quot;</span>
+<span class="n">subdirectories</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;src&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;docs&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;tests&quot;</span><span class="p">]</span>
+<span class="n">extra_subdirectories</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[]</span><span class="w">  </span><span class="c1"># Additional directories if needed</span>
+<span class="n">package_manager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;poetry&quot;</span><span class="w"> </span><span class="c1"># Options: &quot;poetry&quot;, &quot;uv&quot;, &quot;virtualenv&quot;</span>
+<span class="n">venv_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;venv&quot;</span>
+<span class="n">dependencies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;numpy&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;pandas&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;matplotlib&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="example-logging-conf">
+<h2>Example: logging.conf<a class="headerlink" href="#example-logging-conf" title="Link to this heading">¶</a></h2>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[loggers]</span>
+<span class="na">keys</span><span class="o">=</span><span class="s">root,irorun</span>
+
+<span class="k">[handlers]</span>
+<span class="na">keys</span><span class="o">=</span><span class="s">typerHandler,fileHandler</span>
+
+<span class="k">[formatters]</span>
+<span class="na">keys</span><span class="o">=</span><span class="s">coloredFormatter</span>
+
+<span class="k">[logger_root]</span>
+<span class="na">level</span><span class="o">=</span><span class="s">INFO</span>
+<span class="na">handlers</span><span class="o">=</span><span class="s">typerHandler</span>
+
+<span class="k">[logger_irorun]</span>
+<span class="na">level</span><span class="o">=</span><span class="s">DEBUG</span>
+<span class="na">handlers</span><span class="o">=</span><span class="s">typerHandler,fileHandler</span>
+<span class="na">qualname</span><span class="o">=</span><span class="s">irorun</span>
+<span class="na">propagate</span><span class="o">=</span><span class="s">0</span>
+
+<span class="k">[handler_typerHandler]</span>
+<span class="na">class</span><span class="o">=</span><span class="s">irorun.logger_setup.TyperLoggerHandler</span>
+<span class="na">level</span><span class="o">=</span><span class="s">DEBUG</span>
+<span class="na">formatter</span><span class="o">=</span><span class="s">coloredFormatter</span>
+<span class="na">args</span><span class="o">=</span><span class="s">()</span>
+
+<span class="k">[handler_fileHandler]</span>
+<span class="na">class</span><span class="o">=</span><span class="s">FileHandler</span>
+<span class="na">level</span><span class="o">=</span><span class="s">INFO</span>
+<span class="na">formatter</span><span class="o">=</span><span class="s">coloredFormatter</span>
+<span class="na">args</span><span class="o">=</span><span class="s">(&#39;irorun.log&#39;, &#39;a&#39;)</span>
+
+<span class="k">[formatter_coloredFormatter]</span>
+<span class="na">format</span><span class="o">=</span><span class="s">[%(asctime)s] %(levelname)s in %(module)s: %(message)s</span>
+<span class="na">datefmt</span><span class="o">=</span><span class="s">%Y-%m-%d %H:%M:%S</span>
+</pre></div>
+</div>
+<p>This structure allows you to modify behavior without changing code, ensuring consistency across environments.</p>
+</section>
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="Bottom">
+      
+        <p>
+        «&#160;&#160;<a href="architecture.html">Project Architecture</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="logging.html">Logging</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2025, Faith O. Oyedemi.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.1.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Installation and Development Setup &#8212; irorun  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=47202671" />
+    <link rel="stylesheet" type="text/css" href="_static/haiku.css?v=fce32b03" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Project Architecture" href="architecture.html" />
+    <link rel="prev" title="Developer Documentation for irorun" href="introduction.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="index.html">
+          <span>irorun  documentation</span></a></h1>
+        <h2 class="heading"><span>Installation and Development Setup</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="Top">
+      
+        <p>
+        «&#160;&#160;<a href="introduction.html">Developer Documentation for irorun</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="architecture.html">Project Architecture</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section id="installation-and-development-setup">
+<h1>Installation and Development Setup<a class="headerlink" href="#installation-and-development-setup" title="Link to this heading">¶</a></h1>
+<p>This section explains how to set up a development environment for irorun.</p>
+<section id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Python 3.11 or later</p></li>
+<li><p>pip (or your preferred package manager)</p></li>
+<li><p>Virtual environment tools (e.g., virtualenv, Poetry, or uv)</p></li>
+</ul>
+</section>
+<section id="steps-to-set-up-your-environment">
+<h2>Steps to Set Up Your Environment<a class="headerlink" href="#steps-to-set-up-your-environment" title="Link to this heading">¶</a></h2>
+<ol class="arabic">
+<li><p><strong>Clone the Repository:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/yourusername/irorun.git
+<span class="nb">cd</span><span class="w"> </span>irorun
+</pre></div>
+</div>
+</li>
+<li><p><strong>Create a Virtual Environment:</strong></p>
+<p>Choose your preferred method. For example, using virtualenv:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>virtualenv<span class="w"> </span>venv
+<span class="nb">source</span><span class="w"> </span>venv/bin/activate<span class="w">   </span><span class="c1"># On Windows: venv\Scripts\activate</span>
+</pre></div>
+</div>
+<p>Or with Poetry:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>poetry<span class="w"> </span>install
+</pre></div>
+</div>
+</li>
+<li><p><strong>Install in Editable Mode:</strong></p>
+<p>To facilitate development, install irorun in editable mode:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
+</pre></div>
+</div>
+</li>
+<li><p><strong>Install Development Dependencies:</strong></p>
+<p>If you maintain a separate file (e.g., requirements-dev.txt) for development tools:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements-dev.txt
+</pre></div>
+</div>
+</li>
+<li><p><strong>Verify Installation:</strong></p>
+<p>Run the following to ensure the CLI is working:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>irorun<span class="w"> </span>--help
+</pre></div>
+</div>
+</li>
+</ol>
+<p>This should display the list of available commands and options.</p>
+</section>
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="Bottom">
+      
+        <p>
+        «&#160;&#160;<a href="introduction.html">Developer Documentation for irorun</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="architecture.html">Project Architecture</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2025, Faith O. Oyedemi.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.1.
+    </div>
+  </body>
+</html>

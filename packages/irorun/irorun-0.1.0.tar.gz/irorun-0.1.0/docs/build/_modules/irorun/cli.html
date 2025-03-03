@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>irorun.cli &#8212; irorun  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=47202671" />
+    <link rel="stylesheet" type="text/css" href="../../_static/haiku.css?v=fce32b03" />
+    <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="../../index.html">
+          <span>irorun  documentation</span></a></h1>
+        <h2 class="heading"><span>irorun.cli</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="Top">
+      
+        <p>
+        <a class="uplink" href="../../index.html">Contents</a>
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <h1>Source code for irorun.cli</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright (c) 2025 Faith O. Oyedemi</span>
+<span class="c1"># SPDX-License-Identifier: Apache-2.0</span>
+<span class="c1">#</span>
+<span class="c1"># Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class="c1"># you may not use this file except in compliance with the License.</span>
+<span class="c1"># You may obtain a copy of the License at</span>
+<span class="c1">#</span>
+<span class="c1">#     http://www.apache.org/licenses/LICENSE-2.0</span>
+<span class="c1">#</span>
+<span class="c1"># Unless required by applicable law or agreed to in writing, software</span>
+<span class="c1"># distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class="c1"># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class="c1"># See the License for the specific language governing permissions and</span>
+<span class="c1"># limitations under the License.</span>
+<span class="c1">#</span>
+<span class="c1"># For more details, see the full text of the Apache License at:</span>
+<span class="c1"># http://www.apache.org/licenses/LICENSE-2.0</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">logging</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">subprocess</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">toml</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">typer</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">irorun.helpers</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+	<span class="n">EnvManager</span><span class="p">,</span>
+	<span class="n">create_poetry_project</span><span class="p">,</span>
+	<span class="n">create_subdirectories</span><span class="p">,</span>
+	<span class="n">create_uv_project</span><span class="p">,</span>
+	<span class="n">create_virtualenv_project</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">irorun.logger_setup</span><span class="w"> </span><span class="kn">import</span> <span class="n">setup_logging</span>
+
+<span class="n">DEFAULT_PACKAGE_MANAGER</span><span class="p">:</span> <span class="n">EnvManager</span> <span class="o">=</span> <span class="n">EnvManager</span><span class="o">.</span><span class="n">VIRTUALENV</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">typer</span><span class="o">.</span><span class="n">Typer</span><span class="p">()</span>
+<span class="n">logger</span> <span class="o">=</span> <span class="n">setup_logging</span><span class="p">()</span>
+
+
+<div class="viewcode-block" id="main">
+<a class="viewcode-back" href="../../irorun.html#irorun.cli.main">[docs]</a>
+<span class="nd">@app</span><span class="o">.</span><span class="n">callback</span><span class="p">()</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span>
+	<span class="n">verbose</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">typer</span><span class="o">.</span><span class="n">Option</span><span class="p">(</span>
+		<span class="kc">False</span><span class="p">,</span> <span class="s1">&#39;--verbose&#39;</span><span class="p">,</span> <span class="s1">&#39;-v&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Enable verbose logging.&#39;</span>
+	<span class="p">),</span>
+<span class="p">):</span>
+<span class="w">	</span><span class="sd">&quot;&quot;&quot;Global callback to adjust logging level based on the --verbose flag.&quot;&quot;&quot;</span>
+	<span class="k">if</span> <span class="n">verbose</span><span class="p">:</span>
+		<span class="n">logger</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
+		<span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Verbose logging enabled.&#39;</span><span class="p">)</span>
+	<span class="k">else</span><span class="p">:</span>
+		<span class="n">logger</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="load_config">
+<a class="viewcode-back" href="../../irorun.html#irorun.cli.load_config">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">load_config</span><span class="p">(</span><span class="n">config_path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;project_config.toml&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+	<span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">config_path</span><span class="p">):</span>
+		<span class="k">try</span><span class="p">:</span>
+			<span class="n">config</span> <span class="o">=</span> <span class="n">toml</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">config_path</span><span class="p">)</span>
+			<span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Loaded configuration: </span><span class="si">{</span><span class="n">config</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+			<span class="k">return</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;init&#39;</span><span class="p">,</span> <span class="p">{})</span>  <span class="c1"># Expecting a section [init]</span>
+		<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+			<span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Error loading configuration: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+			<span class="n">typer</span><span class="o">.</span><span class="n">echo</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Error reading configuration file: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+	<span class="k">else</span><span class="p">:</span>
+		<span class="n">typer</span><span class="o">.</span><span class="n">echo</span><span class="p">(</span>
+			<span class="sa">f</span><span class="s1">&#39;Configuration file </span><span class="si">{</span><span class="n">config_path</span><span class="si">}</span><span class="s1"> not found. Either it does not exist or there is an issue with the file.&#39;</span>
+		<span class="p">)</span>
+		<span class="n">typer</span><span class="o">.</span><span class="n">echo</span><span class="p">(</span>
+			<span class="s1">&#39;Please ensure the file exists and is properly formatted. Or use `irorun gen-config` to generate one that you can edit.&#39;</span>
+		<span class="p">)</span>
+		<span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Configuration file </span><span class="si">{</span><span class="n">config_path</span><span class="si">}</span><span class="s1"> not found.&#39;</span><span class="p">)</span>
+		<span class="k">return</span> <span class="p">{}</span></div>
+
+
+
+<div class="viewcode-block" id="init">
+<a class="viewcode-back" href="../../irorun.html#irorun.cli.init">[docs]</a>
+<span class="nd">@app</span><span class="o">.</span><span class="n">command</span><span class="p">()</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">init</span><span class="p">(</span>
+	<span class="n">project_dir</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">typer</span><span class="o">.</span><span class="n">Argument</span><span class="p">(</span>
+		<span class="kc">None</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Project directory. If not provided, uses configuration value.&#39;</span>
+	<span class="p">),</span>
+	<span class="n">package_manager</span><span class="p">:</span> <span class="n">EnvManager</span> <span class="o">=</span> <span class="n">typer</span><span class="o">.</span><span class="n">Option</span><span class="p">(</span>
+		<span class="n">DEFAULT_PACKAGE_MANAGER</span><span class="p">,</span>
+		<span class="s1">&#39;--package-manager&#39;</span><span class="p">,</span>
+		<span class="n">help</span><span class="o">=</span><span class="s1">&#39;Environment manager to use: poetry, uv, or virtualenv.&#39;</span><span class="p">,</span>
+	<span class="p">),</span>
+<span class="p">):</span>
+<span class="w">	</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">	Bootstraps a new project environment using settings from project_config.toml.</span>
+<span class="sd">	&quot;&quot;&quot;</span>
+	<span class="n">config_path</span> <span class="o">=</span> <span class="s1">&#39;project_config.toml&#39;</span>
+
+	<span class="c1"># Load configuration</span>
+	<span class="n">typer</span><span class="o">.</span><span class="n">echo</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Attempting to load configuration from </span><span class="si">{</span><span class="n">config_path</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+	<span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Attempting to load configuration from </span><span class="si">{</span><span class="n">config_path</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+	<span class="n">config</span> <span class="o">=</span> <span class="n">load_config</span><span class="p">()</span>
+	<span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Back from loading configuration&#39;</span><span class="p">)</span>
+
+	<span class="c1"># Use configuration values (or defaults) if CLI arguments are not provided</span>
+	<span class="n">project_dir</span> <span class="o">=</span> <span class="p">(</span>
+		<span class="n">project_dir</span>
+		<span class="k">if</span> <span class="n">project_dir</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+		<span class="k">else</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;project_directory&#39;</span><span class="p">,</span> <span class="s1">&#39;my_project&#39;</span><span class="p">)</span>
+	<span class="p">)</span>
+
+	<span class="n">config_package_manager</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;package_manager&#39;</span><span class="p">,</span> <span class="s1">&#39;uv&#39;</span><span class="p">)</span>
+	<span class="n">package_manager</span> <span class="o">=</span> <span class="p">(</span>
+		<span class="n">package_manager</span>
+		<span class="k">if</span> <span class="n">package_manager</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+		<span class="k">else</span> <span class="n">EnvManager</span><span class="p">(</span><span class="n">config_package_manager</span><span class="p">)</span>
+	<span class="p">)</span>
+
+	<span class="c1"># Create the project directory if it doesn&#39;t exist</span>
+	<span class="n">venv_name</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;venv_name&#39;</span><span class="p">,</span> <span class="s1">&#39;venv&#39;</span><span class="p">)</span>
+	<span class="n">dependencies</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;dependencies&#39;</span><span class="p">,</span> <span class="p">[])</span>
+
+	<span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Now checking if project directory exists&#39;</span><span class="p">)</span>
+	<span class="k">try</span><span class="p">:</span>
+		<span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">project_dir</span><span class="p">))</span>
+		<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">project_dir</span><span class="p">):</span>
+			<span class="k">if</span> <span class="n">package_manager</span> <span class="o">==</span> <span class="n">EnvManager</span><span class="o">.</span><span class="n">POETRY</span><span class="p">:</span>
+				<span class="n">create_poetry_project</span><span class="p">(</span><span class="n">project_dir</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">)</span>
+			<span class="k">elif</span> <span class="n">package_manager</span> <span class="o">==</span> <span class="n">EnvManager</span><span class="o">.</span><span class="n">UV</span><span class="p">:</span>
+				<span class="n">create_uv_project</span><span class="p">(</span><span class="n">project_dir</span><span class="p">,</span> <span class="n">venv_name</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">)</span>
+			<span class="k">elif</span> <span class="n">package_manager</span> <span class="o">==</span> <span class="n">EnvManager</span><span class="o">.</span><span class="n">VIRTUALENV</span><span class="p">:</span>
+				<span class="n">create_virtualenv_project</span><span class="p">(</span><span class="n">project_dir</span><span class="p">,</span> <span class="n">venv_name</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">)</span>
+			<span class="k">else</span><span class="p">:</span>
+				<span class="n">typer</span><span class="o">.</span><span class="n">echo</span><span class="p">(</span><span class="s1">&#39;Invalid package manager specified.&#39;</span><span class="p">,</span> <span class="n">err</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+				<span class="k">raise</span> <span class="n">typer</span><span class="o">.</span><span class="n">Exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+	<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+		<span class="k">raise</span> <span class="n">typer</span><span class="o">.</span><span class="n">Exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">e</span>
+		<span class="n">typer</span><span class="o">.</span><span class="n">echo</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Project directory already exists: </span><span class="si">{</span><span class="n">project_dir</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+		<span class="c1"># raise typer.Exit(1)</span>
+
+	<span class="c1"># Create subdirectories inside the project directory</span>
+	<span class="n">subdirectories</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;subdirectories&#39;</span><span class="p">,</span> <span class="p">[])</span>
+	<span class="n">extra_subdirectories</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;extra_subdirectories&#39;</span><span class="p">,</span> <span class="p">[])</span>
+	<span class="n">all_subdirectories</span> <span class="o">=</span> <span class="n">subdirectories</span> <span class="o">+</span> <span class="n">extra_subdirectories</span>
+
+	<span class="c1"># Create subdirectories</span>
+	<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">all_subdirectories</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+		<span class="n">typer</span><span class="o">.</span><span class="n">echo</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Creating subdirectories: </span><span class="si">{</span><span class="n">all_subdirectories</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+		<span class="n">create_subdirectories</span><span class="p">(</span><span class="n">project_dir</span><span class="p">,</span> <span class="n">all_subdirectories</span><span class="p">)</span>
+		<span class="n">typer</span><span class="o">.</span><span class="n">echo</span><span class="p">(</span><span class="s1">&#39;Subdirectories created&#39;</span><span class="p">)</span>
+	<span class="k">else</span><span class="p">:</span>
+		<span class="n">typer</span><span class="o">.</span><span class="n">echo</span><span class="p">(</span><span class="s1">&#39;No subdirectories specified&#39;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="check">
+<a class="viewcode-back" href="../../irorun.html#irorun.cli.check">[docs]</a>
+<span class="nd">@app</span><span class="o">.</span><span class="n">command</span><span class="p">()</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">check</span><span class="p">():</span>
+<span class="w">	</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">	Runs the code quality and formatting checks.</span>
+<span class="sd">	&quot;&quot;&quot;</span>
+	<span class="n">typer</span><span class="o">.</span><span class="n">echo</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Sorting imports...&#39;</span><span class="p">)</span>
+	<span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s1">&#39;ruff check --select I --fix&#39;</span><span class="p">],</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">check</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+	<span class="n">typer</span><span class="o">.</span><span class="n">echo</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Formatting code...&#39;</span><span class="p">)</span>
+	<span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s1">&#39;ruff format&#39;</span><span class="p">],</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">check</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+	<span class="n">typer</span><span class="o">.</span><span class="n">echo</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Checking code quality...&#39;</span><span class="p">)</span>
+	<span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s1">&#39;ruff check&#39;</span><span class="p">],</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">check</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+	<span class="n">typer</span><span class="o">.</span><span class="n">echo</span><span class="p">(</span><span class="s1">&#39;Code quality completely checked&#39;</span><span class="p">)</span>
+	<span class="n">typer</span><span class="o">.</span><span class="n">Exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="check_upgrade">
+<a class="viewcode-back" href="../../irorun.html#irorun.cli.check_upgrade">[docs]</a>
+<span class="nd">@app</span><span class="o">.</span><span class="n">command</span><span class="p">()</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">check_upgrade</span><span class="p">(</span>
+	<span class="n">fix</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">typer</span><span class="o">.</span><span class="n">Option</span><span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="s1">&#39;--fix&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Implement code syntax upgrade&#39;</span><span class="p">),</span>
+<span class="p">):</span>
+<span class="w">	</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">	Checks your code syntax to see where it can be upgraded to meet the latest version.</span>
+<span class="sd">	&quot;&quot;&quot;</span>
+	<span class="n">typer</span><span class="o">.</span><span class="n">echo</span><span class="p">(</span><span class="s1">&#39;Checking code syntax&#39;</span><span class="p">)</span>
+	<span class="k">if</span> <span class="n">fix</span><span class="p">:</span>
+		<span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s1">&#39;ruff check --select UP --fix&#39;</span><span class="p">],</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">check</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+		<span class="n">typer</span><span class="o">.</span><span class="n">echo</span><span class="p">(</span><span class="s1">&#39;Code syntax upgraded&#39;</span><span class="p">)</span>
+	<span class="k">else</span><span class="p">:</span>
+		<span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s1">&#39;ruff check --select UP&#39;</span><span class="p">],</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">check</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+		<span class="n">typer</span><span class="o">.</span><span class="n">echo</span><span class="p">(</span><span class="s1">&#39;Code syntax checked&#39;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="check_codestyle">
+<a class="viewcode-back" href="../../irorun.html#irorun.cli.check_codestyle">[docs]</a>
+<span class="nd">@app</span><span class="o">.</span><span class="n">command</span><span class="p">()</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">check_codestyle</span><span class="p">():</span>
+<span class="w">	</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">	Checks your code style against some of the style conventions in PEP 8.</span>
+<span class="sd">	&quot;&quot;&quot;</span>
+	<span class="n">typer</span><span class="o">.</span><span class="n">echo</span><span class="p">(</span><span class="s1">&#39;Checking code style&#39;</span><span class="p">)</span>
+	<span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s1">&#39;ruff check --select E&#39;</span><span class="p">],</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">check</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+	<span class="n">typer</span><span class="o">.</span><span class="n">echo</span><span class="p">(</span><span class="s1">&#39;Code style checked&#39;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="format">
+<a class="viewcode-back" href="../../irorun.html#irorun.cli.format">[docs]</a>
+<span class="nd">@app</span><span class="o">.</span><span class="n">command</span><span class="p">()</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">format</span><span class="p">():</span>
+<span class="w">	</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">	Runs the formatting checks using ruff. This command does the following:</span>
+<span class="sd">	- Sorts imports and removes unused imports.</span>
+<span class="sd">	&quot;&quot;&quot;</span>
+	<span class="n">typer</span><span class="o">.</span><span class="n">echo</span><span class="p">(</span><span class="s1">&#39;Formatting your code&#39;</span><span class="p">)</span>
+	<span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s1">&#39;ruff format&#39;</span><span class="p">],</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">check</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+	<span class="n">typer</span><span class="o">.</span><span class="n">echo</span><span class="p">(</span><span class="s1">&#39;Formatting completed&#39;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="gen_config">
+<a class="viewcode-back" href="../../irorun.html#irorun.cli.gen_config">[docs]</a>
+<span class="nd">@app</span><span class="o">.</span><span class="n">command</span><span class="p">()</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">gen_config</span><span class="p">():</span>
+<span class="w">	</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">	Generates a configuration file for the project named project_config.toml.</span>
+<span class="sd">	&quot;&quot;&quot;</span>
+	<span class="n">typer</span><span class="o">.</span><span class="n">echo</span><span class="p">(</span><span class="s1">&#39;Generating configuration file&#39;</span><span class="p">)</span>
+	<span class="n">config_path</span> <span class="o">=</span> <span class="s1">&#39;project_config.toml&#39;</span>
+	<span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">config_path</span><span class="p">):</span>
+		<span class="n">typer</span><span class="o">.</span><span class="n">echo</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Configuration file </span><span class="si">{</span><span class="n">config_path</span><span class="si">}</span><span class="s1"> already exists&#39;</span><span class="p">)</span>
+		<span class="k">return</span>
+	<span class="n">config</span> <span class="o">=</span> <span class="p">{</span>
+		<span class="s1">&#39;init&#39;</span><span class="p">:</span> <span class="p">{</span>
+			<span class="s1">&#39;project_name&#39;</span><span class="p">:</span> <span class="s1">&#39;project_name&#39;</span><span class="p">,</span>
+			<span class="s1">&#39;package_manager&#39;</span><span class="p">:</span> <span class="s1">&#39;virtualenv&#39;</span><span class="p">,</span>  <span class="c1"># options - poetry, uv, or virtualenv</span>
+			<span class="s1">&#39;venv_name&#39;</span><span class="p">:</span> <span class="s1">&#39;venv&#39;</span><span class="p">,</span>
+			<span class="s1">&#39;subdirectories&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;src&#39;</span><span class="p">,</span> <span class="s1">&#39;docs&#39;</span><span class="p">,</span> <span class="s1">&#39;tests&#39;</span><span class="p">],</span>
+			<span class="s1">&#39;extra_subdirectories&#39;</span><span class="p">:</span> <span class="p">[</span>
+				<span class="s1">&#39;data&#39;</span><span class="p">,</span>
+				<span class="s1">&#39;data/january&#39;</span><span class="p">,</span>
+				<span class="s1">&#39;data/february&#39;</span><span class="p">,</span>
+				<span class="s1">&#39;notebooks&#39;</span><span class="p">,</span>
+			<span class="p">],</span>
+			<span class="s1">&#39;dependencies&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;numpy&#39;</span><span class="p">,</span> <span class="s1">&#39;pandas&#39;</span><span class="p">,</span> <span class="s1">&#39;matplotlib&#39;</span><span class="p">],</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+	<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">config_path</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+		<span class="n">toml</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+	<span class="n">typer</span><span class="o">.</span><span class="n">echo</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Configuration file </span><span class="si">{</span><span class="n">config_path</span><span class="si">}</span><span class="s1"> created&#39;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="document">
+<a class="viewcode-back" href="../../irorun.html#irorun.cli.document">[docs]</a>
+<span class="nd">@app</span><span class="o">.</span><span class="n">command</span><span class="p">()</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">document</span><span class="p">(</span>
+	<span class="n">docs_dir</span><span class="o">=</span><span class="n">typer</span><span class="o">.</span><span class="n">Argument</span><span class="p">(</span><span class="s1">&#39;docs&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Directory for documentation files&#39;</span><span class="p">),</span>
+	<span class="n">author</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">typer</span><span class="o">.</span><span class="n">Option</span><span class="p">(</span><span class="s1">&#39;Unset&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Author name for documentation&#39;</span><span class="p">),</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">	</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">	Generates or updates the project documentation from documentation strings.</span>
+
+<span class="sd">	Notes</span>
+<span class="sd">	-----</span>
+<span class="sd">	Uses sphinx + reStructuredText and numpydoc.</span>
+<span class="sd">	&quot;&quot;&quot;</span>
+	<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;Not implemented yet&#39;</span><span class="p">)</span></div>
+
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+	<span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Starting the application&#39;</span><span class="p">)</span>
+	<span class="n">app</span><span class="p">()</span>
+</pre></div>
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="Bottom">
+      
+        <p>
+        <a class="uplink" href="../../index.html">Contents</a>
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2025, Faith O. Oyedemi.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.1.
+    </div>
+  </body>
+</html>

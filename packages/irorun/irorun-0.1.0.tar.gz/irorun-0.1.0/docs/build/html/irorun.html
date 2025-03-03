@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>irorun package &#8212; irorun  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=47202671" />
+    <link rel="stylesheet" type="text/css" href="_static/haiku.css?v=fce32b03" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="src" href="modules.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="index.html">
+          <span>irorun  documentation</span></a></h1>
+        <h2 class="heading"><span>irorun package</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="Top">
+      
+        <p>
+        «&#160;&#160;<a href="modules.html">src</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">Contents</a>
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section id="module-irorun">
+<span id="irorun-package"></span><h1>irorun package<a class="headerlink" href="#module-irorun" title="Link to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
+</section>
+<section id="module-irorun.cli">
+<span id="irorun-cli-module"></span><h2>irorun.cli module<a class="headerlink" href="#module-irorun.cli" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="irorun.cli.check">
+<span class="sig-prename descclassname"><span class="pre">irorun.cli.</span></span><span class="sig-name descname"><span class="pre">check</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/irorun/cli.html#check"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irorun.cli.check" title="Link to this definition">¶</a></dt>
+<dd><p>Runs the code quality and formatting checks.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="irorun.cli.check_codestyle">
+<span class="sig-prename descclassname"><span class="pre">irorun.cli.</span></span><span class="sig-name descname"><span class="pre">check_codestyle</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/irorun/cli.html#check_codestyle"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irorun.cli.check_codestyle" title="Link to this definition">¶</a></dt>
+<dd><p>Checks your code style against some of the style conventions in PEP 8.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="irorun.cli.check_upgrade">
+<span class="sig-prename descclassname"><span class="pre">irorun.cli.</span></span><span class="sig-name descname"><span class="pre">check_upgrade</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fix:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">&lt;typer.models.OptionInfo</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/irorun/cli.html#check_upgrade"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irorun.cli.check_upgrade" title="Link to this definition">¶</a></dt>
+<dd><p>Checks your code syntax to see where it can be upgraded to meet the latest version.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="irorun.cli.document">
+<span class="sig-prename descclassname"><span class="pre">irorun.cli.</span></span><span class="sig-name descname"><span class="pre">document</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">docs_dir=&lt;typer.models.ArgumentInfo</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">author:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">&lt;typer.models.OptionInfo</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/irorun/cli.html#document"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irorun.cli.document" title="Link to this definition">¶</a></dt>
+<dd><p>Generates or updates the project documentation from documentation strings.</p>
+<p class="rubric">Notes</p>
+<p>Uses sphinx + reStructuredText and numpydoc.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="irorun.cli.format">
+<span class="sig-prename descclassname"><span class="pre">irorun.cli.</span></span><span class="sig-name descname"><span class="pre">format</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/irorun/cli.html#format"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irorun.cli.format" title="Link to this definition">¶</a></dt>
+<dd><p>Runs the formatting checks using ruff. This command does the following:
+- Sorts imports and removes unused imports.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="irorun.cli.gen_config">
+<span class="sig-prename descclassname"><span class="pre">irorun.cli.</span></span><span class="sig-name descname"><span class="pre">gen_config</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/irorun/cli.html#gen_config"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irorun.cli.gen_config" title="Link to this definition">¶</a></dt>
+<dd><p>Generates a configuration file for the project named project_config.toml.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="irorun.cli.init">
+<span class="sig-prename descclassname"><span class="pre">irorun.cli.</span></span><span class="sig-name descname"><span class="pre">init</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">project_dir:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">&lt;typer.models.ArgumentInfo</span> <span class="pre">object&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">package_manager:</span> <span class="pre">~irorun.helpers.EnvManager</span> <span class="pre">=</span> <span class="pre">&lt;typer.models.OptionInfo</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/irorun/cli.html#init"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irorun.cli.init" title="Link to this definition">¶</a></dt>
+<dd><p>Bootstraps a new project environment using settings from project_config.toml.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="irorun.cli.load_config">
+<span class="sig-prename descclassname"><span class="pre">irorun.cli.</span></span><span class="sig-name descname"><span class="pre">load_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'project_config.toml'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="reference internal" href="_modules/irorun/cli.html#load_config"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irorun.cli.load_config" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="irorun.cli.main">
+<span class="sig-prename descclassname"><span class="pre">irorun.cli.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verbose:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">&lt;typer.models.OptionInfo</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/irorun/cli.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irorun.cli.main" title="Link to this definition">¶</a></dt>
+<dd><p>Global callback to adjust logging level based on the –verbose flag.</p>
+</dd></dl>
+
+</section>
+<section id="module-irorun.helpers">
+<span id="irorun-helpers-module"></span><h2>irorun.helpers module<a class="headerlink" href="#module-irorun.helpers" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="irorun.helpers.EnvManager">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">irorun.helpers.</span></span><span class="sig-name descname"><span class="pre">EnvManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/irorun/helpers.html#EnvManager"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irorun.helpers.EnvManager" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="irorun.helpers.EnvManager.POETRY">
+<span class="sig-name descname"><span class="pre">POETRY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'poetry'</span></em><a class="headerlink" href="#irorun.helpers.EnvManager.POETRY" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="irorun.helpers.EnvManager.UV">
+<span class="sig-name descname"><span class="pre">UV</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'uv'</span></em><a class="headerlink" href="#irorun.helpers.EnvManager.UV" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="irorun.helpers.EnvManager.VIRTUALENV">
+<span class="sig-name descname"><span class="pre">VIRTUALENV</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'virtualenv'</span></em><a class="headerlink" href="#irorun.helpers.EnvManager.VIRTUALENV" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="irorun.helpers.add_dependencies">
+<span class="sig-prename descclassname"><span class="pre">irorun.helpers.</span></span><span class="sig-name descname"><span class="pre">add_dependencies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">package_manager</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#irorun.helpers.EnvManager" title="irorun.helpers.EnvManager"><span class="pre">EnvManager</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/irorun/helpers.html#add_dependencies"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irorun.helpers.add_dependencies" title="Link to this definition">¶</a></dt>
+<dd><p>Adds dependencies using the specified package manager.
+Only supports POETRY and UV.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="irorun.helpers.change_dir">
+<span class="sig-prename descclassname"><span class="pre">irorun.helpers.</span></span><span class="sig-name descname"><span class="pre">change_dir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/irorun/helpers.html#change_dir"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irorun.helpers.change_dir" title="Link to this definition">¶</a></dt>
+<dd><p>Context manager for changing the current working directory.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="irorun.helpers.create_poetry_project">
+<span class="sig-prename descclassname"><span class="pre">irorun.helpers.</span></span><span class="sig-name descname"><span class="pre">create_poetry_project</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">project_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/irorun/helpers.html#create_poetry_project"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irorun.helpers.create_poetry_project" title="Link to this definition">¶</a></dt>
+<dd><p>Creates a new Poetry project and optionally installs dependencies.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="irorun.helpers.create_subdirectories">
+<span class="sig-prename descclassname"><span class="pre">irorun.helpers.</span></span><span class="sig-name descname"><span class="pre">create_subdirectories</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">project_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subdirectories</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/irorun/helpers.html#create_subdirectories"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irorun.helpers.create_subdirectories" title="Link to this definition">¶</a></dt>
+<dd><p>Creates subdirectories within a project directory.</p>
+<p>Parameters:
+project_dir: The base project directory.
+subdirectories: An iterable of subdirectory names to create under project_dir.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="irorun.helpers.create_uv_project">
+<span class="sig-prename descclassname"><span class="pre">irorun.helpers.</span></span><span class="sig-name descname"><span class="pre">create_uv_project</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">project_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">venv_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/irorun/helpers.html#create_uv_project"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irorun.helpers.create_uv_project" title="Link to this definition">¶</a></dt>
+<dd><p>Creates a new project with a virtual environment using uv.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="irorun.helpers.create_virtualenv_project">
+<span class="sig-prename descclassname"><span class="pre">irorun.helpers.</span></span><span class="sig-name descname"><span class="pre">create_virtualenv_project</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">project_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">venv_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/irorun/helpers.html#create_virtualenv_project"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irorun.helpers.create_virtualenv_project" title="Link to this definition">¶</a></dt>
+<dd><p>Creates a new project directory and virtual environment using virtualenv.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="irorun.helpers.run_command">
+<span class="sig-prename descclassname"><span class="pre">irorun.helpers.</span></span><span class="sig-name descname"><span class="pre">run_command</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cmd</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cwd</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/irorun/helpers.html#run_command"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irorun.helpers.run_command" title="Link to this definition">¶</a></dt>
+<dd><p>Wrapper for subprocess.run to execute a command and handle errors.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="Bottom">
+      
+        <p>
+        «&#160;&#160;<a href="modules.html">src</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">Contents</a>
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2025, Faith O. Oyedemi.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.1.
+    </div>
+  </body>
+</html>

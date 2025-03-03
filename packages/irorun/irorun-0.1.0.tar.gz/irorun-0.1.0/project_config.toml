@@ -1,0 +1,7 @@
+[init]
+project_name = "project_name"
+package_manager = "virtualenv"
+venv_name = "venv"
+subdirectories = [ "src", "docs", "tests",]
+extra_subdirectories = [ "data", "data/january", "data/february", "notebooks",]
+dependencies = [ "numpy", "pandas", "matplotlib",]

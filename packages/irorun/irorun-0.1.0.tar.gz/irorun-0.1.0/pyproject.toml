@@ -1,0 +1,90 @@
+# pyproject.toml
+[project]
+name = "irorun"
+version = "0.1.0"
+description = "A unified CLI tool for bootstrapping Python projects with integrated code quality checks, formatting, and documentation generation. Designed for research teams, it automates environment setup with pre-configured scientific libraries, streamlining development so scientists can focus on their research."
+readme = "README.md"
+authors = [
+    { name = "Faith Oyedemi", email = "faithoyedemi@gmail.com" }
+]
+license = {text = "Apache-2.0"}
+requires-python = ">=3.11"
+classifiers = [
+    "License :: OSI Approved :: Apache Software License"
+]
+dependencies = [
+    "numpydoc>=1.8.0",
+    "poetry>=2.1.1",
+    "pylint>=3.3.4",
+    "pytest>=8.3.4",
+    "pytest-cov>=6.0.0",
+    "ruff>=0.9.9",
+    "sphinx>=8.2.1",
+    "toml>=0.10.2",
+    "typer>=0.15.2",
+    "virtualenv>=20.29.2",
+]
+
+[project.scripts]
+irorun = "irorun.cli:app"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+
+[tool.cli]
+linter = "ruff"
+formatter = "ruff"
+checker = "pylint"
+doc_generator = "sphinx"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+
+
+[tool.ruff.format]
+quote-style = "single"
+indent-style = "tab"
+docstring-code-format = true
+docstring-code-line-length = 20
+
+[tool.ruff]
+line-length = 88
+indent-width = 4
+
+[tool.ruff.lint]
+select = [
+    # isort
+    "I",
+    # pycodestyle
+    # "E",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    # "UP",
+    # flake8-simplify
+    "SIM",
+    # Pylint
+    "PL",
+]
+
+[dependency-groups]
+dev = [
+    "pytest-cov>=6.0.0",
+    "pytest>=8.3.4",
+]
+lint = [
+    "pylint>=3.3.4",
+    "ruff>=0.9.9",
+]
+manage = [
+    "poetry>=2.1.1",
+    "virtualenv>=20.29.2",
+]
+documentation = [
+    "numpydoc>=1.8.0",
+    "sphinx>=8.2.1",
+]
+
