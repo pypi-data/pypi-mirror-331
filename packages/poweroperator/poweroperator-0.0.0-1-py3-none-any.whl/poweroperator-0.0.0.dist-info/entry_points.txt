@@ -1,0 +1,2 @@
+[console_scripts]
+poweroperator = poweroperator.cli:main
