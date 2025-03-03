@@ -1,0 +1,2 @@
+[console_scripts]
+m4b-util = m4b_util:__main__.main
