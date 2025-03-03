@@ -1,0 +1,11 @@
+numpy
+pandas
+scanpy
+tqdm
+scipy
+
+[dev]
+pytest>=6.0
+pytest-cov
+black
+isort

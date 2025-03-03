@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/scgraph/__init__.py
+src/scgraph/scgraph.py
+src/scgraph/utils_handler.py
+src/scgraph_eval.egg-info/PKG-INFO
+src/scgraph_eval.egg-info/SOURCES.txt
+src/scgraph_eval.egg-info/dependency_links.txt
+src/scgraph_eval.egg-info/entry_points.txt
+src/scgraph_eval.egg-info/requires.txt
+src/scgraph_eval.egg-info/top_level.txt
