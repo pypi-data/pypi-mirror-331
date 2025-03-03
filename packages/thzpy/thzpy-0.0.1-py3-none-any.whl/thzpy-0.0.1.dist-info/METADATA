@@ -1,0 +1,22 @@
+Metadata-Version: 2.2
+Name: thzpy
+Version: 0.0.1
+Summary: Data proccessing for THz-TDS
+Author: Jasper Ward-Berry
+Author-email: <jnw35@cam.ac.uk>
+Keywords: python,thz,terahertz,time-domain,time domain,spectroscopy
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
+License-File: LICENSE.txt
+Requires-Dist: numpy
+Requires-Dist: h5py
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: keywords
+Dynamic: requires-dist
+Dynamic: summary
+
+A scientific computing package for the processing of terahertz time-domain spectroscopy data. Includes modules for time-domain, transfer functions, frequency-domain, and data formatting.
