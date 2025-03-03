@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+mirrorshift/__init__.py
+mirrorshift/data.py
+mirrorshift/distributed.py
+mirrorshift/inference.py
+mirrorshift/models.py
+mirrorshift/train.py
+mirrorshift/utils.py
+mirrorshift.egg-info/PKG-INFO
+mirrorshift.egg-info/SOURCES.txt
+mirrorshift.egg-info/dependency_links.txt
+mirrorshift.egg-info/entry_points.txt
+mirrorshift.egg-info/requires.txt
+mirrorshift.egg-info/top_level.txt
