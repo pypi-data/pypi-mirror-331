@@ -1,0 +1,40 @@
+Metadata-Version: 2.2
+Name: aetherlog
+Version: 1.1.0
+Summary: Python logging library
+Author-email: v4nixd <v4nixdmail@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/v4nixd/AetherLog
+Project-URL: Bug Tracker, https://github.com/v4nixd/AetherLog/issues
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: rich
+
+<p align="center">
+    <img width="256px" src="AetherLogIcon.png" align="center" alt="AetherLog" />
+</p>
+
+### AetherLog
+---
+Python pretty logging library
+
+#### Installation
+
+`pip install aetherlog`
+
+#### Usage
+
+```python
+from AetherLog import AetherLogger, AetherConfig, LogLevel
+
+#Initialize AetherLogger with config
+logger = AetherLogger(AetherConfig())
+
+#Log functions
+logger.debug("Debug message", True)
+logger.info("Information message", True)
+logger.success("Success message", True)
+logger.warn("Warning message", True)
+logger.error("Error message", True)
+logger.fatal("FATAL MESSAGE", True)
+```
