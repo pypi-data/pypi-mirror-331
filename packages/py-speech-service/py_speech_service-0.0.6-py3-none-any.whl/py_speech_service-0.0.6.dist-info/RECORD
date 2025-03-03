@@ -1,0 +1,16 @@
+py_speech_service/__init__.py,sha256=hLQLQXvSxPbW_bMTKi9-Lek_6eI1JK1ehnwX5GEza44,121
+py_speech_service/__main__.py,sha256=fFMDxP4lW8LvM1PdMgTB2BohtpIdBJlozfpbuMHmFHI,3717
+py_speech_service/downloader.py,sha256=JwmoUv-Pu3AzBHc3YIwc7cEDSV_03ch10spWjKjluhU,2583
+py_speech_service/grammar_element.py,sha256=wkNOl-3woTzmUekDN6FQPg8ZmxGiWt0L1NK1VFKsovw,1181
+py_speech_service/grammar_parser.py,sha256=oADb2D_2ecKxJiAMhJou1kbwbC1iZwnIuHODk8NXFt0,14787
+py_speech_service/grpc_server.py,sha256=c4R235kzndtlssKhJ5trNdWW_uoI60vTsPevXenmHps,7422
+py_speech_service/piper.py,sha256=12bFU-V704vnMoVRPHRfosQVUqge7W5mDQ3LEVhfv0g,4302
+py_speech_service/speaker.py,sha256=PPqWPmDqPMnPx8YgM2eoaGWckZJSZSM1wUf9dA-Byp0,20521
+py_speech_service/speech_recognition.py,sha256=mEfUyuNcqUUy_in54NP5P8oRSI9eJApBqOmjTTlqf4M,8581
+py_speech_service/speech_service_pb2.py,sha256=rT2M6rjFaMzKBAe7WdAAbVxohuDGPNVz0dGpIJqEDeA,6864
+py_speech_service/speech_service_pb2_grpc.py,sha256=rl1cBHRfUDJuUh_D-2J8-lK6Urj-FJc3_sgO60QAb3I,3591
+py_speech_service/version.py,sha256=D1z1oj9oqbZ7UsxC5oEfDWKMo-A3B8oBlOGoFKTBmlA,201
+py_speech_service-0.0.6.dist-info/METADATA,sha256=fZFM9IYoR9AbNCSHg_SKaOJOr7FHFlUaYF5ChIeFSuc,903
+py_speech_service-0.0.6.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+py_speech_service-0.0.6.dist-info/entry_points.txt,sha256=tP_c5Y_9FUrI7K39euHM8ceO4ZbTkD2CU7keGCc4NlA,68
+py_speech_service-0.0.6.dist-info/RECORD,,
