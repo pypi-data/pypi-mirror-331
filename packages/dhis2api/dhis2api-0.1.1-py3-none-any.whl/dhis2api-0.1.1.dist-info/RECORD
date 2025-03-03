@@ -1,0 +1,9 @@
+dhis2api/.DS_Store,sha256=gteR6MOfh_zxg5bqDybGRwZMN4qd-TmWs5_klvAKh3o,6148
+dhis2api/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dhis2api/country.py,sha256=9JXgzg7fkI9N9tO3caBnga_3hjqhQqn_6OAzdHydVAA,4470
+dhis2api/generate_params.py,sha256=ZLIKGe8FUSZZJk4qKZs5qn1uEKPsLXAugHVC9otIqdc,3563
+dhis2api/indicator_loader.py,sha256=CDi4JKOcPRIeG706YzP57wsb-ExyrZY8iFwEOfjGNc4,1114
+dhis2api/param_formatter.py,sha256=pFQgxZYjNiBjMQqE6IWCsoifh5JDEws_CFI8YCEjpe8,524
+dhis2api-0.1.1.dist-info/METADATA,sha256=R-3b4PsmBpna3Q8iTy-0EdGzuI8FpP_wF8r81CWdz_0,670
+dhis2api-0.1.1.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+dhis2api-0.1.1.dist-info/RECORD,,
