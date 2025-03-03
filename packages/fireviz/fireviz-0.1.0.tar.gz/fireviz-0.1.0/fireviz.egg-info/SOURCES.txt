@@ -1,0 +1,9 @@
+README.md
+setup.py
+fireviz/__init__.py
+fireviz/viz.py
+fireviz.egg-info/PKG-INFO
+fireviz.egg-info/SOURCES.txt
+fireviz.egg-info/dependency_links.txt
+fireviz.egg-info/requires.txt
+fireviz.egg-info/top_level.txt

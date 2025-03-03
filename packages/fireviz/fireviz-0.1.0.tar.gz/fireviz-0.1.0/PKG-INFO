@@ -1,0 +1,164 @@
+Metadata-Version: 2.1
+Name: fireviz
+Version: 0.1.0
+Summary: A simple package for quick data visualization
+Home-page: https://github.com/AnnNaserNabil/fireviz
+Author: Ann Naser Nabil
+Author-email: ann.n.nabil@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+Requires-Dist: plotly
+Requires-Dist: networkx
+Requires-Dist: squarify
+Requires-Dist: numpy
+
+Here’s a well-structured `README.md` for your **quickviz** package:
+
+---
+
+# 📊 fireviz - A Simple & Fast Data Visualization Library  
+
+**fireviz** is a lightweight Python package for quick and insightful data visualizations. It allows you to generate various plots using **Matplotlib, Seaborn, Plotly, and NetworkX** with minimal effort.  
+
+## 🚀 Features  
+✔ Supports multiple plot types: `scatter`, `bar`, `line`, `heatmap`, `pie`, `treemap`, `network`, `sankey`, and more!  
+✔ Handles both **Pandas DataFrames and Series** automatically.  
+✔ Built-in **Exploratory Data Analysis (EDA)** function.  
+✔ Uses **Seaborn & Plotly** for professional-quality visuals.  
+✔ Requires minimal configuration – just pass your data!  
+
+---
+
+## 📦 Installation  
+
+```sh
+pip install git+https://github.com/yourusername/quickviz.git
+```
+
+or if publishing to PyPI:
+
+```sh
+pip install quickviz
+```
+
+---
+
+## 🔥 Quick Start  
+
+### 1️⃣ Import the package  
+```python
+import pandas as pd
+import fireviz as fv
+```
+
+### 2️⃣ Load your dataset  
+```python
+df = pd.read_csv("data.csv")
+```
+
+### 3️⃣ Generate Quick Visualizations  
+
+#### 📌 Scatter Plot  
+```python
+qv.plot(df, x="column1", y="column2", kind="scatter")
+```
+
+#### 📌 Histogram  
+```python
+qv.plot(df["column1"], kind="hist", bins=20)
+```
+
+#### 📌 Correlation Heatmap  
+```python
+qv.plot(df, kind="heatmap")
+```
+
+#### 📌 Treemap  
+```python
+qv.plot(df, x="category_column", y="value_column", kind="treemap")
+```
+
+---
+
+## 🔍 Exploratory Data Analysis (EDA)  
+
+The **`explore()`** function automatically generates visual summaries of your dataset.  
+```python
+qv.explore(df)
+```
+This will:  
+✅ Print **dataset info, missing values, and statistics**  
+✅ Plot **histograms** for numeric columns  
+✅ Plot **count plots** for categorical columns  
+✅ Generate a **correlation heatmap**  
+
+---
+
+## 📊 Supported Plot Types  
+
+| Plot Type    | `kind` Parameter |
+|-------------|----------------|
+| Scatter Plot | `"scatter"` |
+| Line Chart | `"line"` |
+| Box Plot | `"box"` |
+| Bar Chart | `"bar"` |
+| Bubble Chart | `"bubble"` |
+| Area Chart | `"area"` |
+| Heatmap | `"heatmap"` |
+| Pie Chart | `"pie"` |
+| Donut Chart | `"donut"` |
+| Treemap | `"treemap"` |
+| Funnel Chart | `"funnel"` |
+| Waterfall Chart | `"waterfall"` |
+| Choropleth Map | `"choropleth"` |
+| Radar Chart | `"radar"` |
+| Network Graph | `"network"` |
+| Sankey Diagram | `"sankey"` |
+| Gantt Chart | `"gantt"` |
+| Bullet Chart | `"bullet"` |
+| Density Plot | `"density"` |
+| Stacked Bar Chart | `"stacked_bar"` |
+
+---
+
+## 🛠 Requirements  
+- Python 3.6+
+- Pandas
+- Matplotlib
+- Seaborn
+- Plotly
+- NetworkX
+- Squarify
+- NumPy  
+
+Install dependencies manually if needed:  
+```sh
+pip install pandas matplotlib seaborn plotly networkx squarify numpy
+```
+
+---
+
+## 📄 License  
+This project is licensed under the **MIT License**.
+
+---
+
+## 🤝 Contributing  
+Feel free to open an issue or submit a pull request on [GitHub](https://github.com/AnnNaserNabil/quickviz).
+
+---
+
+## 💬 Questions & Feedback  
+Got questions or feedback? Reach out to **ann.n.nabil@gmail.com*.
+
+Happy Visualizing! 🎨📊🚀
+
+---
+
+Let me know if you want any modifications! 🚀
