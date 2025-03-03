@@ -1,0 +1,21 @@
+name: napari-vectorizer
+display_name: Labels Vectorization
+# use 'hidden' to remove plugin from napari hub search results
+visibility: public
+# see https://napari.org/stable/plugins/technical_references/manifest.html#fields for valid categories
+categories: ["Annotation", "Segmentation", "Acquisition"]
+contributions:
+  commands:
+    - id: napari-vectorizer.make_vectorization_widget
+      python_name: napari_vectorizer:label_vectorization_widget
+      title: Make label vectorization widget
+    - id: napari-vectorizer.load_conifer_sample_data
+      python_name: napari_vectorizer._sample_data:load_conifer_sample_data
+      title: Load conifer sample data
+  widgets:
+    - command: napari-vectorizer.make_vectorization_widget
+      display_name: Label Vectorization
+  sample_data:
+    - command: napari-vectorizer.load_conifer_sample_data
+      display_name: Napari Vectorizer
+      key: unique_id.1
