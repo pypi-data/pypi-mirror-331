@@ -1,0 +1,35 @@
+from setuptools import setup, find_packages
+
+setup(
+    author='yactouat',
+    author_email='yactouat@yactouat.com',
+    description='code for an agentic search tool using Langchain',
+    install_requires=[
+        'aiocache',
+        'aiohttp',
+        'arxiv',
+        'asyncio',
+        'beautifulsoup4',
+        'duckduckgo-search',
+        'langchain-community',
+        'langchain-core',
+        'langchain-openai',
+        'langgraph',
+        'nltk',
+        'pydantic',
+        'pypdf',
+        'python-dotenv',
+        'redis',
+        'requests',
+        'selenium',
+        'yollama',
+        'ypostgres_lib'
+    ],
+    license='MIT',
+    long_description=open('README.md').read(),
+    long_description_content_type='text/markdown',
+    name='agentic_search',
+    packages=find_packages(),
+    url='https://github.com/markets-agent/agentic-search',
+    version='12.0.1',
+)
