@@ -1,0 +1,8 @@
+MANIFEST.in
+README.md
+setup.py
+nikparse.egg-info/PKG-INFO
+nikparse.egg-info/SOURCES.txt
+nikparse.egg-info/dependency_links.txt
+nikparse.egg-info/entry_points.txt
+nikparse.egg-info/top_level.txt

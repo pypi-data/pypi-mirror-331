@@ -1,0 +1,2 @@
+[console_scripts]
+nikparse = nikparse.cli:main
