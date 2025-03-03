@@ -1,0 +1,14 @@
+mo_collections/__init__.py,sha256=xXTPqYGfqEUqOssOkvLgV_kh8NXF5j5flFre-F9IFpI,1121
+mo_collections/array.py,sha256=Y-nCxF-rSSemwB_JBhXgI_a8Fh-OZWXgAwEcoTC7d9k,5390
+mo_collections/index.py,sha256=KdJG8UrOTTs5VotoSchbAjzUg8QcwgiqJCmxr0JYfdo,4461
+mo_collections/matrix.py,sha256=Y1PZQKWJhvcOtWv2_JgRcJtguzKKB0DqEgfG3-xfJVw,11362
+mo_collections/multiset.py,sha256=QeVv_ORxtwuuBw0UkYKFJaDkUAAZs_msesWX0FvOnYQ,5638
+mo_collections/persistent_queue.py,sha256=ef5D9aDSxmMx-ZRc9nq5bQZXru9GhgfbbzEHDSQmOA8,7601
+mo_collections/queue.py,sha256=CjGlSaXLdyN7x-tHxhKFs5z-OdpuZB0Pd75SinAbJqg,2292
+mo_collections/relation.py,sha256=_NSwGYdAil--NQ0406jDgcMcL178CEayDP0uc6cxrSw,2693
+mo_collections/unique_index.py,sha256=Xh_j8h3so-pu6njE0rpMq4Eg7WDhtikKGdnmDO42Mhs,5442
+mo_collections-5.678.25061.dist-info/LICENSE,sha256=HyVuytGSiAUQ6ErWBHTqt1iSGHhLmlC8fO7jTCuR8dU,16725
+mo_collections-5.678.25061.dist-info/METADATA,sha256=HbOH0eTtYz35c7rvTORCalMLHMTxruvYRkEB7enZMb0,2184
+mo_collections-5.678.25061.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+mo_collections-5.678.25061.dist-info/top_level.txt,sha256=L8msU0PL_V3fIBAmIRk1aIx3IWBZ-00HVbDlQaujJTE,15
+mo_collections-5.678.25061.dist-info/RECORD,,
