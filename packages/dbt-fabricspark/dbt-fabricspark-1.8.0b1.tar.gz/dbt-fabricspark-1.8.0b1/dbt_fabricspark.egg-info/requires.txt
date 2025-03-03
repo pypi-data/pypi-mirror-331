@@ -1,0 +1,6 @@
+dbt-common<2.0,>=0.1.0a1
+dbt-adapters<2.0,>=0.1.0a1
+dbt-core<1.9.0,>=1.8.0a1
+azure-identity>=1.13.0
+azure-core>=1.26.4
+azure-cli==2.60.0
