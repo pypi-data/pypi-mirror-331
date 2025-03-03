@@ -1,0 +1,9 @@
+README.md
+setup.py
+auto_privacy_audit/__init__.py
+auto_privacy_audit/analyzer.py
+auto_privacy_audit.egg-info/PKG-INFO
+auto_privacy_audit.egg-info/SOURCES.txt
+auto_privacy_audit.egg-info/dependency_links.txt
+auto_privacy_audit.egg-info/top_level.txt
+tests/test_analyzer.py
