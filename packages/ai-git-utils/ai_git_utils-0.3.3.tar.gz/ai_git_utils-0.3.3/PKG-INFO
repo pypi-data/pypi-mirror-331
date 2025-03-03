@@ -1,0 +1,58 @@
+Metadata-Version: 2.3
+Name: ai_git_utils
+Version: 0.3.3
+Summary: AI git utils is an intelligent Git commit assistant that leverages AI to enhance your Git workflow.
+Project-URL: Homepage, https://github.com/twn39/aigit
+Project-URL: Documentation, https://github.com/twn39/aigit
+Project-URL: Repository, https://github.com/twn39/aigit
+Project-URL: Source Code, https://github.com/twn39/aigit
+Author-email: curry tang <twn39@163.com>
+Maintainer-email: curry tang <twn39@163.com>
+Keywords: ai,aigit,git
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.11
+Requires-Dist: gitpython>=3.1.44
+Requires-Dist: openai>=1.65.2
+Requires-Dist: rich>=13.8.0
+Requires-Dist: setuptools>=75.8.2
+Requires-Dist: typer>=0.15.2
+Description-Content-Type: text/markdown
+
+# AI Git Utils
+
+AI git utils is an intelligent Git commit assistant that leverages AI to enhance your Git workflow.
+It provides smart commit message generation and emoji selection to make your version control process more efficient and expressive.
+
+
+![](https://raw.githubusercontent.com/twn39/aigit/main/screen.png)
+
+## Features
+
+- AI-powered commit message generation
+- Interactive emoji selection for commit messages
+- Multiple AI model support with easy configuration
+
+## Installation
+
+```bash
+pip install ai-git-utils
+```
+
+## Usage
+
+Generate AI-assisted commit message
+
+``` 
+aigit commit
+```
+
+Check the help
+
+``` 
+aigit --help
+```
+
