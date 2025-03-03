@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+HelpDSF.egg-info/PKG-INFO
+HelpDSF.egg-info/SOURCES.txt
+HelpDSF.egg-info/dependency_links.txt
+HelpDSF.egg-info/requires.txt
+HelpDSF.egg-info/top_level.txt
+helpdsf/__init__.py
+helpdsf/helpdsf.py
