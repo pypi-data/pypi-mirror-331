@@ -1,0 +1,5 @@
+requests>=2.32.3
+python-jwt==4.1.0
+permit<3.0.0,>=2.7.2
+langflow==1.1.4.post1
+cryptography>=42.0.5

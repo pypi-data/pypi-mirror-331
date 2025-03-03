@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+permit_langflow.egg-info/PKG-INFO
+permit_langflow.egg-info/SOURCES.txt
+permit_langflow.egg-info/dependency_links.txt
+permit_langflow.egg-info/requires.txt
+permit_langflow.egg-info/top_level.txt
