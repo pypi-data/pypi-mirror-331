@@ -1,0 +1,118 @@
+[project]
+authors = [
+    { name = "Anibal Angulo", email = "ajcardoza2000@gmail.com" },
+]
+requires-python = "<4.0,>=3.10"
+dependencies = [
+    "aiofiles<25.0.0,>=24.1.0",
+    "fastapi[standard]<1.0.0,>=0.115.6",
+    "starlette-compress<2.0.0,>=1.4.0",
+    "orjson<4.0.0,>=3.10.14",
+]
+name = "ai-mock"
+version = "0.2.9"
+description = "Mock clients for your favorite LLM APIs"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[project.optional-dependencies]
+openai = [
+    "openai<2.0.0,>=1.59.6",
+]
+anthropic = [
+    "anthropic<1.0.0,>=0.42.0",
+]
+mistralai = [
+    "mistralai<2.0.0,>=1.2.6",
+]
+cohere = [
+    "cohere<6.0.0,>=5.13.6",
+]
+
+[project.scripts]
+ai-mock = "mockai.cli:cli"
+
+[tool.pdm.build]
+includes = [
+    "mockai",
+]
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+
+[tool.pytest.ini_options]
+pythonpath = [
+    ".",
+]
+asyncio_default_fixture_loop_scope = "function"
+
+[tool.ruff.lint]
+select = [
+    "F",
+    "E",
+    "I",
+    "UP",
+    "YTT",
+    "B",
+    "T10",
+    "T20",
+    "C4",
+    "PYI006",
+    "PYI062",
+    "PYI063",
+    "PYI066",
+    "PERF",
+]
+ignore = [
+    "D105",
+    "D107",
+    "D205",
+    "D415",
+    "E501",
+    "B011",
+    "B028",
+    "B904",
+]
+
+[tool.ruff.lint.flake8-quotes]
+inline-quotes = "single"
+multiline-quotes = "double"
+
+[tool.ruff.lint.mccabe]
+max-complexity = 14
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = [
+    "S101",
+]
+"examples/openai_tutorial.ipynb" = [
+    "T201",
+]
+
+[tool.ruff.format]
+indent-style = "space"
+line-ending = "lf"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[dependency-groups]
+dev = [
+    "ruff<1.0.0,>=0.4.9",
+    "pytest<9.0.0,>=8.3.4",
+    "pytest-sugar<2.0.0,>=1.0.0",
+    "pytest-asyncio<1.0.0,>=0.25.2",
+    "ipykernel<7.0.0,>=6.29.5",
+    "httpx[brotli,http2,zstd]>0.20.0",
+    "anyio<5.0.0,>=4.8.0",
+    "testcontainers>=4.9.1",
+]
