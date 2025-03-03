@@ -1,0 +1,29 @@
+from json import loads
+
+import requests
+
+from anubis.utils.color_print import ColorPrint
+
+
+def search_anubisdb(self, target):
+  print("Searching Anubis-DB")
+  res = requests.get("https://anubisdb.com/subdomains/" + target)
+  if res.status_code == 200 and res.text:
+    subdomains = loads(res.text)
+    for subdomain in subdomains:
+      if subdomain not in self.domains:
+        self.domains.append(subdomain)
+
+
+def send_to_anubisdb(self, target):
+  if len(target) == 1:
+    print("Sending to AnubisDB")
+    data = {'subdomains': self.domains}
+    # Sends found subdomains to Anubis (max 10,000/post)
+    res = requests.post("https://anubisdb.com/subdomains/" + target[0],
+                        json=data)
+    if res.status_code != 200:
+      ColorPrint.red("Error sending results to AnubisDB - Status Code: " + str(
+        res.status_code))
+  else:
+    print("Cannot send multiple domains to AnubisDB")
