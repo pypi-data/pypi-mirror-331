@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "suub-ldlite"
+version = "0.0.1"
+authors = [
+    {name = "Lukas Muenter", email = "lukas.muenter@suub.uni-bremen.de"}
+]
+description = "SuUB LDLite: A fork of LDLite, a Lightweight analytics tool for Okapi-based services"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {text = "Apache-2.0"}
+dependencies = [
+    "duckdb==0.6.1",
+    "pandas==1.5.2",
+    "psycopg2==2.9.5",
+    "requests==2.28.2",
+    "tqdm==4.64.1",
+    "XlsxWriter==3.0.6"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["test"]
+addopts = "-v --tb=short"
