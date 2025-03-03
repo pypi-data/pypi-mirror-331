@@ -1,0 +1,17 @@
+# Temporary files
+scratch/
+tmp/
+
+# Caches and environments
+*_cache/
+__pycache__/
+.reports/
+.mypy_cache/
+.venv/
+*.py[cdo]
+bin/act
+
+# Other
+.DS_Store
+.devdbrc
+dev-config.toml
