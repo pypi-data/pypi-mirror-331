@@ -1,0 +1,12 @@
+llm_chat_term/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+llm_chat_term/app.py,sha256=HBWWVqRuhXBEMUyjWFJwYGiWETByR8KUk14abkT8uy0,2800
+llm_chat_term/chat_selector.py,sha256=7wEJNyMDf1rMBQK9Qdq9dv3hWrUM72rTB-8H4zU6abk,3651
+llm_chat_term/chat_ui.py,sha256=NMK6pFmwBHXVRC--B8Sq4iUxHcKEyVlQbN0YAHgoKuU,7361
+llm_chat_term/config.py,sha256=MGMLayvvMq3NXQvxeTc23X5iXHHxSJSnTS4aXH51gQ8,2661
+llm_chat_term/db.py,sha256=dPNuFXufkDwgjyhpxhkhK2CS1qdpbmoDCyCm8PeWqLA,4917
+llm_chat_term/llm_client.py,sha256=mh0bS1nWrjyll8lKPSDSg_TtO_C1_0smmEicD48X1kg,6701
+llm_chat_term/utils.py,sha256=1ZqZEjGQICbOyTs3E2B4a6mGxy5cRGrWQVlkJ6Ewlc4,501
+llm_chat_term-0.1.1.dist-info/METADATA,sha256=IlBOpJSniMAG3qC3lIDKzynhcwGxHTurAr8hSYtmUUc,3131
+llm_chat_term-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+llm_chat_term-0.1.1.dist-info/entry_points.txt,sha256=UKZwtI3NDKiUn31xaR6DJJrw13Rv55F4b1tjZSeTrbs,57
+llm_chat_term-0.1.1.dist-info/RECORD,,
