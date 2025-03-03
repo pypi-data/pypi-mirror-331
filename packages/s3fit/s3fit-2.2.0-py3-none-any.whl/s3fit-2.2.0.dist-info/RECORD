@@ -1,0 +1,15 @@
+s3fit/__init__.py,sha256=C398vSB8IBM3pFAIVFIf6oKWUNVYEKzYCQUo3FH02MM,1820
+s3fit/auxiliary_func.py,sha256=Cz_7TkfCJU1n03-mbtFh2qHE3C9wYZ04Iw1pfXiB8ks,8893
+s3fit/config_frame.py,sha256=FlyAmbxnOURKE55I_fosLuCBsE4P03sYVrdtsDuwIcw,1596
+s3fit/extinct_law.py,sha256=7Paug2X2wyao0U6Aeo5U-UaaWSaterZDuT5epXc_oww,2743
+s3fit/fit_frame.py,sha256=6JVon7WWGPlnrS9hUPvoA8UOfQJx9TDZc21zalcXLuk,99301
+s3fit/phot_frame.py,sha256=PMyv6B774bqFYd8ReUzHp2nmkP5YRmlKS1ut16KpsWQ,6115
+s3fit/model_frames/__init__.py,sha256=2sd2xkAZa3yKW5NLS5ahSYNt__T_fpGJTrwaXUUeGyM,400
+s3fit/model_frames/agn_frame.py,sha256=WrnTsz6omxeoAfWigV7Su1pnEx9qk2wLdtbiOgkJpkI,12566
+s3fit/model_frames/eline_frame.py,sha256=BvqEmoae8xXqGFWY_YbR29c53gDz66B0bSThiS8_eXo,26947
+s3fit/model_frames/ssp_frame.py,sha256=c5dc6OIttV1vPLuiXABMJMUSTTOKXfcBFz3ZQmJ9MrA,43904
+s3fit/model_frames/torus_frame.py,sha256=YCK4HBr1T7QcY0y8r4gUPcpzrme_MEciiXiGdItU9Zw,15171
+s3fit-2.2.0.dist-info/METADATA,sha256=GZqOL8ikKGrmLL4DaXPnp2l63rf1p0-Kg2HPAP4mIaI,6804
+s3fit-2.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+s3fit-2.2.0.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+s3fit-2.2.0.dist-info/RECORD,,
