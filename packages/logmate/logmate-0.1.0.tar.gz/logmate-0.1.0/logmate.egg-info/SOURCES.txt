@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+logmate/__init__.py
+logmate/cli.py
+logmate/logmate.py
+logmate.egg-info/PKG-INFO
+logmate.egg-info/SOURCES.txt
+logmate.egg-info/dependency_links.txt
+logmate.egg-info/entry_points.txt
+logmate.egg-info/requires.txt
+logmate.egg-info/top_level.txt
