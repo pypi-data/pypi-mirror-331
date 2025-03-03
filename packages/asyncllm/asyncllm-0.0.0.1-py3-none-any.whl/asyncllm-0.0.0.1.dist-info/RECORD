@@ -1,0 +1,14 @@
+asyncllm/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+asyncllm/ollama/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+asyncllm/ollama/deepseek.cpython-312-x86_64-linux-gnu.so,sha256=hvd8hVdTlXwDwoeLarOyuo8DSOcpiJ6NitQ0t9tfncQ,913672
+asyncllm/ollama/requests/deepseek.cpython-312-x86_64-linux-gnu.so,sha256=LeK1HYRkTMbXJEJO61OZf6qwC1EvLOL91Vl02eDTu98,925960
+asyncllm/openai/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+asyncllm/openai/deepseek.cpython-312-x86_64-linux-gnu.so,sha256=785EdbW0w8VviFTnOvuwCZ5-1J9qbzB6OHVGxEb5lmU,913672
+asyncllm/openai/openrouter/deepseek.cpython-312-x86_64-linux-gnu.so,sha256=zPy96zBEXa5VfiuqZr9eQgitPRLKvWGYHfS0OuXcFGg,930056
+asyncllm/openai/requests/deepseek.cpython-312-x86_64-linux-gnu.so,sha256=-DRE9lcsVPPUGYNeO-u-WeLxmzd6kn1c7N5PdLmg2cY,930056
+asyncllm-0.0.0.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+asyncllm-0.0.0.1.dist-info/METADATA,sha256=lMzNXoz74eSKELJMATDzwZYN4LdfOV8Uhd_U0Ov68jE,898
+asyncllm-0.0.0.1.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+asyncllm-0.0.0.1.dist-info/top_level.txt,sha256=20agzUb9epA_0i4lQyvFD47PW0l1n6QVESXooCzYk6Y,9
+asyncllm-0.0.0.1.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+asyncllm-0.0.0.1.dist-info/RECORD,,
