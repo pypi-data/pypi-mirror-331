@@ -1,0 +1,71 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "m4b_util"
+description = "A collection of command line utilities for creating, editing, and generally working with m4b files."
+license = {text = "MIT License"}
+keywords = ["Audiobook", "m4b"]
+readme = "README.md"
+requires-python = ">=3.8"
+dynamic = ["version"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License"
+]
+dependencies = [
+    "natsort ~= 8.2.0",
+    "rich ~= 12.6.0",
+    "lark ~=1.2.2"
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest-cov",
+    "flake8",
+    "flake8-bugbear",
+    "flake8-docstrings",
+    "flake8-import-order",
+    "flake8-colors",
+    "pep8-naming"
+]
+
+[project.urls]
+repository = "https://github.com/Tsubashi/m4b-util"
+
+[project.scripts]
+m4b-util = "m4b_util:__main__.main"
+
+[tool.setuptools_scm]
+write_to = "src/m4b_util/__version__.py"
+
+[tool.setuptools.dynamic]
+version = {attr = "m4b_util.__version__.__version__"}
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+
+[tool.coverage.run]
+source = ["src"]
+branch = true
+omit = ["src/m4b_util/__version__.py"]
+
+[tool.coverage.report]
+# Regexes for lines to exclude from consideration
+exclude_also = [
+    # Don't complain about missing debug-only code:
+    "def __repr__",
+    "if self\\.debug",
+
+    # Don't complain if tests don't hit defensive assertion code:
+    "raise AssertionError",
+    "raise NotImplementedError",
+    ]
+
+[tool.yapf]
+column_limit = 120
+
+[tool.isort]
+py_version = "auto"
