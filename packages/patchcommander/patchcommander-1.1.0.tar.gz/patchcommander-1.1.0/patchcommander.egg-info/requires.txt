@@ -1,0 +1,5 @@
+rich
+pyperclip
+tree-sitter
+tree-sitter-python
+tree-sitter-javascript
