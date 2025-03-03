@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: wcpan-jav
+Version: 0.2.1
+Summary: INTERNAL USE ONLY
+Author-email: Wei-Cheng Pan <legnaleurc@gmail.com>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Typing :: Typed
+Requires-Python: >=3.12
+Requires-Dist: aiohttp>=3.11.11
+Requires-Dist: beautifulsoup4>=4.13.3
