@@ -1,0 +1,3 @@
+[console_scripts]
+eagle-exporter=eagle_exporter.cli:main
+
