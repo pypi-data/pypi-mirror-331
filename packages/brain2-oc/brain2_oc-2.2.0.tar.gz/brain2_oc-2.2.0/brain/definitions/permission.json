@@ -1,0 +1,50 @@
+{
+	"__name__": "Brain_Permission",
+
+	"__sql__": {
+		"auto_primary": false,
+		"create": [ "_user", "_portal", "name", "id", "rights" ],
+		"db": "brain",
+		"host": "brain",
+		"indexes": {
+			"i_user_portal": [ "_user", "_portal" ]
+		},
+		"primary": false,
+		"table": "brain_permission",
+		"charset": "utf8mb4",
+		"collate": "utf8mb4_bin"
+	},
+
+	"_user": {
+		"__type__": "uuid"
+	},
+
+	"_portal": {
+		"__type__": "string",
+		"__maximum__": 16,
+		"__sql__": {
+			"type": "char(16)"
+		}
+	},
+
+	"name": {
+		"__type__": "string",
+		"__regex__": "[a-z_]{1,32}",
+		"__sql__": {
+			"type": "char(32)"
+		}
+	},
+
+	"id": {
+		"__type__": "uuid"
+	},
+
+	"rights": {
+		"__type__": "uint",
+		"__minimum__": 1,
+		"__maximum__": 15,
+		"__sql__": {
+			"type": "tinyint(2)"
+		}
+	}
+}
