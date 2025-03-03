@@ -1,0 +1,27 @@
+Metadata-Version: 2.2
+Name: biolith
+Version: 0.0.1
+Summary: Bayesian ecological modeling in Python
+Author: Timm Haucke
+Author-email: haucke@mit.edu
+License: MIT
+Keywords: python,occupancy,numpyro,bayesian,ecology
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: jax
+Requires-Dist: numpyro
+Requires-Dist: funsor
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: keywords
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: summary
+
+A package that provides Bayesian ecological modeling in Python
