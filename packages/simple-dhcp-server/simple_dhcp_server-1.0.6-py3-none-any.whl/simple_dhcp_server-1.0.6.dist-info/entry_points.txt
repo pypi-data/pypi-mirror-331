@@ -1,0 +1,6 @@
+[console_scripts]
+simple-dhcp-server = simple_dhcp_server:main
+simple-dhcp-server-listen = simple_dhcp_server.listener:main
+simple-dhcp-server-qt = simple_dhcp_server.qt:main
+simple-dhcp-server-serve = simple_dhcp_server.dhcp:main
+simple-dhcp-server-tk = simple_dhcp_server.tk:main
