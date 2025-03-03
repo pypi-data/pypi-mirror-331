@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+completable_html_xblock/__init__.py
+completable_html_xblock/html.py
+completable_html_xblock.egg-info/PKG-INFO
+completable_html_xblock.egg-info/SOURCES.txt
+completable_html_xblock.egg-info/dependency_links.txt
+completable_html_xblock.egg-info/entry_points.txt
+completable_html_xblock.egg-info/requires.txt
+completable_html_xblock.egg-info/top_level.txt
+completable_html_xblock/static/js/html_completion.js
+completable_html_xblock/translations/README.txt
+requirements/base.in
+requirements/constraints.txt
+tests/test_basics.py

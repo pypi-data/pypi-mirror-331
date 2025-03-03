@@ -1,0 +1,2 @@
+[xblock.v1]
+completable_html5 = completable_html_xblock:CompletableHTML5XBlock
