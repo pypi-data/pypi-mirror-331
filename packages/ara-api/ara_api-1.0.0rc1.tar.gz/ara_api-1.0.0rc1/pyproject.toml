@@ -1,0 +1,60 @@
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[project]
+name = "ara-api"
+version = "1.0.0-pre1"
+license = {file = "LICENSE"}
+
+description = "Applied Robotics Avia API for ARA MINI, ARA EDU and ARA FPV drones"
+authors = [{name = "Alexander Kleimenov"}]
+maintainers = [
+    {name = "Alexander Kleimenov", email="nequamy@gmail.com"},
+]
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development",
+    'Topic :: Scientific/Engineering',
+    'Operating System :: Unix',
+    'Operating System :: MacOS',
+    'Operating System :: Microsoft :: Windows',
+]
+keywords = ["robotics", "drones", "API", "ARA"]
+dependencies = [
+    "requests==2.32.3",
+    "grpcio==1.69.0",
+    "grpcio-tools==1.66.2",
+    "pyserial==3.5",
+    "colorama==0.4.6",
+    "pyfiglet==1.0.2",
+    "opencv-python==4.10.0.84",
+    "opencv-contrib-python==4.10.0.84",
+    "numpy>=2.1.1",
+    "pandas==2.2.3",
+    "customtkinter==5.2.2",
+    "pillow (>=11.1.0,<12.0.0)",
+]
+
+packages = [
+    { include = "ara_core.py", from = "ara_api/ara_lib"},
+    { include = "ara_vision.py", from = "ara_api/ara_lib"},
+]
+
+[project.scripts]
+ara-api-core = "ara_api.__main__:main"
+ara-api-vision = "ara_api._vision.vision_service:main"
+ara-api-analyzer = "ara_api._analyzer.__main__:main"
+
+test = "ara_api.ara_lib.ara_vision:main"
