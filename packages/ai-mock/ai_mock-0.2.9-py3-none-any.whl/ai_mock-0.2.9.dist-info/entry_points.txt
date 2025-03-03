@@ -1,0 +1,5 @@
+[console_scripts]
+ai-mock = mockai.cli:cli
+
+[gui_scripts]
+
