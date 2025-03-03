@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+lelu_admin_test/__init__.py
+lelu_admin_test/apps.py
+lelu_admin_test/models.py
+lelu_admin_test/settings.py
+lelu_admin_test/urls.py
+lelu_admin_test.egg-info/PKG-INFO
+lelu_admin_test.egg-info/SOURCES.txt
+lelu_admin_test.egg-info/dependency_links.txt
+lelu_admin_test.egg-info/top_level.txt
+lelu_admin_test/migrations/0001_initial.py
+lelu_admin_test/migrations/__init__.py
+lelu_admin_test/views/__init__.py
+lelu_admin_test/views/test_plugin.py
