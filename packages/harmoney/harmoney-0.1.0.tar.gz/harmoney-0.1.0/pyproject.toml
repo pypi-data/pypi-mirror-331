@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "harmoney"
+version = "0.1.0"
+description = "Simple Remote Function Calling Framework"
+authors = [{name = "Phani Pavan K", email = "kphanipavan@gmail.com"}]
+license = {text = "AGPLv3"}
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = ["websockets>=15.0", "uvicorn>=0.34.0", "fastapi>=0.115.8", "pydantic>=2.10.6", "requests>=2.31.0"]
+
+[project.urls]
+Homepage = "https://git.pvnweb.dedyn.io/phanipavank/harmoney"

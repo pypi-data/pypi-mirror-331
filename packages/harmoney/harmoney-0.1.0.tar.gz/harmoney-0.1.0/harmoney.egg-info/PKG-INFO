@@ -1,0 +1,18 @@
+Metadata-Version: 2.2
+Name: harmoney
+Version: 0.1.0
+Summary: Simple Remote Function Calling Framework
+Author-email: Phani Pavan K <kphanipavan@gmail.com>
+License: AGPLv3
+Project-URL: Homepage, https://git.pvnweb.dedyn.io/phanipavank/harmoney
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: websockets>=15.0
+Requires-Dist: uvicorn>=0.34.0
+Requires-Dist: fastapi>=0.115.8
+Requires-Dist: pydantic>=2.10.6
+Requires-Dist: requests>=2.31.0
+
+# harmoney
+
+Distributed Function Caller Framework for Python
