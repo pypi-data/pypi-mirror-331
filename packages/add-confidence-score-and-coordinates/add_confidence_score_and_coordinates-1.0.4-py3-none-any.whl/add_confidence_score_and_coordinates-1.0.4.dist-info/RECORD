@@ -1,0 +1,10 @@
+add_confidence_and_coordinates/__init__.py,sha256=auxQlDbzdMpml6Ri82HzRHHFGnmeql7A8Zf15djfy3c,56
+add_confidence_and_coordinates/openai_json_updater.py,sha256=YrOq0VbrmJv1vDaa2pmMCcrKckxfEBJTUk0cy_Zq20U,7867
+add_confidence_and_coordinates/utils.py,sha256=LddQST-LolyXZ28vykNBYoZ2Z-_2HFKFhWo5RbWGBnU,12093
+tests/__init__.py,sha256=i4TahULiCR9-cyEIrsTXbe7QfYj4kEUiLjjrLFvhzyI,62
+tests/test_json_updater.py,sha256=-xgb7q0rR2lfac0Ivh6GHNYAJyJOywwqUFGyINe935Q,1757
+add_confidence_score_and_coordinates-1.0.4.dist-info/LICENSE,sha256=fY13RgZc2cXcmB2mMS5om6FwrpmGnVDO3WX4qgWdIdo,1094
+add_confidence_score_and_coordinates-1.0.4.dist-info/METADATA,sha256=EEf13egrVfI5hZIq_wAzY6YHoBN2QL5O7w4C2So1vQk,628
+add_confidence_score_and_coordinates-1.0.4.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+add_confidence_score_and_coordinates-1.0.4.dist-info/top_level.txt,sha256=iZO-MIKNs6p23C4siog596eZF_Oo4xOF6HVHd1sbeDY,37
+add_confidence_score_and_coordinates-1.0.4.dist-info/RECORD,,
