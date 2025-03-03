@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gapat"
+version = "1.0.0"
+description = "A comprehensive framework of GPU-accelerated image reconstruction for photoacoustic computed tomography"
+readme = "README.md"
+authors = [
+    { name="Yibing Wang", email="ddffwyb@pku.edu.cn" }
+]
+license = { file="LICENSE" }
+keywords = [
+    "photoacoustic computed tomography",
+    "large-scale data size",
+    "GPU-accelerated method",
+    "Taichi Lang for python",
+    "multiple GPU platform",
+]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "numpy",
+    "scipy",
+    "taichi==1.2.2",
+]
+
+[project.urls]
+homepage = "https://github.com/ddffwyb/GAPAT"
+
+[tool.setuptools.packages.find]
+where = ["."]
