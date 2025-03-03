@@ -1,0 +1,16 @@
+[package]
+name = "scors"
+version = "0.1.4"
+edition = "2021"
+license = "MIT"
+description = "Scores for binary classifier evaluation"
+
+[lib]
+name = "_scors"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = { version = "0.23.5", features = ["extension-module"] }
+ndarray = "0.16.1"
+numpy = "0.23.0"
+
