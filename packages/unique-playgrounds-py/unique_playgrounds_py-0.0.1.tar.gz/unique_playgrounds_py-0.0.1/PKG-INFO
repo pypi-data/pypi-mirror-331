@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: unique-playgrounds-py
+Version: 0.0.1
+Summary: A helper class for working with the Unique Network blockchain.
+Home-page: https://github.com/UniqueNetwork/unique-playgrounds-py
+Author: UniqueNetwork
+Author-email: pypi@unique.network
+License: Apache-2.0
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: substrate-interface<2,>=1.7.11
+
+# unique-playgrounds-py
+
+A helper class for working with the Unique Network blockchain. It simplifies interaction with Substrate and provides wrappers over standard extrinsics of Unique Network. 
+
+Created similarly to the TypeScript version (https://github.com/UniqueNetwork/unique-chain/tree/develop/js-packages/playgrounds) used for testing Unique Network releases.
