@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+src/nexusdata/__init__.py
+src/nexusdata/client.py
+src/nexusdata.egg-info/PKG-INFO
+src/nexusdata.egg-info/SOURCES.txt
+src/nexusdata.egg-info/dependency_links.txt
+src/nexusdata.egg-info/requires.txt
+src/nexusdata.egg-info/top_level.txt
+src/nexusdata/proto/qwdata_pb2.py
+src/nexusdata/proto/qwdata_pb2_grpc.py
