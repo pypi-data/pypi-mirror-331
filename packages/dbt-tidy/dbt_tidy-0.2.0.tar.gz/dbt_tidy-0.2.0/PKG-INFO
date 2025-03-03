@@ -1,0 +1,22 @@
+Metadata-Version: 2.3
+Name: dbt-tidy
+Version: 0.2.0
+Summary: Tidy is a Python package designed to review your dbt project and enforce validation checks for project structure and standards.
+License: MIT
+Keywords: dbt
+Author: Cameron Cyr
+Requires-Python: >=3.9
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: click (>=8.1.8,<9.0.0)
+Requires-Dist: pydantic (>=2.10.6,<3.0.0)
+Project-URL: Homepage, https://github.com/JustABitOff/tidy
+Description-Content-Type: text/markdown
+
+# tidy
+Tidy is a Python package designed to review your dbt project and enforce validation checks for project structure and standards.
+
