@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "joao_marcionilo_contratos_governamentais"
+version = "0.1.0"
+description = "Agrupa os datasets para uma análise das contratações dos órgãos e entidades da administração pública direta, autárquica e fundacional obtidos através do site: https://portaldatransparencia.gov.br/download-de-dados/compras"
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [
+  { name="João Marcionilo", email="marcionilojob@gmail.com" },
+]
+dependencies = [
+    "pyodbc~=5.2.0",
+    "pandas~=2.2.3",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+]
+
+[project.urls]
+Repository = "https://github.com/Joao-Marcionilo/contratos-governamentais"
