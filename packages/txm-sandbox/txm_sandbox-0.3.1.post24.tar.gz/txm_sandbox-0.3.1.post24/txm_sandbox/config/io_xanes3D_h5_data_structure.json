@@ -1,0 +1,27 @@
+{
+    "use_h5_reader": true,
+    "structured_h5_reader": {
+        "io_data_structure": {
+            "data_path": "/Exchange/data",
+            "flat_path": "/Exchange/flat",
+            "dark_path": "/Exchange/dark",
+            "eng_path": "/Experiment/X_eng (keV)"
+        },
+        "io_data_info": {
+            "item00_path": "/Exchange/data",
+            "item01_path": "/Exchange/angle",
+            "item02_path": "/Experiment/Magnification",
+            "item03_path": "/Experiment/Pixel Size",
+            "item04_path": "/Experiment/X_eng (keV)",
+            "item05_path": "/Experiment/note",
+            "item06_path": "/Experiment/scan_time",
+            "item07_path": ""
+        }
+    },
+    "tomo_raw_fn_template": "tomo_zfly_id_{0}.h5",
+    "xanes3D_recon_dir_template": "recon_tomo_zfly_id_{0}",
+    "xanes3D_recon_fn_template": "recon_tomo_zfly_id_{0}_{1}.tiff",
+    "customized_reader": {
+        "user_xanes3D_reader": ""
+    }
+}

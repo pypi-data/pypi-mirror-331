@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: txm_sandbox
+Version: 0.3.1.post24
+Summary: Integrated Spectro-Imaging Analysis Toolbox
+Home-page: https://github.com/xianghuix/TXM_Sandbox
+Author: Xianghui Xiao
+Author-email: xianghuix@gmail.com
+License: MIT
+License-File: LICENSE
+Requires-Dist: python>=3.11
+Requires-Dist: pyimagej
+Requires-Dist: nodejs
+Requires-Dist: xarray
+Requires-Dist: tomopy
+Requires-Dist: h5py
+Requires-Dist: tifffile
+Requires-Dist: opencv
+Requires-Dist: openpyxl
+Requires-Dist: pytables
+Requires-Dist: pandas
+Requires-Dist: jupyter
+Requires-Dist: jupyterlab
+Requires-Dist: multiprocess
+Requires-Dist: scikit-image
+Requires-Dist: scikit-learn
+Requires-Dist: pystackreg
+Requires-Dist: silx
+Requires-Dist: napari
