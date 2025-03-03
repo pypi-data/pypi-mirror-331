@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "django-ninja-shield"
+version = "0.0.1"
+description = "A python package to control permissions for django ninja."
+authors = ["medram <mramouchy@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django = "^5.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
