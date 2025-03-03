@@ -1,0 +1,7 @@
+axon/__init__.py,sha256=EAwoCZOK-37K7-HkbP63dFaEIghvsRr4E8tsGAfMOfs,399
+axon/middleware.py,sha256=NqqexyQtnmJPXdFgPlLJQoSJ7FPHTmX1cHCYzHz4U0A,182
+axon/session.py,sha256=w6okrpLw85tgbR4CbF_Jte04w_Axa9cRfXmCTHJqGHM,885
+cortex_axon_py-0.1.8.dist-info/METADATA,sha256=fwXC53vfiC8CXiyDkDB9qcvawS2AVIrgN_mxdQ2Z1Bg,180
+cortex_axon_py-0.1.8.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+cortex_axon_py-0.1.8.dist-info/top_level.txt,sha256=vRkPFUYD0GspqpZfeuY7c2fzJmpHIpgjOY_nnOHNwVc,5
+cortex_axon_py-0.1.8.dist-info/RECORD,,
