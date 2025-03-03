@@ -1,0 +1,2354 @@
+[
+    {
+        "idx": 1,
+        "question": "When did Lothair Ii's mother die?",
+        "recall": {
+            "1": 0.5,
+            "2": 0.5,
+            "5": 0.5,
+            "10": 0.5,
+            "15": 0.5,
+            "20": 0.5,
+            "30": 0.5,
+            "40": 0.5,
+            "50": 0.5,
+            "80": 0.5,
+            "100": 0.5
+        },
+        "recall_naive": {
+            "1": 0.5,
+            "2": 0.5,
+            "5": 1.0,
+            "10": 1.0,
+            "15": 1.0,
+            "20": 1.0,
+            "30": 1.0,
+            "40": 1.0,
+            "50": 1.0,
+            "80": 1.0,
+            "100": 1.0
+        },
+        "average_recall": {
+            "1": 0.5,
+            "2": 0.5,
+            "5": 0.5,
+            "10": 0.5,
+            "15": 0.5,
+            "20": 0.5,
+            "30": 0.5,
+            "40": 0.5,
+            "50": 0.5,
+            "80": 0.5,
+            "100": 0.5
+        },
+        "average_recall_naive": {
+            "1": 0.5,
+            "2": 0.5,
+            "5": 1.0,
+            "10": 1.0,
+            "15": 1.0,
+            "20": 1.0,
+            "30": 1.0,
+            "40": 1.0,
+            "50": 1.0,
+            "80": 1.0,
+            "100": 1.0
+        },
+        "retrieved_titles": [
+            "Ermengarde of Tours"
+        ],
+        "naive_retrieved_titles": [
+            "Lothair II",
+            "Waldrada of Lotharingia",
+            "Teutberga",
+            "Ermengarde of Tours",
+            "Bertha, Duchess of Lorraine",
+            "Adelaide II, Abbess of Quedlinburg",
+            "Margaretha van Mechelen",
+            "Adelaide I, Abbess of Quedlinburg",
+            "Henry II, Lord of Ligny",
+            "Matilda of Frisia"
+        ],
+        "gold_titles": [
+            "Lothair II",
+            "Ermengarde of Tours"
+        ]
+    },
+    {
+        "idx": 2,
+        "question": "Which film was released first, Aas Ka Panchhi or Phoolwari?",
+        "recall": {
+            "1": 0.5,
+            "2": 1.0,
+            "5": 1.0,
+            "10": 1.0,
+            "15": 1.0,
+            "20": 1.0,
+            "30": 1.0,
+            "40": 1.0,
+            "50": 1.0,
+            "80": 1.0,
+            "100": 1.0
+        },
+        "recall_naive": {
+            "1": 0.5,
+            "2": 1.0,
+            "5": 1.0,
+            "10": 1.0,
+            "15": 1.0,
+            "20": 1.0,
+            "30": 1.0,
+            "40": 1.0,
+            "50": 1.0,
+            "80": 1.0,
+            "100": 1.0
+        },
+        "average_recall": {
+            "1": 0.5,
+            "2": 0.75,
+            "5": 0.75,
+            "10": 0.75,
+            "15": 0.75,
+            "20": 0.75,
+            "30": 0.75,
+            "40": 0.75,
+            "50": 0.75,
+            "80": 0.75,
+            "100": 0.75
+        },
+        "average_recall_naive": {
+            "1": 0.5,
+            "2": 0.75,
+            "5": 1.0,
+            "10": 1.0,
+            "15": 1.0,
+            "20": 1.0,
+            "30": 1.0,
+            "40": 1.0,
+            "50": 1.0,
+            "80": 1.0,
+            "100": 1.0
+        },
+        "retrieved_titles": [
+            "Aas Ka Panchhi",
+            "Phoolwari",
+            "Invasion of the Neptune Men"
+        ],
+        "naive_retrieved_titles": [
+            "Aas Ka Panchhi",
+            "Phoolwari",
+            "Aansoo Ban Gaye Phool",
+            "Abhishek Saxena",
+            "Phalitamsha",
+            "Chaowa Pawa (2009 film)",
+            "Pyar Ka Bandhan",
+            "Kishore Sahu",
+            "En Aasai Unnoduthan",
+            "Prem Mhanje Prem Mhanje Prem Asta"
+        ],
+        "gold_titles": [
+            "Aas Ka Panchhi",
+            "Phoolwari"
+        ]
+    },
+    {
+        "idx": 3,
+        "question": "What is the place of birth of the performer of song Changed It?",
+        "recall": {
+            "1": 0.5,
+            "2": 0.5,
+            "5": 1.0,
+            "10": 1.0,
+            "15": 1.0,
+            "20": 1.0,
+            "30": 1.0,
+            "40": 1.0,
+            "50": 1.0,
+            "80": 1.0,
+            "100": 1.0
+        },
+        "recall_naive": {
+            "1": 0.5,
+            "2": 0.5,
+            "5": 0.5,
+            "10": 0.5,
+            "15": 0.5,
+            "20": 0.5,
+            "30": 0.5,
+            "40": 0.5,
+            "50": 0.5,
+            "80": 0.5,
+            "100": 0.5
+        },
+        "average_recall": {
+            "1": 0.5,
+            "2": 0.6667,
+            "5": 0.8333,
+            "10": 0.8333,
+            "15": 0.8333,
+            "20": 0.8333,
+            "30": 0.8333,
+            "40": 0.8333,
+            "50": 0.8333,
+            "80": 0.8333,
+            "100": 0.8333
+        },
+        "average_recall_naive": {
+            "1": 0.5,
+            "2": 0.6667,
+            "5": 0.8333,
+            "10": 0.8333,
+            "15": 0.8333,
+            "20": 0.8333,
+            "30": 0.8333,
+            "40": 0.8333,
+            "50": 0.8333,
+            "80": 0.8333,
+            "100": 0.8333
+        },
+        "retrieved_titles": [
+            "Changed It",
+            "B\u014dkenshatachi",
+            "Nicki Minaj",
+            "DJ Jubilee"
+        ],
+        "naive_retrieved_titles": [
+            "Changed It",
+            "Time for a Change (album)",
+            "You Changed Me",
+            "Wherever I Lay My Hat (That's My Home)",
+            "Chris Brown",
+            "Chuck Berry",
+            "In the Maybe World",
+            "B\u014dkenshatachi",
+            "Little Fire",
+            "Nancy Baron"
+        ],
+        "gold_titles": [
+            "Changed It",
+            "Nicki Minaj"
+        ]
+    },
+    {
+        "idx": 4,
+        "question": "Are Marufabad and Nasamkhrali both located in the same country?",
+        "recall": {
+            "1": 0.5,
+            "2": 1.0,
+            "5": 1.0,
+            "10": 1.0,
+            "15": 1.0,
+            "20": 1.0,
+            "30": 1.0,
+            "40": 1.0,
+            "50": 1.0,
+            "80": 1.0,
+            "100": 1.0
+        },
+        "recall_naive": {
+            "1": 0.5,
+            "2": 1.0,
+            "5": 1.0,
+            "10": 1.0,
+            "15": 1.0,
+            "20": 1.0,
+            "30": 1.0,
+            "40": 1.0,
+            "50": 1.0,
+            "80": 1.0,
+            "100": 1.0
+        },
+        "average_recall": {
+            "1": 0.5,
+            "2": 0.75,
+            "5": 0.875,
+            "10": 0.875,
+            "15": 0.875,
+            "20": 0.875,
+            "30": 0.875,
+            "40": 0.875,
+            "50": 0.875,
+            "80": 0.875,
+            "100": 0.875
+        },
+        "average_recall_naive": {
+            "1": 0.5,
+            "2": 0.75,
+            "5": 0.875,
+            "10": 0.875,
+            "15": 0.875,
+            "20": 0.875,
+            "30": 0.875,
+            "40": 0.875,
+            "50": 0.875,
+            "80": 0.875,
+            "100": 0.875
+        },
+        "retrieved_titles": [
+            "Marufabad",
+            "Nasamkhrali"
+        ],
+        "naive_retrieved_titles": [
+            "Nasamkhrali",
+            "Marufabad",
+            "Shah Muhammad Khan",
+            "Asfar ibn Kurduya",
+            "Hyderabad Nawabs",
+            "Ali Baksh Jarnail",
+            "Qaleh-ye Nashin Shahi",
+            "Telangana State Archaeology Museum",
+            "Ramabai Peshwa",
+            "Marzuban ibn Muhammad"
+        ],
+        "gold_titles": [
+            "Marufabad",
+            "Nasamkhrali"
+        ]
+    },
+    {
+        "idx": 5,
+        "question": "Which film has the director who is older, God'S Gift To Women or Aldri Annet Enn Br\u00e5k?",
+        "recall": {
+            "1": 0.25,
+            "2": 0.25,
+            "5": 0.5,
+            "10": 0.5,
+            "15": 0.75,
+            "20": 0.75,
+            "30": 0.75,
+            "40": 0.75,
+            "50": 0.75,
+            "80": 0.75,
+            "100": 0.75
+        },
+        "recall_naive": {
+            "1": 0.25,
+            "2": 0.5,
+            "5": 0.5,
+            "10": 0.5,
+            "15": 0.5,
+            "20": 0.5,
+            "30": 0.5,
+            "40": 0.5,
+            "50": 0.5,
+            "80": 0.5,
+            "100": 0.5
+        },
+        "average_recall": {
+            "1": 0.45,
+            "2": 0.65,
+            "5": 0.8,
+            "10": 0.8,
+            "15": 0.85,
+            "20": 0.85,
+            "30": 0.85,
+            "40": 0.85,
+            "50": 0.85,
+            "80": 0.85,
+            "100": 0.85
+        },
+        "average_recall_naive": {
+            "1": 0.45,
+            "2": 0.7,
+            "5": 0.8,
+            "10": 0.8,
+            "15": 0.8,
+            "20": 0.8,
+            "30": 0.8,
+            "40": 0.8,
+            "50": 0.8,
+            "80": 0.8,
+            "100": 0.8
+        },
+        "retrieved_titles": [
+            "God's Gift to Women",
+            "Woman Without a Face",
+            "Bjarne Henning-Jensen",
+            "Edith Carlmar",
+            "Lasse Hallstr\u00f6m",
+            "Henry King (director)",
+            "Edwin L. Marin",
+            "James Young (director)",
+            "Maurice Elvey",
+            "Robert M. Young (director)",
+            "Norman Taurog",
+            "Michael Curtiz"
+        ],
+        "naive_retrieved_titles": [
+            "Edith Carlmar",
+            "Aldri annet enn br\u00e5k",
+            "Bjarne Henning-Jensen",
+            "Woman Without a Face",
+            "Bedre enn sitt rykte",
+            "Ildik\u00f3 Enyedi",
+            "Christian E. Christiansen",
+            "Altid ballade",
+            "Brink of Life",
+            "The Boss of It All"
+        ],
+        "gold_titles": [
+            "God's Gift to Women",
+            "Aldri annet enn br\u00e5k",
+            "Michael Curtiz",
+            "Edith Carlmar"
+        ]
+    },
+    {
+        "idx": 6,
+        "question": "Which film whose director was born first, El Tonto or The Heart Of Doreon?",
+        "recall": {
+            "1": 0.25,
+            "2": 0.25,
+            "5": 0.5,
+            "10": 1.0,
+            "15": 1.0,
+            "20": 1.0,
+            "30": 1.0,
+            "40": 1.0,
+            "50": 1.0,
+            "80": 1.0,
+            "100": 1.0
+        },
+        "recall_naive": {
+            "1": 0.25,
+            "2": 0.5,
+            "5": 0.5,
+            "10": 0.5,
+            "15": 0.5,
+            "20": 0.5,
+            "30": 0.5,
+            "40": 0.5,
+            "50": 0.5,
+            "80": 0.5,
+            "100": 0.5
+        },
+        "average_recall": {
+            "1": 0.4167,
+            "2": 0.5833,
+            "5": 0.75,
+            "10": 0.8333,
+            "15": 0.875,
+            "20": 0.875,
+            "30": 0.875,
+            "40": 0.875,
+            "50": 0.875,
+            "80": 0.875,
+            "100": 0.875
+        },
+        "average_recall_naive": {
+            "1": 0.4167,
+            "2": 0.6667,
+            "5": 0.75,
+            "10": 0.75,
+            "15": 0.75,
+            "20": 0.75,
+            "30": 0.75,
+            "40": 0.75,
+            "50": 0.75,
+            "80": 0.75,
+            "100": 0.75
+        },
+        "retrieved_titles": [
+            "El Tonto",
+            "Francisco Rovira Beleta",
+            "The Heart of Doreon",
+            "Dog's Heart",
+            "Leopoldo Torres R\u00edos",
+            "Gonzalo Mart\u00ednez Ortega",
+            "Heart (1987 film)",
+            "Dorothy Fadiman",
+            "Charlie Day",
+            "Robert North Bradbury"
+        ],
+        "naive_retrieved_titles": [
+            "The Heart of Doreon",
+            "El Tonto",
+            "Norman Taurog",
+            "To the Heart",
+            "Juan Bustillo Oro",
+            "Jos\u00e9 Nepomuceno",
+            "The Lone Ranger (1956 film)",
+            "Leopoldo Torres R\u00edos",
+            "Ralph L. Thomas",
+            "Robert M. Young (director)"
+        ],
+        "gold_titles": [
+            "El Tonto",
+            "The Heart of Doreon",
+            "Charlie Day",
+            "Robert North Bradbury"
+        ]
+    },
+    {
+        "idx": 7,
+        "question": "Who was born first out of Aivar Kuusmaa and Andy Summers?",
+        "recall": {
+            "1": 0.5,
+            "2": 1.0,
+            "5": 1.0,
+            "10": 1.0,
+            "15": 1.0,
+            "20": 1.0,
+            "30": 1.0,
+            "40": 1.0,
+            "50": 1.0,
+            "80": 1.0,
+            "100": 1.0
+        },
+        "recall_naive": {
+            "1": 0.5,
+            "2": 0.5,
+            "5": 0.5,
+            "10": 0.5,
+            "15": 0.5,
+            "20": 0.5,
+            "30": 0.5,
+            "40": 0.5,
+            "50": 0.5,
+            "80": 0.5,
+            "100": 0.5
+        },
+        "average_recall": {
+            "1": 0.4286,
+            "2": 0.6429,
+            "5": 0.7857,
+            "10": 0.8571,
+            "15": 0.8929,
+            "20": 0.8929,
+            "30": 0.8929,
+            "40": 0.8929,
+            "50": 0.8929,
+            "80": 0.8929,
+            "100": 0.8929
+        },
+        "average_recall_naive": {
+            "1": 0.4286,
+            "2": 0.6429,
+            "5": 0.7143,
+            "10": 0.7143,
+            "15": 0.7143,
+            "20": 0.7143,
+            "30": 0.7143,
+            "40": 0.7143,
+            "50": 0.7143,
+            "80": 0.7143,
+            "100": 0.7143
+        },
+        "retrieved_titles": [
+            "Aivar Kuusmaa",
+            "Andy Summers"
+        ],
+        "naive_retrieved_titles": [
+            "Aivar Kuusmaa",
+            "Aarno Sulkanen",
+            "Jyrki Nurminen",
+            "Sandy Air",
+            "Aki Kaurism\u00e4ki",
+            "Sakari Simelius",
+            "Hannu Leminen",
+            "Gunnar Wiklund",
+            "Koit Toome",
+            "Risto Jarva"
+        ],
+        "gold_titles": [
+            "Aivar Kuusmaa",
+            "Andy Summers"
+        ]
+    },
+    {
+        "idx": 8,
+        "question": "Who is Raghnall Mac Ruaidhr\u00ed's paternal grandfather?",
+        "recall": {
+            "1": 0.5,
+            "2": 0.5,
+            "5": 0.5,
+            "10": 0.5,
+            "15": 0.5,
+            "20": 0.5,
+            "30": 0.5,
+            "40": 0.5,
+            "50": 0.5,
+            "80": 0.5,
+            "100": 0.5
+        },
+        "recall_naive": {
+            "1": 0.5,
+            "2": 1.0,
+            "5": 1.0,
+            "10": 1.0,
+            "15": 1.0,
+            "20": 1.0,
+            "30": 1.0,
+            "40": 1.0,
+            "50": 1.0,
+            "80": 1.0,
+            "100": 1.0
+        },
+        "average_recall": {
+            "1": 0.4375,
+            "2": 0.625,
+            "5": 0.75,
+            "10": 0.8125,
+            "15": 0.8438,
+            "20": 0.8438,
+            "30": 0.8438,
+            "40": 0.8438,
+            "50": 0.8438,
+            "80": 0.8438,
+            "100": 0.8438
+        },
+        "average_recall_naive": {
+            "1": 0.4375,
+            "2": 0.6875,
+            "5": 0.75,
+            "10": 0.75,
+            "15": 0.75,
+            "20": 0.75,
+            "30": 0.75,
+            "40": 0.75,
+            "50": 0.75,
+            "80": 0.75,
+            "100": 0.75
+        },
+        "retrieved_titles": [
+            "Ruaidhr\u00ed Mac Ruaidhr\u00ed"
+        ],
+        "naive_retrieved_titles": [
+            "Raghnall Mac Ruaidhr\u00ed",
+            "Ruaidhr\u00ed Mac Ruaidhr\u00ed",
+            "Comgall mac Domangairt",
+            "Conall mac Comgaill",
+            "Lugaid \u00cdardonn",
+            "Tn\u00fathgal mac Donngaile",
+            "S\u00e9tna Innarraid",
+            "Alwyn MacArchill",
+            "Colg\u00fa mac Fa\u00edlbe Flaind",
+            "Conall mac \u00c1ed\u00e1in"
+        ],
+        "gold_titles": [
+            "Raghnall Mac Ruaidhr\u00ed",
+            "Ruaidhr\u00ed Mac Ruaidhr\u00ed"
+        ]
+    },
+    {
+        "idx": 9,
+        "question": "Do both films Interview With A Hitman and The Last Coupon have the directors from the same country?",
+        "recall": {
+            "1": 0.25,
+            "2": 0.5,
+            "5": 0.75,
+            "10": 0.75,
+            "15": 0.75,
+            "20": 0.75,
+            "30": 0.75,
+            "40": 0.75,
+            "50": 0.75,
+            "80": 0.75,
+            "100": 0.75
+        },
+        "recall_naive": {
+            "1": 0.25,
+            "2": 0.5,
+            "5": 0.75,
+            "10": 0.75,
+            "15": 0.75,
+            "20": 0.75,
+            "30": 0.75,
+            "40": 0.75,
+            "50": 0.75,
+            "80": 0.75,
+            "100": 0.75
+        },
+        "average_recall": {
+            "1": 0.4167,
+            "2": 0.6111,
+            "5": 0.75,
+            "10": 0.8056,
+            "15": 0.8333,
+            "20": 0.8333,
+            "30": 0.8333,
+            "40": 0.8333,
+            "50": 0.8333,
+            "80": 0.8333,
+            "100": 0.8333
+        },
+        "average_recall_naive": {
+            "1": 0.4167,
+            "2": 0.6667,
+            "5": 0.75,
+            "10": 0.75,
+            "15": 0.75,
+            "20": 0.75,
+            "30": 0.75,
+            "40": 0.75,
+            "50": 0.75,
+            "80": 0.75,
+            "100": 0.75
+        },
+        "retrieved_titles": [
+            "Interview with a Hitman",
+            "Perry Bhandal",
+            "The Last Coupon",
+            "Claude Weisz"
+        ],
+        "naive_retrieved_titles": [
+            "Interview with a Hitman",
+            "Perry Bhandal",
+            "The Last Coupon",
+            "The Last of the Knucklemen",
+            "Killer: Dead or Alive",
+            "Doug Liman",
+            "Andr\u00e9 Cayatte",
+            "Edward Dmytryk",
+            "Man without a Passport",
+            "David A. Prior"
+        ],
+        "gold_titles": [
+            "Interview with a Hitman",
+            "The Last Coupon",
+            "Perry Bhandal",
+            "Frank Launder"
+        ]
+    },
+    {
+        "idx": 10,
+        "question": "What nationality is the director of film Blood Street?",
+        "recall": {
+            "1": 0.5,
+            "2": 0.5,
+            "5": 1.0,
+            "10": 1.0,
+            "15": 1.0,
+            "20": 1.0,
+            "30": 1.0,
+            "40": 1.0,
+            "50": 1.0,
+            "80": 1.0,
+            "100": 1.0
+        },
+        "recall_naive": {
+            "1": 0.5,
+            "2": 0.5,
+            "5": 0.5,
+            "10": 0.5,
+            "15": 0.5,
+            "20": 0.5,
+            "30": 0.5,
+            "40": 0.5,
+            "50": 0.5,
+            "80": 0.5,
+            "100": 0.5
+        },
+        "average_recall": {
+            "1": 0.425,
+            "2": 0.6,
+            "5": 0.775,
+            "10": 0.825,
+            "15": 0.85,
+            "20": 0.85,
+            "30": 0.85,
+            "40": 0.85,
+            "50": 0.85,
+            "80": 0.85,
+            "100": 0.85
+        },
+        "average_recall_naive": {
+            "1": 0.425,
+            "2": 0.65,
+            "5": 0.725,
+            "10": 0.725,
+            "15": 0.725,
+            "20": 0.725,
+            "30": 0.725,
+            "40": 0.725,
+            "50": 0.725,
+            "80": 0.725,
+            "100": 0.725
+        },
+        "retrieved_titles": [
+            "Blood Street",
+            "Beast of Blood (film)",
+            "Jackie Kong",
+            "Po-Chih Leong",
+            "Leo Fong"
+        ],
+        "naive_retrieved_titles": [
+            "Blood Street",
+            "Po-Chih Leong",
+            "Beast of Blood (film)",
+            "Jackie Kong",
+            "Juzo Itami",
+            "Ying Liang",
+            "Brides of Blood",
+            "The Camp on Blood Island",
+            "Michael Davis (director)",
+            "Stanley Kwan"
+        ],
+        "gold_titles": [
+            "Blood Street",
+            "Leo Fong"
+        ]
+    },
+    {
+        "idx": 11,
+        "question": "What is the place of birth of the director of film Gaby: A True Story?",
+        "recall": {
+            "1": 0.5,
+            "2": 1.0,
+            "5": 1.0,
+            "10": 1.0,
+            "15": 1.0,
+            "20": 1.0,
+            "30": 1.0,
+            "40": 1.0,
+            "50": 1.0,
+            "80": 1.0,
+            "100": 1.0
+        },
+        "recall_naive": {
+            "1": 0.5,
+            "2": 0.5,
+            "5": 0.5,
+            "10": 0.5,
+            "15": 0.5,
+            "20": 0.5,
+            "30": 0.5,
+            "40": 0.5,
+            "50": 0.5,
+            "80": 0.5,
+            "100": 0.5
+        },
+        "average_recall": {
+            "1": 0.4318,
+            "2": 0.6364,
+            "5": 0.7955,
+            "10": 0.8409,
+            "15": 0.8636,
+            "20": 0.8636,
+            "30": 0.8636,
+            "40": 0.8636,
+            "50": 0.8636,
+            "80": 0.8636,
+            "100": 0.8636
+        },
+        "average_recall_naive": {
+            "1": 0.4318,
+            "2": 0.6364,
+            "5": 0.7045,
+            "10": 0.7045,
+            "15": 0.7045,
+            "20": 0.7045,
+            "30": 0.7045,
+            "40": 0.7045,
+            "50": 0.7045,
+            "80": 0.7045,
+            "100": 0.7045
+        },
+        "retrieved_titles": [
+            "Gaby: A True Story",
+            "Luis Mandoki"
+        ],
+        "naive_retrieved_titles": [
+            "Gaby: A True Story",
+            "I Am... Gabriel",
+            "Florence Jaugey",
+            "Jos\u00e9 Luis Garci",
+            "Gregory La Cava",
+            "Gracia Querejeta",
+            "Francesca Comencini",
+            "Liz Garbus",
+            "Leopoldo Torre Nilsson",
+            "Once You're Born You Can No Longer Hide"
+        ],
+        "gold_titles": [
+            "Gaby: A True Story",
+            "Luis Mandoki"
+        ]
+    },
+    {
+        "idx": 12,
+        "question": "Are Vasilyevsky Island and Preobrazheniya Island located in the same country?",
+        "recall": {
+            "1": 0.5,
+            "2": 1.0,
+            "5": 1.0,
+            "10": 1.0,
+            "15": 1.0,
+            "20": 1.0,
+            "30": 1.0,
+            "40": 1.0,
+            "50": 1.0,
+            "80": 1.0,
+            "100": 1.0
+        },
+        "recall_naive": {
+            "1": 0.5,
+            "2": 1.0,
+            "5": 1.0,
+            "10": 1.0,
+            "15": 1.0,
+            "20": 1.0,
+            "30": 1.0,
+            "40": 1.0,
+            "50": 1.0,
+            "80": 1.0,
+            "100": 1.0
+        },
+        "average_recall": {
+            "1": 0.4375,
+            "2": 0.6667,
+            "5": 0.8125,
+            "10": 0.8542,
+            "15": 0.875,
+            "20": 0.875,
+            "30": 0.875,
+            "40": 0.875,
+            "50": 0.875,
+            "80": 0.875,
+            "100": 0.875
+        },
+        "average_recall_naive": {
+            "1": 0.4375,
+            "2": 0.6667,
+            "5": 0.7292,
+            "10": 0.7292,
+            "15": 0.7292,
+            "20": 0.7292,
+            "30": 0.7292,
+            "40": 0.7292,
+            "50": 0.7292,
+            "80": 0.7292,
+            "100": 0.7292
+        },
+        "retrieved_titles": [
+            "Vasilyevsky Island",
+            "Preobrazheniya Island",
+            "Abdul-Vahed Niyazov"
+        ],
+        "naive_retrieved_titles": [
+            "Vasilyevsky Island",
+            "Preobrazheniya Island",
+            "Andrey Vilkitsky",
+            "List of islands in the Black Sea",
+            "Abdul-Vahed Niyazov",
+            "Donskoye, Lipetsk Oblast",
+            "Dobroye, Lipetsk Oblast",
+            "Khlevnoye, Lipetsk Oblast",
+            "Ingmars\u00f6",
+            "Black Sea Governorate"
+        ],
+        "gold_titles": [
+            "Vasilyevsky Island",
+            "Preobrazheniya Island"
+        ]
+    },
+    {
+        "idx": 13,
+        "question": "What nationality is the performer of song When The Stars Go Blue?",
+        "recall": {
+            "1": 0.5,
+            "2": 0.5,
+            "5": 1.0,
+            "10": 1.0,
+            "15": 1.0,
+            "20": 1.0,
+            "30": 1.0,
+            "40": 1.0,
+            "50": 1.0,
+            "80": 1.0,
+            "100": 1.0
+        },
+        "recall_naive": {
+            "1": 0.5,
+            "2": 0.5,
+            "5": 0.5,
+            "10": 0.5,
+            "15": 0.5,
+            "20": 0.5,
+            "30": 0.5,
+            "40": 0.5,
+            "50": 0.5,
+            "80": 0.5,
+            "100": 0.5
+        },
+        "average_recall": {
+            "1": 0.4423,
+            "2": 0.6538,
+            "5": 0.8269,
+            "10": 0.8654,
+            "15": 0.8846,
+            "20": 0.8846,
+            "30": 0.8846,
+            "40": 0.8846,
+            "50": 0.8846,
+            "80": 0.8846,
+            "100": 0.8846
+        },
+        "average_recall_naive": {
+            "1": 0.4423,
+            "2": 0.6538,
+            "5": 0.7115,
+            "10": 0.7115,
+            "15": 0.7115,
+            "20": 0.7115,
+            "30": 0.7115,
+            "40": 0.7115,
+            "50": 0.7115,
+            "80": 0.7115,
+            "100": 0.7115
+        },
+        "retrieved_titles": [
+            "When the Stars Go Blue",
+            "John Anderson (musician)",
+            "When Your Love is Gone",
+            "Ryan Adams"
+        ],
+        "naive_retrieved_titles": [
+            "When the Stars Go Blue",
+            "The Blue Bead",
+            "John Anderson (musician)",
+            "Clara Tabody",
+            "Blueboy",
+            "Wonny Song",
+            "The Trail of the Lonesome Pine (song)",
+            "Mask in Blue (1953 film)",
+            "Jay Red Eagle",
+            "Shirley Matthews"
+        ],
+        "gold_titles": [
+            "When the Stars Go Blue",
+            "Ryan Adams"
+        ]
+    },
+    {
+        "idx": 14,
+        "question": "Who is the child of the performer of song Me And Bobby Mcgee?",
+        "recall": {
+            "1": 0.5,
+            "2": 0.5,
+            "5": 0.5,
+            "10": 0.5,
+            "15": 0.5,
+            "20": 0.5,
+            "30": 0.5,
+            "40": 0.5,
+            "50": 0.5,
+            "80": 0.5,
+            "100": 0.5
+        },
+        "recall_naive": {
+            "1": 0.5,
+            "2": 0.5,
+            "5": 0.5,
+            "10": 0.5,
+            "15": 0.5,
+            "20": 0.5,
+            "30": 0.5,
+            "40": 0.5,
+            "50": 0.5,
+            "80": 0.5,
+            "100": 0.5
+        },
+        "average_recall": {
+            "1": 0.4464,
+            "2": 0.6429,
+            "5": 0.8036,
+            "10": 0.8393,
+            "15": 0.8571,
+            "20": 0.8571,
+            "30": 0.8571,
+            "40": 0.8571,
+            "50": 0.8571,
+            "80": 0.8571,
+            "100": 0.8571
+        },
+        "average_recall_naive": {
+            "1": 0.4464,
+            "2": 0.6429,
+            "5": 0.6964,
+            "10": 0.6964,
+            "15": 0.6964,
+            "20": 0.6964,
+            "30": 0.6964,
+            "40": 0.6964,
+            "50": 0.6964,
+            "80": 0.6964,
+            "100": 0.6964
+        },
+        "retrieved_titles": [
+            "Me and Bobby McGee",
+            "Fred Foster",
+            "Janis Joplin",
+            "Elvis Presley"
+        ],
+        "naive_retrieved_titles": [
+            "Me and Bobby McGee",
+            "Fred Foster",
+            "Me and Bobby and Bobby's Brother",
+            "Janis Joplin",
+            "Ida May Mack",
+            "Mama's Little Girl (disambiguation)",
+            "O'Shaughnessy's Boy",
+            "Little Children (album)",
+            "The Knockout Kid",
+            "Chuck Berry"
+        ],
+        "gold_titles": [
+            "Me and Bobby McGee",
+            "Roger Miller"
+        ]
+    },
+    {
+        "idx": 15,
+        "question": "Where was the place of death of Maurice, Prince Of Orange's father?",
+        "recall": {
+            "1": 0.5,
+            "2": 1.0,
+            "5": 1.0,
+            "10": 1.0,
+            "15": 1.0,
+            "20": 1.0,
+            "30": 1.0,
+            "40": 1.0,
+            "50": 1.0,
+            "80": 1.0,
+            "100": 1.0
+        },
+        "recall_naive": {
+            "1": 0.5,
+            "2": 0.5,
+            "5": 1.0,
+            "10": 1.0,
+            "15": 1.0,
+            "20": 1.0,
+            "30": 1.0,
+            "40": 1.0,
+            "50": 1.0,
+            "80": 1.0,
+            "100": 1.0
+        },
+        "average_recall": {
+            "1": 0.45,
+            "2": 0.6667,
+            "5": 0.8167,
+            "10": 0.85,
+            "15": 0.8667,
+            "20": 0.8667,
+            "30": 0.8667,
+            "40": 0.8667,
+            "50": 0.8667,
+            "80": 0.8667,
+            "100": 0.8667
+        },
+        "average_recall_naive": {
+            "1": 0.45,
+            "2": 0.6333,
+            "5": 0.7167,
+            "10": 0.7167,
+            "15": 0.7167,
+            "20": 0.7167,
+            "30": 0.7167,
+            "40": 0.7167,
+            "50": 0.7167,
+            "80": 0.7167,
+            "100": 0.7167
+        },
+        "retrieved_titles": [
+            "Maurice, Prince of Orange",
+            "William the Silent"
+        ],
+        "naive_retrieved_titles": [
+            "Maurice, Prince of Orange",
+            "Margaretha van Mechelen",
+            "William the Silent",
+            "Prince Henri of Orl\u00e9ans",
+            "Prince Jacques, Duke of Orl\u00e9ans",
+            "Louis of Nassau, Lord of De Lek and Beverweerd",
+            "Amalia of Solms-Braunfels",
+            "Philippe II, Duke of Orl\u00e9ans",
+            "William of Nassau (1601\u20131627)",
+            "Frederick Nassau de Zuylestein"
+        ],
+        "gold_titles": [
+            "Maurice, Prince of Orange",
+            "William the Silent"
+        ]
+    },
+    {
+        "idx": 16,
+        "question": "Which country Aleksander Koniecpolski (1620\u20131659)'s father is from?",
+        "recall": {
+            "1": 0.5,
+            "2": 1.0,
+            "5": 1.0,
+            "10": 1.0,
+            "15": 1.0,
+            "20": 1.0,
+            "30": 1.0,
+            "40": 1.0,
+            "50": 1.0,
+            "80": 1.0,
+            "100": 1.0
+        },
+        "recall_naive": {
+            "1": 0.0,
+            "2": 0.5,
+            "5": 1.0,
+            "10": 1.0,
+            "15": 1.0,
+            "20": 1.0,
+            "30": 1.0,
+            "40": 1.0,
+            "50": 1.0,
+            "80": 1.0,
+            "100": 1.0
+        },
+        "average_recall": {
+            "1": 0.4531,
+            "2": 0.6875,
+            "5": 0.8281,
+            "10": 0.8594,
+            "15": 0.875,
+            "20": 0.875,
+            "30": 0.875,
+            "40": 0.875,
+            "50": 0.875,
+            "80": 0.875,
+            "100": 0.875
+        },
+        "average_recall_naive": {
+            "1": 0.4219,
+            "2": 0.625,
+            "5": 0.7344,
+            "10": 0.7344,
+            "15": 0.7344,
+            "20": 0.7344,
+            "30": 0.7344,
+            "40": 0.7344,
+            "50": 0.7344,
+            "80": 0.7344,
+            "100": 0.7344
+        },
+        "retrieved_titles": [
+            "Aleksander Koniecpolski (1620\u20131659)",
+            "Stanis\u0142aw Koniecpolski"
+        ],
+        "naive_retrieved_titles": [
+            "Aleksander Koniecpolski (1555\u20131609)",
+            "Aleksander Koniecpolski (1620\u20131659)",
+            "Stanis\u0142aw Koniecpolski",
+            "Marek Sobieski",
+            "Alexander of Masovia",
+            "Jadwiga Snopkowska",
+            "Bogislaw XIII, Duke of Pomerania",
+            "Witold Leszczy\u0144ski",
+            "Aleksander Ford",
+            "Przemys\u0142 II"
+        ],
+        "gold_titles": [
+            "Aleksander Koniecpolski (1620\u20131659)",
+            "Stanis\u0142aw Koniecpolski"
+        ]
+    },
+    {
+        "idx": 17,
+        "question": "What is the date of death of the director of film Madame La Presidente?",
+        "recall": {
+            "1": 0.0,
+            "2": 0.0,
+            "5": 0.5,
+            "10": 1.0,
+            "15": 1.0,
+            "20": 1.0,
+            "30": 1.0,
+            "40": 1.0,
+            "50": 1.0,
+            "80": 1.0,
+            "100": 1.0
+        },
+        "recall_naive": {
+            "1": 0.5,
+            "2": 0.5,
+            "5": 0.5,
+            "10": 0.5,
+            "15": 0.5,
+            "20": 0.5,
+            "30": 0.5,
+            "40": 0.5,
+            "50": 0.5,
+            "80": 0.5,
+            "100": 0.5
+        },
+        "average_recall": {
+            "1": 0.4265,
+            "2": 0.6471,
+            "5": 0.8088,
+            "10": 0.8676,
+            "15": 0.8824,
+            "20": 0.8824,
+            "30": 0.8824,
+            "40": 0.8824,
+            "50": 0.8824,
+            "80": 0.8824,
+            "100": 0.8824
+        },
+        "average_recall_naive": {
+            "1": 0.4265,
+            "2": 0.6176,
+            "5": 0.7206,
+            "10": 0.7206,
+            "15": 0.7206,
+            "20": 0.7206,
+            "30": 0.7206,
+            "40": 0.7206,
+            "50": 0.7206,
+            "80": 0.7206,
+            "100": 0.7206
+        },
+        "retrieved_titles": [
+            "Benito Perojo",
+            "\u00c9douard Molinaro",
+            "Andrea Bianchi",
+            "Madame la Presidente",
+            "Christine Pascal",
+            "Mary Parets",
+            "Frank Lloyd"
+        ],
+        "naive_retrieved_titles": [
+            "Madame la Presidente",
+            "Benito Perojo",
+            "Jean Gr\u00e9millon",
+            "Andrea Bianchi",
+            "\u00c9douard Molinaro",
+            "Christine Pascal",
+            "Alberto Lattuada",
+            "Leopoldo Torres R\u00edos",
+            "Luis Bay\u00f3n Herrera",
+            "Pedro Lazaga"
+        ],
+        "gold_titles": [
+            "Madame la Presidente",
+            "Frank Lloyd"
+        ]
+    },
+    {
+        "idx": 18,
+        "question": "Do both directors of films Wrong Turn 5: Bloodlines and Dark River (2017 Film) have the same nationality?",
+        "recall": {
+            "1": 0.25,
+            "2": 0.5,
+            "5": 1.0,
+            "10": 1.0,
+            "15": 1.0,
+            "20": 1.0,
+            "30": 1.0,
+            "40": 1.0,
+            "50": 1.0,
+            "80": 1.0,
+            "100": 1.0
+        },
+        "recall_naive": {
+            "1": 0.25,
+            "2": 0.25,
+            "5": 0.75,
+            "10": 0.75,
+            "15": 0.75,
+            "20": 0.75,
+            "30": 0.75,
+            "40": 0.75,
+            "50": 0.75,
+            "80": 0.75,
+            "100": 0.75
+        },
+        "average_recall": {
+            "1": 0.4167,
+            "2": 0.6389,
+            "5": 0.8194,
+            "10": 0.875,
+            "15": 0.8889,
+            "20": 0.8889,
+            "30": 0.8889,
+            "40": 0.8889,
+            "50": 0.8889,
+            "80": 0.8889,
+            "100": 0.8889
+        },
+        "average_recall_naive": {
+            "1": 0.4167,
+            "2": 0.5972,
+            "5": 0.7222,
+            "10": 0.7222,
+            "15": 0.7222,
+            "20": 0.7222,
+            "30": 0.7222,
+            "40": 0.7222,
+            "50": 0.7222,
+            "80": 0.7222,
+            "100": 0.7222
+        },
+        "retrieved_titles": [
+            "Wrong Turn 5: Bloodlines",
+            "Declan O'Brien",
+            "Dark River (2017 film)",
+            "Clio Barnard"
+        ],
+        "naive_retrieved_titles": [
+            "Wrong Turn 5: Bloodlines",
+            "Wrong Turn 4: Bloody Beginnings",
+            "Declan O'Brien",
+            "Dark River (2017 film)",
+            "Wrong Turn 2: Dead End",
+            "Dark River (1990 film)",
+            "Wrong Turn: The Foundation",
+            "Wrong Turn 3: Left for Dead",
+            "R. D. Call",
+            "Brides of Blood"
+        ],
+        "gold_titles": [
+            "Wrong Turn 5: Bloodlines",
+            "Dark River (2017 film)",
+            "Declan O'Brien",
+            "Clio Barnard"
+        ]
+    },
+    {
+        "idx": 19,
+        "question": "Which film has the director who died first, The Goose Woman or You Can No Longer Remain Silent?",
+        "recall": {
+            "1": 0.25,
+            "2": 0.25,
+            "5": 1.0,
+            "10": 1.0,
+            "15": 1.0,
+            "20": 1.0,
+            "30": 1.0,
+            "40": 1.0,
+            "50": 1.0,
+            "80": 1.0,
+            "100": 1.0
+        },
+        "recall_naive": {
+            "1": 0.25,
+            "2": 0.5,
+            "5": 0.5,
+            "10": 0.5,
+            "15": 0.5,
+            "20": 0.5,
+            "30": 0.5,
+            "40": 0.5,
+            "50": 0.5,
+            "80": 0.5,
+            "100": 0.5
+        },
+        "average_recall": {
+            "1": 0.4079,
+            "2": 0.6184,
+            "5": 0.8289,
+            "10": 0.8816,
+            "15": 0.8947,
+            "20": 0.8947,
+            "30": 0.8947,
+            "40": 0.8947,
+            "50": 0.8947,
+            "80": 0.8947,
+            "100": 0.8947
+        },
+        "average_recall_naive": {
+            "1": 0.4079,
+            "2": 0.5921,
+            "5": 0.7105,
+            "10": 0.7105,
+            "15": 0.7105,
+            "20": 0.7105,
+            "30": 0.7105,
+            "40": 0.7105,
+            "50": 0.7105,
+            "80": 0.7105,
+            "100": 0.7105
+        },
+        "retrieved_titles": [
+            "The Goose Woman",
+            "The Goose Girl (1957 film)",
+            "You Can No Longer Remain Silent",
+            "Clarence Brown",
+            "Robert A. Stemmle"
+        ],
+        "naive_retrieved_titles": [
+            "The Goose Woman",
+            "You Can No Longer Remain Silent",
+            "The Goose Girl (1957 film)",
+            "Jonathan Demme",
+            "James Young (director)",
+            "Ralph Nelson",
+            "Charles Giblyn",
+            "Charles Vidor",
+            "Richard Quine",
+            "Sidney Salkow"
+        ],
+        "gold_titles": [
+            "The Goose Woman",
+            "You Can No Longer Remain Silent",
+            "Clarence Brown",
+            "Robert A. Stemmle"
+        ]
+    },
+    {
+        "idx": 20,
+        "question": "Where was the director of film The Private Life Of Cinema born?",
+        "recall": {
+            "1": 0.0,
+            "2": 0.0,
+            "5": 0.5,
+            "10": 0.5,
+            "15": 1.0,
+            "20": 1.0,
+            "30": 1.0,
+            "40": 1.0,
+            "50": 1.0,
+            "80": 1.0,
+            "100": 1.0
+        },
+        "recall_naive": {
+            "1": 0.5,
+            "2": 0.5,
+            "5": 0.5,
+            "10": 0.5,
+            "15": 0.5,
+            "20": 0.5,
+            "30": 0.5,
+            "40": 0.5,
+            "50": 0.5,
+            "80": 0.5,
+            "100": 0.5
+        },
+        "average_recall": {
+            "1": 0.3875,
+            "2": 0.5875,
+            "5": 0.8125,
+            "10": 0.8625,
+            "15": 0.9,
+            "20": 0.9,
+            "30": 0.9,
+            "40": 0.9,
+            "50": 0.9,
+            "80": 0.9,
+            "100": 0.9
+        },
+        "average_recall_naive": {
+            "1": 0.4125,
+            "2": 0.5875,
+            "5": 0.7,
+            "10": 0.7,
+            "15": 0.7,
+            "20": 0.7,
+            "30": 0.7,
+            "40": 0.7,
+            "50": 0.7,
+            "80": 0.7,
+            "100": 0.7
+        },
+        "retrieved_titles": [
+            "Claude Weisz",
+            "Florence Jaugey",
+            "Juzo Itami",
+            "The Private Life of Cinema",
+            "The Private Life of Pyotr Vinogradov",
+            "Jean Negulesco",
+            "Francesca Comencini",
+            "Frank Stauffacher",
+            "Andrea Bianchi",
+            "Mauro Bolognini",
+            "Denys Desjardins"
+        ],
+        "naive_retrieved_titles": [
+            "The Private Life of Cinema",
+            "Claude Weisz",
+            "Jean Negulesco",
+            "Florence Jaugey",
+            "Juzo Itami",
+            "Francesca Comencini",
+            "Bernardo Bertolucci",
+            "Marcello Baldi",
+            "Alberto Cavallone",
+            "Andrea Bianchi"
+        ],
+        "gold_titles": [
+            "The Private Life of Cinema",
+            "Denys Desjardins"
+        ]
+    },
+    {
+        "idx": 21,
+        "question": "Where did Coulson Wallop's father study?",
+        "recall": {
+            "1": 0.5,
+            "2": 0.5,
+            "5": 1.0,
+            "10": 1.0,
+            "15": 1.0,
+            "20": 1.0,
+            "30": 1.0,
+            "40": 1.0,
+            "50": 1.0,
+            "80": 1.0,
+            "100": 1.0
+        },
+        "recall_naive": {
+            "1": 0.5,
+            "2": 0.5,
+            "5": 1.0,
+            "10": 1.0,
+            "15": 1.0,
+            "20": 1.0,
+            "30": 1.0,
+            "40": 1.0,
+            "50": 1.0,
+            "80": 1.0,
+            "100": 1.0
+        },
+        "average_recall": {
+            "1": 0.3929,
+            "2": 0.5833,
+            "5": 0.8214,
+            "10": 0.869,
+            "15": 0.9048,
+            "20": 0.9048,
+            "30": 0.9048,
+            "40": 0.9048,
+            "50": 0.9048,
+            "80": 0.9048,
+            "100": 0.9048
+        },
+        "average_recall_naive": {
+            "1": 0.4167,
+            "2": 0.5833,
+            "5": 0.7143,
+            "10": 0.7143,
+            "15": 0.7143,
+            "20": 0.7143,
+            "30": 0.7143,
+            "40": 0.7143,
+            "50": 0.7143,
+            "80": 0.7143,
+            "100": 0.7143
+        },
+        "retrieved_titles": [
+            "Coulson Wallop",
+            "Lars Eliasson",
+            "John Wallop, 2nd Earl of Portsmouth"
+        ],
+        "naive_retrieved_titles": [
+            "Coulson Wallop",
+            "Lars Eliasson",
+            "John Wallop, 2nd Earl of Portsmouth",
+            "David Ogilvy, 12th Earl of Airlie",
+            "John Lyon-Dalberg-Acton, 3rd Baron Acton",
+            "Theodore Salisbury Woolsey",
+            "Henry Caldwell Cook",
+            "Charles Williams, Baron Williams of Elvel",
+            "Hywel Teifi Edwards",
+            "Wale Adebanwi"
+        ],
+        "gold_titles": [
+            "Coulson Wallop",
+            "John Wallop, 2nd Earl of Portsmouth"
+        ]
+    },
+    {
+        "idx": 22,
+        "question": "Why did John Middleton Murry's wife die?",
+        "recall": {
+            "1": 0.5,
+            "2": 1.0,
+            "5": 1.0,
+            "10": 1.0,
+            "15": 1.0,
+            "20": 1.0,
+            "30": 1.0,
+            "40": 1.0,
+            "50": 1.0,
+            "80": 1.0,
+            "100": 1.0
+        },
+        "recall_naive": {
+            "1": 0.5,
+            "2": 0.5,
+            "5": 1.0,
+            "10": 1.0,
+            "15": 1.0,
+            "20": 1.0,
+            "30": 1.0,
+            "40": 1.0,
+            "50": 1.0,
+            "80": 1.0,
+            "100": 1.0
+        },
+        "average_recall": {
+            "1": 0.3977,
+            "2": 0.6023,
+            "5": 0.8295,
+            "10": 0.875,
+            "15": 0.9091,
+            "20": 0.9091,
+            "30": 0.9091,
+            "40": 0.9091,
+            "50": 0.9091,
+            "80": 0.9091,
+            "100": 0.9091
+        },
+        "average_recall_naive": {
+            "1": 0.4205,
+            "2": 0.5795,
+            "5": 0.7273,
+            "10": 0.7273,
+            "15": 0.7273,
+            "20": 0.7273,
+            "30": 0.7273,
+            "40": 0.7273,
+            "50": 0.7273,
+            "80": 0.7273,
+            "100": 0.7273
+        },
+        "retrieved_titles": [
+            "John Middleton Murry",
+            "Katherine Mansfield",
+            "Eddie Murray (rugby league)",
+            "Marie Colvin",
+            "Janis Joplin"
+        ],
+        "naive_retrieved_titles": [
+            "John Middleton Murry",
+            "John Middleton Murry Jr.",
+            "Katherine Mansfield",
+            "Eddie Murray (rugby league)",
+            "Marie Colvin",
+            "Messenger of Death",
+            "John Middleton (architect)",
+            "Alexander Murray, 6th Earl of Dunmore",
+            "Mary Bowes, Countess of Strathmore and Kinghorne",
+            "Jane Tilden"
+        ],
+        "gold_titles": [
+            "John Middleton Murry",
+            "Katherine Mansfield"
+        ]
+    },
+    {
+        "idx": 23,
+        "question": "Where was the composer of film Billy Elliot born?",
+        "recall": {
+            "1": 0.5,
+            "2": 0.5,
+            "5": 1.0,
+            "10": 1.0,
+            "15": 1.0,
+            "20": 1.0,
+            "30": 1.0,
+            "40": 1.0,
+            "50": 1.0,
+            "80": 1.0,
+            "100": 1.0
+        },
+        "recall_naive": {
+            "1": 0.5,
+            "2": 0.5,
+            "5": 0.5,
+            "10": 0.5,
+            "15": 0.5,
+            "20": 0.5,
+            "30": 0.5,
+            "40": 0.5,
+            "50": 0.5,
+            "80": 0.5,
+            "100": 0.5
+        },
+        "average_recall": {
+            "1": 0.4022,
+            "2": 0.5978,
+            "5": 0.837,
+            "10": 0.8804,
+            "15": 0.913,
+            "20": 0.913,
+            "30": 0.913,
+            "40": 0.913,
+            "50": 0.913,
+            "80": 0.913,
+            "100": 0.913
+        },
+        "average_recall_naive": {
+            "1": 0.4239,
+            "2": 0.5761,
+            "5": 0.7174,
+            "10": 0.7174,
+            "15": 0.7174,
+            "20": 0.7174,
+            "30": 0.7174,
+            "40": 0.7174,
+            "50": 0.7174,
+            "80": 0.7174,
+            "100": 0.7174
+        },
+        "retrieved_titles": [
+            "Billy Elliot",
+            "Billy Elliot the Musical Live",
+            "Lee Hall (playwright)",
+            "Stephen Warbeck"
+        ],
+        "naive_retrieved_titles": [
+            "Billy Elliot",
+            "Billy Elliot the Musical Live",
+            "James Lomas (actor)",
+            "Lee Hall (playwright)",
+            "Corey Snide",
+            "Elliot Silverstein",
+            "John Ellis (guitarist)",
+            "R. John Ellis",
+            "David Elliot (footballer)",
+            "Luke Elliot"
+        ],
+        "gold_titles": [
+            "Billy Elliot",
+            "Stephen Warbeck"
+        ]
+    },
+    {
+        "idx": 24,
+        "question": "What is the place of birth of Lisbeth Palme's husband?",
+        "recall": {
+            "1": 0.5,
+            "2": 1.0,
+            "5": 1.0,
+            "10": 1.0,
+            "15": 1.0,
+            "20": 1.0,
+            "30": 1.0,
+            "40": 1.0,
+            "50": 1.0,
+            "80": 1.0,
+            "100": 1.0
+        },
+        "recall_naive": {
+            "1": 0.5,
+            "2": 0.5,
+            "5": 1.0,
+            "10": 1.0,
+            "15": 1.0,
+            "20": 1.0,
+            "30": 1.0,
+            "40": 1.0,
+            "50": 1.0,
+            "80": 1.0,
+            "100": 1.0
+        },
+        "average_recall": {
+            "1": 0.4062,
+            "2": 0.6146,
+            "5": 0.8438,
+            "10": 0.8854,
+            "15": 0.9167,
+            "20": 0.9167,
+            "30": 0.9167,
+            "40": 0.9167,
+            "50": 0.9167,
+            "80": 0.9167,
+            "100": 0.9167
+        },
+        "average_recall_naive": {
+            "1": 0.4271,
+            "2": 0.5729,
+            "5": 0.7292,
+            "10": 0.7292,
+            "15": 0.7292,
+            "20": 0.7292,
+            "30": 0.7292,
+            "40": 0.7292,
+            "50": 0.7292,
+            "80": 0.7292,
+            "100": 0.7292
+        },
+        "retrieved_titles": [
+            "Lisbeth Palme",
+            "Olof Palme"
+        ],
+        "naive_retrieved_titles": [
+            "Lisbeth Palme",
+            "Sven Ulric Palme",
+            "Olof Palme",
+            "Lars Eliasson",
+            "Peter Emanuel Falck",
+            "Karin Palme",
+            "Maj-Briht Bergstr\u00f6m-Walan",
+            "Jonas Malmsj\u00f6",
+            "Erik Lund (director)",
+            "Lisbeth Cathrine Amalie Rose"
+        ],
+        "gold_titles": [
+            "Lisbeth Palme",
+            "Olof Palme"
+        ]
+    },
+    {
+        "idx": 25,
+        "question": "Which film came out first, 3 Dots or Dying God?",
+        "recall": {
+            "1": 0.5,
+            "2": 0.5,
+            "5": 1.0,
+            "10": 1.0,
+            "15": 1.0,
+            "20": 1.0,
+            "30": 1.0,
+            "40": 1.0,
+            "50": 1.0,
+            "80": 1.0,
+            "100": 1.0
+        },
+        "recall_naive": {
+            "1": 0.5,
+            "2": 0.5,
+            "5": 0.5,
+            "10": 0.5,
+            "15": 0.5,
+            "20": 0.5,
+            "30": 0.5,
+            "40": 0.5,
+            "50": 0.5,
+            "80": 0.5,
+            "100": 0.5
+        },
+        "average_recall": {
+            "1": 0.41,
+            "2": 0.61,
+            "5": 0.85,
+            "10": 0.89,
+            "15": 0.92,
+            "20": 0.92,
+            "30": 0.92,
+            "40": 0.92,
+            "50": 0.92,
+            "80": 0.92,
+            "100": 0.92
+        },
+        "average_recall_naive": {
+            "1": 0.43,
+            "2": 0.57,
+            "5": 0.72,
+            "10": 0.72,
+            "15": 0.72,
+            "20": 0.72,
+            "30": 0.72,
+            "40": 0.72,
+            "50": 0.72,
+            "80": 0.72,
+            "100": 0.72
+        },
+        "retrieved_titles": [
+            "3 Dots",
+            "Invasion of the Neptune Men",
+            "Rakka (film)",
+            "Dying God",
+            "Battle in Outer Space",
+            "Frankenstein Conquers the World"
+        ],
+        "naive_retrieved_titles": [
+            "Dying God",
+            "Night of the Living Dead: Darkest Dawn",
+            "Great God Gold",
+            "Dead or Alive: Final",
+            "Count Five and Die",
+            "DOA: Dead or Alive",
+            "Purple Death from Outer Space",
+            "Roy Frumkes",
+            "All Souls (film)",
+            "Momotaro: Sacred Sailors"
+        ],
+        "gold_titles": [
+            "3 Dots",
+            "Dying God"
+        ]
+    },
+    {
+        "idx": 26,
+        "question": "Who is the father-in-law of Sisowath Kossamak?",
+        "recall": {
+            "1": 0.5,
+            "2": 0.5,
+            "5": 0.5,
+            "10": 0.5,
+            "15": 0.5,
+            "20": 0.5,
+            "30": 0.5,
+            "40": 0.5,
+            "50": 0.5,
+            "80": 0.5,
+            "100": 0.5
+        },
+        "recall_naive": {
+            "1": 0.5,
+            "2": 0.5,
+            "5": 1.0,
+            "10": 1.0,
+            "15": 1.0,
+            "20": 1.0,
+            "30": 1.0,
+            "40": 1.0,
+            "50": 1.0,
+            "80": 1.0,
+            "100": 1.0
+        },
+        "average_recall": {
+            "1": 0.4135,
+            "2": 0.6058,
+            "5": 0.8365,
+            "10": 0.875,
+            "15": 0.9038,
+            "20": 0.9038,
+            "30": 0.9038,
+            "40": 0.9038,
+            "50": 0.9038,
+            "80": 0.9038,
+            "100": 0.9038
+        },
+        "average_recall_naive": {
+            "1": 0.4327,
+            "2": 0.5673,
+            "5": 0.7308,
+            "10": 0.7308,
+            "15": 0.7308,
+            "20": 0.7308,
+            "30": 0.7308,
+            "40": 0.7308,
+            "50": 0.7308,
+            "80": 0.7308,
+            "100": 0.7308
+        },
+        "retrieved_titles": [
+            "Norodom Suramarit"
+        ],
+        "naive_retrieved_titles": [
+            "Sisowath Kossamak",
+            "Lars Eliasson",
+            "Norodom Suramarit",
+            "Busba Kitiyakara",
+            "Obata Toramori",
+            "Wisit Sasanatieng",
+            "Takayama Tomoteru",
+            "Nakkhatra Mangala",
+            "Anacyndaraxes",
+            "Yasuichi Oshima"
+        ],
+        "gold_titles": [
+            "Sisowath Kossamak",
+            "Norodom Suramarit"
+        ]
+    },
+    {
+        "idx": 27,
+        "question": "Who is Mugain's mother-in-law?",
+        "recall": {
+            "1": 0.5,
+            "2": 0.5,
+            "5": 0.5,
+            "10": 1.0,
+            "15": 1.0,
+            "20": 1.0,
+            "30": 1.0,
+            "40": 1.0,
+            "50": 1.0,
+            "80": 1.0,
+            "100": 1.0
+        },
+        "recall_naive": {
+            "1": 0.0,
+            "2": 0.5,
+            "5": 0.5,
+            "10": 0.5,
+            "15": 0.5,
+            "20": 0.5,
+            "30": 0.5,
+            "40": 0.5,
+            "50": 0.5,
+            "80": 0.5,
+            "100": 0.5
+        },
+        "average_recall": {
+            "1": 0.4167,
+            "2": 0.6019,
+            "5": 0.8241,
+            "10": 0.8796,
+            "15": 0.9074,
+            "20": 0.9074,
+            "30": 0.9074,
+            "40": 0.9074,
+            "50": 0.9074,
+            "80": 0.9074,
+            "100": 0.9074
+        },
+        "average_recall_naive": {
+            "1": 0.4167,
+            "2": 0.5648,
+            "5": 0.7222,
+            "10": 0.7222,
+            "15": 0.7222,
+            "20": 0.7222,
+            "30": 0.7222,
+            "40": 0.7222,
+            "50": 0.7222,
+            "80": 0.7222,
+            "100": 0.7222
+        },
+        "retrieved_titles": [
+            "Mugain",
+            "Minamoto no Chikako",
+            "Takayama Tomoteru",
+            "Kaoru Hatoyama",
+            "\u02bbElisiva Fusipala Tauki\u02bbonetuku",
+            "Conchobar mac Nessa"
+        ],
+        "naive_retrieved_titles": [
+            "Minamoto no Chikako",
+            "Mugain",
+            "Salin Mibaya",
+            "\u02bbElisiva Fusipala Tauki\u02bbonetuku",
+            "Maria Thins",
+            "Kaoru Hatoyama",
+            "Doria Ragland",
+            "Busba Kitiyakara",
+            "Emine Hatun",
+            "Ameena Begum"
+        ],
+        "gold_titles": [
+            "Mugain",
+            "Conchobar mac Nessa"
+        ]
+    },
+    {
+        "idx": 28,
+        "question": "Where did Theodore Salisbury Woolsey's father study?",
+        "recall": {
+            "1": 0.5,
+            "2": 1.0,
+            "5": 1.0,
+            "10": 1.0,
+            "15": 1.0,
+            "20": 1.0,
+            "30": 1.0,
+            "40": 1.0,
+            "50": 1.0,
+            "80": 1.0,
+            "100": 1.0
+        },
+        "recall_naive": {
+            "1": 0.5,
+            "2": 0.5,
+            "5": 1.0,
+            "10": 1.0,
+            "15": 1.0,
+            "20": 1.0,
+            "30": 1.0,
+            "40": 1.0,
+            "50": 1.0,
+            "80": 1.0,
+            "100": 1.0
+        },
+        "average_recall": {
+            "1": 0.4196,
+            "2": 0.6161,
+            "5": 0.8304,
+            "10": 0.8839,
+            "15": 0.9107,
+            "20": 0.9107,
+            "30": 0.9107,
+            "40": 0.9107,
+            "50": 0.9107,
+            "80": 0.9107,
+            "100": 0.9107
+        },
+        "average_recall_naive": {
+            "1": 0.4196,
+            "2": 0.5625,
+            "5": 0.7321,
+            "10": 0.7321,
+            "15": 0.7321,
+            "20": 0.7321,
+            "30": 0.7321,
+            "40": 0.7321,
+            "50": 0.7321,
+            "80": 0.7321,
+            "100": 0.7321
+        },
+        "retrieved_titles": [
+            "Theodore Salisbury Woolsey",
+            "Theodore Dwight Woolsey",
+            "William De Witt Hyde"
+        ],
+        "naive_retrieved_titles": [
+            "Theodore Salisbury Woolsey",
+            "Theodore Salisbury Woolsey Jr.",
+            "Theodore Dwight Woolsey",
+            "William De Witt Hyde",
+            "Sir Edward Strachey, 3rd Baronet",
+            "Gwynllyw",
+            "Eustace William Ferguson",
+            "James Waddel Alexander",
+            "David Ogilvy, 12th Earl of Airlie",
+            "Lars Eliasson"
+        ],
+        "gold_titles": [
+            "Theodore Salisbury Woolsey",
+            "Theodore Dwight Woolsey"
+        ]
+    },
+    {
+        "idx": 29,
+        "question": "What is the place of birth of the director of film The Return Of Swamp Thing?",
+        "recall": {
+            "1": 0.5,
+            "2": 1.0,
+            "5": 1.0,
+            "10": 1.0,
+            "15": 1.0,
+            "20": 1.0,
+            "30": 1.0,
+            "40": 1.0,
+            "50": 1.0,
+            "80": 1.0,
+            "100": 1.0
+        },
+        "recall_naive": {
+            "1": 0.5,
+            "2": 0.5,
+            "5": 0.5,
+            "10": 0.5,
+            "15": 0.5,
+            "20": 0.5,
+            "30": 0.5,
+            "40": 0.5,
+            "50": 0.5,
+            "80": 0.5,
+            "100": 0.5
+        },
+        "average_recall": {
+            "1": 0.4224,
+            "2": 0.6293,
+            "5": 0.8362,
+            "10": 0.8879,
+            "15": 0.9138,
+            "20": 0.9138,
+            "30": 0.9138,
+            "40": 0.9138,
+            "50": 0.9138,
+            "80": 0.9138,
+            "100": 0.9138
+        },
+        "average_recall_naive": {
+            "1": 0.4224,
+            "2": 0.5603,
+            "5": 0.7241,
+            "10": 0.7241,
+            "15": 0.7241,
+            "20": 0.7241,
+            "30": 0.7241,
+            "40": 0.7241,
+            "50": 0.7241,
+            "80": 0.7241,
+            "100": 0.7241
+        },
+        "retrieved_titles": [
+            "The Return of Swamp Thing",
+            "Jim Wynorski"
+        ],
+        "naive_retrieved_titles": [
+            "The Return of Swamp Thing",
+            "Swamp Thing (film)",
+            "Dick Durock",
+            "Scott Shaw",
+            "Jerome Storm",
+            "John Sayles",
+            "Phillip J. Roth",
+            "The Return of Jack Slade",
+            "Robert Thornby",
+            "Jason Moore (director)"
+        ],
+        "gold_titles": [
+            "The Return of Swamp Thing",
+            "Jim Wynorski"
+        ]
+    },
+    {
+        "idx": 30,
+        "question": "Where was the place of death of the performer of song I Can'T See Myself Leaving You?",
+        "recall": {
+            "1": 0.5,
+            "2": 0.5,
+            "5": 0.5,
+            "10": 0.5,
+            "15": 0.5,
+            "20": 0.5,
+            "30": 0.5,
+            "40": 0.5,
+            "50": 0.5,
+            "80": 0.5,
+            "100": 0.5
+        },
+        "recall_naive": {
+            "1": 0.5,
+            "2": 0.5,
+            "5": 0.5,
+            "10": 0.5,
+            "15": 0.5,
+            "20": 0.5,
+            "30": 0.5,
+            "40": 0.5,
+            "50": 0.5,
+            "80": 0.5,
+            "100": 0.5
+        },
+        "average_recall": {
+            "1": 0.425,
+            "2": 0.625,
+            "5": 0.825,
+            "10": 0.875,
+            "15": 0.9,
+            "20": 0.9,
+            "30": 0.9,
+            "40": 0.9,
+            "50": 0.9,
+            "80": 0.9,
+            "100": 0.9
+        },
+        "average_recall_naive": {
+            "1": 0.425,
+            "2": 0.5583,
+            "5": 0.7167,
+            "10": 0.7167,
+            "15": 0.7167,
+            "20": 0.7167,
+            "30": 0.7167,
+            "40": 0.7167,
+            "50": 0.7167,
+            "80": 0.7167,
+            "100": 0.7167
+        },
+        "retrieved_titles": [
+            "I Can't See Myself Leaving You",
+            "Donnie Elbert"
+        ],
+        "naive_retrieved_titles": [
+            "I Can't See Myself Leaving You",
+            "Wherever I Lay My Hat (That's My Home)",
+            "Where Was I",
+            "Donnie Elbert",
+            "Janis Joplin",
+            "Leaving You",
+            "That's My Life (My Love and My Home)",
+            "Jeane Manson",
+            "When Your Love is Gone",
+            "I Won't Forget You (Jim Reeves song)"
+        ],
+        "gold_titles": [
+            "I Can't See Myself Leaving You",
+            "Aretha Franklin"
+        ]
+    }
+]

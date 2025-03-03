@@ -1,0 +1,55 @@
+Index: examples/example1.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import logging\nfrom deepsearcher.offline_loading import load_from_local_files\nfrom deepsearcher.online_query import query\nfrom deepsearcher.configuration import Configuration, init_config\n\nhttpx_logger = logging.getLogger(\"httpx\")  # disable openai's logger output\nhttpx_logger.setLevel(logging.WARNING)\n\n\nconfig = Configuration()  #Customize your config here\ninit_config(config = config)\n\n\nimport glob\nall_md_files = glob.glob('/Users/zilliz/Downloads/milvus-docs-2.5.x/site/en/**/*.md', recursive=True)\nload_from_local_files(paths_or_directory=all_md_files, collection_name=\"milvus_docs\", collection_description=\"All Milvus Documents\")\n\nquestion = \"Write a report comparing Milvus with other vector databases.\"\nresult = query(question)\n\n\n\n\n\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/examples/example1.py b/examples/example1.py
+--- a/examples/example1.py	(revision 36d2349864cf70e1ba6097be8ef81f330e1e1c0f)
++++ b/examples/example1.py	(date 1739524442274)
+@@ -1,6 +1,6 @@
+ import logging
+ from deepsearcher.offline_loading import load_from_local_files
+-from deepsearcher.online_query import query
++from deepsearcher.online_query import query, naive_rag_query
+ from deepsearcher.configuration import Configuration, init_config
+ 
+ httpx_logger = logging.getLogger("httpx")  # disable openai's logger output
+@@ -8,15 +8,31 @@
+ 
+ 
+ config = Configuration()  #Customize your config here
++config.set_provider_config("vector_db", "Milvus", {"uri": "http://10.100.30.11:19530", "db": "ds_test"})
++config.set_provider_config("llm", "OpenAI", {"model": "o1-mini"})
++# config.set_provider_config("llm", "AzureOpenAI", {
++#     "model": "zilliz-gpt-4o-mini",
++#     "azure_endpoint": os.getenv("AZURE_OPENAI_ENDPOINT_BAK"),
++#     "api_key": os.getenv("AZURE_OPENAI_API_KEY_BAK"),
++#     "api_version": "2023-05-15"
++# })
++config.set_provider_config("embedding", "OpenAIEmbedding", {"model_name": "text-embedding-ada-002"})
+ init_config(config = config)
+ 
+ 
+-import glob
+-all_md_files = glob.glob('/Users/zilliz/Downloads/milvus-docs-2.5.x/site/en/**/*.md', recursive=True)
+-load_from_local_files(paths_or_directory=all_md_files, collection_name="milvus_docs", collection_description="All Milvus Documents")
++# import glob
++# all_md_files = glob.glob('/Users/zilliz/Downloads/milvus-docs-2.5.x/site/en/**/*.md', recursive=True)
++# load_from_local_files(paths_or_directory=all_md_files, collection_name="milvus_docs", collection_description="All Milvus Documents")
++
++question = "Which film has the director who is older, God'S Gift To Women or Aldri annet enn bråk."
++result, retrieval_res = query(question)
++print("+++++++++++++++++++")
++print("======chunk======".join([res.text for res in retrieval_res]))
+ 
+-question = "Write a report comparing Milvus with other vector databases."
+-result = query(question)
++
++naive_result, naive_retrieval_res = naive_rag_query(question)
++print("+++++++++++++++++++")
++print("======naive_chunk======".join([res.text for res in naive_retrieval_res]))
+ 
+ 
+ 
