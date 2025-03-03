@@ -1,0 +1,6 @@
+pyproject.toml
+poweroperator/__init__.py
+poweroperator.egg-info/PKG-INFO
+poweroperator.egg-info/SOURCES.txt
+poweroperator.egg-info/dependency_links.txt
+poweroperator.egg-info/top_level.txt

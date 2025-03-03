@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "poweroperator"
+authors = [
+  { name = "Michael Bacarella", email = "michael@poweroperator.com" },
+]
+version = "0.0.1"
+description = "Coming soon"
+requires-python = ">=3.12"
+readme = "README.md"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+
+[project.scripts]
+poweroperator = "poweroperator.cli:main"
