@@ -1,0 +1,3 @@
+[console_scripts]
+extr-xml = cms17hw.main:extract
+parse-xml = cms17hw.main:parse
