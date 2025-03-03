@@ -1,0 +1,11 @@
+Levenshtein/StringMatcher.py,sha256=9_EPf14D3atldYwG0iViJRSADMBoNUbgwZNUsvwLqrc,2359
+Levenshtein/__init__.py,sha256=8Etz3C09ZRgywlyYFcGsnz3fEremlRjZ2YdXkTw0sl8,17933
+Levenshtein/__init__.pyi,sha256=URApxflviIsMw-RTDNLtpRKUl0a2LF0zUtIqBK-WRGE,2918
+Levenshtein/levenshtein_cpp.cpython-313-aarch64-linux-musl.so,sha256=lkU3_WFETZqOjeb22ff4CEfZj6ny4cxAB27NMkPN4so,528041
+Levenshtein/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+levenshtein.libs/libgcc_s-69c45f16.so.1,sha256=BOFjRP57t9LgRNNAnFVK5VHmrp5UU-p5NcfcZ10dnd4,201673
+levenshtein.libs/libstdc++-1f1a71be.so.6.0.33,sha256=sURAhanafc8tH6FGDqPKz7dsPGNb0Aym8vBo6UbJ3Ok,3650097
+levenshtein-0.27.1.dist-info/METADATA,sha256=osc_0j08XY0SqdbFVD0x1iybgTXZSeY6LV563TtzDWI,3555
+levenshtein-0.27.1.dist-info/WHEEL,sha256=nOXuVNQZOED3QbztQJoEALdgBhFVx1xox2q8lEfglx8,118
+levenshtein-0.27.1.dist-info/RECORD,,
+levenshtein-0.27.1.dist-info/licenses/COPYING,sha256=GsTA4NwEjHfg0vDxz0dEifxVtAem86QBgE2ZJAxfbTc,18080
