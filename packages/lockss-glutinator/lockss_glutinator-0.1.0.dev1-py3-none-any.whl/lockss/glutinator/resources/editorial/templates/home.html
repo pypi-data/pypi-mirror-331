@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block banner_other %}
+<span class="image object">
+    <img src="https://placehold.co/100x25?text=Home" alt="Home" />
+</span>
+{% endblock %}
+
+{% block main %}
+<section>
+  <header class="major">
+    <h2>Publishers</h2>
+  </header>
+  <div class="posts">
+    {% for child in current.children %}
+    <article>
+      <a href="{{ m.path(child.path()) }}" class="image"><img src="https://placehold.co/100x25?text={{ child.name.replace(' ', '+') }}" alt="{{ child.name }}" /></a>
+      <h3>{{ child.title }}</h3>
+      <ul class="actions">
+        <li><a href="{{ m.path(child.path()) }}" class="button">View Publisher</a></li>
+      </ul>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

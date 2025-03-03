@@ -1,0 +1,32 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "kind": {
+      "const": "journal-volume",
+      "title": "Kind",
+      "type": "string"
+    },
+    "id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "integer"
+        }
+      ],
+      "title": "Id"
+    },
+    "name": {
+      "title": "Name",
+      "type": "string"
+    }
+  },
+  "required": [
+    "kind",
+    "id",
+    "name"
+  ],
+  "title": "JournalVolumeModel",
+  "type": "object"
+}
