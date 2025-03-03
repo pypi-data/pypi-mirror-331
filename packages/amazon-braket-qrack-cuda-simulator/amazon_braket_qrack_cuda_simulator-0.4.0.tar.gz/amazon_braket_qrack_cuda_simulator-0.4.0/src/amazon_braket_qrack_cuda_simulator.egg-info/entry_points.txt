@@ -1,0 +1,2 @@
+[braket.simulators]
+qrack = braket.qrack_simulator.qrack_simulator:BraketQrackSimulator
