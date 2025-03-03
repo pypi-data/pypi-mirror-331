@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: add-confidence-score-and-coordinates
+Version: 1.0.4
+Summary: A package for updating openai JSON response with confidence score and coordinates
+Author: Shubham Kumar
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+License-File: LICENSE
