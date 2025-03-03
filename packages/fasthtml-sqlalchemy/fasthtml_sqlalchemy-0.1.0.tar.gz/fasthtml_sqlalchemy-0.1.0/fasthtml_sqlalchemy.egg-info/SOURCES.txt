@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+fasthtml_sqlalchemy/__init__.py
+fasthtml_sqlalchemy/core.py
+fasthtml_sqlalchemy/models.py
+fasthtml_sqlalchemy/utils.py
+fasthtml_sqlalchemy.egg-info/PKG-INFO
+fasthtml_sqlalchemy.egg-info/SOURCES.txt
+fasthtml_sqlalchemy.egg-info/dependency_links.txt
+fasthtml_sqlalchemy.egg-info/requires.txt
+fasthtml_sqlalchemy.egg-info/top_level.txt
+test/__init__.py
+test/test_core.py
