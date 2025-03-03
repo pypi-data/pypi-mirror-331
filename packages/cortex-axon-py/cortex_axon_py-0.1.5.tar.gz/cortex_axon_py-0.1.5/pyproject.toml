@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cortex-axon-py"  # Distribution name on PyPI (hyphens allowed)
+version = "0.1.5"
+description = "Flask middleware to forward inbound headers automatically"
+dependencies = [
+  "Flask>=2.0",
+  "requests>=2.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["cortex_axon_py*"]
