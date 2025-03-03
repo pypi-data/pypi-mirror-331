@@ -1,0 +1,6 @@
+hermes_storage_nodes/__init__.py,sha256=UnlxqHH_Wr85HXKZmkP4ZPejAsTDkfPT4QqsB-gK8rk,84
+hermes_storage_nodes/influxdb_client_node.py,sha256=0y99xXBb_Qh61yCxbLDYcOMJiUuibTKz3aVkz6et0ds,2233
+hermes_storage_nodes-1.0.0.dist-info/METADATA,sha256=0naED1xp9tPPCAXeGS_OWIQ2oXLuK6l5E3RRg0T-0Ro,1332
+hermes_storage_nodes-1.0.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+hermes_storage_nodes-1.0.0.dist-info/entry_points.txt,sha256=nRSDq7qrCd8qTWT3blBFKkcezxtyunWMUy3HBxfSgTw,56
+hermes_storage_nodes-1.0.0.dist-info/RECORD,,
