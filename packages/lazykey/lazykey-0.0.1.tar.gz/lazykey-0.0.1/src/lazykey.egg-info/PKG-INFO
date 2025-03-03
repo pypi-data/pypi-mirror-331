@@ -1,0 +1,13 @@
+Metadata-Version: 2.2
+Name: lazykey
+Version: 0.0.1
+Summary: Always uses the most lazy key when calling an online LLM.
+Author-email: Nearchos Potamitis <nearchos.potamitis@cs.au.dk>
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# lazykey

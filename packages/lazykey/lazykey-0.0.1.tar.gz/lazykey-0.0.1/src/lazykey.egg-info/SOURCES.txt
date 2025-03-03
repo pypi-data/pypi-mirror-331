@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/lazykey/__init__.py
+src/lazykey/example.py
+src/lazykey/key.py
+src/lazykey/keyhandler.py
+src/lazykey.egg-info/PKG-INFO
+src/lazykey.egg-info/SOURCES.txt
+src/lazykey.egg-info/dependency_links.txt
+src/lazykey.egg-info/top_level.txt
