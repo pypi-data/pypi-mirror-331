@@ -1,0 +1,14 @@
+smoothtext/__init__.py,sha256=3BZhyIkiaCCZxRWbRP475glH7nA57WT2_6FGOQwUy8k,722
+smoothtext/backend.py,sha256=QE1umRrbxfMCijJL75CYVtOYPHyI27hvuNmjarHoAkI,5244
+smoothtext/language.py,sha256=eqE91eOWLTvarzp1QAnCUwDWiKNUkM5tiZaUw6yGdS0,11907
+smoothtext/py.typed,sha256=gdHZmJdHaHOmD4STtA4EdfCZ7XPM-3VoYOw61mpgOOU,76
+smoothtext/readability.py,sha256=8ZwtbgyX2mjVNFe3bASXVrzyXCdDvGO6YRayB7zZyIc,3315
+smoothtext/smoothtext.py,sha256=LqdSfgdHel48Yjd28oRdkv9OQxQIIaaSrHDzVh9l15s,40518
+smoothtext/internal/__init__.py,sha256=eI47r2SQXkLQd4l2W3Ad3n-vp2E6vligB_nhywCppfY,50
+smoothtext/internal/syllabifier.py,sha256=7L6k0uLb4IReiWUl09q5VNOkUVAO0LALTbM3hlIFsGI,5649
+smoothtext/internal/tokenizer.py,sha256=HWkctDw9gKUdevuZQCL44bUy4rklgAm6Kbw9K0hK3FE,3453
+smoothtext-0.3.1.dist-info/LICENSE,sha256=40-yCitnfWYGFyoTrmbi_Mk6uyGayE8fXofpmL-6mf4,1092
+smoothtext-0.3.1.dist-info/METADATA,sha256=NeFUeL-yH26lakbjL1XjqfdrnGqjNO9CeJ7pp-wu53s,11177
+smoothtext-0.3.1.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+smoothtext-0.3.1.dist-info/top_level.txt,sha256=7QndjCiovNfZf_ylUQqfaP0PuEvZ0i2eEL0_zeOH7vU,11
+smoothtext-0.3.1.dist-info/RECORD,,
