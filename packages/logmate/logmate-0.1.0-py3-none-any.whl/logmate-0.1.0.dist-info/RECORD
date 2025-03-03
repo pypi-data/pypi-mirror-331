@@ -1,0 +1,9 @@
+logmate/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+logmate/cli.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+logmate/logmate.py,sha256=jcyviPeWdCpZQuhyNt2XzvwsQhQS7zctKvRkxN-IgZI,6314
+logmate-0.1.0.dist-info/LICENSE,sha256=9_mNq9GDeBELAe2KSJW8arvmwd7pUfzqaNpVGa0Y_v8,138
+logmate-0.1.0.dist-info/METADATA,sha256=tdBJDkii92VWhbpHVXgfXyW9ycsV4JPS0dg5Q4VREWA,953
+logmate-0.1.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+logmate-0.1.0.dist-info/entry_points.txt,sha256=U4_26aBLSUSRn18-84I-pZVe07nfaANMMs2UXBZpY0w,49
+logmate-0.1.0.dist-info/top_level.txt,sha256=9VahU1NaZo-mvOxhuLdD2FTT71K3pksHMfZHdobNhec,8
+logmate-0.1.0.dist-info/RECORD,,
