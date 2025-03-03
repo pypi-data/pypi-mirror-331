@@ -1,0 +1,9 @@
+Metadata-Version: 2.2
+Name: freestyle
+Version: 0.0.1
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# Freestyle Sandboxes Python SDK
+
+This is the Python SDK for the Freestyle Sandboxes API. For more information check out the [API documentation](https://api.freestyle.sh).
