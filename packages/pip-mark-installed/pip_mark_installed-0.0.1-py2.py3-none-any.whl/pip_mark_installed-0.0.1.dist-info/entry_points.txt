@@ -1,0 +1,2 @@
+[console_scripts]
+pip-mark-installed = pip_mark_installed:main
