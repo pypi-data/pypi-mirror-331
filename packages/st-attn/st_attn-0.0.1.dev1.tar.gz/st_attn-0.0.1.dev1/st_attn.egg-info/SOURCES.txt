@@ -1,0 +1,11 @@
+README.md
+setup.py
+st_attn.cpp
+st_attn/__init__.py
+st_attn/st_attn_h100.cu
+st_attn.egg-info/PKG-INFO
+st_attn.egg-info/SOURCES.txt
+st_attn.egg-info/dependency_links.txt
+st_attn.egg-info/requires.txt
+st_attn.egg-info/top_level.txt
+test/test_sta.py
