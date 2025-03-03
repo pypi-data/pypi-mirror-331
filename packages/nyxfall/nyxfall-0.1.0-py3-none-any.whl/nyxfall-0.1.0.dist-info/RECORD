@@ -1,0 +1,10 @@
+nyxfall/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nyxfall/__main__.py,sha256=re2mZEsk7AB3QBV818CeSsLKg6ihUKwtw9mYFUiBpj0,2185
+nyxfall/card.py,sha256=05Y8O-XzjfKrFoeqwneujaBcOi5AkTCojEpIMj2KQ80,7193
+nyxfall/scryfall_requester.py,sha256=iP2dJ53m3yQKVZe-Q5LhygA6ffR1D4XuQtW6fAt2i7Q,2251
+nyxfall-0.1.0.dist-info/LICENSE,sha256=ll9bisKNMSuZ10xtiVWH8ngGJbhZf8JAhozk7Fd7XsE,1093
+nyxfall-0.1.0.dist-info/METADATA,sha256=UFrRA81UblK_WkQLVrQ7wocB_JPBhLiivb-8HB9X5EE,6258
+nyxfall-0.1.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+nyxfall-0.1.0.dist-info/entry_points.txt,sha256=xtw0SoshgcjNByFME6NvEzcpAai6PfeRnO5Kwv1vEYw,50
+nyxfall-0.1.0.dist-info/top_level.txt,sha256=r5OFqK4coxvQK1lhK5shhvQWgVj620cWboUXTuTWDNo,8
+nyxfall-0.1.0.dist-info/RECORD,,
