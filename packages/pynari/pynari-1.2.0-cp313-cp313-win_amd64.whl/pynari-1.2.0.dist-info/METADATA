@@ -1,0 +1,169 @@
+Metadata-Version: 2.1
+Name: pynari
+Version: 1.2.0
+Summary: Python bindings for ANARI
+Author-Email: Ingo Wald <ingowald@gmail.com>
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Environment :: GPU :: NVIDIA CUDA
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Project-URL: Homepage, https://github.com/ingowald/pynari
+Project-URL: Issues, https://github.com/ingowald/pynari/issues
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# pynari - Python Bindings for ANARI
+
+This project provides a python interface for the Khronos ANARI
+rendering API. This implementation currently requires a CUDA capable
+GPU (support for other backends will be added at a later time).
+
+# Usage - Quickstart
+
+Assuming you already know how the ANARI API works (and that you have
+pip-installed this package) you can use ANARI in python as follows:
+First, import this package
+
+```
+import pynari as anari
+```
+(for all the steps below we assume you imported `pynari` as `anari`;
+this is not required, but please take this in mind for the examples below).
+
+Once the package has been imported you can then create a ANARI
+"device" using
+
+```
+device = anari.newDevice('default')
+```
+(where desired, the string passed to 'newDevice' allows for selecting a
+specific ANARI device, see below; 'default' in this case will
+currently select a 'barney' backend,
+see https://github.com/ingowald/barney).
+
+You can then create various ANARI actor objects through
+creator-methods on that device, such as, for example
+
+```
+world = device.newWorld()
+mesh  = device.newGeometry('triangle')
+array = device.newArray(anari.FLOAT32_VEC3,vertex)
+```
+etc. 
+
+Large arrays (such as vertex or index arrays for a triangle mesh)
+are expected to be populated using `numpy`, and wrapped in the ANARI 'array' type:
+```
+import numpy as np
+...
+vertex = np.array(...,dtype=np.float32)
+mesh.setParameter('vertex.position',anari.ARRAY,
+                  device.newArray(anari.FLOAT32_VEC3,vertex));
+index  = np.array(...,dtype=np.uint32)
+mesh.setParameter('primitive.index',anari.ARRAY,
+                  device.newArray(anari.UINT32_VEC3,index));
+```
+
+# The ANARI API, and how it is exposed in `pynari`
+
+For a full description of what ANARI Objects are, what kind of
+objects exist, and how they work, please refer to the ANARI API Spec 
+at https://registry.khronos.org/ANARI/specs/1.0/ANARI-1.0.html . 
+
+Since the official ANARI API is a plain C API we could not 
+implement this literally, but had to make certain changes to make ti
+more "pythonic". Basically, these rules were applied (we will assume
+that the `pynari` module was imported under the alias as `anari`):
+
+- If there is a C constant/enum of name `ANARI_XYZ`, it is exposed as
+  `anari.XYZ`. Example: the C enum of `ANARI_FLOAT32` is
+  `anari.FLOAT32` in pynari.
+  
+- If there is a C API function of `anariFunctionXyz(ANARIDevice
+  device, ...)` it will be exposed as `device.functionXyz(...)`. Note
+  that in order to remain as close to the C-style API as possible we
+  use CAML-case for function names, not python-casing. I.e., pynari
+  uses `device.functionXyz(...)`, not `device.function_xyz(...)`.
+  
+# Examples
+
+For a list of several samples, please visit the pynari github repo
+https://github.com/ingowald/pynari
+
+# Supported and Built-in Devices
+
+In ANARI, the 'device' abstraction aims at allowing for what is
+essentially the concept of a "driver"--i.e., a specific implementation
+of the hardware for a specific set of underlying hardware, or
+features. On the OS level, this is realized through installing of
+different ANARI implementations (e.g., `barney` or `visrtx` for CUDA
+GPUs, or `ospray` for Intel CPUs and GPUs), and then at runtime
+selecting one of then by passing a proper 'device name' identifier.
+
+In `pynari`, we currently expose the device concept as follows:
+
+- If installed through pip, `pynari` comes with two "baked" devices
+  that are pre-supplied with the pynari pip package, even if no ANARI
+  devices are installed on the OS level: `barney_cuda`, and
+  `barney_cpu` (see below).
+
+- the `barney_cuda` device (shipped with pynari's pip install) is a
+  CUDA- and OptiX accelerated path tracer (see
+  https://github.com/ingowald/barney). `barney_cuda` requires a
+  OptiX-capable NVIDIA GPU with driver 535 or newer. Specifying device
+  as 'barney_cuda' (or 'gpu' for short) will try to load this device,
+  and throw an exception if this is not possible (eg, if no GPU can be
+  found).
+  
+- the `barney_cpu` device (also shipped with pynari's pip install) is
+  a (_much_!) slower CPU-only fallback (based on embree) that should
+  produce similar images. `barney_cpu` does not require an NVIDIA GPU,
+  but will be _significantly_ slower. Specifying `barney_cpu` (or
+  `cpu`, for short) will try to load this device, and throw an
+  exception if this did not succeed.
+  
+- Specifying device as 'default' first try to load `barney_cuda`, and
+  use that if possible; if not it will try to load `barney_cpu`.
+
+- For any device name _other_ than `default`, `barney_cuda`, 'gpu',
+  `barney_cpu`, or 'cpu', pynari will look for a system-installed
+  ANARI implementation, and ask this to create a device of that name.
+
+# Issues
+
+For any issues, bugs, or feature requests, please use the github
+pynari issue tracker.
+
+
+# Version History
+
+## v1.1.3
+
+- support for macOS
+
+- support for CPU-fallback when no GPU is present (in part on mac)
+
+- `anari.newDevice(<devName>)` will accept device names 'cuda' and 'cpu'.
+  'default' will try to load 'cuda', and if that fails, fall back to 'cpu'.
+
+- supports pass-through to system-installed anari device. Device names
+  other than 'cuda', 'cpu', or 'default' will read the env-var
+  `ANARI_LIBRARY`, and use system-installed anari library specified therein.
+
+## v1.1.4
+
+- updated to latest barney, with various fixes to lighting code and 
+  fixed structured volume data.
+  
+- baked backends built for 'all-major' CUDA architectures.
+
