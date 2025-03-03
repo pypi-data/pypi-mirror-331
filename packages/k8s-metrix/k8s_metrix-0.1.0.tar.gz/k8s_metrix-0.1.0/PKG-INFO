@@ -1,0 +1,17 @@
+Metadata-Version: 2.3
+Name: k8s-metrix
+Version: 0.1.0
+Summary: 
+Author: abi_jey
+Author-email: abi-jey@users.noreply.github.com
+Requires-Python: >=3.9
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: pydantic (>=2.1.0,<3.0.0)
+Description-Content-Type: text/markdown
+
+# k8s-metrix
