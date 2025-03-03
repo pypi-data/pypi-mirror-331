@@ -1,0 +1,17 @@
+napari_vectorizer/__init__.py,sha256=EVPza_6hGc3fEvrPoqzQBwnl6IeteFQwR3vJ7HRgkUI,282
+napari_vectorizer/_sample_data.py,sha256=xQG7vupIoKDCEOhjUWQHP_0Uoo0OoH68OaGlOXYXE0E,801
+napari_vectorizer/_version.py,sha256=7Bz8oZwdLt8FP3QYrq7kiW8zbcYkC4dpOMGsCBlZ_8Y,511
+napari_vectorizer/_widget.py,sha256=zfesjrIZwcb-xlPfeIUPoF0yGSeRq2smOhFFZKiWNa4,1712
+napari_vectorizer/napari.yaml,sha256=W4EoIZw358MTwDF54N0sBhv6iTsNbALjqGhYZPwT58A,902
+napari_vectorizer/_sample_data/conifer/cells.png,sha256=UWEwwMa0OE73eVcferVR_7vCXc_Z4zT6JDjv7VhKWfM,32695
+napari_vectorizer/_sample_data/conifer/rings.tiff,sha256=xLuTvEfCSlkdUja4wzaYSGRRKXc1GB74A6FudguS2o8,5000134
+napari_vectorizer/_sample_data/conifer/thin_section.jpg,sha256=LQD5xrTWFBana6Fkb8wKHLdmjUL-7TN607GdympQb5Q,232539
+napari_vectorizer/_tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+napari_vectorizer/_tests/test_sample_data.py,sha256=NQFLqIhJirVPBEwAbKKQYtjXgjVJe7UKXUxRBv8mAPE,1377
+napari_vectorizer/_tests/test_widget.py,sha256=LaexRpF7vqH8gPDOWODpxebQ_597pOt3LO2dKkfIilA,1490
+napari_vectorizer-0.0.3.dist-info/LICENSE,sha256=1v3cucA02g_VrQxBLZg9da7lnIm6PL2069wbRxPgp7g,1492
+napari_vectorizer-0.0.3.dist-info/METADATA,sha256=z8YtD5uI-hk9kVAFZI_dfR_QorGxQP_9WtqbYuzd6Yc,6050
+napari_vectorizer-0.0.3.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+napari_vectorizer-0.0.3.dist-info/entry_points.txt,sha256=PiJquoQqhGJX1Y4vi5uKBihf1QYIRL8VcgtznOe2eBo,68
+napari_vectorizer-0.0.3.dist-info/top_level.txt,sha256=nGrKKh9wD5KcoZFZMzR0A57KUgCakBqE_8K8SyGoSrE,18
+napari_vectorizer-0.0.3.dist-info/RECORD,,
