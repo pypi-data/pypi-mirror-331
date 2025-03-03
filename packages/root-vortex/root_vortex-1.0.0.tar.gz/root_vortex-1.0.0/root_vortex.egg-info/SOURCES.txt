@@ -1,0 +1,7 @@
+README.md
+setup.py
+root_vortex.egg-info/PKG-INFO
+root_vortex.egg-info/SOURCES.txt
+root_vortex.egg-info/dependency_links.txt
+root_vortex.egg-info/entry_points.txt
+root_vortex.egg-info/top_level.txt
