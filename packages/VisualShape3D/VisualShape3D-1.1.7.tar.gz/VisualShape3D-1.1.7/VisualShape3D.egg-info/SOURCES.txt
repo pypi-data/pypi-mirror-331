@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+VisualShape3D/Polygons.py
+VisualShape3D/Shape3D.py
+VisualShape3D/Visual.py
+VisualShape3D/__init__.py
+VisualShape3D/examples.py
+VisualShape3D/geomutils.py
+VisualShape3D/mathutils.py
+VisualShape3D/plotable.py
+VisualShape3D.egg-info/PKG-INFO
+VisualShape3D.egg-info/SOURCES.txt
+VisualShape3D.egg-info/dependency_links.txt
+VisualShape3D.egg-info/requires.txt
+VisualShape3D.egg-info/top_level.txt
+test/__init__.py
