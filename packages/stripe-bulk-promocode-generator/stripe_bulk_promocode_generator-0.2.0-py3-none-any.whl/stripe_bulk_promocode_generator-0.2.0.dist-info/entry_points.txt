@@ -1,0 +1,2 @@
+[console_scripts]
+stripe-bulk-promocode-generator = stripe_bulk_promocode_generator.main:main
