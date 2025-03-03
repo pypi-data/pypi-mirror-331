@@ -1,0 +1,11 @@
+Pynomic/__init__.py,sha256=4FJsNE_1fMFHFaQ1I9Uok66MOogrIJqVvR7bys7ZnEM,940
+Pynomic/core/__init__.py,sha256=4h-FIHhucVhrkFWgOMxh7Njui8qtvW2311i0cZz2yc0,457
+Pynomic/core/core.py,sha256=TJtLxsyYwkfwk8DxgteDFJ8d464modmmKVIfZRBJPJg,37256
+Pynomic/core/plot.py,sha256=VVD_DJER2LWs__dacw4zIeeq4tYQnkq48fP0ALT7e1k,11423
+Pynomic/io/__init__.py,sha256=EYhE51aCPcXL_5xGPK83sF1xOeBX3nviHybXcN3OgDY,291
+Pynomic/io/get_plot_bands.py,sha256=a1uUUp47tuk2wSSG_JFmIbnNERkwc-NhYZJxCHe7vJs,11186
+pynomic-0.0.1.dist-info/LICENSE,sha256=dyYyZSd2NWla3E2oE5AECxw97NQyT1eN9RNEf2IcvdI,1074
+pynomic-0.0.1.dist-info/METADATA,sha256=5l06VugstlnHg0FZFAk9AvcxocdhzQQG5lTVvwSyjsM,3038
+pynomic-0.0.1.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+pynomic-0.0.1.dist-info/top_level.txt,sha256=XD14aKiydS61jlipqJRhiR3xren0grbCkALyywJJtog,8
+pynomic-0.0.1.dist-info/RECORD,,
