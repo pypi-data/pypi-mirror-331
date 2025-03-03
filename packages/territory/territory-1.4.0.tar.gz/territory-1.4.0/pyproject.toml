@@ -1,0 +1,27 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "territory"
+dynamic = ["version", "description"]
+authors = [{name = "Paweł Z. Stiasny", email = "pawel@territory.dev"}]
+readme = "README.md"
+dependencies = [
+    "requests >= 2.32.3, <3",
+    "platformdirs >= 4.2.2, <5",
+    "tqdm >= 4.66.5, <5",
+    "territory-python-scanner",
+]
+[project.optional-dependencies]
+test = [
+    "pytest >= 8.2.2, <9",
+    "Flask >= 3.0.3, <4",
+]
+
+[project.urls]
+Home = "https://territory.dev"
+Source = "https://github.com/territory-dev/cli"
+
+[project.scripts]
+territory = "territory.cli:main"
