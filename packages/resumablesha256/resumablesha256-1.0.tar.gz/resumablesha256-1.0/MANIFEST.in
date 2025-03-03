@@ -1,0 +1,4 @@
+include README.md
+include LICENSE.txt
+recursive-include src_ext *.c *.h
+recursive-include tests *.py
