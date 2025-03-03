@@ -1,0 +1,5 @@
+Metadata-Version: 2.1
+Name: mop-utils
+Version: 2.5
+Summary: Utility SDK for RAI Model Onboarding Pipeline (MOP) model contributor.
+Requires-Python: >=3.8.0
