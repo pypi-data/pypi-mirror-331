@@ -1,0 +1,6 @@
+Metadata-Version: 2.2
+Name: cortex-axon-py
+Version: 0.1.9
+Summary: Flask middleware to forward inbound headers automatically
+Requires-Dist: Flask>=2.0
+Requires-Dist: requests>=2.0
