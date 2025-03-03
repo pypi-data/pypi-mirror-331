@@ -1,0 +1,13 @@
+README.md
+setup.py
+pyevaljs4/__init__.py
+pyevaljs4/__version__.py
+pyevaljs4/_program.py
+pyevaljs4/exceptions.py
+pyevaljs4/pyevaljs.py
+pyevaljs4/settings.py
+pyevaljs4/utils.py
+pyevaljs4.egg-info/PKG-INFO
+pyevaljs4.egg-info/SOURCES.txt
+pyevaljs4.egg-info/dependency_links.txt
+pyevaljs4.egg-info/top_level.txt
