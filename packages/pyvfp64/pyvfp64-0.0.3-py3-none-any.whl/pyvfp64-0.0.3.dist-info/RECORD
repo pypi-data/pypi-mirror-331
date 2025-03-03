@@ -1,0 +1,7 @@
+pyvfp/__init__.py,sha256=3h-wYdwgT_HQFR07Uqxp4epZ9PMgHZ9T4DHqRX1GWwQ,38
+pyvfp/pyvfp.py,sha256=cSuLQs9frnZ_bLprvGuAETclqjap3rFkLhXKLyhthEg,4385
+pyvfp/bin/vfp_to_json.exe,sha256=RqyDO9DlEFxoqHOptmeWHLngzthbC7vxPg4ucQoTgu0,185856
+pyvfp64-0.0.3.dist-info/METADATA,sha256=SryFPd3k3BSYW8vMGcP74AQP-OvGZ8ND_tGUH6qCao0,430
+pyvfp64-0.0.3.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+pyvfp64-0.0.3.dist-info/top_level.txt,sha256=CC_3qXCJi7Sw37yqVFyv4ZUeNvmre5zk8gPavQlSHd8,6
+pyvfp64-0.0.3.dist-info/RECORD,,
