@@ -1,0 +1,10 @@
+Metadata-Version: 2.2
+Name: types-eyed3
+Version: 0.9.7.20250305
+Summary: Type hints for the eyed3 library
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+
+# types-eyed3
+
+Type hint for [eyed3](https://github.com/nicfit/eyeD3)
