@@ -1,0 +1,9 @@
+[default]
+    default.locale = "en_us"
+
+    [default.extend-words]
+        halp   = "halp"
+        halper = "halper"
+
+[files]
+    extend-exclude = ["*_cache", ".venv"]
