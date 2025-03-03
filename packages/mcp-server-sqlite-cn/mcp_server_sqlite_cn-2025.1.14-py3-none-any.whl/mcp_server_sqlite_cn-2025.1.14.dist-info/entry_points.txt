@@ -1,0 +1,2 @@
+[console_scripts]
+mcp-server-sqlite-cn = mcp_server_sqlite_cn:main
