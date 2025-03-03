@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: myADconvert
+Version: 2.0.4
+Summary: Support tool for AD converter.
+Author: Toshihiro Nishimura
+Author-email: tnishimura@se.kanazawa-u.ac.jp
+License: MIT
+
