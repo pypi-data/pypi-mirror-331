@@ -1,0 +1,60 @@
+[tool.poetry]
+name = "awt-ti"  # This is the package name on PyPI (avoid underscores)
+version = "0.1.0"
+description = "A comprehensive library for technical analysis indicators in financial markets"
+authors = ["William R. Astley <william.astley@algebraicwealth.com>"]
+license = "MIT"
+readme = "README.md"
+
+# Ensuring the import remains `import awt_ti`
+packages = [{include = "awt_ti"}]
+
+# Links
+repository = "https://github.com/pr1m8/awt_ti"
+documentation = "https://awt-ti.readthedocs.io"
+
+# Keywords for discoverability
+keywords = ["finance", "technical-analysis", "trading", "indicators", "stocks"]
+
+[tool.poetry.dependencies]
+python = ">=3.11"
+pandas = "^2.0.0"
+numpy = "^1.24.0"
+scipy = "^1.10.0"
+matplotlib = "^3.7.0"
+yfinance = "^0.2.54"
+backtesting = "^0.6.2"
+yahoo-finance = "^1.4.0"
+yahoo-fin = "^0.8.9.1"
+
+# Sphinx Documentation Dependencies
+sphinx = "^8.2.1"
+sphinx-rtd-theme = "^3.0.2"
+furo = "^2024.8.6"
+toml = "^0.10.2"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.3.1"
+black = "^23.3.0"
+isort = "^5.12.0"
+flake8 = "^6.0.0"
+mypy = "^1.3.0"
+pytest-cov = "^4.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+# Documentation Scripts
+[tool.poetry.scripts]
+docs = "scripts.generate_docs:generate_api_docs"
+serve-docs = "scripts.generate_docs:serve_docs"
