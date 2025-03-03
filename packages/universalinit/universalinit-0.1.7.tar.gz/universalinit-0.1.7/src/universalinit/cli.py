@@ -1,0 +1,151 @@
+import argparse
+import json
+import os
+from pathlib import Path
+from typing import Dict, Any
+
+from universalinit.templateconfig import TemplateInitInfo
+from universalinit.universalinit import ProjectConfig, ProjectType, ProjectInitializer
+
+
+def parse_parameters(params_str: str) -> Dict[str, Any]:
+    if not params_str:
+        return {}
+
+    params = {}
+    for param in params_str.split(','):
+        if '=' not in param:
+            continue
+        key, value = param.split('=', 1)
+        if value.lower() == 'true':
+            value = True
+        elif value.lower() == 'false':
+            value = False
+        elif value.isdigit():
+            value = int(value)
+        elif value.replace('.', '').isdigit() and value.count('.') == 1:
+            value = float(value)
+        params[key.strip()] = value
+    return params
+
+
+def create_project_config(args) -> ProjectConfig:
+    """Create ProjectConfig from CLI arguments."""
+    return ProjectConfig(
+        name=args.name,
+        version=args.version,
+        description=args.description,
+        author=args.author,
+        project_type=ProjectType.from_string(args.type),
+        output_path=Path(args.output),
+        parameters=parse_parameters(args.parameters)
+    )
+
+def make_path_absolute(path: str, base_path: Path) -> str:
+    """Convert a relative path to absolute path."""
+    return str(base_path / path)
+
+def template_init_info_to_dict(init_info: TemplateInitInfo, project_path: Path) -> dict:
+    """Convert TemplateInitInfo to a dictionary with absolute paths for JSON serialization."""
+
+    return {
+        "build_cmd": {
+            "command": init_info.build_cmd.command,
+            "working_directory": init_info.build_cmd.working_directory
+        },
+        "env_config": {
+            "environment_initialized": init_info.env_config.environment_initialized,
+            "node_version": init_info.env_config.node_version,
+            "npm_version": init_info.env_config.npm_version
+        },
+        "init_files": [make_path_absolute(f, project_path) for f in init_info.init_files],
+        "init_minimal": init_info.init_minimal,
+        "run_tool": {
+            "command": init_info.run_tool.command,
+            "working_directory": init_info.run_tool.working_directory
+        },
+        "test_tool": {
+            "command": init_info.test_tool.command,
+            "working_directory": init_info.test_tool.working_directory
+        },
+        "init_style": init_info.init_style,
+        "linter_script": init_info.linter_script,
+        "post_processing": {
+            "script": init_info.post_processing.script
+        }
+    }
+
+def output_json(success: bool, message: str, template_info: TemplateInitInfo = None, project_path: Path = None):
+    """Helper function to format JSON output."""
+    result = {
+        "success": success,
+        "message": message,
+        "template_config": template_init_info_to_dict(template_info, project_path) if template_info and project_path else {}
+    }
+    print("[OUTPUT]")
+    print(json.dumps(result, indent=2))
+    return 0 if success else 1
+
+def main():
+    parser = argparse.ArgumentParser(
+        description='Universal Project Initializer',
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Example usage:
+  uniinit --name my-app --type react --output ./my-app --parameters typescript=true,styling_solution=styled-components
+  uniinit --name myservice --type python --output ./myservice --parameters async=true,use_fastapi=true
+  uniinit --name my-vue-app --type vue --output ./my-vue-app
+  uniinit --name my-flutter-app --type flutter --output ./my-flutter-app
+
+Available project types:
+  - react
+  - ios
+  - android
+  - python
+  - node
+  - vue
+  - flutter
+    """
+)
+
+    parser.add_argument('--name', required=True, help='Project name')
+    parser.add_argument('--version', default='0.1.0', help='Project version (default: 0.1.0)')
+    parser.add_argument('--description', default='', help='Project description')
+    parser.add_argument('--author', required=True, help='Project author')
+    parser.add_argument('--type', required=True, help='Project type (react, ios, android, python, node)')
+    parser.add_argument('--output', required=True, help='Output directory path')
+    parser.add_argument('--parameters', help='Additional parameters as key=value pairs, comma-separated')
+    parser.add_argument('--config', help='Path to JSON config file (overrides other arguments)')
+
+    args = parser.parse_args()
+
+    initializer = ProjectInitializer()
+
+    try:
+        config = create_project_config(args)
+
+        template = initializer.template_factory.create_template(config)
+        init_info = template.get_init_info()
+
+        print(f"\nInitializing {config.project_type.value} project: {config.name}")
+        print(f"Output directory: {config.output_path}")
+        print("\nTemplate configuration:")
+        print(f"Build command: {init_info.build_cmd.command}")
+        print(f"Required environment:")
+        if hasattr(init_info.env_config, 'node_version'):
+            print(f"  Node.js: {init_info.env_config.node_version}")
+        if hasattr(init_info.env_config, 'npm_version'):
+            print(f"  npm: {init_info.env_config.npm_version}")
+
+        success = initializer.initialize_project(config)
+
+        if success:
+            return output_json(True, "Project initialized successfully!", init_info, config.output_path)
+        else:
+            return output_json(False, "Project initialization failed", init_info, config.output_path)
+
+    except Exception as e:
+        return output_json(False, f"Error: {str(e)}")
+
+if __name__ == '__main__':
+    main()
