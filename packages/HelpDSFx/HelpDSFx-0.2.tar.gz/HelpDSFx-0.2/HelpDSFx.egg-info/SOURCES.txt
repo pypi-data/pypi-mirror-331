@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+HelpDSFx.egg-info/PKG-INFO
+HelpDSFx.egg-info/SOURCES.txt
+HelpDSFx.egg-info/dependency_links.txt
+HelpDSFx.egg-info/requires.txt
+HelpDSFx.egg-info/top_level.txt
+helpdsf/__init__.py
+helpdsf/helpdsfx.py
