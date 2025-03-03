@@ -1,0 +1,7 @@
+[project]
+name = "poweroperator"
+authors = [
+  { name = "Michael Bacarella", email = "michael@poweroperator.com" },
+]
+version = "0.0.0"
+description = "Coming soon"
