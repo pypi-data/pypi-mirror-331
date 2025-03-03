@@ -1,0 +1,23 @@
+[build-system]
+requires = [ "poetry-core",]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "pycredo"
+version = "0.0.1"
+description = "All popular Framework HF integration kit"
+authors = [ "Kammari Santhosh",]
+readme = "README.md"
+license = "MIT License"
+repository = "https://github.com/santhosh/"
+keywords = [ "",]
+include = []
+[[tool.poetry.packages]]
+include = "credo"
+
+[tool.poetry.scripts]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+openai = "^1.58.1"
+ollama = "^0.4.5"
