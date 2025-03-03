@@ -1,0 +1,2 @@
+pandas>=2.0.0
+pytest-shutil==1.7.0
