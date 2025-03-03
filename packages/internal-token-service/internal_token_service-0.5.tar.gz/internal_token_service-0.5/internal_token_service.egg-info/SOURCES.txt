@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.py
+internal_token_service/__init__.py
+internal_token_service/main.py
+internal_token_service.egg-info/PKG-INFO
+internal_token_service.egg-info/SOURCES.txt
+internal_token_service.egg-info/dependency_links.txt
+internal_token_service.egg-info/requires.txt
+internal_token_service.egg-info/top_level.txt
