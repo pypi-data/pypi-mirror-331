@@ -1,0 +1,139 @@
+[project]
+name = "ycf-tools"
+dynamic = ["version"]
+description = "Yandex Cloud Function tools"
+readme = "readme.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Aleksei Marusich", email = "aleksei.marusich@rocshers.com"}
+]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: System :: Software Distribution",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3 :: Only",
+]
+keywords = ["rocshers", "yandex", "cloud", "function"]
+requires-python = ">=3.12"
+dependencies = [
+    "pydantic>=2",
+]
+
+[tool.hatch.build]
+packages = ["ycf"]
+
+[project.scripts]
+ycf = "ycf.cli:cli"
+
+[project.optional-dependencies]
+cli = [
+    "rich>=13.9.3",
+    "package-schemes==0.1.2",
+    "typer>=0.12.5",
+    "pydantic-settings>=2",
+    "clickpy-client>=0.1.5",
+    "boto3>=1.36.16",
+    "pyjwt>=2.10.1",
+    "httpx>=0.28.1",
+    "cryptography>=44.0.1",
+    "packaging-version-git>=0.1.2",
+]
+
+[dependency-groups]
+dev = [
+    "mypy>=1.13.0",
+    "mypy-boto3>=1.37.0",
+    "pre-commit>=4.0.1",
+    "pre-commit-hooks>=5.0.0",
+    "pytest>=8.3.3",
+    "pytest-asyncio>=0.24.0",
+    "pytest-cov>=6.0.0",
+    "ruff>=0.7.3",
+    "vulture>=2.14",
+]
+
+[build-system]
+requires = ["hatchling", "wheel", "versioningit"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+package = true
+
+[tool.versioningit]
+
+[tool.hatch.version]
+source = "versioningit"
+
+[tool.hatch.build.targets.sdist]
+ignore-vcs = true
+
+[tool.black]
+skip-string-normalization = true
+line-length = 120
+
+[tool.isort]
+profile = "black"
+line_length = 120
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+unsafe-fixes = true
+
+[tool.ruff.format]
+preview = true
+quote-style = "single"
+
+[tool.ruff.lint]
+preview = true
+select = ["A", "B", "C", "D", "E", "F", "I", "UP", "ANN"]
+fixable = ["A", "B", "C", "D", "E", "F", "I", "UP", "ANN"]
+ignore = ["ANN401", "UP004", "D100", "D101", "D102", "D103", "D104", "D107", "D415", "D105", "D106", "D203", "D213", "B008", "F405"]
+
+[tool.ruff.lint.flake8-quotes]
+inline-quotes = "single"
+
+[tool.coverage.run]
+omit = [
+    "*/tests/*",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+]
+
+[tool.pytest.ini_options]
+addopts = "-vvs --tb=short"
+xfail_strict = true
+testpaths = [
+    "tests",
+    "integration",
+]
+python_files = [
+    "tests/*.py",
+    "test_*.py"
+]
+filterwarnings = [
+    "ignore::DeprecationWarning",
+    "ignore:Module already imported:pytest.PytestWarning"
+]
+log_cli=true
+log_level='INFO'
+asyncio_mode = "auto"
+
+[tool.mypy]
+python_version = "3.12"
+ignore_missing_imports = true
+exclude = "examples/"
+strict = true
