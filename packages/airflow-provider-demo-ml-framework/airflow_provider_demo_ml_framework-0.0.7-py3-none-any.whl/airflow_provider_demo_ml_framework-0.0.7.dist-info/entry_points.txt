@@ -1,0 +1,2 @@
+[apache_airflow_provider]
+provider_info = ml_demo_provider.__init__:get_provider_info
