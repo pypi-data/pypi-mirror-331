@@ -1,0 +1,15 @@
+[run]
+source = ciscoconfparse2
+branch = True
+
+[report]
+exclude_lines =
+    pragma: no cover
+    def __repr__
+    raise AssertionError
+    raise NotImplementedError
+    if 0:
+    if __name__ == .__main__.:
+
+omit =
+    ciscoconfparse2/dev_tools/*
