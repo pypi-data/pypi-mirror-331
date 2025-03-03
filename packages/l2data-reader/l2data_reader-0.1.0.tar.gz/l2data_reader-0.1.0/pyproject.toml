@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "l2data-reader"
+version = "0.1.0"
+description = "A package for reading Level 2 market data"
+readme = "README.md"
+authors = [
+    {name = "Your Name", email = "your.email@example.com"}
+]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.7"
+dependencies = [
+    "protobuf>=3.19.0",
+    "watchdog>=2.1.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/yourusername/l2data-reader"
+"Bug Tracker" = "https://github.com/yourusername/l2data-reader/issues"
