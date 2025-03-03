@@ -1,0 +1,9 @@
+include LICENSE
+include *.md
+include *.rst
+
+global-exclude *.orig *.py[co] *.log *.swp *.pyc
+recursive-include asyncllm *.py
+recursive-include asyncllm *.so
+recursive-include asyncllm *.yml
+recursive-include asyncllm *.json
