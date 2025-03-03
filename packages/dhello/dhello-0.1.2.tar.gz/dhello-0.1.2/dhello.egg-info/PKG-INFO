@@ -1,0 +1,10 @@
+Metadata-Version: 2.2
+Name: dhello
+Version: 0.1.2
+Description-Content-Type: text/markdown
+Dynamic: description
+Dynamic: description-content-type
+
+# dhello
+
+A simple hello world python package for revision.
