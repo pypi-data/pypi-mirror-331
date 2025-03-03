@@ -1,0 +1,3 @@
+[console_scripts]
+tidy=tidy.cli.cli:cli
+
