@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+add_confidence_and_coordinates/__init__.py
+add_confidence_and_coordinates/openai_json_updater.py
+add_confidence_and_coordinates/utils.py
+add_confidence_score_and_coordinates.egg-info/PKG-INFO
+add_confidence_score_and_coordinates.egg-info/SOURCES.txt
+add_confidence_score_and_coordinates.egg-info/dependency_links.txt
+add_confidence_score_and_coordinates.egg-info/requires.txt
+add_confidence_score_and_coordinates.egg-info/top_level.txt
+tests/__init__.py
+tests/test_json_updater.py
