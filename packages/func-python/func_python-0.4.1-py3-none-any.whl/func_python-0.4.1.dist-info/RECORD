@@ -1,0 +1,8 @@
+func_python/README.md,sha256=80mtz2v2BxnPHF4uJHOxtBmET1D4XjU1BqNvp0eQdpo,694
+func_python/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+func_python/cloudevent.py,sha256=tcgQZVsSg1ezZfg_d7XvvTf7NePNJ5qUulKh-5l34I0,10003
+func_python/http.py,sha256=V1JbOFKII_cwoGZ7Gb-LPnsHbV0au7Vt7dvZjHRZcCg,6721
+func_python-0.4.1.dist-info/LICENSE,sha256=yVuuHRzgI17MzTVgt3LsHvuX80innw--CmNPDCzO_iw,11358
+func_python-0.4.1.dist-info/METADATA,sha256=4oBB8zoukX-BLVu5XwUZTFVWfv62_f4tWc80xdpuRsY,5395
+func_python-0.4.1.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+func_python-0.4.1.dist-info/RECORD,,
