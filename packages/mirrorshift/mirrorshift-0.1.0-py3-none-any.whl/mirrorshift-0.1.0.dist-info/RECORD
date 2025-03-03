@@ -1,0 +1,13 @@
+mirrorshift/__init__.py,sha256=RFsqq5D4lQksWsDwdn6nz4qfIV0_GnmumlC8Uz9crmQ,849
+mirrorshift/data.py,sha256=uVjl4UakqmQlSJtBYHENKxTk7lrJD11S7zCPxsUZVC8,2661
+mirrorshift/distributed.py,sha256=N4s1NZ4IWe16O5gOfzao-X3AOnFqfQd6zWnETOW5Tno,629
+mirrorshift/inference.py,sha256=SwvkoTs5ImjhwRcyzA2oHKq0evsJzA4gwMykKqMH_eA,2302
+mirrorshift/models.py,sha256=hwu-zLfzfYJUlfD0OtDjc7u-TrLSeASIjS8BZ_Ia2tE,15988
+mirrorshift/train.py,sha256=WSLDNXrBqJjc_ukC5eb3qanLVbeO0u_mazLqu9HffYE,13571
+mirrorshift/utils.py,sha256=2klQJIa2NVBnukpx5sjQDdrecdGu0RgIXKqxpbdrSzg,6516
+mirrorshift-0.1.0.dist-info/LICENSE,sha256=bfqAH6adlX8OHbWIL-CoLdCux_Zbi7JQeiMzGk1kE_M,1068
+mirrorshift-0.1.0.dist-info/METADATA,sha256=APTaeQ0g3woUygleHcr-B_1FesCx31NM64_btLiK7zQ,3467
+mirrorshift-0.1.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+mirrorshift-0.1.0.dist-info/entry_points.txt,sha256=ZuTGRI_4KJJmHKDMSJwOiScsf2cunsawuaourJGldH4,61
+mirrorshift-0.1.0.dist-info/top_level.txt,sha256=lDSLQJJXXCu2vgS6mlMvdJMw7-UuM5obN6DJZJjWKzk,12
+mirrorshift-0.1.0.dist-info/RECORD,,
