@@ -1,0 +1,14 @@
+heatdiff/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+heatdiff/compression.py,sha256=GMXsKqQuc9vXA0pQp9qpiDTcFdGqv-R6of2jTFlHSCw,4067
+heatdiff/euler_marayumas.py,sha256=rCrBO9ClAVeKGwb33-6SAh8tREgrrDPy5Pb3_1ALLJw,4761
+heatdiff/heat_equations.py,sha256=6IclyKQpoGgvHGFvNC-lgBNr9NNr-29nNTc0A4Mb-3k,2526
+heatdiff/heat_kernel_utils.py,sha256=WHPzROfaiw5mxQWLp-Q9efgcQ-njJ11f2cMcpaLKwHA,3219
+heatdiff/image_accuracy.py,sha256=NiXUt8m6r7ObBqsqs3SxoGFh66erChi2Tce8EOUI_g8,1403
+heatdiff/image_preprocessing.py,sha256=TjUmkBeW_hzn8Jv8NcgOll_gqv57oZtSjW0DvKKzolk,1371
+heatdiff/plotting_utils.py,sha256=VPfxT-Fliykk57Y_KiUb3wOwbRWEkTVsPEcXhPTSG4A,6775
+heatdiff/weighted_kmeans.py,sha256=PTnt80Cg4mXrTnZRyjhNtZgrj_2tafYXp3EgxfMoZjg,2791
+heatdiff-0.1.1.dist-info/LICENSE.txt,sha256=rifrlaa0X1Nq2OKH0qm5Mxh7A6HxepRpe3JIfKTFWRY,1072
+heatdiff-0.1.1.dist-info/METADATA,sha256=YN7tuLq5fRzbIr_v6ulu62AO6zToO6geW8cS46zF6no,1760
+heatdiff-0.1.1.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+heatdiff-0.1.1.dist-info/top_level.txt,sha256=UKOZBTsspl1Y38evQnF0A-o3VL3D0FB34fT4E8RcR_E,9
+heatdiff-0.1.1.dist-info/RECORD,,
