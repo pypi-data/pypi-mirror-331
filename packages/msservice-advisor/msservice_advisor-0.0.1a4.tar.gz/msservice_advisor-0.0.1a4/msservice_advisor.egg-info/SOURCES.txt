@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+requirements.txt
+msservice_advisor/__init__.py
+msservice_advisor/msservice_advisor.py
+msservice_advisor.egg-info/PKG-INFO
+msservice_advisor.egg-info/SOURCES.txt
+msservice_advisor.egg-info/dependency_links.txt
+msservice_advisor.egg-info/entry_points.txt
+msservice_advisor.egg-info/requires.txt
+msservice_advisor.egg-info/top_level.txt
+msservice_advisor/profiling_analyze/__init__.py
+msservice_advisor/profiling_analyze/base_analyze.py
+msservice_advisor/profiling_analyze/batch_analyze.py
+msservice_advisor/profiling_analyze/register.py
+msservice_advisor/profiling_analyze/utils.py

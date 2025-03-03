@@ -1,0 +1,212 @@
+# Copyright (c) 2025-2025 Huawei Technologies Co., Ltd.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import random
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+from msservice_advisor.profiling_analyze.register import register_analyze, cached, answer
+
+
+def summary_batch_info(batch_info):
+    summary = {}
+    for batchsize, latency_list in batch_info.items():
+        summary[batchsize] = {}
+        latency_list.sort()
+
+        summary[batchsize]["BSZ"] = batchsize
+        summary[batchsize]["MIN"] = latency_list[0]
+        summary[batchsize]["P10"] = latency_list[int(len(latency_list) * 0.1)]
+        summary[batchsize]["P30"] = latency_list[int(len(latency_list) * 0.3)]
+        summary[batchsize]["P50"] = latency_list[int(len(latency_list) * 0.5)]
+        summary[batchsize]["P70"] = latency_list[int(len(latency_list) * 0.7)]
+        summary[batchsize]["P90"] = latency_list[int(len(latency_list) * 0.9)]
+        summary[batchsize]["MAX"] = latency_list[-1]
+        summary[batchsize]["FIT_DATA"] = latency_list[int(len(latency_list) * 0.3):int(len(latency_list) * 0.7)]
+    return summary
+
+
+def print_list(array):
+    for item in array:
+        print(item)
+
+
+@cached()
+def read_batch_and_latency(pre_request):
+    # 1. 获取所有的batchsize 对应的 latency
+    # 2. 计算P50
+    # 3. 打印出来
+    prefill_batch_info = {}  # batchsize => list of latency
+    decode_batch_info = {}  # batchsize => list of latency
+    for request in pre_request.values():
+        prefill_batch_size = request.get("prefill_bsz")
+        decode_batch_size_list = request.get("decode_bsz")
+        latency_list = request.get("latency")
+        for index, latency in enumerate(latency_list):
+            if index == 0:
+                prefill_batch_info.setdefault(prefill_batch_size, [])
+                prefill_batch_info[prefill_batch_size].append(latency)
+            else:
+                decode_batch_size = decode_batch_size_list[index - 1]
+                decode_batch_info.setdefault(decode_batch_size, [])
+                decode_batch_info[decode_batch_size].append(latency)
+
+    prefill_summary = summary_batch_info(prefill_batch_info)  # batchsize => P50
+    decode_summary = summary_batch_info(decode_batch_info)  # batchsize => P50
+
+    return prefill_summary, decode_summary
+
+
+def find_best_by_curve_fit(summary_fit_data, process_name):
+    from scipy.optimize import curve_fit, minimize
+
+    max_batch_size = summary_fit_data[-1]["BSZ"]
+    print(process_name, "上次运行组的最大的 batch size 为", max_batch_size)
+
+    if len(summary_fit_data) > 2:
+
+        def func_curv(x, a, b, c):
+            return a * x**b * np.exp(-c / x)
+
+    else:
+
+        def func_curv(x, a, b):
+            return a * x + b
+
+    points = []
+    targets = []
+
+    for x in summary_fit_data:
+        bsz = x["BSZ"]
+        for latency in x["FIT_DATA"]:
+            points.append(bsz)
+            targets.append(bsz * 1000 / latency)
+
+    points.append(max_batch_size * 10)
+    targets.append(0.00001)
+
+    popt, pcov = curve_fit(func_curv, points, targets, maxfev=10000)
+    print(process_name, "函数拟合后参数：", popt)
+
+    # 或者使用数值优化（通用方法，适用于任何模型）
+    def negative_func(x):
+        return -func_curv(x, *popt)  # 最小化负函数即最大化原函数
+
+    best_predicted = minimize(negative_func, x0=max_batch_size, bounds=[(0, max_batch_size * 2)])
+    aggressive_predicted = minimize(negative_func, x0=max_batch_size, bounds=[(0, max_batch_size * 5)])
+    print(process_name, f"搜索范围 2 倍当前最大batchsize. 结果是: {best_predicted.x[0]} {best_predicted}")
+    print(process_name, f"搜索范围 5 倍当前最大batchsize. 结果是:  {aggressive_predicted.x[0]} {aggressive_predicted}")
+
+    # 开始画图
+    x_values = np.linspace(0, max_batch_size * 5, 300)
+
+    # 创建画布
+    plt.figure(figsize=(10, 6))
+
+    # 绘制模型预测均值和置信区间
+    plt.plot(x_values, func_curv(x_values, *popt), label=f"Model Prediction", color="blue")
+    plt.scatter(points, targets, c="green", s=100, edgecolor="black", label="Existing Data Points")
+
+    plt.title(f"Curve Fit Optimization({process_name})")
+    plt.xlabel("Batch Size")
+    plt.ylabel("Speed")
+    plt.legend()
+    plt.grid(alpha=0.3)
+    plt.tight_layout()
+    plt.show()
+
+    # 生成一个指定范围内的随机整数
+    png_name = f"func_curv_{process_name}.png"
+    print(process_name, "拟合画图路径：", png_name)
+    plt.savefig(png_name)
+    plt.close()
+
+    return int(best_predicted.x[0])
+
+
+@register_analyze()
+def find_best_batch_size(config, benchmark, output_log, limit, target_metrics):
+    if "results_per_request" not in benchmark:
+        return
+
+    prefill_summary, decode_summary = read_batch_and_latency(benchmark.get("results_per_request", {}))
+
+    def divide_fit_and_print(summary):
+        summary.sort(key=lambda x: x["BSZ"])
+        to_fit = [dict(BSZ=x["BSZ"], FIT_DATA=x.pop("FIT_DATA")) for x in summary]
+        return to_fit, summary
+
+    prefill_to_fit, prefill_to_print = divide_fit_and_print(list(prefill_summary.values()))
+    decode_to_fit, decode_to_print = divide_fit_and_print(list(decode_summary.values()))
+
+    print("==decode==")
+    print_list(decode_to_print)
+    print("==prefill==")
+    print_list(prefill_to_print)
+
+    if len(decode_to_fit) <= 1:
+        answer(config="maxBatchSize", action=f"set bigger", reason="目前batch样本太小，建议调大点试试")
+
+    if len(prefill_to_fit) <= 1:
+        answer(config="maxPrefillBatchSize", action=f"set bigger", reason="目前batch样本太小，建议调大点试试")
+
+    if len(decode_to_fit) > 1:
+        best_decode_batchsize = find_best_by_curve_fit(decode_to_fit, "decode")
+        answer(
+            config="maxBatchSize",
+            action=f"set to {best_decode_batchsize}",
+            reason="经过当前不同batch的时延数据，通过函数拟合分析，建议最优batchsize",
+        )
+
+    if len(prefill_to_fit) > 1:
+        best_prefill_batchsize = find_best_by_curve_fit(prefill_to_fit, "prefill")
+
+        answer(
+            config="maxPrefillBatchSize",
+            action=f"set to {best_prefill_batchsize}",
+            reason="经过当前不同batch的时延数据，通过函数拟合分析，建议最优batchsize",
+        )
+
+
+if __name__ == "__main__":
+    from msservice_advisor.profiling_analyze.register import print_answer
+
+    print("<think>")
+    find_best_batch_size(
+        None,
+        dict(
+            results_per_request=dict(
+                ee=dict(
+                    input_len=132,
+                    output_len=12,
+                    prefill_bsz=15,
+                    decode_bsz=[2, 2, 1, 2, 4, 4, 7, 7, 67, 8, 20, 9, 20, 4],
+                    latency=[234, 234, 456, 34, 54, 4457, 5, 678, 67, 45, 645, 76, 8, 345645, 5467],
+                ),
+                ee2=dict(
+                    input_len=132,
+                    output_len=12,
+                    prefill_bsz=15,
+                    decode_bsz=[2, 2, 1, 2, 4, 4, 7, 7, 67, 8, 20, 9, 20, 4, 5, 6, 7, 8, 9, 4, 5],
+                    latency=[224, 2654, 476, 4565, 756, 7, 6, 8, 34, 5, 2, 5, 4, 75, 634, 5, 34, 54, 56, 54634, 534, 6],
+                ),
+            ),
+        ),
+        None,
+        None,
+        None,
+    )
+    print("</think>")
+    print_answer()

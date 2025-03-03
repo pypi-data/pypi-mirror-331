@@ -1,0 +1,2 @@
+[console_scripts]
+msservice_advisor = msservice_advisor.msservice_advisor:main
