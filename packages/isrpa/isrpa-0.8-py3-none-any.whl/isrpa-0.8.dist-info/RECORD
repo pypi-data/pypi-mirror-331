@@ -1,0 +1,10 @@
+isrpa/OCR.py,sha256=mI4wagHGcsdfXm8MZP0kILxkeReOy9AcY4cF6O-vPt0,2503
+isrpa/Template.py,sha256=UP1uovLvJzXEPGo_hzLrIYOu3vZP8Cf6m3G2hGzQ6XA,1958
+isrpa/Template_Exception.py,sha256=an6eQ1NMB8a9R-J0yyMdwHIZcZeDtdV5f7fWKZQsZ3s,819
+isrpa/__init__.py,sha256=pG-YPVG0gJIJ6s4xcAz9S_CnUxpUcz33wl9eNUSgxGk,20
+isrpa/message.py,sha256=ak1ZZ8zDeXoYP0UXxrZK8yLie-5rUJ5VHwANTHpsLgQ,11323
+isrpa/utils.py,sha256=bmcEvxfLhrWOFGUXpBSSsGlfD8qmJ-lCm8VHoYpEPEY,50851
+isrpa-0.8.dist-info/METADATA,sha256=teh2LhNGJOrHkH6lTXH7LYpq0Ub5z4P0x4Gf3A2rriI,457
+isrpa-0.8.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+isrpa-0.8.dist-info/top_level.txt,sha256=J5HJbtR2WAeKnW1rrpkiuapwnlswv3RgM-riyZD87o0,6
+isrpa-0.8.dist-info/RECORD,,
