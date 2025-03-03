@@ -1,0 +1,33 @@
+Metadata-Version: 2.4
+Name: poweroperator
+Version: 0.0.1
+Summary: The most productive dev stack ever
+Project-URL: homepage, https://poweroperator.com
+Author-email: Michael Bacarella <michael@poweroperator.com>
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+
+# PowerOperator
+
+A simple command-line utility that says hello.
+
+## Installation
+
+Using uv (recommended):
+```
+uv add poweroperator
+```
+
+Using pip:
+```
+pip install poweroperator
+```
+
+## Usage
+
+```
+poweroperator
+```
