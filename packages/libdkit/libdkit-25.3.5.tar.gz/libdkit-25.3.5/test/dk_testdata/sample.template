@@ -1,0 +1,2 @@
+This is the value defined: {{ value1 }}
+This is value2:            '{{ value2 }}'
