@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+jsbucket/__init__.py
+jsbucket/jsbucket.py
+jsbucket.egg-info/PKG-INFO
+jsbucket.egg-info/SOURCES.txt
+jsbucket.egg-info/dependency_links.txt
+jsbucket.egg-info/entry_points.txt
+jsbucket.egg-info/requires.txt
+jsbucket.egg-info/top_level.txt
