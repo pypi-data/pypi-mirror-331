@@ -1,0 +1,7 @@
+pythia_client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pythia_client/client.py,sha256=ZGfjQyYV16R7HXk4gH8i3dVnt5u-ZX1usSRLo8mqg-8,61919
+pythia_client/schema.py,sha256=AiDTcuEBjqvmxPwjUk5G0v6Yffh4RW3kehkuV86rZpI,14197
+pythia_client-0.12.0.dist-info/METADATA,sha256=wEkPoXlv5gEacS-YeHvS6jjzZ8qf65IQWpuhZ8XXS9M,1822
+pythia_client-0.12.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pythia_client-0.12.0.dist-info/licenses/LICENSE,sha256=Pwo69-mw87Y1iqo8dQGrUipn3FSDuHDpqLPbQepC4kk,11343
+pythia_client-0.12.0.dist-info/RECORD,,
