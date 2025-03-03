@@ -1,0 +1,17 @@
+__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ldlite/__init__.py,sha256=Tedf-Iu_jQnb4Co6dB_RF4SGYpg5vNWHQMu2tVzqQ60,22529
+ldlite/_camelcase.py,sha256=zNYVTIutB01E3GBaSemx75UnnRqb8tZtvp7Gfv8calw,2297
+ldlite/_csv.py,sha256=qi_M3SogIUnR-DAgUV3DIN2hEqX5Iw2uMFwPdNqDSTQ,1542
+ldlite/_jsonx.py,sha256=CyyworWkn5cCQgj1lp_w9_AYv7tG4sbT9Z_uW540OIM,15431
+ldlite/_query.py,sha256=5Ip9u-mgOoWyQWNCQHUCpPpg5aguFl9HvzZN3tMDte4,284
+ldlite/_request.py,sha256=-o-XI7Q2VIohY4kVBEoLKBBxrUmX-zWHF8O-PittI3U,371
+ldlite/_select.py,sha256=6i_9VZHmQEIykuw-htemjTCQ4LDhI2T1hg6qdIn1ILo,4165
+ldlite/_sqlx.py,sha256=H1tdBRTVwqKr6doPYwW3Ci9rDgdOkDP1gw046p_nQEo,2596
+ldlite/_xlsx.py,sha256=gICvbMb0eq0Y8msVo_DurNBUFqzhBnkk6YPyBIAzLxY,2276
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/test___init__.py,sha256=p2BYHR-F7alsu6M2pb0UL0K4NK3dQutUGNUDKpOoX7w,1126
+suub_ldlite-0.0.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+suub_ldlite-0.0.1.dist-info/METADATA,sha256=bAVu7_PJPqImdBnJ3LgnzGIPN3Bn-bquMKpEdYu9kjU,4371
+suub_ldlite-0.0.1.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+suub_ldlite-0.0.1.dist-info/top_level.txt,sha256=YCuTPDJ4LhaXO9kXGbEUwqgyVvdArxbe3Mf5CHMcDdA,21
+suub_ldlite-0.0.1.dist-info/RECORD,,
