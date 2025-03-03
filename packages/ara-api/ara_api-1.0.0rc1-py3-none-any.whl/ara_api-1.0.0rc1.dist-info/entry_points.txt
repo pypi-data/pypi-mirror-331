@@ -1,0 +1,6 @@
+[console_scripts]
+ara-api-analyzer=ara_api._analyzer.__main__:main
+ara-api-core=ara_api.__main__:main
+ara-api-vision=ara_api._vision.vision_service:main
+test=ara_api.ara_lib.ara_vision:main
+
