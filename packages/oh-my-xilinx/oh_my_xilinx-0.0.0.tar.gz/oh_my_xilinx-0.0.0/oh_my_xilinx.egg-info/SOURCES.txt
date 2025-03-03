@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+oh_my_xilinx.egg-info/PKG-INFO
+oh_my_xilinx.egg-info/SOURCES.txt
+oh_my_xilinx.egg-info/dependency_links.txt
+oh_my_xilinx.egg-info/top_level.txt
