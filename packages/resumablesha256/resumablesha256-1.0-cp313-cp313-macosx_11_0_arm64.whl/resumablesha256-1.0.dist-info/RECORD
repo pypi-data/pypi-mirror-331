@@ -1,0 +1,7 @@
+resumablesha256-1.0.dist-info/RECORD,,
+resumablesha256-1.0.dist-info/WHEEL,sha256=ygSUdKQqFRWAIjRhJtlcnHn2B3mflIIsg3Ttx70GyCY,109
+resumablesha256-1.0.dist-info/top_level.txt,sha256=Khspq-AgMgA7mMSODHPKcnhB3UIoVhJYcA0729eYt_k,16
+resumablesha256-1.0.dist-info/LICENSE.txt,sha256=awOCsWJ58m_2kBQwBUGWejVqZm6wuRtCL2hi9rfa0X4,1211
+resumablesha256-1.0.dist-info/METADATA,sha256=GLiCfiMnuYkV2Qib41r7ZmrJW8ap7jNrKHIL1jLcLHs,2575
+resumablesha256/__init__.py,sha256=LNtlzzeSlaCM9kIdx3s42K8UIqn5rWY6-H7fCihwXfU,32
+resumablesha256/_sha256_ext.abi3.so,sha256=T-B_pj6kE-VscDs5G9bWsXeeSnWKnK7gDs2Uz1WNrGk,53584
