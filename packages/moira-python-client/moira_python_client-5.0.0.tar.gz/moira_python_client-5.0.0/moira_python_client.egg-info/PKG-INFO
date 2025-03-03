@@ -1,0 +1,39 @@
+Metadata-Version: 2.2
+Name: moira-python-client
+Version: 5.0.0
+Summary: Client for Moira - Alerting system based on Graphite data
+Home-page: https://github.com/moira-alert/python-moira-client
+Author: Alexander Lukyanchenko
+Author-email: al.lukyanchenko@gmail.com
+Keywords: moira monitoring client metrics alerting
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Utilities
+Classifier: Topic :: System :: Monitoring
+Classifier: License :: OSI Approved :: MIT License
+License-File: LICENSE
+Requires-Dist: requests>=2.4.3
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: requires-dist
+Dynamic: summary
+
+
+        Moira is a real-time alerting tool, based on Graphite data.
+        moira-client is a python client for Moira API.
+        Key features:
+        - create, update, delete, manage triggers
+        - create, delete, update subscriptions
+        - manage tags, patterns, notifications, events, contacts
+    
