@@ -1,0 +1,37 @@
+Metadata-Version: 2.2
+Name: logmate
+Version: 0.1.1
+Summary: A smart log management tool with rich text output, filtering, and export options.
+Home-page: https://github.com/Verma-Labs/logmate
+Author: Atul Verma
+Author-email: atul.sv@icloud.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: rich
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# LogMate
+
+LogMate is a smart log management tool for Python, offering rich text logging, filtering, and export options.
+
+## Installation
+You can install LogMate using pip:
+
+```sh
+pip install logmate
+
+pip install git+https://github.com/Verma-Labs/logmate.git
+
+
