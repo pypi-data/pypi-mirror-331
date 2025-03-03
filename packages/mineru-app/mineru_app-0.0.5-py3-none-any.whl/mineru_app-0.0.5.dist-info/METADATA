@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: mineru-app
+Version: 0.0.5
+Summary: A PDF processing and conversion tool
+Home-page: https://github.com/opendatalab/MinerU-App
+Author: Opendatalab
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: python-dotenv
+Requires-Dist: PyMuPDF<=1.24.14,>=1.24.9
+Requires-Dist: gradio==5.6.0
+Requires-Dist: gradio-client==1.4.3
+Requires-Dist: gradio-pdf==0.0.19
+
+## Installation
+
+
+```bash
+pip install mineru_app
+```
+
+or using docker 
+
+```bash
+docker pull registry.cn-hangzhou.aliyuncs.com/data_proc/mineru_app:v0.0.6
+```
+
+## Start
+
+```bash
+export MINERU_API_KEY=your_api_key
+mineru_app
+```
+
+or using docker
+
+```bash
+docker run -d -p 7860:7860 -e MINERU_API_KEY=your_api_key registry.cn-hangzhou.aliyuncs.com/data_proc/mineru_app:v0.0.6
+```
+
+
+## Use Gradio App
+
+Access http://127.0.0.1:7860 in your web browser
+
