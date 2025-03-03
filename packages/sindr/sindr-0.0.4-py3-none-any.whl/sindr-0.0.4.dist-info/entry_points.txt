@@ -1,0 +1,5 @@
+[console_scripts]
+hello_world = sindr.hello_world:cli
+
+[nbdev]
+sindr = sindr._modidx:d

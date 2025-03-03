@@ -1,0 +1,14 @@
+sindr/__init__.py,sha256=1mptEzQihbdyqqzMgdns_j5ZGK9gz7hR2bsgA_TnjO4,22
+sindr/_modidx.py,sha256=3KkgOh8rLiSsNZV1y0KlwyXva72LOLXrc-tI19B6DjY,7338
+sindr/core.py,sha256=lR9AYhUKywv-v7gF90MOqRTbwrC2GycY8k6e1mG4I5U,7801
+sindr/hello_world.py,sha256=ZDyn4v4kj-X-FO9etlIUkfpxLGaXRMC6QgOuYiQ4pm0,1873
+sindr/seq_tools.py,sha256=umxX5HhlpJUFyLiuFX8j2W0OuVBUP9kewfEOgFlyNQI,20366
+sindr/some_string.py,sha256=JwmAXKbX_JgY8UGh4FAu5-7ZjezcAEhq4Q2B73pWp2M,923
+sindr/config/config.default.env,sha256=DQR9iuW2QNPLIBimFBN20OAy-Kg7rvniclZwjpol53s,1214
+sindr/config/config.default.yaml,sha256=FA5DVHVrOdryLxjxCdqsimcvgEhSJ2CAeN-K9jxjjJY,394
+sindr-0.0.4.dist-info/LICENSE,sha256=p6aTb6QIfqyZ2Uux2VjV4F2zthdUSHZOjB4mfwGc7fo,1094
+sindr-0.0.4.dist-info/METADATA,sha256=Mb0ir27Rkmopzk-XHP-ncA1AoSIzlU0X1A8S7mx-Ta4,2491
+sindr-0.0.4.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+sindr-0.0.4.dist-info/entry_points.txt,sha256=zpL3fsFkDAEZRKiRt3KWrCxu4R6STmOEcnDryB9xX2s,87
+sindr-0.0.4.dist-info/top_level.txt,sha256=REpR_am93FXpK4zIFaKKM5u-MSfG8J-2faMGQ0uZ4_Q,46
+sindr-0.0.4.dist-info/RECORD,,
