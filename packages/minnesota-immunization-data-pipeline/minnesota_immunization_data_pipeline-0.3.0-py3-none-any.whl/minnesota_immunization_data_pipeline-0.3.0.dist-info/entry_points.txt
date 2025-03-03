@@ -1,0 +1,3 @@
+[console_scripts]
+minnesota-immunization-data-pipeline=data_pipeline.__main__:run
+
