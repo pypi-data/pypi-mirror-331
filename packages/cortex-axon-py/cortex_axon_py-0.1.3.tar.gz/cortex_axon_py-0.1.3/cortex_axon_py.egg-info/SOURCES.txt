@@ -1,0 +1,9 @@
+pyproject.toml
+cortex-axon-py/__init__.py
+cortex-axon-py/middleware.py
+cortex-axon-py/session.py
+cortex_axon_py.egg-info/PKG-INFO
+cortex_axon_py.egg-info/SOURCES.txt
+cortex_axon_py.egg-info/dependency_links.txt
+cortex_axon_py.egg-info/requires.txt
+cortex_axon_py.egg-info/top_level.txt
