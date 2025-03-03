@@ -1,0 +1,340 @@
+{
+  "src/lib/components/DashGridLayout.react.js": {
+    "description": "DashGridLayout is a flexible grid layout system for arranging and moving components within a Dash application.\nIt leverages the react-grid-layout library to provide responsive and draggable grid items.",
+    "displayName": "DashGridLayout",
+    "methods": [],
+    "props": {
+      "maxRows": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "If true, the container height swells and contracts to fit contents.",
+        "defaultValue": {
+          "value": "Infinity",
+          "computed": true
+        }
+      },
+      "autoSize": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Prevents dragging items outside the container.",
+        "defaultValue": {
+          "value": "true",
+          "computed": false
+        }
+      },
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID used to identify this component in Dash callbacks."
+      },
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "CSS class name for the grid layout.",
+        "defaultValue": {
+          "value": "'layout'",
+          "computed": false
+        }
+      },
+      "rowHeight": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "The height of a single row in pixels.",
+        "defaultValue": {
+          "value": "100",
+          "computed": false
+        }
+      },
+      "cols": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "An object containing breakpoints and column numbers.",
+        "defaultValue": {
+          "value": "{lg: 12, md: 10, sm: 6, xs: 4, xxs: 2}",
+          "computed": false
+        }
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Inline styles for the grid layout."
+      },
+      "itemCount": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "The number of items in the grid."
+      },
+      "itemToRemove": {
+        "type": {
+          "name": "any"
+        },
+        "required": false,
+        "description": "The item in the grid that should be removed when triggered",
+        "defaultValue": {
+          "value": "''",
+          "computed": false
+        }
+      },
+      "compactType": {
+        "type": {
+          "name": "enum",
+          "value": [
+            {
+              "value": "'vertical'",
+              "computed": false
+            },
+            {
+              "value": "'horizontal'",
+              "computed": false
+            },
+            {
+              "value": "null",
+              "computed": false
+            }
+          ]
+        },
+        "required": false,
+        "description": "Compaction type. Can be 'vertical', 'horizontal', or null.",
+        "defaultValue": {
+          "value": "'vertical'",
+          "computed": false
+        }
+      },
+      "showRemoveButton": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Whether to show remove buttons for grid items.",
+        "defaultValue": {
+          "value": "true",
+          "computed": false
+        }
+      },
+      "showResizeHandles": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Whether to show resize handles for grid items.",
+        "defaultValue": {
+          "value": "true",
+          "computed": false
+        }
+      },
+      "items": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "node"
+          }
+        },
+        "required": false,
+        "description": "List of items to be rendered in the grid.",
+        "defaultValue": {
+          "value": "[]",
+          "computed": false
+        }
+      },
+      "itemLayout": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "shape",
+            "value": {
+              "i": {
+                "name": "string",
+                "required": false
+              },
+              "x": {
+                "name": "number",
+                "required": false
+              },
+              "y": {
+                "name": "number",
+                "required": false
+              },
+              "w": {
+                "name": "number",
+                "required": false
+              },
+              "h": {
+                "name": "number",
+                "required": false
+              }
+            }
+          }
+        },
+        "required": false,
+        "description": "Layout configuration for each item.",
+        "defaultValue": {
+          "value": "[]",
+          "computed": false
+        }
+      },
+      "currentLayout": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "shape",
+            "value": {
+              "i": {
+                "name": "string",
+                "required": false
+              },
+              "x": {
+                "name": "number",
+                "required": false
+              },
+              "y": {
+                "name": "number",
+                "required": false
+              },
+              "w": {
+                "name": "number",
+                "required": false
+              },
+              "h": {
+                "name": "number",
+                "required": false
+              }
+            }
+          }
+        },
+        "required": false,
+        "description": "The current layout of the grid items.",
+        "defaultValue": {
+          "value": "[]",
+          "computed": false
+        }
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Callback function to update Dash props."
+      },
+      "breakpointData": {
+        "type": {
+          "name": "shape",
+          "value": {
+            "newBreakpoint": {
+              "name": "string",
+              "required": false
+            },
+            "newCols": {
+              "name": "number",
+              "required": false
+            }
+          }
+        },
+        "required": false,
+        "description": "Data about the current breakpoint and columns."
+      },
+      "breakpoints": {
+        "type": {
+          "name": "shape",
+          "value": {
+            "lg": {
+              "name": "number",
+              "required": false
+            },
+            "md": {
+              "name": "number",
+              "required": false
+            },
+            "sm": {
+              "name": "number",
+              "required": false
+            },
+            "xs": {
+              "name": "number",
+              "required": false
+            },
+            "xxs": {
+              "name": "number",
+              "required": false
+            }
+          }
+        },
+        "required": false,
+        "description": "Breakpoints for responsive layout.",
+        "defaultValue": {
+          "value": "{lg: 1200, md: 996, sm: 768, xs: 480, xxs: 0}",
+          "computed": false
+        }
+      }
+    }
+  },
+  "src/lib/components/DraggableWrapper.react.js": {
+    "description": "DashGridLayout is a flexible grid layout system for arranging and moving components within a Dash application.\nIt leverages the react-grid-layout library to provide responsive and draggable grid items.",
+    "displayName": "DraggableWrapper",
+    "methods": [],
+    "props": {
+      "children": {
+        "type": {
+          "name": "node"
+        },
+        "required": false,
+        "description": "The content to be wrapped and made draggable."
+      },
+      "handleBackground": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The background color of the drag handle.",
+        "defaultValue": {
+          "value": "'rgb(85,85,85)'",
+          "computed": false
+        }
+      },
+      "handleColor": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The text color of the drag handle.",
+        "defaultValue": {
+          "value": "'white'",
+          "computed": false
+        }
+      },
+      "handleText": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The text to display in the drag handle.",
+        "defaultValue": {
+          "value": "'Drag here'",
+          "computed": false
+        }
+      },
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "A unique identifier for the DraggableWrapper component."
+      }
+    }
+  }
+}
