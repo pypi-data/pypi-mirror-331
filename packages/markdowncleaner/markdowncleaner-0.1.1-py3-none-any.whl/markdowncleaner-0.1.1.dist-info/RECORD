@@ -1,0 +1,12 @@
+markdowncleaner/__init__.py,sha256=5P_nDL6T2WXoX2jVEtf-3fpGb-rEG1A_Bo-H0-upQFs,140
+markdowncleaner/cli.py,sha256=qpqEl3AL0ekQe9JoMljuEZQQlMRnEH9kFz7np7wF_64,4356
+markdowncleaner/markdowncleaner.py,sha256=wLWOBw_Oy1buw1Av7KvDDaN1V9w5gqvM27CMS9SzF3c,14150
+markdowncleaner/config/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+markdowncleaner/config/default_cleaning_patterns.yaml,sha256=VI2tDtgHelJbEMUVR9dUUlXqagfsIpS86_Zss-I6Qsg,6005
+markdowncleaner/config/loader.py,sha256=SX9ZgsGFV-25sFCeTy9XW5UQARz3EeaUhrVHu2Y-XeU,2927
+markdowncleaner-0.1.1.dist-info/LICENSE,sha256=yH2dxfGn0hRK5hPAnNFarbaFq1jx8wrPdqy-nsMi2II,1076
+markdowncleaner-0.1.1.dist-info/METADATA,sha256=8SXdYIt669JCe07MsNBG3zx8vr2-_zqt5yRthZO-duE,4296
+markdowncleaner-0.1.1.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+markdowncleaner-0.1.1.dist-info/entry_points.txt,sha256=C_FJkZY4OeKfdTacBhqh9hzjZEk8gQJGzGSI8qLr-lU,61
+markdowncleaner-0.1.1.dist-info/top_level.txt,sha256=dMBEsk9DuO55cKIbeM4Ih2e0Y5aP6AfcKEYo2SoyFs0,16
+markdowncleaner-0.1.1.dist-info/RECORD,,
