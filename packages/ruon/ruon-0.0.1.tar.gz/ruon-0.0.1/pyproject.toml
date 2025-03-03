@@ -1,0 +1,23 @@
+[project]
+name = "ruon"
+version = "0.0.1"
+authors = [{ name = "Zhen Wang", email = "wangzhen0518@126.com" }]
+description = "Implement some data structures and algorithms used in Rust for Python"
+readme = "README.md"
+requires-python = ">=3.0"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: MIT License",
+]
+
+[project.urls]
+Homepage = "https://github.com/wangzhen0518/ruon"
+Issues = "https://github.com/wangzhen0518/ruon/issues"
+
+[tool.ruff]
+line-length = 120
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"

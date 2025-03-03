@@ -1,0 +1,17 @@
+Metadata-Version: 2.2
+Name: ruon
+Version: 0.0.1
+Summary: Implement some data structures and algorithms used in Rust for Python
+Home-page: https://github.com/wangzhen0518/ruon
+Author: wangzhen0518
+Author-email: Zhen Wang <wangzhen0518@126.com>
+Project-URL: Homepage, https://github.com/wangzhen0518/ruon
+Project-URL: Issues, https://github.com/wangzhen0518/ruon/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: home-page
