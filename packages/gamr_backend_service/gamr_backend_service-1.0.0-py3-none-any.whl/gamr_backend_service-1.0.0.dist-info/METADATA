@@ -1,0 +1,19 @@
+Metadata-Version: 2.3
+Name: gamr_backend_service
+Version: 1.0.0
+Summary: A FastAPI backend for image recognition
+License: MIT
+Author: Gastón Amengual gastonamengual@icloud.com
+Requires-Python: >=3.12,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: fastapi (==0.115.0)
+Requires-Dist: firebase-admin (==6.6.0)
+Requires-Dist: gradio-client (==1.5.0)
+Requires-Dist: numpy (==1.26.4)
+Requires-Dist: pydantic-settings
+Requires-Dist: pyjwt (==2.10.1)
+Requires-Dist: python-multipart (==0.0.18)
+Requires-Dist: uvicorn (==0.34.0)
