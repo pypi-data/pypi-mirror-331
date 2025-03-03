@@ -1,0 +1,23 @@
+
+
+# Exclude commands who's names match this regex. Use single quotes. Leave empty if not needed.
+command_name_ignore_regex = ''
+
+# Where you place comments to describe your code. One of "BEST", "ABOVE", "INLINE"
+comment_placement = "BEST"
+
+# Exclude files who's paths match this regex from the index. Use single quotes. Leave empty if not needed.
+file_exclude_regex = ''
+
+# A list of files or globs pointing to files to index for commands.
+file_globs = ["/some/other/path/**/*.sh", "~/my_dotfiles.bash"]
+
+# Commands can be grouped into categories to make it easier to find them. Add categories here following the format below. All the regexes below are used to match commands to add them to the category.  The single quotes are intentional.
+[categories]
+    # [categories.example]
+    #     code_regex         = '' # Regex to match within the code
+    #     command_name_regex = '' # Regex to match the name of the command
+    #     comment_regex      = '' # Regex to match text within a description comment
+    #     description        = "" # A brief description of the category
+    #     name               = "" # The name of the category
+    #     path_regex         = '' # Regex to match the path of the file
