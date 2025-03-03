@@ -1,0 +1,12 @@
+growwapi/LICENSE,sha256=5LZQt2r4v8mSG9Vi3oYvVZIIuKoW7FtTuKp0e833Tj0,1064
+growwapi/README.MD,sha256=3jY8MlPscC6SiCQSOWnOnrtmF_RPdLw68q-6Gk6g0js,30560
+growwapi/dist/growwapi-0.0.1-py3-none-any.whl,sha256=XGkRNmRw9E_pXUxvkTh6SO9gHN7pLhYhamRV7FGezsU,523307
+growwapi/dist/growwapi-0.0.1.tar.gz,sha256=MmmPwxkUwgFOPKvjKAg3dClPke1GeVOtn4pCUioDm0c,1118748
+growwapi/poetry.lock,sha256=JnblnQo-6aDY2Gn5LetBA9k6C_yMhinAgyeQpAiV5kc,155472
+growwapi/pyproject.toml,sha256=NTVotEFbwSFt2wX2wZyEfeLTZ7KFsXBSJrvtRsYo4OM,777
+growwapi/src/growwapi/__init__.py,sha256=ItN4wEIMOiAviaLOnbG0xfWjbKGvStBE4TkOGtKxoKc,173
+growwapi/src/growwapi/example.py,sha256=nqKnBx12DyArQUWO9U-Mft9Te3jUbdvf0PbeghkcqDA,27
+growwapi-0.0.1.dist-info/LICENSE,sha256=5LZQt2r4v8mSG9Vi3oYvVZIIuKoW7FtTuKp0e833Tj0,1064
+growwapi-0.0.1.dist-info/METADATA,sha256=EaZoRaxaSQoew9cPKIlnasKpqt2a4rPUzghCSZDZF8s,31731
+growwapi-0.0.1.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+growwapi-0.0.1.dist-info/RECORD,,
