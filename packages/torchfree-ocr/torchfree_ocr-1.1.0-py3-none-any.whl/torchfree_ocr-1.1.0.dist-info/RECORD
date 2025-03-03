@@ -1,0 +1,15 @@
+torchfree_ocr/__init__.py,sha256=gStscyhdvWW8SkcnYroij-zAyJA05uKE8yFW3_4GETs,58
+torchfree_ocr/cli.py,sha256=zX_n0BIOHRgGvXU5zGsE5eioX6lBKZPznwbckjs10ME,7077
+torchfree_ocr/config.py,sha256=K97kNtiBdHZ_1KmYSyL18ryqLggfgcNRe-fnWjF56u8,59621
+torchfree_ocr/craft_utils.py,sha256=bkeP2VO0a5JuZxzLLOup7sB1hkGW2z8WuhwadxSV3Ik,9689
+torchfree_ocr/detection.py,sha256=l5tzBfhOQZA-DDNrdkjPbcmewuIsYRW-5ZtkOSqvRds,3187
+torchfree_ocr/imgproc.py,sha256=SZjiSsuaVIsQ-kXChFuGpFmfw1Avn9i21j1HCQYgZ6o,2262
+torchfree_ocr/recognition.py,sha256=a_MdwjKcg-8pRiMcYaX4u_jJNb9yJBkNaCBaoLg97PQ,10007
+torchfree_ocr/torchfree_ocr.py,sha256=xdm5uIIghN2hI6YqyLXpy-Zhx0ui_yut3pzBI7mwL-Y,25116
+torchfree_ocr/utils.py,sha256=I5g06XOs53NsDTdq6ENbBtqHK6Ngm4FHDirfQqj6pX8,31717
+torchfree_ocr-1.1.0.dist-info/LICENSE.txt,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+torchfree_ocr-1.1.0.dist-info/METADATA,sha256=O7i2HW-6gvAZs8DNXXYuc_fYcbDBHZEU9QAwNYFrrQ8,4758
+torchfree_ocr-1.1.0.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+torchfree_ocr-1.1.0.dist-info/entry_points.txt,sha256=cfkaJDaGryg5l70kVmCWfED5JdLbJfW6idM2hGz6Ans,57
+torchfree_ocr-1.1.0.dist-info/top_level.txt,sha256=mJd2hA-jrdytOnptst6paCRHxJt02OfJ-rfFEi2nH5c,14
+torchfree_ocr-1.1.0.dist-info/RECORD,,
