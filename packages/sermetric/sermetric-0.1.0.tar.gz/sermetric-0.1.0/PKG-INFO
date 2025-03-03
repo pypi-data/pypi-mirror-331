@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: sermetric
+Version: 0.1.0
+Summary: metrics for evaluate how easy-to-read a text is.
+Home-page: 
+Author: Mirari San Martín
+Author-email: miren.san-martin@unirioja.es
+Keywords: easy-to-read
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+License-File: LICENSE.txt
