@@ -1,0 +1,2 @@
+[console_scripts]
+ycf = ycf.cli:cli
