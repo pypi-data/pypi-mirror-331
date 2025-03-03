@@ -1,0 +1,32 @@
+name: Lint JSON
+
+on:
+  push:
+    paths:
+      - '*.json'
+  pull_request:
+    paths:
+      - '*.json'
+
+permissions:
+  contents: read
+
+jobs:
+  jsonlint:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '22'
+
+    - name: Install Dependencies
+      run: npm install ajv ajv-cli
+
+    - name: Lint JSON files
+      run: npm run jsonlint
+

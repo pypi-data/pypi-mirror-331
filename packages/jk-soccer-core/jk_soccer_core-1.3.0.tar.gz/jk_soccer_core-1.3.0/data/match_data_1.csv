@@ -1,0 +1,11 @@
+home_team,away_team,home_score,away_score,start_date,start_time
+Team A,Team B,1,0,2023-01-15,14:30:00
+Team C,Team D,2,2,2023-02-20,16:45:00
+Team E,Team F,3,1,2023-03-10,18:00:00
+Team G,Team H,0,0,2023-04-05,20:15:00
+Team I,Team J,1,2,2023-05-25,19:30:00
+Team K,Team L,2,1,2023-06-30,17:00:00
+Team M,Team N,0,3,2023-07-12,15:45:00
+Team O,Team P,1,1,2023-08-18,13:00:00
+Team Q,Team R,4,2,2023-09-22,21:00:00
+Team S,Team T,2,3,2023-10-10,12:30:00

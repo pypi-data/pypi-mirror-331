@@ -1,0 +1,30 @@
+Metadata-Version: 2.4
+Name: jk-soccer-core
+Version: 1.3.0
+Summary: Add your description here
+Author-email: Omar Crosby <omar.crosby@gmail.com>
+License-File: LICENSE
+Requires-Python: >=3.12
+Requires-Dist: marimo
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: pydantic
+Requires-Dist: toml
+Description-Content-Type: text/markdown
+
+# Soccer Core
+
+[![Commitlint](https://github.com/jedi-knights/jk-soccer-core/actions/workflows/commitlint.yml/badge.svg)](https://github.com/jedi-knights/jk-soccer-core/actions/workflows/commitlint.yml)
+[![Lint JavaScript](https://github.com/jedi-knights/jk-soccer-core/actions/workflows/eslint.yml/badge.svg)](https://github.com/jedi-knights/jk-soccer-core/actions/workflows/eslint.yml)
+[![Lint Python](https://github.com/jedi-knights/jk-soccer-core/actions/workflows/lint.yml/badge.svg)](https://github.com/jedi-knights/jk-soccer-core/actions/workflows/lint.yml)
+[![Lint JSON](https://github.com/jedi-knights/jk-soccer-core/actions/workflows/jsonlint.yml/badge.svg)](https://github.com/jedi-knights/jk-soccer-core/actions/workflows/jsonlint.yml)
+[![Test](https://github.com/jedi-knights/jk-soccer-core/actions/workflows/test.yml/badge.svg)](https://github.com/jedi-knights/jk-soccer-core/actions/workflows/test.yml)
+[![Release](https://github.com/jedi-knights/jk-soccer-core/actions/workflows/release.yml/badge.svg)](https://github.com/jedi-knights/jk-soccer-core/actions/workflows/release.yml)
+
+A base module for jedi-knights related Soccer functionality.
+
+## References
+
+- [Marimo](https://docs.marimo.io/)
+- [RPI for Division I Women's Soccer](https://sites.google.com/site/rpifordivisioniwomenssoccer/Home)
