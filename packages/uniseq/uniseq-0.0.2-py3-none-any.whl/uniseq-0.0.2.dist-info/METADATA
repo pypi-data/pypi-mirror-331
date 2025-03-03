@@ -1,0 +1,48 @@
+Metadata-Version: 2.2
+Name: uniseq
+Version: 0.0.2
+Summary: A Python package to fetch protein sequences from UniProtKB using its REST API.
+Author: Sumon Basak
+Author-email: b.sumon@outlook.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: biopython
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Uniseq
+
+**UniSeq** is a Python package that allows you to fetch protein sequences directly from the UniProtKB database using its REST API. This package can help in automating workflows that dynamically scrapes protein sequences from the database. 
+
+## Installation
+```bash
+pip install uniseq
+```
+
+## Usage
+```python
+from uniseq import getseq
+
+sequence = getseq("P69905")  # any valid UniProtKB ID can be passed
+print(sequence)
+```
+
+## Dependencies
+- requests
+- biopython
+
+These are automatically installed when you install the package.
+
