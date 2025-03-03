@@ -1,0 +1,12 @@
+ontol/__init__.py,sha256=yD_t_D0qorBk7snAzdiPLCrNx8JlmH93Kj6ZgzodnT4,453
+ontol/cli.py,sha256=mqhKZE_oavIWK47U4pWAaN5Lp3Nl1Dh51Pedx9gJ4cU,3487
+ontol/oast.py,sha256=q5Jx1q6zPy3OJuHlezAlyXAfEcOn8aBrMkcJdmFxJDM,4043
+ontol/parser.py,sha256=_tushU9tCwXyr1xY0qPbxBmsF9gOGbc6a-GHLFf514I,11411
+ontol/plantuml.py,sha256=-iyU7cFxzsQINEYvlOR0c196d0w3kRqxSc9UfKzUrws,10018
+ontol/serializer.py,sha256=kjShsDO-u959Z9yBYAVgMBGeh5t_EXyomOyXFlqw73Y,1916
+ontol-2.10.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+ontol-2.10.0.dist-info/METADATA,sha256=oHDvuChdpa-ko7N3rZcVSayoVsx7KO6cnIuUhR2DdKc,15552
+ontol-2.10.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+ontol-2.10.0.dist-info/entry_points.txt,sha256=nEwnWbYwFglR37yjiX_kq54Jo3yXNHLinCQhb4Ny4Ek,41
+ontol-2.10.0.dist-info/top_level.txt,sha256=jqLenqmXoOkxwcd8gssala3DHs-eIcK9im4JIPWCAE4,6
+ontol-2.10.0.dist-info/RECORD,,
