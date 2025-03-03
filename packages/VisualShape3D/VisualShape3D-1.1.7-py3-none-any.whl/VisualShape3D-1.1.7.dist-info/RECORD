@@ -1,0 +1,14 @@
+VisualShape3D/Polygons.py,sha256=-KZn1fliVdJmBGfNY7bXT3kbXmJxRwIUDqp-8TvbGjw,14150
+VisualShape3D/Shape3D.py,sha256=tEGxgJUcA9KVORPPxyUNmyE2TrNCuc-tX69VZY_jO7k,26806
+VisualShape3D/Visual.py,sha256=CbYWGqQUcmhhrL6n93VChVwDqjEWJbOqqpN-Fek_1tU,17003
+VisualShape3D/__init__.py,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
+VisualShape3D/examples.py,sha256=zzJX89ivOj2IXLEKahGNSVhk1TVZa5pA663p4HhUDKs,27584
+VisualShape3D/geomutils.py,sha256=9GPIFAul1-wLlwwYEjv1a1ttrX6uosXzMelI5B20W_A,25689
+VisualShape3D/mathutils.py,sha256=SkD58z-CG52gQWIz-8ZGKq-LbLzUiEobj3GeiJplRYA,16447
+VisualShape3D/plotable.py,sha256=p40E6OV7f62oGNooukhOBoGKkwddEScmI7qrPYt2EcY,11554
+test/__init__.py,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
+VisualShape3D-1.1.7.dist-info/LICENSE,sha256=US1YZuz3pg4RCytW1V0pRFmLIz-wITjrFWj5zr8Fcos,644
+VisualShape3D-1.1.7.dist-info/METADATA,sha256=fAR5sHU83Yw5U1HKHF_8gq1QXSkhqRrEcHZtiig_ibk,4272
+VisualShape3D-1.1.7.dist-info/WHEEL,sha256=ewwEueio1C2XeHTvT17n8dZUJgOvyCWCt0WVNLClP9o,92
+VisualShape3D-1.1.7.dist-info/top_level.txt,sha256=do6sT4j9yfEKIrR8MpqLMj_81Ycto-IJ3Mn6OVYXSOQ,19
+VisualShape3D-1.1.7.dist-info/RECORD,,
