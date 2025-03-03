@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+archerdfu/core.py
+archerdfu.core.egg-info/PKG-INFO
+archerdfu.core.egg-info/SOURCES.txt
+archerdfu.core.egg-info/dependency_links.txt
+archerdfu.core.egg-info/requires.txt
+archerdfu.core.egg-info/top_level.txt
