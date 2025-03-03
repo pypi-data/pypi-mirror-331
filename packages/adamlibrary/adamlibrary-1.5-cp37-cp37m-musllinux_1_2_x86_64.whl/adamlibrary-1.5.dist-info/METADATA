@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: adamlibrary
+Version: 1.5
+Summary: Improved library for Python to support C library extensions
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: C
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: cython
+
+# Adamlibrary Project
+
+In my **Adamlibrary** project, which I developed to bring low-level operations in basic C functions to Python, you can now use low-level C functions directly from Python.
+
+## Windows Support
+- ✅ Low-level memory management
+- ❌ Graphic-based memory and window management
+- ✅ Data structure management
+
+
+## Supports Brought for UNIX POSIX Compatible Devices
+- ✅ Low-level memory management
+- ❌ Graphic-based buffer management unit
+- ✅ Data structure management
+
+Necessary support for DOS-based systems will come in the near future versions.
+
+## Dependencies
+- GCC
+- ctypes
+- util-linux
+- Win32 system architecture libraries
+
+You can visit this site for a sample `test.py` code: [GitHub Test Code](https://github.com/Goychay23/int/tree/main/Adamlibrary/test/test.py)
+
+## Community Site
+- Our community site: [azccriminal.github.io](https://azccriminal.github.io/)
+
+If you want to support: [Donate via PayPal](https://www.paypal.com/donate/?hosted_button_id=NKPHAU3NY3GZU)
