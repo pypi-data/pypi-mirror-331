@@ -1,0 +1,9 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+meshoptimizer/__init__.py
+meshoptimizer.egg-info/PKG-INFO
+meshoptimizer.egg-info/SOURCES.txt
+meshoptimizer.egg-info/dependency_links.txt
+meshoptimizer.egg-info/top_level.txt
