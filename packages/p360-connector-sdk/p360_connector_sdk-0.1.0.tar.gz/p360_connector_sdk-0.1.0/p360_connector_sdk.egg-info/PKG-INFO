@@ -1,0 +1,21 @@
+Metadata-Version: 2.2
+Name: p360_connector_sdk
+Version: 0.1.0
+Summary: An SDK for developing integration connectors
+Home-page: https://github.com/username/connector-sdk
+Author: P360
+Author-email: mail@p360.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: pydantic>=2.0.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
