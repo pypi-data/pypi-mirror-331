@@ -1,0 +1,1 @@
+exec "def f(x): return x + a" in d
