@@ -1,0 +1,9 @@
+pathik/__init__.py,sha256=YJ0QxTUA1quPu9LZvvr2FXeI7rpp2FYgLxUm07qwa0A,1082
+pathik/cli.py,sha256=oE7kkbr_TzrFeregqSOq0_NXc8tU01a0zlnoqzWEjQM,381
+pathik/crawler.py,sha256=GNzJgeghXnycih38ss-iGd3YHUO3H44mRy99K15CN1k,8365
+pathik/simple.py,sha256=wYLYmt3u3QcJsm-S3bAgj5bkUef5V35_WrmvzuFmLOs,2474
+pathik-0.1.0.dist-info/METADATA,sha256=7yQhjYuTYaLYrOi9cK6zaCf393EUiOSKlWKQb_TewTU,2955
+pathik-0.1.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+pathik-0.1.0.dist-info/entry_points.txt,sha256=87K-779oxQS_g-TapDiCjOiuuKASEOcOkInEjhvkHc4,43
+pathik-0.1.0.dist-info/top_level.txt,sha256=hnSwZDvErRxkkf2lnCFlxr3qFd8fxdiPBMJvc7sRmFI,7
+pathik-0.1.0.dist-info/RECORD,,
