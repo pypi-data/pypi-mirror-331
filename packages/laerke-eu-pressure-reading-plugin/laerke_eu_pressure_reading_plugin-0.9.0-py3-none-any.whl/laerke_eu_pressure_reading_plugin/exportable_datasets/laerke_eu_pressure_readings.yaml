@@ -1,0 +1,10 @@
+dataset_name: laerke_eu_pressure_readings
+default_order_by: timestamp
+description: This dataset includes all the laerke.eu pressure readings.
+display_name: All pressure readings
+has_experiment: true
+has_unit: true
+source: laerke-eu-pressure-reading-plugin
+table: laerke_eu_pressure_readings
+timestamp_columns:
+- timestamp

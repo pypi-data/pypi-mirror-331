@@ -1,0 +1,2 @@
+[pioreactor.plugins]
+laerke_eu_pressure_reading_plugin = laerke_eu_pressure_reading_plugin

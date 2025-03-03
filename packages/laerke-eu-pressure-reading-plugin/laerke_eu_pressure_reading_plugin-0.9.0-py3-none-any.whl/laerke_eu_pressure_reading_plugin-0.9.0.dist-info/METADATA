@@ -1,0 +1,28 @@
+Metadata-Version: 2.2
+Name: laerke-eu-pressure-reading-plugin
+Version: 0.9.0
+Summary: Pioreactor plugin that returns pressure readings every interval from an laerke.eu pressure sensor.
+Home-page: https://laerke.eu/
+Author: Martin Malthe Borch and Lars Woetmann Pedersen
+Author-email: mmbo@biosustain.dtu.dk
+License: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: smbus2
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: summary
+
+## Pioreactor Laerke.eu Pressure reading plugin
+
+This is a Pioreactor plugin that returns pressure readings at a set duration from a stemma QT connected Laerke.eu pressure sensor.
+
+### Overview chart
+
+This also adds a chart to your overview page that displays the pressure readings per Pioreactor.
+

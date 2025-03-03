@@ -1,0 +1,12 @@
+---
+data_source: laerke_eu_pressure_readings # SQL table
+data_source_column: pressure
+title: Pressure
+mqtt_topic: laerke_eu_pressure_reading/pressure
+chart_key: laerke_eu_pressure_readings
+source: app
+y_axis_label: mbar
+interpolation: stepAfter
+y_axis_domain: [980, 1050]
+lookback: 100000
+fixed_decimals: 1

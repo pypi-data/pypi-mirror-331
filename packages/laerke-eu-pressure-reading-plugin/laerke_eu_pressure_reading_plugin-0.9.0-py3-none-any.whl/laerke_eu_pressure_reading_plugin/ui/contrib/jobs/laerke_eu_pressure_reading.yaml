@@ -1,0 +1,14 @@
+---
+display_name: Laerke.eu Pressure Reading
+job_name: laerke_eu_pressure_reading
+display: true
+source: laerke_eu_pressure_reading_plugin
+description: Records pressure readings from an attached Laerke.eu pressure sensor.
+published_settings: 
+  - key: interval
+    unit: s
+    label: Time between pressure readings
+    type: numeric
+    display: True
+    default: null
+    description: The duration (s) between pressure readings.
