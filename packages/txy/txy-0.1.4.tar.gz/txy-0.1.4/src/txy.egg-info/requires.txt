@@ -1,0 +1,5 @@
+click<=8.1.8
+rich<=13.9.4
+
+[:python_version < "3.8"]
+importlib-metadata<=8.6.1
