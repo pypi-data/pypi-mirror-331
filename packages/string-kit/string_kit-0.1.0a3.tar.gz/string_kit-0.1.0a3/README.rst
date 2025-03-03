@@ -1,0 +1,70 @@
+.. |package-name| replace:: string-kit
+
+.. |pypi-version| image:: https://img.shields.io/pypi/v/string-kit?label=PyPI%20Version&color=4BC51D
+   :alt: PyPI Version
+   :target: https://pypi.org/projects/string-kit/
+
+.. |pypi-downloads| image:: https://img.shields.io/pypi/dm/string-kit?label=PyPI%20Downloads&color=037585
+   :alt: PyPI Downloads
+   :target: https://pypi.org/projects/string-kit/
+
+string-kit
+##########
+
+|pypi-version| |pypi-downloads|
+
+Description
+***********
+
+Provides advanced string utilities and a powerful Formatter.
+
+This is a development version, and while it has been thoroughly tested, it will be battle-tested in a live project and updated as needed.
+
+PowerFormatter
+==============
+
+``PowerFormatter`` is a drop-in replacement of ``str.Formatter`` and supports the same syntax and more.
+
+``PowerFormatter`` adds the following features:
+ - virtual fields ``now``, ``uuid1``, ``uuid4``, ``uuid5`` (no key is required in the format parameters, however if present, they take precedence); many more coming up.
+ - user-defined virtual fields can be added through ``field_default`` init parm.
+ - can send namespaces where format field values are searched through ``namespaces`` init parm.
+ - ``!capitalize``, ``!lower``, ``!lstrip``, ``!rstrip``, ``!slug``, ``!strip``, ``!title``; many more coming up.
+ - user-defined convertors can be added through ``convertors`` init parm.
+ - chained conversions and format specifications in any order: ``{field!slug:.10s!upper}``.
+ - user-configurable ``silence_missing_fields``, if set ``True``, will suppress ``IndexError`` and ``KeyError`` and will quietly replace with empty string.
+ - user-configurable characters to identify fields (default ``{}``), convertors (default ``!``) and format specifiers (default ``:``).
+
+A simple example:
+
+.. code-block:: python
+
+   import random
+   from string_kit import PowerFormatter
+
+   my_field_defaults = {
+       "greeting": "Hello",
+       "password": lambda: random.choice(["lI0n", "rAbb1t", "tig3R"]) \
+                           + str(random.randint(100, 999)),
+   }
+
+   my_weather = "Sunny and Wet"
+
+   my_convertors = {
+       "s2d": lambda s: s.replace(" ", "-")
+   }
+
+   pf = PowerFormatter(
+       field_namespaces=[locals()],
+       silence_missing_fields=True,
+       field_defaults=my_field_defaults,  # optional
+       convertors=my_convertors,
+   )
+
+   print(pf.format("{greeting!upper} {fname!s2d}, this is your random password:"
+                   " '{password}'.", fname="Charlie Brown"))
+   # "HELLO Charlie-Brown, this is your random password: 'rAbb1t530'."
+
+   print(pf.format("Today is a {my_weather:.5!lower} day.{inexistent!lstrip}"))
+   # "Today is a sunny day."
+
