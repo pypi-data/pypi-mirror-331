@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}{{ object }}{% endblock %}
+{% block content %}
+{% include 'browsing/partials/detailview_breadcrumb.html' %}
+<div class="container">
+    {% include 'browsing/partials/detailview_title.html' %}
+
+        {% block custom %}
+        <h2>Basic Information</h2>
+        <dl>
+            {% for x in object.field_dict %}
+           
+                <dt>
+                    <abbr title="{{x.help_text}}">{{ x.verbose_name }}</abbr>
+                </dt>
+                <dd>
+                    {{ x.value }}
+                </dd>
+            {% endfor %}
+        </dl>
+    {% if user.is_authenticated %}
+   
+        <div class="float-end">
+            <a href="{{ object.get_delete_url }}">
+                <i class="bi bi-trash3" title="delete entry"></i>
+            </a>
+        </div>
+    {% endif %}
+</div>
+{% endblock custom %}
+{% endblock %}

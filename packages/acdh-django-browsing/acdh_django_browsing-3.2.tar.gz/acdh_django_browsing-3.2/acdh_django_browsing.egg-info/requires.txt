@@ -1,0 +1,16 @@
+crispy-bootstrap5
+django-crispy-forms
+django-filter
+django-super-deduper
+django-tables2
+tablib
+
+[build]
+build
+
+[linting]
+flake8
+
+[tests]
+pytest
+coverage

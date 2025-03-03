@@ -1,0 +1,4 @@
+include LICENSE
+include README.md
+recursive-include browsing/templates/browsing *
+recursive-include browsing/static/browsing *
