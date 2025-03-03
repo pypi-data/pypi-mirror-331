@@ -1,0 +1,4 @@
+[console_scripts]
+ai-course-generator=ai_course_generator.generate_course:app
+generate_course=ai_course_generator.generate_course:app
+

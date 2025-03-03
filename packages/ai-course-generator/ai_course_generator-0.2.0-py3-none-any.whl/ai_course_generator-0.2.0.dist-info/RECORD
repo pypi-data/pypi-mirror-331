@@ -1,0 +1,9 @@
+ai_course_generator/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ai_course_generator/course_generator_agent.py,sha256=9eUHw_YNuDFS7tibbAVcVu-sHodCYri1G3SCFJyOI1w,17624
+ai_course_generator/emoji-support.tex,sha256=ejj21x0o_IGCg4SYF6NcNLhp9-2XCs3HZO_47HlUNdo,360
+ai_course_generator/generate_course.py,sha256=k8rLd7j1NpIqe5tmL6ZDAGDqPMyPAb1nNET8fxcTTx0,4539
+ai_course_generator/mermaid_processor.py,sha256=oSHbMF6UG6TrLGOpH9LR0tOTg2Zexkln4N0pee4YwEM,21271
+ai_course_generator-0.2.0.dist-info/METADATA,sha256=bhofQvyXtA8n--xQjj-V6h-LOitayaOY6Mbqtqj9oII,11761
+ai_course_generator-0.2.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+ai_course_generator-0.2.0.dist-info/entry_points.txt,sha256=I1aBbO3tI7gRYZu5pcEAplJnW5hBb-sb86yL25oMITI,135
+ai_course_generator-0.2.0.dist-info/RECORD,,
