@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+inspect_cyber/__init__.py
+inspect_cyber.egg-info/PKG-INFO
+inspect_cyber.egg-info/SOURCES.txt
+inspect_cyber.egg-info/dependency_links.txt
+inspect_cyber.egg-info/top_level.txt

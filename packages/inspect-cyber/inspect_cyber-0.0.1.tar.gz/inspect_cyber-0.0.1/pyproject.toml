@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "inspect-cyber"
+version = "0.0.1"
+description = "An Inspect extension for cyber evaluations"
+authors = [
+    {name = "UK AI Security Institute", email = "sam.deverett@dsit.gov.uk"},
+]
+readme = "README.md"
