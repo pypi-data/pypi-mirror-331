@@ -1,0 +1,8 @@
+htmlcov/
+dist/
+build/
+.eggs/
+.envrc
+.local_env
+.aider*
+.coverage
