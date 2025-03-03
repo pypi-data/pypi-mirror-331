@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: andco-wheelbarrow
+Version: 0.1.0
+Summary: our python wheelbarrow. tools for making stuff happen
+Author-email: Huxley Marvit <huxley@princeton.edu>, Houjun Liu <houjun@jemoka.com>, Albert Yan Huang <mail@exr0n.com>, David Freifeld <howdy@quantumi.sh>, Zachary Sayyah <idk@lmao.org>
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+
+# Installation
+For a local, editable installation:
+```bash
+uv pip install -e . --system
+```
