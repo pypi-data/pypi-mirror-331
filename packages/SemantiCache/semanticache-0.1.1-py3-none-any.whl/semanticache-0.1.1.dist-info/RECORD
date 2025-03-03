@@ -1,0 +1,13 @@
+semanticache/__init__.py,sha256=lPRySWnzmAomH89e9kmNOiW-Cpo6KTcSh77f3wWoLXw,162
+semanticache/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+semanticache/cache.py,sha256=pIiOovxqlhXxFPQDLGy5KlIkjt9qBd8X_9-aXW6IMsk,32588
+semanticache/__pycache__/__init__.cpython-311.pyc,sha256=Ue0HQr_bhlsmXlfUSOJysyKHCXVw0AnOpTa-Rbfk51Y,408
+semanticache/__pycache__/cache.cpython-311.pyc,sha256=dF5Cr0rhAjEV-c3p8VVFJQW1oUaMlhKXEPZmpT4btGA,40309
+semanticache/utils/logger.py,sha256=wfmWL9XejzmFQjym_Ff8d5-OYQ52D2PAatUxCyBaWAY,648
+semanticache/utils/run_tests.py,sha256=E1MaAj5Poxhj5-IIRSn3mZ6o7Y2pGYB38X1Auome54Q,1946
+semanticache/utils/__pycache__/logger.cpython-311.pyc,sha256=IpcrKszXlpW8mFRfotjpkD2ia_F2V5WT6An5v8lSIrI,1312
+semanticache-0.1.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+semanticache-0.1.1.dist-info/METADATA,sha256=x6QgRkVuzNt-mNuaEOjXK6tCycYFvhldPu8TzsJzebg,5979
+semanticache-0.1.1.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+semanticache-0.1.1.dist-info/top_level.txt,sha256=6us74_1hSo9e8fGwh79dgSrw1MC2o0uqJoXbmWRNmt8,13
+semanticache-0.1.1.dist-info/RECORD,,
