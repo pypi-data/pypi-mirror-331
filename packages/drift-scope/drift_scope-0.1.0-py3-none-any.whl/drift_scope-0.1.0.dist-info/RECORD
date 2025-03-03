@@ -1,0 +1,10 @@
+drift_scope/__init__.py,sha256=NEfoD2mkByQL-L5l0s5lKuDAsIpc6tN2bRNHyauYxGI,144
+drift_scope/_sql.py,sha256=ySitNmXUYoG9jfY3bPHDmx8OcDiZRjljCxixFgyP9pE,2986
+drift_scope/_utils.py,sha256=qh5T5LVcWdl8WFIrOvxYrjz1HaHDB9jgUPVf0t_tZ5E,496
+drift_scope/base.py,sha256=5-0VvKRH6D21981iuYcV3fU17_HTIDqbxZg8goHmQjs,2176
+drift_scope/dataframe.py,sha256=xoq2onjyhvSAP14vv_PLc0S1-FPCcmDZ48Kagp9ydRY,1836
+drift_scope/results.py,sha256=PP2DtdagXlf5La0OfCsrH260imGmM_2QW4ceXWVSc5o,2489
+drift_scope/sql.py,sha256=GPeSbWh2IzPAFzbvbpGhQhRbgXS93hHy9jbaCaune8Y,3426
+drift_scope-0.1.0.dist-info/METADATA,sha256=0Wt8g0KFvl4thAhQSlzPbzrKfQHujt4pgqYPxYezhog,3609
+drift_scope-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+drift_scope-0.1.0.dist-info/RECORD,,
