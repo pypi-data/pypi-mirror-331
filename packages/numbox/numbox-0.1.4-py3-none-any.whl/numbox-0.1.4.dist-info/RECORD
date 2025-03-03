@@ -1,0 +1,13 @@
+numbox/__init__.py,sha256=aBEbDvx4LMg8A1TJJR6dEHu8rQODVin528hLS_EDvuA,22
+numbox/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+numbox/core/any_type.py,sha256=qi5vZD5-s-3ksTORes4rCF2t7H6jpz3whsKNxc4Oyq8,2843
+numbox/core/meminfo.py,sha256=-b7wlCRyqOZjvKjEuwNwzqE4XvnEWxu3I2k4DEP3Cqk,1755
+numbox/core/proxy.py,sha256=kGYlEdLK40lxxu56e_S32s9YuQ6AuQnFegt5uQrUw5w,3889
+numbox/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+numbox/utils/highlevel.py,sha256=hAmF2y2ayPJT0qpwHrGDt09R4-6Ts9sTkCTh-8FTIUU,319
+numbox/utils/lowlevel.py,sha256=6CRfFbMeBZGM7hqPAQzyClzU_e_IsNpqONJknFWGzJM,1405
+numbox-0.1.4.dist-info/LICENSE,sha256=YYgNvjH_p6-1NsdrIqGJnr1GUbZzA_8DxsP6vVfM6nY,1446
+numbox-0.1.4.dist-info/METADATA,sha256=kx51gPJjDouxGwrmuwfijb72klqlmQ5jC8IzVg1suTw,2271
+numbox-0.1.4.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+numbox-0.1.4.dist-info/top_level.txt,sha256=A67jOkfqidCSYYm6ifjN_WZyIiR1B27fjxv6nNbPvjc,7
+numbox-0.1.4.dist-info/RECORD,,
