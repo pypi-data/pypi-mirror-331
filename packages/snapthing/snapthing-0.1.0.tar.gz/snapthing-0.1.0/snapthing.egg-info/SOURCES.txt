@@ -1,0 +1,15 @@
+README.md
+setup.py
+snapthing/__init__.py
+snapthing/cli.py
+snapthing/config.py
+snapthing/eventhandling.py
+snapthing/keys.py
+snapthing/platforms.py
+snapthing/snap.py
+snapthing.egg-info/PKG-INFO
+snapthing.egg-info/SOURCES.txt
+snapthing.egg-info/dependency_links.txt
+snapthing.egg-info/entry_points.txt
+snapthing.egg-info/requires.txt
+snapthing.egg-info/top_level.txt

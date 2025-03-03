@@ -1,0 +1,2 @@
+[console_scripts]
+snapthing = snapthing.cli:main
