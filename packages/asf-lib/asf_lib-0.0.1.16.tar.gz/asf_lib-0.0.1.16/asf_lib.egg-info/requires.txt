@@ -1,0 +1,12 @@
+scikit-learn
+pandas
+xgboost
+
+[aslib]
+pyyaml
+
+[aspeed]
+clingo
+
+[nn]
+torch
