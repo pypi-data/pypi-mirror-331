@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+banner.svg
+main.py
+requirements.txt
+setup.py
+juno_manager/__init__.py
+juno_manager/app.py
+juno_manager/banner.svg
+juno_manager/cli.py
+juno_manager.egg-info/PKG-INFO
+juno_manager.egg-info/SOURCES.txt
+juno_manager.egg-info/dependency_links.txt
+juno_manager.egg-info/entry_points.txt
+juno_manager.egg-info/requires.txt
+juno_manager.egg-info/top_level.txt
