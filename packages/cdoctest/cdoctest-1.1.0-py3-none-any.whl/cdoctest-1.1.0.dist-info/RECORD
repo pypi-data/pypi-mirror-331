@@ -1,0 +1,10 @@
+cdoctest/__init__.py,sha256=nCCOiaxGTl9q2r2UuJvYSojqZbCe9NYBNHzGefW1KvA,87
+cdoctest/__main__.py,sha256=53EW3v4gCgOg3p8taw0An4K6AyfUGNz3tRU_bQHSE_Q,9001
+cdoctest/c_doctest.py,sha256=Sq7gHoy_P5jrNjUPaMvop26JkMy37UwFXHeJ8DV9bOY,24817
+cdoctest/cdoctest.py,sha256=FHZuXqBi8MILXPskuW7yihV19-iVvuBM3vw6QPAn0S8,17364
+cdoctest/cmake_api.py,sha256=vuDICkGxkbHCdQq8UK_WJ5ZTl2Kc8Y75vHKoV7gmST0,5882
+cdoctest-1.1.0.dist-info/LICENSE,sha256=R7K3N1MYxXTvRNDe8eKNKW6LrFlA0k0mlPXZnnBTt4A,11560
+cdoctest-1.1.0.dist-info/METADATA,sha256=eAzXhLmKe03LX61d9RAeWY_GQtWVlxXhy_IaHNHhXaE,2103
+cdoctest-1.1.0.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+cdoctest-1.1.0.dist-info/top_level.txt,sha256=0KMYlsg4s_jd4BWzO6RdlTby0FVm7pg-_thBnSuSYBg,9
+cdoctest-1.1.0.dist-info/RECORD,,
