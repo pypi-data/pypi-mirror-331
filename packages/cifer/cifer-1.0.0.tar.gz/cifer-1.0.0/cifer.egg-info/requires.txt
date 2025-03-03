@@ -1,0 +1,6 @@
+requests
+tensorflow>=2.0
+numpy
+flask
+uvicorn
+pydantic
