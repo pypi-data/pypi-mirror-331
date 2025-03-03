@@ -1,0 +1,10 @@
+requests
+
+[build]
+build
+twine
+commitizen
+
+[dev]
+ruff
+pyright
