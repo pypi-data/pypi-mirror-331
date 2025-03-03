@@ -1,0 +1,28 @@
+Metadata-Version: 2.4
+Name: airflow-wingman
+Version: 0.3.1
+Summary: Airflow plugin to enable LLMs chat
+Project-URL: GitHub, https://github.com/abhishekbhakat/airflow-wingman
+Project-URL: Issues, https://github.com/abhishekbhakat/airflow-wingman/issues
+Author-email: Abhishek Bhakat <abhishek.bhakat@hotmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Plugins
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.11
+Requires-Dist: airflow-mcp-server>=0.4.0
+Requires-Dist: anthropic>=0.46.0
+Requires-Dist: apache-airflow>=2.10.0
+Requires-Dist: openai>=1.64.0
+Provides-Extra: dev
+Requires-Dist: build>=1.2.2; extra == 'dev'
+Requires-Dist: pre-commit>=4.0.1; extra == 'dev'
+Requires-Dist: ruff>=0.9.2; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# Airflow Wingman
+Airflow plugin to enable LLMs chat in Airflow Webserver.
