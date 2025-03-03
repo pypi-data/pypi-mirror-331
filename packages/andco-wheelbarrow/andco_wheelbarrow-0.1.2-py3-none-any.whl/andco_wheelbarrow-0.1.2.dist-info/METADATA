@@ -1,0 +1,31 @@
+Metadata-Version: 2.4
+Name: andco-wheelbarrow
+Version: 0.1.2
+Summary: our python wheelbarrow. tools for making stuff happen
+Author-email: Huxley Marvit <huxley@princeton.edu>, Houjun Liu <houjun@jemoka.com>, Albert Yan Huang <mail@exr0n.com>, David Freifeld <howdy@quantumi.sh>, Zachary Sayyah <idk@lmao.org>
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+
+
+# wheelbarrow
+our wheelbarrow. shared tooling, utils, and scripts. 
+
+## Installation
+For a local, editable installation:
+```bash
+uv pip install -e . --system
+```
+
+## Usage 
+
+### `albert.pickle_memoize`
+
+```python
+from wheelbarrow.albert import pickle_memoize
+
+def make_data():
+    # computationally expensive process
+    return np.random.rand(100, 100)
+
+data = pickle_memoize("data.pkl", make_data)    # will cache in memory and on disk 
+```
