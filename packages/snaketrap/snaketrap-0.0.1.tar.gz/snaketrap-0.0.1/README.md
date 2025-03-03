@@ -1,0 +1,3 @@
+# snaketrap
+
+Reserved package name.

@@ -1,0 +1,11 @@
+Metadata-Version: 2.2
+Name: snaketrap
+Version: 0.0.1
+Summary: Reserved package name on PyPI
+Author-email: Package Maintainer <maintainer@example.com>
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# snaketrap
+
+Reserved package name.

@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+src/snaketrap/__init__.py
+src/snaketrap.egg-info/PKG-INFO
+src/snaketrap.egg-info/SOURCES.txt
+src/snaketrap.egg-info/dependency_links.txt
+src/snaketrap.egg-info/top_level.txt
