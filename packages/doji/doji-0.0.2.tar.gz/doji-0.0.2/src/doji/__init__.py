@@ -1,0 +1,1 @@
+import polars # type: ignore

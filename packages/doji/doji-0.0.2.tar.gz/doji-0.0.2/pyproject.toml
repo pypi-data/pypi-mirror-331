@@ -1,0 +1,16 @@
+[project]
+name = "doji"
+version = "0.0.2"
+description = "Work in progress"
+readme = "README.md"
+authors = [
+    { name = "richardxhong", email = "hongxrichard@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "polars>=1.24.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
