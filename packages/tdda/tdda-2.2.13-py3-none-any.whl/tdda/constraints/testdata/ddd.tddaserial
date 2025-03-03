@@ -1,0 +1,77 @@
+{
+    "format": "http://tdda.info/ns/tdda.serial",
+    "writer": "tdda.serial-2.2.08",
+    "tdda.serial": {
+        "fields": [
+            {
+                "name": "index",
+                "fieldtype": "int"
+            },
+            {
+                "name": "evennulls",
+                "fieldtype": "bool"
+            },
+            {
+                "name": "oddnulls",
+                "fieldtype": "bool"
+            },
+            {
+                "name": "evens",
+                "fieldtype": "int"
+            },
+            {
+                "name": "odds",
+                "fieldtype": "int"
+            },
+            {
+                "name": "evenreals",
+                "fieldtype": "float"
+            },
+            {
+                "name": "oddreals",
+                "fieldtype": "float"
+            },
+            {
+                "name": "evenstr",
+                "fieldtype": "string"
+            },
+            {
+                "name": "oddstr",
+                "fieldtype": "string"
+            },
+            {
+                "name": "elevens",
+                "fieldtype": "string"
+            },
+            {
+                "name": "greek",
+                "fieldtype": "string"
+            },
+            {
+                "name": "binnedindex",
+                "fieldtype": "int"
+            },
+            {
+                "name": "binnedodds",
+                "fieldtype": "int"
+            },
+            {
+                "name": "basedate",
+                "fieldtype": "datetime"
+            },
+            {
+                "name": "evendates",
+                "fieldtype": "datetime"
+            }
+        ],
+        "encoding": "UTF-8",
+        "delimiter": ",",
+        "quote_char": "\"",
+        "escape_char": "\\",
+        "stutter_quotes": false,
+        "date_format": "iso8601datetime",
+        "null_indicators": "",
+        "accept_percentages_as_floats": false,
+        "header_rows": 1
+    }
+}
