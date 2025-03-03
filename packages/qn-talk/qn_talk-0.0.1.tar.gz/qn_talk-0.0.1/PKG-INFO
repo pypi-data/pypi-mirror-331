@@ -1,0 +1,23 @@
+Metadata-Version: 2.2
+Name: qn_talk
+Version: 0.0.1
+Summary: A small example package
+Home-page: 
+Author: qn
+Author-email: 654304502@qq.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: summary
+
+# Example Package
+This is a simple example package. You can use
+
+to write your content.
