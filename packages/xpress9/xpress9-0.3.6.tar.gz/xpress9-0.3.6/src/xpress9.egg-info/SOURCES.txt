@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+xpress9.c
+include/Xpress9Wrapper.h
+src/Xpress9DecHuffman.c
+src/Xpress9DecLz77.c
+src/Xpress9EncHuffman.c
+src/Xpress9EncLz77.c
+src/Xpress9Misc.c
+src/Xpress9Wrapper.c
+src/xpress9.egg-info/PKG-INFO
+src/xpress9.egg-info/SOURCES.txt
+src/xpress9.egg-info/dependency_links.txt
+src/xpress9.egg-info/not-zip-safe
+src/xpress9.egg-info/top_level.txt
