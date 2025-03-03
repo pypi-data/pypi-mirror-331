@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: fire-rpc
+Version: 0.1.1
+Summary: turn fire command line to a rpc server
+License: MIT
+Author: weihong.xu
+Author-email: xuweihong.cn@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: aiohttp (>=3.11.12,<4.0.0)
+Requires-Dist: fire (>=0.5.0,<0.6.0)
+Description-Content-Type: text/markdown
+
+# fire-rpc
+Turn fire command line into RPC server.
+
+
+## Installation
+
+```bash
+pip install fire-rpc
+``` 
+
+## Example
+`fire-rpc` provides a built-in echo server to demonstrate how to use it.
+
+To start the echo server, run the following command:
+
+```bash
+# Note that the yes command is used to workaround the interactive mode of fire
+yes | python -m fire_rpc /echo --port 8000
+```
+
+To call the echo server, run the following command:
+
+```bash
+url -X POST http://localhost:8000/echo -H "Content-Type: application/json" -d '{"args":["Hello World"]}'
+```
+
+The echo server will return the following response:
+
+```json
+{"result": {"args": ["Hello World"], "kwargs": {}}}
+```
+
+
