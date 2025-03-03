@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+stemhat/Arial.ttf
+stemhat/__init__.py
+stemhat/core.py
+stemhat.egg-info/PKG-INFO
+stemhat.egg-info/SOURCES.txt
+stemhat.egg-info/dependency_links.txt
+stemhat.egg-info/requires.txt
+stemhat.egg-info/top_level.txt
