@@ -1,0 +1,11 @@
+datapasta-0.1.1.dist-info/METADATA,sha256=p9eSQ70BQRzPnLcMMPJK11EMLgNfPReHz7Av567Eqno,7496
+datapasta-0.1.1.dist-info/WHEEL,sha256=thaaA2w1JzcGC48WYufAs8nrYZjJm8LqNfnXFOFyCC4,90
+datapasta-0.1.1.dist-info/entry_points.txt,sha256=s89v6NWniJfYns0AnranVXYnOQsDKA51eqfS26NH1zI,66
+datapasta-0.1.1.dist-info/licenses/LICENSE,sha256=3PTP0N-rYq4J61SlDnoFJTa8U1-BqOTm-1xBUdd4lIc,1069
+datapasta/__init__.py,sha256=ZjPPvGrtbmVurMJMNtipCHgN4rWWhcetdoZx56czaX0,460
+datapasta/clipboard.py,sha256=I1az_ID1ScQsu2ddftN5Fpq1SRKrsO14F6exfnihUN8,560
+datapasta/formatter.py,sha256=tTvZ27CP8psJaYXEr5bYLKvFZwifykBq3imFDhBghpw,3149
+datapasta/main.py,sha256=_quaEJfEevXq5LkXbFFx_tMYfJba-N87uMl8-i1PxEQ,4788
+datapasta/parser.py,sha256=q9LqLywLLFUcKEmEjPZZV2KZdvzdWscHXZfgEZ9bO0U,6711
+datapasta/type_inference.py,sha256=ZERNXRHsYiHDURi9knwGtMOMW2cCP2PeIgISqXCpqTY,2908
+datapasta-0.1.1.dist-info/RECORD,,
