@@ -1,0 +1,3 @@
+# R requirements for the tests are in R_requirements_tests.txt
+numpy>=1.15.0
+sempler>=0.2.0
