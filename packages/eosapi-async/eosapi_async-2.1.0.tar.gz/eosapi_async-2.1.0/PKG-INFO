@@ -1,0 +1,42 @@
+Metadata-Version: 2.2
+Name: eosapi-async
+Version: 2.1.0
+Summary: EOS API async client with modern Python support
+Home-page: https://github.com/alsekaram/eosapi_async
+Author: alsekaram
+Author-email: git@awl.su
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiohttp>=3.8.0
+Requires-Dist: requests>=2.26.0
+Requires-Dist: cryptos==2.0.9
+Requires-Dist: base58==2.1.1
+Requires-Dist: cachetools==5.5.1
+Requires-Dist: pydantic==2.10.6
+Requires-Dist: antelopy==0.2.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: summary
+
+
+    Fork of original eosapi with significant improvements:
+
+    - Complete rework of async implementation
+    - Modern Python versions support
+    - Enhanced error handling
+    - Performance optimizations including shared HTTP session
+    - Updated documentation
+
+    Original code by encoderlee (encoderlee@gmail.com)
+    
