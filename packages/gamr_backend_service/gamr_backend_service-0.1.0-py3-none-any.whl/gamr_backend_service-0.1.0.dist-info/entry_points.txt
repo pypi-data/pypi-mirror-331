@@ -1,0 +1,3 @@
+[console_scripts]
+api=uvicornapp.api:create_app
+
