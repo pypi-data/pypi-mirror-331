@@ -1,0 +1,2 @@
+[console_scripts]
+jsbucket = jsbucket.jsbucket:main
