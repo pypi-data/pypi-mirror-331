@@ -1,0 +1,22 @@
+Metadata-Version: 2.3
+Name: asgi-request-logger
+Version: 0.0.1
+Summary: A lightweight request logger middleware for ASGI applications
+License: MIT
+Author: timothy jeong
+Author-email: k.jts8257@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: asgiref (>=3.6.0,<4.0.0)
+Description-Content-Type: text/markdown
+
+# asgi-request-logger
+asgi middleware for request logging
+
