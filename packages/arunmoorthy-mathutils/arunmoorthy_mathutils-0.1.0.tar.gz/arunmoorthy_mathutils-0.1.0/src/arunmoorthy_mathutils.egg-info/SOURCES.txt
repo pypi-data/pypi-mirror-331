@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/arunmoorthy_mathutils.egg-info/PKG-INFO
+src/arunmoorthy_mathutils.egg-info/SOURCES.txt
+src/arunmoorthy_mathutils.egg-info/dependency_links.txt
+src/arunmoorthy_mathutils.egg-info/top_level.txt
+src/mathutils/__init__.py
+src/mathutils/arithmetic.py
+src/mathutils/statistics.py
+src/mathutils/vectors.py
+tests/test_arithmetic.py
+tests/test_statistics.py
+tests/test_vectors.py
