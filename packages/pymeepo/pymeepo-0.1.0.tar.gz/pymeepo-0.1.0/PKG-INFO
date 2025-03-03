@@ -1,0 +1,86 @@
+Metadata-Version: 2.3
+Name: pymeepo
+Version: 0.1.0
+Summary: A lightweight Python SDK for building AI agents, enabling collaborative and supervisor-worker models for complex workflows
+License: GPL-3.0-only
+Author: MeepoLabs
+Author-email: info@meepolabs.com
+Requires-Python: >=3.10,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: anthropic (>=0.8.0,<0.9.0)
+Requires-Dist: httpx (>=0.25.0,<0.26.0)
+Requires-Dist: litellm (>=1.0.0,<2.0.0)
+Requires-Dist: openai (>=1.3.0,<2.0.0)
+Requires-Dist: pydantic (>=2.5.0,<3.0.0)
+Requires-Dist: tenacity (>=8.2.0,<9.0.0)
+Requires-Dist: typing-extensions (>=4.8.0,<5.0.0)
+Project-URL: Documentation, https://pymeepo.readthedocs.io
+Project-URL: Repository, https://github.com/meepolabs/pymeepo
+Description-Content-Type: text/markdown
+
+# pymeepo
+
+[![PyPI version](https://img.shields.io/pypi/v/pymeepo.svg)](https://pypi.org/project/pymeepo/)
+[![Python versions](https://img.shields.io/pypi/pyversions/pymeepo.svg)](https://pypi.org/project/pymeepo/)
+[![License](https://img.shields.io/github/license/meepolabs/pymeepo.svg)](https://github.com/meepolabs/pymeepo/blob/main/LICENSE)
+
+A lightweight Python SDK for building AI agents, enabling collaborative and supervisor-worker models for complex workflows.
+
+## Overview
+
+pymeepo is a Python SDK designed for developers to build AI agents of any sort. It provides a clean, intuitive interface for creating agents that can work together in hierarchical structures.
+
+The pymeepo SDK enables developers to:
+
+- Build sophisticated agent systems with a Python-first approach
+- Create hierarchical agent structures with supervisor-worker relationships
+- Leverage multiple LLM providers with unified interfaces
+- Implement collaborative agents that can work together on complex tasks
+
+## Installation
+
+```bash
+pip install pymeepo
+```
+
+Or with Poetry:
+
+```bash
+poetry add pymeepo
+```
+
+## Quick Start
+
+```
+TO BE ADDED
+```
+
+## Features
+
+- **Async-first Design**: Built for asynchronous operations with synchronous wrappers
+- **Lightweight and Modular**: Focused components that can be used independently
+- **Collaborative Agents**: First-class support for agent collaboration
+- **Hierarchical Structures**: Supervisor-worker models for complex workflows
+- **Provider Agnostic**: Support for multiple LLM providers
+
+## Documentation
+
+For detailed documentation, visit [pymeepo.readthedocs.io](https://pymeepo.readthedocs.io).
+
+## Contributing
+
+Contributions are welcome! Please check out our [contributing guidelines](CONTRIBUTING.md).
+
+## License
+
+This project is licensed under the [GNU General Public License v3.0 (GPLv3)](LICENSE).
+
