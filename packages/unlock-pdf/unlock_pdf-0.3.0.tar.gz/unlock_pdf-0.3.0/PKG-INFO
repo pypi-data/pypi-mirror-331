@@ -1,0 +1,49 @@
+Metadata-Version: 2.4
+Name: unlock-pdf
+Version: 0.3.0
+Summary: Unlocks editing permissions of PDFs that don't have a password
+Project-URL: Homepage, https://github.com/elvishcm/unlock_pdf
+Author-email: Elvis Mak <elvishcmak@gmail.com>
+License-File: LICENSE
+Requires-Python: >=3.9
+Requires-Dist: pikepdf>=8.5.3
+Description-Content-Type: text/markdown
+
+# unlock_pdf 
+
+This is a command-line tool that wraps around pikepdf to provide a convenient way to remove editing restrictions on PDFs with a write restriction but without a password.
+
+## Installation
+### Installing with uv (Recommended)
+uv automatically places the `unlock_pdf` command into PATH and puts it in a persistent environment such that it can be accessed everywhere from the terminal.
+```
+uv tool install unlock_pdf
+```
+
+### Insatlling with PyPI
+If you prefer to have it in one specific environment, you can install with pip as well.
+```
+pip install unlock_pdf
+```
+
+## Examples
+Examples below are demonstrated assuming a installation with uv. You may use the following 
+To unlock 1 pdf:
+```
+$ unlock_pdf path/to/pdf 
+```
+
+### Directory flag
+To unlock all pdf's within a directory you will need to call the `-d` flag.
+```
+$ unlock_pdf path/to/folder -d
+```
+
+### Suffix flag
+The default behavior is to add `_unlocked` at the end of the filename.
+To change this, use the `-s` flag:
+```
+$ unlock_pdf path/to/pdf -d -s "_new"
+```
+
+
