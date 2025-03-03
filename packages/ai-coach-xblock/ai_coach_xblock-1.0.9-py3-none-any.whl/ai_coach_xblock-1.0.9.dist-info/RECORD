@@ -1,0 +1,12 @@
+ai_coach/__init__.py,sha256=VO9O5T2p4UsgcFnGZt7scNSvP6OtKpezrYD0loixcrA,36
+ai_coach/ai_coach.py,sha256=ebtrgf9G-vZcf_7VQs3Ka_fMHHKw19OSSoXbsxDeID4,9430
+ai_coach/static/README.txt,sha256=bdJ-FpDeHWYyrxLCGpUvvscSMVrci-pKHC5R7shvg9M,767
+ai_coach/static/css/ai_coach.css,sha256=jXGC6DdJOER1HmPtfiq-vC4lXoQ7rBjph5x2XqW8K5U,6225
+ai_coach/static/html/ai_coach.html,sha256=CQt3NWc4dNcywH-bBxr1guL6CcIJj4jvOUcbasfSEeY,1608
+ai_coach/static/js/src/ai_coach.js,sha256=1fgfUW5PjGKpEqUodokomq2xsyFnppkXNGX5hSzeLIo,3645
+ai_coach_xblock-1.0.9.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+ai_coach_xblock-1.0.9.dist-info/METADATA,sha256=qnySEC0HJNLmEY_Y0fjqedWgKK_08YjURCpQcH9sEgw,4196
+ai_coach_xblock-1.0.9.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+ai_coach_xblock-1.0.9.dist-info/entry_points.txt,sha256=1YG7US979aoSrSEGvSyDaDoEIS3rr2TXIqn2WafkWNM,46
+ai_coach_xblock-1.0.9.dist-info/top_level.txt,sha256=nUdv7R-Sz1a_6pVr6xAdDSTtbUHO6LxL2JbNzcDnY-A,9
+ai_coach_xblock-1.0.9.dist-info/RECORD,,
