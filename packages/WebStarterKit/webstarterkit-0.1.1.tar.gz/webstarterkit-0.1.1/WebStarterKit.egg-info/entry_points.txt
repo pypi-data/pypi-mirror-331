@@ -1,0 +1,2 @@
+[console_scripts]
+WebStarterKit = project_creator.cli:main

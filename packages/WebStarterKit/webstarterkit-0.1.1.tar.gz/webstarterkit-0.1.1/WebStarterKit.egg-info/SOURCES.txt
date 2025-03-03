@@ -1,0 +1,10 @@
+README.md
+setup.py
+WebStarterKit/__init__.py
+WebStarterKit/cli.py
+WebStarterKit/create_project.py
+WebStarterKit.egg-info/PKG-INFO
+WebStarterKit.egg-info/SOURCES.txt
+WebStarterKit.egg-info/dependency_links.txt
+WebStarterKit.egg-info/entry_points.txt
+WebStarterKit.egg-info/top_level.txt
