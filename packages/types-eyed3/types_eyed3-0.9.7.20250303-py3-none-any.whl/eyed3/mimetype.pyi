@@ -1,0 +1,26 @@
+from .id3 import ID3_MIME_TYPE as ID3_MIME_TYPE, ID3_MIME_TYPE_EXTENSIONS as ID3_MIME_TYPE_EXTENSIONS
+from os import PathLike
+
+def guessMimetype(filename: str | PathLike[str]) -> str | None: ...
+
+class _FiletypeType:
+    MIME: str
+    EXTENSION: str
+    def __init__(self) -> None: ...
+    def match(self, buf: list[bytes]) -> bool: ...
+
+class Mp2x(_FiletypeType):
+    ...
+
+class Mp3Invalids(_FiletypeType):
+    ...
+
+class Id3Tag(_FiletypeType):
+    ...
+
+class Id3TagExt(Id3Tag):
+    ...
+
+class M3u(_FiletypeType):
+    ...
+
