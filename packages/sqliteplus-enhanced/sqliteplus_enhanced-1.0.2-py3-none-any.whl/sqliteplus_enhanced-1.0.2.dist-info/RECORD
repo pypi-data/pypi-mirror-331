@@ -1,0 +1,11 @@
+sqliteplus/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sqliteplus/cli.py,sha256=uByj827Q-7i5zdWBNSVkIHhybSMrp9_kmhjWKzws6zQ,1591
+sqliteplus/core.py,sha256=S3q1FSZet1SdiZB1NubkZLi8zGPZOkC_0KWhAHg-ojE,2558
+sqliteplus/replication.py,sha256=WKwrNlSB_UCRkue-MICEPOhdz_1fzpNySPTkWZbaINs,2405
+sqliteplus/security.py,sha256=jtBCbhn4kpHzVRRgqXhXgwrfUDaKykRfT5TL_iwr6v0,3810
+sqliteplus/server.py,sha256=z-6vNIPRCpOcjnJ2EK2XcyjwxQr6h45SrOXBaNXEHWk,1306
+sqliteplus_enhanced-1.0.2.dist-info/METADATA,sha256=w1GI9DxvD6G_3iCSJo4rEio-jRAGOurk1oXK0M5t_sM,2967
+sqliteplus_enhanced-1.0.2.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+sqliteplus_enhanced-1.0.2.dist-info/entry_points.txt,sha256=zUMgUM6fQpyBUCqo1B8GnVu7TykFYiqneAbT_IYSkJc,50
+sqliteplus_enhanced-1.0.2.dist-info/top_level.txt,sha256=7VR0O6Zr3G1lqdraGV1pomn3nTuSKYbikLVNEXxM7Yo,11
+sqliteplus_enhanced-1.0.2.dist-info/RECORD,,
