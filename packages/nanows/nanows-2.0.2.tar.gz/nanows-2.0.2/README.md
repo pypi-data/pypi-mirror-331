@@ -1,0 +1,130 @@
+# NanoWS V2
+
+A robust, type-safe Python client for interacting with Nano cryptocurrency nodes via WebSockets.
+
+## Features
+
+- **Clean Domain-Driven Design Architecture**: Clear separation of concerns with domain, application, and infrastructure layers.
+- **Type Safety**: Strong typing for all APIs using Python type hints.
+- **Automatic Reconnection**: Handles connection drops and automatically reconnects to the server.
+- **Subscription Restoration**: Automatically restores all subscriptions after reconnection.
+- **Comprehensive Topic Support**: Supports all Nano WebSocket API topics and filters.
+- **Typed Messages**: Parses WebSocket messages into typed objects for easier handling.
+
+## Installation
+
+```bash
+pip install nanows
+```
+
+## Quick Start
+
+```python
+import asyncio
+from nanows.api import NanoWebSocketClient
+
+async def main():
+    # Create the client
+    client = NanoWebSocketClient(url="ws://localhost:7078")
+    
+    try:
+        # Connect to the WebSocket server
+        await client.connect()
+        
+        # Subscribe to telemetry messages
+        await client.subscribe_telemetry()
+        
+        # Subscribe to confirmation messages for specific accounts
+        await client.subscribe_confirmation(
+            accounts=["nano_1ipx847tk8o46pwxt5qjdbncjqcbwcc1rrmqnkztrfjy5k7z4imsrata9est"],
+            include_election_info=True
+        )
+        
+        # Receive and process messages
+        async for message in client.receive_messages():
+            if message.topic == "telemetry":
+                print(f"Telemetry update - Block count: {message.block_count}")
+            
+            elif message.topic == "confirmation":
+                print(f"Confirmation - Account: {message.account}, Amount: {message.amount}")
+    
+    finally:
+        # Disconnect from the WebSocket server
+        await client.disconnect()
+
+# Run the example
+asyncio.run(main())
+```
+
+## Using the Context Manager
+
+```python
+import asyncio
+from nanows.api import NanoWebSocketClient
+
+async def main():
+    async with NanoWebSocketClient(url="ws://localhost:7078") as client:
+        # Subscribe to telemetry messages
+        await client.subscribe_telemetry()
+        
+        # Receive and process messages
+        async for message in client.receive_messages():
+            if message.topic == "telemetry":
+                print(f"Telemetry update - Block count: {message.block_count}")
+
+# Run the example
+asyncio.run(main())
+```
+
+## Automatic Reconnection
+
+The client automatically handles connection drops and reconnects to the server. All subscriptions are restored after reconnection.
+
+```python
+client = NanoWebSocketClient(
+    url="ws://localhost:7078",
+    reconnect_attempts=10,  # Maximum number of reconnection attempts
+    reconnect_delay=2.0,    # Initial delay between reconnection attempts (seconds)
+    reconnect_backoff=1.2,  # Backoff factor for reconnection delay
+    keepalive_interval=60   # Interval between keepalive messages (seconds)
+)
+```
+
+## Supported Topics
+
+- **confirmation**: Block confirmations
+- **vote**: Representative votes
+- **telemetry**: Node telemetry
+- **started_election**: Started elections
+- **stopped_election**: Stopped elections
+- **new_unconfirmed_block**: New unconfirmed blocks
+- **bootstrap**: Bootstrap events
+- **active_difficulty**: Active difficulty updates
+- **work**: Proof of work generation
+
+## Typed Messages
+
+The client parses WebSocket messages into typed objects for easier handling:
+
+```python
+async for message in client.receive_messages():
+    if isinstance(message, ConfirmationMessage):
+        # Handle confirmation message
+        print(f"Confirmation - Account: {message.account}, Amount: {message.amount}")
+        
+    elif isinstance(message, TelemetryMessage):
+        # Handle telemetry message
+        print(f"Telemetry - Block count: {message.block_count}, Peer count: {message.peer_count}")
+```
+
+## Architecture
+
+The client is built using a clean Domain-Driven Design architecture:
+
+- **Domain Layer**: Contains the core domain models and interfaces
+- **Application Layer**: Contains the high-level services that orchestrate the domain
+- **Infrastructure Layer**: Contains the concrete implementations of the interfaces
+
+## License
+
+MIT 
