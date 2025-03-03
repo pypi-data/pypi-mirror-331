@@ -1,0 +1,208 @@
+Metadata-Version: 2.4
+Name: reclaimed
+Version: 0.1.4
+Summary: A powerful disk usage analyzer with iCloud support
+Project-URL: Homepage, https://github.com/taylorwilsdon/reclaimed
+Project-URL: Repository, https://github.com/taylorwilsdon/reclaimed.git
+Project-URL: Issues, https://github.com/taylorwilsdon/reclaimed/issues
+Author-email: Taylor Wilsdon <taylor@taylorwilsdon.com>
+License: MIT License
+        
+        <<<<<<< HEAD
+        Copyright (c) 2024 Your Name
+        =======
+        Copyright (c) 2025 Taylor Wilsdon
+        >>>>>>> 949812349e7e407e382e45959969bb3abdba5af4
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        <<<<<<< HEAD
+        The above copyright notice and permission notice shall be included in all
+        =======
+        The above copyright notice and this permission notice shall be included in all
+        >>>>>>> 949812349e7e407e382e45959969bb3abdba5af4
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Keywords: analyzer,cli,disk,icloud,storage
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: System :: Systems Administration
+Classifier: Topic :: Utilities
+Requires-Python: >=3.8
+Requires-Dist: click>=8.0.0
+Requires-Dist: rich>=10.0.0
+Requires-Dist: textual>=0.10.0
+Description-Content-Type: text/markdown
+
+# reclaimed 🌟
+
+A powerful and user-friendly command-line tool for analyzing disk usage, with special handling for iCloud storage on macOS. Quickly find your largest files and directories with a beautiful, color-coded interface, and manage them with an interactive terminal UI.
+
+## Features
+
+- 🚀 Fast recursive directory scanning, legitimately performant and batches progress updates efficiently 
+- ☁️ Smart detection of iCloud vs local storage which is nice on the macbook
+- 📊 Beautiful UI (utilizing [Textualize/rich](https://github.com/Textualize/rich) and [Textualize/textual](https://github.com/Textualize/textual) libraries)
+- 🖥️ Interactive terminal UI for browsing and managing files/directories
+- 🗑️ Delete large files and directories directly from the interface
+- 💾 Export results to JSON for further analysis or batch operations
+- ⚡️ Real-time progress indication
+- 🛡️ Graceful handling of permission issues
+
+## Installation
+
+### Prerequisites
+
+- Python 3.8 or higher
+- pip (Python package installer)
+- Technically not a venv but if you aren't using a venv you're generally doing python wrong
+
+### Using pip (preferred)
+
+```bash
+pip install reclaimed
+```
+
+### From Source
+
+```bash
+git clone https://github.com/taylorwilsdon/reclaimed.git
+cd reclaimed
+pip install -r requirements.txt
+hatch shell
+```
+
+## Usage
+
+Basic usage:
+```bash
+reclaimed ~/Documents
+```
+
+Advanced options:
+```bash
+# Show more results
+reclaimed ~/Documents --files 20 --dirs 15
+
+# Save results to JSON
+reclaimed ~/Documents --output results.json
+```
+
+### Options
+
+- `PATH`: Directory to scan (default: current directory)
+- `-f, --files N`: Number of largest files to show (default: 10)
+- `-d, --dirs N`: Number of largest directories to show (default: 10)
+- `-o, --output FILE`: Save results to JSON file
+- `-i, --interactive`: Launch the interactive Textual UI
+
+## Output
+
+### CLI Mode
+The tool provides:
+- A real-time progress indicator showing files scanned and total size
+- Two tables showing the largest files and directories
+- Clear indication of iCloud vs local storage
+- Summary of any access issues encountered
+
+### Interactive Mode
+The interactive UI provides:
+- Tabbed interface to switch between files and directories views
+- Keyboard navigation (arrow keys) to browse through items
+- Ability to sort items by size, name, or path
+- File/directory deletion with confirmation dialog
+- Refresh capability to update the scan results
+
+## Development
+
+This project uses [Hatch](https://hatch.pypa.io/) for development workflow management.
+
+### Setup Development Environment
+
+```bash
+pip install -r requirements.txt
+hatch shell
+```
+
+### Common Commands
+
+```bash
+# Run tests
+hatch run test
+
+# Run tests with coverage
+hatch run test-cov
+
+# Run linting (black, ruff, mypy)
+hatch run lint
+
+# Build distribution packages
+hatch build
+
+# Run with interactive UI
+python -m reclaimed /path/to/scan
+```
+
+## Interactive Mode
+
+The interactive mode launches automatically, or with the `-i` or `--interactive` flag:
+
+```bash
+reclaim ~/Documents -i
+```
+
+Non-interactive mode can be enabled (prints a simpler output with very low overhead) with `--no-interactive`
+
+```bash
+reclaim ~/Documents --no-interactive
+```
+
+### Keyboard Shortcuts
+
+| Key       | Action                    |
+|-----------|---------------------------|
+| F         | Switch to Files view      |
+| D         | Switch to Directories view|
+| S         | Sort items                |
+| R         | Refresh scan              |
+| Delete    | Delete selected item      |
+| ?         | Show help                 |
+| Q         | Quit application          |
+| Arrow keys| Navigate through items    |
+
+### Features
+
+- **Tabbed Interface**: Toggle between Files and Directories views
+- **Sorting**: Sort items by size (default), name, or path
+- **File Management**: Delete files and directories with confirmation
+- **Solarized Dark Theme**: Easy on the eyes for extended use
+
+## Contributing
+
+Contributions are welcome! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
