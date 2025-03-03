@@ -1,0 +1,21 @@
+Metadata-Version: 2.2
+Name: nanows
+Version: 0.1.3
+Summary: A Python WebSocket API for interacting with Nano cryptocurrency nodes.
+Home-page: https://github.com/gr0vity-dev/nanows
+Author: gr0vity
+Author-email: iq.cc@pm.me
+Keywords: nano cryptocurrency websocket api
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: websockets<14,>=13.1
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary

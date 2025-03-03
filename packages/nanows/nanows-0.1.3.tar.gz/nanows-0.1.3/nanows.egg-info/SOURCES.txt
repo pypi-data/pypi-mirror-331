@@ -1,0 +1,10 @@
+README.md
+setup.py
+nanows/__init__.py
+nanows/api.py
+nanows.egg-info/PKG-INFO
+nanows.egg-info/SOURCES.txt
+nanows.egg-info/dependency_links.txt
+nanows.egg-info/requires.txt
+nanows.egg-info/top_level.txt
+tests/test_connection.py
