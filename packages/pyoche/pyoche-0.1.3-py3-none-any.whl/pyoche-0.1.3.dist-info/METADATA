@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: pyoche
+Version: 0.1.3
+Summary: Standardisation of the data structure for ML/DL for engineering applications.
+Home-page: UNKNOWN
+Author: Jean F
+Author-email: jean.fesquet@isae-supaero.fr
+License: MIT License
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: h5py
+Requires-Dist: pathlib
+Requires-Dist: tqdm
+
+UNKNOWN
+
+
