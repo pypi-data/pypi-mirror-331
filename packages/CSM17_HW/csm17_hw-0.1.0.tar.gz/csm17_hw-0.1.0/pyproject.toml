@@ -1,0 +1,21 @@
+[project]
+name = "CSM17_HW"
+version = "0.1.0"
+description = "CSM17 과제전형"
+authors = [
+    {name = "mingk42", email = "xoals123456t@gmail.com"},
+]
+dependencies = ["bs4>=0.0.2"]
+requires-python = ">=3.11"
+readme = "README.md"
+license = {text = "MIT"}
+
+[project.scripts]
+extr-xml="cms17hw.main:extract"
+parse-xml="cms17hw.main:parse"
+
+[tool.setuptools]
+package-dir= {"" = "src"}
+
+[tool.pdm]
+distribution = true
