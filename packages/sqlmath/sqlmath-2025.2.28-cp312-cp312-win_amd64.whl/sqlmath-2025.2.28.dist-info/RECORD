@@ -1,0 +1,7 @@
+sqlmath/__init__.py,sha256=AMuuU6ZMMh0N2pjgw2xo2OYQVB_t7hSlPtQiO_bO-oM,20000
+sqlmath/lib_lightgbm.dll,sha256=4JYFjUT6EvsrmLqPsqpKcbFCQsWAiBA5Ieeg9q6IWdk,4045824
+sqlmath/_sqlmath.cp312-win_amd64.pyd,sha256=lfWj0c7Cp_ItVBIdyn4EoBqDkQCE7StfkX3uAnVpOow,1915904
+sqlmath-2025.2.28.dist-info/LICENSE,sha256=KhokKrD65FnQuqeH79rJDSG_VdYZxu6rNKSHSAxpbYI,1051
+sqlmath-2025.2.28.dist-info/METADATA,sha256=pdnx5tIslsv_37pMhVfGZaxdE-pxaUFYorhDgIC68cg,6774
+sqlmath-2025.2.28.dist-info/WHEEL,sha256=uR6CbMZhwGQFqUfAL0eQ-hP08xxyT9K5NokNjHCzR0A,96
+sqlmath-2025.2.28.dist-info/RECORD,,
