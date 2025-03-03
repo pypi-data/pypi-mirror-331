@@ -1,0 +1,6 @@
+{
+  "resource": true,
+  "name": "opnsense",
+  "version": "0.3.45",
+  "server": "github://api.github.com/oss4u/pulumi-opnsense"
+}
