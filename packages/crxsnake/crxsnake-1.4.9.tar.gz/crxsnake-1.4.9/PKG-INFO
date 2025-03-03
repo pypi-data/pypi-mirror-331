@@ -1,0 +1,31 @@
+Metadata-Version: 2.3
+Name: crxsnake
+Version: 1.4.9
+Summary: A set of my project creation utilities
+License: LICENSE
+Author: CYRAX
+Author-email: cherniq66@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: aiofiles (>=24.1.0,<25.0.0)
+Requires-Dist: disnake (>=2.10.1,<3.0.0)
+Requires-Dist: loguru (>=0.7.3,<0.8.0)
+Requires-Dist: tortoise-orm (>=0.24.0,<0.25.0)
+Description-Content-Type: text/markdown
+
+# CRX-Snake
+
+**CRX-Snake** is a set of utilities designed to simplify the development of projects, including the creation of Discord bots. This library contains a number of features and tools to help you quickly develop and customize bots and other components of your projects.
+
+## Description
+
+crxsnake was developed specifically for internal use and is now available to other developers. It provides user-friendly features and solutions for common tasks in bot development and project management. It includes:
+
+- **Features for working with Discord**: Tools for creating and managing Discord bots using the Disnake library.
+- **File Utilities**: Functions for reading and writing JSON files, making it easy to work with configurations and data.
+- **Database Tools**: Interfaces with Tortoise ORM for data management and query execution.
+- **Logging and debugging**: Includes functions for error logging and debugging.
+
