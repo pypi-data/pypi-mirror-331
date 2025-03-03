@@ -1,0 +1,23 @@
+Metadata-Version: 2.2
+Name: gias3.mesh
+Version: 3.0.1
+Summary: Common modules for GIAS3
+License: MPL 2.0
+Keywords: musculoskeletal,modelling
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+License-File: LICENSE
+Requires-Dist: cython
+Requires-Dist: gias3.common
+Requires-Dist: gias3.registration
+Requires-Dist: gias3.image_analysis
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: vtk
+
+GIAS3 (Geometry Image-Analysis Statistics) Mesh
+===============================================
+
+The mesh packages of the GIAS3 libraries.

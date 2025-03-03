@@ -1,0 +1,16 @@
+gias3.mesh-3.0.1-py3.11-nspkg.pth,sha256=c9gX0iOef2uHG4FJR3w7XoFGM_Uo-jCEjyOpaZBy2L4,463
+gias3/mesh/__init__.py,sha256=JT2-p66AkFRj-qG_NAMqAtpQyBUDnBEFkSBasEhU6R4,840
+gias3/mesh/csgtools.py,sha256=2GcrO18oQw9n554valRx8P2YY7vFDKQPbwPJe0CZsAU,4311
+gias3/mesh/inp.py,sha256=3F8vW7myZTchA9Z9ZK2XHgOID8qHXs4v9wuCHTAhXN4,19832
+gias3/mesh/plywriter.py,sha256=kORfrA3nYkduJGobzLnWvmuMQn5SR3xA73RINyjSMyw,7285
+gias3/mesh/simplemesh.py,sha256=b0PwqyiocrxC2tfND3FkxiK1QeA2En01VY7l9vjwJS0,22488
+gias3/mesh/smutils.py,sha256=AwkkuHxkmw2Bmww7BCp-JRCyZ45y5QlYnIvOLxd-0ho,10311
+gias3/mesh/tetgenoutput.py,sha256=4RzN93F-vaJSEQTasfk7U6SlMqfJM1m6SEi-pFEduqk,4712
+gias3/mesh/vtkPolydataReader.py,sha256=uoK1YcI0NoxjU1SO-qwSFSEwhh0bBacokuJUEiKoH68,7525
+gias3/mesh/vtktools.py,sha256=yd1lP90bwUR6DsFQYCm1AWHt6GnUDRYn7yjBBFnlcd0,57660
+gias3_mesh-3.0.1.dist-info/LICENSE,sha256=zeIV5bQjY-soyiRixFWP9IB7OPODxTdiTDHkRlesWPQ,17099
+gias3_mesh-3.0.1.dist-info/METADATA,sha256=KOHAP-7tw-FBXTAzcfMDaYTdNvUZmlYTzcbhz42elJM,724
+gias3_mesh-3.0.1.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+gias3_mesh-3.0.1.dist-info/namespace_packages.txt,sha256=neP4R9WpCbvFzj7C-M-F1mpO4l255wLIwrSSkGGXNAw,6
+gias3_mesh-3.0.1.dist-info/top_level.txt,sha256=neP4R9WpCbvFzj7C-M-F1mpO4l255wLIwrSSkGGXNAw,6
+gias3_mesh-3.0.1.dist-info/RECORD,,
