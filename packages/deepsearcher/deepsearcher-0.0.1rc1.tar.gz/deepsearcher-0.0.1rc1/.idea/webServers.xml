@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="dd9c718d-dc97-4cb0-b277-a014a9478ee0" name="deep-searcher-30.11">
+        <fileTransfer accessType="SFTP" host="10.100.30.11" port="22" sshConfigId="1e883dec-d150-45ed-a0cb-0bf0ca3dfaa1" sshConfig="zhangchen@10.100.30.11:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

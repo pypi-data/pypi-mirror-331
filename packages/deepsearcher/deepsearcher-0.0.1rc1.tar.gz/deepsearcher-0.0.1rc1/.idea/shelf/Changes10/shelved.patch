@@ -1,0 +1,1341 @@
+Index: deepsearcher/agent/prompt.py
+===================================================================
+diff --git a/deepsearcher/agent/prompt.py b/deepsearcher/agent/prompt.py
+deleted file mode 100644
+--- a/deepsearcher/agent/prompt.py	(revision df8008d69bf02e82614b8e2c42817cef7fa2447f)
++++ /dev/null	(revision df8008d69bf02e82614b8e2c42817cef7fa2447f)
+@@ -1,56 +0,0 @@
+-from typing import List
+-
+-
+-def get_vector_db_search_prompt(
+-    question: str,
+-    collection_info: List,
+-    context: List[str] = None,
+-):
+-    return f"""
+-I provide you with collection_name(s) and corresponding collection_description(s). Please select the collection names that may be related to the question and return a python list of str. If there is no collection related to the question, you can return an empty list.
+-
+-"QUESTION": {question}
+-"COLLECTION_INFO": {collection_info}
+-
+-When you return, you can ONLY return a python list of str, WITHOUT any other additional content. Your selected collection name list is:
+-"""
+-
+-
+-def get_reflect_prompt(
+-    question: str,
+-    mini_questions: List[str],
+-    mini_chuncks: List[str],
+-):
+-    mini_chunk_str = ""
+-    for i, chunk in enumerate(mini_chuncks):
+-        mini_chunk_str += f"""<chunk_{i}>\n{chunk}\n</chunk_{i}>\n"""
+-    reflect_prompt = f"""Determine whether additional search queries are needed based on the original query, previous sub queries, and all retrieved document chunks. If further research is required, provide a Python list of up to 3 search queries. If no further research is required, return an empty list.
+-
+-If the original query is to write a report, then you prefer to generate some further queries, instead return an empty list.
+-
+-    Original Query: {question}
+-    Previous Sub Queries: {mini_questions}
+-    Related Chunks: 
+-    {mini_chunk_str}
+-    """
+-
+-    footer = """Respond exclusively in valid List of str format without any other text."""
+-    return reflect_prompt + footer
+-
+-
+-def get_final_answer_prompt(
+-    question: str,
+-    mini_questions: List[str],
+-    mini_chuncks: List[str],
+-):
+-    mini_chunk_str = ""
+-    for i, chunk in enumerate(mini_chuncks):
+-        mini_chunk_str += f"""<chunk_{i}>\n{chunk}\n</chunk_{i}>\n"""
+-    summary_prompt = f"""You are a AI content analysis expert, good at summarizing content. Please summarize a specific and detailed answer or report based on the previous queries and the retrieved document chunks.
+-
+-    Original Query: {question}
+-    Previous Sub Queries: {mini_questions}
+-    Related Chunks: 
+-    {mini_chunk_str}
+-    """
+-    return summary_prompt
+Index: deepsearcher/agent/reflection.py
+===================================================================
+diff --git a/deepsearcher/agent/reflection.py b/deepsearcher/agent/reflection.py
+deleted file mode 100644
+--- a/deepsearcher/agent/reflection.py	(revision df8008d69bf02e82614b8e2c42817cef7fa2447f)
++++ /dev/null	(revision df8008d69bf02e82614b8e2c42817cef7fa2447f)
+@@ -1,21 +0,0 @@
+-from typing import List, Tuple
+-
+-from deepsearcher import configuration
+-
+-# from deepsearcher.configuration import llm
+-from deepsearcher.agent.prompt import get_reflect_prompt
+-from deepsearcher.vector_db.base import RetrievalResult
+-
+-
+-def generate_gap_queries(
+-    original_query: str, all_sub_queries: List[str], all_chunks: List[RetrievalResult]
+-) -> Tuple[List[str], int]:
+-    llm = configuration.llm
+-    reflect_prompt = get_reflect_prompt(
+-        question=original_query,
+-        mini_questions=all_sub_queries,
+-        mini_chuncks=[chunk.text for chunk in all_chunks],
+-    )
+-    chat_response = llm.chat([{"role": "user", "content": reflect_prompt}])
+-    response_content = chat_response.content
+-    return llm.literal_eval(response_content), chat_response.total_tokens
+Index: deepsearcher/agent/search_vdb.py
+===================================================================
+diff --git a/deepsearcher/agent/search_vdb.py b/deepsearcher/agent/search_vdb.py
+deleted file mode 100644
+--- a/deepsearcher/agent/search_vdb.py	(revision df8008d69bf02e82614b8e2c42817cef7fa2447f)
++++ /dev/null	(revision df8008d69bf02e82614b8e2c42817cef7fa2447f)
+@@ -1,83 +0,0 @@
+-from typing import List
+-
+-# from deepsearcher.configuration import llm, embedding_model, vector_db
+-from deepsearcher import configuration
+-from deepsearcher.agent.prompt import get_vector_db_search_prompt
+-from deepsearcher.tools import log
+-
+-RERANK_PROMPT = """Based on the query questions and the retrieved chunk, to determine whether the chunk is helpful in answering any of the query question, you can only return "YES" or "NO", without any other information.
+-Query Questions: {query}
+-Retrieved Chunk: {retrieved_chunk}
+-
+-Is the chunk helpful in answering the any of the questions?
+-"""
+-
+-
+-async def search_chunks_from_vectordb(query: str, sub_queries: List[str]):
+-    consume_tokens = 0
+-    vector_db = configuration.vector_db
+-    llm = configuration.llm
+-    embedding_model = configuration.embedding_model
+-    # query_embedding = embedding_model.embed_query(query)
+-    collection_infos = vector_db.list_collections()
+-    vector_db_search_prompt = get_vector_db_search_prompt(
+-        question=query,
+-        collection_info=[
+-            {
+-                "collection_name": collection_info.collection_name,
+-                "collection_description": collection_info.description,
+-            }
+-            for collection_info in collection_infos
+-        ],
+-    )
+-    chat_response = llm.chat(messages=[{"role": "user", "content": vector_db_search_prompt}])
+-    llm_collections = llm.literal_eval(chat_response.content)
+-    collection_2_query = {}
+-    consume_tokens += chat_response.total_tokens
+-
+-    for collection in llm_collections:
+-        collection_2_query[collection] = query
+-
+-    for collection_info in collection_infos:
+-        # If a collection description is not provided, use the query as the search query
+-        if not collection_info.description:
+-            collection_2_query[collection_info.collection_name] = query
+-        # If the default collection exists, use the query as the search query
+-        if vector_db.default_collection == collection_info.collection_name:
+-            collection_2_query[collection_info.collection_name] = query
+-    log.color_print(
+-        f"<think> Perform search [{query}] on the vector DB collections: {list(collection_2_query.keys())} </think>\n"
+-    )
+-    all_retrieved_results = []
+-    for collection, col_query in collection_2_query.items():
+-        log.color_print(f"<search> Search [{col_query}] in [{collection}]...  </search>\n")
+-        retrieved_results = vector_db.search_data(
+-            collection=collection, vector=embedding_model.embed_query(col_query)
+-        )
+-
+-        accepted_chunk_num = 0
+-        references = []
+-        for retrieved_result in retrieved_results:
+-            chat_response = llm.chat(
+-                messages=[
+-                    {
+-                        "role": "user",
+-                        "content": RERANK_PROMPT.format(
+-                            query=[col_query] + sub_queries,
+-                            retrieved_chunk=retrieved_result.text,
+-                        ),
+-                    }
+-                ]
+-            )
+-            consume_tokens += chat_response.total_tokens
+-            if chat_response.content.startswith("YES"):
+-                all_retrieved_results.append(retrieved_result)
+-                accepted_chunk_num += 1
+-                references.append(retrieved_result.reference)
+-        if accepted_chunk_num > 0:
+-            log.color_print(
+-                f"<search> Accept {accepted_chunk_num} document chunk(s) from references: {references} </search>\n"
+-            )
+-    return all_retrieved_results, consume_tokens
+-
+-    # vector_db.search_data(collection="deepsearcher", vector=query_embedding)
+Index: deepsearcher/agent/sub_query.py
+===================================================================
+diff --git a/deepsearcher/agent/sub_query.py b/deepsearcher/agent/sub_query.py
+deleted file mode 100644
+--- a/deepsearcher/agent/sub_query.py	(revision df8008d69bf02e82614b8e2c42817cef7fa2447f)
++++ /dev/null	(revision df8008d69bf02e82614b8e2c42817cef7fa2447f)
+@@ -1,34 +0,0 @@
+-from typing import List, Tuple
+-
+-# from deepsearcher.configuration import llm
+-from deepsearcher import configuration
+-
+-PROMPT = """To answer this question more comprehensively, please break down the original question into up to four sub-questions. Return as list of str.
+-If this is a very simple question and no decomposition is necessary, then keep the only one original question in the list.
+-
+-Original Question: {original_query}
+-
+-
+-<EXAMPLE>
+-Example input:
+-"Explain deep learning"
+-
+-Example output:
+-[
+-    "What is deep learning?",
+-    "What is the difference between deep learning and machine learning?",
+-    "What is the history of deep learning?"
+-]
+-</EXAMPLE>
+-
+-Provide your response in list of str format:
+-"""
+-
+-
+-def generate_sub_queries(original_query: str) -> Tuple[List[str], int]:
+-    llm = configuration.llm
+-    chat_response = llm.chat(
+-        messages=[{"role": "user", "content": PROMPT.format(original_query=original_query)}]
+-    )
+-    response_content = chat_response.content
+-    return llm.literal_eval(response_content), chat_response.total_tokens
+Index: deepsearcher/agent/summay.py
+===================================================================
+diff --git a/deepsearcher/agent/summay.py b/deepsearcher/agent/summay.py
+deleted file mode 100644
+--- a/deepsearcher/agent/summay.py	(revision df8008d69bf02e82614b8e2c42817cef7fa2447f)
++++ /dev/null	(revision df8008d69bf02e82614b8e2c42817cef7fa2447f)
+@@ -1,30 +0,0 @@
+-from typing import List, Tuple
+-
+-from deepsearcher import configuration
+-
+-# from deepsearcher.configuration import llm
+-from deepsearcher.agent.prompt import get_final_answer_prompt
+-from deepsearcher.tools import log
+-from deepsearcher.vector_db.base import RetrievalResult
+-
+-
+-def generate_final_answer(
+-    original_query: str, all_sub_queries: List[str], all_chunks: List[RetrievalResult]
+-) -> Tuple[str, int]:
+-    llm = configuration.llm
+-    chunk_texts = []
+-    for chunk in all_chunks:
+-        if "wider_text" in chunk.metadata:
+-            chunk_texts.append(chunk.metadata["wider_text"])
+-        else:
+-            chunk_texts.append(chunk.text)
+-    log.color_print(
+-        f"<think> Summarize answer from all {len(all_chunks)} retrieved chunks... </think>\n"
+-    )
+-    summary_prompt = get_final_answer_prompt(
+-        question=original_query,
+-        mini_questions=all_sub_queries,
+-        mini_chuncks=chunk_texts,
+-    )
+-    chat_response = llm.chat([{"role": "user", "content": summary_prompt}])
+-    return chat_response.content, chat_response.total_tokens
+Index: deepsearcher/cli.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import argparse\nimport logging\nimport warnings\n\nfrom deepsearcher.configuration import Configuration, init_config\nfrom deepsearcher.offline_loading import load_from_local_files, load_from_website\nfrom deepsearcher.online_query import query\n\nhttpx_logger = logging.getLogger(\"httpx\")  # disable openai's logger output\nhttpx_logger.setLevel(logging.WARNING)\n\n\nwarnings.simplefilter(action=\"ignore\", category=FutureWarning)  # disable warning output\n\n\ndef main():\n    config = Configuration()  # Customize your config here\n    init_config(config=config)\n\n    parser = argparse.ArgumentParser(prog=\"deepsearcher\", description=\"Deep Searcher.\")\n    ## Arguments of query\n    parser.add_argument(\"--query\", type=str, default=\"\", help=\"query question or search topic.\")\n    parser.add_argument(\n        \"--max_iter\",\n        type=int,\n        default=3,\n        help=\"Max iterations of reflection. Default is 3.\",\n    )\n\n    ## Arguments of loading\n    parser.add_argument(\n        \"--load\",\n        type=str,\n        nargs=\"+\",  # 1 or more files or urls\n        help=\"Load knowledge from local files or from URLs.\",\n    )\n\n    parser.add_argument(\n        \"--collection_name\",\n        type=str,\n        default=None,\n        help=\"Destination collection name of loaded knowledge.\",\n    )\n    parser.add_argument(\n        \"--collection_desc\",\n        type=str,\n        default=None,\n        help=\"Description of the collection.\",\n    )\n\n    parser.add_argument(\n        \"--force_new_collection\",\n        type=bool,\n        default=False,\n        help=\"If you want to drop origin collection and create a new collection on every load, set to True\",\n    )\n\n    args = parser.parse_args()\n    if args.query:\n        query(args.query, max_iter=args.max_iter)\n    else:\n        if args.load:\n            urls = [url for url in args.load if url.startswith(\"http\")]\n            local_files = [file for file in args.load if not file.startswith(\"http\")]\n            kwargs = {}\n            if args.collection_name:\n                kwargs[\"collection_name\"] = args.collection_name\n            if args.collection_desc:\n                kwargs[\"collection_description\"] = args.collection_desc\n            if args.force_new_collection:\n                kwargs[\"force_new_collection\"] = args.force_new_collection\n            if len(urls) > 0:\n                load_from_website(urls, **kwargs)\n            if len(local_files) > 0:\n                load_from_local_files(local_files, **kwargs)\n        else:\n            print(\"Please provide a query or a load argument.\")\n\n\nif __name__ == \"__main__\":\n    main()\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/deepsearcher/cli.py b/deepsearcher/cli.py
+--- a/deepsearcher/cli.py	(revision df8008d69bf02e82614b8e2c42817cef7fa2447f)
++++ b/deepsearcher/cli.py	(date 1740571322224)
+@@ -20,7 +20,7 @@
+     parser = argparse.ArgumentParser(prog="deepsearcher", description="Deep Searcher.")
+     ## Arguments of query
+     parser.add_argument("--query", type=str, default="", help="query question or search topic.")
+-    parser.add_argument(
++    parser.add_argument(  # TODO: Will move this init arg into config
+         "--max_iter",
+         type=int,
+         default=3,
+Index: deepsearcher/agent/naive_rag.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/deepsearcher/agent/naive_rag.py b/deepsearcher/agent/naive_rag.py
+new file mode 100644
+--- /dev/null	(date 1740568544558)
++++ b/deepsearcher/agent/naive_rag.py	(date 1740568544558)
+@@ -0,0 +1,75 @@
++from typing import List, Tuple
++
++from deepsearcher.agent.base import RAGAgent
++from deepsearcher.agent.collection_router import CollectionRouter
++from deepsearcher.embedding.base import BaseEmbedding
++from deepsearcher.llm.base import BaseLLM
++from deepsearcher.tools import log
++from deepsearcher.vector_db.base import BaseVectorDB, RetrievalResult, deduplicate_results
++
++SUMMARY_PROMPT = """You are a AI content analysis expert, good at summarizing content. Please summarize a specific and detailed answer or report based on the previous queries and the retrieved document chunks.
++
++Original Query: {query}
++
++Related Chunks: 
++{mini_chunk_str}
++"""
++
++
++class NaiveRAG(RAGAgent):
++    def __init__(
++        self,
++        llm: BaseLLM,
++        embedding_model: BaseEmbedding,
++        vector_db: BaseVectorDB,
++        top_k: int = 10,
++        route_collection: bool = True,
++        text_window_splitter: bool = True,
++        **kwargs,
++    ):
++        self.llm = llm
++        self.embedding_model = embedding_model
++        self.vector_db = vector_db
++        self.top_k = top_k
++        self.route_collection = route_collection
++        if self.route_collection:
++            self.collection_router = CollectionRouter(llm=self.llm, vector_db=self.vector_db)
++        self.text_window_splitter = text_window_splitter
++
++    def retrieve(self, query: str, **kwargs) -> Tuple[List[RetrievalResult], int, dict]:
++        consume_tokens = 0
++        if self.route_collection:
++            selected_collections, n_token_route = self.collection_router.invoke(query=query)
++        else:
++            selected_collections = self.collection_router.all_collections
++            n_token_route = 0
++        consume_tokens += n_token_route
++        all_retrieved_results = []
++        for collection in selected_collections:
++            retrieval_res = self.vector_db.search_data(
++                collection=collection,
++                vector=self.embedding_model.embed_query(query),
++                top_k=max(self.top_k // len(selected_collections), 1),
++            )
++            all_retrieved_results.extend(retrieval_res)
++        all_retrieved_results = deduplicate_results(all_retrieved_results)
++        return all_retrieved_results, consume_tokens, {}
++
++    def query(self, query: str, **kwargs) -> Tuple[str, List[RetrievalResult], int]:
++        all_retrieved_results, n_token_retrieval, _ = self.retrieve(query)
++        chunk_texts = []
++        for chunk in all_retrieved_results:
++            if self.text_window_splitter and "wider_text" in chunk.metadata:
++                chunk_texts.append(chunk.metadata["wider_text"])
++            else:
++                chunk_texts.append(chunk.text)
++        mini_chunk_str = ""
++        for i, chunk in enumerate(chunk_texts):
++            mini_chunk_str += f"""<chunk_{i}>\n{chunk}\n</chunk_{i}>\n"""
++
++        summary_prompt = SUMMARY_PROMPT.format(query=query, mini_chunk_str=mini_chunk_str)
++        char_response = self.llm.chat([{"role": "user", "content": summary_prompt}])
++        final_answer = char_response.content
++        log.color_print("\n==== FINAL ANSWER====\n")
++        log.color_print(final_answer)
++        return final_answer, all_retrieved_results, n_token_retrieval + char_response.total_tokens
+Index: deepsearcher/agent/rag_router.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/deepsearcher/agent/rag_router.py b/deepsearcher/agent/rag_router.py
+new file mode 100644
+--- /dev/null	(date 1740568546094)
++++ b/deepsearcher/agent/rag_router.py	(date 1740568546094)
+@@ -0,0 +1,62 @@
++from typing import List, Optional, Tuple
++
++from deepsearcher.agent import RAGAgent
++from deepsearcher.llm.base import BaseLLM
++from deepsearcher.tools import log
++from deepsearcher.vector_db import RetrievalResult
++
++RAG_ROUTER_PROMPT = """Given a list of agent indexes and corresponding descriptions, each agent has a specific function. 
++Given a query, select only one agent that best matches the agent handling the query, and return the index without any other information.
++
++## Question
++{query}
++
++## Agent Indexes and Descriptions
++{description_str}
++
++Only return one agent index number that best matches the agent handling the query:
++"""
++
++
++class RAGRouter(RAGAgent):
++    def __init__(
++        self,
++        llm: BaseLLM,
++        rag_agents: List[RAGAgent],
++        agent_descriptions: Optional[List[str]] = None,
++    ):
++        self.llm = llm
++        self.rag_agents = rag_agents
++        self.agent_descriptions = agent_descriptions
++        if not self.agent_descriptions:
++            try:
++                self.agent_descriptions = [
++                    agent.__class__.__description__ for agent in self.rag_agents
++                ]
++            except Exception:
++                raise AttributeError(
++                    "Please provide agent descriptions or set __description__ attribute for each agent class."
++                )
++
++    def _route(self, query: str) -> Tuple[RAGAgent, int]:
++        description_str = "\n".join(
++            [f"[{i + 1}]: {description}" for i, description in enumerate(self.agent_descriptions)]
++        )
++        prompt = RAG_ROUTER_PROMPT.format(query=query, description_str=description_str)
++        chat_response = self.llm.chat(messages=[{"role": "user", "content": prompt}])
++        selected_agent_index = int(chat_response.content) - 1
++        selected_agent = self.rag_agents[selected_agent_index]
++        log.color_print(
++            f"<think> Select agent [{selected_agent.__class__.__name__}] to answer the query [{query}] </think>\n"
++        )
++        return self.rag_agents[selected_agent_index], chat_response.total_tokens
++
++    def retrieve(self, query: str, **kwargs) -> Tuple[List[RetrievalResult], int, dict]:
++        agent, n_token_router = self._route(query)
++        retrieved_results, n_token_retrieval, metadata = agent.retrieve(query, **kwargs)
++        return retrieved_results, n_token_router + n_token_retrieval, metadata
++
++    def query(self, query: str, **kwargs) -> Tuple[str, List[RetrievalResult], int]:
++        agent, n_token_router = self._route(query)
++        answer, retrieved_results, n_token_retrieval = agent.query(query, **kwargs)
++        return answer, retrieved_results, n_token_router + n_token_retrieval
+Index: deepsearcher/agent/deep_search.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/deepsearcher/agent/deep_search.py b/deepsearcher/agent/deep_search.py
+new file mode 100644
+--- /dev/null	(date 1740560606351)
++++ b/deepsearcher/agent/deep_search.py	(date 1740560606351)
+@@ -0,0 +1,247 @@
++import asyncio
++from typing import List, Tuple
++
++from deepsearcher.agent.base import RAGAgent, describe_class
++from deepsearcher.agent.collection_router import CollectionRouter
++from deepsearcher.embedding.base import BaseEmbedding
++from deepsearcher.llm.base import BaseLLM
++from deepsearcher.tools import log
++from deepsearcher.vector_db import RetrievalResult
++from deepsearcher.vector_db.base import BaseVectorDB, deduplicate_results
++
++SUB_QUERY_PROMPT = """To answer this question more comprehensively, please break down the original question into up to four sub-questions. Return as list of str.
++If this is a very simple question and no decomposition is necessary, then keep the only one original question in the list.
++
++Original Question: {original_query}
++
++
++<EXAMPLE>
++Example input:
++"Explain deep learning"
++
++Example output:
++[
++    "What is deep learning?",
++    "What is the difference between deep learning and machine learning?",
++    "What is the history of deep learning?"
++]
++</EXAMPLE>
++
++Provide your response in list of str format:
++"""
++
++RERANK_PROMPT = """Based on the query questions and the retrieved chunk, to determine whether the chunk is helpful in answering any of the query question, you can only return "YES" or "NO", without any other information.
++
++Query Questions: {query}
++Retrieved Chunk: {retrieved_chunk}
++
++Is the chunk helpful in answering the any of the questions?
++"""
++
++
++REFLECT_PROMPT = """Determine whether additional search queries are needed based on the original query, previous sub queries, and all retrieved document chunks. If further research is required, provide a Python list of up to 3 search queries. If no further research is required, return an empty list.
++
++If the original query is to write a report, then you prefer to generate some further queries, instead return an empty list.
++
++Original Query: {question}
++
++Previous Sub Queries: {mini_questions}
++
++Related Chunks: 
++{mini_chunk_str}
++
++Respond exclusively in valid List of str format without any other text."""
++
++
++SUMMARY_PROMPT = """You are a AI content analysis expert, good at summarizing content. Please summarize a specific and detailed answer or report based on the previous queries and the retrieved document chunks.
++
++Original Query: {question}
++
++Previous Sub Queries: {mini_questions}
++
++Related Chunks: 
++{mini_chunk_str}
++
++"""
++
++
++@describe_class(
++    "This agent is suitable for handling general and simple queries, such as given a topic and then writing a report, survey, or article."
++)
++class DeepSearch(RAGAgent):
++    def __init__(
++        self,
++        llm: BaseLLM,
++        embedding_model: BaseEmbedding,
++        vector_db: BaseVectorDB,
++        max_iter: int = 3,
++        route_collection: bool = True,
++        text_window_splitter: bool = True,
++        **kwargs,
++    ):
++        self.llm = llm
++        self.embedding_model = embedding_model
++        self.vector_db = vector_db
++        self.max_iter = max_iter
++        self.route_collection = route_collection
++        if self.route_collection:
++            self.collection_router = CollectionRouter(llm=self.llm, vector_db=self.vector_db)
++        self.text_window_splitter = text_window_splitter
++
++    def _generate_sub_queries(self, original_query: str) -> Tuple[List[str], int]:
++        chat_response = self.llm.chat(
++            messages=[
++                {"role": "user", "content": SUB_QUERY_PROMPT.format(original_query=original_query)}
++            ]
++        )
++        response_content = chat_response.content
++        return self.llm.literal_eval(response_content), chat_response.total_tokens
++
++    async def _search_chunks_from_vectordb(self, query: str, sub_queries: List[str]):
++        consume_tokens = 0
++        if self.route_collection:
++            selected_collections, n_token_route = self.collection_router.invoke(query=query)
++        else:
++            selected_collections = self.collection_router.all_collections
++            n_token_route = 0
++        consume_tokens += n_token_route
++
++        all_retrieved_results = []
++        query_vector = self.embedding_model.embed_query(query)
++        for collection in selected_collections:
++            log.color_print(f"<search> Search [{query}] in [{collection}]...  </search>\n")
++            retrieved_results = self.vector_db.search_data(
++                collection=collection, vector=query_vector
++            )
++
++            accepted_chunk_num = 0
++            references = []
++            for retrieved_result in retrieved_results:
++                chat_response = self.llm.chat(
++                    messages=[
++                        {
++                            "role": "user",
++                            "content": RERANK_PROMPT.format(
++                                query=[query] + sub_queries,
++                                retrieved_chunk=retrieved_result.text,
++                            ),
++                        }
++                    ]
++                )
++                consume_tokens += chat_response.total_tokens
++                if chat_response.content.startswith("YES"):
++                    all_retrieved_results.append(retrieved_result)
++                    accepted_chunk_num += 1
++                    references.append(retrieved_result.reference)
++            if accepted_chunk_num > 0:
++                log.color_print(
++                    f"<search> Accept {accepted_chunk_num} document chunk(s) from references: {references} </search>\n"
++                )
++        return all_retrieved_results, consume_tokens
++
++    def _generate_gap_queries(
++        self, original_query: str, all_sub_queries: List[str], all_chunks: List[RetrievalResult]
++    ) -> Tuple[List[str], int]:
++        reflect_prompt = REFLECT_PROMPT.format(
++            question=original_query,
++            mini_questions=all_sub_queries,
++            mini_chunk_str=self._format_chunk_texts([chunk.text for chunk in all_chunks]),
++        )
++        chat_response = self.llm.chat([{"role": "user", "content": reflect_prompt}])
++        response_content = chat_response.content
++        return self.llm.literal_eval(response_content), chat_response.total_tokens
++
++    def retrieve(self, original_query: str, **kwargs) -> Tuple[List[RetrievalResult], int, dict]:
++        return asyncio.run(self.async_retrieve(original_query))
++
++    async def async_retrieve(
++        self, original_query: str, **kwargs
++    ) -> Tuple[List[RetrievalResult], int, dict]:
++        ### SUB QUERIES ###
++        log.color_print(f"<query> {original_query} </query>\n")
++        all_search_res = []
++        all_sub_queries = []
++        total_tokens = 0
++
++        sub_queries, used_token = self._generate_sub_queries(original_query)
++        total_tokens += used_token
++        if not sub_queries:
++            log.color_print("No sub queries were generated by the LLM. Exiting.")
++            return [], total_tokens, {}
++        else:
++            log.color_print(
++                f"<think> Break down the original query into new sub queries: {sub_queries}</think>\n"
++            )
++        all_sub_queries.extend(sub_queries)
++        sub_gap_queries = sub_queries
++
++        for iter in range(self.max_iter):
++            log.color_print(f">> Iteration: {iter + 1}\n")
++            search_res_from_vectordb = []
++            search_res_from_internet = []  # TODO
++
++            # Create all search tasks
++            search_tasks = [
++                self._search_chunks_from_vectordb(query, sub_gap_queries)
++                for query in sub_gap_queries
++            ]
++            # Execute all tasks in parallel and wait for results
++            search_results = await asyncio.gather(*search_tasks)
++            # Merge all results
++            for result in search_results:
++                search_res, consumed_token = result
++                total_tokens += consumed_token
++                search_res_from_vectordb.extend(search_res)
++
++            search_res_from_vectordb = deduplicate_results(search_res_from_vectordb)
++            # search_res_from_internet = deduplicate_results(search_res_from_internet)
++            all_search_res.extend(search_res_from_vectordb + search_res_from_internet)
++
++            ### REFLECTION & GET GAP QUERIES ###
++            log.color_print("<think> Reflecting on the search results... </think>\n")
++            sub_gap_queries, consumed_token = self._generate_gap_queries(
++                original_query, all_sub_queries, all_search_res
++            )
++            total_tokens += consumed_token
++            if not sub_gap_queries:
++                log.color_print("<think> No new search queries were generated. Exiting. </think>\n")
++                break
++            else:
++                log.color_print(
++                    f"<think> New search queries for next iteration: {sub_gap_queries} </think>\n"
++                )
++                all_sub_queries.extend(sub_gap_queries)
++
++        all_search_res = deduplicate_results(all_search_res)
++        additional_info = {"all_sub_queries": all_sub_queries}
++        return all_search_res, total_tokens, additional_info
++
++    def query(self, query: str, **kwargs) -> Tuple[str, List[RetrievalResult], int]:
++        all_retrieved_results, n_token_retrieval, additional_info = self.retrieve(query)
++        all_sub_queries = additional_info["all_sub_queries"]
++        chunk_texts = []
++        for chunk in all_retrieved_results:
++            if self.text_window_splitter and "wider_text" in chunk.metadata:
++                chunk_texts.append(chunk.metadata["wider_text"])
++            else:
++                chunk_texts.append(chunk.text)
++        log.color_print(
++            f"<think> Summarize answer from all {len(all_retrieved_results)} retrieved chunks... </think>\n"
++        )
++        summary_prompt = SUMMARY_PROMPT.format(
++            question=query,
++            mini_questions=all_sub_queries,
++            mini_chunk_str=self._format_chunk_texts(chunk_texts),
++        )
++        chat_response = self.llm.chat([{"role": "user", "content": summary_prompt}])
++        return (
++            chat_response.content,
++            all_retrieved_results,
++            n_token_retrieval + chat_response.total_tokens,
++        )
++
++    def _format_chunk_texts(self, chunk_texts: List[str]) -> str:
++        chunk_str = ""
++        for i, chunk in enumerate(chunk_texts):
++            chunk_str += f"""<chunk_{i}>\n{chunk}\n</chunk_{i}>\n"""
++        return chunk_str
+Index: deepsearcher/configuration.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import os\nfrom typing import Literal\n\nimport yaml\n\nfrom deepsearcher.embedding.base import BaseEmbedding\nfrom deepsearcher.llm.base import BaseLLM\nfrom deepsearcher.loader.file_loader.base import BaseLoader\nfrom deepsearcher.loader.web_crawler.base import BaseCrawler\nfrom deepsearcher.vector_db.base import BaseVectorDB\n\ncurrent_dir = os.path.dirname(os.path.abspath(__file__))\nDEFAULT_CONFIG_YAML_PATH = os.path.join(current_dir, \"..\", \"config.yaml\")\n\nFeatureType = Literal[\"llm\", \"embedding\", \"file_loader\", \"web_crawler\", \"vector_db\"]\n\n\nclass Configuration:\n    def __init__(self, config_path: str = DEFAULT_CONFIG_YAML_PATH):\n        # Initialize default configurations\n        config_data = self.load_config_from_yaml(config_path)\n        self.provide_settings = config_data[\"provide_settings\"]\n        self.query_settings = config_data[\"query_settings\"]\n        self.load_settings = config_data[\"load_settings\"]\n\n    def load_config_from_yaml(self, config_path: str):\n        with open(config_path, \"r\") as file:\n            return yaml.safe_load(file)\n\n    def set_provider_config(self, feature: FeatureType, provider: str, provider_configs: dict):\n        \"\"\"\n        Set the provider and its configurations for a given feature.\n\n        :param feature: The feature to configure (e.g., 'llm', 'file_loader', 'web_crawler').\n        :param provider: The provider name (e.g., 'openai', 'deepseek').\n        :param provider_configs: A dictionary with configurations specific to the provider.\n        \"\"\"\n        if feature not in self.provide_settings:\n            raise ValueError(f\"Unsupported feature: {feature}\")\n\n        self.provide_settings[feature][\"provider\"] = provider\n        self.provide_settings[feature][\"config\"] = provider_configs\n\n    def get_provider_config(self, feature: FeatureType):\n        \"\"\"\n        Get the current provider and configuration for a given feature.\n\n        :param feature: The feature to retrieve (e.g., 'llm', 'file_loader', 'web_crawler').\n        :return: A dictionary with provider and its configurations.\n        \"\"\"\n        if feature not in self.provide_settings:\n            raise ValueError(f\"Unsupported feature: {feature}\")\n\n        return self.provide_settings[feature]\n\n\nclass ModuleFactory:\n    def __init__(self, config: Configuration):\n        self.config = config\n\n    def _create_module_instance(self, feature: FeatureType, module_name: str):\n        # e.g.\n        # feature = \"file_loader\"\n        # module_name = \"deepsearcher.loader.file_loader\"\n        class_name = self.config.provide_settings[feature][\"provider\"]\n        module = __import__(module_name, fromlist=[class_name])\n        class_ = getattr(module, class_name)\n        return class_(**self.config.provide_settings[feature][\"config\"])\n\n    def create_llm(self) -> BaseLLM:\n        return self._create_module_instance(\"llm\", \"deepsearcher.llm\")\n\n    def create_embedding(self) -> BaseEmbedding:\n        return self._create_module_instance(\"embedding\", \"deepsearcher.embedding\")\n\n    def create_file_loader(self) -> BaseLoader:\n        return self._create_module_instance(\"file_loader\", \"deepsearcher.loader.file_loader\")\n\n    def create_web_crawler(self) -> BaseCrawler:\n        return self._create_module_instance(\"web_crawler\", \"deepsearcher.loader.web_crawler\")\n\n    def create_vector_db(self) -> BaseVectorDB:\n        return self._create_module_instance(\"vector_db\", \"deepsearcher.vector_db\")\n\n\nconfig = Configuration()\n\nmodule_factory: ModuleFactory = None\nllm: BaseLLM = None\nembedding_model: BaseEmbedding = None\nfile_loader: BaseLoader = None\nvector_db: BaseVectorDB = None\nweb_crawler: BaseCrawler = None\n\n\ndef init_config(config: Configuration):\n    global module_factory, llm, embedding_model, file_loader, vector_db, web_crawler\n    module_factory = ModuleFactory(config)\n    llm = module_factory.create_llm()\n    embedding_model = module_factory.create_embedding()\n    file_loader = module_factory.create_file_loader()\n    web_crawler = module_factory.create_web_crawler()\n    vector_db = module_factory.create_vector_db()\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/deepsearcher/configuration.py b/deepsearcher/configuration.py
+--- a/deepsearcher/configuration.py	(revision df8008d69bf02e82614b8e2c42817cef7fa2447f)
++++ b/deepsearcher/configuration.py	(date 1740571322244)
+@@ -3,6 +3,8 @@
+ 
+ import yaml
+ 
++from deepsearcher.agent import ChainOfRAG, DeepSearch, NaiveRAG
++from deepsearcher.agent.rag_router import RAGRouter
+ from deepsearcher.embedding.base import BaseEmbedding
+ from deepsearcher.llm.base import BaseLLM
+ from deepsearcher.loader.file_loader.base import BaseLoader
+@@ -91,13 +93,53 @@
+ file_loader: BaseLoader = None
+ vector_db: BaseVectorDB = None
+ web_crawler: BaseCrawler = None
++default_searcher: RAGRouter = None
++naive_rag: NaiveRAG = None
+ 
+ 
+ def init_config(config: Configuration):
+-    global module_factory, llm, embedding_model, file_loader, vector_db, web_crawler
++    global \
++        module_factory, \
++        llm, \
++        embedding_model, \
++        file_loader, \
++        vector_db, \
++        web_crawler, \
++        default_searcher, \
++        naive_rag
+     module_factory = ModuleFactory(config)
+     llm = module_factory.create_llm()
+     embedding_model = module_factory.create_embedding()
+     file_loader = module_factory.create_file_loader()
+     web_crawler = module_factory.create_web_crawler()
+     vector_db = module_factory.create_vector_db()
++
++    default_searcher = RAGRouter(
++        llm=llm,
++        rag_agents=[
++            DeepSearch(
++                llm=llm,
++                embedding_model=embedding_model,
++                vector_db=vector_db,
++                max_iter=config.query_settings["max_iter"],
++                route_collection=True,
++                text_window_splitter=True,
++            ),
++            ChainOfRAG(
++                llm=llm,
++                embedding_model=embedding_model,
++                vector_db=vector_db,
++                max_iter=config.query_settings["max_iter"],
++                route_collection=True,
++                text_window_splitter=True,
++            ),
++        ],
++    )
++    naive_rag = NaiveRAG(
++        llm=llm,
++        embedding_model=embedding_model,
++        vector_db=vector_db,
++        top_k=10,
++        route_collection=True,
++        text_window_splitter=True,
++    )
+Index: deepsearcher/agent/collection_router.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/deepsearcher/agent/collection_router.py b/deepsearcher/agent/collection_router.py
+new file mode 100644
+--- /dev/null	(date 1740564140646)
++++ b/deepsearcher/agent/collection_router.py	(date 1740564140646)
+@@ -0,0 +1,56 @@
++from typing import List, Tuple
++
++from deepsearcher.agent.base import BaseAgent
++from deepsearcher.llm.base import BaseLLM
++from deepsearcher.tools import log
++from deepsearcher.vector_db.base import BaseVectorDB
++
++COLLECTION_ROUTE_PROMPT = """
++I provide you with collection_name(s) and corresponding collection_description(s). Please select the collection names that may be related to the question and return a python list of str. If there is no collection related to the question, you can return an empty list.
++
++"QUESTION": {question}
++"COLLECTION_INFO": {collection_info}
++
++When you return, you can ONLY return a python list of str, WITHOUT any other additional content. Your selected collection name list is:
++"""
++
++
++class CollectionRouter(BaseAgent):
++    def __init__(self, llm: BaseLLM, vector_db: BaseVectorDB, **kwargs):
++        self.llm = llm
++        self.vector_db = vector_db
++        self.all_collections = [
++            collection_info.collection_name for collection_info in self.vector_db.list_collections()
++        ]
++
++    def invoke(self, query: str, **kwargs) -> Tuple[List[str], int]:
++        consume_tokens = 0
++        collection_infos = self.vector_db.list_collections()
++        vector_db_search_prompt = COLLECTION_ROUTE_PROMPT.format(
++            question=query,
++            collection_info=[
++                {
++                    "collection_name": collection_info.collection_name,
++                    "collection_description": collection_info.description,
++                }
++                for collection_info in collection_infos
++            ],
++        )
++        chat_response = self.llm.chat(
++            messages=[{"role": "user", "content": vector_db_search_prompt}]
++        )
++        selected_collections = self.llm.literal_eval(chat_response.content)
++        consume_tokens += chat_response.total_tokens
++
++        for collection_info in collection_infos:
++            # If a collection description is not provided, use the query as the search query
++            if not collection_info.description:
++                selected_collections.append(collection_info.collection_name)
++            # If the default collection exists, use the query as the search query
++            if self.vector_db.default_collection == collection_info.collection_name:
++                selected_collections.append(collection_info.collection_name)
++        selected_collections = list(set(selected_collections))
++        log.color_print(
++            f"<think> Perform search [{query}] on the vector DB collections: {selected_collections} </think>\n"
++        )
++        return selected_collections, consume_tokens
+Index: deepsearcher/online_query.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import asyncio\nfrom typing import List, Tuple\n\n# from deepsearcher.configuration import vector_db, embedding_model, llm\nfrom deepsearcher import configuration\nfrom deepsearcher.agent import (\n    generate_final_answer,\n    generate_gap_queries,\n    generate_sub_queries,\n)\nfrom deepsearcher.agent.search_vdb import search_chunks_from_vectordb\nfrom deepsearcher.tools import log\nfrom deepsearcher.vector_db.base import RetrievalResult, deduplicate_results\n\n\n# Add a wrapper function to support synchronous calls\ndef query(original_query: str, max_iter: int = 3) -> Tuple[str, List[RetrievalResult], int]:\n    return asyncio.run(async_query(original_query, max_iter))\n\n\nasync def async_query(\n    original_query: str, max_iter: int = 3\n) -> Tuple[str, List[RetrievalResult], int]:\n    retrieval_res, all_sub_queries, retrieve_conseumed_token = await async_retrieve(\n        original_query, max_iter\n    )\n    ### GENERATE FINAL ANSWER ###\n    log.color_print(\"<think> Generating final answer... </think>\\n\")\n    final_answer, final_consumed_token = generate_final_answer(\n        original_query, all_sub_queries, retrieval_res\n    )\n    log.color_print(\"\\n==== FINAL ANSWER====\\n\")\n    log.color_print(final_answer)\n    return final_answer, retrieval_res, retrieve_conseumed_token + final_consumed_token\n\n\ndef retrieve(\n    original_query: str, max_iter: int = 3\n) -> Tuple[List[RetrievalResult], List[str], int]:\n    return asyncio.run(async_retrieve(original_query, max_iter))\n\n\nasync def async_retrieve(\n    original_query: str, max_iter: int = 3\n) -> Tuple[List[RetrievalResult], List[str], int]:\n    log.color_print(f\"<query> {original_query} </query>\\n\")\n    all_search_res = []\n    all_sub_queries = []\n    total_tokens = 0\n\n    ### SUB QUERIES ###\n    sub_queries, used_token = generate_sub_queries(original_query)\n    total_tokens += used_token\n    if not sub_queries:\n        log.color_print(\"No sub queries were generated by the LLM. Exiting.\")\n        return [], [], total_tokens\n    else:\n        log.color_print(\n            f\"<think> Break down the original query into new sub queries: {sub_queries}</think>\\n\"\n        )\n    all_sub_queries.extend(sub_queries)\n    sub_gap_queries = sub_queries\n\n    for iter in range(max_iter):\n        log.color_print(f\">> Iteration: {iter + 1}\\n\")\n        search_res_from_vectordb = []\n        search_res_from_internet = []  # TODO\n\n        # Create all search tasks\n        search_tasks = [\n            search_chunks_from_vectordb(query, sub_gap_queries) for query in sub_gap_queries\n        ]\n        # Execute all tasks in parallel and wait for results\n        search_results = await asyncio.gather(*search_tasks)\n        # Merge all results\n        for result in search_results:\n            search_res, consumed_token = result\n            total_tokens += consumed_token\n            search_res_from_vectordb.extend(search_res)\n\n        search_res_from_vectordb = deduplicate_results(search_res_from_vectordb)\n        # search_res_from_internet = deduplicate_results(search_res_from_internet)\n        all_search_res.extend(search_res_from_vectordb + search_res_from_internet)\n\n        ### REFLECTION & GET GAP QUERIES ###\n        log.color_print(\"<think> Reflecting on the search results... </think>\\n\")\n        sub_gap_queries, consumed_token = generate_gap_queries(\n            original_query, all_sub_queries, all_search_res\n        )\n        total_tokens += consumed_token\n        if not sub_gap_queries:\n            log.color_print(\"<think> No new search queries were generated. Exiting. </think>\\n\")\n            break\n        else:\n            log.color_print(\n                f\"<think> New search queries for next iteration: {sub_gap_queries} </think>\\n\"\n            )\n            all_sub_queries.extend(sub_gap_queries)\n\n    all_search_res = deduplicate_results(all_search_res)\n    return all_search_res, all_sub_queries, total_tokens\n\n\ndef naive_retrieve(query: str, collection: str = None, top_k=10) -> List[RetrievalResult]:\n    vector_db = configuration.vector_db\n    embedding_model = configuration.embedding_model\n\n    if not collection:\n        retrieval_res = []\n        collections = [col_info.collection_name for col_info in vector_db.list_collections()]\n        for collection in collections:\n            retrieval_res_col = vector_db.search_data(\n                collection=collection,\n                vector=embedding_model.embed_query(query),\n                top_k=top_k // len(collections),\n            )\n            retrieval_res.extend(retrieval_res_col)\n        retrieval_res = deduplicate_results(retrieval_res)\n    else:\n        retrieval_res = vector_db.search_data(\n            collection=collection,\n            vector=embedding_model.embed_query(query),\n            top_k=top_k,\n        )\n    return retrieval_res\n\n\ndef naive_rag_query(\n    query: str, collection: str = None, top_k=10\n) -> Tuple[str, List[RetrievalResult]]:\n    llm = configuration.llm\n    retrieval_res = naive_retrieve(query, collection, top_k)\n\n    chunk_texts = []\n    for chunk in retrieval_res:\n        if \"wider_text\" in chunk.metadata:\n            chunk_texts.append(chunk.metadata[\"wider_text\"])\n        else:\n            chunk_texts.append(chunk.text)\n    mini_chunk_str = \"\"\n    for i, chunk in enumerate(chunk_texts):\n        mini_chunk_str += f\"\"\"<chunk_{i}>\\n{chunk}\\n</chunk_{i}>\\n\"\"\"\n\n    summary_prompt = f\"\"\"You are a AI content analysis expert, good at summarizing content. Please summarize a specific and detailed answer or report based on the previous queries and the retrieved document chunks.\n\n    Original Query: {query}\n    Related Chunks: \n    {mini_chunk_str}\n    \"\"\"\n    char_response = llm.chat([{\"role\": \"user\", \"content\": summary_prompt}])\n    final_answer = char_response.content\n    log.color_print(\"\\n==== FINAL ANSWER====\\n\")\n    log.color_print(final_answer)\n    return final_answer, retrieval_res\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/deepsearcher/online_query.py b/deepsearcher/online_query.py
+--- a/deepsearcher/online_query.py	(revision df8008d69bf02e82614b8e2c42817cef7fa2447f)
++++ b/deepsearcher/online_query.py	(date 1740571132336)
+@@ -1,154 +1,32 @@
+-import asyncio
+ from typing import List, Tuple
+ 
+ # from deepsearcher.configuration import vector_db, embedding_model, llm
+ from deepsearcher import configuration
+-from deepsearcher.agent import (
+-    generate_final_answer,
+-    generate_gap_queries,
+-    generate_sub_queries,
+-)
+-from deepsearcher.agent.search_vdb import search_chunks_from_vectordb
+-from deepsearcher.tools import log
+-from deepsearcher.vector_db.base import RetrievalResult, deduplicate_results
++from deepsearcher.vector_db.base import RetrievalResult
+ 
+ 
+-# Add a wrapper function to support synchronous calls
+ def query(original_query: str, max_iter: int = 3) -> Tuple[str, List[RetrievalResult], int]:
+-    return asyncio.run(async_query(original_query, max_iter))
+-
+-
+-async def async_query(
+-    original_query: str, max_iter: int = 3
+-) -> Tuple[str, List[RetrievalResult], int]:
+-    retrieval_res, all_sub_queries, retrieve_conseumed_token = await async_retrieve(
+-        original_query, max_iter
+-    )
+-    ### GENERATE FINAL ANSWER ###
+-    log.color_print("<think> Generating final answer... </think>\n")
+-    final_answer, final_consumed_token = generate_final_answer(
+-        original_query, all_sub_queries, retrieval_res
+-    )
+-    log.color_print("\n==== FINAL ANSWER====\n")
+-    log.color_print(final_answer)
+-    return final_answer, retrieval_res, retrieve_conseumed_token + final_consumed_token
++    default_searcher = configuration.default_searcher
++    return default_searcher.query(original_query)
+ 
+ 
+ def retrieve(
+     original_query: str, max_iter: int = 3
+ ) -> Tuple[List[RetrievalResult], List[str], int]:
+-    return asyncio.run(async_retrieve(original_query, max_iter))
+-
+-
+-async def async_retrieve(
+-    original_query: str, max_iter: int = 3
+-) -> Tuple[List[RetrievalResult], List[str], int]:
+-    log.color_print(f"<query> {original_query} </query>\n")
+-    all_search_res = []
+-    all_sub_queries = []
+-    total_tokens = 0
+-
+-    ### SUB QUERIES ###
+-    sub_queries, used_token = generate_sub_queries(original_query)
+-    total_tokens += used_token
+-    if not sub_queries:
+-        log.color_print("No sub queries were generated by the LLM. Exiting.")
+-        return [], [], total_tokens
+-    else:
+-        log.color_print(
+-            f"<think> Break down the original query into new sub queries: {sub_queries}</think>\n"
+-        )
+-    all_sub_queries.extend(sub_queries)
+-    sub_gap_queries = sub_queries
+-
+-    for iter in range(max_iter):
+-        log.color_print(f">> Iteration: {iter + 1}\n")
+-        search_res_from_vectordb = []
+-        search_res_from_internet = []  # TODO
+-
+-        # Create all search tasks
+-        search_tasks = [
+-            search_chunks_from_vectordb(query, sub_gap_queries) for query in sub_gap_queries
+-        ]
+-        # Execute all tasks in parallel and wait for results
+-        search_results = await asyncio.gather(*search_tasks)
+-        # Merge all results
+-        for result in search_results:
+-            search_res, consumed_token = result
+-            total_tokens += consumed_token
+-            search_res_from_vectordb.extend(search_res)
+-
+-        search_res_from_vectordb = deduplicate_results(search_res_from_vectordb)
+-        # search_res_from_internet = deduplicate_results(search_res_from_internet)
+-        all_search_res.extend(search_res_from_vectordb + search_res_from_internet)
+-
+-        ### REFLECTION & GET GAP QUERIES ###
+-        log.color_print("<think> Reflecting on the search results... </think>\n")
+-        sub_gap_queries, consumed_token = generate_gap_queries(
+-            original_query, all_sub_queries, all_search_res
+-        )
+-        total_tokens += consumed_token
+-        if not sub_gap_queries:
+-            log.color_print("<think> No new search queries were generated. Exiting. </think>\n")
+-            break
+-        else:
+-            log.color_print(
+-                f"<think> New search queries for next iteration: {sub_gap_queries} </think>\n"
+-            )
+-            all_sub_queries.extend(sub_gap_queries)
+-
+-    all_search_res = deduplicate_results(all_search_res)
+-    return all_search_res, all_sub_queries, total_tokens
++    default_searcher = configuration.default_searcher
++    retrieved_results, consume_tokens, metadata = default_searcher.retrieve(original_query)
++    return retrieved_results, [], consume_tokens
+ 
+ 
+ def naive_retrieve(query: str, collection: str = None, top_k=10) -> List[RetrievalResult]:
+-    vector_db = configuration.vector_db
+-    embedding_model = configuration.embedding_model
+-
+-    if not collection:
+-        retrieval_res = []
+-        collections = [col_info.collection_name for col_info in vector_db.list_collections()]
+-        for collection in collections:
+-            retrieval_res_col = vector_db.search_data(
+-                collection=collection,
+-                vector=embedding_model.embed_query(query),
+-                top_k=top_k // len(collections),
+-            )
+-            retrieval_res.extend(retrieval_res_col)
+-        retrieval_res = deduplicate_results(retrieval_res)
+-    else:
+-        retrieval_res = vector_db.search_data(
+-            collection=collection,
+-            vector=embedding_model.embed_query(query),
+-            top_k=top_k,
+-        )
+-    return retrieval_res
++    naive_rag = configuration.naive_rag
++    all_retrieved_results, consume_tokens, _ = naive_rag.retrieve(query)
++    return all_retrieved_results
+ 
+ 
+ def naive_rag_query(
+     query: str, collection: str = None, top_k=10
+ ) -> Tuple[str, List[RetrievalResult]]:
+-    llm = configuration.llm
+-    retrieval_res = naive_retrieve(query, collection, top_k)
+-
+-    chunk_texts = []
+-    for chunk in retrieval_res:
+-        if "wider_text" in chunk.metadata:
+-            chunk_texts.append(chunk.metadata["wider_text"])
+-        else:
+-            chunk_texts.append(chunk.text)
+-    mini_chunk_str = ""
+-    for i, chunk in enumerate(chunk_texts):
+-        mini_chunk_str += f"""<chunk_{i}>\n{chunk}\n</chunk_{i}>\n"""
+-
+-    summary_prompt = f"""You are a AI content analysis expert, good at summarizing content. Please summarize a specific and detailed answer or report based on the previous queries and the retrieved document chunks.
+-
+-    Original Query: {query}
+-    Related Chunks: 
+-    {mini_chunk_str}
+-    """
+-    char_response = llm.chat([{"role": "user", "content": summary_prompt}])
+-    final_answer = char_response.content
+-    log.color_print("\n==== FINAL ANSWER====\n")
+-    log.color_print(final_answer)
+-    return final_answer, retrieval_res
++    naive_rag = configuration.naive_rag
++    answer, retrieved_results, consume_tokens = naive_rag.query(query)
++    return answer, retrieved_results
+Index: deepsearcher/agent/base.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/deepsearcher/agent/base.py b/deepsearcher/agent/base.py
+new file mode 100644
+--- /dev/null	(date 1740560606347)
++++ b/deepsearcher/agent/base.py	(date 1740560606347)
+@@ -0,0 +1,58 @@
++from abc import ABC
++from typing import Any, List, Tuple
++
++from deepsearcher.vector_db import RetrievalResult
++
++
++def describe_class(description):
++    def decorator(cls):
++        cls.__description__ = description
++        return cls
++
++    return decorator
++
++
++class BaseAgent(ABC):
++    def __init__(self, **kwargs):
++        pass
++
++    def invoke(self, query: str, **kwargs) -> Any:
++        """
++        Invoke the agent and return the result.
++        Args:
++            query: The query string.
++
++        """
++
++
++class RAGAgent(BaseAgent):
++    def __init__(self, **kwargs):
++        pass
++
++    def retrieve(self, query: str, **kwargs) -> Tuple[List[RetrievalResult], int, dict]:
++        """
++        Retrieve document results from the knowledge base.
++
++        Args:
++            query: The query string.
++
++        Returns:
++            A tuple containing:
++                - the retrieved results
++                - the total number of token usages of the LLM
++                - any additional metadata, which can be an empty dictionary
++        """
++
++    def query(self, query: str, **kwargs) -> Tuple[str, List[RetrievalResult], int]:
++        """
++        Query the agent and return the answer.
++
++        Args:
++            query: The query string.
++
++        Returns:
++            A tuple containing:
++                - the result generated from LLM
++                - the retrieved document results
++                - the total number of token usages of the LLM
++        """
+Index: deepsearcher/agent/chain_of_rag.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/deepsearcher/agent/chain_of_rag.py b/deepsearcher/agent/chain_of_rag.py
+new file mode 100644
+--- /dev/null	(date 1740570569248)
++++ b/deepsearcher/agent/chain_of_rag.py	(date 1740570569248)
+@@ -0,0 +1,225 @@
++from typing import List, Tuple
++
++from deepsearcher.agent.base import RAGAgent, describe_class
++from deepsearcher.agent.collection_router import CollectionRouter
++from deepsearcher.embedding.base import BaseEmbedding
++from deepsearcher.llm.base import BaseLLM
++from deepsearcher.tools import log
++from deepsearcher.vector_db import RetrievalResult
++from deepsearcher.vector_db.base import BaseVectorDB, deduplicate_results
++
++FOLLOWUP_QUERY_PROMPT = """You are using a search tool to answer the main query by iteratively searching the database. Given the following intermediate queries and answers, generate a new simple follow-up question that can help answer the main query. You may rephrase or decompose the main query when previous answers are not helpful. Ask simple follow-up questions only as the search tool may not understand complex questions.
++
++## Previous intermediate queries and answers
++{intermediate_context}
++
++## Main query to answer
++{query}
++
++Respond with a simple follow-up question that will help answer the main query, do not explain yourself or output anything else.
++"""
++
++INTERMEDIATE_ANSWER_PROMPT = """Given the following documents, generate an appropriate answer for the query. DO NOT hallucinate any information, only use the provided documents to generate the answer. Respond “No relevant information found” if the documents do not contain useful information.
++
++## Documents
++{retrieved_documents}
++
++## Query
++{sub_query}
++
++Respond with a concise answer only, do not explain yourself or output anything else.
++"""
++
++FINAL_ANSWER_PROMPT = """Given the following intermediate queries and answers, generate a final answer for the main query by combining relevant information. Note that intermediate answers are generated by an LLM and may not always be accurate.
++
++## Documents
++{retrieved_documents}
++
++## Intermediate queries and answers
++{intermediate_context}
++
++## Main query
++{query}
++
++Respond with an appropriate answer only, do not explain yourself or output anything else.
++"""
++
++REFLECTION_PROMPT = """Given the following intermediate queries and answers, judge whether you have enough information to answer the main query. If you believe you have enough information, respond with “Yes”, otherwise respond with “No”.
++
++## Intermediate queries and answers
++{intermediate_context}
++
++## Main query
++{query}
++
++Respond with “Yes” or “No” only, do not explain yourself or output anything else.
++"""
++
++GET_SUPPORTED_DOCS_PROMPT = """Given the following documents, select the ones that are support the Q-A pair.
++
++## Documents
++{retrieved_documents}
++
++## Q-A Pair
++### Question
++{query}
++### Answer
++{answer}
++
++Respond with a python list of indices of the selected documents.
++"""
++
++
++@describe_class(
++    "This agent can decompose complex queries and gradually find the fact information of sub-queries. "
++    "It is very suitable for handling concrete factual queries and multi-hop questions."
++)
++class ChainOfRAG(RAGAgent):
++    def __init__(
++        self,
++        llm: BaseLLM,
++        embedding_model: BaseEmbedding,
++        vector_db: BaseVectorDB,
++        max_iter: int = 4,
++        route_collection: bool = True,
++        text_window_splitter: bool = True,
++        **kwargs,
++    ):
++        self.llm = llm
++        self.embedding_model = embedding_model
++        self.vector_db = vector_db
++        self.max_iter = max_iter
++        self.route_collection = route_collection
++        if self.route_collection:
++            self.collection_router = CollectionRouter(llm=self.llm, vector_db=self.vector_db)
++        self.text_window_splitter = text_window_splitter
++
++    def _reflect_get_subquery(self, query: str, intermediate_context: List[str]) -> Tuple[str, int]:
++        chat_response = self.llm.chat(
++            [
++                {
++                    "role": "user",
++                    "content": FOLLOWUP_QUERY_PROMPT.format(
++                        query=query,
++                        intermediate_context="\n".join(intermediate_context),
++                    ),
++                }
++            ]
++        )
++        return chat_response.content, chat_response.total_tokens
++
++    def _retrieve_and_answer(self, query: str) -> Tuple[str, List[RetrievalResult], int]:
++        consume_tokens = 0
++        if self.route_collection:
++            selected_collections, n_token_route = self.collection_router.invoke(query=query)
++        else:
++            selected_collections = self.collection_router.all_collections
++            n_token_route = 0
++        consume_tokens += n_token_route
++        all_retrieved_results = []
++        for collection in selected_collections:
++            log.color_print(f"<search> Search [{query}] in [{collection}]...  </search>\n")
++            query_vector = self.embedding_model.embed_query(query)
++            retrieved_results = self.vector_db.search_data(
++                collection=collection,
++                vector=query_vector,
++            )
++            all_retrieved_results.extend(retrieved_results)
++        all_retrieved_results = deduplicate_results(all_retrieved_results)
++        chat_response = self.llm.chat(
++            [
++                {
++                    "role": "user",
++                    "content": INTERMEDIATE_ANSWER_PROMPT.format(
++                        retrieved_documents=self._format_retrieved_results(all_retrieved_results),
++                        sub_query=query,
++                    ),
++                }
++            ]
++        )
++        return (
++            chat_response.content,
++            all_retrieved_results,
++            consume_tokens + chat_response.total_tokens,
++        )
++
++    def _get_supported_docs(
++        self, retrieved_results: List[RetrievalResult], query: str, intermediate_answer: str
++    ) -> Tuple[List[RetrievalResult], int]:
++        supported_retrieved_results = []
++        token_usage = 0
++        if "No relevant information found" not in intermediate_answer:
++            chat_response = self.llm.chat(
++                [
++                    {
++                        "role": "user",
++                        "content": GET_SUPPORTED_DOCS_PROMPT.format(
++                            retrieved_documents=self._format_retrieved_results(retrieved_results),
++                            query=query,
++                            answer=intermediate_answer,
++                        ),
++                    }
++                ]
++            )
++            supported_doc_indices = self.llm.literal_eval(chat_response.content)
++            supported_retrieved_results = [retrieved_results[i] for i in supported_doc_indices]
++            token_usage = chat_response.total_tokens
++        return supported_retrieved_results, token_usage
++
++    def retrieve(self, query: str, **kwargs) -> Tuple[List[RetrievalResult], int, dict]:
++        intermediate_contexts = []
++        all_retrieved_results = []
++        token_usage = 0
++        for iter in range(self.max_iter):
++            log.color_print(f">> Iteration: {iter + 1}\n")
++            followup_query, n_token0 = self._reflect_get_subquery(query, intermediate_contexts)
++            intermediate_answer, retrieved_results, n_token1 = self._retrieve_and_answer(
++                followup_query
++            )
++            supported_retrieved_results, n_token2 = self._get_supported_docs(
++                retrieved_results, followup_query, intermediate_answer
++            )
++
++            all_retrieved_results.extend(supported_retrieved_results)
++            intermediate_idx = len(intermediate_contexts) + 1
++            intermediate_contexts.append(
++                f"Intermediate query{intermediate_idx}: {followup_query}\nIntermediate answer{intermediate_idx}: {intermediate_answer}"
++            )
++            token_usage += n_token0 + n_token1 + n_token2
++        all_retrieved_results = deduplicate_results(all_retrieved_results)
++        additional_info = {"intermediate_context": intermediate_contexts}
++        return all_retrieved_results, token_usage, additional_info
++
++    def query(self, query: str, **kwargs) -> Tuple[str, List[RetrievalResult], int]:
++        all_retrieved_results, n_token_retrieval, additional_info = self.retrieve(query)
++        intermediate_context = additional_info["intermediate_context"]
++        log.color_print(
++            f"<think> Summarize answer from all {len(all_retrieved_results)} retrieved chunks... </think>\n"
++        )
++        chat_response = self.llm.chat(
++            [
++                {
++                    "role": "user",
++                    "content": FINAL_ANSWER_PROMPT.format(
++                        retrieved_documents=self._format_retrieved_results(all_retrieved_results),
++                        intermediate_context="\n".join(intermediate_context),
++                        query=query,
++                    ),
++                }
++            ]
++        )
++        return (
++            chat_response.content,
++            all_retrieved_results,
++            n_token_retrieval + chat_response.total_tokens,
++        )
++
++    def _format_retrieved_results(self, retrieved_results: List[RetrievalResult]) -> str:
++        formatted_documents = []
++        for i, result in enumerate(retrieved_results):
++            if self.text_window_splitter and "wider_text" in result.metadata:
++                text = result.metadata["wider_text"]
++            else:
++                text = result.text
++            formatted_documents.append(f"<Document {i}>\n{text}\n<\Document {i}>")
++        return "\n".join(formatted_documents)
+Index: deepsearcher/agent/__init__.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from .reflection import generate_gap_queries\nfrom .sub_query import generate_sub_queries\nfrom .summay import generate_final_answer\n\n__all__ = [\n    \"generate_gap_queries\",\n    \"generate_sub_queries\",\n    \"generate_final_answer\",\n]\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/deepsearcher/agent/__init__.py b/deepsearcher/agent/__init__.py
+--- a/deepsearcher/agent/__init__.py	(revision df8008d69bf02e82614b8e2c42817cef7fa2447f)
++++ b/deepsearcher/agent/__init__.py	(date 1740559449570)
+@@ -1,9 +1,12 @@
+-from .reflection import generate_gap_queries
+-from .sub_query import generate_sub_queries
+-from .summay import generate_final_answer
++from .base import BaseAgent, RAGAgent
++from .chain_of_rag import ChainOfRAG
++from .deep_search import DeepSearch
++from .naive_rag import NaiveRAG
+ 
+ __all__ = [
+-    "generate_gap_queries",
+-    "generate_sub_queries",
+-    "generate_final_answer",
++    "ChainOfRAG",
++    "DeepSearch",
++    "NaiveRAG",
++    "BaseAgent",
++    "RAGAgent",
+ ]

@@ -1,0 +1,132 @@
+Index: deepsearcher/vector_db/milvus.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from typing import List, Optional, Union\n\nimport numpy as np\nfrom pymilvus import DataType, MilvusClient\n\nfrom deepsearcher.loader.splitter import Chunk\nfrom deepsearcher.tools import log\nfrom deepsearcher.vector_db.base import BaseVectorDB, CollectionInfo, RetrievalResult\n\n\nclass Milvus(BaseVectorDB):\n    \"\"\"Milvus class is a subclass of DB class.\"\"\"\n\n    client: MilvusClient = None\n\n    def __init__(\n        self,\n        default_collection: str = \"deepsearcher\",\n        uri: str = \"http://localhost:19530\",\n        token: str = \"root:Milvus\",\n        db: str = \"default\",\n    ):\n        super().__init__(default_collection)\n        self.default_collection = default_collection\n        self.client = MilvusClient(uri=uri, token=token, db_name=db, timeout=30)\n\n    def init_collection(\n        self,\n        dim: int,\n        collection: Optional[str] = \"deepsearcher\",\n        description: Optional[str] = \"\",\n        force_new_collection: bool = False,\n        text_max_length: int = 65_535,\n        reference_max_length: int = 2048,\n        metric_type: str = \"L2\",\n        *args,\n        **kwargs,\n    ):\n        if not collection:\n            collection = self.default_collection\n        if description is None:\n            description = \"\"\n        try:\n            has_collection = self.client.has_collection(collection, timeout=5)\n            if force_new_collection and has_collection:\n                self.client.drop_collection(collection)\n            elif has_collection:\n                return\n            schema = self.client.create_schema(\n                enable_dynamic_field=False, auto_id=True, description=description\n            )\n            schema.add_field(\"id\", DataType.INT64, is_primary=True)\n            schema.add_field(\"embedding\", DataType.FLOAT_VECTOR, dim=dim)\n            schema.add_field(\"text\", DataType.VARCHAR, max_length=text_max_length)\n            schema.add_field(\"reference\", DataType.VARCHAR, max_length=reference_max_length)\n            schema.add_field(\"metadata\", DataType.JSON)\n            index_params = self.client.prepare_index_params()\n            index_params.add_index(field_name=\"embedding\", metric_type=metric_type)\n            self.client.create_collection(\n                collection,\n                schema=schema,\n                index_params=index_params,\n                consistency_level=\"Strong\",\n            )\n            log.color_print(f\"create collection [{collection}] successfully\")\n        except Exception as e:\n            log.critical(f\"fail to init db for milvus, error info: {e}\")\n\n    def insert_data(\n        self,\n        collection: Optional[str],\n        chunks: List[Chunk],\n        batch_size: int = 256,\n        *args,\n        **kwargs,\n    ):\n        if not collection:\n            collection = self.default_collection\n        texts = [chunk.text for chunk in chunks]\n        references = [chunk.reference for chunk in chunks]\n        metadatas = [chunk.metadata for chunk in chunks]\n        embeddings = [chunk.embedding for chunk in chunks]\n\n        datas = [\n            {\n                \"embedding\": embedding,\n                \"text\": text,\n                \"reference\": reference,\n                \"metadata\": metadata,\n            }\n            for embedding, text, reference, metadata in zip(\n                embeddings, texts, references, metadatas\n            )\n        ]\n        batch_datas = [datas[i : i + batch_size] for i in range(0, len(datas), batch_size)]\n        try:\n            for batch_data in batch_datas:\n                self.client.insert(collection_name=collection, data=batch_data)\n        except Exception as e:\n            log.critical(f\"fail to insert data, error info: {e}\")\n\n    def search_data(\n        self,\n        collection: Optional[str],\n        vector: Union[np.array, List[float]],\n        top_k: int = 5,\n        *args,\n        **kwargs,\n    ) -> List[RetrievalResult]:\n        if not collection:\n            collection = self.default_collection\n        try:\n            search_results = self.client.search(\n                collection_name=collection,\n                data=[vector],\n                limit=top_k,\n                output_fields=[\"*\"],\n                timeout=10,\n            )\n\n            return [\n                RetrievalResult(\n                    embedding=b[\"entity\"][\"embedding\"],\n                    text=b[\"entity\"][\"text\"],\n                    reference=b[\"entity\"][\"reference\"],\n                    score=b[\"distance\"],\n                    metadata=b[\"entity\"][\"metadata\"],\n                )\n                for a in search_results\n                for b in a\n            ]\n        except Exception as e:\n            log.critical(f\"fail to search data, error info: {e}\")\n            return []\n\n    def list_collections(self, *args, **kwargs) -> List[CollectionInfo]:\n        collection_infos = []\n        try:\n            collections = self.client.list_collections()\n            for collection in collections:\n                description = self.client.describe_collection(collection)\n                collection_infos.append(\n                    CollectionInfo(\n                        collection_name=collection,\n                        description=description[\"description\"],\n                    )\n                )\n        except Exception as e:\n            log.critical(f\"fail to list collections, error info: {e}\")\n        return collection_infos\n\n    def clear_db(self, collection: str = \"deepsearcher\", *args, **kwargs):\n        if not collection:\n            collection = self.default_collection\n        try:\n            self.client.drop_collection(collection)\n        except Exception as e:\n            log.warning(f\"fail to clear db, error info: {e}\")\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/deepsearcher/vector_db/milvus.py b/deepsearcher/vector_db/milvus.py
+--- a/deepsearcher/vector_db/milvus.py	(revision 526eda97ead0d00e6744c401329a2aa2e5ec6198)
++++ b/deepsearcher/vector_db/milvus.py	(date 1740710119379)
+@@ -55,7 +55,7 @@
+             schema.add_field("reference", DataType.VARCHAR, max_length=reference_max_length)
+             schema.add_field("metadata", DataType.JSON)
+             index_params = self.client.prepare_index_params()
+-            index_params.add_index(field_name="embedding", metric_type=metric_type)
++            index_params.add_index(field_name="embedding", index_type="FLAT", metric_type=metric_type)#todo
+             self.client.create_collection(
+                 collection,
+                 schema=schema,
+Index: evaluation/eval_config.yaml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>provide_settings:\n  llm:\n    provider: \"OpenAI\"\n    config:\n      model: \"gpt-4o-mini\"  # \"gpt-o1-mini\"\n#      api_key: \"sk-xxxx\"  # Uncomment to override the `OPENAI_API_KEY` set in the environment variable\n#      base_url: \"\"\n\n#    provider: \"DeepSeek\"\n#    config:\n#      model: \"deepseek-chat\"  # \"deepseek-reasoner\"\n##      api_key: \"sk-xxxx\"  # Uncomment to override the `DEEPSEEK_API_KEY` set in the environment variable\n##      base_url: \"\"\n\n#    provider: \"SiliconFlow\"\n#    config:\n#      model: \"deepseek-ai/DeepSeek-V3\"\n##      api_key: \"xxxx\"  # Uncomment to override the `SILICONFLOW_API_KEY` set in the environment variable\n##      base_url: \"\"\n\n#    provider: \"PPIO\"\n#    config:\n#      model: \"deepseek/deepseek-v3/community\"\n##      api_key: \"xxxx\"  # Uncomment to override the `PPIO_API_KEY` set in the environment variable\n##      base_url: \"\"\n\n#    provider: \"TogetherAI\"\n#    config:\n#      model: \"deepseek-ai/DeepSeek-V3\"\n##      api_key: \"xxxx\"  # Uncomment to override the `TOGETHER_API_KEY` set in the environment variable\n\n#    provider: \"AzureOpenAI\"\n#    config:\n#      model: \"\"\n#      api_version: \"\"\n##      azure_endpoint: \"xxxx\"  # Uncomment to override the `AZURE_OPENAI_ENDPOINT` set in the environment variable\n##      api_key: \"xxxx\"  # Uncomment to override the `AZURE_OPENAI_KEY` set in the environment variable\n\n  embedding:\n    provider: \"OpenAIEmbedding\"\n    config:\n      model: \"text-embedding-ada-002\"\n#      api_key: \"\"  # Uncomment to override the `OPENAI_API_KEY` set in the environment variable\n\n\n#    provider: \"MilvusEmbedding\"\n#    config:\n#      model: \"default\"\n\n#    provider: \"VoyageEmbedding\"\n#    config:\n#      model: \"voyage-3\"\n##      api_key: \"\"  # Uncomment to override the `VOYAGE_API_KEY` set in the environment variable\n\n#    provider: \"BedrockEmbedding\"\n#    config:\n#      model: \"amazon.titan-embed-text-v2:0\"\n##      aws_access_key_id: \"\"  # Uncomment to override the `AWS_ACCESS_KEY_ID` set in the environment variable\n##      aws_secret_access_key: \"\"  # Uncomment to override the `AWS_SECRET_ACCESS_KEY` set in the environment variable\n    \n#    provider: \"SiliconflowEmbedding\"\n#    config:\n#      model: \"BAAI/bge-m3\"\n# .    api_key: \"\"   # Uncomment to override the `SILICONFLOW_API_KEY` set in the environment variable   \n\n  file_loader:\n#    provider: \"PDFLoader\"\n#    config: {}\n\n    provider: \"JsonFileLoader\"\n    config:\n      text_key: \"text\"\n\n#    provider: \"TextLoader\"\n#    config: {}\n\n#    provider: \"UnstructuredLoader\"\n#    config: {}\n\n  web_crawler:\n    provider: \"FireCrawlCrawler\"\n    config: {}\n\n#    provider: \"Crawl4AICrawler\"\n#    config: {}\n\n#    provider: \"JinaCrawler\"\n#    config: {}\n\n  vector_db:\n    provider: \"Milvus\"\n    config:\n      default_collection: \"deepsearcher\"\n      uri: \"./milvus.db\"\n      token: \"root:Milvus\"\n      db: \"default\"\n\nquery_settings:\n  max_iter: 3\n\nload_settings:\n  chunk_size: 1500\n  chunk_overlap: 100\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/evaluation/eval_config.yaml b/evaluation/eval_config.yaml
+--- a/evaluation/eval_config.yaml	(revision 526eda97ead0d00e6744c401329a2aa2e5ec6198)
++++ b/evaluation/eval_config.yaml	(date 1740788153142)
+@@ -2,9 +2,19 @@
+   llm:
+     provider: "OpenAI"
+     config:
+-      model: "gpt-4o-mini"  # "gpt-o1-mini"
++#      model: "gpt-4o-mini"  # "gpt-o1-mini"
++#      model: "o3-mini"  # "gpt-o1-mini"
+ #      api_key: "sk-xxxx"  # Uncomment to override the `OPENAI_API_KEY` set in the environment variable
+ #      base_url: ""
++#      model: "deepseek-r1-distill-qwen-32b-250120"
++#      model: "deepseek-r1-distill-qwen-7b-250120"
++      model: "deepseek-r1-250120"
++      api_key: "2e200b09-072e-4b3d-ad29-d4bb4714ea8f"
++      base_url: "https://ark.cn-beijing.volces.com/api/v3"
++
++#    provider: "Anthropic"
++#    config:
++#      model: "claude-3-7-sonnet-latest"
+ 
+ #    provider: "DeepSeek"
+ #    config:
+@@ -91,12 +101,13 @@
+     provider: "Milvus"
+     config:
+       default_collection: "deepsearcher"
+-      uri: "./milvus.db"
++#      uri: "./milvus.db"
++      uri: "http://10.100.30.11:19530"
+       token: "root:Milvus"
+-      db: "default"
++      db: "eval"
+ 
+ query_settings:
+-  max_iter: 3
++  max_iter: 4
+ 
+ load_settings:
+   chunk_size: 1500
+Index: evaluation/run.sh
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/evaluation/run.sh b/evaluation/run.sh
+new file mode 100644
+--- /dev/null	(date 1740649958967)
++++ b/evaluation/run.sh	(date 1740649958967)
+@@ -0,0 +1,1 @@
++python evaluate.py --skip_load  --flag o3-mini_max_iter=2 --pre_num 50
+\ No newline at end of file
+Index: deepsearcher/llm/base.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import ast\nimport re\nfrom abc import ABC\nfrom typing import Dict, List\n\n\nclass ChatResponse(ABC):\n    def __init__(self, content: str, total_tokens: int) -> None:\n        self.content = content\n        self.total_tokens = total_tokens\n\n    def __repr__(self) -> str:\n        return f\"ChatResponse(content={self.content}, total_tokens={self.total_tokens})\"\n\n\nclass BaseLLM(ABC):\n    def __init__(self):\n        pass\n\n    def chat(self, messages: List[Dict]) -> ChatResponse:\n        pass\n\n    @staticmethod\n    def literal_eval(response_content: str):\n        response_content = response_content.strip()\n\n        # remove content between <think> and </think>, especial for DeepSeek reasoning model\n        if \"<think>\" and \"</think>\" in response_content:\n            end_of_think = response_content.find(\"</think>\") + len(\"</think>\")\n            response_content = response_content[end_of_think:]\n\n        try:\n            if response_content.startswith(\"```\") and response_content.endswith(\"```\"):\n                if response_content.startswith(\"```python\"):\n                    response_content = response_content[9:-3]\n                elif response_content.startswith(\"```json\"):\n                    response_content = response_content[7:-3]\n                elif response_content.startswith(\"```str\"):\n                    response_content = response_content[6:-3]\n                elif response_content.startswith(\"```\\n\"):\n                    response_content = response_content[4:-3]\n                else:\n                    raise ValueError(\"Invalid code block format\")\n            result = ast.literal_eval(response_content.strip())\n        except ValueError:\n            matches = re.findall(r\"(\\[.*?\\]|\\{.*?\\})\", response_content, re.DOTALL)\n\n            if len(matches) != 1:\n                raise ValueError(\n                    f\"Invalid JSON/List format for response content:\\n{response_content}\"\n                )\n\n            json_part = matches[0]\n            return ast.literal_eval(json_part)\n\n        return result\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/deepsearcher/llm/base.py b/deepsearcher/llm/base.py
+--- a/deepsearcher/llm/base.py	(revision 526eda97ead0d00e6744c401329a2aa2e5ec6198)
++++ b/deepsearcher/llm/base.py	(date 1740725691444)
+@@ -42,7 +42,7 @@
+                 else:
+                     raise ValueError("Invalid code block format")
+             result = ast.literal_eval(response_content.strip())
+-        except ValueError:
++        except Exception:
+             matches = re.findall(r"(\[.*?\]|\{.*?\})", response_content, re.DOTALL)
+ 
+             if len(matches) != 1:
+Index: deepsearcher/agent/rag_router.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from typing import List, Optional, Tuple\n\nfrom deepsearcher.agent import RAGAgent\nfrom deepsearcher.llm.base import BaseLLM\nfrom deepsearcher.tools import log\nfrom deepsearcher.vector_db import RetrievalResult\n\nRAG_ROUTER_PROMPT = \"\"\"Given a list of agent indexes and corresponding descriptions, each agent has a specific function. \nGiven a query, select only one agent that best matches the agent handling the query, and return the index without any other information.\n\n## Question\n{query}\n\n## Agent Indexes and Descriptions\n{description_str}\n\nOnly return one agent index number that best matches the agent handling the query:\n\"\"\"\n\n\nclass RAGRouter(RAGAgent):\n    def __init__(\n        self,\n        llm: BaseLLM,\n        rag_agents: List[RAGAgent],\n        agent_descriptions: Optional[List[str]] = None,\n    ):\n        self.llm = llm\n        self.rag_agents = rag_agents\n        self.agent_descriptions = agent_descriptions\n        if not self.agent_descriptions:\n            try:\n                self.agent_descriptions = [\n                    agent.__class__.__description__ for agent in self.rag_agents\n                ]\n            except Exception:\n                raise AttributeError(\n                    \"Please provide agent descriptions or set __description__ attribute for each agent class.\"\n                )\n\n    def _route(self, query: str) -> Tuple[RAGAgent, int]:\n        description_str = \"\\n\".join(\n            [f\"[{i + 1}]: {description}\" for i, description in enumerate(self.agent_descriptions)]\n        )\n        prompt = RAG_ROUTER_PROMPT.format(query=query, description_str=description_str)\n        chat_response = self.llm.chat(messages=[{\"role\": \"user\", \"content\": prompt}])\n        selected_agent_index = int(chat_response.content) - 1\n        selected_agent = self.rag_agents[selected_agent_index]\n        log.color_print(\n            f\"<think> Select agent [{selected_agent.__class__.__name__}] to answer the query [{query}] </think>\\n\"\n        )\n        return self.rag_agents[selected_agent_index], chat_response.total_tokens\n\n    def retrieve(self, query: str, **kwargs) -> Tuple[List[RetrievalResult], int, dict]:\n        agent, n_token_router = self._route(query)\n        retrieved_results, n_token_retrieval, metadata = agent.retrieve(query, **kwargs)\n        return retrieved_results, n_token_router + n_token_retrieval, metadata\n\n    def query(self, query: str, **kwargs) -> Tuple[str, List[RetrievalResult], int]:\n        agent, n_token_router = self._route(query)\n        answer, retrieved_results, n_token_retrieval = agent.query(query, **kwargs)\n        return answer, retrieved_results, n_token_router + n_token_retrieval\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/deepsearcher/agent/rag_router.py b/deepsearcher/agent/rag_router.py
+--- a/deepsearcher/agent/rag_router.py	(revision 526eda97ead0d00e6744c401329a2aa2e5ec6198)
++++ b/deepsearcher/agent/rag_router.py	(date 1740723377185)
+@@ -44,7 +44,12 @@
+         )
+         prompt = RAG_ROUTER_PROMPT.format(query=query, description_str=description_str)
+         chat_response = self.llm.chat(messages=[{"role": "user", "content": prompt}])
+-        selected_agent_index = int(chat_response.content) - 1
++        try:
++            selected_agent_index = int(chat_response.content) - 1
++        except ValueError:
++            selected_agent_index = int(self.find_last_digit(chat_response.content)) - 1
++
++
+         selected_agent = self.rag_agents[selected_agent_index]
+         log.color_print(
+             f"<think> Select agent [{selected_agent.__class__.__name__}] to answer the query [{query}] </think>\n"
+@@ -60,3 +65,9 @@
+         agent, n_token_router = self._route(query)
+         answer, retrieved_results, n_token_retrieval = agent.query(query, **kwargs)
+         return answer, retrieved_results, n_token_router + n_token_retrieval
++
++    def find_last_digit(self, string):
++        for char in reversed(string):
++            if char.isdigit():
++                return char
++        raise ValueError("No digit found in the string")

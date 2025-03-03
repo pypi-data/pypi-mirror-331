@@ -1,0 +1,14 @@
+<changelist name="cherry_picks_from_evaluation_branch__Signed-off-by__ChengZi__chen_zhang@zilliz_com_" date="1739763531652" recycled="false">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/cherry_picks_from_evaluation_branch__Signed-off-by__ChengZi__chen_zhang@zilliz_com_/shelved.patch" />
+  <option name="DESCRIPTION" value="cherry picks from evaluation branch  Signed-off-by: ChengZi &lt;chen.zhang@zilliz.com&gt;" />
+  <binary>
+    <option name="BEFORE_PATH" value="examples/data/Attention Is All You Need.pdf" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="examples/data/WhatisMilvus.pdf" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+</changelist>

@@ -1,0 +1,15 @@
+{
+    "deepsearcher": {
+        "average_recall": {
+            "2": 0.78,
+            "5": 0.89
+        },
+        "token_usage": 465340
+    },
+    "naive_rag": {
+        "average_recall": {
+            "2": 0.56,
+            "5": 0.685
+        }
+    }
+}

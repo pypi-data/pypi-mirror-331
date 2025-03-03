@@ -1,0 +1,31 @@
+idx,question,naive_recall_at_5,recall_at_5-gpt_4o_mini,recall_at_5-gpt_4o_mini(2),recall_at_5-o1_mini,recall_at_5-o1_mini(2)
+1,When did Lothair Ii's mother die?,1.0,1.0,1.0,1.0,0.5
+2,"Which film was released first, Aas Ka Panchhi or Phoolwari?",1.0,1.0,1.0,1.0,1.0
+3,What is the place of birth of the performer of song Changed It?,0.5,0.5,0.5,1.0,1.0
+4,Are Marufabad and Nasamkhrali both located in the same country?,1.0,1.0,1.0,1.0,1.0
+5,"Which film has the director who is older, God'S Gift To Women or Aldri Annet Enn Bråk?",0.5,0.5,0.75,0.5,0.5
+6,"Which film whose director was born first, El Tonto or The Heart Of Doreon?",0.5,1.0,1.0,0.5,0.5
+7,Who was born first out of Aivar Kuusmaa and Andy Summers?,0.5,1.0,1.0,1.0,1.0
+8,Who is Raghnall Mac Ruaidhrí's paternal grandfather?,1.0,1.0,0.5,0.5,0.5
+9,Do both films Interview With A Hitman and The Last Coupon have the directors from the same country?,0.75,0.75,0.75,0.75,0.75
+10,What nationality is the director of film Blood Street?,0.5,0.5,0.5,1.0,1.0
+11,What is the place of birth of the director of film Gaby: A True Story?,0.5,0.5,0.5,1.0,1.0
+12,Are Vasilyevsky Island and Preobrazheniya Island located in the same country?,1.0,1.0,1.0,1.0,1.0
+13,What nationality is the performer of song When The Stars Go Blue?,0.5,0.5,0.5,0.5,1.0
+14,Who is the child of the performer of song Me And Bobby Mcgee?,0.5,0.5,0.5,0.5,0.5
+15,"Where was the place of death of Maurice, Prince Of Orange's father?",1.0,1.0,1.0,0.5,1.0
+16,Which country Aleksander Koniecpolski (1620–1659)'s father is from?,1.0,1.0,1.0,1.0,1.0
+17,What is the date of death of the director of film Madame La Presidente?,0.5,0.5,0.5,0.5,0.5
+18,Do both directors of films Wrong Turn 5: Bloodlines and Dark River (2017 Film) have the same nationality?,0.75,0.75,0.75,0.75,1.0
+19,"Which film has the director who died first, The Goose Woman or You Can No Longer Remain Silent?",0.5,0.5,0.5,0.5,1.0
+20,Where was the director of film The Private Life Of Cinema born?,0.5,0.5,0.5,1.0,0.5
+21,Where did Coulson Wallop's father study?,1.0,1.0,1.0,0.5,1.0
+22,Why did John Middleton Murry's wife die?,1.0,1.0,1.0,1.0,1.0
+23,Where was the composer of film Billy Elliot born?,0.5,0.5,0.5,1.0,1.0
+24,What is the place of birth of Lisbeth Palme's husband?,1.0,1.0,0.5,1.0,1.0
+25,"Which film came out first, 3 Dots or Dying God?",0.5,0.5,0.5,1.0,1.0
+26,Who is the father-in-law of Sisowath Kossamak?,1.0,1.0,1.0,1.0,0.5
+27,Who is Mugain's mother-in-law?,0.5,0.5,0.0,0.5,0.5
+28,Where did Theodore Salisbury Woolsey's father study?,1.0,0.5,0.5,1.0,1.0
+29,What is the place of birth of the director of film The Return Of Swamp Thing?,0.5,0.5,0.5,1.0,1.0
+30,Where was the place of death of the performer of song I Can'T See Myself Leaving You?,0.5,0.5,0.5,0.5,0.5

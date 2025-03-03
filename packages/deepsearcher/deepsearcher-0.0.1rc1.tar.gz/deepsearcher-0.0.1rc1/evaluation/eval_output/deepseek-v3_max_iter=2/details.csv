@@ -1,0 +1,2 @@
+idx,question,recall,recall_naive,gold_titles,retrieved_titles,retrieved_titles_naive
+0,When did Lothair Ii's mother die?,"{2: 1.0, 5: 1.0}","{2: 0.5, 5: 1.0}","['Lothair II', 'Ermengarde of Tours']","['Lothair II', 'Ermengarde of Tours']","['Lothair II', 'Waldrada of Lotharingia', 'Teutberga', 'Ermengarde of Tours', 'Minamoto no Chikako', 'Adelaide II, Abbess of Quedlinburg', 'Bertha, Duchess of Lorraine', 'Margaretha van Mechelen', 'Adelaide I, Abbess of Quedlinburg', 'Henry II, Lord of Ligny']"

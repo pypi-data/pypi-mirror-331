@@ -1,0 +1,186 @@
+Index: examples/evaluation.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># Some test dataset and evaluation method are ref from https://github.com/OSU-NLP-Group/HippoRAG/tree/main/data , many thanks\n\n################################################################################\n# Note: This evaluation script will cost a lot of LLM token usage, please make sure you have enough token budget.\n################################################################################\n\n\nimport json\nimport os\n\nfrom tqdm import tqdm\n\nfrom deepsearcher.configuration import Configuration, init_config\nfrom deepsearcher.offline_loading import load_from_local_files\nfrom deepsearcher.online_query import query, naive_rag_query, naive_retrieve, retrieve\n\ndataset_name = \"2wikimultihopqa\"  # a multi-hop QA dataset for comprehensive evaluation of reasoning steps\n\ncurrent_dir = os.path.dirname(os.path.abspath(__file__))\n\ncorpus_file = os.path.join(current_dir, f\"data/{dataset_name}_corpus.json\")\n\nconfig = Configuration()\n\nconfig.set_provider_config(\"file_loader\", \"JsonFileLoader\", {\"text_key\": \"text\"})\n## Replace with your provider settings\nconfig.set_provider_config(\"vector_db\", \"Milvus\", {\"uri\": ...})\nconfig.set_provider_config(\"llm\", \"OpenAI\", {\"model\": \"gpt-4o-mini\"})\n# config.set_provider_config(\"llm\", \"AzureOpenAI\", {\n#     \"model\": \"zilliz-gpt-4o-mini\",\n#     \"azure_endpoint\": os.getenv(\"AZURE_OPENAI_ENDPOINT_BAK\"),\n#     \"api_key\": os.getenv(\"AZURE_OPENAI_API_KEY_BAK\"),\n#     \"api_version\": \"2023-05-15\"\n# })\nconfig.set_provider_config(\n    \"embedding\", \"OpenAIEmbedding\", {\"model_name\": \"text-embedding-ada-002\"}\n)\ninit_config(config=config)\n\n# set chunk size to a large number to avoid chunking, because the dataset was chunked already.\nload_from_local_files(\n    corpus_file, force_new_collection=True, chunk_size=999999, chunk_overlap=0\n)\n\n\ndata_with_gt_file_path = os.path.join(current_dir, f\"data/{dataset_name}.json\")\ndata_with_gt = json.load(open(data_with_gt_file_path, \"r\"))\n\nk_list = [1, 2, 5, 10, 15, 20, 30, 40, 50, 80, 100]\ntotal_recall = {k: 0 for k in k_list}\n\n\n# There are 1000 samples in total,\n# for cost efficiency, we only evaluate the first 300 samples by default.\n# You can change the value of pre_num to evaluate more samples.\nPRE_NUM = 300\n\nif not PRE_NUM:\n    PRE_NUM = len(data_with_gt)\n\nfor sample_idx, sample in tqdm(\n    enumerate(data_with_gt), total=min(PRE_NUM, len(data_with_gt)), desc=\"Evaluation\"\n):  # for each sample\n    question = sample[\"question\"]\n\n    retry_num = 3\n    for i in range(retry_num):\n        try:\n            retrieved_results, _, _ = retrieve(question)\n            break\n        except SyntaxError as e:\n            print(\"Parse LLM's output failed, retry again...\")\n\n    # naive_retrieved_results = naive_retrieve(question)\n\n    retrieved_titles = [\n        retrieved_result.metadata[\"title\"] for retrieved_result in retrieved_results\n    ]\n    # naive_retrieved_titles = [retrieved_result.metadata[\"title\"] for retrieved_result in naive_retrieved_results]\n\n    # retrieved_titles = naive_retrieved_titles#todo\n\n    if dataset_name in [\"hotpotqa\", \"hotpotqa_train\"]:\n        gold_passages = [item for item in sample[\"supporting_facts\"]]\n        gold_items = set([item[0] for item in gold_passages])\n        retrieved_items = retrieved_titles\n    elif dataset_name in [\"2wikimultihopqa\"]:\n        gold_passages = [item for item in sample[\"supporting_facts\"]]\n        gold_items = set([item[0] for item in gold_passages])\n        retrieved_items = retrieved_titles\n    # elif dataset_name in ['musique']:\n    #     gold_passages = [item for item in sample['paragraphs'] if item['is_supporting']]\n    #     gold_items = set(\n    #         [item['title'] + '\\n' + item['paragraph_text'] for item in gold_passages])\n    #     retrieved_items = retrieved_passages\n    # else:\n    #     gold_passages = [item for item in sample['paragraphs'] if item['is_supporting']]\n    #     gold_items = set(\n    #         [item['title'] + '\\n' + item['text'] for item in gold_passages])\n    #     retrieved_items = retrieved_passages\n\n    # calculate metrics\n    recall = dict()\n    print(f\"idx: {sample_idx + 1} \", end=\"\")\n    for k in k_list:\n        recall[k] = round(\n            sum(1 for t in gold_items if t in retrieved_items[:k]) / len(gold_items), 4\n        )\n        total_recall[k] += recall[k]\n        print(f\"R@{k}: {total_recall[k] / (sample_idx + 1):.4f} \", end=\"\")\n    print()\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/examples/evaluation.py b/examples/evaluation.py
+--- a/examples/evaluation.py	(revision d2a050f38d208705153286618dd0f8ad2ec7a2e0)
++++ b/examples/evaluation.py	(date 1740129970742)
+@@ -7,12 +7,14 @@
+ 
+ import json
+ import os
++from typing import List, Tuple
+ 
+ from tqdm import tqdm
+ 
+ from deepsearcher.configuration import Configuration, init_config
+ from deepsearcher.offline_loading import load_from_local_files
+ from deepsearcher.online_query import query, naive_rag_query, naive_retrieve, retrieve
++from deepsearcher.vector_db import RetrievalResult
+ 
+ dataset_name = "2wikimultihopqa"  # a multi-hop QA dataset for comprehensive evaluation of reasoning steps
+ 
+@@ -20,66 +22,45 @@
+ 
+ corpus_file = os.path.join(current_dir, f"data/{dataset_name}_corpus.json")
+ 
+-config = Configuration()
++config = Configuration(config_path=os.path.join(current_dir, "..", "config_zc_test.yaml")) #todo: replace with your own config file
+ 
+-config.set_provider_config("file_loader", "JsonFileLoader", {"text_key": "text"})
+-## Replace with your provider settings
+-config.set_provider_config("vector_db", "Milvus", {"uri": ...})
+-config.set_provider_config("llm", "OpenAI", {"model": "gpt-4o-mini"})
+ # config.set_provider_config("llm", "AzureOpenAI", {
+ #     "model": "zilliz-gpt-4o-mini",
+ #     "azure_endpoint": os.getenv("AZURE_OPENAI_ENDPOINT_BAK"),
+ #     "api_key": os.getenv("AZURE_OPENAI_API_KEY_BAK"),
+ #     "api_version": "2023-05-15"
+ # })
+-config.set_provider_config(
+-    "embedding", "OpenAIEmbedding", {"model_name": "text-embedding-ada-002"}
+-)
++
+ init_config(config=config)
+ 
+-# set chunk size to a large number to avoid chunking, because the dataset was chunked already.
+-load_from_local_files(
+-    corpus_file, force_new_collection=True, chunk_size=999999, chunk_overlap=0
+-)
+-
+-
+-data_with_gt_file_path = os.path.join(current_dir, f"data/{dataset_name}.json")
+-data_with_gt = json.load(open(data_with_gt_file_path, "r"))
+-
+-k_list = [1, 2, 5, 10, 15, 20, 30, 40, 50, 80, 100]
+-total_recall = {k: 0 for k in k_list}
+ 
+-
+-# There are 1000 samples in total,
+-# for cost efficiency, we only evaluate the first 300 samples by default.
+-# You can change the value of pre_num to evaluate more samples.
+-PRE_NUM = 300
+-
+-if not PRE_NUM:
+-    PRE_NUM = len(data_with_gt)
+-
+-for sample_idx, sample in tqdm(
+-    enumerate(data_with_gt), total=min(PRE_NUM, len(data_with_gt)), desc="Evaluation"
+-):  # for each sample
+-    question = sample["question"]
+-
+-    retry_num = 3
++def deepsearch_retrieve_titles(question: str, retry_num: int = 4) -> Tuple[List[str], bool]:
++    retrieved_results = []
+     for i in range(retry_num):
+         try:
+             retrieved_results, _, _ = retrieve(question)
+             break
+         except SyntaxError as e:
+             print("Parse LLM's output failed, retry again...")
+-
+-    # naive_retrieved_results = naive_retrieve(question)
+-
+-    retrieved_titles = [
+-        retrieved_result.metadata["title"] for retrieved_result in retrieved_results
+-    ]
+-    # naive_retrieved_titles = [retrieved_result.metadata["title"] for retrieved_result in naive_retrieved_results]
++    if retrieved_results:
++        retrieved_titles = [
++            retrieved_result.metadata["title"] for retrieved_result in retrieved_results
++        ]
++        fail = False
++    else:
++        print("Pipeline error, no retrieved results.")
++        retrieved_titles = []
++        fail = True
++    return retrieved_titles, fail
++
+ 
+-    # retrieved_titles = naive_retrieved_titles#todo
++def naive_retrieve_titles(question: str) -> List[str]:
++    retrieved_results = naive_retrieve(question)
++    retrieved_titles = [retrieved_result.metadata["title"] for retrieved_result in retrieved_results]
++    return retrieved_titles
+ 
++
++def calcu_recall(sample, retrieved_titles, dataset_name, total_recall) -> Tuple[dict, dict]:
+     if dataset_name in ["hotpotqa", "hotpotqa_train"]:
+         gold_passages = [item for item in sample["supporting_facts"]]
+         gold_items = set([item[0] for item in gold_passages])
+@@ -88,6 +69,8 @@
+         gold_passages = [item for item in sample["supporting_facts"]]
+         gold_items = set([item[0] for item in gold_passages])
+         retrieved_items = retrieved_titles
++    else:
++        raise NotImplementedError
+     # elif dataset_name in ['musique']:
+     #     gold_passages = [item for item in sample['paragraphs'] if item['is_supporting']]
+     #     gold_items = set(
+@@ -101,11 +84,60 @@
+ 
+     # calculate metrics
+     recall = dict()
+-    print(f"idx: {sample_idx + 1} ", end="")
++
++
+     for k in k_list:
+         recall[k] = round(
+             sum(1 for t in gold_items if t in retrieved_items[:k]) / len(gold_items), 4
+         )
+         total_recall[k] += recall[k]
+-        print(f"R@{k}: {total_recall[k] / (sample_idx + 1):.4f} ", end="")
+-    print()
++    return recall, total_recall
++
++def print_recall_line(recall: dict, print_ks=[2, 5], pre_str = "", post_str = "\n"):
++    print(pre_str, end="")
++    for k in print_ks:
++        print(f"R@{k}: {recall[k] / (sample_idx + 1):.4f} ", end="")
++    print(post_str, end="")
++
++# set chunk size to a large number to avoid chunking, because the dataset was chunked already.
++# load_from_local_files(
++#     corpus_file, force_new_collection=True, chunk_size=999999, chunk_overlap=0
++# )
++
++
++data_with_gt_file_path = os.path.join(current_dir, f"data/{dataset_name}.json")
++data_with_gt = json.load(open(data_with_gt_file_path, "r"))
++
++k_list = [1, 2, 5, 10, 15, 20, 30, 40, 50, 80, 100]
++
++
++# There are 1000 samples in total,
++# for cost efficiency, we only evaluate the first 300 samples by default.
++# You can change the value of pre_num to evaluate more samples.
++PRE_NUM = 100
++
++if not PRE_NUM:
++    PRE_NUM = len(data_with_gt)
++
++pipeline_error_num = 0
++total_recall = {k: 0 for k in k_list}
++total_recall_naive = {k: 0 for k in k_list}
++end_ind = min(PRE_NUM, len(data_with_gt))
++for sample_idx, sample in enumerate(data_with_gt[:end_ind]):
++    question = sample["question"]
++
++    fail = False
++    # retrieved_titles, fail = deepsearch_retrieve_titles(question)
++    naive_retrieved_titles = naive_retrieve_titles(question)
++
++    if fail:
++        pipeline_error_num += 1
++        print(f"Pipeline error, no retrieved results. Current pipeline_error_num = {pipeline_error_num}")
++
++    print(f"idx: {sample_idx + 1}: ")
++    # recall, total_recall = calcu_recall(sample, retrieved_titles, dataset_name, total_recall)
++    recall_naive, total_recall_naive = calcu_recall(sample, naive_retrieved_titles, dataset_name, total_recall_naive)
++    print("  Naive recall: ")
++    print_recall_line(recall_naive, pre_str="    current recall: ")
++    print_recall_line(total_recall_naive, pre_str="     total recall: ")
++
