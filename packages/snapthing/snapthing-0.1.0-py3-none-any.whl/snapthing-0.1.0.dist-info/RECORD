@@ -1,0 +1,12 @@
+snapthing/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+snapthing/cli.py,sha256=gaWqJJK5cooW2q6EWwlHvk7TKzq9Q26l5d1xDh7oai4,1218
+snapthing/config.py,sha256=zbtMkE6zGkFLZJmrvgSyOapc398FBnWxSbp7lbUIYmc,1439
+snapthing/eventhandling.py,sha256=tSwHARK_S0vzALYBmh6vYDG3X15XWTDE10FtR0oA7ZY,1807
+snapthing/keys.py,sha256=o6BwzAw4MRFvg_MOKDZgfDpLSA2yJQsMctsI9thn1pw,2236
+snapthing/platforms.py,sha256=3BD6uPyG1ernNpzoM2UrhMgVtLksphjNRJGOlEOI414,2577
+snapthing/snap.py,sha256=q_xWtuQ1X57K6h1kgy-S4EMuMKfqAKhM8XfBjMVyuIo,5173
+snapthing-0.1.0.dist-info/METADATA,sha256=3YZY-F73q6DnjO0rqcqrHaI6Omg10-hRhgU9mrJ7B0E,3417
+snapthing-0.1.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+snapthing-0.1.0.dist-info/entry_points.txt,sha256=P-XHfxyY6z7ZRo6ZiaolXbeDK7y3wFlY3j4kHGRBnbU,49
+snapthing-0.1.0.dist-info/top_level.txt,sha256=VL_HDfhzSbbf7ttWFu7BCZsfcWXTqd_clgf2m6NUAQ8,10
+snapthing-0.1.0.dist-info/RECORD,,
