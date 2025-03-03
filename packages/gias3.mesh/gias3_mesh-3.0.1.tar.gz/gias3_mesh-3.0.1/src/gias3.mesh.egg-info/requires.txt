@@ -1,0 +1,7 @@
+cython
+gias3.common
+gias3.registration
+gias3.image_analysis
+numpy
+scipy
+vtk
