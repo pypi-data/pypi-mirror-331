@@ -1,0 +1,2 @@
+[console_scripts]
+vinnie = vinnie.cli:cli
