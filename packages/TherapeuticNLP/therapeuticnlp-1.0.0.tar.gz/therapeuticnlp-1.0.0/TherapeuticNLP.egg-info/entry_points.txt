@@ -1,0 +1,2 @@
+[console_scripts]
+therapeutic-nlp = TherapeuticNLP.scripts.run_extraction:main

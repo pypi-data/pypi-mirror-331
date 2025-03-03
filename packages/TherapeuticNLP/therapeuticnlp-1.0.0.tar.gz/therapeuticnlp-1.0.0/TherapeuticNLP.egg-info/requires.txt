@@ -1,0 +1,17 @@
+pandas
+nltk
+transformers
+promcse
+sentence_transformers
+scipy
+statistics
+openpyxl
+scikit-learn
+numpy
+
+[dev]
+pytest
+pytest-cov
+black
+isort
+flake8

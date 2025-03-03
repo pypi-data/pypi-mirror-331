@@ -1,0 +1,68 @@
+[build-system]
+requires = ["setuptools>=64.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "TherapeuticNLP"
+version = "1.0.0"
+description = "A multi-dimensional Natural Language Processing (NLP) framework for analyzing and assessing the quality of therapeutic conversations"
+readme = "README.md"
+authors = [
+    {name = "Roy Niloy, Sarmed Shaya, Dylan Weston and Zachary Cote", email = "its.royniloy@gmail.com"}
+]
+license = {text = "MIT"}
+requires-python = ">=3.6"
+dependencies = [
+    "pandas",
+    "nltk",
+    "transformers",
+    "promcse",
+    "sentence_transformers",
+    "scipy",
+    "statistics",
+    "openpyxl",
+    "scikit-learn",
+    "numpy",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/R-Niloy/Estimating-Quality-in-Therapeutic-Conversations-A-Multi-Dimensional-NLP-Framework"
+"Bug Tracker" = "https://github.com/R-Niloy/Estimating-Quality-in-Therapeutic-Conversations-A-Multi-Dimensional-NLP-Framework/issues"
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-cov",
+    "black",
+    "isort",
+    "flake8",
+]
+
+[project.scripts]
+therapeutic-nlp = "TherapeuticNLP.scripts.run_extraction:main"
+
+[tool.setuptools]
+packages = ["TherapeuticNLP", "TherapeuticNLP.scripts", "TherapeuticNLP.input_data", "TherapeuticNLP.output_data"]
+
+[tool.setuptools.package-data]
+"TherapeuticNLP.input_data" = ["*.txt", ".gitkeep"]
+"TherapeuticNLP.output_data" = [".gitkeep"]
+
+[tool.black]
+line-length = 88
+target-version = ["py36", "py37", "py38", "py39"]
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
