@@ -1,0 +1,73 @@
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[project]
+name = "simple-dhcp-server"
+license = {file = "LICENSE"}
+keywords = ["dhcp", "logging", "discover", "LAN", "raspberry-pi"]
+dynamic = ["urls", "version"]
+
+authors = [
+  { name="Nicco Kunzmann", email="niccokunzmann@rambler.ru" },
+]
+maintainers = [
+  { name="Nicco Kunzmann", email="niccokunzmann@rambler.ru" },
+]
+description = "Very simple DHCP server written in Python."
+readme = "README.md"
+requires-python = ">=3.9"
+
+# see https://pypi.python.org/pypi?%3Aaction=list_classifiers
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Topic :: Internet",
+    "Topic :: System :: Logging",
+    "Topic :: System :: Monitoring",
+    "Topic :: System :: Networking",
+    "Topic :: System :: Networking :: Monitoring",
+    "Topic :: System :: Systems Administration",
+    "Topic :: Utilities",
+]
+
+
+dependencies = []
+
+
+[project.optional-dependencies]
+qt = [
+    "pyside6",
+    "pyyaml",
+]
+
+[project.scripts]
+simple-dhcp-server = "simple_dhcp_server:main"
+simple-dhcp-server-tk = "simple_dhcp_server.tk:main"
+simple-dhcp-server-qt = "simple_dhcp_server.qt:main"
+simple-dhcp-server-serve = "simple_dhcp_server.dhcp:main"
+simple-dhcp-server-listen = "simple_dhcp_server.listener:main"
+
+
+[tool.hatch.metadata.hooks.vcs.urls]
+Homepage = "https://dhcp.quelltext.eu"
+Repository = "https://github.com/niccokunzmann/simple_dhcp_server/"
+source_archive = "https://github.com/niccokunzmann/simple_dhcp_server/archive/{commit_hash}.zip"
+Issues = "https://github.com/niccokunzmann/simple_dhcp_server/issues"
+Documentation = "https://dhcp.quelltext.eu/"
+Changelog = "https://dhcp.quelltext.eu/changes"
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.version.raw-options]
+# see https://github.com/ofek/hatch-vcs/issues/43#issuecomment-1553065222
+local_scheme = "no-local-version"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "simple_dhcp_server/_version.py"
+
+[tool.hatch.metadata]
+allow-direct-references = true

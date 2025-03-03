@@ -1,0 +1,22 @@
+#!/bin/bash
+
+set -e
+
+config=/var/config
+mkdir -p "$config"
+
+cd "/var/cache"
+
+if test -f /app/server/dhcpgui.conf.bak ; then
+  # During creation of the flatpak, we made a backup of the configuration and a link.
+  echo "I will try to allow the user to edit the configuration."
+  if ! test -f "$config/dhcpgui.conf" ; then
+    echo "No configuration detected. Creating a new one."
+    cp /app/server/dhcpgui.conf.bak "$config/dhcpgui.conf"
+  fi
+else
+  echo "The user cannot edit the configuration."
+  cd /tmp/
+fi
+
+python3 /app/server/dhcpgui.pyw
