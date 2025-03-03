@@ -1,0 +1,340 @@
+Metadata-Version: 2.2
+Name: snapshot_pkg
+Version: 0.1.0
+Summary: A utility to create, manage, and restore snapshots of Python packages and directory structures
+Home-page: https://github.com/B4PT0R/snapshot_pkg
+Author: Baptiste FERRAND
+Author-email: bferrand.maths@gmail.com
+Project-URL: Bug Reports, https://github.com/B4PT0R/snapshot_pkg/issues
+Project-URL: Source, https://github.com/B4PT0R/snapshot_pkg
+Keywords: snapshot,backup,restore,versioning,documentation,ai-collaboration,development-tools
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pathspec
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# snapshot_pkg
+
+A lightweight tool for creating and managing beautiful markdown snapshots of your code projects, designed to enhance AI collaboration and provide development safety.
+
+## Overview
+
+`snapshot_pkg` transforms multi-file projects into a single, navigable markdown document that serves as both documentation and restoration point. It combines the simplicity of a snapshot tool with beautiful formatting, making it perfect for sharing with AI assistants or preserving critical project states.
+
+### Screenshots
+
+![Screenshot of a snapshot file showing directory structure and code](./screenshot1.jpg)
+
+![Screenshot of a snapshot file showing files contents](./screenshot2.jpg)
+
+### Key Features
+
+- **Rich Markdown Format**: 
+  - 📊 **Beautiful directory tree** with icons and proper hierarchy
+  - 🔍 **Syntax highlighting** for dozens of languages
+  - 📝 **Navigable table of contents** for quick access to any file
+  - 🏷️ **Anchored file sections** for direct linking
+
+- **AI Collaboration**: Package your entire project into a single, easy-to-understand document that provides AI assistants with complete context about your codebase
+
+- **Smart Exclusion Control**: Fine-tune exactly what goes into your snapshots using standard gitignore patterns and snapshot-specific exclusions
+
+- **Interactive Restoration**: Choose which files to restore with an intuitive interface and pattern matching
+
+- **Zero Dependencies**: Works alongside your existing version control system without interference
+
+## Installation
+
+```bash
+# Install from PyPI
+pip install snapshot_pkg
+
+# Or install from source
+git clone https://github.com/B4PT0R/snapshot_pkg.git
+cd snapshot_pkg
+pip install -e .
+```
+
+## Quick Start
+
+```bash
+# Create a snapshot of your current directory
+snapshot-pkg snapshot
+
+# List all available snapshots
+snapshot-pkg -l
+
+# Restore from a snapshot
+snapshot-pkg restore 1  # Restore the first snapshot in the list
+```
+
+## Command Reference
+
+### Global Commands
+
+```bash
+# Show help information
+snapshot-pkg --help
+
+# List all available snapshots with details
+snapshot-pkg -l
+snapshot-pkg --list
+```
+
+### Creating Snapshots
+
+```bash
+# Basic syntax
+snapshot-pkg snapshot [OPTIONS] [DIRECTORY]
+
+# Examples:
+snapshot-pkg snapshot                       # Snapshot current directory
+snapshot-pkg snapshot /path/to/project      # Snapshot specific directory
+snapshot-pkg snapshot -m "Fixed bug #42"    # Add a descriptive comment
+snapshot-pkg snapshot -o backups            # Specify custom output folder
+```
+
+### Restoring Snapshots
+
+```bash
+# Basic syntax
+snapshot-pkg restore [OPTIONS] [SNAPSHOT] [TARGET_DIR]
+
+# Examples:
+snapshot-pkg restore                        # Interactive selection
+snapshot-pkg restore 3                      # Restore snapshot #3 from list
+snapshot-pkg restore path/to/snapshot.md    # Restore specific snapshot
+snapshot-pkg restore 2 /path/to/target      # Restore to specific directory
+snapshot-pkg restore -m safe                # Don't overwrite existing files
+snapshot-pkg restore -i                     # Interactively select files
+```
+
+#### Selective Restoration Options
+
+```bash
+# Restore only Python files
+snapshot-pkg restore 2 -p "*.py"
+
+# Restore only files in the 'src' directory
+snapshot-pkg restore 2 -p "src/*"
+
+# Exclude test files from restoration
+snapshot-pkg restore 2 -e "tests/*"
+
+# Combine multiple patterns
+snapshot-pkg restore 2 -p "*.py" -p "*.md" -e "tests/*"
+```
+
+## Snapshot Features
+
+### Beautiful Directory Tree
+
+Snapshots include a visually enhanced directory tree with file type icons and proper hierarchy:
+
+```
+📦 my_project
+├─ 📂 src
+│  ├─ 🐍 __init__.py
+│  ├─ 🐍 main.py
+│  └─ 🐍 utils.py
+├─ 📂 tests
+│  ├─ 🐍 test_main.py
+│  └─ 🐍 test_utils.py
+├─ 📝 README.md
+└─ 📋 requirements.txt
+```
+
+### Navigable Table of Contents
+
+Each snapshot includes a clickable table of contents that links directly to file sections:
+
+```markdown
+## Table of Contents
+1. [src/__init__.py](#src-__init__py)
+2. [src/main.py](#src-mainpy)
+3. [src/utils.py](#src-utilspy)
+4. [tests/test_main.py](#tests-test_mainpy)
+5. [tests/test_utils.py](#tests-test_utilspy)
+6. [README.md](#readmemd)
+7. [requirements.txt](#requirementstxt)
+```
+
+### Syntax Highlighting
+
+Code sections are properly syntax-highlighted based on file extensions:
+
+````markdown
+<a id="src-mainpy"></a>
+### src/main.py
+```python
+def main():
+    print("Hello, world!")
+
+if __name__ == "__main__":
+    main()
+```
+````
+
+### Smart Backtick Handling
+
+The tool automatically handles nested code blocks in markdown files and other content with triple backticks, ensuring that the snapshot remains valid markdown while preserving the original content.
+
+## Configuration with .gitignore
+
+`snapshot_pkg` uses your project's `.gitignore` file to determine which files to exclude from snapshots.
+
+### Standard Exclusions
+
+Regular `.gitignore` patterns work as expected:
+
+```
+# These patterns affect both Git and snapshot-pkg
+node_modules/
+*.log
+__pycache__/
+```
+
+### Snapshot-Specific Exclusions
+
+You can create exclusion patterns that only apply to snapshots by prefixing them with `#spkg`:
+
+```
+# Regular gitignore patterns
+*.log
+logs/
+
+# snapshot-pkg specific patterns (Git ignores these lines)
+#spkg secrets.json               # Exclude from snapshot but keep in Git
+#spkg credentials/*.key          # Exclude entire directory from snapshots
+#spkg !logs/important_log.log    # Include in snapshot despite being excluded by Git
+```
+
+This gives you complete control over what goes into your snapshots without affecting your Git workflow.
+
+## Common Workflows
+
+### Getting AI Help with Your Project
+
+1. **Create a snapshot with a descriptive comment**:
+   ```bash
+   snapshot-pkg snapshot -m "Need help with authentication implementation"
+   ```
+
+2. **Upload the snapshot file** to your AI assistant of choice
+
+3. **Apply the recommendations** you receive back in your project
+
+### Development Safety Net
+
+1. **Create a snapshot before starting work**:
+   ```bash
+   snapshot-pkg snapshot -m "Before refactoring authentication module"
+   ```
+
+2. **Make your changes** to the code
+
+3. **If something goes wrong, restore**:
+   ```bash
+   snapshot-pkg -l            # List existing snapshots
+   snapshot-pkg restore 1     # Restore the most recent snapshot
+   ```
+
+### Selective Updates
+
+1. **Create a snapshot of your working project**:
+   ```bash
+   snapshot-pkg snapshot -m "Working version before UI updates"
+   ```
+
+2. **Make changes** that affect multiple parts of the codebase
+
+3. **If some changes aren't working, selectively restore**:
+   ```bash
+   snapshot-pkg restore -i  # Interactive mode
+   ```
+   The interactive mode will prompt you to choose only the files you want to revert.
+
+## Why Use snapshot_pkg?
+
+- **For AI Collaboration**: Provides AI assistants with complete project context in a single, navigable file
+- **For Quick Backups**: Creates targeted snapshots without affecting your version control system
+- **For Easy Sharing**: Generates self-contained, readable documentation of your codebase
+- **For Experimentation**: Lets you try radical changes with an easy way to restore what worked
+
+## Development
+
+### Running Tests
+
+The `snapshot_pkg` project includes a comprehensive test suite to verify functionality.
+
+#### Option 1: Using the test runner script
+
+Run all tests with the included test runner:
+
+```bash
+# Basic test run
+python tests/run_tests.py
+
+# Verbose output
+python tests/run_tests.py -v
+
+# With coverage report
+python tests/run_tests.py -c
+
+# With HTML coverage report
+python tests/run_tests.py -c --html
+```
+
+#### Option 2: Using pytest
+
+If you prefer pytest, you can run:
+
+```bash
+# Install pytest if needed
+pip install pytest
+
+# Run tests
+pytest
+
+# Run with coverage
+pytest --cov=snapshot_pkg tests/
+```
+
+### Test Structure
+
+The test suite includes:
+
+- Unit tests for core functionality
+- Integration tests for command-line interface
+- Tests for edge cases like binary files and ignored patterns
+
+### Test Coverage
+
+Current test coverage: [Coverage percentage will be added after implementation]
+
+View detailed coverage reports by running:
+```bash
+python tests/run_tests.py -c --html
+```
+Then open `tests/htmlcov/index.html` in your browser.
+
+## License
+
+MIT

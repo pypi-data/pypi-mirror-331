@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+snapshot_pkg/__init__.py
+snapshot_pkg/__main__.py
+snapshot_pkg/restore.py
+snapshot_pkg/snapshot.py
+snapshot_pkg/utils.py
+snapshot_pkg.egg-info/PKG-INFO
+snapshot_pkg.egg-info/SOURCES.txt
+snapshot_pkg.egg-info/dependency_links.txt
+snapshot_pkg.egg-info/entry_points.txt
+snapshot_pkg.egg-info/requires.txt
+snapshot_pkg.egg-info/top_level.txt
+tests/test_snapshot_pkg.py
