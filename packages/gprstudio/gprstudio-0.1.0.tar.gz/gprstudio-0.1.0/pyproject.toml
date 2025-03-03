@@ -1,0 +1,19 @@
+[project]
+name = "gprstudio"
+version = "0.1.0"
+description = "GPR-Studio client library"
+readme = "README.md"
+authors = [
+    { name = "cropphenomics", email = "dev@cropphenomics.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "aiohttp>=3.11.13",
+    "gcsfs>=2025.2.0",
+    "requests>=2.32.3",
+    "xarray[complete]>=2025.1.2",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
