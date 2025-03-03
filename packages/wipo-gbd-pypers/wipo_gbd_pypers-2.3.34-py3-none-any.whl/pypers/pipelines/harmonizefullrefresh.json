@@ -1,0 +1,32 @@
+{
+    "name" : "harmonizefullrefresh",
+    "label": "ORI to GBD Format without indexing",
+    "dag": {
+        "nodes": {
+            "manifests" : "harmonize.Manifests",
+            "etl"       : "harmonize.RefreshETL",
+            "notify"    : "harmonize.Notify"
+        },
+        "edges": [
+            {
+                "from"     : "manifests",
+                "to"       : "etl",
+                "bindings" : { "etl.manifest" : "manifests.manifest_list" }
+            },
+            {
+                "from"     : "manifests",
+                "to"       : "notify",
+                "bindings" : { "notify.manifest" : "manifests.manifest_list"}
+            },
+            {
+                "from"     : "etl",
+                "to"       : "notify",
+                "bindings" : { "notify.flag" : "etl.flag" }
+            }
+        ]
+    },
+    "config" : {
+        "steps": {
+        }
+    }
+}
