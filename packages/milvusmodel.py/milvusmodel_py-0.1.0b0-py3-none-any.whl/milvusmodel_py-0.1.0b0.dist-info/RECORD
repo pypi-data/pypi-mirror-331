@@ -1,0 +1,8 @@
+pymilvusmodel/__init__.py,sha256=IUELqGmJ2G2M2OAUsLO4hTkr2mF3fhUd7rgdTQfX7EA,600
+pymilvusmodel/index.py,sha256=RxWTHUptdQfCugMKiWbYW3F3aM7aUgy0vFBf2-fpXIs,2005
+pymilvusmodel/model.py,sha256=pyzgRqC00HIIHjYco8ZtFFKU-3FGBAw1PRLrIOO7gCM,7639
+milvusmodel_py-0.1.0b0.dist-info/LICENSE,sha256=PjDuphxil6UfJn5gMhVd2WKgXTYO3t3oI8aOaXle9UI,1072
+milvusmodel_py-0.1.0b0.dist-info/METADATA,sha256=beOQSUHZET6FKykRNoyaWZp457hAAfoFfxaGtefM2bs,1934
+milvusmodel_py-0.1.0b0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+milvusmodel_py-0.1.0b0.dist-info/top_level.txt,sha256=Ur_DbWpind897EdS3PRD1CB1tYRdCVRPJNynarQ8UEY,14
+milvusmodel_py-0.1.0b0.dist-info/RECORD,,
