@@ -1,0 +1,10 @@
+completable_html_xblock/__init__.py,sha256=2MZ1y1izmG7FGGVHyvTdOuh4truhmQRMzk4oMRXnJ5w,143
+completable_html_xblock/html.py,sha256=qYOK8_Wnr5eBySSmr1QQfVY4SMNOOVIZiy3vUjhHN-s,2341
+completable_html_xblock/static/js/html_completion.js,sha256=W71meByPWv2uSlG9AZkwS9TKt2gfW19rd4BswzUYYGs,415
+completable_html_xblock/translations/README.txt,sha256=qtC0wGX7nUhZUW3j-VkjbXogEegR5Lm1gcF4fwhYFh4,295
+completable_html_xblock-2.0.0.dist-info/LICENSE,sha256=4S14VpdCb50-mprHwxk4fLGBV611UfrV4kWMIUggnhY,35136
+completable_html_xblock-2.0.0.dist-info/METADATA,sha256=QWAZMsWCYgx2V5EzlCKN_si3agXOkV_4lpCDdAhBa0I,2504
+completable_html_xblock-2.0.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+completable_html_xblock-2.0.0.dist-info/entry_points.txt,sha256=f82VBi7PaX5c_nfRR1MCIACmCLjKsrUDzwtl2LCMm7M,79
+completable_html_xblock-2.0.0.dist-info/top_level.txt,sha256=qpS747IFdWD6u7qxLWs9wCmtewNiLxmMEHWV1JC1bNc,24
+completable_html_xblock-2.0.0.dist-info/RECORD,,
