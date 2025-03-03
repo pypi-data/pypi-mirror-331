@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+uniseq/__init__.py
+uniseq/main.py
+uniseq.egg-info/PKG-INFO
+uniseq.egg-info/SOURCES.txt
+uniseq.egg-info/dependency_links.txt
+uniseq.egg-info/requires.txt
+uniseq.egg-info/top_level.txt
