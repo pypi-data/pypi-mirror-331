@@ -1,0 +1,4 @@
+[console_scripts]
+docs=scripts.generate_docs:generate_api_docs
+serve-docs=scripts.generate_docs:serve_docs
+
