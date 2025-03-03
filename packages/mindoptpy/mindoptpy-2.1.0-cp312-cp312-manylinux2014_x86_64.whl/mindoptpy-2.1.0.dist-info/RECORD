@@ -1,0 +1,9 @@
+mindoptpy/__init__.py,sha256=9iDHDd_fFtJD__68BToO4iSA9tNEdxa3VfiwlfEEWPk,546
+mindoptpy/libmindopt.so.2.1.0,sha256=RNiXJumc5ujfCE4oSwIV6rV5ciS0KIZGdk1tsodDAhg,60501816
+mindoptpy/mindoptpy.so,sha256=qFQc05C2JVnigrH84MSMS9epxpklEsvJlVuIS09Nrmg,2332272
+mindoptpy/linux64-x86/lib/libmindoptmilp.so.2.1.0,sha256=QDlaza5igh8JbwB5m1xI9G0fBzrM37ZXi7UEHqxjPL4,48785168
+mindoptpy/linux64-x86/lib/libmindoptmiqcp.so.2.1.0,sha256=6XcZHttu30bo4W_nATB-p8yF3vrLR3fEq0VuOZXAJbQ,56303856
+mindoptpy-2.1.0.dist-info/METADATA,sha256=X2oV9MMCw-ufx-S5RjrA2ND99xicpIn8qjlyE-RzNcU,1875
+mindoptpy-2.1.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+mindoptpy-2.1.0.dist-info/top_level.txt,sha256=0KPM6liOQzTSfqpr2HooeF6l6myUNsmlTU-NWzKv0NY,10
+mindoptpy-2.1.0.dist-info/RECORD,,
