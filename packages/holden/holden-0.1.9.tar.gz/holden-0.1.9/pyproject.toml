@@ -1,0 +1,222 @@
+[project]
+name = "holden"
+description = "Lightweight, easy-to-use, flexible composite data structures"
+authors = [
+    { name = "Corey Rayburn Yung", email = "coreyrayburnyung@gmail.com" },
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dynamic = []
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development",
+]
+keywords = []
+dependencies = [
+    "bunches",
+    "wonka",
+]
+version = "0.1.9"
+
+[project.license]
+text = "Apache Software License 2.0"
+
+[project.urls]
+Documentation = "https://WithPrecedent.github.io/holden"
+Repository = "https://github.com/WithPrecedent/holden"
+Issues = "https://github.com/WithPrecedent/holden/issues"
+Changelog = "https://WithPrecedent.github.io/holden/changelog"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+plugins = [
+    "sync-pre-commit-lock[pdm]",
+    "pdm-multirun",
+]
+
+[tool.pdm.build]
+package-dir = "src"
+editable-backend = "editables"
+
+[tool.pdm.dev-dependencies]
+docs = [
+    "markdown-callouts",
+    "markdown-exec",
+    "mkdocs",
+    "mkdocs-coverage",
+    "mkdocs-gen-files",
+    "mkdocs-git-committers-plugin-2",
+    "mkdocs-literate-nav",
+    "mkdocs-material",
+    "mkdocs-minify-plugin",
+    "mkdocstrings[python]",
+    "toml",
+]
+quality = [
+    "pre-commit",
+    "ruff",
+]
+tests = [
+    "coverage",
+    "pytest",
+    "pytest-cov",
+    "pytest-randomly",
+    "pytest-xdist",
+]
+
+[tool.pdm.version]
+source = "file"
+path = "src/holden/__init__.py"
+
+[tool.pytest.ini_options]
+addopts = "--showlocals"
+asyncio_mode = "auto"
+filterwarnings = [
+    "ignore::DeprecationWarning",
+]
+pythonpath = [
+    "src",
+]
+
+[tool.ruff]
+extend-exclude = [
+    "docs",
+    "scripts",
+    "site",
+    "tests",
+    ".*.*",
+]
+fix = true
+line-length = 80
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+fixable = [
+    "ALL",
+]
+ignore = [
+    "A001",
+    "ANN401",
+    "ARG003",
+    "ARG005",
+    "C901",
+    "D105",
+    "D400",
+    "D401",
+    "D406",
+    "D407",
+    "D415",
+    "E501",
+    "E731",
+    "ERA001",
+    "EXE002",
+    "FBT001",
+    "G004",
+    "PTH123",
+    "PLR0911",
+    "PLR0912",
+    "PLR0913",
+    "PLR0915",
+    "PLR1711",
+    "Q000",
+    "RET505",
+    "SLF001",
+    "TID252",
+    "TRY003",
+]
+select = [
+    "A",
+    "ANN",
+    "ARG",
+    "B",
+    "BLE",
+    "C",
+    "C4",
+    "COM",
+    "D",
+    "DTZ",
+    "E",
+    "ERA",
+    "EXE",
+    "F",
+    "FBT",
+    "G",
+    "I",
+    "ICN",
+    "INP",
+    "ISC",
+    "N",
+    "NPY",
+    "PD",
+    "PGH",
+    "PIE",
+    "PL",
+    "PLC",
+    "PLE",
+    "PLR",
+    "PLW",
+    "PT",
+    "PTH",
+    "PYI",
+    "Q",
+    "RUF",
+    "RSE",
+    "RET",
+    "S",
+    "SIM",
+    "SLF",
+    "T",
+    "T10",
+    "T20",
+    "TID",
+    "TRY",
+    "UP",
+    "W",
+    "YTT",
+]
+task-tags = [
+    "To Do:",
+]
+
+[tool.ruff.lint.flake8-annotations]
+suppress-none-returning = true
+
+[tool.ruff.lint.flake8-quotes]
+docstring-quotes = "double"
+inline-quotes = "double"
+multiline-quotes = "double"
+
+[tool.ruff.lint.flake8-type-checking]
+exempt-modules = [
+    "typing",
+    "typing_extensions",
+]
+
+[tool.ruff.lint.flake8-unused-arguments]
+ignore-variadic-names = true
+
+[tool.ruff.lint.isort]
+case-sensitive = true
+required-imports = [
+    "from __future__ import annotations",
+]
+split-on-trailing-comma = false
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+ignore-decorators = [
+    "typing.overload",
+]
