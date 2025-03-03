@@ -1,0 +1,4 @@
+include pltstat/README.md
+include pltstat/LICENSE
+include pltstat/requirements.txt
+include pltstat/.gitignore
