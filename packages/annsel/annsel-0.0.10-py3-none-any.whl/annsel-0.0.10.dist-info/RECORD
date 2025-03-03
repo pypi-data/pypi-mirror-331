@@ -1,0 +1,17 @@
+annsel/__init__.py,sha256=T-7AcN4tGDiwtWObfAbyPSopGWwPRaMzBxw4qDYlf6s,329
+annsel/core/__init__.py,sha256=m0niLG_iAtIaMJ6dsEUxcN8BJD5EeW56H6vyVaf8JXs,218
+annsel/core/expr.py,sha256=eljIOLx2qlHrkAqvWXELh90bLiVqSezdS5zNUJHsw4s,1817
+annsel/core/extensions.py,sha256=CknT474em_ln6JZr0TqWbCx7Jslr8OQTwSWuXBkquy8,2240
+annsel/core/typing.py,sha256=rzAevOSbN2rDYooLShNJmJUAAPwlU4Yz9fMScA2suD0,660
+annsel/core/utils.py,sha256=lURw6knbbWj1hNMOkgaGrURzlcyRgu8kEDaxCWoOvO8,442
+annsel/datasets/__init__.py,sha256=jG4iproqIq_cFRLYja3EyQPriqKmzPkUMSJbLm7d8uI,92
+annsel/datasets/basic.py,sha256=qbfTtsZovdRnmCPFSb-Yccz-YE7Ge_P24RpJp5xVWLc,2924
+annsel/tl/__init__.py,sha256=8U77tWNDXyd7pwH9mSyM6gw1IwJxB2WNbnNtWdaYdiI,66
+annsel/tl/_filter.py,sha256=fv-ktnht-gXooSEvp9aVJZFEz6LwxlZNxPXZj8pV6-k,2111
+annsel/tl/_group_by.py,sha256=Rf4dxnPYiOnoVlnxBuW8MUVNjzGNooC-oIfudVPOf0M,2710
+annsel/tl/_select.py,sha256=XCHB8WGCBgJLB8bsMGqgOTBBG7kSgNZ1u_TMQbsSnOY,1733
+annsel/tl/anndata.py,sha256=8RAW9be693PPYGE51L3WpUvtkWAjPif0gY_MUauQPr4,7975
+annsel-0.0.10.dist-info/METADATA,sha256=uV4ZEpdqqZIkPv_rWz_5S3_-B220Ibruq-6V_qaPoaM,14861
+annsel-0.0.10.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+annsel-0.0.10.dist-info/licenses/LICENSE,sha256=syPCZsYde_sbxNmk-HeWmjAytaY7hIQJdAKtRyZQtJo,1079
+annsel-0.0.10.dist-info/RECORD,,
