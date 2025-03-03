@@ -1,0 +1,2 @@
+[console_scripts]
+jk-soccer-core = jk_soccer_core:main
