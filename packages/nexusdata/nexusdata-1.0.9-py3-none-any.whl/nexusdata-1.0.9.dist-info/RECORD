@@ -1,0 +1,9 @@
+nexusdata/__init__.py,sha256=w-lICME4UfYY9euuIjtvEANkk0fsEl_y92wGOdfmeyU,60
+nexusdata/client.py,sha256=2lVUaRs3AbL_4EpXvXwrl4SZyNRwYAPmpIWogUjpIcw,6197
+nexusdata/proto/qwdata_pb2.py,sha256=KTS0PXMrFGsZrw9cVi9B4ZVzEQ9PhXwk9fxMRBs-a-k,3712
+nexusdata/proto/qwdata_pb2_grpc.py,sha256=o0T3WizL2hBez7iwTUeKhFHkaJmvY_ivvRwjYGvoeRU,5389
+nexusdata-1.0.9.dist-info/LICENSE,sha256=HIEX0xjqtCgsPe9yFjEOVZyTH2G8UVgZftRR5HSjEhE,1066
+nexusdata-1.0.9.dist-info/METADATA,sha256=9bl81wsNy1bF0S4dbqTyOPs_wrrHX2I1Yybiqz_T_UY,7591
+nexusdata-1.0.9.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+nexusdata-1.0.9.dist-info/top_level.txt,sha256=qz5IcrBx5e3bRzowTF_COUk5bD53hJkH202Nei9cr8Q,10
+nexusdata-1.0.9.dist-info/RECORD,,
