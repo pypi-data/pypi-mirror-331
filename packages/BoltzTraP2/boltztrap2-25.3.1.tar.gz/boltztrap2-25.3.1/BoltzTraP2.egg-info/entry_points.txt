@@ -1,0 +1,2 @@
+[console_scripts]
+btp2 = BoltzTraP2.interface:btp2_main

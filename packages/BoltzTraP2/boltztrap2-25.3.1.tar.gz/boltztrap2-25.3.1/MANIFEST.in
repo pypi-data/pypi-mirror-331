@@ -1,0 +1,9 @@
+# With the setuptools-scm installed, everything
+# tracked by Git would be packed, we just need to
+# exclude what we don't need.
+
+prune tests/
+prune paper/
+
+exclude data.tar.xz
+exclude .gitlab-ci.yml .pre-commit-config.yaml

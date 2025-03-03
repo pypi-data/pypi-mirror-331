@@ -1,0 +1,14 @@
+spglib
+numpy
+scipy
+matplotlib
+ase
+netCDF4
+cython
+
+[optional]
+gpaw
+pyfftw
+
+[test]
+pytest
