@@ -1,0 +1,15 @@
+LICENSE
+NOTICE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/amazon_braket_qrack_simulator.egg-info/PKG-INFO
+src/amazon_braket_qrack_simulator.egg-info/SOURCES.txt
+src/amazon_braket_qrack_simulator.egg-info/dependency_links.txt
+src/amazon_braket_qrack_simulator.egg-info/entry_points.txt
+src/amazon_braket_qrack_simulator.egg-info/requires.txt
+src/amazon_braket_qrack_simulator.egg-info/top_level.txt
+src/braket/qrack_simulator/__init__.py
+src/braket/qrack_simulator/_version.py
+src/braket/qrack_simulator/qrack_simulator.py
