@@ -1,0 +1,5 @@
+csv_validate-0.1.0.dist-info/METADATA,sha256=Ebj4svpL5ITwSnTySPg2DAIF4YstIWvnCj8cx2dCik8,261
+csv_validate-0.1.0.dist-info/WHEEL,sha256=2v-73r0d4EuTqD9Tpbchwzntz_pCBq_2D_Wz36ML4Bk,138
+csv_validate/__init__.py,sha256=qsl81cHGJ8XBHkKA3OUR3nm4tjYxM3XdkVqRC1AP6fY,131
+csv_validate/csv_validate.pypy310-pp73-aarch64-linux-gnu.so,sha256=gc7R_me4YdRuDC3NNDm_eDlhKXAYH7lLUbJtJeRw27c,3135392
+csv_validate-0.1.0.dist-info/RECORD,,
