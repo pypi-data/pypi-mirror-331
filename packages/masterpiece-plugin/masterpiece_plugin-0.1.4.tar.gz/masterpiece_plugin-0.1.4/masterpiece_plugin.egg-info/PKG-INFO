@@ -1,0 +1,24 @@
+Metadata-Version: 2.2
+Name: masterpiece-plugin
+Version: 0.1.4
+Summary: A simple demonstration plugin designed to extend `masterpiece` applications
+Author-email: J Meskanen <juham.api@gmail.com>
+Maintainer-email: "J. Meskanen" <juham.api@gmail.com>
+Project-URL: Homepage, https://gitlab.com/juham/masterpiece_plugin
+Project-URL: Bug Reports, https://gitlab.com/juham/masterpiece
+Project-URL: Source, https://gitlab.com/juham/masterpiece_plugin
+Project-URL: Say Thanks!, http://meskanen.com
+Keywords: object-oriented,plugin,framework
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.rst
+Requires-Dist: masterpiece>=0.1.25
+Requires-Dist: pytz>=2024.1
+Requires-Dist: importlib-metadata
+Provides-Extra: dev
+Requires-Dist: check-manifest; extra == "dev"
