@@ -1,0 +1,29 @@
+Metadata-Version: 2.2
+Name: NekUpload
+Version: 0.2.0
+Summary: Upload and validation pipeline for Nektar++ datasets to an online repository
+Author-email: Stephen Liu <stephen.liu21@imperial.ac.uk>
+Project-URL: nektar, https://www.nektar.info
+Classifier: Development Status :: 3 - Alpha
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: h5py
+Requires-Dist: lxml
+Requires-Dist: requests
+Requires-Dist: sympy
+Requires-Dist: python-dotenv
+Requires-Dist: click
+Requires-Dist: iniconfig
+Requires-Dist: packaging
+Requires-Dist: pytest
+Requires-Dist: pytest-mock
+Requires-Dist: memory_profiler
+Requires-Dist: sphinx==8.1.3
+Requires-Dist: sphinx-rtd-theme==3.0.2
+Requires-Dist: pyyaml
+Requires-Dist: ruamel.yaml
+
+# NekUpload
+
+**NekUpload** is a Python package for uploading Nektar++ datasets to a database. Automated validation and metadata extraction will occur, and the datasets will be submitted to the database admin for review. 
