@@ -1,0 +1,49 @@
+name: release
+description: Create a new semantic release.
+
+on:
+  workflow_call:
+    inputs:
+      dry-run:
+        description: "Do not commit changes."
+        required: false
+        type: boolean
+        default: false
+    outputs:
+      is_prerelease:
+        description: "Whether the release is a pre-release."
+        value: ${{ jobs.release.outputs.is_prerelease }}
+      version:
+        description: "The version of the release."
+        value: ${{ jobs.release.outputs.version }}
+      released:
+        description: "Whether the release was successful."
+        value: ${{ jobs.release.outputs.released }}
+      tag:
+        description: "The tag of the release."
+        value: ${{ jobs.release.outputs.tag }}
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    outputs:
+      is_prerelease: ${{ steps.release.outputs.is_prerelease }}
+      version: ${{ steps.release.outputs.version }}
+      released: ${{ steps.release.outputs.released }}
+      tag: ${{ steps.release.outputs.tag }}
+    steps:
+      - name: Check out
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          token: "${{ secrets.GITHUB_TOKEN }}"
+      - name: Setup | Force correct release branch on workflow sha
+        run: git checkout -B ${{ github.ref_name }} ${{ github.sha }}
+      - id: release
+        name: Create bump and changelog (or dry-run)
+        uses: python-semantic-release/python-semantic-release@v9.18.1
+        with:
+          root_options: "-vv ${{ inputs.dry-run && '--noop' || '' }}"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          git_committer_name: "github-actions"
+          git_committer_email: "actions@users.noreply.github.com"

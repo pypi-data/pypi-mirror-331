@@ -1,0 +1,36 @@
+name: docs
+description: Builds project documentation with mkdocs.
+
+on:
+  push:
+    tags:
+      - '**'
+  workflow_call:
+        
+jobs:
+  build-docs:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - uses: astral-sh/setup-uv@v5
+      with:
+        python-version: '3.11'
+
+    - run: uv sync --group docs
+    - run: uv run mkdocs build
+    - if: github.event_name == 'push'
+      id: check-version
+      uses: samuelcolvin/check-python-version@v4.1
+      with:
+        version_file_path: 'src/cicd_tempy/__init__.py'
+        skip_env_check: true
+    - if: github.event_name == 'push'
+      name: publish website
+      run: |
+        git config --global user.name "${{ github.actor }}"
+        git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+        uv run mike deploy ${{ steps.check-version.outputs.VERSION_MAJOR_MINOR }} latest --update-aliases --push
+        uv run mike set-default latest

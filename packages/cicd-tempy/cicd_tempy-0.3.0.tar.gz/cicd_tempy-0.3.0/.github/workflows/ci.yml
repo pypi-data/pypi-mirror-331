@@ -1,0 +1,79 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: write
+  pull-requests: write
+  pages: write
+
+env:
+  COLUMNS: 120
+
+jobs:
+  lint:
+    uses: ./.github/workflows/lint.yml
+    secrets: inherit
+
+  test:
+    uses: ./.github/workflows/test.yml
+    secrets: inherit
+
+  build-wheels:
+    uses: ./.github/workflows/build.yml
+    secrets: inherit
+    with:
+      dry-run: true
+
+  build-docs:
+    uses: ./.github/workflows/docs.yml
+    secrets: inherit
+    with:
+      dry-run: true
+
+  release-dry-run:
+    uses: ./.github/workflows/release.yml
+    secrets: inherit
+    with:
+      dry-run: true
+
+  check:  # This job does nothing and is only used for the branch protection
+    needs:
+      - lint
+      - test
+      - build-wheels
+      - build-docs
+      - release-dry-run
+    outputs:
+      result: ${{ steps.all-green.outputs.result }}
+      is_prerelease: ${{ needs.release-dry-run.outputs.is_prerelease }}
+      version: ${{ needs.release-dry-run.outputs.version }}
+      released: ${{ needs.release-dry-run.outputs.released }}
+      tag: ${{ needs.release-dry-run.outputs.tag }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Decide whether the needed jobs succeeded or failed
+        uses: re-actors/alls-green@release/v1
+        id: all-green
+        with:
+          jobs: ${{ toJSON(needs) }}
+
+  release:
+    needs: check
+    if: needs.check.outputs.result == 'success' && github.ref_name == 'main'
+    uses: ./.github/workflows/release.yml
+    secrets: inherit
+
+  publish-wheels:
+    needs: release
+    uses: ./.github/workflows/build.yml
+    secrets: inherit
+
+  publish-docs:
+    needs: release
+    uses: ./.github/workflows/docs.yml
+    secrets: inherit
