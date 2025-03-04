@@ -1,0 +1,6 @@
+mlpype-base==0.6.7
+mlpype-sklearn==0.6.7
+lightgbm>=4.3.0
+
+[strict]
+lightgbm==4.3.0
