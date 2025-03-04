@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: ezdrawing
+Version: 0.0.10
+Summary: A drawing library intended to be as simple to use as possible. For teaching purposes. Has both a pygame and a tk backend.
+Author: Empika
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+License-File: LICENCE
+Requires-Dist: pygame >=2.6
+
+A drawing library intended to be as simple to use as possible. For teaching purposes. Has both a pygame and a tk backend.
