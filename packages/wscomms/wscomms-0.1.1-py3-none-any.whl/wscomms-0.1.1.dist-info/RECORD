@@ -1,0 +1,15 @@
+ws_comms/__init__.py,sha256=9YYFt1FRM7pSrQdojlkRkeWkziSTMiRT1054W2_BDPI,363
+ws_comms/message.py,sha256=zHbQvPrvSgUjJWhqDCMg0IOU_LprBtDMPHdNkwxBQJk,3465
+ws_comms/receiver.py,sha256=3dGRU3bMrmSFUVqUJf8jxvKv9NQGwXRDabvutxrfDQk,2484
+ws_comms/sender.py,sha256=mKxaxyUGO6gckhKK55wtHDMsV5h5I7hWvr7nJesSqjc,2001
+ws_comms/client/__init__.py,sha256=OgTjxkoHuDGu0b5B_qMHn3oetH3STr9Cb0y2q50Fj2M,108
+ws_comms/client/client.py,sha256=psCkolKT6L7PhtJ5LFAn5YIUM8ksfOo2VLGhlMlyBEU,3221
+ws_comms/client/client_route.py,sha256=8zCLw2sMJL7Z3nqfz_CVhgy49O6tmdYxzwV4mE6hLTI,1636
+ws_comms/server/__init__.py,sha256=TRlFTp-aTksOdMsHUBVA2cxag-YMLkQ8cFElr09nLV0,106
+ws_comms/server/server.py,sha256=cvnAmYW9bf3z5Tf9bFgoGBxZ2YU89tiJ5_ZjYsGDUho,6843
+ws_comms/server/server_route.py,sha256=Qt0m77CnTlmqf3jGuyZdMRp3pIwcTfScquSgkHyyOJA,3950
+wscomms-0.1.1.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+wscomms-0.1.1.dist-info/METADATA,sha256=mh0rCJdv_PCo7j17b_Hzvsb39S_YfEEPBBj6FnMrOxY,24441
+wscomms-0.1.1.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+wscomms-0.1.1.dist-info/top_level.txt,sha256=DzLrbZKc-2OkCzZyG39cera5Hxxp-ux2t2LHwyogyKM,9
+wscomms-0.1.1.dist-info/RECORD,,
