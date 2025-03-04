@@ -1,0 +1,17 @@
+Metadata-Version: 2.3
+Name: lplateforme
+Version: 0.1.4
+Summary: moteur de jeu de plateforme
+Author: oultetman
+Author-email: oultetman@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: likeprocessing (>=0.1.7.5.5,<0.2.0.0.0)
+Description-Content-Type: text/markdown
+
+
