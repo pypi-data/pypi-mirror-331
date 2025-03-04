@@ -1,0 +1,12 @@
+LICENSE
+README.md
+VERSION
+pyproject.toml
+requirements.txt
+rara_subject_indexer.egg-info/PKG-INFO
+rara_subject_indexer.egg-info/SOURCES.txt
+rara_subject_indexer.egg-info/dependency_links.txt
+rara_subject_indexer.egg-info/requires.txt
+rara_subject_indexer.egg-info/top_level.txt
+tests/__init__.py
+tests/test_pipeline.py
