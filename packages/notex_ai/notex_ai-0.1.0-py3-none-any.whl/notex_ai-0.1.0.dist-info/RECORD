@@ -1,0 +1,11 @@
+notex_ai/__init__.py,sha256=3di1MFp5X30hfn8BrnKKFjgZxACECqaP6GZigzIeYoQ,563
+notex_ai/app.py,sha256=2uADVUynd_Rhw6WUlsTBTsI3t7r960frTa91jB-psBk,3490
+notex_ai/config.py,sha256=ET4ezZ36enLUPwGd1h-k-wG2S1WjG-x54D4x-X7PtTk,1436
+notex_ai/src/Conversation.py,sha256=I6fN2VRzeCc2FzpkuL6NjzUqilnb1dRZL4rSh62n9SQ,4674
+notex_ai/src/constants.py,sha256=oT7KyAkdvc75vQBmPrLlp6-MluXsojnAgA2PmtD8L5A,10776
+notex_ai/uploads/.DS_Store,sha256=Sb5tLSiiw6iri1oZs4csXxf69c6G1pEXulJUmsHbH7o,12292
+notex_ai-0.1.0.dist-info/LICENSE,sha256=9Ofzc7m5lpUDN-jUGkopOcLZC3cl6brz1QhKInF60yg,7169
+notex_ai-0.1.0.dist-info/METADATA,sha256=KZRM5S4zCLsQjcZGzriNGSok9mV4pw-IG6nxIf7B6B8,1121
+notex_ai-0.1.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+notex_ai-0.1.0.dist-info/entry_points.txt,sha256=BvAqGeq_ZARr7xU5BR3idaUJAGaUodxqGKkwovj6hb0,95
+notex_ai-0.1.0.dist-info/RECORD,,

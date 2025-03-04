@@ -1,0 +1,4 @@
+[console_scripts]
+notex-check=scripts.setup:check_dependencies
+notex-setup=scripts.setup:main
+
