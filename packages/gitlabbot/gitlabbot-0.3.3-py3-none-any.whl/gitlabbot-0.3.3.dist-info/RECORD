@@ -1,0 +1,11 @@
+gitlabbot/__init__.py,sha256=9KmbfMaOiD1ABodTQX7-yjZj3OgXX-6W_4OZc4Dnupk,49
+gitlabbot/setting.py,sha256=Igp5MlJJjWDWAiiqpQ7nfvwYdrmNGiOYpZsoCRCxr_o,1447
+gitlabbot/cli/__init__.py,sha256=7IP_YhccnqkeMwSh-1KnJGxmlnr8s29deo7LAsENZdE,41
+gitlabbot/cli/flux_diff.py,sha256=f_bLIWXaDBgEBi0NVkPvtK7BkwYAo8qehWtDtvMTdoA,4002
+gitlabbot/note/__init__.py,sha256=CMV5VXgPf_NhLFVikRPIfRqkp42RM0I9gbOishhMkZc,40
+gitlabbot/note/utils.py,sha256=O8JXTp_fPJYfEoHBfnI56v5ZHi1ZNW8dED17AE1XRIc,1418
+gitlabbot-0.3.3.dist-info/METADATA,sha256=v1Qcvudpxo8UrjFQI9zy5CBJoQAbRSW-RjHXCjOf9MU,1882
+gitlabbot-0.3.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+gitlabbot-0.3.3.dist-info/entry_points.txt,sha256=CuiY0SB_NFT6Pl13_F9K57IrijjGfcC6AlXDTX3LjNo,67
+gitlabbot-0.3.3.dist-info/licenses/LICENSE,sha256=UcLL_ay5w6oHkFo2TL3mOUcwb-9jH6Gw7BwuXKc80YA,11349
+gitlabbot-0.3.3.dist-info/RECORD,,
