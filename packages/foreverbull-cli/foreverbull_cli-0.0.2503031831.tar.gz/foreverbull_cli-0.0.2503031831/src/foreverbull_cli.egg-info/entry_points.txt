@@ -1,0 +1,3 @@
+[console_scripts]
+fbenv = foreverbull_cli.env.cli:cli
+fbull = foreverbull_cli.bull.cli:cli
