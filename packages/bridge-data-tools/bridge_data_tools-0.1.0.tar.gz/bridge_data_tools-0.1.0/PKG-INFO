@@ -1,0 +1,39 @@
+Metadata-Version: 2.2
+Name: bridge_data_tools
+Version: 0.1.0
+Summary: A tools library
+Home-page: https://github.com/yourusername/my_library
+Author: Your Name
+Author-email: your_email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
+
+# My Library
+
+A simple Python library for basic math operations.
+
+## Installation
+
+```sh
+pip install my_library
+```
+
+## Usage
+
+```python
+from my_library import add, subtract
+
+print(add(5, 3))  # Output: 8
+print(subtract(5, 3))  # Output: 2
+```

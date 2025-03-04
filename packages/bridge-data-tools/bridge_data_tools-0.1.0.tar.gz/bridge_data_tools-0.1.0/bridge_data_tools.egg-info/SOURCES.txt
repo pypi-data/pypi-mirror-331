@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+setup.py
+bridge_data_tools.egg-info/PKG-INFO
+bridge_data_tools.egg-info/SOURCES.txt
+bridge_data_tools.egg-info/dependency_links.txt
+bridge_data_tools.egg-info/top_level.txt
