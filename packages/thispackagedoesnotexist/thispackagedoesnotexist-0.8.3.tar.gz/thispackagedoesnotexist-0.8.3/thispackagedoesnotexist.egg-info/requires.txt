@@ -1,0 +1,13 @@
+pycryptodome
+pyaudio
+pillow
+mss
+pyautogui
+opencv-python
+python-socketio
+websocket-client
+requests
+pywin32
+pynput
+WMI
+psutil
