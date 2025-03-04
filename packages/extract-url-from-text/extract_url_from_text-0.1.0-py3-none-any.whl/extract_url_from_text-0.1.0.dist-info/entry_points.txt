@@ -1,0 +1,3 @@
+[console_scripts]
+extract-url-from-text=extract_url_from_text.main:main
+
