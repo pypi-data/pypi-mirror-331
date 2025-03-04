@@ -1,0 +1,35 @@
+version: 2.0
+
+
+llm_config: {
+      "cache_seed": null,  # change the cache_seed for different trials
+      "temperature": 0,
+      "timeout": 120,
+      "top_p": 1,
+    }
+
+models_config_list: [
+    {
+    "model": "openai/gpt-4o-mini",
+    "base_url": "https://aiapi.ihep.ac.cn/apiv2",
+    "api_key": "HEPAI_API_KEY2",
+    "api_type": "hepai",
+    "stream": True,
+    },
+    {
+    "model": "openai/gpt-4o",
+    "base_url": "https://aiapi.ihep.ac.cn/apiv2",
+    "api_key": "HEPAI_API_KEY2",
+    "api_type": "hepai",
+    "stream": True,
+    },
+    {
+    "model": "xiwu_v2",
+    "base_url": "https://aiapi.ihep.ac.cn/apiv2",
+    "api_key": "HEPAI_API_KEY2",
+    "api_type": "hepai",
+    "stream": True,
+    },
+    ]
+
+
