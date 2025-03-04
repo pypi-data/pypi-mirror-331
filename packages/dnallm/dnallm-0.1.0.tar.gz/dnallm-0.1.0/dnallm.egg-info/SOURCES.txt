@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+dnallm.egg-info/PKG-INFO
+dnallm.egg-info/SOURCES.txt
+dnallm.egg-info/dependency_links.txt
+dnallm.egg-info/entry_points.txt
+dnallm.egg-info/requires.txt
+dnallm.egg-info/top_level.txt
+tests/test_data.py
+tests/test_trainer.py

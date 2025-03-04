@@ -1,0 +1,3 @@
+[console_scripts]
+dnallm-predict = dnallm.cli.predict:main
+dnallm-train = dnallm.cli.train:main
