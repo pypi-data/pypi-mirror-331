@@ -1,0 +1,8 @@
+README.md
+setup.py
+egirl.egg-info/PKG-INFO
+egirl.egg-info/SOURCES.txt
+egirl.egg-info/dependency_links.txt
+egirl.egg-info/requires.txt
+egirl.egg-info/top_level.txt
+saintcord/__init__.py
