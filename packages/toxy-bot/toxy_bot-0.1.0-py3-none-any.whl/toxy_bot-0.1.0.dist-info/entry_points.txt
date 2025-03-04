@@ -1,0 +1,3 @@
+[console_scripts]
+pipeline = toxy_bot.ml.data.pipeline:run_pipeline
+toxy-bot = toxy_bot:main
