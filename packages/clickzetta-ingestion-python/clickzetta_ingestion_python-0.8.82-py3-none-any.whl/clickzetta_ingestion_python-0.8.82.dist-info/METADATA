@@ -1,0 +1,45 @@
+Metadata-Version: 2.2
+Name: clickzetta-ingestion-python
+Version: 0.8.82
+Summary: clickzetta python ingestion library
+Author-email: "wei.liu" <wei.liu@clickzetta.com>, "guantao.gao" <guantao.gao@clickzetta.com>, "lin.zhang" <lin.zhang@clickzetta.com>
+Project-URL: documentation, https://www.yunqi.tech/
+Platform: Posix
+Platform: MacOS X
+Classifier: Development Status :: 3 - Alpha
+Requires-Python: >=3.7
+License-File: LICENSE
+Requires-Dist: proto-plus<2.0.0dev,>=1.22.0
+Requires-Dist: packaging<24.0.0dev,>=14.3
+Requires-Dist: protobuf==5.28.1
+Requires-Dist: grpcio
+Requires-Dist: clickzetta-connector-python
+Requires-Dist: apscheduler
+Provides-Extra: s3
+Requires-Dist: s3fs[boto3]==2023.5.0; extra == "s3"
+Requires-Dist: boto3==1.28.17; extra == "s3"
+Provides-Extra: oss
+Requires-Dist: cz-ossfs>=0.0.2; extra == "oss"
+Provides-Extra: tos
+Requires-Dist: tos==2.7.1; extra == "tos"
+Requires-Dist: s3fs[boto3]==2023.5.0; extra == "tos"
+Requires-Dist: boto3==1.28.17; extra == "tos"
+Provides-Extra: cos
+Requires-Dist: cos-python-sdk-v5>=1.9.25; extra == "cos"
+Provides-Extra: gcp
+Requires-Dist: google-cloud-storage<=2.17.0; extra == "gcp"
+Requires-Dist: gcsfs<=2024.6.0; extra == "gcp"
+Provides-Extra: all
+Requires-Dist: clickzetta-ingestion-python[cos,gcp,oss,s3,tos]; extra == "all"
+Provides-Extra: aliyun
+Requires-Dist: clickzetta-ingestion-python[oss]; extra == "aliyun"
+Provides-Extra: google
+Requires-Dist: clickzetta-ingestion-python[gcp]; extra == "google"
+Provides-Extra: aws
+Requires-Dist: clickzetta-ingestion-python[s3]; extra == "aws"
+Provides-Extra: amazon
+Requires-Dist: clickzetta-ingestion-python[s3]; extra == "amazon"
+Provides-Extra: tencent
+Requires-Dist: clickzetta-ingestion-python[cos]; extra == "tencent"
+Provides-Extra: dev
+Requires-Dist: grpcio-tools; extra == "dev"
