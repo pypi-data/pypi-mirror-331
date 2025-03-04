@@ -1,0 +1,110 @@
+Metadata-Version: 2.2
+Name: cursor-rules
+Version: 0.5.0
+Summary: A CLI tool to scan projects and install relevant Cursor rules
+Home-page: https://github.com/sanjeed5/awesome-cursor-rules-mdc
+Author: sanjeed5
+Author-email: hi@sanjeed.in
+Keywords: cursor,rules,mdc,cli
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.25.0
+Requires-Dist: colorama>=0.4.4
+Requires-Dist: tqdm>=4.62.0
+Requires-Dist: urllib3>=2.0.0
+Requires-Dist: validators>=0.20.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Cursor Rules CLI
+
+A simple tool that helps you find and install the right Cursor rules for your project. It scans your project to identify libraries and frameworks you're using and suggests matching rules.
+
+## Features
+
+- 🔍 Auto-detects libraries in your project
+- 📝 Supports direct library specification
+- 📥 Downloads and installs rules into Cursor
+- 🎨 Provides a colorful, user-friendly interface
+- 🔀 Works with custom rule repositories
+- 🔒 100% privacy-focused (all scanning happens locally)
+
+## Installation
+
+```bash
+pip install cursor-rules
+```
+
+## Basic Usage
+
+```bash
+# Scan current project and install matching rules
+cursor-rules
+
+# Specify libraries directly (skips project scanning)
+cursor-rules --libraries "react,tailwind,typescript"
+
+# Scan a specific project directory
+cursor-rules -d /path/to/my/project
+```
+
+## Common Options
+
+| Option | Description |
+|--------|-------------|
+| `--dry-run` | Preview without installing anything |
+| `--force` | Replace existing rules |
+| `-v, --verbose` | Show detailed output |
+| `--quick-scan` | Faster scan (checks package files only) |
+| `--max-results N` | Show top N results (default: 20) |
+
+## Custom Repositories (not tested yet)
+
+```bash
+# Use rules from your own repository
+cursor-rules --custom-repo your-username/your-repo
+
+# Save repository setting for future use
+cursor-rules --custom-repo your-username/your-repo --save-config
+```
+
+## Configuration
+
+```bash
+# View current settings
+cursor-rules --show-config
+
+# Save settings globally
+cursor-rules --save-config
+
+# Save settings for current project only
+cursor-rules --save-project-config
+```
+
+## Full Options Reference
+
+Run `cursor-rules --help` to see all available options.
+
+## License
+
+MIT
+
+## Todo:
+- [ ] Test the custom repo feature
