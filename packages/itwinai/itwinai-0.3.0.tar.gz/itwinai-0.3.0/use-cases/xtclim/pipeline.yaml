@@ -1,0 +1,29 @@
+# General configuration
+dataset_root: '/p/scratch/intertwin/datasets/cerfacs/'
+epochs: 3
+batch_size: 10
+lr: 0.001
+scenario: '245'
+strategy: 'ddp'
+
+# Workflows
+pipeline:
+  _target_: itwinai.pipeline.Pipeline
+  steps:
+    preprocessing-step:
+      _target_: preprocessing.preprocess_functions_2d_ssp.PreprocessData
+      dataset_root: ${dataset_root}
+      scenario: ${scenario}
+      
+    preprocessing-split-step:
+      _target_: preprocessing.preprocess_2d_seasons.SplitPreprocessedData
+      scenario: ${scenario}
+      
+    training-step:
+      _target_: src.trainer.TorchTrainer
+      epochs: ${epochs}
+      batch_size: ${batch_size}
+      lr: ${lr}
+      # strategy: ${strategy}
+
+        
