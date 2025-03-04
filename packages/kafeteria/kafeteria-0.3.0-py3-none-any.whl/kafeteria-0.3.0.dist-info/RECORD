@@ -1,0 +1,8 @@
+kafeteria/__init__.py,sha256=agrLFPeMnRMSGdlLCuJ7IoVug_hANAbsT1ylJQ0Ekp8,307
+kafeteria/core.py,sha256=HH7uaGRXm3SNRTEw8JuqSHIuGtD__q9evPX5mnv_Z_0,4061
+kafeteria/scheduler.py,sha256=lsreUbjTmHmE0YEZ5d4_35j_rvJadbJ0mOqe4pP5NCo,902
+kafeteria/slack.py,sha256=_tHw2ibNYR_Cos6cpUxQdnYSSeCDW5XMpH4Z9i6ePaw,3499
+kafeteria-0.3.0.dist-info/METADATA,sha256=ttm8HgaMAgW2QGvPv3yQYfrWtH89AwE2lf6zJoB1MQ4,6993
+kafeteria-0.3.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+kafeteria-0.3.0.dist-info/licenses/LICENSE,sha256=E7Gc9QoX7AEnGeExHHrYUvN00hQMu6WOJp2_Kb9DQ5E,1067
+kafeteria-0.3.0.dist-info/RECORD,,
