@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "dspy-metric-learning"
+version = "0.1.0-pre.1"
+description = "A DSPy metric function learning package"
+authors = ["Tom Doerr <tomdoerr96@gmail.com>"]
+readme = "README.md"
+license = "MIT"
+repository = "https://github.com/tom-doerr/dspy_metric_learning"
+homepage = "https://github.com/tom-doerr/dspy_metric_learning"
+keywords = ["dspy", "metrics", "machine learning", "nlp", "language models"]
+packages = [{include = "metric_learner"}]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+dspy-ai = "^2.0.0"
+numpy = "^1.24.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.3.1"
+
+[tool.pytest.ini_options]
+testpaths = ["tests", "integration_tests"]
+python_files = "test_*.py"
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "integration: marks tests as integration tests",
+]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
