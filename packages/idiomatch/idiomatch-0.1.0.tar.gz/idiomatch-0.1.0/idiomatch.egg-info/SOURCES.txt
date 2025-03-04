@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+idiomatch/__init__.py
+idiomatch/builders.py
+idiomatch/cases.py
+idiomatch/configs.py
+idiomatch/idiomatcher.py
+idiomatch.egg-info/PKG-INFO
+idiomatch.egg-info/SOURCES.txt
+idiomatch.egg-info/dependency_links.txt
+idiomatch.egg-info/requires.txt
+idiomatch.egg-info/top_level.txt
+tests/test_builders.py
+tests/test_idiomatcher.py
