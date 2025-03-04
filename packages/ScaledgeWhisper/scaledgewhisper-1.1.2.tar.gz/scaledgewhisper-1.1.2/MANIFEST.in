@@ -1,0 +1,7 @@
+include README.md
+include requirements.txt
+include requirements-conversion.txt
+recursive-include ScaledgeWhisper/assets *.onnx
+recursive-include ScaledgeWhisper/tests/data *.mp3
+recursive-include ScaledgeWhisper/tests/data *.wav
+recursive-include ScaledgeWhisper/tests/data *.flac
