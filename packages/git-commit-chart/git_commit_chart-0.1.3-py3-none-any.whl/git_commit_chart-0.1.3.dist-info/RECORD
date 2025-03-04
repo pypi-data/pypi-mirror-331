@@ -1,0 +1,16 @@
+git_commit_chart/__init__.py,sha256=nnpiYfkcxVsIRpovBUq3kdOJ1G5QEW89W8YIZ1O0nfo,114
+git_commit_chart/app.py,sha256=rDIV-QrTFDaDjtOzqDGbxlBJBQxfYpo4Px2NiRNavyI,4426
+git_commit_chart/static/favicon.js,sha256=I_4LbtPqCh-pCBJ2cEfRRgcqUix3fMYCHu893HcVUAY,1079
+git_commit_chart/static/style.css,sha256=rVkPpBr6IDI9mwjszn6vXsG2zUdErSrHqgCrBJFnZLo,4039
+git_commit_chart/static/theme.js,sha256=0TY4DWtrFmaKCWAxGM4Mn4eKArSBkNjAromdynapSCw,1265
+git_commit_chart/static/favicon/favicon-dark.svg,sha256=LAZpqmQx09fK6iYEPimQMj1DLhcysLYJm7NgI3GrVEs,519
+git_commit_chart/static/favicon/favicon-light.svg,sha256=Zr_xgQHiSJtSHW4dTwSMNPwEKU_hAAw_U0kJ2QtGjAk,519
+git_commit_chart/static/favicon/favicon.ico,sha256=hpgO_YCBlQPKrLdjsZgmMWhmq50eDl6aegFLmeWN5GA,32038
+git_commit_chart/templates/by_user.html,sha256=7h1EYGNECpisx-thN4pNv7UY7jCnI9Fv-prF-IpPA_8,8698
+git_commit_chart/templates/index.html,sha256=izMiJFyHc6T7dFw3XTkgwpkUUebKsqz8kpPPIcelj_Y,6447
+git_commit_chart-0.1.3.dist-info/LICENSE,sha256=qpcGGhmUcIRFnn8FM1Guni-yqvajpA9F4J1XMhZ9pVM,1073
+git_commit_chart-0.1.3.dist-info/METADATA,sha256=RpKQtyrDsmXinkx28Rb0xytOT80j6U4Y3IVKugu9H-Q,5482
+git_commit_chart-0.1.3.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+git_commit_chart-0.1.3.dist-info/entry_points.txt,sha256=7l7GoSjorHTU2TO8VwZinBTlkQauvwlGDhsRko0NzlE,63
+git_commit_chart-0.1.3.dist-info/top_level.txt,sha256=Z1IyBwqW_Fr7pP4rqUQBjrMCQirsjgHz_7eTjqVRw2w,17
+git_commit_chart-0.1.3.dist-info/RECORD,,
