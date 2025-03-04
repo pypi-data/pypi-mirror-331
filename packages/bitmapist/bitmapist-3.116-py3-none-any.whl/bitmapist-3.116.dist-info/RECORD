@@ -1,0 +1,10 @@
+bitmapist/__init__.py,sha256=7v3EmlOY8_WY7RgAjvOBEk0j6N3ehK6LJjt99tLU36Q,23711
+bitmapist/cohort/__init__.py,sha256=pp8bYJAYzqwAaL6ZB6oGg1iz3zJqtQUuBUuSs9kD3Qs,13070
+bitmapist/cohort/tmpl/form_data.mako,sha256=_hsfZh1SgGpmVLwx0OZX7etDF-w1XYbD43NZUvzJlho,4006
+bitmapist/cohort/tmpl/table_data.mako,sha256=D8GzTe3er0-83HWZVoYcN2yAaXnwGYsrMCTrskYyXY8,3284
+bitmapist/cohort/tmpl/table_data_csv.mako,sha256=nNxAIo8Lj6o-pbLwjyIvf24lFvEgVfUvOTBaLHmV034,723
+bitmapist/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bitmapist-3.116.dist-info/AUTHORS,sha256=UTt_lj2Owih3OEgb6mT2ZdrgWB6PIegoFsp82Y369JU,454
+bitmapist-3.116.dist-info/METADATA,sha256=Q76mc5UNF1lE4m4eUMRh_BLAtjRQtuTNR5L7JDUxcUQ,11403
+bitmapist-3.116.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+bitmapist-3.116.dist-info/RECORD,,
