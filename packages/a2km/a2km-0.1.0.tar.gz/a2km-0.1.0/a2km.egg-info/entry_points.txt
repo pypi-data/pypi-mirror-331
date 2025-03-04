@@ -1,0 +1,2 @@
+[console_scripts]
+a2km = a2km._cli:main
