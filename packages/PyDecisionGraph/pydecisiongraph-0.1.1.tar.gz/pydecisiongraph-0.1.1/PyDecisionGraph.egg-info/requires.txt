@@ -1,0 +1,9 @@
+
+[docs]
+sphinx
+sphinx-rtd-theme
+sphinx-autodoc-typehints
+
+[visualization]
+pyvis
+networkx
