@@ -1,0 +1,39 @@
+Metadata-Version: 2.3
+Name: db_hooks_manager24
+Version: 0.1.2
+Summary: Database manager with optional MongoDB support
+Author: Aldo
+Author-email: Aldo@test.io
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Provides-Extra: mongodb
+Provides-Extra: mysql
+Provides-Extra: pgsql
+Requires-Dist: mysqlclient (>=1.3,<2.0) ; extra == "mysql"
+Requires-Dist: psycopg2 (>=2.9,<3.0) ; extra == "pgsql"
+Requires-Dist: pymongo (>=4.11.1,<5.0.0) ; extra == "mongodb"
+Description-Content-Type: text/markdown
+
+# db_manager
+
+A simple database manager with optional MongoDB support.
+
+## Installation
+```
+poetry install
+poetry install --extras "mongodb"
+```
+
+## Usage
+```python
+from db_manager import DatabaseManager
+
+# For MongoDB
+manager = DatabaseManager(db_type="mongodb", connection_string="mongodb://localhost:27017")
+client = manager.get_client()
+```
