@@ -1,0 +1,9 @@
+README.md
+setup.py
+MateLibre.egg-info/PKG-INFO
+MateLibre.egg-info/SOURCES.txt
+MateLibre.egg-info/dependency_links.txt
+MateLibre.egg-info/top_level.txt
+mate_libre/__init__.py
+mate_libre/algebra.py
+mate_libre/operaciones.py
