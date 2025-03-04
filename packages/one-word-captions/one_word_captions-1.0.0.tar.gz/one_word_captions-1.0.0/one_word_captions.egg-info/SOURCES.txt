@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+one_word_captions.egg-info/PKG-INFO
+one_word_captions.egg-info/SOURCES.txt
+one_word_captions.egg-info/dependency_links.txt
+one_word_captions.egg-info/entry_points.txt
+one_word_captions.egg-info/requires.txt
+one_word_captions.egg-info/top_level.txt
+owc/__init__.py
+owc/__main__.py
+owc/owc.py
+tests/test_owc.py
