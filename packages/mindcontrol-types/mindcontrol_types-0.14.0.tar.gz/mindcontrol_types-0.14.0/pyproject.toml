@@ -1,0 +1,19 @@
+[tool.poetry]
+authors = ["Sasha Koss <koss@nocorp.me>"]
+description = "Mind Control types"
+license = "UNLICENSED"
+name = "mindcontrol-types"
+readme = "README.md"
+version = "0.14.0"
+
+packages = [{ include = "mindcontrol_types" }]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pydantic = "^2.9"
+genotype-runtime = "^0.4"
+typing-extensions = "^4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
