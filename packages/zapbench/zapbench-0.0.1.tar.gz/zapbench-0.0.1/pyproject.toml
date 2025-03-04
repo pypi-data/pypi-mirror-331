@@ -1,0 +1,17 @@
+[project]
+name = "zapbench"
+version = "0.0.1"
+description = ""
+authors = [{name = "ZAPBench authors", email="zapbench@google.com"}]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+]
+
+[tool.poetry]
+packages = [{include = "zapbench", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
