@@ -1,0 +1,267 @@
+
+# 2025-02-26 18:04:58.751458
++yes
+
+# 2025-02-26 18:05:22.378227
++no
+
+# 2025-02-26 18:07:51.238845
++/exit
+
+# 2025-02-26 18:10:49.141794
++/add models/common.py
+
+# 2025-02-26 18:10:54.228950
++no
+
+# 2025-02-26 18:11:00.880863
++/add paperwrap/models/common.py
+
+# 2025-02-26 18:11:09.416746
++I want to rewrite pypaperless to use modern best practices, and to be usable without requiring async. I also want to expand its functionality and provide semantic names for methods and properties. For each filename I provide, refactor the code in it, improve it and expand it however you can. Start with common.py
+
+# 2025-02-26 18:11:30.749952
++/drop common.py
+
+# 2025-02-26 18:11:34.553976
++/add config.py
+
+# 2025-02-26 18:11:37.605930
++no
+
+# 2025-02-26 18:11:43.387447
++/add paperwrap/models/config.py
+
+# 2025-02-26 18:11:49.674504
++/drop paperwrap/models/common.py
+
+# 2025-02-26 18:12:07.498969
++I want to rewrite pypaperless to use modern best practices, and to be usable without requiring async. I also want to expand its functionality and provide semantic names for methods and properties. For each filename I provide, refactor the code in it, improve it and expand it however you can. File: config.py
+
+# 2025-02-26 18:12:27.948804
++/drop paperwrap/models/config.py
+
+# 2025-02-26 18:12:31.173801
++/add custom_fields.py
+
+# 2025-02-26 18:12:33.105416
++no
+
+# 2025-02-26 18:12:43.079936
++/add paperwrap/models/custom_fields.py
+
+# 2025-02-26 18:13:08.498945
++I want to rewrite pypaperless to use modern best practices, and to be usable without requiring async. I also want to expand its functionality and provide semantic names for methods and properties. For each filename I provide, refactor the code in it, improve it and expand it however you can. File:  custom_fields.py
+
+# 2025-02-26 18:15:12.493442
++/drop paperwrap/models/custom_fields.py
+
+# 2025-02-26 18:15:24.740262
++/add paperwrap/models/documents.py
+
+# 2025-02-26 18:15:29.384655
++I want to rewrite pypaperless to use modern best practices, and to be usable without requiring async. I also want to expand its functionality and provide semantic names for methods and properties. For each filename I provide, refactor the code pypaperless code in it for use in our project named paperwrap. Improve it and expand it however you can. We will be using python 3.12 and modern best practices. File:  documents.py
+
+# 2025-02-26 18:16:52.612329
++/drop paperwrap/models/documents.py
+
+# 2025-02-26 18:17:01.771090
++/add paperwrap/models/mails.py
+
+# 2025-02-26 22:24:11.747114
++no
+
+# 2025-02-26 22:24:32.238070
++/add tests/test_common.py
+
+# 2025-02-26 22:24:53.838865
++/drop
+
+# 2025-02-26 22:24:56.237987
++/add tests/test_common.py
+
+# 2025-02-26 22:26:40.436542
++Update test_common to use an OOP approach with assert methods (like self.assertEqual) instead of "assert" statements, and provide a descriptive message for each assertion in the event of failure. 
+
+# 2025-02-26 22:31:37.884519
++no
+
+# 2025-02-26 22:35:37.040674
++/exit
+
+# 2025-02-26 23:38:36.108408
++/drop
+
+# 2025-02-26 23:38:42.184869
++/add tests/test_common.py
+
+# 2025-02-26 23:43:38.774463
++Each method contains resp.get(), which was used in the past to indicate what kind of response we expect from an http request. I've made some changes, and now we need to patch each test method instead. Remove the resp.get call, and add a patch to the method for Paperless.request, which has the signature request(method, path, json, data, form, params, **kwargs) -> requests.Response
+
+# 2025-02-26 23:46:26.662895
++/exit
+
+# 2025-02-26 23:49:51.670885
++/add tests/test_common.py
+
+# 2025-02-26 23:51:08.401184
++In any test calling generate_api_token, we need to mock requests.Session.post instead of Paperless.request
+
+# 2025-02-26 23:51:37.774321
++d
+
+# 2025-02-27 16:45:46.417509
++/exit
+
+# 2025-03-01 19:22:38.427340
++/drop
+
+# 2025-03-01 19:22:41.774006
++/clear
+
+# 2025-03-01 19:22:52.603525
++/add models/document.py
+
+# 2025-03-01 19:22:54.580578
++no
+
+# 2025-03-01 19:23:01.248861
++/add src/paperwrap/lib/models/document.py
+
+# 2025-03-01 19:23:20.003564
++/add src/paperwrap/lib/models/correspondent.py
+
+# 2025-03-01 19:23:26.029544
++/add src/paperwrap/lib/models/custom_field.py
+
+# 2025-03-01 19:23:30.079431
++/add src/paperwrap/lib/models/document_type.py
+
+# 2025-03-01 19:24:41.916727
++Use pydantic v2 instead of dataclasses, and use modern best practices. For context, these models are populated from the Paperless NGX rest api. 
+
+# 2025-03-01 19:27:03.061133
++/drop
+
+# 2025-03-01 19:27:09.746918
++/add src/paperwrap/lib/models/log.py
+
+# 2025-03-01 19:27:22.400423
++/add src/paperwrap/lib/models/saved_view.py src/paperwrap/lib/models/storage_path.py src/paperwrap/lib/models/tag.py src/paperwrap/lib/models/task.py
+
+# 2025-03-01 19:27:25.892653
++Use pydantic v2 instead of dataclasses, and use modern best practices. For context, these models are populated from the Paperless NGX rest api. 
+
+# 2025-03-01 19:33:09.302726
++/drop
+
+# 2025-03-01 19:33:21.073839
++/add src/paperwrap/lib/models/ui_settings.py src/paperwrap/lib/models/user.py src/paperwrap/lib/models/workflow.py
+
+# 2025-03-01 19:33:48.706587
++Use pydantic v2 instead of dataclasses, and use modern best practices. For context, these models are populated from the Paperless NGX rest api. 
+
+# 2025-03-01 19:35:32.445686
++/drop
+
+# 2025-03-01 20:08:13.901009
++/exit
+
+# 2025-03-01 20:15:30.305208
++/drop
+
+# 2025-03-01 20:15:30.448281
++/cleanup
+
+# 2025-03-01 20:15:33.172407
++/clean
+
+# 2025-03-01 20:17:14.443945
++/add src/paperwrap/lib/resources/base.py
+
+# 2025-03-01 20:21:49.604746
++improve the base class. Use the dateparser library and handle parsing attribute values based on the attribute type.
+
+# 2025-03-01 20:22:12.272456
++no
+
+# 2025-03-01 20:45:42.132441
++Create extensive unit tests for the Model class. Use unittest with OOP. 
+
+# 2025-03-01 20:46:01.094594
++y
+
+# 2025-03-01 20:46:08.906882
++/run python -m unittest discover -s tests
+
+# 2025-03-01 20:46:30.295331
++no
+
+# 2025-03-01 21:28:23.745209
++/drop tests/test_model.py
+
+# 2025-03-01 21:30:02.826110
++Move parsing into a separate class. Handle parsing for datetimes, dates, strings, integers, floats, bools, and enums.
+
+# 2025-03-01 21:50:17.169702
++/drop base.py
+
+# 2025-03-01 21:50:20.756412
++/drop src/paperwrap/lib/resources/base.py
+
+# 2025-03-01 21:51:48.845170
++Use either overloads or singlemethoddispatch to ensure that everything is strictly typed. Handle edge cases and error handling. Fix errors and expand functionality to be fully feature complete.
+
+# 2025-03-01 22:52:04.009536
++/drop
+
+# 2025-03-01 22:52:10.563645
++/add src/paperwrap/lib/models/base.py
+
+# 2025-03-01 22:54:06.700337
++Instead of the implementation of the parser property to set a class attribute, create a metaclass which instantiates the parser.
+
+# 2025-03-01 23:44:21.647938
++Create docstrings for all classes and methods in base.py.
+
+# 2025-03-01 23:45:07.593624
++Provide an example section in docstrings where appropriate.
+
+# 2025-03-01 23:46:41.980997
++no
+
+# 2025-03-01 23:46:45.692131
++/undo
+
+# 2025-03-02 19:44:31.889732
++/exit
+
+# 2025-03-02 19:44:41.065627
++no
+
+# 2025-03-02 19:44:45.306071
++/drop
+
+# 2025-03-02 19:44:45.987324
++/clear
+
+# 2025-03-02 19:44:51.660977
++/add src/paperwrap/lib/models/base.py
+
+# 2025-03-02 19:45:03.274863
++/add src/paperwrap/lib/models/document.py
+
+# 2025-03-02 19:45:17.739438
++/add src/paperwrap/lib/resources/documents.py
+
+# 2025-03-02 19:46:17.160761
++/add src/paperwrap/lib/client.py
+
+# 2025-03-02 19:51:38.069427
++When methods like Document.get_tags() are called, we need to request tags associated with the document instead of every tag. Similar functionality will need to be added in the future. Adjust our code so that it is modular and extensible and handles cases like this. 
+
+# 2025-03-02 19:55:04.187018
++/undo
+
+# 2025-03-03 17:41:50.943347
++/exit
