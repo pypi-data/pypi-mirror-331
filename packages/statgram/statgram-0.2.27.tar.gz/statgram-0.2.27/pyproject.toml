@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "statgram"
+version = "0.2.27"
+description = "AI service for Telegram chatbots on aiogram2: Management, analytics and predictions."
+
+authors = [
+  { name = "Kalinin Egor", email = "me@generext.com" }
+]
+
+license = { text = "Apache-2.0" }
+readme = "README.md"
+
+dynamic = ["dependencies"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[project.urls]
+Source = "https://github.com/generext/statgram"
+Issues = "https://github.com/generext/statgram/issues"
