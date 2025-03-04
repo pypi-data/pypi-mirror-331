@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: testweaver
+Version: 1.0.0.282
+Summary: A module for generating input handling test cases
+Home-page: UNKNOWN
+Author: Albert Willett Jr
+Author-email: albert.willett2@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: basicfeatureflags
+
+UNKNOWN
+
