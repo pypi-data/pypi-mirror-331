@@ -1,0 +1,8 @@
+README.md
+setup.py
+braverman_hello/__init__.py
+braverman_hello/main.py
+braverman_hello.egg-info/PKG-INFO
+braverman_hello.egg-info/SOURCES.txt
+braverman_hello.egg-info/dependency_links.txt
+braverman_hello.egg-info/top_level.txt
