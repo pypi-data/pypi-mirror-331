@@ -1,0 +1,7 @@
+views_tensor_utilities/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+views_tensor_utilities/defaults.py,sha256=j7DCOdLdp5_dH1N3_PJlNEQAVyLCQ4zmQLbFF3bIkr8,473
+views_tensor_utilities/mappings.py,sha256=6m0MWBQvZiggJLSW-ERX01euX8gDleOViChWk8nkW8c,18143
+views_tensor_utilities/objects.py,sha256=eEz3Hh2hMn3ds8aQa7m37WHtta3WlT8wGABMOYVM4r4,20803
+views_tensor_utilities-1.0.5.dist-info/METADATA,sha256=2bBlL_-uvj735U9KdqM5qbda33AggiW7vBHqpjpHOg4,11574
+views_tensor_utilities-1.0.5.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+views_tensor_utilities-1.0.5.dist-info/RECORD,,
