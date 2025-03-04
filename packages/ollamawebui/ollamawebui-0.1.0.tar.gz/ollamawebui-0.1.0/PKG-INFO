@@ -1,0 +1,109 @@
+Metadata-Version: 2.2
+Name: ollamawebui
+Version: 0.1.0
+Summary: A web UI for Ollama
+Home-page: http://github.com/pythonxueba
+Author: PythonXueba
+Author-email: python@xueba.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: Flask
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4
+Requires-Dist: html5lib
+Requires-Dist: lxml
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+D# OllamaWebUI
+
+OllamaWebUI 是一个用户友好的 Web 界面，用于与 [Ollama](https://ollama.ai/) 交互，让您可以轻松地与 Ollama 模型聊天和管理它们。
+
+## 功能特性
+
+*   **聊天界面:**  简洁直观的聊天界面，用于进行对话式 AI 交互。
+*   **模型选择:**  轻松切换不同的 Ollama 模型。
+*   **对话历史记录:**  保存聊天记录以便后续查看。
+*   **主题切换:**  提供浅色和深色主题选项，满足用户偏好。
+*   **API 设置:**  如果您的 Ollama 服务器不在默认地址 `http://localhost:11434` 上运行，可以调整 Ollama API URL。
+*   **URL 内容获取:**  从聊天中提供的 URL 链接提取内容，作为对话上下文。
+*   **代码语法高亮:**  对 AI 回复中的代码块进行语法高亮显示。
+*   **Markdown 渲染:**  AI 回复使用 Markdown 渲染，提高可读性。
+*   **数学公式渲染 (KaTeX):** 支持使用 KaTeX 渲染数学表达式。
+*   **HTML 预览:**  直接在浏览器中预览 HTML 代码片段。
+
+## 安装
+
+1.  **前提条件:**
+    *   **Python 3.7 或更高版本:**  请确保您的系统已安装 Python。
+    *   **Ollama:** 您需要安装并运行 [Ollama](https://ollama.ai/)。请按照 Ollama 网站上的安装说明进行操作。
+
+2.  **使用 pip 安装 OllamaWebUI:**
+
+    打开您的终端并运行：
+
+    ```bash
+    pip install ollamawebui
+    ```
+
+## 使用方法
+
+1.  **启动 OllamaWebUI:**
+
+    在您的终端中，只需运行：
+
+    ```bash
+    ollamawebui
+    ```
+
+2.  **在浏览器中访问:**
+
+    打开您的 Web 浏览器并访问 [http://127.0.0.1:5000](http://127.0.0.1:5000) 或 [http://localhost:5000](http://localhost:5000)。
+
+3.  **开始聊天！**
+
+    *   从侧边栏的下拉菜单中选择一个模型。如果模型未加载，请确保您的 Ollama 服务器正在运行且可访问。
+    *   在底部的输入框中键入您的消息，然后按 Enter 键或单击发送按钮。
+    *   享受与 Ollama 的对话吧！
+
+## 配置
+
+*   **Ollama API URL:**
+
+    默认情况下，OllamaWebUI 连接到 `http://localhost:11434` 的 Ollama API。如果您的 Ollama 服务器在不同的地址或端口上运行，您可以通过以下两种方式配置：
+
+    *   **环境变量:** 在启动 `ollamawebui` 之前设置 `OLLAMA_API_URL` 环境变量。例如：
+
+        ```bash
+        export OLLAMA_API_URL="http://您的_ollama_主机:您的_ollama_端口"
+        ollamawebui
+        ```
+
+    *   **Web UI 设置:** 在 Web UI 中，单击消息输入框旁边的设置图标 (⚙️)。然后，您可以输入 Ollama API 的 IP 地址和端口并保存设置。
+
+## 依赖项
+
+OllamaWebUI 依赖于以下 Python 包：
+*   Flask
+*   requests
+*   beautifulsoup4
+*   html5lib
+*   lxml
+
+当您使用 pip 安装 `ollamawebui` 时，这些依赖项将自动安装。
+
+
+**祝您使用 OllamaWebUI 愉快！**
+**喜欢，关注Python学霸公众号**
