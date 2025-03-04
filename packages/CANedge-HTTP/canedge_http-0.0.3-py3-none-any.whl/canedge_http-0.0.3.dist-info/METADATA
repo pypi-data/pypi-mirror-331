@@ -1,0 +1,89 @@
+Metadata-Version: 2.4
+Name: CANedge-HTTP
+Version: 0.0.3
+Summary: Python module for accessing CANEdge filesystem via HTTP
+Project-URL: Homepage, https://www.csselectronics.com/
+Author: CSS Electronics
+Author-email: contact@csselectronics.com
+License: MIT
+Keywords: CANEdge,CSS Electronics
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Requires-Dist: requests>=2.32.3
+Description-Content-Type: text/markdown
+
+# CANedge HTTP
+Python module for accessing the [CANedge](https://www.csselectronics.com/pages/can-bus-hardware-products) via HTTP. The CANedge HTTP interface can e.g. be used to automatically poll and then delete log files stored on the CANedge. 
+
+The module supports download, deletion, and listing of files on the CANedge.
+
+## Installation
+```
+pip install canedge_http
+```
+
+## Tools
+- `ce_http_downloader`: Download log files filtered by start and end-time. Run ``ce_http_downloader --help`` for information on usage.
+
+## Usage
+
+### Import
+```python
+from canedge_http import CANedgeHTTP
+```
+
+### Construct
+
+```python
+http = CANedgeHTTP("http://192.168.1.100")
+```
+
+### Device ID
+
+```python
+http.device_id
+```
+Result example:
+```python
+'AABBCCDD'
+```
+
+### Permission
+
+```python
+http.permission
+```
+Result example:
+```python
+'OPTIONS, GET, HEAD, PUT, DELETE'
+```
+
+### List files
+```python
+for elm in http.list(path="/", recursive=True):
+   ...
+```
+Result example (elm):
+```python
+{'path': '/device.json', 'is_dir': False, 'lastWritten': datetime.datetime(2024, 7, 12, 5, 3, 12, tzinfo=datetime.timezone.utc), 'size': 601}
+```
+
+### Download
+Download takes a file-like object, e.g.
+
+```python
+f = io.BytesIO()
+http.download("/device.json", f)
+```
+or
+```python
+with open("00000001.MF4", "wb") as f:
+    http.download("/LOG/AABBCCDD/00000001/00000001.MF4", f)
+```
+
+### Delete
+```python
+http.delete("/LOG/AABBCCDD/00000001/00000001.MF4")
+```

@@ -1,0 +1,2 @@
+[console_scripts]
+ce_http_downloader = canedge_http.tools.tool_download_log_files:main
