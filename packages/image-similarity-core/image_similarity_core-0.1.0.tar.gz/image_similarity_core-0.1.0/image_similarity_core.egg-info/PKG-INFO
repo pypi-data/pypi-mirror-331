@@ -1,0 +1,39 @@
+Metadata-Version: 2.2
+Name: image_similarity_core
+Version: 0.1.0
+Summary: A package to find the reference ID of the most similar image using ResNet50 and cosine similarity.
+Home-page: https://github.com/yourusername/palm_image_similarity
+Author: Ambati Rajendra
+Author-email: rajendraambati.ai@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Image Recognition
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.19.0
+Requires-Dist: pandas>=1.1.0
+Requires-Dist: Pillow>=8.0.0
+Requires-Dist: scikit-learn>=0.23.0
+Requires-Dist: torch>=1.7.0
+Requires-Dist: torchvision>=0.8.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Image Similarity Package
+
+A Python package to find the reference ID of the most similar image using ResNet50 and cosine similarity.
+
+## Installation
+
+Install the package using pip:
+
+```bash
+pip install image_similarity_package

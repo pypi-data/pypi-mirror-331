@@ -1,0 +1,9 @@
+README.md
+setup.py
+image_similarity_core/__init__.py
+image_similarity_core/image_similarity_core.py
+image_similarity_core.egg-info/PKG-INFO
+image_similarity_core.egg-info/SOURCES.txt
+image_similarity_core.egg-info/dependency_links.txt
+image_similarity_core.egg-info/requires.txt
+image_similarity_core.egg-info/top_level.txt
