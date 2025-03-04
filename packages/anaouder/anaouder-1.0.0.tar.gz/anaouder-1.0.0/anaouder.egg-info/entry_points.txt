@@ -1,0 +1,6 @@
+[console_scripts]
+adskrivan = anaouder.adskrivan:main_adskrivan
+istitlan = anaouder.istitlan:main_istitlan
+linennan = anaouder.linennan:main_linennan
+mikro = anaouder:main_mikro
+normalizan = anaouder:main_normalizan
