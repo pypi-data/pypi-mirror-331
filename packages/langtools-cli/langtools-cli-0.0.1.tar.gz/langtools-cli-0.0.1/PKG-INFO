@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: langtools-cli
+Version: 0.0.1
+Summary: A Python package for language processing utilities
+Home-page: https://github.com/yourusername/langtools-cli
+Author: jiuhu
+Author-email: your.email@example.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+A Python package for language processing utilities
+
