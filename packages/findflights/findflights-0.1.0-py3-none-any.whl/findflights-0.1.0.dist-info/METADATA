@@ -1,0 +1,9 @@
+Metadata-Version: 2.2
+Name: findflights
+Version: 0.1.0
+Summary: Add your description here
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: bs4>=0.0.2
+Requires-Dist: rich>=13.9.4
+Requires-Dist: selenium>=4.29.0
