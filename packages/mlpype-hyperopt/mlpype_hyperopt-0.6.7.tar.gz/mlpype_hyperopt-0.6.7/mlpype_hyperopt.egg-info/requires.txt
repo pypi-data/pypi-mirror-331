@@ -1,0 +1,5 @@
+mlpype-base==0.6.7
+hyperopt>=0.2.7
+
+[strict]
+hyperopt==0.2.7
