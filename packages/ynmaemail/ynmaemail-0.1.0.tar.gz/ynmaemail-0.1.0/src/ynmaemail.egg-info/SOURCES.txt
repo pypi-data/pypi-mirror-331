@@ -1,0 +1,10 @@
+README.md
+setup.py
+src/demo-code/__init__.py
+src/demo-code/main.py
+src/demo-code/utils.py
+src/ynmaemail.egg-info/PKG-INFO
+src/ynmaemail.egg-info/SOURCES.txt
+src/ynmaemail.egg-info/dependency_links.txt
+src/ynmaemail.egg-info/requires.txt
+src/ynmaemail.egg-info/top_level.txt
