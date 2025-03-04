@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+autotranslate/__init__.py
+autotranslate/lenuxtranslate.py
+autotranslate/logger.py
+lenuxtranslate.egg-info/PKG-INFO
+lenuxtranslate.egg-info/SOURCES.txt
+lenuxtranslate.egg-info/dependency_links.txt
+lenuxtranslate.egg-info/entry_points.txt
+lenuxtranslate.egg-info/requires.txt
+lenuxtranslate.egg-info/top_level.txt

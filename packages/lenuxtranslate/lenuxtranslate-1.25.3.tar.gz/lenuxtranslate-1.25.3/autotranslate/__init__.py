@@ -1,0 +1,1 @@
+from .lenuxtranslate import lenuxtranslate
