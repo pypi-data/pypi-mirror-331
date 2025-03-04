@@ -1,0 +1,9 @@
+Metadata-Version: 2.2
+Name: NXDB
+Version: 0.1.0.7
+Author: VladosNX
+Author-email: email.name@email.com
+Requires-Dist: pyyaml
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-dist
