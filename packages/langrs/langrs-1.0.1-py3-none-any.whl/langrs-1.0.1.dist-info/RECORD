@@ -1,0 +1,9 @@
+langrs/__init__.py,sha256=W6LPp57L8HGE2DGWoPftXY1SUOx0_KlpE1cDv3uhIi0,236
+langrs/common.py,sha256=3CRWAeLXUMkj_edWTPiqxd39BDlp2qgByCeq3-Dq4Hg,3625
+langrs/core.py,sha256=TQBy17Gp6tRCNTAx1yWV2UBIC25BE19lTzjDRn0E9sQ,14128
+langrs/outlier_detection.py,sha256=IeoPv-cMt7J1d4T_5XWwnSkYO6F9f_spEvNElvgoJLA,5146
+langrs-1.0.1.dist-info/LICENSE,sha256=iwbFI5T4krzSMkdcruJJxNv9G1sPhyAyZImcx1L8UtU,1089
+langrs-1.0.1.dist-info/METADATA,sha256=EoUIzQlaxv0Ma-NIT8Jrv1IjoH05K7f2vQ33ToNLsM0,6477
+langrs-1.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+langrs-1.0.1.dist-info/top_level.txt,sha256=diZYh_11Tg31zEGARcF63cRmsf-lEQxxn-iUs-kubbc,7
+langrs-1.0.1.dist-info/RECORD,,
