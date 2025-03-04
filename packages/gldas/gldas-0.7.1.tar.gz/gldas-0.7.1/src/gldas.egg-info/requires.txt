@@ -1,0 +1,19 @@
+pyproj
+pygeogrids
+pygrib
+numpy
+pygeobase
+datedown>=0.3
+trollsift
+netcdf4
+pyresample
+repurpose
+pynetcf
+
+[:python_version < "3.8"]
+importlib-metadata
+
+[testing]
+pytest-cov
+coverage
+pytest
