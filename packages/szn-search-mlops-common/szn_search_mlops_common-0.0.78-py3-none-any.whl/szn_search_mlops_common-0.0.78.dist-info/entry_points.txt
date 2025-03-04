@@ -1,0 +1,2 @@
+[console_scripts]
+szn_search_mlops_common = szn_search_mlops_common:main
