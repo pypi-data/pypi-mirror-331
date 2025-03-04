@@ -1,0 +1,12 @@
+pyawg/__init__.py,sha256=vOuCgvJqBXIRVlc6NLnZpj5HtBVMIcglBTtEi7goBmc,240
+pyawg/awg_control.py,sha256=tlHSOaaLMTucqra3DhwgAJG9ZKhQrPT3NW_AH_BzLaY,826
+pyawg/base.py,sha256=TqvmSoXNgEr4t-MmKUk49D4oDYiI4dNurce8CCoWXgA,1922
+pyawg/enums.py,sha256=4NwTgfuv0Us70LRY8k_QvSOarej2QyhMYILUDRgdLP0,715
+pyawg/exceptions.py,sha256=yUiqWYoBdzshWvi8AE0-KOrDc-zGfVtK1tdgUfq9vo4,294
+pyawg/rigol.py,sha256=GNu99vaor82HC6WlMNS9-aDt0AK_JN6n9Biuc9iuROw,11234
+pyawg/siglent.py,sha256=h8UZCvEra0olKIsqRjwQft6xGVIBZshmOf6tM8nF-jg,12479
+pyawg/utils.py,sha256=pP3AztL0YXL1MxbhVgqFhfVsq1JCBm1QVYmeN8zQVoA,163
+pyawg-0.3.2.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+pyawg-0.3.2.0.dist-info/METADATA,sha256=0ZBnT5rAwAq4DoJ0sL9lPzE_ICjrEWnI7TJMZXfA2VY,1706
+pyawg-0.3.2.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+pyawg-0.3.2.0.dist-info/RECORD,,
