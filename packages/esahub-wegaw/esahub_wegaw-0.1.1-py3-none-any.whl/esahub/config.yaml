@@ -1,0 +1,149 @@
+# -----------------------------------------------------------------------------
+# GENERAL SYSTEM CONFIGURATION
+# -----------------------------------------------------------------------------
+GENERAL:
+  # ---------------------------------------------------------------------------
+  # The directory that holds extracted meta data.
+  DATA_DIR: '~/esahub/data/'
+  # Logging disabled by default. Can be switched on
+  # with command line --log.
+  LOGGING: No
+  # Options include {cmd}, {time}
+  LOG_FILE: '~/esahub/logs/esahub_{cmd}_{time}.log'
+  # Whether to send email reports. Best leave at False and
+  # override with command line --email
+  SEND_EMAIL: No
+  EMAIL_SUBJECT: 'esahub report [{cmd}]'
+  EMAIL_SENDER: ''
+  EMAIL_REPORT_RECIPIENTS:
+      -
+
+  # ---------------------------------------------------------------------------
+  # Whether to suppress terminal output
+  QUIET: No
+  # Whether to download preview images if available
+  DOWNLOAD_PREVIEW: No
+  # Whether to check the consistency of existing files
+  # conflicting with the current download
+  CHECK_EXISTING: Yes
+  # Whether to continue incomplete downloads
+  CONTINUE: Yes
+  # Default mode for consistency checking: `md5`|`file`
+  # `file` is very fast but doesn't guarantee consistency
+  # `md5` is slower and only works when the file (still) exists on SciHub
+  CHECK_MODE: 'md5'
+
+  # ---------------------------------------------------------------------------
+  # Number of reconnection trials
+  TRIALS: 10
+  # Connection timeout in seconds
+  TIMEOUT: 5.0
+  # Waiting time in seconds before trying to reconnect
+  RECONNECT_TIME: 2.0
+  # Whether to wait indefinitely when encountering HTTP 503:
+  WAIT_ON_503: Yes
+  # Number of entries fetched from the server per request
+  ENTRIES: 100
+  # Number of simultaneous queries to SciHub (ls command)
+  N_SCIHUB_QUERIES: 20
+
+  # ---------------------------------------------------------------------------
+  # Specify default query parameters here.
+  QUERY: {}
+
+
+# -----------------------------------------------------------------------------
+# SATELLITE CONFIGURATION
+# -----------------------------------------------------------------------------
+SATELLITES:
+  S1A:
+    source: ['COLHUB2','COLHUB1','API','DHUS']
+    platform: 'Sentinel-1'
+    suffix: '.SAFE'
+    ext: '.zip'
+  S1B:
+    source: ['COLHUB2','COLHUB1','API','DHUS']
+    platform: 'Sentinel-1'
+    suffix: '.SAFE'
+    ext: '.zip'
+  S2A:
+    source: ['COLHUB2','COLHUB1','API','DHUS']
+    platform: 'Sentinel-2'
+    suffix: '.SAFE'
+    ext: '.zip'
+  S2B:
+    source: ['COLHUB2','COLHUB1','API','DHUS']
+    platform: 'Sentinel-2'
+    suffix: '.SAFE'
+    ext: '.zip'
+  S3A:
+    source: ['COLHUB2','COLHUB1','API','S3']
+    platform: 'Sentinel-3'
+    suffix: '.SEN3'
+    ext: '.zip'
+  S5P:
+    source: ['COLHUB2','COLHUB1','S5P']
+    platform: 'Sentinel-5'
+    suffix: ''
+    ext: '.nc'
+  AE:
+    source:
+    platform: 'ADM-AEOLUS'
+    suffix: ''
+    ext: '.tgz'
+
+
+# -----------------------------------------------------------------------------
+# DATA HOSTS CONFIGURATION
+# -----------------------------------------------------------------------------
+
+# Add credential for all services you are signed up for.
+
+SERVERS:
+  S3:
+    host: 'https://scihub.copernicus.eu/s3'
+    user: 's3guest'
+    password: 's3guest'
+    downloads: 4
+  S5P:
+    host: 'https://s5phub.copernicus.eu/dhus'
+    user: 's5pguest'
+    password: 's5pguest'
+    downloads: 4
+  API:
+    host: 'https://scihub.copernicus.eu/apihub'
+    user: ''
+    password: ''
+    downloads: 2
+  DHUS:
+    host: 'https://scihub.copernicus.eu/dhus'
+    user: ''
+    password: ''
+    downloads: 2
+  TMP:
+    host: 'https://tmphub.copernicus.eu/dhus'
+    user: ''
+    password: ''
+    downloads: 2
+  COLHUB1:
+    host: 'https://colhub.copernicus.eu/dhus'
+    user: ''
+    password: ''
+    downloads: 10
+  COLHUB2:
+    host: 'https://colhub2.copernicus.eu/dhus'
+    user: ''
+    password: ''
+    downloads: 10
+
+
+# -----------------------------------------------------------------------------
+# CUSTOM LOCATION ALIASES
+# -----------------------------------------------------------------------------
+LOCATIONS:
+  Ireland                   : 'POLYGON((-25.1 46.8,-5.25 46.8,-5.25 57.4,-25.1 57.4,-25.1 46.8))'
+  Ireland_large             : 'POLYGON((-33.0 27.0,3.0 27.0,3.0 63.0,-33.0 63.0,-33.0 27.0))'
+  Namibia_Gobabeb           : 'POINT(15.0 -23.0)'
+  France_La_Crau            : 'POINT(4.0 43.0)'
+  Italy_Rome_Tor_Vergata    : 'POINT(12.0 41.0)'
+  Ireland_Mace_Head         : 'POINT(-9.0 53.0)'
