@@ -1,0 +1,9 @@
+numpy
+python-osc
+click
+pyYAML
+
+[tests]
+pytest
+pyfar
+pytest-cov
