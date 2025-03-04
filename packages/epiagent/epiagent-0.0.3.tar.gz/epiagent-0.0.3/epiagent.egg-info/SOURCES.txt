@@ -1,0 +1,36 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+data/cCRE.bed
+data/cCRE_document_frequency.npy
+data/sample/metadata.csv
+data/sample/fragment/HCAHeartST10773171_HCAHeartST10781448.bed
+demo/Data Preprocessing.ipynb
+demo/Fine-tuning EpiAgent for data imputation.ipynb
+demo/Fine-tuning EpiAgent for reference data integration and query data mapping.ipynb
+demo/Fine-tuning EpiAgent for supervised cell type annotation.ipynb
+demo/Fine-tuning EpiAgent for unsupervised feature extraction.ipynb
+demo/Zero-shot Feature Extraction using EpiAgent.ipynb
+demo/Zero-shot annotation using EpiAgent-B.ipynb
+demo/Zero-shot annotation using EpiAgent-NT.ipynb
+demo/.ipynb_checkpoints/Data Preprocessing-checkpoint.ipynb
+demo/.ipynb_checkpoints/Zero-shot annotation using EpiAgent-B-checkpoint.ipynb
+demo/.ipynb_checkpoints/Zero-shot annotation using EpiAgent-NT-checkpoint.ipynb
+epiagent/__init__.py
+epiagent/dataset.py
+epiagent/inference.py
+epiagent/model.py
+epiagent/preprocessing.py
+epiagent/tokenization.py
+epiagent/train.py
+epiagent/utils.py
+epiagent.egg-info/PKG-INFO
+epiagent.egg-info/SOURCES.txt
+epiagent.egg-info/dependency_links.txt
+epiagent.egg-info/requires.txt
+epiagent.egg-info/top_level.txt
+inst/model.png
+model/EpiAgent-B/EpiAgent-B_cell_types.json
+model/EpiAgent-NT/EpiAgent-NT_cell_types.json
