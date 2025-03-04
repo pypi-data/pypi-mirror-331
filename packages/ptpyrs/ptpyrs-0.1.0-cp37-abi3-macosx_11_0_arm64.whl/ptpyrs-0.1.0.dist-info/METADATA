@@ -1,0 +1,18 @@
+Metadata-Version: 2.3
+Name: ptpyrs
+Version: 0.1.0
+Requires-Dist: pytest ; extra == 'dev'
+Provides-Extra: dev
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+
+# ptpy-rs
+
+A Python REPL demo with using [ruff](https://github.com/astral-sh/ruff) APIs to parse & highlight, written in Rust.
+
+## DEMO
+![](demo.svg)
+## USAGE
+
+## Reference
+[ptpython](https://github.com/prompt-toolkit/ptpython): A better Python REPL
