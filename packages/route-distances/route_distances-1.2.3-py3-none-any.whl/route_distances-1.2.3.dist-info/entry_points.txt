@@ -1,0 +1,5 @@
+[console_scripts]
+cluster_aizynth_output=route_distances.tools.cluster_aizynth_output:main
+prepare_aizynthfinder_output=route_distances.tools.prepare_aizynthfinder_output:main
+train_lstm_model=route_distances.tools.train_lstm_model:main
+
