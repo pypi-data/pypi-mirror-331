@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: byoconfig
+Version: 0.0.2
+Summary: A configuration class that supports plugins, multiple file formats, heirarchical configuration, and more.
+Author-email: Cam Ratchford <camratchford@gmail.com>
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: Environment :: MacOS X
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Requires-Dist: PyYAML==6.0.2
+Requires-Dist: toml==0.10.2
+Provides-Extra: development
+Requires-Dist: mkdocs; extra == "development"
+Requires-Dist: mkdocs-material; extra == "development"
+Requires-Dist: ruff; extra == "development"
+Requires-Dist: pytest; extra == "development"
+Requires-Dist: build; extra == "development"
+Requires-Dist: twine; extra == "development"
