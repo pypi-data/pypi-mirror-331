@@ -1,0 +1,2 @@
+[console_scripts]
+Scaledgewhisper = ScaledgeWhisper.cli:main
