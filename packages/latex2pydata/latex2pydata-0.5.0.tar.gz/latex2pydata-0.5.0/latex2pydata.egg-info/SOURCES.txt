@@ -1,0 +1,16 @@
+CHANGELOG.md
+LICENSE.txt
+README.md
+pyproject.toml
+latex2pydata/__init__.py
+latex2pydata/err.py
+latex2pydata/fmtversion.py
+latex2pydata/loading.py
+latex2pydata/schema.py
+latex2pydata/util.py
+latex2pydata/version.py
+latex2pydata.egg-info/PKG-INFO
+latex2pydata.egg-info/SOURCES.txt
+latex2pydata.egg-info/dependency_links.txt
+latex2pydata.egg-info/top_level.txt
+test/test_loads.py
