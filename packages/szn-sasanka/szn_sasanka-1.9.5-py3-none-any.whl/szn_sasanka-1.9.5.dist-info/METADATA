@@ -1,0 +1,11 @@
+Metadata-Version: 2.2
+Name: szn-sasanka
+Version: 1.9.5
+Summary: Balíček pro szn sasanku interni system ktery funguje a automaticky stahuje manual k balicku
+Home-page: https://example.com/szn-sasanka
+Author: Pen Test
+Author-email: test.skvara@seznam.cz
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: summary
