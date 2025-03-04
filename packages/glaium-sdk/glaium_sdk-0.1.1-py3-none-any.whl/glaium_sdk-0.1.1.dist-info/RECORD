@@ -1,0 +1,8 @@
+glaium_sdk/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+glaium_sdk/agent.py,sha256=2Agd8n7Gm6_vfTLjcV8UwSydJ2nXhnj9rCdSdEKc1iY,2077
+glaium_sdk/client.py,sha256=r05DWX8Z0Xs_cH026ldJenK-FhjJvBHJkWU_y029QOU,2535
+glaium_sdk/optimization.py,sha256=p2Xo2sUnfIXFxtuzs9U3SFv0n3_-DtxPFLyHfy0xxyc,3153
+glaium_sdk-0.1.1.dist-info/METADATA,sha256=pwayg_KAlQi1_Pya1bO5IKQSz38YwI_jSUOP5ossjGg,360
+glaium_sdk-0.1.1.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+glaium_sdk-0.1.1.dist-info/top_level.txt,sha256=Pf_zY84FgR78xEcT2faasbM8R2dnvDEdPGzHgzoOAh8,11
+glaium_sdk-0.1.1.dist-info/RECORD,,
