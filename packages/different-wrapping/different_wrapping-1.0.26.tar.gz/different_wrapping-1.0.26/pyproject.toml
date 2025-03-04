@@ -1,0 +1,30 @@
+[build-system]
+requires = [
+    "setuptools>=60",
+    "setuptools-scm>=8.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "different_wrapping"
+version = "1.0.26"
+authors = [
+    {name = "petterroea", email = "spam+pypi@petterroea.com"},
+]
+description = "Simple k8s yaml generator for CTF challenges"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)"
+]
+
+dependencies = [
+    "PyYAML"
+]
+#dynamic = ["version"]
+
+[project.scripts]
+different_wrapping = "different_wrapping.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

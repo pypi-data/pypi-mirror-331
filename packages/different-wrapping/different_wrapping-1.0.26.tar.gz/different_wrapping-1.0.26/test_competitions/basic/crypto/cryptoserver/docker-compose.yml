@@ -1,0 +1,8 @@
+version: '3'
+services:
+  dynamic-challserver:
+    build:
+      context: docker
+      dockerfile: docker/Challserver.dockerfile
+    ports:
+    - 80

@@ -1,0 +1,8 @@
+version: '3'
+services:
+  js-server:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    ports:
+    - 80

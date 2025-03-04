@@ -1,0 +1,15 @@
+version: '3'
+services:
+  webserver:
+    image: nginx:latest
+    ports:
+    - 80:80
+    labels:
+      kompose.service.type: loadbalancer
+  static-webserver:
+    image: nginx:latest
+    ports:
+    - 80
+    labels:
+    - no.cyberlandslaget.http=yes
+    - no.cyberlandslaget.frontendName=Nissens server
