@@ -1,0 +1,110 @@
+{
+  "name": "example_strategy",
+  "description": "An example strategy",
+  "strategy_wallets_requirements": {
+    "ethereum": {
+      "mainnet": {
+        "ETH": 0.1,
+        "USDT": 100
+      },
+      "goerli": {
+        "ETH": 0.05
+      }
+    }
+  },
+  "strategy_required_env": {
+    "CHAINBOUND_API_KEY": "",
+    "ALCHEMY_API_KEY": "",
+    "COINGECKO_API_KEY": "",
+    "DEBUG_ALWAYS_REBALANCE": "True",
+    "READ_ONLY_MODE": "False",
+    "ENABLE_DEBUG": "True"
+  },
+  "shared_configs": {
+    "default_config": {
+      "network": "ANVIL",
+      "chain": "ARBITRUM",
+      "protocol": "UNISWAP_V3",
+      "wallet_address": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+      "initiate_teardown": false,
+      "pause_strategy": false,
+      "mode": "EXECUTION",
+      "granularity": "1h",
+      "initialization": {
+        "initial_position_value_USD": 100,
+        "initial_funding_token": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
+        "initial_token0_pool": "N/A",
+        "initial_token1_pool": "N/A",
+        "initial_funding_token0_amount": 0,
+        "initial_funding_token1_amount": 0
+      },
+      "price_model": {
+        "method": "hma",
+        "params": {
+          "price_window": 240
+        },
+        "data_source": "COINGECKO_DEX",
+        "data_format": "CLOSE"
+      },
+      "volatility_model": {
+        "method": "std",
+        "params": {
+          "volatility_window": 240,
+          "volatility_window_type": "rolling",
+          "volatility_factor": 2.0
+        },
+        "data_source": "COINGECKO_DEX",
+        "data_format": "CLOSE"
+      },
+      "strategy_update_params": {
+        "rebalance_condition": "VSNPD",
+        "rebalance_type": "DEFAULT",
+        "recalculate_frequency": 1,
+        "price_drift_threshold": 0.05,
+        "price_drift_type": "MODEL_POSITION",
+        "volatility_spread_threshold": 0.1,
+        "volatility_spread_type": "RAW_POSITION",
+        "rebalance_grace_period": 0,
+        "rebalance_out_of_position_period": 0,
+        "rebalance_frequency": 168,
+        "lp_bounds_calculation": "VOLATILITY",
+        "lp_bounds_ratio": 0.5
+      },
+      "slippage": {
+        "slippage_swap": 0.005,
+        "slippage_open": 0.05,
+        "slippage_close": 0.05,
+        "slippage_spot_rate": 0.003
+      }
+    }
+  },
+  "strategy_configs": {
+    "PENDLE_WETH": {
+      "parameters": {
+        "shared_parameters": "default_config",
+        "pool_address": "0xdbaeB7f0DFe3a0AAFD798CCECB5b22E708f7852c",
+        "pool_name": "PENDLE/WETH 3000",
+        "initialization": {
+          "initial_position_value_USD": 500,
+          "initial_funding_token": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
+          "initial_token0_pool": "0xdbaeB7f0DFe3a0AAFD798CCECB5b22E708f7852c",
+          "initial_token1_pool": "N/A",
+          "initial_funding_token0_amount": 0,
+          "initial_funding_token1_amount": 0
+        }
+      }
+    }
+  },
+  "test_tokens": [
+    {
+      "name": "PENDLE",
+      "address": "0x0c880f6761F1af8d9Aa9C466984b80DAb9a8c9e8",
+      "amount": 1000
+    },
+    {
+      "name": "WETH",
+      "address": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+      "amount": 1000
+    }
+  ]
+}
