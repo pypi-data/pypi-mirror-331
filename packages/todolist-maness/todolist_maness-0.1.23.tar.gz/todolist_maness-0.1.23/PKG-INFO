@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: todolist-maness
+Version: 0.1.23
+Summary: Add your description here
+Author-email: "M.Anees" <manees7865@gmail.com>
+Requires-Python: >=3.12
+Requires-Dist: click>=8.1.8
