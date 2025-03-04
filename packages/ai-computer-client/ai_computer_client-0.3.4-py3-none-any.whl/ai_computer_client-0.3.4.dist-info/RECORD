@@ -1,0 +1,12 @@
+ai_computer/__init__.py,sha256=0L4QSM3q4zWzYqNwisOqF_8ObcMdacmlXHbn55RX9YU,364
+ai_computer/client.py,sha256=U-xm04Koy429TbiMwJTURLeRH3NWy3lJFX5i7rvvacs,15090
+ai_computer/models.py,sha256=JG3gTKqCVrKlKsr4REAq5tb-WmZttn78LzxlrNiOJsQ,1214
+ai_computer/submodules/__init__.py,sha256=kz4NTuF9r3i_VwTLWsyRHaHKereyq0kFe1HrfKQLtB4,162
+ai_computer/submodules/base.py,sha256=3WoURENRnho26PkdghKM8S9s3-GYr11CwZidXhs-fFM,2530
+ai_computer/submodules/code.py,sha256=8GNpgL-6aVpD1UNtq-nvtvnMQy72dWKe247YA4cLsOs,11201
+ai_computer/submodules/filesystem.py,sha256=7x3g6Cr8PDKIuc9ogETuVjcOAlFKoHXhUcuntgRJv3s,15831
+ai_computer/submodules/shell.py,sha256=lcy4CpgoJWN6tsGi-IUb6PQpywLSNOD3_lt_yvSU6Y8,1632
+ai_computer_client-0.3.4.dist-info/METADATA,sha256=vVUG7UlP2FxGwugFbRm4gdL_JzLW1vt-S_kOH1W6Ugk,6407
+ai_computer_client-0.3.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+ai_computer_client-0.3.4.dist-info/licenses/LICENSE,sha256=N_0S5G1Wik2LWVDViJMAM0Z-6vTBX1bvDjb8vouBA-c,1068
+ai_computer_client-0.3.4.dist-info/RECORD,,
