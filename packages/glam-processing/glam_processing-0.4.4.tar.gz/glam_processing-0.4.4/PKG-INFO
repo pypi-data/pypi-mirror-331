@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: glam-processing
+Version: 0.4.4
+Summary: 
+Author: John Keniston
+Author-email: jfkeniston@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: beautifulsoup4 (>=4.12.3,<5.0.0)
+Requires-Dist: cryptography (>=43.0.0,<44.0.0)
+Requires-Dist: earthaccess (>=0.10.0,<0.11.0)
+Requires-Dist: h5py (>=3.11.0,<4.0.0)
+Requires-Dist: pyjwt (>=2.9.0,<3.0.0)
+Requires-Dist: rasterio (>=1.3.11,<2.0.0)
+Requires-Dist: rio-cogeo (>=5.3.3,<6.0.0)
+Requires-Dist: rioxarray (>=0.17.0,<0.18.0)
+Description-Content-Type: text/markdown
+
+# GLAM Processing Toolkit
+
+A Python library to download and process imagery used in the Harvest GLAM API & Web Application.
+
