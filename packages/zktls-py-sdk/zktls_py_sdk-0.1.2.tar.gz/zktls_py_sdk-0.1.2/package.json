@@ -1,0 +1,16 @@
+{
+  "name": "zktls-py-sdk",
+  "version": "0.1.2",
+  "description": "Node.js dependencies for ZK TLS Python SDK",
+  "private": true,
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "dependencies": {
+    "@primuslabs/zktls-core-sdk": "^0.1.1"
+  },
+  "scripts": {
+    "postinstall": "node -e \"try { require('@primuslabs/zktls-core-sdk'); console.log('ZK TLS Core SDK installed successfully'); } catch(e) { console.error('Failed to install ZK TLS Core SDK:', e); process.exit(1); }\""
+  }
+}
