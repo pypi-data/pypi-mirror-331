@@ -1,0 +1,51 @@
+LICENSE.txt
+README.md
+setup.py
+noshot.egg-info/PKG-INFO
+noshot.egg-info/SOURCES.txt
+noshot.egg-info/dependency_links.txt
+noshot.egg-info/not-zip-safe
+noshot.egg-info/top_level.txt
+src/noshot/__init__.py
+src/noshot/main.py
+src/noshot/data/ML TS XAI/CIA-1-Delhi Boy.ipynb
+src/noshot/data/ML TS XAI/Football Player/4.ipynb
+src/noshot/data/ML TS XAI/ML/1. PCA - EDA.ipynb
+src/noshot/data/ML TS XAI/ML/2. KNN Classifier.ipynb
+src/noshot/data/ML TS XAI/ML/3. Linear Discriminant Analysis.ipynb
+src/noshot/data/ML TS XAI/ML/4. Linear Regression.ipynb
+src/noshot/data/ML TS XAI/ML/5. Logistic Regression.ipynb
+src/noshot/data/ML TS XAI/ML/6. Bayesian Classifier.ipynb
+src/noshot/data/ML TS XAI/ML Additional/Bank.ipynb
+src/noshot/data/ML TS XAI/ML Additional/LR.ipynb
+src/noshot/data/ML TS XAI/ML Additional/ObesityDataSet_raw_and_data_sinthetic.csv
+src/noshot/data/ML TS XAI/ML Additional/Q4 LR.csv
+src/noshot/data/ML TS XAI/ML Additional/Q7 BANK DETAILS.csv
+src/noshot/data/ML TS XAI/ML Additional/airfoil.ipynb
+src/noshot/data/ML TS XAI/ML Additional/airfoil_self_noise.dat
+src/noshot/data/ML TS XAI/ML Additional/obesity.ipynb
+src/noshot/data/ML TS XAI/ML Additional/voronoicode.ipynb
+src/noshot/data/ML TS XAI/ML Lab CIA - Healthy Class/1/1.ipynb
+src/noshot/data/ML TS XAI/ML Lab CIA - Healthy Class/1/Question.txt
+src/noshot/data/ML TS XAI/ML Lab CIA - Healthy Class/1/airfoil_self_noise.dat
+src/noshot/data/ML TS XAI/ML Lab CIA - Healthy Class/2/2.ipynb
+src/noshot/data/ML TS XAI/ML Lab CIA - Healthy Class/2/Question.txt
+src/noshot/data/ML TS XAI/ML Lab CIA - Healthy Class/2/pop_failures.dat
+src/noshot/data/ML TS XAI/ML Lab CIA - Healthy Class/3/3.ipynb
+src/noshot/data/ML TS XAI/ML Lab CIA - Healthy Class/3/Qu.txt
+src/noshot/data/ML TS XAI/ML Lab CIA - Healthy Class/3/go_track_tracks.csv
+src/noshot/data/ML TS XAI/ML Lab CIA - Healthy Class/4/4.ipynb
+src/noshot/data/ML TS XAI/ML Lab CIA - Healthy Class/4/Wilt.csv
+src/noshot/data/ML TS XAI/ML Lab CIA - Healthy Class/4/qu.txt
+src/noshot/data/ML TS XAI/ML Lab CIA - Our Class/AllinOne.ipynb
+src/noshot/data/ML TS XAI/ML Lab CIA - Our Class/Heart-Disease-UCI-0.ipynb
+src/noshot/data/ML TS XAI/ML Lab CIA - Our Class/Housing-0.ipynb
+src/noshot/data/ML TS XAI/ML Lab CIA - Our Class/Lab Code Ex 1-4.ipynb
+src/noshot/data/ML TS XAI/ML Lab CIA - Our Class/data/Housing.csv
+src/noshot/data/ML TS XAI/ML Lab CIA - Our Class/data/heart_disease_uci.csv
+src/noshot/data/ML TS XAI/ML/data/balance-scale.csv
+src/noshot/data/ML TS XAI/ML/data/balance-scale.txt
+src/noshot/data/ML TS XAI/ML/data/machine-data.csv
+src/noshot/data/ML TS XAI/ML/data/wine-dataset.csv
+src/noshot/utils/__init__.py
+src/noshot/utils/shell_utils.py
