@@ -1,0 +1,6 @@
+dist
+examples
+notebooks
+src
+tests
+wincam
