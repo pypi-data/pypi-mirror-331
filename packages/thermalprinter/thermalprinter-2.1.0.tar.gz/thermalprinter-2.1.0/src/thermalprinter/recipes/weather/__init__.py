@@ -1,0 +1,500 @@
+"""This is part of the Python's module to manage the DP-EH600 thermal printer.
+Source: https://github.com/BoboTiG/thermalprinter.
+"""
+
+from __future__ import annotations
+
+from dataclasses import dataclass, field
+from datetime import datetime
+from logging import getLogger
+from pathlib import Path
+from typing import TYPE_CHECKING
+from zoneinfo import ZoneInfo
+
+import requests
+
+from thermalprinter import CodePage, Justify, Size
+
+if TYPE_CHECKING:
+    from types import TracebackType
+    from typing import Any, Self
+
+    from thermalprinter import ThermalPrinter
+
+# Might be something you would like to translate
+TITLE = "Météo"  #: Title.
+SAINT_OF_THE_DAY = "Fête du jour : {}"  #: Prefix before the saint of the day.
+NORTH = "N"  #: The North cord point abbreviation.
+EAST = "E"  #: The East cord point abbreviation.
+SOUTH = "S"  #: The South cord point abbreviation.
+WEST = "O"  #: The West cord point abbreviation.
+
+TIMEZONE = "Europe/Paris"  #: The timezone to display proper dates.
+
+#: OpenWeatherMap API URL.
+URL = "https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&units=metric&appid={appid}"
+#: User-Agent HTTP header used to fetch OpenWeatherMap data.
+USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64; rv:133.0) Gecko/20100101 Firefox/133.0"
+
+#: File containing calendar saints.
+SAINTS_FILE = "./saints.lst"
+
+# Sync with https://openweathermap.org/weather-conditions
+DESCRIPTIONS = {
+    # Group 2xx: Thunderstorm
+    "thunderstorm": "Orage",
+    "thunderstorm with light rain": "Orage & fine pluie",
+    "thunderstorm with rain": "Orage & pluie",
+    "thunderstorm with heavy rain": "Orage & pluies++",
+    "light thunderstorm": "Léger orage",
+    "heavy thunderstorm": "Fort orage",
+    "ragged thunderstorm": "Orage",
+    "thunderstorm with light drizzle": "Orage & bruine",
+    "thunderstorm with drizzle": "Orage & bruine",
+    "thunderstorm with heavy drizzle": "Orage & bruine++",
+    # Group 3xx: Drizzle
+    "light intensity drizzle": "Légère bruine",
+    "drizzle": "Bruine",
+    "heavy intensity drizzle": "Forte bruine",
+    "light intensity drizzle rain": "Légère bruine",
+    "drizzle rain": "Bruine pluvieuse",
+    "heavy intensity drizzle rain": "Forte bruine",
+    "shower rain and drizzle": "Averse & bruine",
+    "heavy shower rain and drizzle": "Averse++ & bruine",
+    "shower drizzle": "Averse & bruine",
+    # Group 5xx: Rain
+    "light rain": "Légère pluie",
+    "moderate rain": "Pluie modérée",
+    "heavy intensity rain": "Pluie intense",
+    "very heavy rain": "Pluie très forte",
+    "extreme rain": "Pluie extrême",
+    "freezing rain": "Pluie vergalçante",
+    "light intensity shower rain": "Légère pluie",
+    "shower rain": "Averse",
+    "heavy intensity shower rain": "Forte averse",
+    "ragged shower rain": "Pluie",
+    # Group 6xx: Snow
+    "light snow": "Légère neige",
+    "snow": "Neige",
+    "heavy snow": "Forte neige",
+    "sleet": "Grésil",
+    "light shower sleet": "Léger grésil",
+    "shower sleet": "Averse de grésil",
+    "light rain and snow": "Pluie fine & neige",
+    "rain and snow": "Pluie & neige",
+    "light shower snow": "Pluie de neige",
+    "shower snow": "Pluie de neige",
+    "heavy shower snow": "Tempête de neige",
+    # Group 7xx: Atmosphere
+    "mist": "Brume",
+    "smoke": "Fumée",
+    "haze": "Brume",
+    "sand/dust whirls": "Tourbillons",
+    "fog": "Brouillard",
+    "sand": "Sable",
+    "dust": "Poussière",
+    "volcanic ash": "Cendres volcaniques",
+    "squalls": "Bourrasques",
+    "tornado": "Tornade",
+    # Group 800: Clear
+    "clear sky": "Ciel dégagé",
+    # Group 80x: Clouds
+    "few clouds": "Nuages épars",
+    "scattered clouds": "Nuages épars",
+    "broken clouds": "Nuages fragmentés",
+    "overcast clouds": "Ciel couvert",
+}  #: :meta hide-value:
+
+# https://github.com/schachmat/wego/blob/2.3/frontends/ascii-art-table.go
+ASCII_ARTS = {
+    # Group 2xx: Thunderstorm
+    "thunderstorm": """\
+ _`/"".-.
+   \\_(   ).   {description}
+   /(___(__)    {temp_min} - {temp_max} °C
+    ⚡ʻ ʻ⚡ʻ      & {wind} km/h
+    ʻ ʻ ʻ ʻ     {precipitations} mm/h - {humidity}%
+    """,
+    "heavy thunderstorm": """\
+     .-.
+    (   ).    {description}
+   (___(__)     {temp_min} - {temp_max} °C
+  ‚ʻ⚡ʻ‚⚡‚ʻ      & {wind} km/h
+  ‚ʻ‚ʻ⚡ʻ‚ʻ      {precipitations} mm/h - {humidity}%
+    """,
+    # Group 3xx: Drizzle
+    # Group 5xx: Rain
+    "light rain": """\
+     .-.
+    (   ).    {description}
+   (___(__)     {temp_min} - {temp_max} °C
+    ʻ ʻ ʻ ʻ     & {wind} km/h
+   ʻ ʻ ʻ ʻ      {precipitations} mm/h - {humidity}%
+    """,
+    "shower rain": """\
+ _`/"".-.
+   \\_(   ).   {description}
+   /(___(__)    {temp_min} - {temp_max} °C
+     ʻ ʻ ʻ ʻ    & {wind} km/h
+    ʻ ʻ ʻ ʻ     {precipitations} mm/h - {humidity}%
+    """,
+    "very heavy rain": """\
+     .-.
+    (   ).    {description}
+   (___(__)     {temp_min} - {temp_max} °C
+  ‚ʻ‚ʻ‚ʻ‚ʻ      & {wind} km/h
+  ‚ʻ‚ʻ‚ʻ‚ʻ      {precipitations} mm/h - {humidity}%
+    """,
+    "heavy intensity shower rain": """\
+ _`/"".-.
+   \\_(   ).   {description}
+   /(___(__)    {temp_min} - {temp_max} °C
+   ‚ʻ‚ʻ‚ʻ‚ʻ     & {wind} km/h
+   ‚ʻ‚ʻ‚ʻ‚ʻ     {precipitations} mm/h - {humidity}%
+    """,
+    "freezing rain": """\
+     .-.
+    (   ).    {description}
+   (___(__)     {temp_min} - {temp_max} °C
+    ʻ * ʻ *     & {wind} km/h
+   * ʻ * ʻ      {precipitations} mm/h - {humidity}%
+    """,
+    # Group 6xx: Snow
+    "snow": """\
+     .-.
+    (   ).    {description}
+   (___(__)     {temp_min} - {temp_max} °C
+    *  *  *     & {wind} km/h
+   *  *  *      {precipitations} mm/h - {humidity}%
+    """,
+    "heavy snow": """\
+     .-.
+    (   ).    {description}
+   (___(__)     {temp_min} - {temp_max} °C
+   * * * *      & {wind} km/h
+  * * * *       {precipitations} mm/h - {humidity}%
+    """,
+    "heavy shower snow": """\
+ _`/"".-.
+   \\_(   ).   {description}
+   /(___(__)    {temp_min} - {temp_max} °C
+    * * * *     & {wind} km/h
+   * * * *      {precipitations} mm/h - {humidity}%
+    """,
+    "shower sleet": """\
+ _`/"".-.
+   \\_(   ).   {description}
+   /(___(__)    {temp_min} - {temp_max} °C
+     ʻ * ʻ *    & {wind} km/h
+    * ʻ * ʻ     {precipitations} mm/h - {humidity}%
+    """,
+    "shower snow": """\
+ _`/"".-.
+   \\_(   ).   {description}
+   /(___(__)    {temp_min} - {temp_max} °C
+     *  *  *    & {wind} km/h
+    *  *  *     {precipitations} mm/h - {humidity}%
+    """,
+    # Group 7xx: Atmosphere
+    "fog": """\
+
+ _ - _ - _ -  {description}
+  _ - _ - _     {temp_min} - {temp_max} °C
+ _ - _ - _ -    & {wind} km/h
+                {precipitations} mm/h - {humidity}%
+    """,
+    "tornado": """\
+    (    )
+     (  )    {description}
+    ( )        {temp_min} - {temp_max} °C
+     ()        & {wind} km/h
+     .         {precipitations} mm/h - {humidity}%
+    """,
+    "squalls": """\
+
+              {description}
+   \\ \\ \\ \\      {temp_min} - {temp_max} °C
+     \\ \\ \\ \\    & {wind} km/h
+                {precipitations} mm/h - {humidity}%
+    """,
+    # Group 800: Clear
+    "clear sky": """\
+    \\ . /
+   - .-. -    {description}
+  ‒ (   ) ‒     {temp_min} - {temp_max} °C
+   . `-᾿ .      & {wind} km/h
+    / ' \\       {precipitations} mm/h - {humidity}%
+    """,
+    # Group 80x: Clouds
+    "broken clouds": """\
+
+     .--.     {description}
+  .-(    ).     {temp_min} - {temp_max} °C
+ (___.__)__)    & {wind} km/h
+                {precipitations} mm/h - {humidity}%
+    """,
+    "few clouds": """\
+   \\__/
+ __/  .-.     {description}
+   \\_(   ).     {temp_min} - {temp_max} °C
+   /(___(__)    & {wind} km/h
+                {precipitations} mm/h - {humidity}%
+    """,
+}  #: :meta hide-value:
+# ASCII art aliases
+# Group 2xx: Thunderstorm
+ASCII_ARTS["thunderstorm with light rain"] = ASCII_ARTS["thunderstorm"]
+ASCII_ARTS["thunderstorm with rain"] = ASCII_ARTS["thunderstorm"]
+ASCII_ARTS["thunderstorm with heavy rain"] = ASCII_ARTS["heavy thunderstorm"]
+ASCII_ARTS["light thunderstorm"] = ASCII_ARTS["thunderstorm"]
+ASCII_ARTS["ragged thunderstorm"] = ASCII_ARTS["thunderstorm"]
+ASCII_ARTS["thunderstorm with light drizzle"] = ASCII_ARTS["thunderstorm"]
+ASCII_ARTS["thunderstorm with drizzle"] = ASCII_ARTS["thunderstorm"]
+ASCII_ARTS["thunderstorm with heavy drizzle"] = ASCII_ARTS["heavy thunderstorm"]
+# Group 3xx: Drizzle
+ASCII_ARTS["light intensity drizzle"] = ASCII_ARTS["light rain"]
+ASCII_ARTS["drizzle"] = ASCII_ARTS["light rain"]
+ASCII_ARTS["heavy intensity drizzle"] = ASCII_ARTS["heavy intensity shower rain"]
+ASCII_ARTS["light intensity drizzle rain"] = ASCII_ARTS["light rain"]
+ASCII_ARTS["drizzle rain"] = ASCII_ARTS["light rain"]
+ASCII_ARTS["heavy intensity drizzle rain"] = ASCII_ARTS["very heavy rain"]
+ASCII_ARTS["shower rain and drizzle"] = ASCII_ARTS["shower rain"]
+ASCII_ARTS["heavy shower rain and drizzle"] = ASCII_ARTS["heavy intensity shower rain"]
+ASCII_ARTS["shower drizzle"] = ASCII_ARTS["shower rain"]
+# Group 5xx: Rain
+ASCII_ARTS["moderate rain"] = ASCII_ARTS["shower rain"]
+ASCII_ARTS["heavy intensity rain"] = ASCII_ARTS["very heavy rain"]
+ASCII_ARTS["extreme rain"] = ASCII_ARTS["very heavy rain"]
+ASCII_ARTS["light intensity shower rain"] = ASCII_ARTS["shower rain"]
+ASCII_ARTS["ragged shower rain"] = ASCII_ARTS["shower rain"]
+# Group 6xx: Snow
+ASCII_ARTS["light snow"] = ASCII_ARTS["snow"]
+ASCII_ARTS["sleet"] = ASCII_ARTS["snow"]
+ASCII_ARTS["light shower sleet"] = ASCII_ARTS["shower sleet"]
+ASCII_ARTS["light rain and snow"] = ASCII_ARTS["shower sleet"]
+ASCII_ARTS["rain and snow"] = ASCII_ARTS["shower sleet"]
+ASCII_ARTS["light shower snow"] = ASCII_ARTS["shower snow"]
+# Group 7xx: Atmosphere
+ASCII_ARTS["mist"] = ASCII_ARTS["fog"]
+ASCII_ARTS["smoke"] = ASCII_ARTS["fog"]
+ASCII_ARTS["haze"] = ASCII_ARTS["fog"]
+ASCII_ARTS["sand/dust whirls"] = ASCII_ARTS["fog"]
+ASCII_ARTS["sand"] = ASCII_ARTS["fog"]
+ASCII_ARTS["dust"] = ASCII_ARTS["fog"]
+ASCII_ARTS["volcanic ash"] = ASCII_ARTS["fog"]
+# Group 80x: Clouds
+ASCII_ARTS["overcast clouds"] = ASCII_ARTS["broken clouds"]
+ASCII_ARTS["scattered clouds"] = ASCII_ARTS["few clouds"]
+
+log = getLogger(__name__)
+
+
+@dataclass
+class Weather:
+    """Print the weather of the day alongside with the saint of the day. Using the data from OpenWeatherMap.
+
+    :param float lat: Location latitude.
+    :param float lon: Location longitude.
+    :param str appid: OpenWeatherMap `API key <https://openweathermap.org/appid>`_.
+    :param thermalprinter.ThermalPrinter | None printer: Optional printer to use.
+    """
+
+    lat: float
+    lon: float
+    appid: str
+    printer: ThermalPrinter | None = None
+    now: datetime = field(init=False)
+
+    def __post_init__(self) -> None:
+        self.now = datetime.now(tz=ZoneInfo(TIMEZONE))
+
+    def __enter__(self) -> Self:
+        """`with Weather(...) as weather: ...`"""
+        return self
+
+    def __exit__(
+        self,
+        exc_type: type[BaseException] | None,
+        exc_val: BaseException | None,
+        exc_tb: TracebackType | None,
+    ) -> None:
+        """Save stats."""
+        if self.printer:
+            with self.printer:
+                pass
+
+    def start(self) -> None:
+        """Where all the magic happens."""
+        today = self.get_today_data()
+        data = self.forge_data(today)
+        self.print_data(data)
+
+    def get_the_saint_of_the_day(self) -> str:
+        """Guess the saint of the day."""
+        today = self.now.strftime("%d/%m")
+        lines = (Path(__file__).parent / SAINTS_FILE).read_text().splitlines()
+        return next((line.split(";", 1)[1].strip() for line in lines if line.startswith(today)), "")
+
+    def get_today_data(self) -> dict[str, Any]:
+        """Retreive today weather metrics."""
+        url = URL.format(lat=self.lat, lon=self.lon, appid=self.appid)
+        headers = {"User-Agent": USER_AGENT}
+        with requests.get(url, headers=headers, timeout=15) as req:
+            data = req.json()
+        log.info("Got weather data: %s", data)
+        return data["daily"][0]
+
+    def forge_data(self, today: dict[str, Any]) -> dict[str, Any]:
+        """Craft the dict with only required metrics."""
+        data = {
+            "ascii": ASCII_ARTS[today["weather"][0]["description"]].rstrip(),
+            "humidity": today["humidity"],
+            "description": DESCRIPTIONS[today["weather"][0]["description"]],
+            "precipitations": int(today.get("rain", 0)),
+            "temp_max": int(today["temp"]["max"]),
+            "temp_min": int(today["temp"]["min"]),
+            "wind": mps_to_kmph(today["wind_speed"]),
+            "wind_dir": wind_dir(today["wind_deg"]),
+        }
+        log.debug("Crafted data: %s", data)
+        return data
+
+    def line_out(self, line: str | bytes, *, line_feed: bool = True) -> None:  # noqa: PLR0912
+        """Print one character at a time with the proper code page, and with adapted letters on unsupported unicode."""
+        if not (printer := self.printer):
+            return
+
+        if not line:
+            if line_feed:
+                printer.feed()
+            return
+
+        char: bytes | str | int
+        data: list[tuple[str | bytes, CodePage]] = []
+
+        for char in line:
+            if char == "‒":
+                char, codepage = b"\xc4", CodePage.CP863  # noqa: PLW2901
+            elif char == "᾿":
+                char, codepage = b"\xa2", CodePage.ISO_8859_7  # noqa: PLW2901
+            elif char == "ʻ":
+                char, codepage = b"\xd7", CodePage.CP1255  # noqa: PLW2901
+            elif char == "‚":
+                char, codepage = b"\xb8", CodePage.CP1255  # noqa: PLW2901
+            elif char == "⚡":
+                char, codepage = b"\x86", CodePage.IRAN  # noqa: PLW2901
+            elif char in {
+                int.from_bytes(b"\x8d", "big"),
+                int.from_bytes(b"\x8e", "big"),
+                int.from_bytes(b"\x8f", "big"),
+                int.from_bytes(b"\x8c", "big"),
+            }:
+                codepage = CodePage.THAI2
+            else:
+                codepage = CodePage.ISO_8859_1
+            data.append((bytes([char]) if isinstance(char, int) else char, codepage))
+
+        line_data: list[str | bytes] = []
+        for char, codepage in data:
+            if codepage is printer._codepage:
+                line_data.append(char)
+                continue
+
+            if line_data:
+                glue = b"" if isinstance(line_data[0], bytes) else ""
+                printer.out(glue.join(line_data), line_feed=False)  # type: ignore[arg-type]
+                line_data = []
+
+            line_data.append(char)
+            printer.codepage(codepage)
+
+        if line_data:
+            glue = b"" if isinstance(line_data[0], bytes) else ""
+            printer.out(glue.join(line_data), line_feed=line_feed)  # type: ignore[arg-type]
+
+    def print_data(self, data: dict[str, Any]) -> None:
+        """Just print."""
+        if not (printer := self.printer):
+            return
+
+        printer.codepage(CodePage.ISO_8859_1)
+        printer.feed()
+        printer.out(TITLE, bold=True, size=Size.LARGE)
+        printer.out(self.now.strftime("%Y-%m-%d"))
+        printer.feed()
+
+        lines = data.pop("ascii").splitlines()
+        self.line_out(lines[0])
+
+        # State
+        self.line_out(lines[1].format(**data))
+
+        # Temperature
+        self.line_out(lines[2].format(**data))
+
+        # Wind
+        part1, part2 = lines[3].split("&", 1)
+        self.line_out(part1, line_feed=False)
+        self.line_out(data["wind_dir"], line_feed=False)
+        self.line_out(part2.format(**data))
+
+        # Precipitations
+        self.line_out(lines[4].format(**data))
+
+        # Saint of the day
+        printer.codepage(CodePage.ISO_8859_1)
+        printer.feed()
+        printer.out(SAINT_OF_THE_DAY.format(self.get_the_saint_of_the_day()), justify=Justify.CENTER)
+
+        printer.feed(3)
+
+
+def mps_to_kmph(mps: float) -> int:
+    """Convert the wind unity from m/sec to km/h.
+
+    :param float mps: The input value in m/sec.
+    :rtype: int
+    :return: The converted value to km/h.
+    """
+    return int(mps * 3.6)
+
+
+def wind_dir(angle: float) -> bytes | str:
+    """Get the corresponding wind direction arrow, or the cord point abbreviation.
+
+    :param float angle: The wind angle.
+    :rtype: bytes | str
+    :return:
+        The cord point abbreviation. Either bytes for arrows, or plain string.
+
+        .. note::
+            Bytes values are :const:`thermalprinter.constants.CodePage` ``THAI2`` characters.
+    """
+    directions: list[bytes | str] = [
+        # North
+        b"\x8d",
+        # North-East
+        f"{NORTH}{EAST}",
+        f"{NORTH}{EAST}",
+        # East
+        b"\x8e",
+        b"\x8e",
+        # South-East
+        f"{SOUTH}{EAST}",
+        f"{SOUTH}{EAST}",
+        # South
+        b"\x8f",
+        b"\x8f",
+        # South-West
+        f"{SOUTH}{WEST}",
+        f"{SOUTH}{WEST}",
+        # West
+        b"\x8c",
+        b"\x8c",
+        # North-West
+        f"{NORTH}{WEST}",
+        f"{NORTH}{WEST}",
+        # North
+        b"\x8d",
+    ]
+    return directions[int(angle / 22.5)]

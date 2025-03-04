@@ -1,0 +1,206 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "thermalprinter"
+description = "Driver for the DP-EH600 thermal printer (AdaFruit)."
+readme = "README.md"
+requires-python = ">= 3.9"
+authors = [
+  { name = "Mickaël Schoentgen", email="contact@tiger-222.fr" },
+]
+maintainers = [
+  { name = "Mickaël Schoentgen", email="contact@tiger-222.fr" },
+]
+license = { file = "LICENSE" }
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: Unix",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Topic :: Printing",
+  "Topic :: Software Development :: Libraries",
+  "Topic :: System :: Hardware :: Hardware Drivers",
+]
+keywords = [
+    "printer",
+    "driver",
+    "thermal-printer",
+    "dp-eh600",
+    "dp-eh400",
+    "adafruit",
+]
+dependencies = [
+  "pyserial>=3.5,<4",
+]
+dynamic = ["version"]
+
+[project.urls]
+Homepage = "https://github.com/BoboTiG/thermalprinter"
+Changelog = "https://github.com/BoboTiG/thermalprinter/blob/main/CHANGELOG.md"
+Source = "https://github.com/BoboTiG/thermalprinter"
+Sponsor = "https://github.com/sponsors/BoboTiG"
+Tracker = "https://github.com/BoboTiG/thermalprinter/issues"
+"Released Versions" = "https://github.com/BoboTiG/thermalprinter/releases"
+
+[project.scripts]
+print-calendar = "thermalprinter.recipes.calendar.__main__:main"
+print-weather = "thermalprinter.recipes.weather.__main__:main"
+
+[project.optional-dependencies]
+# For users
+calendar = [
+  "cairosvg==2.7.1",
+  "pillow >=9.5, <12",
+  "recurring-ical-events==3.5.2",
+  "requests >=2.30, <2.40",
+]
+persian = [
+  "arabic-reshaper==3.0.0",
+  "python-bidi >=0.6, <0.7; python_version < '3.14'",
+]
+weather = [
+  "requests >=2.30, <2.40",
+]
+
+# For developers
+dev = [
+  "build==1.2.2.post1",
+  "twine==6.1.0",
+]
+docs = [
+  "enum-tools[sphinx]==0.12.0",
+  "myst-parser==4.0.1",
+  "shibuya==2025.2.28",
+  "sphinx==8.2.3",
+  "sphinx-copybutton==0.5.2",
+  "sphinx-new-tab-link==0.6.1",
+]
+lint = [
+  "mypy==1.15.0",
+  "ruff==0.9.9",
+  "types-requests",
+  "types-python-dateutil",
+]
+tests = [
+  "freezegun==1.5.1",
+  "pillow >=9.5, <12",
+  "pytest >=7.4, <9",
+  "pytest-cov >=4, <7",
+  "responses >=0.23, <0.26",
+]
+
+[tool.hatch.version]
+path = "src/thermalprinter/__init__.py"
+
+[tool.hatch.build]
+skip-excluded-dirs = true
+
+[tool.hatch.build.targets.sdist]
+only-include = [
+  "CHANGELOG.md",
+  "src/thermalprinter",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = [
+  "src/thermalprinter",
+]
+
+[tool.coverage.report]
+exclude_also = [
+    "if TYPE_CHECKING:",
+    'if __name__ == "__main__":',
+    "except ImportError:",
+]
+
+[tool.mypy]
+# Ensure we know what we do
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_unused_configs = true
+
+# Imports management
+ignore_missing_imports = true
+follow_imports = "skip"
+
+# Ensure full coverage
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+disallow_untyped_calls = true
+
+# Restrict dynamic typing (a little)
+# e.g. `x: List[Any]` or x: List`
+# disallow_any_generics = true
+
+strict_equality = true
+
+[tool.pytest.ini_options]
+pythonpath = "src"
+addopts = """
+    --cov-report=term-missing:skip-covered
+    --cov=thermalprinter
+    --no-cov-on-fail
+    --log-cli-level=DEBUG
+    --strict-markers
+    -r fE
+    -vvv
+"""
+
+[tool.ruff]
+line-length = 120
+indent-width = 4
+target-version = "py39"
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+
+[tool.ruff.lint]
+extend-select = ["ALL"]
+ignore = [
+    "ANN401",   # allow Any for `*constants`
+    "C901",     # too complex
+    "COM812",   # conflict
+    "D",        # TODO
+    "F403",     # star imports
+    "F405",     # star imports
+    "FBT",      # boolean positional arguments are good for this project
+    "ISC001",   # conflict
+    "N802",     # test functions names should be lowercase
+    "PLR0911",  # too many return statements
+    "PLR2004",  # magic values
+    "PLW1508",  # invalid type for environment variable default
+    "SLF",      # private class access in tests
+    "T201",     # `print()`
+]
+fixable = ["ALL"]
+
+[tool.ruff.lint.per-file-ignores]
+"docs/source/conf.py" = [
+    "INP001",
+]
+"src/thermalprinter/recipes/calendar/*.py" = [
+    "A005",  # module `calendar` shadows a Python standard-library module
+]
+"src/thermalprinter/recipes/weather/*.py" = [
+    "RUF001",
+]
+"src/tests/*" = [
+    "E501",
+    "RUF001",
+    "S",
+]
