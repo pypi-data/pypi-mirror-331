@@ -1,0 +1,16 @@
+boundedfbm/__init__.py,sha256=FMccabwFP1PIa8b0XTKawUY5xeme6fdBO-4aEK3FOZA,952
+boundedfbm/cells/__init__.py,sha256=fdr_bRA814mS20EDGRLjTz1w-DLe7vMHxN3IApDPxNI,552
+boundedfbm/cells/base_cell.py,sha256=epWyNgsFfxMNQPMN9eZcO7VzT_tvZCXgDqM6fiY-RXw,6769
+boundedfbm/cells/cell_factory.py,sha256=19j-S34zSC5NAM9QCfVhW6rwphYRB1TGQGyPUXLLFhU,3845
+boundedfbm/cells/ovoid_cell.py,sha256=iCsvnfm0LpdxcZUyxLqFaR0LdjHidX4jwYMn8IB4M-Q,5800
+boundedfbm/cells/rectangular_cell.py,sha256=kFexGQCDHD9_-eHczdm4QsEY3JnrWHobXHe2eImf4eo,4559
+boundedfbm/cells/rod_cell.py,sha256=sArQzlEjG7rcPjXY-Tcj0yuR2c1OOE2TehE_iLSkyQQ,5776
+boundedfbm/cells/spherical_cell.py,sha256=unc3al0t1yFNZNLoYbk1MH2g6p6RNr-K5mRclLXUvfs,5634
+boundedfbm/cells/typedefs.py,sha256=ZIJVxuHZBFhGtRBH8iwQbgkN_CRbWEKneZywGy7IUJY,158
+boundedfbm/motion/FBM.py,sha256=sgfoAksmBN-tDhnwELxC10cGjeRN6r-7OVfhgGipsZw,12129
+boundedfbm/motion/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+boundedfbm/probabilityfuncs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+boundedfbm/probabilityfuncs/markov_chain.py,sha256=LV6KGr8Lv4NIvBPJqsR0CEynssa_mPH30qLaK85GObA,4339
+boundedfbm-0.2.0.dist-info/METADATA,sha256=oK9TFADZnoyRQ57EFgGLp-EDk_AjG3CvQzC-pvwAUXE,8879
+boundedfbm-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+boundedfbm-0.2.0.dist-info/RECORD,,
