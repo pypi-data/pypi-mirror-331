@@ -1,0 +1,9 @@
+taufactor/__init__.py,sha256=UTz7jfXdZV1AzDZUz5OF3gAAhqhVk4JgmOihDn7Kznc,149
+taufactor/cli.py,sha256=pwVEFJrPwWBsF6iKLRD65fHDSPww121l2XTIyUVnlyE,405
+taufactor/metrics.py,sha256=kq4-vLdgnxM0qX3i3xHs83j6YdMnEvdxcPFSweAA8fY,16714
+taufactor/taufactor.py,sha256=XPM1IPQYnnVpmmA4qny8YW-Dqsz9nNYMCNgfMsKmb7s,31490
+taufactor/utils.py,sha256=6IemFnvnodE6iXoUtLlNIshrAyCwpicrc8hyZB8mP7s,1998
+taufactor-1.2.0.dist-info/METADATA,sha256=c3iLfzn8J7BpU78WoljDEoo-l1kwTuY3nw-m8lMMTxk,5561
+taufactor-1.2.0.dist-info/WHEEL,sha256=rF4EZyR2XVS6irmOHQIJx2SUqXLZKRMUrjsg8UwN-XQ,109
+taufactor-1.2.0.dist-info/top_level.txt,sha256=bLmVYOIw3SjO2PsFszD-324SoHDk7YLRRBdF76w5TOs,10
+taufactor-1.2.0.dist-info/RECORD,,
