@@ -1,0 +1,2 @@
+[console_scripts]
+pypyrs=pypyrs.__main__:pypyrs.main
