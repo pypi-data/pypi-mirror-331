@@ -1,0 +1,4 @@
+[console_scripts]
+padocc=padocc.cli:main
+shepard_deploy=padocc.operations.shepard:main
+
