@@ -1,0 +1,29 @@
+Metadata-Version: 2.2
+Name: ddc
+Version: 0.3.13
+Summary: Devision Developers Cli
+Home-page: https://github.com/devision-io/ddc
+Author: Devision
+Author-email: info@devision.io
+License: Apache 2.0
+Platform: Posix; MacOS X; Windows
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: fire==0.3.1
+Requires-Dist: watchdog==0.10.2
+Requires-Dist: pathspec==0.8.0
+Requires-Dist: pyyaml
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: license
+Dynamic: platform
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
