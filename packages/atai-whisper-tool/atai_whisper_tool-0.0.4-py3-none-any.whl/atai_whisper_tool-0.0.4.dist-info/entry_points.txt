@@ -1,0 +1,2 @@
+[console_scripts]
+atai-whisper-tool = atai_whisper_tool.cli:main
