@@ -1,0 +1,12 @@
+julius_tokenizer/__init__.py,sha256=7H3f2_kE9Up-PQ359vsLoOL2WGZ6W2iAv4X_HIYnNGY,1093
+julius_tokenizer/data/models/julius-base/tokenizer.json,sha256=kEkTkQHPz2SHl-pGJPieHREdqs60GqnoD8rCkVzOey0,3589904
+julius_tokenizer/data/models/julius-base/tokenizer_config.json,sha256=h5djN-KIdVVYLmjG0C0fzfGCfF6HBRC8OFqXb9OAGqk,202
+julius_tokenizer/tokenizer/__init__.py,sha256=rupqxtMj4SUk4yhsuz5vyv0vS7OufejzyzDDoAiO5Kw,312
+julius_tokenizer/tokenizer/processor.py,sha256=0rnXG-GyKBrxpFM4me883e2CIaaCCzRJa9LIaDSt2Ig,7781
+julius_tokenizer/tokenizer/tokenizer.py,sha256=d9vfQBd0lXPoFz-HFw80FLShs07XHcr8EnFpodW3Kcw,23326
+julius_tokenizer/tokenizer/vocabulary.py,sha256=JDZJPLLXWynIMJfU5w5R4oSJlZdy1t7Kp56IT61_b4w,9619
+julius_nlp_tokenizer-0.1.0.dist-info/LICENSE,sha256=S8KzdTg_qvibePWcxGxZPpfK3CmPsGuwTnmsxzyqRMI,1078
+julius_nlp_tokenizer-0.1.0.dist-info/METADATA,sha256=gD1dnuZ0M9vC0VGQ-gULy52sTO1ojR-2aAEKBy2mP2s,4026
+julius_nlp_tokenizer-0.1.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+julius_nlp_tokenizer-0.1.0.dist-info/top_level.txt,sha256=7F47FKi_TXH-EWcqHBxFnyxETjZsS-lO7rbDIAEmAAU,17
+julius_nlp_tokenizer-0.1.0.dist-info/RECORD,,

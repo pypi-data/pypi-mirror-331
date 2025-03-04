@@ -1,0 +1,13 @@
+{
+  "vocab_size": 50000,
+  "model_type": "bpe",
+  "special_tokens": {
+    "<pad>": 0,
+    "<s>": 1,
+    "</s>": 2,
+    "<unk>": 3,
+    "<mask>": 4
+  },
+  "max_token_length": 100,
+  "cache_size": 10000
+}
