@@ -1,0 +1,9 @@
+numpy
+scipy
+
+[tests]
+pytest
+pytest-cov
+hypothesis
+flake8
+sphinx
