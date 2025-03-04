@@ -1,0 +1,16 @@
+Metadata-Version: 2.2
+Name: ml_models_augustin
+Version: 0.1.2
+Summary: A simple machine learning package
+Home-page: https://github.com/augustin-cramer/ml_models
+Author: Augustin Cramer
+License: MIT
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scikit-learn
+Dynamic: author
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: summary
