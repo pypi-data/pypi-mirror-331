@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+securecodechecker/__init__.py
+securecodechecker/checker.py
+securecodechecker.egg-info/PKG-INFO
+securecodechecker.egg-info/SOURCES.txt
+securecodechecker.egg-info/dependency_links.txt
+securecodechecker.egg-info/top_level.txt

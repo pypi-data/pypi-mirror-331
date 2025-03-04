@@ -1,0 +1,43 @@
+Metadata-Version: 2.2
+Name: securecodechecker
+Version: 0.1.0
+Summary: A Python module to scan code for common insecure coding patterns (for ethical and educational use).
+Home-page: https://github.com/yourusername/securecodechecker
+Author: raayan
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
+
+# SecureCodeChecker
+
+SecureCodeChecker is a Python module designed to help you identify common insecure coding patterns in your Python code. It is intended for educational and ethical research purposes only—always use such tools legally and responsibly.
+
+## Features
+
+- Scans Python code (as a string or from a file) for potential security issues.
+- Detects use of dangerous functions like `eval()`, `exec()`, insecure use of `os.system()`, and more.
+- Provides suggestions for safer coding practices.
+
+## Installation
+
+### Via PyPI (once published)
+```bash
+pip install securecodechecker
+
+
+
+git clone https://github.com/yourusername/securecodechecker.git
+cd securecodechecker
+pip install .
