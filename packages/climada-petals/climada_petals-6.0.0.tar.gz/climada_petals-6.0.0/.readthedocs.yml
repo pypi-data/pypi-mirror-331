@@ -1,0 +1,15 @@
+version: 2
+
+sphinx:
+  configuration: doc/conf.py
+
+build:
+  os: "ubuntu-22.04"
+  tools:
+    python: "mambaforge-4.10"
+
+conda:
+  environment: requirements/env_docs.yml
+
+formats:
+  - pdf
