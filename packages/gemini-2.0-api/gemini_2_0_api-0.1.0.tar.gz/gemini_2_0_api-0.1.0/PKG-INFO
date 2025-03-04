@@ -1,0 +1,210 @@
+Metadata-Version: 2.3
+Name: gemini-2.0-api
+Version: 0.1.0
+Summary: A user-friendly wrapper for the Google Gemini 2.0 API
+License: MIT
+Keywords: gemini,api,wrapper,ai,google,generative ai,llm
+Author: Your Name
+Author-email: your.email@example.com
+Requires-Python: >=3.9,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: google-genai (>=1.0.0)
+Requires-Dist: pillow (>=10.0.0)
+Requires-Dist: pydantic (>=2.0.0,<3.0.0)
+Requires-Dist: python-dotenv (>=1.0.0,<2.0.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Project-URL: Documentation, https://github.com/yourusername/gemini-2.0-api#readme
+Project-URL: Homepage, https://github.com/yourusername/gemini-2.0-api
+Project-URL: Repository, https://github.com/yourusername/gemini-2.0-api
+Description-Content-Type: text/markdown
+
+# Gemini 2.0 API Wrapper
+
+A powerful, user-friendly Python wrapper for the Google Gemini 2.0 API, featuring a modern interface with strong type hints, streaming support, and comprehensive documentation.
+
+[![PyPI version](https://badge.fury.io/py/gemini-2.0-api.svg)](https://badge.fury.io/py/gemini-2.0-api)
+[![Python Versions](https://img.shields.io/pypi/pyversions/gemini-2.0-api.svg)](https://pypi.org/project/gemini-2.0-api/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+## Features
+
+- 🚀 Modern, intuitive API interface
+- 🔒 Type-safe with comprehensive type hints
+- 🌊 Streaming support for all operations
+- 💬 Advanced chat functionality with history management
+- 🎯 Model fine-tuning capabilities
+- 🖼️ Image analysis and vision model support
+- 📦 Pydantic models for robust data validation
+- ⚡ Async support for high-performance applications
+- 🔬 Mock-friendly design for testing
+- 📚 Detailed documentation with examples
+
+## Installation
+
+Install using pip:
+
+```bash
+pip install gemini-2.0-api
+```
+
+## Quick Start
+
+```python
+from gemini_2_0_api import GeminiClient, TextGenerator
+
+# Initialize client (using environment variable GEMINI_API_KEY)
+client = GeminiClient.from_env()
+generator = TextGenerator(client)
+
+# Generate text
+response = generator.generate("Tell me a story about a magical forest")
+print(response.text)
+
+# Use streaming
+for chunk in generator.generate("Tell me a longer story", stream=True):
+    print(chunk.text, end="")
+
+# Chat functionality
+from gemini_2_0_api import Chat
+
+chat = Chat(client, system_prompt="You are a helpful assistant")
+response = chat.send("What is machine learning?")
+print(response.text)
+
+follow_up = chat.send("Can you provide some examples?")
+print(follow_up.text)
+
+# Image analysis
+from PIL import Image
+
+image = Image.open("path/to/image.jpg")
+response = generator.generate([
+    "What can you see in this image?",
+    image
+])
+print(response.text)
+
+# Model tuning
+from gemini_2_0_api import ModelTuner, TuningExample
+
+tuner = ModelTuner(client)
+examples = [
+    TuningExample(
+        input_text="What is 2+2?",
+        output_text="4"
+    ),
+    TuningExample(
+        input_text="What is 3+3?",
+        output_text="6"
+    )
+]
+
+model_id = tuner.tune(examples)
+print(f"Tuned model ID: {model_id}")
+```
+
+## Documentation
+
+For detailed documentation and examples, see:
+- [API Reference](apiref.md)
+- [Contributing Guide](CONTRIBUTING.md)
+- [Changelog](CHANGELOG.md)
+
+## Advanced Usage
+
+### Configuration
+
+```python
+from gemini_2_0_api import GeminiClient, GenerationConfig
+
+# Direct initialization with API key
+client = GeminiClient(api_key="your-api-key-here")
+
+# Custom configuration
+config = GenerationConfig(
+    temperature=0.9,
+    max_output_tokens=1000,
+    top_p=0.8
+)
+
+response = generator.generate(
+    "Write a creative story",
+    config=config
+)
+```
+
+### Streaming with Progress
+
+```python
+from gemini_2_0_api import TextGenerator
+import sys
+
+generator = TextGenerator(client)
+
+print("Generating story...", end="")
+sys.stdout.flush()
+
+for chunk in generator.generate(
+    "Tell me an epic story",
+    stream=True
+):
+    print(chunk.text, end="")
+    sys.stdout.flush()
+```
+
+### Chat with History
+
+```python
+from gemini_2_0_api import Chat
+
+chat = Chat(
+    client,
+    system_prompt="You are a knowledgeable professor"
+)
+
+# Send messages and get responses
+response1 = chat.send("What is quantum physics?")
+response2 = chat.send("Can you explain that simpler?")
+
+# Access chat history
+for message in chat.get_history():
+    print(f"{message.role}: {message.content}")
+```
+
+### Image Analysis with Options
+
+```python
+from gemini_2_0_api import TextGenerator
+from PIL import Image
+
+generator = TextGenerator(client)
+
+image = Image.open("scene.jpg")
+response = generator.generate([
+    "Analyze this image in detail. Focus on:",
+    "1. Main subjects",
+    "2. Colors and lighting",
+    "3. Mood and atmosphere",
+    image
+])
+```
+
+## Contributing
+
+Contributions are welcome! Please read our [Contributing Guide](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
