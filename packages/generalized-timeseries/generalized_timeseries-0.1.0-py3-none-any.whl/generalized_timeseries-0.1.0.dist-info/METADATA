@@ -1,0 +1,15 @@
+Metadata-Version: 2.2
+Name: generalized_timeseries
+Version: 0.1.0
+Summary: A package for time series data processing and modeling
+Author-email: Garth Mortensen <mortensengarth@hotmail.com>
+License: MIT
+Requires-Python: >=3.11
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: pytest==8.3.4; extra == "dev"
+Requires-Dist: black==24.10.0; extra == "dev"
+Requires-Dist: coverage==7.6.12; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: Sphinx==8.2.1; extra == "docs"
+Requires-Dist: sphinx-rtd-theme==3.0.2; extra == "docs"
