@@ -1,0 +1,15 @@
+dbcls/__init__.py,sha256=JzinEInLDkuy8LCXBWVlfyBRFE4B2yM5_X6X49iZOrk,24
+dbcls/dbcls.py,sha256=en62IUFx1QZYm4lVhiHlW4k41vdcp9idCxKVxCIV764,16389
+dbcls/sql_tokenizer.py,sha256=x8LhQdWtFJoJCxj9WcoEPlTNMyexCotnfnYlDNKA8D0,2068
+dbcls/clients/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dbcls/clients/base.py,sha256=pOUDl5E7s3UeYba-fEAMb5tvotWYobPhxtNLDLn6Dio,3413
+dbcls/clients/clickhouse.py,sha256=JcXSH7bT1YFS_7IvZl9hKJ2wsUACTOT6cKRt25UsYh0,2873
+dbcls/clients/mysql.py,sha256=HDnoVaVU1qteglL4qg3akzmM5k9Ut_225lMh9sdMVbI,2887
+dbcls/clients/postgres.py,sha256=038CC8UJtPYcn5vK11EaAd9QkKvCN6POm0eGtKUtRZ4,7842
+dbcls/clients/sqlite3.py,sha256=s6_im9W0u1_jKVWDpk5mKH_SfjwRbaSoflqTqyuTDb0,1668
+dbcls-1.1.9.dist-info/LICENSE,sha256=Q6kgHFlPF-zcLdx0i-_2RDFRxV5sN_yqya_Uor4dtvM,1492
+dbcls-1.1.9.dist-info/METADATA,sha256=8yjrN8W4siu5XwqZYl18dgjxM_ViYAKC2yq8quevVJU,2502
+dbcls-1.1.9.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+dbcls-1.1.9.dist-info/entry_points.txt,sha256=sYhRvF1443ZrQlXYMa8MlIN6Oj_339J7Oe73mNlvrpc,37
+dbcls-1.1.9.dist-info/top_level.txt,sha256=Qsgy8WXQ1qWsx4BtrgU7QV6NY-Ha5ZgH98eq-5zVz-c,6
+dbcls-1.1.9.dist-info/RECORD,,
