@@ -1,0 +1,6 @@
+[console_scripts]
+vectorcode = vectorcode.main:main
+vectorcode-server = vectorcode.lsp_main:main
+
+[gui_scripts]
+
