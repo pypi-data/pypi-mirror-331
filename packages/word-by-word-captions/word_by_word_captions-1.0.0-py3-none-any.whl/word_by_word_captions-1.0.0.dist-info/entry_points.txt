@@ -1,0 +1,2 @@
+[console_scripts]
+wbw-captions = wbw_captions.__main__:main
