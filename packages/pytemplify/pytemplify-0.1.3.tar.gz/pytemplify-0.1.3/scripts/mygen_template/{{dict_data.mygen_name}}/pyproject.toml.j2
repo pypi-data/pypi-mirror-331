@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "{{ dict_data.mygen_name }}"
+version = "0.1.0"
+description = "{{ dict_data.mygen_description }}"
+authors = ["{{ dict_data.your_name }} <{{ dict_data.your_email }}>"]
+license = "{{ dict_data.mygen_license }}"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pytemplify = "^0.1.3"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+pytest-snapshot = "^0.9.0"
+flake8 = "^7.1.2"
+black = "^25.1.0"
+ruff = "^0.9.9"
+isort = "^6.0.1"
+nox = "^2025.2.9"
+nox-poetry = "^1.2.0"
+poetry-plugin-export = "^1.9.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.plugins."pytemplify.parsers"]
+{{ dict_data.mygen_name }} = "{{ dict_data.mygen_name }}.parser_{{ dict_data.mygen_name }}:{{ dict_data.mygen_name | capitalize }}Parser"
+
+[tool.poetry.scripts]
+{{ dict_data.mygen_name }} = "{{ dict_data.mygen_name }}.main:main"
