@@ -1,0 +1,2 @@
+[console_scripts]
+different_wrapping = different_wrapping.cli:main
