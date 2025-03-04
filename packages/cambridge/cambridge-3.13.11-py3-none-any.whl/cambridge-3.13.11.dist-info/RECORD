@@ -1,0 +1,15 @@
+cambridge/__init__.py,sha256=dSewm2HaTrPks4R3g0vuvBXP78jkNgxkVWnVE0eTiKY,268
+cambridge/args.py,sha256=AeqL7bsQLHsAj8GAWP4AIHWSkl9a6zFvBGgQ3vIq62o,8027
+cambridge/cache.py,sha256=eQQe0yWLSZqfH4HlSU0dAgKdRqdnqwP0jSHN9fkbkWg,10158
+cambridge/camb.py,sha256=SkujhxuyLAViTt62Q-XC1DouHtnKy7kuWe9Ic69f6_Y,22157
+cambridge/color.py,sha256=hQSx8gDCw1_U5XHgV_SKxXLyrZs7MqFmdL5LvxCCoBA,1788
+cambridge/console.py,sha256=hIhytDSmIZEY9j86OWwD_DLWcEm7fTKTc2t1xkiD9MA,3370
+cambridge/log.py,sha256=wy4HQ9nlKXwyaA77caC318V-bJtbkNiUij2S2sWAcQk,602
+cambridge/main.py,sha256=CfN0DExPukHCGzmIkSGKo0KcSAQ-u2tZKz8FM2wJAc0,1584
+cambridge/utils.py,sha256=MQmGaAWaKLB6rYfc_lWogpQozichPfHC9JXEmByrCqo,8032
+cambridge/webster.py,sha256=l6-TK_-9PSvXvZeBhzgKh_EwIx61xviWcXF4_EkawT0,49730
+cambridge-3.13.11.dist-info/entry_points.txt,sha256=NBh1KbJcuNa2SgXHV0G0DpF6Dcvnw8_BMgwL6myT3WY,51
+cambridge-3.13.11.dist-info/licenses/LICENSE,sha256=ljOS4DjXvqEo5VzGfdaRwgRZPbNScGBmfwyC8PChvmQ,32422
+cambridge-3.13.11.dist-info/WHEEL,sha256=_2ozNFCLWc93bK4WKHCO-eDUENDlo-dgc9cU3qokYO4,82
+cambridge-3.13.11.dist-info/METADATA,sha256=Q2wXdat9t46TtuANU7WfDBFg15GvkHaN-QYEtGBich0,4356
+cambridge-3.13.11.dist-info/RECORD,,
