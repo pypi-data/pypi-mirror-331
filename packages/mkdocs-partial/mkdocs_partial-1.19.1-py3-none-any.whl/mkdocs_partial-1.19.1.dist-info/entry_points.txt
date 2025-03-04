@@ -1,0 +1,6 @@
+[console_scripts]
+mkdocs-partial = mkdocs_partial.entry_point:run
+
+[mkdocs.plugins]
+docs_package = mkdocs_partial.docs_package_plugin:DocsPackagePlugin
+partial_docs = mkdocs_partial.partial_docs_plugin:PartialDocsPlugin
