@@ -1,0 +1,73 @@
+Metadata-Version: 2.2
+Name: LLM-Bridge
+Version: 0.4.0
+Summary: A Bridge for LLMs
+Author: windsnow1025
+Author-email: windsnow125@gmail.com
+License: MIT
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fastapi==0.115.9
+Requires-Dist: httpx==0.28.1
+Requires-Dist: openai==1.63.2
+Requires-Dist: google-genai==1.2.0
+Requires-Dist: anthropic==0.47.1
+Requires-Dist: PyMuPDF==1.25.3
+Requires-Dist: python-docx==1.1.2
+Requires-Dist: openpyxl==3.1.5
+Requires-Dist: python-pptx==1.0.2
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# LLM Bridge
+
+GitHub: [https://github.com/windsnow1025/LLM-Bridge](https://github.com/windsnow1025/LLM-Bridge)
+
+PyPI: [https://pypi.org/project/LLM-Bridge/](https://pypi.org/project/LLM-Bridge/)
+
+LLM Bridge is a unified Python interface for interacting with LLMs, including OpenAI, OpenAI-Azure, OpenAI-GitHub, Gemini, Claude, and Grok.
+
+## Features
+- **Multi-Model Support**: Seamlessly switch between different LLM providers.  
+- **Streaming & Non-Streaming**: Supports both real-time streaming and batch responses.  
+- **File Processing**: Automatically extracts text from PDFs, Word, Excel, PPT and code files.  
+- **Image & Audio Support**: Converts images and audio files into model-compatible formats.  
+- **Easy Integration**: Simple API for quick integration into your applications.
+
+## Workflow
+
+LLM Bridge follows a structured process to handle user messages and generate responses:
+
+1. **Message Preprocessor**: Preprocess Messages
+    1. **Message Preprocessor**: Extract Text Files to Message
+2. **Chat Client Factory**: Create Chat Client
+    1. **Model Message Converter**: Convert Message to Model
+        1. **Media Processor**: Get Model Image Content from URL
+3. **Chat Client**: Generate Response
+
+See `./usage/workflow.py`
+
+## Test
+
+```bash
+pytest ./tests/
+```
+
+## Installation
+
+### PyPI
+
+```bash
+pip install --upgrade llm_bridge
+```
+
+## Quick Start
+
+See `./usage/`
