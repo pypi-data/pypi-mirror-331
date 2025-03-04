@@ -1,0 +1,143 @@
+Metadata-Version: 2.3
+Name: telegrinder
+Version: 0.4.1
+Summary: Modern visionary telegram bot framework.
+License: MIT License
+         
+         Copyright (c) 2022-2025 timoniq
+         Copyright (c) 2024-2025 luwqz1
+         
+         Permission is hereby granted, free of charge, to any person obtaining a copy
+         of this software and associated documentation files (the "Software"), to deal
+         in the Software without restriction, including without limitation the rights
+         to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+         copies of the Software, and to permit persons to whom the Software is
+         furnished to do so, subject to the following conditions:
+         
+         The above copyright notice and this permission notice shall be included in all
+         copies or substantial portions of the Software.
+         
+         THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+         IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+         FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+         AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+         LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+         OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+         SOFTWARE.
+Keywords: asyncio,api schema,async,bot building,bot api,custom rules,telegram,telegram bot api framework,telegrinder framework,middleware,composition,framework,telegrinder,waiter machine
+Author: timoniq
+Author-email: tesseradecades@mail.ru
+Maintainer: luwqz1
+Maintainer-email: howluwqz1@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Quality Assurance
+Classifier: Typing :: Typed
+Provides-Extra: all
+Provides-Extra: fast
+Provides-Extra: loguru
+Provides-Extra: uvloop
+Requires-Dist: aiohttp (>=3.11.11,<4.0.0)
+Requires-Dist: certifi (>=2025.1.31)
+Requires-Dist: choicelib (>=0.1.5,<0.2.0)
+Requires-Dist: colorama (>=0.4.6,<0.5.0)
+Requires-Dist: envparse (>=0.2.0,<0.3.0)
+Requires-Dist: fntypes (>=0.1.4.post3,<0.2.0)
+Requires-Dist: loguru (>=0.7.0) ; extra == "all"
+Requires-Dist: loguru (>=0.7.0) ; extra == "loguru"
+Requires-Dist: msgspec (>=0.19.0,<0.20.0)
+Requires-Dist: typing-extensions (>=4.12.2,<5.0.0)
+Requires-Dist: uvloop (>=0.21.0) ; extra == "all"
+Requires-Dist: uvloop (>=0.21.0) ; extra == "fast"
+Requires-Dist: uvloop (>=0.21.0) ; extra == "uvloop"
+Requires-Dist: vbml (>=1.1.post1,<2.0)
+Project-URL: Bug Tracker, https://github.com/timoniq/telegrinder/issues
+Project-URL: Documentation, https://telegrinder.readthedocs.io/en/latest/
+Project-URL: Source, https://github.com/timoniq/telegrinder
+Description-Content-Type: text/markdown
+
+# Telegrinder
+
+Framework for effective and reliable telegram bot building.
+
+Still in development.
+
+* Type hinted
+* Customizable and extensible
+* Ready to use scenarios and rules
+* Fast models built on [msgspec](https://github.com/jcrist/msgspec)
+* Both low-level and high-level API
+* Support [optional dependecies](https://github.com/timoniq/telegrinder/blob/dev/docs/guide/optional_dependencies.md)
+
+# Getting started
+
+Install using pip:
+
+```console
+pip install telegrinder
+```
+
+Using poetry:
+
+```console
+poetry add telegrinder
+```
+
+Install from github:
+
+```console
+pip install -U https://github.com/timoniq/telegrinder/archive/dev.zip
+```
+
+```console
+poetry add git+https://github.com/timoniq/telegrinder.git#dev
+```
+
+Basic example:
+
+```python
+from telegrinder import API, Message, Telegrinder, Token
+from telegrinder.modules import logger
+from telegrinder.rules import Text
+
+api = API(token=Token("123:token"))
+bot = Telegrinder(api)
+logger.set_level("INFO")
+
+
+@bot.on.message(Text("/start"))
+async def start(message: Message):
+    me = (await api.get_me()).unwrap()
+    await message.answer(f"Hello, {message.from_user.full_name}! I'm {me.full_name}.")
+
+
+bot.run_forever()
+```
+
+# Documentation
+
+[Readthedocs](https://telegrinder.readthedocs.io)
+
+# Community
+
+Join our [telegram forum](https://t.me/botoforum).
+
+# [Contributing](https://github.com/timoniq/telegrinder/blob/main/contributing.md)
+
+# License
+
+Telegrinder is [MIT licensed](./LICENSE)\
+Copyright © 2022-2025 [timoniq](https://github.com/timoniq)\
+Copyright © 2024-2025 [luwqz1](https://github.com/luwqz1)
+
+# Contributors
+
+<a href="https://github.com/timoniq/telegrinder/graphs/contributors">
+ <img src="https://contributors-img.web.app/image?repo=timoniq/telegrinder" />
+</a>
+
