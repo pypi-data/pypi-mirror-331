@@ -1,0 +1,2 @@
+[console_scripts]
+offsets-db-data-orcli = offsets_db_data.openrefine:main
