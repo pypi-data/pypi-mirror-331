@@ -1,0 +1,31 @@
+Metadata-Version: 2.2
+Name: rebis
+Version: 0.1.0
+Summary: Rebis client for Python
+Author: shafinhasnat
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-python
+Dynamic: summary
+
+### Rebis python client
+An example of how to use Rebis client in python.
+```python
+from rebis import RebisClient, RebisQuery
+client = RebisClient("localhost", 6666)
+rebis = RebisQuery(client)
+rebis.set("key", "value")
+rebis.get("key")
+rebis.delete("key")
+rebis.reset()
+```
+
+
+
