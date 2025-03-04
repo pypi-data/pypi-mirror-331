@@ -1,0 +1,54 @@
+[tool.poetry]
+name = "gxsmread"
+version = "0.2.2"
+description = "Read gxsm data files"
+authors = ["Nick Sullivan Molina <nsulmol@gmail.com>"]
+maintainers = ["Nick Sullivan Molina <nsulmol@gmail.com>"]
+license = "GPL-2.0-only"
+
+readme = "README.md"
+packages = [{include = "gxsmread"}]
+
+classifiers = [
+  "Development Status :: 3 - Alpha",
+
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Build Tools",
+
+  "Programming Language :: Python :: 3",
+
+  "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
+  "Operating System :: OS Independent",
+]
+
+[tool.poetry.dependencies]
+python = ">=3.9"
+netcdf4 = "^1.6.4"
+xarray = "^2023.9.0"
+tomli = "^2.0.1"
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^7.4.0"
+
+
+[tool.poetry.group.parallel.dependencies]
+xarray = {extras = ["parallel"], version = "^2023.9.0"}
+
+
+[tool.poetry.group.io.dependencies]
+xarray = {extras = ["io"], version = "^2023.9.0"}
+
+
+[tool.poetry.group.dev.dependencies]
+debugpy = "^1.6.7"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[project.urls]
+Homepage = "https://github.com/grutter-spm-group/gxsmread"
+Repository = "https://github.com/grutter-spm-group/gxsmread.git"
