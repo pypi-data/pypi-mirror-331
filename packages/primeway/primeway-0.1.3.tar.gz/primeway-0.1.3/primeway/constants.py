@@ -1,0 +1,1 @@
+BASE_BACKEND_URL="https://api.primeway.io/cli"
