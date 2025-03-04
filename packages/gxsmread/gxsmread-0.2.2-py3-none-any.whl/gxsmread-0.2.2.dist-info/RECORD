@@ -1,0 +1,11 @@
+gxsmread/__init__.py,sha256=9vGC-98ST6_UMr8nT5vdhK4ZoVpivAcBfk5C8LGTzYA,93
+gxsmread/channel_config.py,sha256=Iwa_DaUPiUW_i7zd61z67tvfG6JrkgwA4fIOFVXZZtE,7566
+gxsmread/filename.py,sha256=NwZyNL0swM8XAo7SufAH9Ei95o-ckyNK7i-a4aAOaLc,2210
+gxsmread/preprocess.py,sha256=ov9pZBFbYmBoO41nHQc5W6osqYUdTMFA2a7apF0XOcs,10001
+gxsmread/read.py,sha256=UCxYnoYdseFvcd9xCg003OXwm1RTk5dt1vzRdLgNbB4,9084
+gxsmread/spec.py,sha256=S6z3Zhc2_kLAa2bDfgxOcgsd21NAb740XWmtMtShMfM,6582
+gxsmread/utils.py,sha256=FHSVLlYfiMRBl_CyRFSpJ0IEdYL5DVziJsK7AVyaRVU,525
+gxsmread-0.2.2.dist-info/LICENSE,sha256=gXf5dRMhNSbfLPYYTY_5hsZ1r7UU1OaKQEAQUhuIBkM,18092
+gxsmread-0.2.2.dist-info/METADATA,sha256=RqCQO0hzrhkbvppiNkerTV0s-RixGP-5_ilQOVc4wAs,8279
+gxsmread-0.2.2.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+gxsmread-0.2.2.dist-info/RECORD,,
