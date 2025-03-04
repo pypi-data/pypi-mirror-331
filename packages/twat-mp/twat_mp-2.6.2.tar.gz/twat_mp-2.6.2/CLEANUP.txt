@@ -1,0 +1,348 @@
+2025-03-04 09:51:21 - 
+=== PROJECT STATEMENT ===
+2025-03-04 09:51:21 - ---
+description: About this project
+globs:
+---
+# About this project
+
+`twat-fs` is a file system utility library focused on robust and extensible file upload capabilities with multiple provider support. It provides:
+
+- Multi-provider upload system with smart fallback (catbox.moe default, plus Dropbox, S3, etc.)
+- Automatic retry for temporary failures, fallback for permanent ones
+- URL validation and clean developer experience with type hints
+- Simple CLI: `python -m twat_fs upload_file path/to/file.txt`
+- Easy installation: `uv pip install twat-fs` (basic) or `uv pip install 'twat-fs[all,dev]'` (all features)
+
+## Development Notes
+- Uses `uv` for Python package management
+- Quality tools: ruff, mypy, pytest
+- Clear provider protocol for adding new storage backends
+- Strong typing and runtime checks throughout
+
+2025-03-04 09:51:21 - 
+=== Current Status ===
+2025-03-04 09:51:21 - [ 928]  .
+├── [  96]  .cursor
+│   └── [ 224]  rules
+│       ├── [ 821]  0project.mdc
+│       ├── [ 515]  cleanup.mdc
+│       ├── [1.9K]  filetree.mdc
+│       └── [2.0K]  quality.mdc
+├── [ 128]  .github
+│   └── [ 128]  workflows
+│       ├── [2.9K]  push.yml
+│       └── [1.4K]  release.yml
+├── [3.0K]  .gitignore
+├── [ 470]  .pre-commit-config.yaml
+├── [  96]  .specstory
+│   └── [ 320]  history
+│       ├── [2.7K]  .what-is-this.md
+│       ├── [ 58K]  2025-03-04_03-11-implementing-todo-md-plan.md
+│       ├── [ 69K]  2025-03-04_03-23-codebase-analysis-and-todo-list-creation.md
+│       ├── [ 15K]  2025-03-04_06-17-fixing-hatch-configuration-error.md
+│       ├── [103K]  2025-03-04_07-16-implementing-todo-md-phases-1-and-2.md
+│       ├── [ 644]  2025-03-04_07-54-untitled.md
+│       ├── [1.2K]  2025-03-04_07-59-project-maintenance-and-documentation-update.md
+│       └── [ 93K]  2025-03-04_08-26-ruff-linting-errors-and-fixes.md
+├── [ 288]  .venv
+├── [6.0K]  API_REFERENCE.md
+├── [3.8K]  CHANGELOG.md
+├── [ 939]  CLEANUP.txt
+├── [1.0K]  LICENSE
+├── [1.3K]  LOG.md
+├── [ 13K]  README.md
+├── [ 78K]  REPO_CONTENT.txt
+├── [2.2K]  TODO.md
+├── [   7]  VERSION.txt
+├── [ 13K]  cleanup.py
+├── [ 160]  dist
+├── [  96]  docs
+│   └── [6.4K]  architecture.md
+├── [5.3K]  pyproject.toml
+├── [ 128]  src
+│   └── [ 256]  twat_mp
+│       ├── [ 572]  __init__.py
+│       ├── [ 17K]  async_mp.py
+│       └── [ 25K]  mp.py
+└── [ 224]  tests
+    ├── [2.8K]  test_async_mp.py
+    ├── [6.3K]  test_benchmark.py
+    └── [ 13K]  test_twat_mp.py
+
+13 directories, 34 files
+
+2025-03-04 09:51:21 - 
+Project structure:
+2025-03-04 09:51:21 - [ 928]  .
+├── [  96]  .cursor
+│   └── [ 224]  rules
+│       ├── [ 821]  0project.mdc
+│       ├── [ 515]  cleanup.mdc
+│       ├── [1.9K]  filetree.mdc
+│       └── [2.0K]  quality.mdc
+├── [ 128]  .github
+│   └── [ 128]  workflows
+│       ├── [2.9K]  push.yml
+│       └── [1.4K]  release.yml
+├── [3.0K]  .gitignore
+├── [ 470]  .pre-commit-config.yaml
+├── [  96]  .specstory
+│   └── [ 320]  history
+│       ├── [2.7K]  .what-is-this.md
+│       ├── [ 58K]  2025-03-04_03-11-implementing-todo-md-plan.md
+│       ├── [ 69K]  2025-03-04_03-23-codebase-analysis-and-todo-list-creation.md
+│       ├── [ 15K]  2025-03-04_06-17-fixing-hatch-configuration-error.md
+│       ├── [103K]  2025-03-04_07-16-implementing-todo-md-phases-1-and-2.md
+│       ├── [ 644]  2025-03-04_07-54-untitled.md
+│       ├── [1.2K]  2025-03-04_07-59-project-maintenance-and-documentation-update.md
+│       └── [ 93K]  2025-03-04_08-26-ruff-linting-errors-and-fixes.md
+├── [ 288]  .venv
+├── [6.0K]  API_REFERENCE.md
+├── [3.8K]  CHANGELOG.md
+├── [ 939]  CLEANUP.txt
+├── [1.0K]  LICENSE
+├── [1.3K]  LOG.md
+├── [ 13K]  README.md
+├── [ 78K]  REPO_CONTENT.txt
+├── [2.2K]  TODO.md
+├── [   7]  VERSION.txt
+├── [ 13K]  cleanup.py
+├── [ 160]  dist
+├── [  96]  docs
+│   └── [6.4K]  architecture.md
+├── [5.3K]  pyproject.toml
+├── [ 128]  src
+│   └── [ 256]  twat_mp
+│       ├── [ 572]  __init__.py
+│       ├── [ 17K]  async_mp.py
+│       └── [ 25K]  mp.py
+└── [ 224]  tests
+    ├── [2.8K]  test_async_mp.py
+    ├── [6.3K]  test_benchmark.py
+    └── [ 13K]  test_twat_mp.py
+
+13 directories, 34 files
+
+2025-03-04 09:51:21 - On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   .cursor/rules/filetree.mdc
+	modified:   CLEANUP.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	LOG.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+2025-03-04 09:51:21 - On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   .cursor/rules/filetree.mdc
+	modified:   CLEANUP.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	LOG.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+2025-03-04 09:51:21 - 
+=== Environment Status ===
+2025-03-04 09:51:21 - Setting up virtual environment
+2025-03-04 09:51:24 - Virtual environment created and activated
+2025-03-04 09:51:24 - Installing package with all extras
+2025-03-04 09:51:24 - Setting up virtual environment
+2025-03-04 09:51:24 - Virtual environment created and activated
+2025-03-04 09:51:25 - Package installed successfully
+2025-03-04 09:51:25 - Running code quality checks
+2025-03-04 09:51:25 - >>> Running code fixes...
+2025-03-04 09:51:25 - >>>Running type checks...
+2025-03-04 09:51:26 - >>> Running tests...
+2025-03-04 09:55:06 - ============================= test session starts ==============================
+platform darwin -- Python 3.12.8, pytest-8.3.5, pluggy-1.5.0 -- /Users/adam/Developer/vcs/github.twardoch/pub/twat-packages/_good/twat/plugins/repos/twat_mp/.venv/bin/python
+cachedir: .pytest_cache
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+rootdir: /Users/adam/Developer/vcs/github.twardoch/pub/twat-packages/_good/twat/plugins/repos/twat_mp
+configfile: pyproject.toml
+plugins: cov-6.0.0, benchmark-5.1.0, xdist-3.6.1
+collecting ... collected 39 items
+
+tests/test_async_mp.py::test_async_multi_pool_map SKIPPED (async def...) [  2%]
+tests/test_async_mp.py::test_async_multi_pool_empty SKIPPED (async d...) [  5%]
+tests/test_async_mp.py::test_async_multi_pool_error SKIPPED (async d...) [  7%]
+tests/test_async_mp.py::test_async_multi_pool_imap SKIPPED (async de...) [ 10%]
+tests/test_async_mp.py::test_async_multi_pool_starmap SKIPPED (async...) [ 12%]
+tests/test_async_mp.py::test_apmap_decorator SKIPPED (async def func...) [ 15%]
+tests/test_async_mp.py::test_pool_not_initialized SKIPPED (async def...) [ 17%]
+tests/test_async_mp.py::test_pool_cleanup SKIPPED (async def functio...) [ 20%]
+tests/test_benchmark.py::TestComputeIntensiveBenchmarks::test_sequential_vs_process_pool PASSED [ 23%]
+tests/test_benchmark.py::TestComputeIntensiveBenchmarks::test_parallel_implementations[100] PASSED [ 25%]
+tests/test_benchmark.py::TestComputeIntensiveBenchmarks::test_parallel_implementations[1000] PASSED [ 28%]
+tests/test_benchmark.py::TestComputeIntensiveBenchmarks::test_parallel_implementations[10000] PASSED [ 30%]
+tests/test_benchmark.py::TestIOIntensiveBenchmarks::test_thread_vs_process_pool PASSED [ 33%]
+tests/test_benchmark.py::TestScalabilityBenchmarks::test_worker_scaling[2] PASSED [ 35%]
+tests/test_benchmark.py::TestScalabilityBenchmarks::test_worker_scaling[4] PASSED [ 38%]
+tests/test_benchmark.py::TestScalabilityBenchmarks::test_worker_scaling[8] PASSED [ 41%]
+tests/test_benchmark.py::TestScalabilityBenchmarks::test_worker_scaling[16] PASSED [ 43%]
+tests/test_benchmark.py::TestCompositionBenchmarks::test_chained_operations PASSED [ 46%]
+tests/test_twat_mp.py::test_version PASSED                               [ 48%]
+tests/test_twat_mp.py::test_process_pool_context PASSED                  [ 51%]
+tests/test_twat_mp.py::test_thread_pool_context PASSED                   [ 53%]
+tests/test_twat_mp.py::test_amap_decorator PASSED                        [ 56%]
+tests/test_twat_mp.py::test_pmap_decorator PASSED                        [ 58%]
+tests/test_twat_mp.py::test_imap_decorator PASSED                        [ 61%]
+tests/test_twat_mp.py::test_composed_operations PASSED                   [ 64%]
+tests/test_twat_mp.py::test_pool_nodes_specification PASSED              [ 66%]
+tests/test_twat_mp.py::test_parallel_vs_sequential_performance PASSED    [ 69%]
+tests/test_twat_mp.py::test_mmap_decorator_variants PASSED               [ 71%]
+tests/test_twat_mp.py::test_empty_iterable PASSED                        [ 74%]
+tests/test_twat_mp.py::test_error_propagation PASSED                     [ 76%]
+tests/test_twat_mp.py::test_debug_mode PASSED                            [ 79%]
+tests/test_twat_mp.py::test_invalid_mapping_method PASSED                [ 82%]
+tests/test_twat_mp.py::test_pool_creation_failure PASSED                 [ 84%]
+tests/test_twat_mp.py::test_resource_cleanup_after_exception PASSED      [ 87%]
+tests/test_twat_mp.py::test_keyboard_interrupt_handling PASSED           [ 89%]
+tests/test_twat_mp.py::test_large_data_handling PASSED                   [ 92%]
+tests/test_twat_mp.py::test_nested_pools PASSED                          [ 94%]
+tests/test_twat_mp.py::test_pool_reuse_failure PASSED                    [ 97%]
+tests/test_twat_mp.py::test_custom_exception_handling PASSED             [100%]
+
+
+----------------------------------------------------------------------------------------------------- benchmark: 10 tests ------------------------------------------------------------------------------------------------------
+Name (time in ms)                                Min                    Max                   Mean                StdDev                 Median                   IQR            Outliers      OPS            Rounds  Iterations
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+test_worker_scaling[4]                       66.9077 (1.0)          93.6670 (1.0)          82.9063 (1.0)          8.9423 (2.20)         83.0575 (1.0)         16.2534 (3.27)          6;0  12.0618 (1.0)          13           1
+test_worker_scaling[2]                       92.8298 (1.39)        107.7739 (1.15)         98.0133 (1.18)         4.0703 (1.0)          97.7816 (1.18)         4.9758 (1.0)           3;1  10.2027 (0.85)         11           1
+test_worker_scaling[8]                      104.8767 (1.57)        255.4542 (2.73)        142.9145 (1.72)        44.6526 (10.97)       126.4472 (1.52)        21.3708 (4.29)          1;1   6.9972 (0.58)          9           1
+test_worker_scaling[16]                     235.7795 (3.52)        277.0512 (2.96)        256.1116 (3.09)        17.3535 (4.26)        261.2913 (3.15)        28.9669 (5.82)          2;0   3.9045 (0.32)          5           1
+test_thread_vs_process_pool                 273.8003 (4.09)        406.5731 (4.34)        311.1154 (3.75)        54.5636 (13.41)       285.6326 (3.44)        48.9772 (9.84)          1;1   3.2142 (0.27)          5           1
+test_sequential_vs_process_pool             477.0971 (7.13)        554.3080 (5.92)        513.9406 (6.20)        31.1515 (7.65)        517.2945 (6.23)        50.4037 (10.13)         2;0   1.9458 (0.16)          5           1
+test_parallel_implementations[100]          929.8863 (13.90)     1,155.8335 (12.34)     1,072.8598 (12.94)       89.5405 (22.00)     1,072.3130 (12.91)      113.7105 (22.85)         1;0   0.9321 (0.08)          5           1
+test_chained_operations                   1,649.0135 (24.65)     1,848.4123 (19.73)     1,769.8813 (21.35)       76.4239 (18.78)     1,774.3211 (21.36)       95.4518 (19.18)         2;0   0.5650 (0.05)          5           1
+test_parallel_implementations[1000]       3,023.9864 (45.20)     3,692.9908 (39.43)     3,251.4041 (39.22)      271.8704 (66.79)     3,209.2692 (38.64)      358.0620 (71.96)         1;0   0.3076 (0.03)          5           1
+test_parallel_implementations[10000]     15,227.7530 (227.59)   19,943.4040 (212.92)   17,942.3521 (216.42)   1,779.8311 (437.27)   18,374.0532 (221.22)   2,277.0179 (457.62)        2;0   0.0557 (0.00)          5           1
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Legend:
+  Outliers: 1 Standard Deviation from Mean; 1.5 IQR (InterQuartile Range) from 1st Quartile and 3rd Quartile.
+  OPS: Operations Per Second, computed as 1 / Mean
+================== 31 passed, 8 skipped in 218.23s (0:03:38) ===================
+
+2025-03-04 09:55:06 - All checks completed
+2025-03-04 09:55:06 - 
+=== TODO.md ===
+2025-03-04 09:55:06 - ---
+this_file: TODO.md
+---
+
+# TODO
+
+Tip: Periodically run `python ./cleanup.py status` to see results of lints and tests. Use `uv pip ...` not `pip ...`
+
+
+## Phase 1
+
+- [ ] Add a CLI interface for common operations
+- [ ] Add support for cancellation of running tasks
+- [ ] Implement progress tracking for long-running parallel operations
+- [ ] Implement backpressure mechanisms for memory-intensive operations
+- [ ] Add support for process affinity and priority settings
+- [ ] Implement a unified interface for all pool types
+- [ ] Add support for custom serialization/deserialization
+- [ ] Add context manager for automatic resource cleanup across all parallel operations
+- [ ] Implement adaptive pool sizing based on workload and system resources
+- [ ] Add support for task prioritization and scheduling
+
+## Phase 2
+
+- [ ] Increase test coverage to at least 90%
+- [ ] Implement stress tests for high concurrency scenarios
+- [ ] Add tests for resource leaks and memory usage
+- [ ] Add tests for different Python versions and platforms
+- [ ] Implement property-based testing for robustness
+
+## Phase 3
+
+- [ ] Optimize serialization/deserialization for better performance
+- [ ] Optimize memory usage for large datasets
+- [ ] Implement caching mechanisms for repeated operations
+- [ ] Profile and optimize critical code paths
+- [ ] Add performance comparison with native multiprocessing
+- [ ] Implement workload-specific optimization strategies
+
+## Phase 4
+
+- [ ] Implement compatibility with other multiprocessing libraries
+- [ ] Add support for distributed processing across multiple machines
+- [ ] Add support for GPU acceleration where applicable
+- [ ] Implement integration with dask and other distributed computing frameworks
+- [ ] Add support for cloud-based parallel processing
+
+## User Experience
+
+- [ ] Implement automatic pool selection based on workload characteristics
+- [ ] Add progress bars and status reporting for long-running tasks
+- [ ] Create wizard-like interfaces for common operations
+
+## Package Management
+
+- [ ] Create a conda package for easier installation
+- [ ] Implement automated release process with GitHub Actions
+- [ ] Add support for Windows-specific optimizations
+- [ ] Create development documentation for contributors
+
+2025-03-04 09:55:08 - 
+📦 Repomix v0.2.29
+
+No custom config found at repomix.config.json or global config at /Users/adam/.config/repomix/repomix.config.json.
+You can add a config file for additional settings. Please check https://github.com/yamadashy/repomix for more information.
+⠙ Collecting files...
+[2K[1A[2K[G⠹ Collecting files...
+[2K[1A[2K[G⠸ Collect file... (12/24) tests/test_benchmark.py
+[2K[1A[2K[G⠼ Running security check...
+[2K[1A[2K[G⠴ Processing files...
+[2K[1A[2K[G⠦ Processing files...
+[2K[1A[2K[G⠧ Processing file... (8/24) src/twat_mp/__init__.py
+[2K[1A[2K[G⠇ Writing output file...
+[2K[1A[2K[G⠏ Calculating metrics...
+[2K[1A[2K[G⠋ Calculating metrics...
+[2K[1A[2K[G⠙ Calculating metrics...
+[2K[1A[2K[G⠹ Calculating metrics...
+[2K[1A[2K[G⠸ Calculating metrics...
+[2K[1A[2K[G⠼ Calculating metrics... (20/24) LOG.md
+[2K[1A[2K[G✔ Packing completed successfully!
+
+📈 Top 5 Files by Character Count and Token Count:
+──────────────────────────────────────────────────
+1.  README.md (12,926 chars, 3,189 tokens)
+2.  docs/architecture.md (6,569 chars, 1,130 tokens)
+3.  API_REFERENCE.md (6,129 chars, 1,508 tokens)
+4.  cleanup.py (5,904 chars, 1,316 tokens)
+5.  pyproject.toml (5,439 chars, 1,572 tokens)
+
+🔎 Security Check:
+──────────────────
+✔ No suspicious files detected.
+
+📊 Pack Summary:
+────────────────
+  Total Files: 24 files
+  Total Chars: 79,941 chars
+ Total Tokens: 19,214 tokens
+       Output: REPO_CONTENT.txt
+     Security: ✔ No suspicious files detected
+
+🎉 All Done!
+Your repository has been successfully packed.
+
+💡 Repomix is now available in your browser! Try it at https://repomix.com
+
+2025-03-04 09:55:08 - Repository content mixed into REPO_CONTENT.txt

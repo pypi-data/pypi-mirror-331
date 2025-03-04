@@ -1,0 +1,53 @@
+---
+description: File tree of the project
+globs: 
+---
+[ 928]  .
+├── [  96]  .cursor
+│   └── [ 224]  rules
+│       ├── [ 821]  0project.mdc
+│       ├── [ 515]  cleanup.mdc
+│       ├── [1.9K]  filetree.mdc
+│       └── [2.0K]  quality.mdc
+├── [ 128]  .github
+│   └── [ 128]  workflows
+│       ├── [2.9K]  push.yml
+│       └── [1.4K]  release.yml
+├── [3.0K]  .gitignore
+├── [ 470]  .pre-commit-config.yaml
+├── [  96]  .specstory
+│   └── [ 320]  history
+│       ├── [2.7K]  .what-is-this.md
+│       ├── [ 58K]  2025-03-04_03-11-implementing-todo-md-plan.md
+│       ├── [ 69K]  2025-03-04_03-23-codebase-analysis-and-todo-list-creation.md
+│       ├── [ 15K]  2025-03-04_06-17-fixing-hatch-configuration-error.md
+│       ├── [103K]  2025-03-04_07-16-implementing-todo-md-phases-1-and-2.md
+│       ├── [ 644]  2025-03-04_07-54-untitled.md
+│       ├── [1.2K]  2025-03-04_07-59-project-maintenance-and-documentation-update.md
+│       └── [ 93K]  2025-03-04_08-26-ruff-linting-errors-and-fixes.md
+├── [ 288]  .venv
+├── [6.0K]  API_REFERENCE.md
+├── [3.8K]  CHANGELOG.md
+├── [ 939]  CLEANUP.txt
+├── [1.0K]  LICENSE
+├── [1.3K]  LOG.md
+├── [ 13K]  README.md
+├── [ 78K]  REPO_CONTENT.txt
+├── [2.2K]  TODO.md
+├── [   7]  VERSION.txt
+├── [ 13K]  cleanup.py
+├── [ 160]  dist
+├── [  96]  docs
+│   └── [6.4K]  architecture.md
+├── [5.3K]  pyproject.toml
+├── [ 128]  src
+│   └── [ 256]  twat_mp
+│       ├── [ 572]  __init__.py
+│       ├── [ 17K]  async_mp.py
+│       └── [ 25K]  mp.py
+└── [ 224]  tests
+    ├── [2.8K]  test_async_mp.py
+    ├── [6.3K]  test_benchmark.py
+    └── [ 13K]  test_twat_mp.py
+
+13 directories, 34 files
