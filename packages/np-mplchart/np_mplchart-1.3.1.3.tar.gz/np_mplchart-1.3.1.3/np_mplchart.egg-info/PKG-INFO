@@ -1,0 +1,54 @@
+Metadata-Version: 2.2
+Name: np-mplchart
+Version: 1.3.1.3
+Summary: Fast candlestick chart using Python. Includes navigator, slider, navigation, and text information display functions
+Author-email: white-seolpyo <white-seolpyo@naver.com>
+License: MIT License
+Project-URL: Homepage, https://white.seolpyo.com/
+Project-URL: Documentation, https://white.seolpyo.com/entry/148/
+Project-URL: repository, https://github.com/nuclearpolygon/np-mplchart
+Project-URL: Issues, https://github.com/nuclearpolygon/np-mplchart/issues
+Keywords: chart,차트,stock,주식,invest,투자,finance,파이낸스,candle,캔들,candlestick,캔들스틱,matplotlib,mplfinance,pyqtgraph,finplot,virtual currency,가상화폐,coin,코인,bitcoin,비트코인,ethereum,이더리움
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Framework :: Matplotlib
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: matplotlib>=3.7.0
+Requires-Dist: pandas>=2.0.0
+
+# Credits
+
+This project origin is https://github.com/white-seolpyo/seolpyo-mplchart  
+I have adopted it for users from Europe and other english speaking regions  
+Glyphs have been removed so you don't need to deal with fonts stuff
+
+# Document
+[English Document](https://white.seolpyo.com/entry/148/)
+
+[한글 설명서](https://white.seolpyo.com/entry/147/)
+
+
+# Sample Image
+## sample
+![sample gif](https://raw.githubusercontent.com/white-seolpyo/seolpyo-mplchart/refs/heads/main/images/sample.gif)
+
+## tkinter sample
+![tkinter sample gif](https://raw.githubusercontent.com/white-seolpyo/seolpyo-mplchart/refs/heads/main/images/with%20tkinter.gif)
+
+## English format sample
+![english sample](https://raw.githubusercontent.com/white-seolpyo/seolpyo-mplchart/refs/heads/main/images/change%20color.png)
+
+## Korean format sample
+![korean sample](https://raw.githubusercontent.com/white-seolpyo/seolpyo-mplchart/refs/heads/main/images/sample%20kor.png)
+
+
+# 40,000 data sample
+![40,000 sample](https://raw.githubusercontent.com/white-seolpyo/seolpyo-mplchart/refs/heads/main/images/40000.gif)
