@@ -1,0 +1,12 @@
+.gitignore
+README.md
+haikubot.ipynb
+haikubot.py
+setup.py
+__pycache__/dashscope_api.cpython-310.pyc
+haikubot.egg-info/PKG-INFO
+haikubot.egg-info/SOURCES.txt
+haikubot.egg-info/dependency_links.txt
+haikubot.egg-info/entry_points.txt
+haikubot.egg-info/requires.txt
+haikubot.egg-info/top_level.txt
