@@ -1,0 +1,7 @@
+MANIFEST.in
+README.md
+setup.py
+langtools_connectors.egg-info/PKG-INFO
+langtools_connectors.egg-info/SOURCES.txt
+langtools_connectors.egg-info/dependency_links.txt
+langtools_connectors.egg-info/top_level.txt
