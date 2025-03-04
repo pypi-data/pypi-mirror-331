@@ -1,0 +1,50 @@
+---
+description: File tree of the project
+globs:
+---
+[ 864]  .
+├── [  64]  .benchmarks
+├── [  96]  .cursor
+│   └── [  96]  rules
+│       └── [1.6K]  filetree.mdc
+├── [  96]  .github
+│   └── [ 128]  workflows
+│       ├── [2.7K]  push.yml
+│       └── [1.4K]  release.yml
+├── [3.5K]  .gitignore
+├── [ 532]  .pre-commit-config.yaml
+├── [  96]  .specstory
+│   └── [ 128]  history
+│       ├── [2.6K]  .what-is-this.md
+│       └── [574K]  2025-03-04_03-16-comprehensive-plan-for-opero-package-implementation.md
+├── [2.4K]  CHANGELOG.md
+├── [ 160]  CLEANUP.txt
+├── [1.0K]  LICENSE
+├── [9.5K]  README.md
+├── [2.6K]  TODO.md
+├── [ 13K]  cleanup.py
+├── [  96]  dist
+│   └── [   0]  .gitkeep
+├── [ 426]  package.toml
+├── [6.1K]  pyproject.toml
+├── [ 160]  src
+│   ├── [  64]  .benchmarks
+│   └── [ 448]  opero
+│       ├── [1.1K]  __init__.py
+│       ├── [ 130]  _version.py
+│       ├── [9.9K]  concurrency.py
+│       ├── [9.5K]  core.py
+│       ├── [3.1K]  decorators.py
+│       ├── [ 563]  exceptions.py
+│       ├── [1.6K]  opero.py
+│       ├── [4.0K]  rate_limit.py
+│       ├── [7.8K]  retry.py
+│       └── [1.9K]  utils.py
+├── [ 192]  tests
+│   ├── [4.2K]  test_core.py
+│   ├── [4.1K]  test_decorators.py
+│   └── [ 139]  test_package.py
+├── [ 54K]  twat_search.txt
+└── [109K]  uv.lock
+
+13 directories, 31 files
