@@ -1,0 +1,29 @@
+$schema: https://azuremlschemas.azureedge.net/promptflow/latest/Flow.schema.json
+environment:
+  python_requirements_txt: requirements.txt
+inputs:
+  chat_history:
+    type: list
+    is_chat_history: true
+    default: []
+  question:
+    type: string
+    is_chat_input: true
+outputs:
+  answer:
+    type: string
+    reference: ${my_tool_5j7v.output}
+    is_chat_output: true
+nodes:
+- name: my_tool_5j7v
+  type: python
+  source:
+    type: package
+    tool: promptflow_tool_semantic_kernel.tools.semantic_kernel_tool.my_tool
+  inputs:
+    connection: to_replace_with_connection_name
+    deployment_name: gpt-4o
+    chat_history: ${inputs.chat_history}
+    prompt: ${inputs.question}
+environment_variables:
+  PF_DISABLE_TRACING: "false"

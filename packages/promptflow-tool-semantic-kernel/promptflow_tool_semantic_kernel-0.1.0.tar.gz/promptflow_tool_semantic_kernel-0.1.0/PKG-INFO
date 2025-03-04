@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: promptflow-tool-semantic-kernel
+Version: 0.1.0
+Summary: 
+Author: Fabian Schurig
+Author-email: fabian.a.schurig@gmail.com
+Requires-Python: >=3.12,<3.13
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: keyrings-alt (>=5.0.2,<6.0.0)
+Requires-Dist: promptflow (>=1.17.2,<2.0.0)
+Requires-Dist: promptflow-tracing (>=1.17.2,<2.0.0)
+Requires-Dist: semantic-kernel (>=1.22.0,<2.0.0)
+Description-Content-Type: text/markdown
+
+
