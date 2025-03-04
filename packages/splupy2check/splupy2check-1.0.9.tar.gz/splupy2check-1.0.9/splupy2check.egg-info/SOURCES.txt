@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+splupy2check/__init__.py
+splupy2check/splupy2check.py
+splupy2check.egg-info/PKG-INFO
+splupy2check.egg-info/SOURCES.txt
+splupy2check.egg-info/dependency_links.txt
+splupy2check.egg-info/entry_points.txt
+splupy2check.egg-info/requires.txt
+splupy2check.egg-info/top_level.txt
