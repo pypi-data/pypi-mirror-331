@@ -1,0 +1,8 @@
+citeproc
+dulwich
+hidos>=2.1
+jinja2
+lxml
+
+[pdf]
+weasyprint>=60.2
