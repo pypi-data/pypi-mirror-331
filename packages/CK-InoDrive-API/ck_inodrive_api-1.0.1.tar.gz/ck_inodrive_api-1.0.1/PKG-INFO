@@ -1,0 +1,129 @@
+Metadata-Version: 2.1
+Name: CK-InoDrive-API
+Version: 1.0.1
+Summary: InoDrive API Library
+Home-page: https://cardinalkinetic.com
+Author: Cardinal Kinetic
+Author-email: support@cardinalkinetic.com
+License: https://www.cardinalkinetic.com/user-manual/api/inodrive-py
+Project-URL: Documentation, https://www.cardinalkinetic.com/user-manual/api/inodrive-py
+Keywords: InoWorx InoDrive InoSync MotionControl ServoControl
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Topic :: Scientific/Engineering
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+License-File: README.txt
+Requires-Dist: websocket-client==1.8.0
+Requires-Dist: ifaddr==0.2.0
+Requires-Dist: msgpack==1.1.0
+
+#### **Installation**
+
+Install and Update package via [pip](https://pip.pypa.io/en/stable/getting-started/)
+
+```
+pip install CK-InoDrive-API
+```
+
+#### **Usage**
+
+Importing Library
+
+```python
+# Import InoDrive API library
+import CkInoDriveAPI
+```
+
+Create InoDrive Object using WebSocket
+
+```python
+# Create instance to InoDrive module object
+# Connect by Name
+Drive = CkInoDriveAPI.InoDrive(target='Name')
+
+# Connect by Serial Number
+Drive = CkInoDriveAPI.InoDrive(target='SN')
+
+# Connect by IP Address
+Drive = CkInoDriveAPI.InoDrive(target='IPv4 Address')
+
+# Auto connect
+Drive = CkInoDriveAPI.InoDrive(target='IPv4 Address', autoConnect=True)
+```
+
+Read and Write Variable's
+
+```python
+# Connect to the drive
+Drive.connect()
+
+# Read variable with name 'VariableName'
+Drive.UserApp.read_var('VariableName')
+
+# Write variable with name 'VariableName' and value equal to 1
+Drive.UserApp.write_var('VariableName', 1)
+
+# Disconnect from the drive
+Drive.disconnect()
+
+# Drive object cleanup
+Drive.dispose()
+```
+
+Get and Set Output's
+
+```python
+# Connect to the drive
+Drive.connect()
+
+# Read Output 2
+state = Drive.IO.get_output(2)
+
+# Take control of InoDrive module to override output state
+Drive.SysControl.take_control(True)
+
+# Set Output 2 to On state
+Drive.IO.set_output(2, True)
+state = Drive.IO.get_output(2)
+
+# Disable module override
+Drive.SysControl.take_control(False)
+
+# Disconnect from the drive
+Drive.disconnect()
+
+# Drive object cleanup
+Drive.dispose()
+```
+
+Change Module Name (Power cycle InoDrive for changes to take effect)
+
+```python
+# Connect to the drive
+Drive.connect()
+
+# Read module configuration file
+config_file = Drive.File.read_module_config()
+
+# Set new module name
+config_file['name'] = "NewName"
+
+# Write configuration changes out
+Drive.File.write_module_config(config_file)
+
+# Disconnect from the drive
+Drive.disconnect()
+
+# Drive object cleanup
+Drive.dispose()
+```
+
+#### **Links**
+
+- [API Documentation](https://www.cardinalkinetic.com/user-manual/api/inodrive-py)
+- [Company Website](https://www.cardinalkinetic.com)
