@@ -1,0 +1,5 @@
+[console_scripts]
+twat-fs = twat_fs.__main__:main
+
+[twat.plugins]
+fs = twat_fs
