@@ -1,0 +1,11 @@
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0  # Use the ref you want to point at
+    hooks:
+    -   id: trailing-whitespace
+    -   id: end-of-file-fixer
+-   repo: https://github.com/nedtaylor/fortran-format-hooks
+    rev: 5400a80b67ac12f16dd70d1200d6c5a06dbf8855
+    hooks:
+    -   id: check-fortran-indentation
+        args: [--line-length=80, --ignore-directories 'src/wrapper']
