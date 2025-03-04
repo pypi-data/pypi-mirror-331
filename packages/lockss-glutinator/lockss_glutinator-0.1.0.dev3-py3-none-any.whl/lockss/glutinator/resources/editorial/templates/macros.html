@@ -1,0 +1,7 @@
+{% macro doi(d) %}https://doi.org/{{ d }}{% endmacro %}
+
+{% macro name(p) %}{{ p.last_name }}, {{ p.first_name }}{% endmacro %}
+
+{% macro names(pp) %}{{ name(pp[0]) }}{% for p in pp[1:] %}; {{ name(p) }}{% endfor %}{% endmacro %}
+
+{% macro path(s) %}{% if is_local and s.startswith('/') %}{{ local_base }}{% endif %}{{ s }}{% endmacro %}
