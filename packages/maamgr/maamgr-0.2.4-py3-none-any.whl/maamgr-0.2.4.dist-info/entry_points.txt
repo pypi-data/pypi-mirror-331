@@ -1,0 +1,2 @@
+[console_scripts]
+maamgr = maamgr.__init__:cli
