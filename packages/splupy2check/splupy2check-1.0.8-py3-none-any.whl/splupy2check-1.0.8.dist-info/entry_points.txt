@@ -1,0 +1,2 @@
+[console_scripts]
+splupy2check = splupy2check.splupy2check:scan_for_py
