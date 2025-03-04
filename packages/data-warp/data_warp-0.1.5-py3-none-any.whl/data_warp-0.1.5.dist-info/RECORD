@@ -1,0 +1,10 @@
+data_warp/connectors/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+data_warp/connectors/base_connector.py,sha256=iNrg62KRHEQS4wnUzQKF4C8XJV1ilOHOcyXsePiOYw4,618
+data_warp/connectors/database_connector.py,sha256=ifuOdS3BBghNCjK3axheIfewmU-s2o1IInaG-eYleH0,1454
+data_warp/connectors/file_connector.py,sha256=aisr14Cq-nLAfjlay50B5hynr5_Rz9f9Xe4Xr2vcMg4,17331
+data_warp/connectors/sources.py,sha256=rraf9cGqERHPdXhC1qdYIWLNksdKv1z7k20O9cGorDg,3595
+data_warp/connectors/utils.py,sha256=u9xUOEroJar1PCyZ1mtIFl3q_LSTfb-Jy3xnKXvHndg,5148
+data_warp/pipeline/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+data_warp-0.1.5.dist-info/METADATA,sha256=Vblgwe9n--69NwBfOsCwnGICgf3kEndpTlZ-Vso3InQ,4633
+data_warp-0.1.5.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+data_warp-0.1.5.dist-info/RECORD,,
