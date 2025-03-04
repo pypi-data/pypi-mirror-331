@@ -1,0 +1,8 @@
+README.md
+setup.py
+metaidigit_cv/__init__.py
+metaidigit_cv/main.py
+metaidigitcv.egg-info/PKG-INFO
+metaidigitcv.egg-info/SOURCES.txt
+metaidigitcv.egg-info/dependency_links.txt
+metaidigitcv.egg-info/top_level.txt
