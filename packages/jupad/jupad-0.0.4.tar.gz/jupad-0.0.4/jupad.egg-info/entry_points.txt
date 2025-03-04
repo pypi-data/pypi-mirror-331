@@ -1,0 +1,2 @@
+[gui_scripts]
+jupad = jupad.__main__:main

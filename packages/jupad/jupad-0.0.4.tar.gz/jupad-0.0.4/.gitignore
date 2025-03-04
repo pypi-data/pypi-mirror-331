@@ -1,0 +1,13 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+/build
+/dist
+/.eggs
+*.egg-info/
+*.egg
+_version.py
+
+.vscode/
