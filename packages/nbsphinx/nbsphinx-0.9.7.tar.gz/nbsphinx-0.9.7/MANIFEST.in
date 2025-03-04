@@ -1,0 +1,4 @@
+include LICENSE
+include *.rst
+include doc/requirements.txt doc/references.bib
+recursive-include doc *.ipynb matplotlibrc *.md *.rst *.py *.txt *.svg *.png
