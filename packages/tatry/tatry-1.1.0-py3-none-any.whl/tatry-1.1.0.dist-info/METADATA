@@ -1,0 +1,196 @@
+Metadata-Version: 2.2
+Name: tatry
+Version: 1.1.0
+Summary: Python client for the Tatry Content Retrieval API
+Author-email: TatryAI <opensource@tatry.dev>
+License: MIT
+Project-URL: Homepage, https://github.com/tatryai/tatry
+Project-URL: Bug Tracker, https://github.com/tatryai/tatry/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.25.0
+Requires-Dist: pydantic>=2.0.0
+Requires-Dist: tenacity>=8.0.0
+Requires-Dist: urllib3>=2.0.0
+Provides-Extra: langchain
+Requires-Dist: langchain>=0.3.19; extra == "langchain"
+Provides-Extra: test
+Requires-Dist: pytest>=7.0.0; extra == "test"
+Requires-Dist: pytest-cov>=4.0.0; extra == "test"
+Requires-Dist: responses>=0.23.0; extra == "test"
+Requires-Dist: pytest-mock>=3.10.0; extra == "test"
+Requires-Dist: pytest-asyncio>=0.21.0; extra == "test"
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.0.0; extra == "dev"
+Requires-Dist: responses>=0.23.0; extra == "dev"
+Requires-Dist: pytest-mock>=3.10.0; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.21.0; extra == "dev"
+Requires-Dist: black>=22.0.0; extra == "dev"
+Requires-Dist: isort>=5.0.0; extra == "dev"
+Requires-Dist: mypy>=1.0.0; extra == "dev"
+Requires-Dist: flake8>=4.0.0; extra == "dev"
+Requires-Dist: types-requests>=2.31.0; extra == "dev"
+
+# Tatry
+
+Python client for the Tatry Content Retrieval API
+
+## Installation
+
+Install from PyPI:
+
+```bash
+pip install tatry
+```
+
+To include LangChain integration:
+
+```bash
+pip install tatry[langchain]
+```
+
+## Basic Usage
+
+```python
+from tatry import TatryRetriever
+
+# Initialize the client
+retriever = TatryRetriever(api_key="your-api-key")
+
+# Search for documents
+results = retriever.retrieve(
+    query="example query",
+    max_results=5,
+    sources=["source1", "source2"]
+)
+
+# Access the results
+for doc in results.documents:
+    print(f"Document ID: {doc.id}")
+    print(f"Content: {doc.content}")
+    print(f"Relevance: {doc.relevance_score}")
+    print(f"Source: {doc.metadata.source}")
+    print(f"Published Date: {doc.metadata.published_date}")
+    print("---")
+```
+
+## Features
+
+- Simple and intuitive interface for retrieving relevant content
+- Support for multiple sources in a single query
+- Batch retrieval for efficiently processing multiple queries
+- Comprehensive error handling
+- Rate limiting and retry capabilities
+- Detailed document metadata
+
+## LangChain Integration
+
+Tatry can be seamlessly integrated with LangChain:
+
+```python
+from tatry.integrations.langchain import TatryRetriever
+
+# Initialize the retriever
+retriever = TatryRetriever(
+    api_key="your-api-key",
+    max_results=5,
+    sources=["source1", "source2"]
+)
+
+# Use it in any LangChain pipeline
+documents = retriever.get_relevant_documents("your query")
+
+# Example with a RetrievalQA chain
+from langchain.chains import RetrievalQA
+from langchain.llms import OpenAI
+
+qa = RetrievalQA.from_chain_type(
+    llm=OpenAI(),
+    chain_type="stuff",
+    retriever=retriever
+)
+
+result = qa.run("What is the capital of France?")
+```
+
+## API Endpoints
+
+The client supports the following API endpoints:
+
+### Document Retrieval
+
+```python
+# Simple retrieve
+response = retriever.retrieve(query="example", max_results=10)
+
+# Batch retrieve
+queries = [
+    {"query": "example 1", "max_results": 5},
+    {"query": "example 2", "max_results": 10, "sources": ["source1"]}
+]
+batch_response = retriever.batch_retrieve(queries)
+```
+
+
+
+### Authentication
+
+```python
+# Validate your API key
+validation = retriever.validate_api_key()
+```
+
+## Error Handling
+
+The client includes various exception types to help you handle errors:
+
+```python
+from tatry import (
+    RetrieverError,
+    RetrieverAPIError,
+    RetrieverAuthError,
+    RetrieverConfigError,
+    RetrieverTimeoutError,
+    RetrieverConnectionError,
+)
+
+try:
+    retriever.retrieve("example")
+except RetrieverAuthError:
+    print("Authentication failed")
+except RetrieverTimeoutError:
+    print("Request timed out")
+except RetrieverConnectionError:
+    print("Connection error")
+except RetrieverAPIError as e:
+    print(f"API error: {e.status_code}")
+    print(f"Details: {e.details}")
+except RetrieverError:
+    print("Generic error")
+```
+
+## Development
+
+To set up the development environment:
+
+```bash
+pip install -e ".[dev]"
+```
+
+Run tests:
+
+```bash
+pytest
+```
+
