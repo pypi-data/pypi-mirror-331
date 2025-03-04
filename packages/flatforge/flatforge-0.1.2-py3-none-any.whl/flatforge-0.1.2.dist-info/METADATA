@@ -1,0 +1,114 @@
+Metadata-Version: 2.2
+Name: flatforge
+Version: 0.1.2
+Summary: A utility for validating and processing flat files
+Home-page: https://github.com/akram0zaki/flatforge
+Author: Akram Zaki
+Author-email: Akram Zaki <azpythonprojects@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/akram0zaki/flatforge
+Project-URL: Repository, https://github.com/akram0zaki/flatforge
+Project-URL: Documentation, https://akram0zaki.github.io/flatforge/
+Project-URL: Issue Tracker, https://github.com/akram0zaki/flatforge/issues
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyyaml>=6.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.0.0; extra == "dev"
+Requires-Dist: black>=23.0.0; extra == "dev"
+Requires-Dist: mypy>=1.0.0; extra == "dev"
+Provides-Extra: test
+Requires-Dist: pytest>=7.0.0; extra == "test"
+Requires-Dist: pytest-cov>=4.0.0; extra == "test"
+Requires-Dist: psutil>=5.9.0; extra == "test"
+Provides-Extra: large-files
+Requires-Dist: psutil>=5.9.0; extra == "large-files"
+Provides-Extra: benchmark
+Requires-Dist: psutil>=5.9.0; extra == "benchmark"
+Requires-Dist: matplotlib>=3.5.0; extra == "benchmark"
+Requires-Dist: numpy>=1.20.0; extra == "benchmark"
+Provides-Extra: gui
+Requires-Dist: flatforge-ui>=0.1.0; extra == "gui"
+Dynamic: author
+Dynamic: home-page
+Dynamic: requires-python
+
+﻿# FlatForge
+
+FlatForge is a Python library for processing and validating flat files (fixed-length or delimited) with a focus on flexibility and ease of use.
+
+**GitHub Repository**: [https://github.com/akram0zaki/flatforge](https://github.com/akram0zaki/flatforge)
+
+## Features
+
+- Support for fixed-length and delimited file formats
+- Configurable validation rules for individual fields
+- Global validation rules across multiple records
+- Detailed error reporting
+- YAML and string-based configuration options
+- Extensible architecture for custom validators and processors
+
+## Installation
+
+```bash
+pip install flatforge
+```
+
+## Quick Start
+
+```python
+from flatforge.config_parser import StringConfigParser
+from flatforge.processor import Processor
+
+# Create a configuration
+config = """
+[parameters]
+delimiter = ,
+section_separator = \n\n
+record_separator = \n
+
+[section_metadata]
+0 = fl{10,5,15}|0:required,numeric|1:length(5)|2:regex([A-Z]{2,})
+"""
+
+# Parse the configuration
+parser = StringConfigParser()
+file_props = parser.parse(config)
+
+# Create a processor
+processor = Processor(file_props)
+
+# Process a file
+file_content = "1234567890ABCDE               \n0987654321FGHIJ               "
+results = processor.process_file(file_content)
+
+# Check for errors
+for section_index, section_results in results.items():
+    for result in section_results:
+        if not result.is_valid:
+            print(f"Error in section {section_index}, column {result.message.column_index}: {result.message.text}")
+```
+
+## Documentation
+
+Full documentation is available at: [https://akram0zaki.github.io/flatforge/](https://akram0zaki.github.io/flatforge/)
+
+## Repository and Contributing
+
+The source code for FlatForge is hosted on GitHub: [https://github.com/akram0zaki/flatforge](https://github.com/akram0zaki/flatforge)
+
+Issues, feature requests, and pull requests can be submitted through the GitHub repository.
+
+## License
+
+MIT
