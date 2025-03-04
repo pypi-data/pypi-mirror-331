@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+ml3log/__init__.py
+ml3log/logger.py
+ml3log/server.py
+ml3log.egg-info/PKG-INFO
+ml3log.egg-info/SOURCES.txt
+ml3log.egg-info/dependency_links.txt
+ml3log.egg-info/top_level.txt
+ml3log/templates/viewer.html
