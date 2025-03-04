@@ -1,0 +1,8 @@
+README.md
+setup.py
+PakEngTagger.egg-info/PKG-INFO
+PakEngTagger.egg-info/SOURCES.txt
+PakEngTagger.egg-info/dependency_links.txt
+PakEngTagger.egg-info/top_level.txt
+pak_eng_tagger/__init__.py
+pak_eng_tagger/tagger.py
