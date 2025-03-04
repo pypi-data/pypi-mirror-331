@@ -1,0 +1,4 @@
+PyYAML
+openai
+pymupdf4llm
+python-dotenv
