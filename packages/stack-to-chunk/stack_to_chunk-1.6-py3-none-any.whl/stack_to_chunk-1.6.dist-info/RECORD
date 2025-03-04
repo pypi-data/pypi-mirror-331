@@ -1,0 +1,11 @@
+stack_to_chunk/__init__.py,sha256=h-k7vXZ13f7QXoEjVtNyMswG6Vp0uxJpqujAxDOlZik,392
+stack_to_chunk/_array_helpers.py,sha256=g_EWr53yUFgMTtpsp16wY00SghE9GHazkyMbIHDUHBw,2559
+stack_to_chunk/_version.py,sha256=6xfmCnpRXSWrZ_zk3DC89Nd29Ed6afH9sDz257ANd3w,506
+stack_to_chunk/main.py,sha256=uVfpbT9yKQfbaApYtMSlpLApX7kQvTBU5eWVG155rjg,13264
+stack_to_chunk/ome_ngff.py,sha256=fL9ez4rFM93g85NgLwAY4_fj-KYj4Dy1KHAD7llkog8,678
+stack_to_chunk/tests/test_main.py,sha256=PE-8jdQJ73CuwZ63onEx5W2sB_g-qMZyhLeES97J0uQ,15258
+stack_to_chunk-1.6.dist-info/LICENCE.md,sha256=X0v6lyRPHp7u0z-A3ibAhUxJBU_vLvLLMvqhaHdMkHE,1486
+stack_to_chunk-1.6.dist-info/METADATA,sha256=b8RMszhf7RhX8PwISlPmuKSf0q5wUp0vnTTK2k4uxds,5166
+stack_to_chunk-1.6.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+stack_to_chunk-1.6.dist-info/top_level.txt,sha256=mN72Cfvkf53HQBYVrEUeFXe7647sXHSJGkHj7beun0U,15
+stack_to_chunk-1.6.dist-info/RECORD,,
