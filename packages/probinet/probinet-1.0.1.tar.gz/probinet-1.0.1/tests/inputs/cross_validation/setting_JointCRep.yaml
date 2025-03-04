@@ -1,0 +1,26 @@
+parameters:
+  K: [2]
+  rseed: [0]
+  initialization: [0]
+  out_inference: [False]
+  out_folder: ""
+  end_file: ["_JointCRep"]
+  assortative: [False]
+  eta0: [null]
+  fix_eta: [False]
+  undirected: [False]
+  fix_communities: [False]
+  fix_w: [False]
+  use_approximation: [False]
+  files: ["config/data/input/theta_GT_model_class.npz"]
+input_params:
+  in_folder: "tests/inputs/"
+  adj: "synthetic_data_for_JointCRep.dat"
+  ego: "source"
+  alter: "target"
+  NFold: 2
+  sep: " "
+  out_results: True
+  out_mask: False
+output_file: "synthetic_data_for_JointCRep_cv.csv"
+ground_truth_file: "synthetic_data_for_JointCRep_cv_GT.csv"

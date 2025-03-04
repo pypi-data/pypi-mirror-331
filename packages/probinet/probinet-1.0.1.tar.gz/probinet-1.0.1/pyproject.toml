@@ -1,0 +1,152 @@
+# build-system
+[build-system]
+requires = [
+    "setuptools>=61",
+    "setuptools-scm[toml]>=6.2",
+]
+build-backend = "setuptools.build_meta"
+
+# Project
+[project]
+name = "probinet"
+description = "Python package for probabilistic network analysis."
+version = "1.0.1"
+requires-python = ">=3.10,<3.13"
+readme = "README.md"
+authors = [
+    {name = "Diego Baptista Theuerkauf", email = "diego.theuerkauf@tue.mpg.de"},
+]
+maintainers = [
+    {name= "Diego Baptista Theuerkauf", email= "diego.theuerkauf@tue.mpg.de"},
+]
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Typing :: Typed",
+    "Topic :: Software Development",
+    "Topic :: Scientific/Engineering",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX",
+    "Operating System :: Unix",
+    "Operating System :: MacOS",
+]
+
+dependencies = [
+    "jupyter",
+    "matplotlib",
+    "networkx",
+    "numpy",
+    "pandas",
+    "pyyaml",
+    "pytest",
+    "scikit-learn",
+    "scipy",
+    "sparse",
+    "seaborn"
+]
+
+[project.optional-dependencies]
+dev = [
+    "autopep8",
+    "coverage",
+    "coverage2clover",
+    "isort",
+    "jupyter",
+    "matplotlib",
+    "mypy",
+    "myst_nb",
+    "nbconvert",
+    "pylint",
+    "sphinxcontrib.bibtex",
+    "sphinxcontrib.napoleon",
+    'sphinx_book_theme',
+    "sphinx-copybutton",
+    "tox",
+    "unittest-xml-reporting"
+]
+# URLs
+[project.urls]
+documentation = "https://mpi-is.github.io/probinet/"
+source = "https://github.com/MPI-IS/probinet"
+tracker = "https://github.com/MPI-IS/probinet/issues"
+
+# CLI
+[project.scripts]
+run_probinet = "probinet.main:main"
+
+# Setuptools
+[tool.setuptools]
+packages = ["probinet"]
+
+[tool.setuptools.package-data]
+probinet = ["data/input", "data/model", "probinet/py.typed"]
+
+[tool.setuptools.dynamic.readme]
+file = "README.md"
+
+# Autopep8
+[tool.autopep8]
+max_line_length = 100
+aggressive = 3
+
+# isort
+[tool.isort]
+profile = "black"  # Align with Black's formatting rules
+line_length = 88   # Match Black's line length
+multi_line_output = 3  # Ensure parentheses-style formatting (no collapsing into one line)
+include_trailing_comma = true  # Required for Black compatibility
+force_single_line = false  # Prevent splitting imports into individual lines
+src_paths = ["probinet"]
+
+# Pylint
+[tool.pylint.MASTER]
+disable = ["attribute-defined-outside-init"]
+load-plugins = "pylint.extensions.docparams"
+extension-pkg-whitelist = "numpy"
+
+[tool.pylint.FORMAT]
+max-line-length = 100
+
+[tool.pylint.MESSAGES_CONTROL]
+disable = ["C", # convention
+]
+# Coverage
+[tool.coverage.run]
+branch = true
+source = ["probinet"]
+omit = ["probinet/version.py", "tests"]
+
+[tool.coverage.report]
+show_missing = true
+skip_empty = true
+
+# MyPy
+[tool.mypy]
+ignore_missing_imports = true
+
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+envlist = py310, py311, py312, docs
+[testenv]
+description =
+    run unit tests
+extras =
+    dev
+commands =
+    python -m xmlrunner
+[testenv:docs]
+basepython = python3.10
+commands =
+    sphinx-build -d "{envtmpdir}{/}doctree" docs/source/ "{toxworkdir}{/}docs_out" --color -b html
+    python -c 'print(r"documentation available under file://{toxworkdir}{/}docs_out{/}index.html")'
+[testenv:type]
+deps = mypy
+skip_install = true
+commands = mypy --install-types probinet
+"""
