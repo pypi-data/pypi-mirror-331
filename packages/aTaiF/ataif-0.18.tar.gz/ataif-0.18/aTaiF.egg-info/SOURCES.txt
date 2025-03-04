@@ -1,0 +1,7 @@
+LICENSE.txt
+setup.py
+aTaiF/__init__.py
+aTaiF.egg-info/PKG-INFO
+aTaiF.egg-info/SOURCES.txt
+aTaiF.egg-info/dependency_links.txt
+aTaiF.egg-info/top_level.txt
