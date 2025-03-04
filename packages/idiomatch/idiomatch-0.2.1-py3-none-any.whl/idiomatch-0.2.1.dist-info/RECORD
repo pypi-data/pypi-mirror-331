@@ -1,0 +1,10 @@
+idiomatch/__init__.py,sha256=ZUkIcjDftgo-4TLoXOg7U2ksxlefIW0hL8hv7bfTIiA,66
+idiomatch/builders.py,sha256=ycwxj9qr3gqTqvMG4w2Kcl3umKdze1TTYYIjS9RxWiY,6579
+idiomatch/cases.py,sha256=Jc2j94VKqr0-y1srYAjjCYDumGYCtQWqkwSptaJW1ps,1186
+idiomatch/configs.py,sha256=v1Nz8ZITDbHcxnAsBYa0v_zXVlFev2mgsx7vE2qMAx8,205
+idiomatch/idiomatcher.py,sha256=pxHVYNVDi5f6qfGp77yyuBRRBKuP3-2DazM1iSD4jYA,1843
+idiomatch/patterns.json,sha256=FY4n7i00IfiPXWSre3RH6moOcbpu57BY3G-xn-bdpeU,18711697
+idiomatch-0.2.1.dist-info/METADATA,sha256=LtUQ61bLJ0gNYLgTufd2zyZAPMLnJbQDgmNPzCPwqbw,4759
+idiomatch-0.2.1.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+idiomatch-0.2.1.dist-info/top_level.txt,sha256=DppoSdqAIPcLuRoJeyrHNrT2f7qEGmOJytqdK7H6vPs,10
+idiomatch-0.2.1.dist-info/RECORD,,
