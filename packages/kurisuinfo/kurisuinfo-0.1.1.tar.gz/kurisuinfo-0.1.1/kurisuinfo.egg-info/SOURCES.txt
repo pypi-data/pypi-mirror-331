@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+kurisuinfo.egg-info/PKG-INFO
+kurisuinfo.egg-info/SOURCES.txt
+kurisuinfo.egg-info/dependency_links.txt
+kurisuinfo.egg-info/top_level.txt
+torchinfo/__init__.py
+torchinfo/enums.py
+torchinfo/formatting.py
+torchinfo/layer_info.py
+torchinfo/model_statistics.py
+torchinfo/py.typed
+torchinfo/torchinfo.py
