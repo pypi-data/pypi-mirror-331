@@ -1,0 +1,14 @@
+dotscripts/__init__.py,sha256=aKugxmWgsdTKrySQSKDZuQTJb1yLmBQgmruKJY28vaU,160
+dotscripts-1.0.0.data/data/share/jupyter/labextensions/dotscripts/build_log.json,sha256=sJep0G1Zx34pou9jnWsl6PGAjiU5oKs63YHrLuRAAdw,22372
+dotscripts-1.0.0.data/data/share/jupyter/labextensions/dotscripts/package.json,sha256=2f6TImpBTO4FXJu0EbduC52XWJk1Jd1gAZtXpdpAYi4,5642
+dotscripts-1.0.0.data/data/share/jupyter/labextensions/dotscripts/static/lib_index_js.76267c81700bc9dcc91e.js,sha256=HcfNj491t0ra5BH0vFm-0LW6K_WukCQY8_ii6ZvmXVI,2966
+dotscripts-1.0.0.data/data/share/jupyter/labextensions/dotscripts/static/lib_index_js.76267c81700bc9dcc91e.js.map,sha256=ZeihSS1Smvpk74_Iu38rT4L_wSIxVQ_gCFvDct-qKPM,3780
+dotscripts-1.0.0.data/data/share/jupyter/labextensions/dotscripts/static/remoteEntry.01c9beaaf0b9515e2040.js,sha256=bVcyryGlnx-qDnZe075j97Mzk7eqrrgENAmFiNV_aVY,26557
+dotscripts-1.0.0.data/data/share/jupyter/labextensions/dotscripts/static/remoteEntry.01c9beaaf0b9515e2040.js.map,sha256=gD_IAXxAlAyNXCZLkNiKi2Mo1rmDjO1MhLzk-h0VKlw,25252
+dotscripts-1.0.0.data/data/share/jupyter/labextensions/dotscripts/static/style.js,sha256=3iFNVHhg8qabELOF4Vj0PKaMeboN1qypdoje1FhpAeM,153
+dotscripts-1.0.0.data/data/share/jupyter/labextensions/dotscripts/static/style_index_js.8666b180e71e1ad7a627.js,sha256=ED1y8Xxho-SVz0LR7bBemk1_2sokUqDrGuNl3CJCFuw,21309
+dotscripts-1.0.0.data/data/share/jupyter/labextensions/dotscripts/static/style_index_js.8666b180e71e1ad7a627.js.map,sha256=FR2AikiTgBsCsT67dmzW1xDJ_We08JiIxTA424dvFU8,15108
+dotscripts-1.0.0.dist-info/METADATA,sha256=b2pdrDG09Rr9veDZRdGSPHqJmaUwM3UMO42keoPi6FI,5465
+dotscripts-1.0.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+dotscripts-1.0.0.dist-info/licenses/LICENSE,sha256=swqU5AALTjsH8WH4rMGYCMnxABgROxkTNgJ6UuHDcNw,1550
+dotscripts-1.0.0.dist-info/RECORD,,
