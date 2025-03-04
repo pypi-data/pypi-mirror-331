@@ -1,0 +1,12 @@
+Metadata-Version: 2.2
+Name: montagnekit
+Version: 0.0.0
+Summary: MontagneKit fullstack framework that speaks fluent Python.
+Author-email: Ali Chaayb <achaaybdev@gmail.com>
+License: MIT
+Project-URL: repository, https://github.com/achaayb/montagnekit
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# MontagneKit
+MontagneKit fullstack framework that speaks fluent Python. ⛰️ 
