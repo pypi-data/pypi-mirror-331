@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+xcube_eopf/__init__.py
+xcube_eopf/version.py
+xcube_eopf.egg-info/PKG-INFO
+xcube_eopf.egg-info/SOURCES.txt
+xcube_eopf.egg-info/dependency_links.txt
+xcube_eopf.egg-info/requires.txt
+xcube_eopf.egg-info/top_level.txt
