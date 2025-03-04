@@ -1,0 +1,8 @@
+LICENSE
+README.rst
+blendnoise.c
+setup.py
+blendnoise.egg-info/PKG-INFO
+blendnoise.egg-info/SOURCES.txt
+blendnoise.egg-info/dependency_links.txt
+blendnoise.egg-info/top_level.txt
