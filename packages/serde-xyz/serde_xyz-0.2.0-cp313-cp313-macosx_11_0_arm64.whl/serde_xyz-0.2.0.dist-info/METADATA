@@ -1,0 +1,40 @@
+Metadata-Version: 2.4
+Name: serde_xyz
+Version: 0.2.0
+Summary: Serialize and deserialize molecular structure .xyz files.
+Requires-Python: >=3
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+
+`serde_xyz`
+===========
+
+Serialize and deserialize molecular structure .xyz files.
+
+```bash
+pip install serde_xyz
+```
+
+(or `uv add serde_xyz`).
+
+```py
+from serde_xyz import Atom, XYZ
+atoms = [
+    Atom("O", 0, 0, 0),
+    Atom("H", 1, 0, 0),
+    Atom("H", 0, 1, 0),
+]
+xyz = XYZ(atoms, "this is a comment")
+xyz
+>>> XYZ(atoms=[
+           Atom { element: "O", x: 0.0, y: 0.0, z: 0.0 },
+           Atom { element: "H", x: 1.0, y: 0.0, z: 0.0 },
+           Atom { element: "H", x: 0.0, y: 1.0, z: 0.0 }
+        ],
+        comment='this is a commment'
+    )
+print(xyz)
+>>> "3\n\nO 0.000000 0.000000 0.000000\nH 1.000000 0.000000 0.000000\nH 0.000000 1.000000 0.000000\n"
+str(xyz)
+>>> '"3\\n\\nO 0.000000 0.000000 0.000000\\nH 1.000000 0.000000 0.000000\\nH 0.000000 1.000000 0.000000\\n"'
+```
+
