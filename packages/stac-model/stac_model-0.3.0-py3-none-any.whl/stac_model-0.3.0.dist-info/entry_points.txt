@@ -1,0 +1,5 @@
+[console_scripts]
+stac-model = stac_model.__main__:app
+
+[gui_scripts]
+
