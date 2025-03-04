@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+aiassistant/__init__.py
+aiassistant/aiassistant.py
+aiassistant_raayan.egg-info/PKG-INFO
+aiassistant_raayan.egg-info/SOURCES.txt
+aiassistant_raayan.egg-info/dependency_links.txt
+aiassistant_raayan.egg-info/requires.txt
+aiassistant_raayan.egg-info/top_level.txt
