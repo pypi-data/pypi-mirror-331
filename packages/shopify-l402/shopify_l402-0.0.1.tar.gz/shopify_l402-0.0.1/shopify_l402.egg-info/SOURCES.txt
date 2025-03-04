@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+settings.ini
+setup.py
+shopify_l402/__init__.py
+shopify_l402/_modidx.py
+shopify_l402/core.py
+shopify_l402.egg-info/PKG-INFO
+shopify_l402.egg-info/SOURCES.txt
+shopify_l402.egg-info/dependency_links.txt
+shopify_l402.egg-info/entry_points.txt
+shopify_l402.egg-info/not-zip-safe
+shopify_l402.egg-info/requires.txt
+shopify_l402.egg-info/top_level.txt

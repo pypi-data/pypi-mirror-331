@@ -1,0 +1,9 @@
+fastcore
+httpx
+fastapi
+uvicorn
+python-dotenv
+fewsats
+
+[dev]
+nbdev
