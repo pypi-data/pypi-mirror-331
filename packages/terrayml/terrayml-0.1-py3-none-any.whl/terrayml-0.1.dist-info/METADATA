@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: terrayml
+Version: 0.1
+Requires-Dist: awscli
+Requires-Dist: Click
+Requires-Dist: PyYAML
+Requires-Dist: python-dotenv
