@@ -1,0 +1,7 @@
+betty.service module
+====================
+
+.. automodule:: betty.service
+   :members:
+   :show-inheritance:
+   :undoc-members:
