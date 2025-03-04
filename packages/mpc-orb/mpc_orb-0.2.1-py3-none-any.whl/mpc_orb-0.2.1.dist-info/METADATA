@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: mpc_orb
+Version: 0.2.1
+Summary: MPC package for orbit dissemination
+Project-URL: Homepage, https://github.com/Smithsonian/mpc-public/mpc_orb
+Project-URL: Documentation, https://minorplanetcenter.net/mpcops/documentation/mpc-orb-json/
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Requires-Dist: json5
+Requires-Dist: jsonschema
+Requires-Dist: numpy<2.0.0
+Provides-Extra: test
+Requires-Dist: pytest; extra == 'test'
