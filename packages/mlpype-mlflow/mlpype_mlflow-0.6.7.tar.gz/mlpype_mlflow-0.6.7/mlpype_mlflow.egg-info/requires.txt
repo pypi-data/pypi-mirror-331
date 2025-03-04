@@ -1,0 +1,7 @@
+mlpype-base==0.6.7
+mlflow>=2.17.0
+GitPython>=3.1.27
+
+[strict]
+mlflow==2.17.0
+GitPython==3.1.27
