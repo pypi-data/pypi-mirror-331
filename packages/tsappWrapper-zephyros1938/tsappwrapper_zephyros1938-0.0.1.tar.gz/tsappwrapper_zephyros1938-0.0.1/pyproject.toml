@@ -1,0 +1,18 @@
+[project]
+name = "tsappWrapper_zephyros1938"
+version = "0.0.1"
+authors = [
+  { name="Author", email="zephyros@zephyros1938.org" },
+]
+description = "A package that modifies Techsmart's Tsapp"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: MIT License"
+]
+
+[project.urls]
+Homepage = "https://github.com/zephyros1938/tsapp_wrapper"
+Issues = "https://github.com/zephyros1938/tsapp_wrapper/issues"
