@@ -1,0 +1,12 @@
+PyYAML
+
+[django]
+django
+
+[django_tests]
+pytest-django
+
+[tests]
+pytest
+pytest-cov
+pytest-xdist
