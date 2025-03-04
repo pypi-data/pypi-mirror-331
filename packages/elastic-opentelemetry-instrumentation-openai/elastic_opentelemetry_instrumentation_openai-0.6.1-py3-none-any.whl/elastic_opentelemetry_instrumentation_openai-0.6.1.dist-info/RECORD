@@ -1,0 +1,12 @@
+opentelemetry/instrumentation/openai/__init__.py,sha256=k4k3bsrILcndE-2ldVhbAO2Ooq5--WoDQea3t5mBRiA,14770
+opentelemetry/instrumentation/openai/environment_variables.py,sha256=LLeTD-ZnQzb3Tx8En5Q76hNHnFwvFlKW9WrTEbOxUiE,917
+opentelemetry/instrumentation/openai/helpers.py,sha256=oiAzUUlgdHe1lke28JVR-n8e950tslH_pPz1T16zBLk,13421
+opentelemetry/instrumentation/openai/package.py,sha256=ke5QbeVVR__6Yx_74ghX9_e4F4ChPCscmd_0_OIkfuM,847
+opentelemetry/instrumentation/openai/version.py,sha256=AXG42CtpjNT66A58eC0idjAEDkKjQLcbz-rZG0AkjBI,833
+opentelemetry/instrumentation/openai/wrappers.py,sha256=bNKzhif8-4z6Ei6A56En0z_slWOIpsTbA0yuc-rEWfo,5004
+elastic_opentelemetry_instrumentation_openai-0.6.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+elastic_opentelemetry_instrumentation_openai-0.6.1.dist-info/METADATA,sha256=3-ytOz3UxddItHxVOsLq3GjHJjFrDcpKZiVBRERPYGk,19723
+elastic_opentelemetry_instrumentation_openai-0.6.1.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+elastic_opentelemetry_instrumentation_openai-0.6.1.dist-info/entry_points.txt,sha256=_JhEAYVlgs1-4DMQwUkqSotvpI5P2yZ9K75_0vLRjck,94
+elastic_opentelemetry_instrumentation_openai-0.6.1.dist-info/top_level.txt,sha256=5p97iTMneNm1LAKDalzEVpYhvPZsaqJZzdLuD_upSaQ,14
+elastic_opentelemetry_instrumentation_openai-0.6.1.dist-info/RECORD,,
