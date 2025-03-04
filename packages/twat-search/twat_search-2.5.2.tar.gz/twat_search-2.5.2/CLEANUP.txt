@@ -1,0 +1,3490 @@
+2025-03-04 05:57:31 - 
+=== PROJECT STATEMENT ===
+2025-03-04 05:57:31 - ---
+description: About this project
+globs: 
+alwaysApply: false
+---
+# About this project
+
+`twat-search` is a multi-provider search 
+
+## Development Notes
+- Uses `uv` for Python package management
+- Quality tools: ruff, mypy, pytest
+- Clear provider protocol for adding new search backends
+- Strong typing and runtime checks throughout
+
+2025-03-04 05:57:31 - 
+=== Current Status ===
+2025-03-04 05:57:31 - Error: LOG.md is missing
+2025-03-04 05:57:31 - [1.3K]  .
+├── [  64]  .benchmarks
+├── [  96]  .cursor
+│   └── [ 192]  rules
+│       ├── [ 334]  0project.mdc
+│       ├── [ 559]  cleanup.mdc
+│       └── [9.8K]  filetree.mdc
+├── [  96]  .github
+│   └── [ 128]  workflows
+│       ├── [2.7K]  push.yml
+│       └── [1.4K]  release.yml
+├── [3.5K]  .gitignore
+├── [1.2K]  .pre-commit-config.yaml
+├── [ 128]  .specstory
+│   ├── [1.5K]  history
+│   │   ├── [2.7K]  .what-is-this.md
+│   │   ├── [ 52K]  2025-02-25_01-58-creating-and-tracking-project-tasks.md
+│   │   ├── [7.4K]  2025-02-25_02-17-project-task-continuation-and-progress-update.md
+│   │   ├── [ 11K]  2025-02-25_02-24-planning-tests-for-twat-search-web-package.md
+│   │   ├── [196K]  2025-02-25_02-27-implementing-tests-for-twat-search-package.md
+│   │   ├── [ 46K]  2025-02-25_02-58-transforming-python-script-into-cli-tool.md
+│   │   ├── [ 93K]  2025-02-25_03-09-generating-a-name-for-the-chat.md
+│   │   ├── [5.5K]  2025-02-25_03-33-untitled.md
+│   │   ├── [ 57K]  2025-02-25_03-54-integrating-search-engines-into-twat-search.md
+│   │   ├── [ 72K]  2025-02-25_04-05-consolidating-you-py-and-youcom-py.md
+│   │   ├── [6.1K]  2025-02-25_04-13-missing-env-api-key-names-in-pplx-py.md
+│   │   ├── [118K]  2025-02-25_04-16-implementing-functions-for-brave-search-engines.md
+│   │   ├── [286K]  2025-02-25_04-48-unifying-search-engine-parameters-in-twat-search.md
+│   │   ├── [ 83K]  2025-02-25_05-36-implementing-duckduckgo-search-engine.md
+│   │   ├── [194K]  2025-02-25_05-43-implementing-the-webscout-search-engine.md
+│   │   ├── [ 23K]  2025-02-25_06-07-implementing-bing-scraper-engine.md
+│   │   ├── [ 15K]  2025-02-25_06-12-continuing-bing-scraper-engine-implementation.md
+│   │   ├── [121K]  2025-02-25_06-34-implementing-safe-import-patterns-in-modules.md
+│   │   ├── [9.9K]  2025-02-25_07-09-refactoring-plan-and-progress-update.md
+│   │   ├── [ 40K]  2025-02-25_07-17-implementing-phase-1-from-todo-md.md
+│   │   ├── [292K]  2025-02-25_07-34-integrating-hasdata-google-serp-apis.md
+│   │   ├── [142K]  2025-02-25_08-19-implementing-search-engines-from-nextengines-md.md
+│   │   ├── [175K]  2025-02-26_09-54-implementing-plain-option-for-search-commands.md
+│   │   ├── [264K]  2025-02-26_10-55-standardizing-engine-naming-conventions.md
+│   │   ├── [4.3K]  2025-02-26_11-30-untitled.md
+│   │   ├── [102K]  2025-02-26_12-11-update-config-py-to-use-engine-constants.md
+│   │   ├── [278K]  2025-02-26_12-18-update-engine-imports-and-exports-in-init-py.md
+│   │   ├── [268K]  2025-02-26_13-40-search-engine-initialization-errors.md
+│   │   ├── [ 61K]  2025-02-26_14-15-codebase-issue-analysis-and-fix-plan.md
+│   │   ├── [ 43K]  2025-02-26_14-52-resolving-critical-issues-in-todo-md.md
+│   │   ├── [247K]  2025-02-26_17-48-progress-update-for-twat-search-project.md
+│   │   ├── [ 28K]  2025-02-26_18-28-fixing-num-results-parameter-in-twat-search.md
+│   │   ├── [ 63K]  2025-02-26_18-44-fixing-search-engine-issues-in-codebase.md
+│   │   ├── [ 72K]  2025-02-26_19-37-removing-anywebsearch-references-from-codebase.md
+│   │   ├── [ 98K]  2025-02-26_19-49-fixing-linting-errors-in-code.md
+│   │   ├── [761K]  2025-02-26_20-02-analyzing-todo-md-and-updating-progress-md.md
+│   │   ├── [ 69K]  2025-02-26_22-55-bing-scraper-result-inconsistency-investigation.md
+│   │   ├── [591K]  2025-02-26_23-13-google-scraper-result-validation-issues.md
+│   │   ├── [ 23K]  2025-02-27_12-02-plan-for-adding-support-for-falla-engines.md
+│   │   ├── [615K]  2025-02-27_13-08-implementing-falla-and-tracking-progress.md
+│   │   ├── [ 43K]  2025-02-27_15-08-project-update-and-task-management.md
+│   │   ├── [317K]  2025-02-27_15-45-updating-falla-library-selenium-to-playwright.md
+│   │   ├── [133K]  2025-02-27_17-02-fixing-falla-py-async-issues.md
+│   │   ├── [ 17K]  2025-02-27_17-34-improving-search-engine-selectors-in-falla.md
+│   │   ├── [ 76K]  2025-03-04_05-12-fixing-ruff-linting-errors-in-code.md
+│   │   └── [100K]  2025-03-04_05-38-implementing-phases-1-and-2-from-todo-md.md
+│   └── [2.2M]  history.txt
+├── [3.3K]  CHANGELOG.md
+├── [ 499]  CLEANUP.txt
+├── [1.0K]  LICENSE
+├── [ 23K]  README.md
+├── [6.4K]  TODO.md
+├── [   7]  VERSION.txt
+├── [ 12K]  cleanup.py
+├── [6.3K]  debug_fetch.py
+├── [ 256]  debug_output
+│   ├── [ 445]  qwant_analysis.txt
+│   ├── [100K]  qwant_content.html
+│   ├── [153K]  qwant_screenshot.png
+│   ├── [ 476]  yahoo_analysis.txt
+│   ├── [ 88K]  yahoo_content.html
+│   └── [402K]  yahoo_screenshot.png
+├── [ 192]  dist
+├── [7.4K]  falla_search.py
+├── [4.0K]  google_debug_Python_programming_language.html
+├── [3.9K]  google_debug_test_query.html
+├── [5.4K]  pyproject.toml
+├── [  43]  requirements.txt
+├── [ 224]  resources
+│   ├── [ 224]  brave
+│   │   ├── [ 65K]  brave.md
+│   │   ├── [ 29K]  brave_image.md
+│   │   ├── [ 22K]  brave_news.md
+│   │   └── [ 22K]  brave_video.md
+│   ├── [ 128]  pplx
+│   │   ├── [ 32K]  pplx.md
+│   │   └── [ 335]  pplx_urls.txt
+│   ├── [ 15K]  pricing.md
+│   └── [ 192]  you
+│       ├── [ 54K]  you.md
+│       ├── [ 251]  you.txt
+│       ├── [ 58K]  you_news.md
+│       └── [  98]  you_news.txt
+├── [ 128]  src
+│   └── [ 256]  twat_search
+│       ├── [ 613]  __init__.py
+│       ├── [2.5K]  __main__.py
+│       └── [ 416]  web
+│           ├── [1.8K]  __init__.py
+│           ├── [ 11K]  api.py
+│           ├── [ 48K]  cli.py
+│           ├── [ 19K]  config.py
+│           ├── [2.8K]  engine_constants.py
+│           ├── [ 576]  engines
+│           │   ├── [8.7K]  __init__.py
+│           │   ├── [ 17K]  base.py
+│           │   ├── [ 11K]  bing_scraper.py
+│           │   ├── [ 15K]  brave.py
+│           │   ├── [9.2K]  critique.py
+│           │   ├── [7.8K]  duckduckgo.py
+│           │   ├── [ 12K]  falla.py
+│           │   ├── [ 12K]  google_scraper.py
+│           │   ├── [7.9K]  hasdata.py
+│           │   ├── [ 288]  lib_falla
+│           │   │   ├── [ 822]  __init__.py
+│           │   │   ├── [ 608]  core
+│           │   │   │   ├── [1.4K]  __init__.py
+│           │   │   │   ├── [ 763]  aol.py
+│           │   │   │   ├── [ 892]  ask.py
+│           │   │   │   ├── [2.4K]  bing.py
+│           │   │   │   ├── [ 855]  dogpile.py
+│           │   │   │   ├── [6.7K]  duckduckgo.py
+│           │   │   │   ├── [ 18K]  falla.py
+│           │   │   │   ├── [2.4K]  fetch_page.py
+│           │   │   │   ├── [ 860]  gibiru.py
+│           │   │   │   ├── [ 12K]  google.py
+│           │   │   │   ├── [ 762]  mojeek.py
+│           │   │   │   ├── [5.9K]  qwant.py
+│           │   │   │   ├── [ 923]  searchencrypt.py
+│           │   │   │   ├── [ 900]  startpage.py
+│           │   │   │   ├── [5.4K]  yahoo.py
+│           │   │   │   └── [2.1K]  yandex.py
+│           │   │   ├── [2.9K]  main.py
+│           │   │   ├── [ 365]  requirements.txt
+│           │   │   ├── [ 378]  settings.py
+│           │   │   └── [4.8K]  utils.py
+│           │   ├── [7.7K]  pplx.py
+│           │   ├── [7.3K]  serpapi.py
+│           │   ├── [8.2K]  tavily.py
+│           │   └── [8.6K]  you.py
+│           ├── [1.0K]  exceptions.py
+│           ├── [1.6K]  models.py
+│           └── [4.1K]  utils.py
+├── [ 453]  test_async_falla.py
+├── [ 443]  test_falla.py
+├── [3.3K]  test_google_falla_debug.py
+├── [1.7K]  test_simple.py
+├── [ 341]  test_sync_falla.py
+├── [ 256]  tests
+│   ├── [  64]  .benchmarks
+│   ├── [2.0K]  conftest.py
+│   ├── [ 193]  test_twat_search.py
+│   ├── [ 192]  unit
+│   │   ├── [  78]  __init__.py
+│   │   ├── [1.6K]  mock_engine.py
+│   │   └── [ 320]  web
+│   │       ├── [  82]  __init__.py
+│   │       ├── [ 160]  engines
+│   │       │   ├── [  73]  __init__.py
+│   │       │   └── [4.4K]  test_base.py
+│   │       ├── [5.2K]  test_api.py
+│   │       ├── [2.7K]  test_config.py
+│   │       ├── [2.0K]  test_exceptions.py
+│   │       ├── [4.1K]  test_models.py
+│   │       └── [3.5K]  test_utils.py
+│   └── [ 160]  web
+│       └── [ 10K]  test_bing_scraper.py
+├── [659K]  twat_search.txt
+└── [195K]  uv.lock
+
+26 directories, 148 files
+
+2025-03-04 05:57:31 - 
+Project structure:
+2025-03-04 05:57:31 - [1.3K]  .
+├── [  64]  .benchmarks
+├── [  96]  .cursor
+│   └── [ 192]  rules
+│       ├── [ 334]  0project.mdc
+│       ├── [ 559]  cleanup.mdc
+│       └── [9.8K]  filetree.mdc
+├── [  96]  .github
+│   └── [ 128]  workflows
+│       ├── [2.7K]  push.yml
+│       └── [1.4K]  release.yml
+├── [3.5K]  .gitignore
+├── [1.2K]  .pre-commit-config.yaml
+├── [ 128]  .specstory
+│   ├── [1.5K]  history
+│   │   ├── [2.7K]  .what-is-this.md
+│   │   ├── [ 52K]  2025-02-25_01-58-creating-and-tracking-project-tasks.md
+│   │   ├── [7.4K]  2025-02-25_02-17-project-task-continuation-and-progress-update.md
+│   │   ├── [ 11K]  2025-02-25_02-24-planning-tests-for-twat-search-web-package.md
+│   │   ├── [196K]  2025-02-25_02-27-implementing-tests-for-twat-search-package.md
+│   │   ├── [ 46K]  2025-02-25_02-58-transforming-python-script-into-cli-tool.md
+│   │   ├── [ 93K]  2025-02-25_03-09-generating-a-name-for-the-chat.md
+│   │   ├── [5.5K]  2025-02-25_03-33-untitled.md
+│   │   ├── [ 57K]  2025-02-25_03-54-integrating-search-engines-into-twat-search.md
+│   │   ├── [ 72K]  2025-02-25_04-05-consolidating-you-py-and-youcom-py.md
+│   │   ├── [6.1K]  2025-02-25_04-13-missing-env-api-key-names-in-pplx-py.md
+│   │   ├── [118K]  2025-02-25_04-16-implementing-functions-for-brave-search-engines.md
+│   │   ├── [286K]  2025-02-25_04-48-unifying-search-engine-parameters-in-twat-search.md
+│   │   ├── [ 83K]  2025-02-25_05-36-implementing-duckduckgo-search-engine.md
+│   │   ├── [194K]  2025-02-25_05-43-implementing-the-webscout-search-engine.md
+│   │   ├── [ 23K]  2025-02-25_06-07-implementing-bing-scraper-engine.md
+│   │   ├── [ 15K]  2025-02-25_06-12-continuing-bing-scraper-engine-implementation.md
+│   │   ├── [121K]  2025-02-25_06-34-implementing-safe-import-patterns-in-modules.md
+│   │   ├── [9.9K]  2025-02-25_07-09-refactoring-plan-and-progress-update.md
+│   │   ├── [ 40K]  2025-02-25_07-17-implementing-phase-1-from-todo-md.md
+│   │   ├── [292K]  2025-02-25_07-34-integrating-hasdata-google-serp-apis.md
+│   │   ├── [142K]  2025-02-25_08-19-implementing-search-engines-from-nextengines-md.md
+│   │   ├── [175K]  2025-02-26_09-54-implementing-plain-option-for-search-commands.md
+│   │   ├── [264K]  2025-02-26_10-55-standardizing-engine-naming-conventions.md
+│   │   ├── [4.3K]  2025-02-26_11-30-untitled.md
+│   │   ├── [102K]  2025-02-26_12-11-update-config-py-to-use-engine-constants.md
+│   │   ├── [278K]  2025-02-26_12-18-update-engine-imports-and-exports-in-init-py.md
+│   │   ├── [268K]  2025-02-26_13-40-search-engine-initialization-errors.md
+│   │   ├── [ 61K]  2025-02-26_14-15-codebase-issue-analysis-and-fix-plan.md
+│   │   ├── [ 43K]  2025-02-26_14-52-resolving-critical-issues-in-todo-md.md
+│   │   ├── [247K]  2025-02-26_17-48-progress-update-for-twat-search-project.md
+│   │   ├── [ 28K]  2025-02-26_18-28-fixing-num-results-parameter-in-twat-search.md
+│   │   ├── [ 63K]  2025-02-26_18-44-fixing-search-engine-issues-in-codebase.md
+│   │   ├── [ 72K]  2025-02-26_19-37-removing-anywebsearch-references-from-codebase.md
+│   │   ├── [ 98K]  2025-02-26_19-49-fixing-linting-errors-in-code.md
+│   │   ├── [761K]  2025-02-26_20-02-analyzing-todo-md-and-updating-progress-md.md
+│   │   ├── [ 69K]  2025-02-26_22-55-bing-scraper-result-inconsistency-investigation.md
+│   │   ├── [591K]  2025-02-26_23-13-google-scraper-result-validation-issues.md
+│   │   ├── [ 23K]  2025-02-27_12-02-plan-for-adding-support-for-falla-engines.md
+│   │   ├── [615K]  2025-02-27_13-08-implementing-falla-and-tracking-progress.md
+│   │   ├── [ 43K]  2025-02-27_15-08-project-update-and-task-management.md
+│   │   ├── [317K]  2025-02-27_15-45-updating-falla-library-selenium-to-playwright.md
+│   │   ├── [133K]  2025-02-27_17-02-fixing-falla-py-async-issues.md
+│   │   ├── [ 17K]  2025-02-27_17-34-improving-search-engine-selectors-in-falla.md
+│   │   ├── [ 76K]  2025-03-04_05-12-fixing-ruff-linting-errors-in-code.md
+│   │   └── [100K]  2025-03-04_05-38-implementing-phases-1-and-2-from-todo-md.md
+│   └── [2.2M]  history.txt
+├── [3.3K]  CHANGELOG.md
+├── [ 499]  CLEANUP.txt
+├── [1.0K]  LICENSE
+├── [ 23K]  README.md
+├── [6.4K]  TODO.md
+├── [   7]  VERSION.txt
+├── [ 12K]  cleanup.py
+├── [6.3K]  debug_fetch.py
+├── [ 256]  debug_output
+│   ├── [ 445]  qwant_analysis.txt
+│   ├── [100K]  qwant_content.html
+│   ├── [153K]  qwant_screenshot.png
+│   ├── [ 476]  yahoo_analysis.txt
+│   ├── [ 88K]  yahoo_content.html
+│   └── [402K]  yahoo_screenshot.png
+├── [ 192]  dist
+├── [7.4K]  falla_search.py
+├── [4.0K]  google_debug_Python_programming_language.html
+├── [3.9K]  google_debug_test_query.html
+├── [5.4K]  pyproject.toml
+├── [  43]  requirements.txt
+├── [ 224]  resources
+│   ├── [ 224]  brave
+│   │   ├── [ 65K]  brave.md
+│   │   ├── [ 29K]  brave_image.md
+│   │   ├── [ 22K]  brave_news.md
+│   │   └── [ 22K]  brave_video.md
+│   ├── [ 128]  pplx
+│   │   ├── [ 32K]  pplx.md
+│   │   └── [ 335]  pplx_urls.txt
+│   ├── [ 15K]  pricing.md
+│   └── [ 192]  you
+│       ├── [ 54K]  you.md
+│       ├── [ 251]  you.txt
+│       ├── [ 58K]  you_news.md
+│       └── [  98]  you_news.txt
+├── [ 128]  src
+│   └── [ 256]  twat_search
+│       ├── [ 613]  __init__.py
+│       ├── [2.5K]  __main__.py
+│       └── [ 416]  web
+│           ├── [1.8K]  __init__.py
+│           ├── [ 11K]  api.py
+│           ├── [ 48K]  cli.py
+│           ├── [ 19K]  config.py
+│           ├── [2.8K]  engine_constants.py
+│           ├── [ 576]  engines
+│           │   ├── [8.7K]  __init__.py
+│           │   ├── [ 17K]  base.py
+│           │   ├── [ 11K]  bing_scraper.py
+│           │   ├── [ 15K]  brave.py
+│           │   ├── [9.2K]  critique.py
+│           │   ├── [7.8K]  duckduckgo.py
+│           │   ├── [ 12K]  falla.py
+│           │   ├── [ 12K]  google_scraper.py
+│           │   ├── [7.9K]  hasdata.py
+│           │   ├── [ 288]  lib_falla
+│           │   │   ├── [ 822]  __init__.py
+│           │   │   ├── [ 608]  core
+│           │   │   │   ├── [1.4K]  __init__.py
+│           │   │   │   ├── [ 763]  aol.py
+│           │   │   │   ├── [ 892]  ask.py
+│           │   │   │   ├── [2.4K]  bing.py
+│           │   │   │   ├── [ 855]  dogpile.py
+│           │   │   │   ├── [6.7K]  duckduckgo.py
+│           │   │   │   ├── [ 18K]  falla.py
+│           │   │   │   ├── [2.4K]  fetch_page.py
+│           │   │   │   ├── [ 860]  gibiru.py
+│           │   │   │   ├── [ 12K]  google.py
+│           │   │   │   ├── [ 762]  mojeek.py
+│           │   │   │   ├── [5.9K]  qwant.py
+│           │   │   │   ├── [ 923]  searchencrypt.py
+│           │   │   │   ├── [ 900]  startpage.py
+│           │   │   │   ├── [5.4K]  yahoo.py
+│           │   │   │   └── [2.1K]  yandex.py
+│           │   │   ├── [2.9K]  main.py
+│           │   │   ├── [ 365]  requirements.txt
+│           │   │   ├── [ 378]  settings.py
+│           │   │   └── [4.8K]  utils.py
+│           │   ├── [7.7K]  pplx.py
+│           │   ├── [7.3K]  serpapi.py
+│           │   ├── [8.2K]  tavily.py
+│           │   └── [8.6K]  you.py
+│           ├── [1.0K]  exceptions.py
+│           ├── [1.6K]  models.py
+│           └── [4.1K]  utils.py
+├── [ 453]  test_async_falla.py
+├── [ 443]  test_falla.py
+├── [3.3K]  test_google_falla_debug.py
+├── [1.7K]  test_simple.py
+├── [ 341]  test_sync_falla.py
+├── [ 256]  tests
+│   ├── [  64]  .benchmarks
+│   ├── [2.0K]  conftest.py
+│   ├── [ 193]  test_twat_search.py
+│   ├── [ 192]  unit
+│   │   ├── [  78]  __init__.py
+│   │   ├── [1.6K]  mock_engine.py
+│   │   └── [ 320]  web
+│   │       ├── [  82]  __init__.py
+│   │       ├── [ 160]  engines
+│   │       │   ├── [  73]  __init__.py
+│   │       │   └── [4.4K]  test_base.py
+│   │       ├── [5.2K]  test_api.py
+│   │       ├── [2.7K]  test_config.py
+│   │       ├── [2.0K]  test_exceptions.py
+│   │       ├── [4.1K]  test_models.py
+│   │       └── [3.5K]  test_utils.py
+│   └── [ 160]  web
+│       └── [ 10K]  test_bing_scraper.py
+├── [659K]  twat_search.txt
+└── [195K]  uv.lock
+
+26 directories, 148 files
+
+2025-03-04 05:57:31 - On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   .cursor/rules/filetree.mdc
+	modified:   .specstory/history/2025-03-04_05-38-implementing-phases-1-and-2-from-todo-md.md
+	modified:   CLEANUP.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+2025-03-04 05:57:31 - On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   .cursor/rules/filetree.mdc
+	modified:   .specstory/history/2025-03-04_05-38-implementing-phases-1-and-2-from-todo-md.md
+	modified:   CLEANUP.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+2025-03-04 05:57:31 - 
+=== Environment Status ===
+2025-03-04 05:57:31 - Setting up virtual environment
+2025-03-04 05:57:32 - Virtual environment created and activated
+2025-03-04 05:57:32 - Installing package with all extras
+2025-03-04 05:57:32 - Setting up virtual environment
+2025-03-04 05:57:32 - Virtual environment created and activated
+2025-03-04 05:57:33 - Package installed successfully
+2025-03-04 05:57:33 - Running code quality checks
+2025-03-04 05:57:33 - >>> Running code fixes...
+2025-03-04 05:57:33 - src/twat_search/__init__.py:24:29: F401 `twat_search.web` imported but unused; consider using `importlib.util.find_spec` to test for availability
+   |
+22 | # Import submodules if available
+23 | try:
+24 |     from twat_search import web
+   |                             ^^^ F401
+25 |
+26 |     __all__.append("web")
+   |
+   = help: Remove unused import: `twat_search.web`
+
+src/twat_search/__main__.py:51:21: ARG004 Unused static method argument: `args`
+   |
+50 |     @staticmethod
+51 |     def _cli_error(*args: Any, **kwargs: Any) -> int:
+   |                     ^^^^ ARG004
+52 |         """Placeholder function when web CLI is not available.
+   |
+
+src/twat_search/__main__.py:51:34: ARG004 Unused static method argument: `kwargs`
+   |
+50 |     @staticmethod
+51 |     def _cli_error(*args: Any, **kwargs: Any) -> int:
+   |                                  ^^^^^^ ARG004
+52 |         """Placeholder function when web CLI is not available.
+   |
+
+src/twat_search/__main__.py:82:24: ARG001 Unused function argument: `out`
+   |
+80 |     console = Console(theme=Theme({"prompt": "cyan", "question": "bold cyan"}))
+81 |
+82 |     def display(lines, out):
+   |                        ^^^ ARG001
+83 |         console.print(Group(*map(ansi_decoder.decode_line, lines)))
+   |
+
+src/twat_search/web/__init__.py:21:37: F401 `twat_search.web.api.search` imported but unused; consider using `importlib.util.find_spec` to test for availability
+   |
+19 | # Import core functionality first
+20 | try:
+21 |     from twat_search.web.api import search
+   |                                     ^^^^^^ F401
+22 |     from twat_search.web.config import Config, EngineConfig
+23 |     from twat_search.web.models import SearchResult
+   |
+   = help: Remove unused import: `twat_search.web.api.search`
+
+src/twat_search/web/__init__.py:22:40: F401 `twat_search.web.config.Config` imported but unused; consider using `importlib.util.find_spec` to test for availability
+   |
+20 | try:
+21 |     from twat_search.web.api import search
+22 |     from twat_search.web.config import Config, EngineConfig
+   |                                        ^^^^^^ F401
+23 |     from twat_search.web.models import SearchResult
+   |
+   = help: Remove unused import
+
+src/twat_search/web/__init__.py:22:48: F401 `twat_search.web.config.EngineConfig` imported but unused; consider using `importlib.util.find_spec` to test for availability
+   |
+20 | try:
+21 |     from twat_search.web.api import search
+22 |     from twat_search.web.config import Config, EngineConfig
+   |                                                ^^^^^^^^^^^^ F401
+23 |     from twat_search.web.models import SearchResult
+   |
+   = help: Remove unused import
+
+src/twat_search/web/__init__.py:23:40: F401 `twat_search.web.models.SearchResult` imported but unused; consider using `importlib.util.find_spec` to test for availability
+   |
+21 |     from twat_search.web.api import search
+22 |     from twat_search.web.config import Config, EngineConfig
+23 |     from twat_search.web.models import SearchResult
+   |                                        ^^^^^^^^^^^^ F401
+24 |
+25 |     __all__.extend(["Config", "EngineConfig", "SearchResult", "search"])
+   |
+   = help: Remove unused import: `twat_search.web.models.SearchResult`
+
+src/twat_search/web/__init__.py:31:41: F401 `twat_search.web.engines.brave` imported but unused; consider using `importlib.util.find_spec` to test for availability
+   |
+29 | # Import search engines with try-except blocks to handle optional dependencies
+30 | try:
+31 |     from twat_search.web.engines import brave, brave_news
+   |                                         ^^^^^ F401
+32 |
+33 |     __all__.extend(["brave", "brave_news"])
+   |
+   = help: Remove unused import
+
+src/twat_search/web/__init__.py:31:48: F401 `twat_search.web.engines.brave_news` imported but unused; consider using `importlib.util.find_spec` to test for availability
+   |
+29 | # Import search engines with try-except blocks to handle optional dependencies
+30 | try:
+31 |     from twat_search.web.engines import brave, brave_news
+   |                                                ^^^^^^^^^^ F401
+32 |
+33 |     __all__.extend(["brave", "brave_news"])
+   |
+   = help: Remove unused import
+
+src/twat_search/web/__init__.py:38:41: F401 `twat_search.web.engines.pplx` imported but unused; consider using `importlib.util.find_spec` to test for availability
+   |
+37 | try:
+38 |     from twat_search.web.engines import pplx
+   |                                         ^^^^ F401
+39 |
+40 |     __all__.extend(["pplx"])
+   |
+   = help: Remove unused import: `twat_search.web.engines.pplx`
+
+src/twat_search/web/__init__.py:46:41: F401 `twat_search.web.engines.tavily` imported but unused; consider using `importlib.util.find_spec` to test for availability
+   |
+45 | try:
+46 |     from twat_search.web.engines import tavily
+   |                                         ^^^^^^ F401
+47 |
+48 |     __all__.extend(["tavily"])
+   |
+   = help: Remove unused import: `twat_search.web.engines.tavily`
+
+src/twat_search/web/__init__.py:53:41: F401 `twat_search.web.engines.you` imported but unused; consider using `importlib.util.find_spec` to test for availability
+   |
+52 | try:
+53 |     from twat_search.web.engines import you, you_news
+   |                                         ^^^ F401
+54 |
+55 |     __all__.extend(["you", "you_news"])
+   |
+   = help: Remove unused import
+
+src/twat_search/web/__init__.py:53:46: F401 `twat_search.web.engines.you_news` imported but unused; consider using `importlib.util.find_spec` to test for availability
+   |
+52 | try:
+53 |     from twat_search.web.engines import you, you_news
+   |                                              ^^^^^^^^ F401
+54 |
+55 |     __all__.extend(["you", "you_news"])
+   |
+   = help: Remove unused import
+
+src/twat_search/web/__init__.py:60:41: F401 `twat_search.web.engines.critique` imported but unused; consider using `importlib.util.find_spec` to test for availability
+   |
+59 | try:
+60 |     from twat_search.web.engines import critique
+   |                                         ^^^^^^^^ F401
+61 |
+62 |     __all__.extend(["critique"])
+   |
+   = help: Remove unused import: `twat_search.web.engines.critique`
+
+src/twat_search/web/__init__.py:67:41: F401 `twat_search.web.engines.duckduckgo` imported but unused; consider using `importlib.util.find_spec` to test for availability
+   |
+66 | try:
+67 |     from twat_search.web.engines import duckduckgo
+   |                                         ^^^^^^^^^^ F401
+68 |
+69 |     __all__.extend(["duckduckgo"])
+   |
+   = help: Remove unused import: `twat_search.web.engines.duckduckgo`
+
+src/twat_search/web/__init__.py:74:41: F401 `twat_search.web.engines.bing_scraper` imported but unused; consider using `importlib.util.find_spec` to test for availability
+   |
+73 | try:
+74 |     from twat_search.web.engines import bing_scraper
+   |                                         ^^^^^^^^^^^^ F401
+75 |
+76 |     __all__.extend(["bing_scraper"])
+   |
+   = help: Remove unused import: `twat_search.web.engines.bing_scraper`
+
+src/twat_search/web/__init__.py:81:41: F401 `twat_search.web.engines.serpapi` imported but unused; consider using `importlib.util.find_spec` to test for availability
+   |
+80 | try:
+81 |     from twat_search.web.engines import serpapi
+   |                                         ^^^^^^^ F401
+82 |
+83 |     __all__.extend(["serpapi"])
+   |
+   = help: Remove unused import: `twat_search.web.engines.serpapi`
+
+src/twat_search/web/api.py:142:5: FBT001 Boolean-typed positional argument in function definition
+    |
+140 |     country: str | None = None,
+141 |     language: str | None = None,
+142 |     safe_search: bool = True,
+    |     ^^^^^^^^^^^ FBT001
+143 |     time_frame: str | None = None,
+144 |     config: Config | None = None,
+    |
+
+src/twat_search/web/api.py:142:5: FBT002 Boolean default positional argument in function definition
+    |
+140 |     country: str | None = None,
+141 |     language: str | None = None,
+142 |     safe_search: bool = True,
+    |     ^^^^^^^^^^^ FBT002
+143 |     time_frame: str | None = None,
+144 |     config: Config | None = None,
+    |
+
+src/twat_search/web/api.py:145:5: FBT001 Boolean-typed positional argument in function definition
+    |
+143 |     time_frame: str | None = None,
+144 |     config: Config | None = None,
+145 |     strict_mode: bool = True,
+    |     ^^^^^^^^^^^ FBT001
+146 |     **kwargs: Any,
+147 | ) -> list[SearchResult]:
+    |
+
+src/twat_search/web/api.py:145:5: FBT002 Boolean default positional argument in function definition
+    |
+143 |     time_frame: str | None = None,
+144 |     config: Config | None = None,
+145 |     strict_mode: bool = True,
+    |     ^^^^^^^^^^^ FBT002
+146 |     **kwargs: Any,
+147 | ) -> list[SearchResult]:
+    |
+
+src/twat_search/web/cli.py:83:34: FBT001 Boolean-typed positional argument in function definition
+   |
+81 |             )
+82 |
+83 |     def _configure_logging(self, verbose: bool = False) -> None:
+   |                                  ^^^^^^^ FBT001
+84 |         """Configure the logging level based on the verbose flag."""
+85 |         # When not in verbose mode, silence almost all logs
+   |
+
+src/twat_search/web/cli.py:83:34: FBT002 Boolean default positional argument in function definition
+   |
+81 |             )
+82 |
+83 |     def _configure_logging(self, verbose: bool = False) -> None:
+   |                                  ^^^^^^^ FBT002
+84 |         """Configure the logging level based on the verbose flag."""
+85 |         # When not in verbose mode, silence almost all logs
+   |
+
+src/twat_search/web/cli.py:202:9: FBT001 Boolean-typed positional argument in function definition
+    |
+200 |         query: str,
+201 |         params: dict,
+202 |         json: bool,
+    |         ^^^^ FBT001
+203 |         verbose: bool,
+204 |         plain: bool = False,
+    |
+
+src/twat_search/web/cli.py:203:9: FBT001 Boolean-typed positional argument in function definition
+    |
+201 |         params: dict,
+202 |         json: bool,
+203 |         verbose: bool,
+    |         ^^^^^^^ FBT001
+204 |         plain: bool = False,
+205 |     ) -> list[dict[str, Any]]:
+    |
+
+src/twat_search/web/cli.py:204:9: FBT001 Boolean-typed positional argument in function definition
+    |
+202 |         json: bool,
+203 |         verbose: bool,
+204 |         plain: bool = False,
+    |         ^^^^^ FBT001
+205 |     ) -> list[dict[str, Any]]:
+206 |         """
+    |
+
+src/twat_search/web/cli.py:204:9: FBT002 Boolean default positional argument in function definition
+    |
+202 |         json: bool,
+203 |         verbose: bool,
+204 |         plain: bool = False,
+    |         ^^^^^ FBT002
+205 |     ) -> list[dict[str, Any]]:
+206 |         """
+    |
+
+src/twat_search/web/cli.py:269:9: FBT001 Boolean-typed positional argument in function definition
+    |
+267 |         country: str | None = None,
+268 |         language: str | None = None,
+269 |         safe_search: bool = True,
+    |         ^^^^^^^^^^^ FBT001
+270 |         time_frame: str | None = None,
+271 |         verbose: bool = False,
+    |
+
+src/twat_search/web/cli.py:269:9: FBT002 Boolean default positional argument in function definition
+    |
+267 |         country: str | None = None,
+268 |         language: str | None = None,
+269 |         safe_search: bool = True,
+    |         ^^^^^^^^^^^ FBT002
+270 |         time_frame: str | None = None,
+271 |         verbose: bool = False,
+    |
+
+src/twat_search/web/cli.py:271:9: FBT001 Boolean-typed positional argument in function definition
+    |
+269 |         safe_search: bool = True,
+270 |         time_frame: str | None = None,
+271 |         verbose: bool = False,
+    |         ^^^^^^^ FBT001
+272 |         json: bool = False,
+273 |         plain: bool = False,
+    |
+
+src/twat_search/web/cli.py:271:9: FBT002 Boolean default positional argument in function definition
+    |
+269 |         safe_search: bool = True,
+270 |         time_frame: str | None = None,
+271 |         verbose: bool = False,
+    |         ^^^^^^^ FBT002
+272 |         json: bool = False,
+273 |         plain: bool = False,
+    |
+
+src/twat_search/web/cli.py:272:9: FBT001 Boolean-typed positional argument in function definition
+    |
+270 |         time_frame: str | None = None,
+271 |         verbose: bool = False,
+272 |         json: bool = False,
+    |         ^^^^ FBT001
+273 |         plain: bool = False,
+274 |         **kwargs: Any,
+    |
+
+src/twat_search/web/cli.py:272:9: FBT002 Boolean default positional argument in function definition
+    |
+270 |         time_frame: str | None = None,
+271 |         verbose: bool = False,
+272 |         json: bool = False,
+    |         ^^^^ FBT002
+273 |         plain: bool = False,
+274 |         **kwargs: Any,
+    |
+
+src/twat_search/web/cli.py:273:9: FBT001 Boolean-typed positional argument in function definition
+    |
+271 |         verbose: bool = False,
+272 |         json: bool = False,
+273 |         plain: bool = False,
+    |         ^^^^^ FBT001
+274 |         **kwargs: Any,
+275 |     ) -> list[dict[str, Any]]:
+    |
+
+src/twat_search/web/cli.py:273:9: FBT002 Boolean default positional argument in function definition
+    |
+271 |         verbose: bool = False,
+272 |         json: bool = False,
+273 |         plain: bool = False,
+    |         ^^^^^ FBT002
+274 |         **kwargs: Any,
+275 |     ) -> list[dict[str, Any]]:
+    |
+
+src/twat_search/web/cli.py:384:9: FBT001 Boolean-typed positional argument in function definition
+    |
+382 |         self,
+383 |         engine: str | None = None,
+384 |         json: bool = False,
+    |         ^^^^ FBT001
+385 |         plain: bool = False,
+386 |     ) -> None:
+    |
+
+src/twat_search/web/cli.py:384:9: FBT002 Boolean default positional argument in function definition
+    |
+382 |         self,
+383 |         engine: str | None = None,
+384 |         json: bool = False,
+    |         ^^^^ FBT002
+385 |         plain: bool = False,
+386 |     ) -> None:
+    |
+
+src/twat_search/web/cli.py:385:9: FBT001 Boolean-typed positional argument in function definition
+    |
+383 |         engine: str | None = None,
+384 |         json: bool = False,
+385 |         plain: bool = False,
+    |         ^^^^^ FBT001
+386 |     ) -> None:
+387 |         """
+    |
+
+src/twat_search/web/cli.py:385:9: FBT002 Boolean default positional argument in function definition
+    |
+383 |         engine: str | None = None,
+384 |         json: bool = False,
+385 |         plain: bool = False,
+    |         ^^^^^ FBT002
+386 |     ) -> None:
+387 |         """
+    |
+
+src/twat_search/web/cli.py:584:9: FBT002 Boolean default positional argument in function definition
+    |
+582 |         country: str | None = None,
+583 |         language: str | None = None,
+584 |         safe_search: bool | None = True,
+    |         ^^^^^^^^^^^ FBT002
+585 |         time_frame: str | None = None,
+586 |         image_url: str | None = None,
+    |
+
+src/twat_search/web/cli.py:591:9: FBT001 Boolean-typed positional argument in function definition
+    |
+589 |         source_blacklist: str | None = None,
+590 |         api_key: str | None = None,
+591 |         verbose: bool = False,
+    |         ^^^^^^^ FBT001
+592 |         json: bool = False,
+593 |         plain: bool = False,
+    |
+
+src/twat_search/web/cli.py:591:9: FBT002 Boolean default positional argument in function definition
+    |
+589 |         source_blacklist: str | None = None,
+590 |         api_key: str | None = None,
+591 |         verbose: bool = False,
+    |         ^^^^^^^ FBT002
+592 |         json: bool = False,
+593 |         plain: bool = False,
+    |
+
+src/twat_search/web/cli.py:592:9: FBT001 Boolean-typed positional argument in function definition
+    |
+590 |         api_key: str | None = None,
+591 |         verbose: bool = False,
+592 |         json: bool = False,
+    |         ^^^^ FBT001
+593 |         plain: bool = False,
+594 |         **kwargs: Any,
+    |
+
+src/twat_search/web/cli.py:592:9: FBT002 Boolean default positional argument in function definition
+    |
+590 |         api_key: str | None = None,
+591 |         verbose: bool = False,
+592 |         json: bool = False,
+    |         ^^^^ FBT002
+593 |         plain: bool = False,
+594 |         **kwargs: Any,
+    |
+
+src/twat_search/web/cli.py:593:9: FBT001 Boolean-typed positional argument in function definition
+    |
+591 |         verbose: bool = False,
+592 |         json: bool = False,
+593 |         plain: bool = False,
+    |         ^^^^^ FBT001
+594 |         **kwargs: Any,
+595 |     ) -> list[dict[str, Any]]:
+    |
+
+src/twat_search/web/cli.py:593:9: FBT002 Boolean default positional argument in function definition
+    |
+591 |         verbose: bool = False,
+592 |         json: bool = False,
+593 |         plain: bool = False,
+    |         ^^^^^ FBT002
+594 |         **kwargs: Any,
+595 |     ) -> list[dict[str, Any]]:
+    |
+
+src/twat_search/web/cli.py:659:9: FBT002 Boolean default positional argument in function definition
+    |
+657 |         country: str | None = None,
+658 |         language: str | None = None,
+659 |         safe_search: bool | None = True,
+    |         ^^^^^^^^^^^ FBT002
+660 |         time_frame: str | None = None,
+661 |         api_key: str | None = None,
+    |
+
+src/twat_search/web/cli.py:662:9: FBT001 Boolean-typed positional argument in function definition
+    |
+660 |         time_frame: str | None = None,
+661 |         api_key: str | None = None,
+662 |         verbose: bool = False,
+    |         ^^^^^^^ FBT001
+663 |         json: bool = False,
+664 |         plain: bool = False,
+    |
+
+src/twat_search/web/cli.py:662:9: FBT002 Boolean default positional argument in function definition
+    |
+660 |         time_frame: str | None = None,
+661 |         api_key: str | None = None,
+662 |         verbose: bool = False,
+    |         ^^^^^^^ FBT002
+663 |         json: bool = False,
+664 |         plain: bool = False,
+    |
+
+src/twat_search/web/cli.py:663:9: FBT001 Boolean-typed positional argument in function definition
+    |
+661 |         api_key: str | None = None,
+662 |         verbose: bool = False,
+663 |         json: bool = False,
+    |         ^^^^ FBT001
+664 |         plain: bool = False,
+665 |         **kwargs: Any,
+    |
+
+src/twat_search/web/cli.py:663:9: FBT002 Boolean default positional argument in function definition
+    |
+661 |         api_key: str | None = None,
+662 |         verbose: bool = False,
+663 |         json: bool = False,
+    |         ^^^^ FBT002
+664 |         plain: bool = False,
+665 |         **kwargs: Any,
+    |
+
+src/twat_search/web/cli.py:664:9: FBT001 Boolean-typed positional argument in function definition
+    |
+662 |         verbose: bool = False,
+663 |         json: bool = False,
+664 |         plain: bool = False,
+    |         ^^^^^ FBT001
+665 |         **kwargs: Any,
+666 |     ) -> list[dict[str, Any]]:
+    |
+
+src/twat_search/web/cli.py:664:9: FBT002 Boolean default positional argument in function definition
+    |
+662 |         verbose: bool = False,
+663 |         json: bool = False,
+664 |         plain: bool = False,
+    |         ^^^^^ FBT002
+665 |         **kwargs: Any,
+666 |     ) -> list[dict[str, Any]]:
+    |
+
+src/twat_search/web/cli.py:707:9: FBT002 Boolean default positional argument in function definition
+    |
+705 |         country: str | None = None,
+706 |         language: str | None = None,
+707 |         safe_search: bool | None = True,
+    |         ^^^^^^^^^^^ FBT002
+708 |         time_frame: str | None = None,
+709 |         api_key: str | None = None,
+    |
+
+src/twat_search/web/cli.py:710:9: FBT001 Boolean-typed positional argument in function definition
+    |
+708 |         time_frame: str | None = None,
+709 |         api_key: str | None = None,
+710 |         verbose: bool = False,
+    |         ^^^^^^^ FBT001
+711 |         json: bool = False,
+712 |         plain: bool = False,
+    |
+
+src/twat_search/web/cli.py:710:9: FBT002 Boolean default positional argument in function definition
+    |
+708 |         time_frame: str | None = None,
+709 |         api_key: str | None = None,
+710 |         verbose: bool = False,
+    |         ^^^^^^^ FBT002
+711 |         json: bool = False,
+712 |         plain: bool = False,
+    |
+
+src/twat_search/web/cli.py:711:9: FBT001 Boolean-typed positional argument in function definition
+    |
+709 |         api_key: str | None = None,
+710 |         verbose: bool = False,
+711 |         json: bool = False,
+    |         ^^^^ FBT001
+712 |         plain: bool = False,
+713 |         **kwargs: Any,
+    |
+
+src/twat_search/web/cli.py:711:9: FBT002 Boolean default positional argument in function definition
+    |
+709 |         api_key: str | None = None,
+710 |         verbose: bool = False,
+711 |         json: bool = False,
+    |         ^^^^ FBT002
+712 |         plain: bool = False,
+713 |         **kwargs: Any,
+    |
+
+src/twat_search/web/cli.py:712:9: FBT001 Boolean-typed positional argument in function definition
+    |
+710 |         verbose: bool = False,
+711 |         json: bool = False,
+712 |         plain: bool = False,
+    |         ^^^^^ FBT001
+713 |         **kwargs: Any,
+714 |     ) -> list[dict[str, Any]]:
+    |
+
+src/twat_search/web/cli.py:712:9: FBT002 Boolean default positional argument in function definition
+    |
+710 |         verbose: bool = False,
+711 |         json: bool = False,
+712 |         plain: bool = False,
+    |         ^^^^^ FBT002
+713 |         **kwargs: Any,
+714 |     ) -> list[dict[str, Any]]:
+    |
+
+src/twat_search/web/cli.py:762:9: FBT002 Boolean default positional argument in function definition
+    |
+760 |         country: str | None = None,
+761 |         language: str | None = None,
+762 |         safe_search: bool | None = True,
+    |         ^^^^^^^^^^^ FBT002
+763 |         time_frame: str | None = None,
+764 |         api_key: str | None = None,
+    |
+
+src/twat_search/web/cli.py:765:9: FBT001 Boolean-typed positional argument in function definition
+    |
+763 |         time_frame: str | None = None,
+764 |         api_key: str | None = None,
+765 |         verbose: bool = False,
+    |         ^^^^^^^ FBT001
+766 |         json: bool = False,
+767 |         plain: bool = False,
+    |
+
+src/twat_search/web/cli.py:765:9: FBT002 Boolean default positional argument in function definition
+    |
+763 |         time_frame: str | None = None,
+764 |         api_key: str | None = None,
+765 |         verbose: bool = False,
+    |         ^^^^^^^ FBT002
+766 |         json: bool = False,
+767 |         plain: bool = False,
+    |
+
+src/twat_search/web/cli.py:766:9: FBT001 Boolean-typed positional argument in function definition
+    |
+764 |         api_key: str | None = None,
+765 |         verbose: bool = False,
+766 |         json: bool = False,
+    |         ^^^^ FBT001
+767 |         plain: bool = False,
+768 |         **kwargs: Any,
+    |
+
+src/twat_search/web/cli.py:766:9: FBT002 Boolean default positional argument in function definition
+    |
+764 |         api_key: str | None = None,
+765 |         verbose: bool = False,
+766 |         json: bool = False,
+    |         ^^^^ FBT002
+767 |         plain: bool = False,
+768 |         **kwargs: Any,
+    |
+
+src/twat_search/web/cli.py:767:9: FBT001 Boolean-typed positional argument in function definition
+    |
+765 |         verbose: bool = False,
+766 |         json: bool = False,
+767 |         plain: bool = False,
+    |         ^^^^^ FBT001
+768 |         **kwargs: Any,
+769 |     ) -> list[dict[str, Any]]:
+    |
+
+src/twat_search/web/cli.py:767:9: FBT002 Boolean default positional argument in function definition
+    |
+765 |         verbose: bool = False,
+766 |         json: bool = False,
+767 |         plain: bool = False,
+    |         ^^^^^ FBT002
+768 |         **kwargs: Any,
+769 |     ) -> list[dict[str, Any]]:
+    |
+
+src/twat_search/web/cli.py:810:9: FBT002 Boolean default positional argument in function definition
+    |
+808 |         country: str | None = None,
+809 |         language: str | None = None,
+810 |         safe_search: bool | None = True,
+    |         ^^^^^^^^^^^ FBT002
+811 |         time_frame: str | None = None,
+812 |         api_key: str | None = None,
+    |
+
+src/twat_search/web/cli.py:816:9: FBT001 Boolean-typed positional argument in function definition
+    |
+814 |         include_domains: str | None = None,
+815 |         exclude_domains: str | None = None,
+816 |         verbose: bool = False,
+    |         ^^^^^^^ FBT001
+817 |         json: bool = False,
+818 |         plain: bool = False,
+    |
+
+src/twat_search/web/cli.py:816:9: FBT002 Boolean default positional argument in function definition
+    |
+814 |         include_domains: str | None = None,
+815 |         exclude_domains: str | None = None,
+816 |         verbose: bool = False,
+    |         ^^^^^^^ FBT002
+817 |         json: bool = False,
+818 |         plain: bool = False,
+    |
+
+src/twat_search/web/cli.py:817:9: FBT001 Boolean-typed positional argument in function definition
+    |
+815 |         exclude_domains: str | None = None,
+816 |         verbose: bool = False,
+817 |         json: bool = False,
+    |         ^^^^ FBT001
+818 |         plain: bool = False,
+819 |         **kwargs: Any,
+    |
+
+src/twat_search/web/cli.py:817:9: FBT002 Boolean default positional argument in function definition
+    |
+815 |         exclude_domains: str | None = None,
+816 |         verbose: bool = False,
+817 |         json: bool = False,
+    |         ^^^^ FBT002
+818 |         plain: bool = False,
+819 |         **kwargs: Any,
+    |
+
+src/twat_search/web/cli.py:818:9: FBT001 Boolean-typed positional argument in function definition
+    |
+816 |         verbose: bool = False,
+817 |         json: bool = False,
+818 |         plain: bool = False,
+    |         ^^^^^ FBT001
+819 |         **kwargs: Any,
+820 |     ) -> list[dict[str, Any]]:
+    |
+
+src/twat_search/web/cli.py:818:9: FBT002 Boolean default positional argument in function definition
+    |
+816 |         verbose: bool = False,
+817 |         json: bool = False,
+818 |         plain: bool = False,
+    |         ^^^^^ FBT002
+819 |         **kwargs: Any,
+820 |     ) -> list[dict[str, Any]]:
+    |
+
+src/twat_search/web/cli.py:868:9: FBT002 Boolean default positional argument in function definition
+    |
+866 |         country: str | None = None,
+867 |         language: str | None = None,
+868 |         safe_search: bool | None = True,
+    |         ^^^^^^^^^^^ FBT002
+869 |         time_frame: str | None = None,
+870 |         api_key: str | None = None,
+    |
+
+src/twat_search/web/cli.py:872:9: FBT001 Boolean-typed positional argument in function definition
+    |
+870 |         api_key: str | None = None,
+871 |         model: str | None = None,
+872 |         verbose: bool = False,
+    |         ^^^^^^^ FBT001
+873 |         json: bool = False,
+874 |         plain: bool = False,
+    |
+
+src/twat_search/web/cli.py:872:9: FBT002 Boolean default positional argument in function definition
+    |
+870 |         api_key: str | None = None,
+871 |         model: str | None = None,
+872 |         verbose: bool = False,
+    |         ^^^^^^^ FBT002
+873 |         json: bool = False,
+874 |         plain: bool = False,
+    |
+
+src/twat_search/web/cli.py:873:9: FBT001 Boolean-typed positional argument in function definition
+    |
+871 |         model: str | None = None,
+872 |         verbose: bool = False,
+873 |         json: bool = False,
+    |         ^^^^ FBT001
+874 |         plain: bool = False,
+875 |         **kwargs: Any,
+    |
+
+src/twat_search/web/cli.py:873:9: FBT002 Boolean default positional argument in function definition
+    |
+871 |         model: str | None = None,
+872 |         verbose: bool = False,
+873 |         json: bool = False,
+    |         ^^^^ FBT002
+874 |         plain: bool = False,
+875 |         **kwargs: Any,
+    |
+
+src/twat_search/web/cli.py:874:9: FBT001 Boolean-typed positional argument in function definition
+    |
+872 |         verbose: bool = False,
+873 |         json: bool = False,
+874 |         plain: bool = False,
+    |         ^^^^^ FBT001
+875 |         **kwargs: Any,
+876 |     ) -> list[dict[str, Any]]:
+    |
+
+src/twat_search/web/cli.py:874:9: FBT002 Boolean default positional argument in function definition
+    |
+872 |         verbose: bool = False,
+873 |         json: bool = False,
+874 |         plain: bool = False,
+    |         ^^^^^ FBT002
+875 |         **kwargs: Any,
+876 |     ) -> list[dict[str, Any]]:
+    |
+
+src/twat_search/web/cli.py:934:9: FBT002 Boolean default positional argument in function definition
+    |
+932 |         country: str | None = None,
+933 |         language: str | None = None,
+934 |         safe_search: bool | None = True,
+    |         ^^^^^^^^^^^ FBT002
+935 |         time_frame: str | None = None,
+936 |         api_key: str | None = None,
+    |
+
+src/twat_search/web/cli.py:937:9: FBT001 Boolean-typed positional argument in function definition
+    |
+935 |         time_frame: str | None = None,
+936 |         api_key: str | None = None,
+937 |         verbose: bool = False,
+    |         ^^^^^^^ FBT001
+938 |         json: bool = False,
+939 |         plain: bool = False,
+    |
+
+src/twat_search/web/cli.py:937:9: FBT002 Boolean default positional argument in function definition
+    |
+935 |         time_frame: str | None = None,
+936 |         api_key: str | None = None,
+937 |         verbose: bool = False,
+    |         ^^^^^^^ FBT002
+938 |         json: bool = False,
+939 |         plain: bool = False,
+    |
+
+src/twat_search/web/cli.py:938:9: FBT001 Boolean-typed positional argument in function definition
+    |
+936 |         api_key: str | None = None,
+937 |         verbose: bool = False,
+938 |         json: bool = False,
+    |         ^^^^ FBT001
+939 |         plain: bool = False,
+940 |         **kwargs: Any,
+    |
+
+src/twat_search/web/cli.py:938:9: FBT002 Boolean default positional argument in function definition
+    |
+936 |         api_key: str | None = None,
+937 |         verbose: bool = False,
+938 |         json: bool = False,
+    |         ^^^^ FBT002
+939 |         plain: bool = False,
+940 |         **kwargs: Any,
+    |
+
+src/twat_search/web/cli.py:939:9: FBT001 Boolean-typed positional argument in function definition
+    |
+937 |         verbose: bool = False,
+938 |         json: bool = False,
+939 |         plain: bool = False,
+    |         ^^^^^ FBT001
+940 |         **kwargs: Any,
+941 |     ) -> list[dict[str, Any]]:
+    |
+
+src/twat_search/web/cli.py:939:9: FBT002 Boolean default positional argument in function definition
+    |
+937 |         verbose: bool = False,
+938 |         json: bool = False,
+939 |         plain: bool = False,
+    |         ^^^^^ FBT002
+940 |         **kwargs: Any,
+941 |     ) -> list[dict[str, Any]]:
+    |
+
+src/twat_search/web/cli.py:981:9: FBT002 Boolean default positional argument in function definition
+    |
+979 |         country: str | None = None,
+980 |         language: str | None = None,
+981 |         safe_search: bool | None = True,
+    |         ^^^^^^^^^^^ FBT002
+982 |         time_frame: str | None = None,
+983 |         api_key: str | None = None,
+    |
+
+src/twat_search/web/cli.py:984:9: FBT001 Boolean-typed positional argument in function definition
+    |
+982 |         time_frame: str | None = None,
+983 |         api_key: str | None = None,
+984 |         verbose: bool = False,
+    |         ^^^^^^^ FBT001
+985 |         json: bool = False,
+986 |         plain: bool = False,
+    |
+
+src/twat_search/web/cli.py:984:9: FBT002 Boolean default positional argument in function definition
+    |
+982 |         time_frame: str | None = None,
+983 |         api_key: str | None = None,
+984 |         verbose: bool = False,
+    |         ^^^^^^^ FBT002
+985 |         json: bool = False,
+986 |         plain: bool = False,
+    |
+
+src/twat_search/web/cli.py:985:9: FBT001 Boolean-typed positional argument in function definition
+    |
+983 |         api_key: str | None = None,
+984 |         verbose: bool = False,
+985 |         json: bool = False,
+    |         ^^^^ FBT001
+986 |         plain: bool = False,
+987 |         **kwargs: Any,
+    |
+
+src/twat_search/web/cli.py:985:9: FBT002 Boolean default positional argument in function definition
+    |
+983 |         api_key: str | None = None,
+984 |         verbose: bool = False,
+985 |         json: bool = False,
+    |         ^^^^ FBT002
+986 |         plain: bool = False,
+987 |         **kwargs: Any,
+    |
+
+src/twat_search/web/cli.py:986:9: FBT001 Boolean-typed positional argument in function definition
+    |
+984 |         verbose: bool = False,
+985 |         json: bool = False,
+986 |         plain: bool = False,
+    |         ^^^^^ FBT001
+987 |         **kwargs: Any,
+988 |     ) -> list[dict[str, Any]]:
+    |
+
+src/twat_search/web/cli.py:986:9: FBT002 Boolean default positional argument in function definition
+    |
+984 |         verbose: bool = False,
+985 |         json: bool = False,
+986 |         plain: bool = False,
+    |         ^^^^^ FBT002
+987 |         **kwargs: Any,
+988 |     ) -> list[dict[str, Any]]:
+    |
+
+src/twat_search/web/cli.py:1034:9: ARG002 Unused method argument: `language`
+     |
+1032 |         num_results: int = DEFAULT_NUM_RESULTS,
+1033 |         country: str | None = None,
+1034 |         language: str | None = None,
+     |         ^^^^^^^^ ARG002
+1035 |         safe_search: bool | None = True,
+1036 |         time_frame: str | None = None,
+     |
+
+src/twat_search/web/cli.py:1035:9: FBT002 Boolean default positional argument in function definition
+     |
+1033 |         country: str | None = None,
+1034 |         language: str | None = None,
+1035 |         safe_search: bool | None = True,
+     |         ^^^^^^^^^^^ FBT002
+1036 |         time_frame: str | None = None,
+1037 |         proxy: str | None = None,
+     |
+
+src/twat_search/web/cli.py:1039:9: FBT001 Boolean-typed positional argument in function definition
+     |
+1037 |         proxy: str | None = None,
+1038 |         timeout: int = 10,
+1039 |         verbose: bool = False,
+     |         ^^^^^^^ FBT001
+1040 |         json: bool = False,
+1041 |         plain: bool = False,
+     |
+
+src/twat_search/web/cli.py:1039:9: FBT002 Boolean default positional argument in function definition
+     |
+1037 |         proxy: str | None = None,
+1038 |         timeout: int = 10,
+1039 |         verbose: bool = False,
+     |         ^^^^^^^ FBT002
+1040 |         json: bool = False,
+1041 |         plain: bool = False,
+     |
+
+src/twat_search/web/cli.py:1040:9: FBT001 Boolean-typed positional argument in function definition
+     |
+1038 |         timeout: int = 10,
+1039 |         verbose: bool = False,
+1040 |         json: bool = False,
+     |         ^^^^ FBT001
+1041 |         plain: bool = False,
+1042 |         **kwargs: Any,
+     |
+
+src/twat_search/web/cli.py:1040:9: FBT002 Boolean default positional argument in function definition
+     |
+1038 |         timeout: int = 10,
+1039 |         verbose: bool = False,
+1040 |         json: bool = False,
+     |         ^^^^ FBT002
+1041 |         plain: bool = False,
+1042 |         **kwargs: Any,
+     |
+
+src/twat_search/web/cli.py:1041:9: FBT001 Boolean-typed positional argument in function definition
+     |
+1039 |         verbose: bool = False,
+1040 |         json: bool = False,
+1041 |         plain: bool = False,
+     |         ^^^^^ FBT001
+1042 |         **kwargs: Any,
+1043 |     ) -> list[dict[str, Any]]:
+     |
+
+src/twat_search/web/cli.py:1041:9: FBT002 Boolean default positional argument in function definition
+     |
+1039 |         verbose: bool = False,
+1040 |         json: bool = False,
+1041 |         plain: bool = False,
+     |         ^^^^^ FBT002
+1042 |         **kwargs: Any,
+1043 |     ) -> list[dict[str, Any]]:
+     |
+
+src/twat_search/web/cli.py:1092:9: FBT001 Boolean-typed positional argument in function definition
+     |
+1090 |         device_type: str = "desktop",
+1091 |         api_key: str | None = None,
+1092 |         verbose: bool = False,
+     |         ^^^^^^^ FBT001
+1093 |         json: bool = False,
+1094 |         plain: bool = False,
+     |
+
+src/twat_search/web/cli.py:1092:9: FBT002 Boolean default positional argument in function definition
+     |
+1090 |         device_type: str = "desktop",
+1091 |         api_key: str | None = None,
+1092 |         verbose: bool = False,
+     |         ^^^^^^^ FBT002
+1093 |         json: bool = False,
+1094 |         plain: bool = False,
+     |
+
+src/twat_search/web/cli.py:1093:9: FBT001 Boolean-typed positional argument in function definition
+     |
+1091 |         api_key: str | None = None,
+1092 |         verbose: bool = False,
+1093 |         json: bool = False,
+     |         ^^^^ FBT001
+1094 |         plain: bool = False,
+1095 |         **kwargs: Any,
+     |
+
+src/twat_search/web/cli.py:1093:9: FBT002 Boolean default positional argument in function definition
+     |
+1091 |         api_key: str | None = None,
+1092 |         verbose: bool = False,
+1093 |         json: bool = False,
+     |         ^^^^ FBT002
+1094 |         plain: bool = False,
+1095 |         **kwargs: Any,
+     |
+
+src/twat_search/web/cli.py:1094:9: FBT001 Boolean-typed positional argument in function definition
+     |
+1092 |         verbose: bool = False,
+1093 |         json: bool = False,
+1094 |         plain: bool = False,
+     |         ^^^^^ FBT001
+1095 |         **kwargs: Any,
+1096 |     ) -> list[dict[str, Any]]:
+     |
+
+src/twat_search/web/cli.py:1094:9: FBT002 Boolean default positional argument in function definition
+     |
+1092 |         verbose: bool = False,
+1093 |         json: bool = False,
+1094 |         plain: bool = False,
+     |         ^^^^^ FBT002
+1095 |         **kwargs: Any,
+1096 |     ) -> list[dict[str, Any]]:
+     |
+
+src/twat_search/web/cli.py:1139:9: FBT001 Boolean-typed positional argument in function definition
+     |
+1137 |         location: str | None = None,
+1138 |         api_key: str | None = None,
+1139 |         verbose: bool = False,
+     |         ^^^^^^^ FBT001
+1140 |         json: bool = False,
+1141 |         plain: bool = False,
+     |
+
+src/twat_search/web/cli.py:1139:9: FBT002 Boolean default positional argument in function definition
+     |
+1137 |         location: str | None = None,
+1138 |         api_key: str | None = None,
+1139 |         verbose: bool = False,
+     |         ^^^^^^^ FBT002
+1140 |         json: bool = False,
+1141 |         plain: bool = False,
+     |
+
+src/twat_search/web/cli.py:1140:9: FBT001 Boolean-typed positional argument in function definition
+     |
+1138 |         api_key: str | None = None,
+1139 |         verbose: bool = False,
+1140 |         json: bool = False,
+     |         ^^^^ FBT001
+1141 |         plain: bool = False,
+1142 |         **kwargs: Any,
+     |
+
+src/twat_search/web/cli.py:1140:9: FBT002 Boolean default positional argument in function definition
+     |
+1138 |         api_key: str | None = None,
+1139 |         verbose: bool = False,
+1140 |         json: bool = False,
+     |         ^^^^ FBT002
+1141 |         plain: bool = False,
+1142 |         **kwargs: Any,
+     |
+
+src/twat_search/web/cli.py:1141:9: FBT001 Boolean-typed positional argument in function definition
+     |
+1139 |         verbose: bool = False,
+1140 |         json: bool = False,
+1141 |         plain: bool = False,
+     |         ^^^^^ FBT001
+1142 |         **kwargs: Any,
+1143 |     ) -> list[dict[str, Any]]:
+     |
+
+src/twat_search/web/cli.py:1141:9: FBT002 Boolean default positional argument in function definition
+     |
+1139 |         verbose: bool = False,
+1140 |         json: bool = False,
+1141 |         plain: bool = False,
+     |         ^^^^^ FBT002
+1142 |         **kwargs: Any,
+1143 |     ) -> list[dict[str, Any]]:
+     |
+
+src/twat_search/web/cli.py:1252:86: PLR2004 Magic value used in comparison, consider replacing `100` with a constant variable
+     |
+1250 |                     "url": url,
+1251 |                     "title": result.title,
+1252 |                     "snippet": result.snippet[:100] + "..." if len(result.snippet) > 100 else result.snippet,
+     |                                                                                      ^^^ PLR2004
+1253 |                     "raw_result": getattr(result, "raw", None),
+1254 |                     "is_first": idx == 0,  # Flag to help with UI rendering
+     |
+
+src/twat_search/web/cli.py:1262:5: FBT001 Boolean-typed positional argument in function definition
+     |
+1260 | def _display_results(
+1261 |     processed_results: list[dict[str, Any]],
+1262 |     verbose: bool = False,
+     |     ^^^^^^^ FBT001
+1263 |     plain: bool = False,
+1264 | ) -> None:
+     |
+
+src/twat_search/web/cli.py:1262:5: FBT002 Boolean default positional argument in function definition
+     |
+1260 | def _display_results(
+1261 |     processed_results: list[dict[str, Any]],
+1262 |     verbose: bool = False,
+     |     ^^^^^^^ FBT002
+1263 |     plain: bool = False,
+1264 | ) -> None:
+     |
+
+src/twat_search/web/cli.py:1263:5: FBT001 Boolean-typed positional argument in function definition
+     |
+1261 |     processed_results: list[dict[str, Any]],
+1262 |     verbose: bool = False,
+1263 |     plain: bool = False,
+     |     ^^^^^ FBT001
+1264 | ) -> None:
+1265 |     if not processed_results:
+     |
+
+src/twat_search/web/cli.py:1263:5: FBT002 Boolean default positional argument in function definition
+     |
+1261 |     processed_results: list[dict[str, Any]],
+1262 |     verbose: bool = False,
+1263 |     plain: bool = False,
+     |     ^^^^^ FBT002
+1264 | ) -> None:
+1265 |     if not processed_results:
+     |
+
+src/twat_search/web/cli.py:1356:39: ARG005 Unused lambda argument: `out`
+     |
+1355 | def main() -> None:
+1356 |     fire.core.Display = lambda lines, out: console.print(*lines)
+     |                                       ^^^ ARG005
+1357 |     fire.Fire(SearchCLI)
+     |
+
+src/twat_search/web/config.py:477:9: FBT001 Boolean-typed positional argument in function definition
+    |
+475 |         self,
+476 |         engine_name: str,
+477 |         enabled: bool = True,
+    |         ^^^^^^^ FBT001
+478 |         api_key: str | None = None,
+479 |         default_params: dict[str, Any] | None = None,
+    |
+
+src/twat_search/web/config.py:477:9: FBT002 Boolean default positional argument in function definition
+    |
+475 |         self,
+476 |         engine_name: str,
+477 |         enabled: bool = True,
+    |         ^^^^^^^ FBT002
+478 |         api_key: str | None = None,
+479 |         default_params: dict[str, Any] | None = None,
+    |
+
+src/twat_search/web/engines/__init__.py:95:46: F401 `twat_search.web.engines.base.SearchEngine` imported but unused; consider using `importlib.util.find_spec` to test for availability
+   |
+93 | # Import base functionality first
+94 | try:
+95 |     from twat_search.web.engines.base import SearchEngine, get_engine, get_registered_engines, register_engine
+   |                                              ^^^^^^^^^^^^ F401
+96 |
+97 |     __all__.extend(
+   |
+   = help: Remove unused import
+
+src/twat_search/web/engines/__init__.py:95:60: F401 `twat_search.web.engines.base.get_engine` imported but unused; consider using `importlib.util.find_spec` to test for availability
+   |
+93 | # Import base functionality first
+94 | try:
+95 |     from twat_search.web.engines.base import SearchEngine, get_engine, get_registered_engines, register_engine
+   |                                                            ^^^^^^^^^^ F401
+96 |
+97 |     __all__.extend(
+   |
+   = help: Remove unused import
+
+src/twat_search/web/engines/__init__.py:95:72: F401 `twat_search.web.engines.base.get_registered_engines` imported but unused; consider using `importlib.util.find_spec` to test for availability
+   |
+93 | # Import base functionality first
+94 | try:
+95 |     from twat_search.web.engines.base import SearchEngine, get_engine, get_registered_engines, register_engine
+   |                                                                        ^^^^^^^^^^^^^^^^^^^^^^ F401
+96 |
+97 |     __all__.extend(
+   |
+   = help: Remove unused import
+
+src/twat_search/web/engines/__init__.py:95:96: F401 `twat_search.web.engines.base.register_engine` imported but unused; consider using `importlib.util.find_spec` to test for availability
+   |
+93 | # Import base functionality first
+94 | try:
+95 |     from twat_search.web.engines.base import SearchEngine, get_engine, get_registered_engines, register_engine
+   |                                                                                                ^^^^^^^^^^^^^^^ F401
+96 |
+97 |     __all__.extend(
+   |
+   = help: Remove unused import
+
+src/twat_search/web/engines/__init__.py:105:47: F401 `twat_search.web.engines.brave.BraveNewsSearchEngine` imported but unused; consider using `importlib.util.find_spec` to test for availability
+    |
+103 | # Import each engine module and add its components to __all__ if successful
+104 | try:
+105 |     from twat_search.web.engines.brave import BraveNewsSearchEngine, BraveSearchEngine, brave, brave_news
+    |                                               ^^^^^^^^^^^^^^^^^^^^^ F401
+106 |
+107 |     available_engine_functions["brave"] = brave
+    |
+    = help: Remove unused import
+
+src/twat_search/web/engines/__init__.py:105:70: F401 `twat_search.web.engines.brave.BraveSearchEngine` imported but unused; consider using `importlib.util.find_spec` to test for availability
+    |
+103 | # Import each engine module and add its components to __all__ if successful
+104 | try:
+105 |     from twat_search.web.engines.brave import BraveNewsSearchEngine, BraveSearchEngine, brave, brave_news
+    |                                                                      ^^^^^^^^^^^^^^^^^ F401
+106 |
+107 |     available_engine_functions["brave"] = brave
+    |
+    = help: Remove unused import
+
+src/twat_search/web/engines/__init__.py:117:48: F401 `twat_search.web.engines.tavily.TavilySearchEngine` imported but unused; consider using `importlib.util.find_spec` to test for availability
+    |
+116 | try:
+117 |     from twat_search.web.engines.tavily import TavilySearchEngine, tavily
+    |                                                ^^^^^^^^^^^^^^^^^^ F401
+118 |
+119 |     available_engine_functions["tavily"] = tavily
+    |
+    = help: Remove unused import: `twat_search.web.engines.tavily.TavilySearchEngine`
+
+src/twat_search/web/engines/__init__.py:125:46: F401 `twat_search.web.engines.pplx.PerplexitySearchEngine` imported but unused; consider using `importlib.util.find_spec` to test for availability
+    |
+124 | try:
+125 |     from twat_search.web.engines.pplx import PerplexitySearchEngine, pplx
+    |                                              ^^^^^^^^^^^^^^^^^^^^^^ F401
+126 |
+127 |     available_engine_functions["pplx"] = pplx
+    |
+    = help: Remove unused import: `twat_search.web.engines.pplx.PerplexitySearchEngine`
+
+src/twat_search/web/engines/__init__.py:133:45: F401 `twat_search.web.engines.you.YouNewsSearchEngine` imported but unused; consider using `importlib.util.find_spec` to test for availability
+    |
+132 | try:
+133 |     from twat_search.web.engines.you import YouNewsSearchEngine, YouSearchEngine, you, you_news
+    |                                             ^^^^^^^^^^^^^^^^^^^ F401
+134 |
+135 |     available_engine_functions["you"] = you
+    |
+    = help: Remove unused import
+
+src/twat_search/web/engines/__init__.py:133:66: F401 `twat_search.web.engines.you.YouSearchEngine` imported but unused; consider using `importlib.util.find_spec` to test for availability
+    |
+132 | try:
+133 |     from twat_search.web.engines.you import YouNewsSearchEngine, YouSearchEngine, you, you_news
+    |                                                                  ^^^^^^^^^^^^^^^ F401
+134 |
+135 |     available_engine_functions["you"] = you
+    |
+    = help: Remove unused import
+
+src/twat_search/web/engines/__init__.py:144:50: F401 `twat_search.web.engines.critique.CritiqueSearchEngine` imported but unused; consider using `importlib.util.find_spec` to test for availability
+    |
+143 | try:
+144 |     from twat_search.web.engines.critique import CritiqueSearchEngine, critique
+    |                                                  ^^^^^^^^^^^^^^^^^^^^ F401
+145 |
+146 |     available_engine_functions["critique"] = critique
+    |
+    = help: Remove unused import: `twat_search.web.engines.critique.CritiqueSearchEngine`
+
+src/twat_search/web/engines/__init__.py:152:52: F401 `twat_search.web.engines.duckduckgo.DuckDuckGoSearchEngine` imported but unused; consider using `importlib.util.find_spec` to test for availability
+    |
+151 | try:
+152 |     from twat_search.web.engines.duckduckgo import DuckDuckGoSearchEngine, duckduckgo
+    |                                                    ^^^^^^^^^^^^^^^^^^^^^^ F401
+153 |
+154 |     available_engine_functions["duckduckgo"] = duckduckgo
+    |
+    = help: Remove unused import: `twat_search.web.engines.duckduckgo.DuckDuckGoSearchEngine`
+
+src/twat_search/web/engines/__init__.py:161:54: F401 `twat_search.web.engines.bing_scraper.BingScraperSearchEngine` imported but unused; consider using `importlib.util.find_spec` to test for availability
+    |
+159 | # Try to import bing_scraper engine
+160 | try:
+161 |     from twat_search.web.engines.bing_scraper import BingScraperSearchEngine, bing_scraper
+    |                                                      ^^^^^^^^^^^^^^^^^^^^^^^ F401
+162 |
+163 |     available_engine_functions["bing_scraper"] = bing_scraper
+    |
+    = help: Remove unused import: `twat_search.web.engines.bing_scraper.BingScraperSearchEngine`
+
+src/twat_search/web/engines/__init__.py:171:9: F401 `twat_search.web.engines.hasdata.HasDataGoogleEngine` imported but unused; consider using `importlib.util.find_spec` to test for availability
+    |
+169 | try:
+170 |     from twat_search.web.engines.hasdata import (
+171 |         HasDataGoogleEngine,
+    |         ^^^^^^^^^^^^^^^^^^^ F401
+172 |         HasDataGoogleLightEngine,
+173 |         hasdata_google,
+    |
+    = help: Remove unused import
+
+src/twat_search/web/engines/__init__.py:172:9: F401 `twat_search.web.engines.hasdata.HasDataGoogleLightEngine` imported but unused; consider using `importlib.util.find_spec` to test for availability
+    |
+170 |     from twat_search.web.engines.hasdata import (
+171 |         HasDataGoogleEngine,
+172 |         HasDataGoogleLightEngine,
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^ F401
+173 |         hasdata_google,
+174 |         hasdata_google_full,
+    |
+    = help: Remove unused import
+
+src/twat_search/web/engines/__init__.py:192:56: F401 `twat_search.web.engines.google_scraper.GoogleScraperEngine` imported but unused; consider using `importlib.util.find_spec` to test for availability
+    |
+190 | # Import Google Scraper engine
+191 | try:
+192 |     from twat_search.web.engines.google_scraper import GoogleScraperEngine, google_scraper
+    |                                                        ^^^^^^^^^^^^^^^^^^^ F401
+193 |
+194 |     available_engine_functions["google_scraper"] = google_scraper
+    |
+    = help: Remove unused import: `twat_search.web.engines.google_scraper.GoogleScraperEngine`
+
+src/twat_search/web/engines/__init__.py:201:49: F401 `twat_search.web.engines.serpapi.SerpApiSearchEngine` imported but unused; consider using `importlib.util.find_spec` to test for availability
+    |
+199 | # Try to import SerpAPI engine
+200 | try:
+201 |     from twat_search.web.engines.serpapi import SerpApiSearchEngine, google_serpapi
+    |                                                 ^^^^^^^^^^^^^^^^^^^ F401
+202 |
+203 |     available_engine_functions["google_serpapi"] = google_serpapi
+    |
+    = help: Remove unused import: `twat_search.web.engines.serpapi.SerpApiSearchEngine`
+
+src/twat_search/web/engines/__init__.py:212:9: F401 `twat_search.web.engines.falla.AolFallaEngine` imported but unused; consider using `importlib.util.find_spec` to test for availability
+    |
+210 | try:
+211 |     from twat_search.web.engines.falla import (
+212 |         AolFallaEngine,
+    |         ^^^^^^^^^^^^^^ F401
+213 |         AskFallaEngine,
+214 |         BingFallaEngine,
+    |
+    = help: Remove unused import
+
+src/twat_search/web/engines/__init__.py:213:9: F401 `twat_search.web.engines.falla.AskFallaEngine` imported but unused; consider using `importlib.util.find_spec` to test for availability
+    |
+211 |     from twat_search.web.engines.falla import (
+212 |         AolFallaEngine,
+213 |         AskFallaEngine,
+    |         ^^^^^^^^^^^^^^ F401
+214 |         BingFallaEngine,
+215 |         DogpileFallaEngine,
+    |
+    = help: Remove unused import
+
+src/twat_search/web/engines/__init__.py:214:9: F401 `twat_search.web.engines.falla.BingFallaEngine` imported but unused; consider using `importlib.util.find_spec` to test for availability
+    |
+212 |         AolFallaEngine,
+213 |         AskFallaEngine,
+214 |         BingFallaEngine,
+    |         ^^^^^^^^^^^^^^^ F401
+215 |         DogpileFallaEngine,
+216 |         DuckDuckGoFallaEngine,
+    |
+    = help: Remove unused import
+
+src/twat_search/web/engines/__init__.py:215:9: F401 `twat_search.web.engines.falla.DogpileFallaEngine` imported but unused; consider using `importlib.util.find_spec` to test for availability
+    |
+213 |         AskFallaEngine,
+214 |         BingFallaEngine,
+215 |         DogpileFallaEngine,
+    |         ^^^^^^^^^^^^^^^^^^ F401
+216 |         DuckDuckGoFallaEngine,
+217 |         FallaSearchEngine,
+    |
+    = help: Remove unused import
+
+src/twat_search/web/engines/__init__.py:216:9: F401 `twat_search.web.engines.falla.DuckDuckGoFallaEngine` imported but unused; consider using `importlib.util.find_spec` to test for availability
+    |
+214 |         BingFallaEngine,
+215 |         DogpileFallaEngine,
+216 |         DuckDuckGoFallaEngine,
+    |         ^^^^^^^^^^^^^^^^^^^^^ F401
+217 |         FallaSearchEngine,
+218 |         GibiruFallaEngine,
+    |
+    = help: Remove unused import
+
+src/twat_search/web/engines/__init__.py:217:9: F401 `twat_search.web.engines.falla.FallaSearchEngine` imported but unused; consider using `importlib.util.find_spec` to test for availability
+    |
+215 |         DogpileFallaEngine,
+216 |         DuckDuckGoFallaEngine,
+217 |         FallaSearchEngine,
+    |         ^^^^^^^^^^^^^^^^^ F401
+218 |         GibiruFallaEngine,
+219 |         GoogleFallaEngine,
+    |
+    = help: Remove unused import
+
+src/twat_search/web/engines/__init__.py:218:9: F401 `twat_search.web.engines.falla.GibiruFallaEngine` imported but unused; consider using `importlib.util.find_spec` to test for availability
+    |
+216 |         DuckDuckGoFallaEngine,
+217 |         FallaSearchEngine,
+218 |         GibiruFallaEngine,
+    |         ^^^^^^^^^^^^^^^^^ F401
+219 |         GoogleFallaEngine,
+220 |         MojeekFallaEngine,
+    |
+    = help: Remove unused import
+
+src/twat_search/web/engines/__init__.py:219:9: F401 `twat_search.web.engines.falla.GoogleFallaEngine` imported but unused; consider using `importlib.util.find_spec` to test for availability
+    |
+217 |         FallaSearchEngine,
+218 |         GibiruFallaEngine,
+219 |         GoogleFallaEngine,
+    |         ^^^^^^^^^^^^^^^^^ F401
+220 |         MojeekFallaEngine,
+221 |         QwantFallaEngine,
+    |
+    = help: Remove unused import
+
+src/twat_search/web/engines/__init__.py:220:9: F401 `twat_search.web.engines.falla.MojeekFallaEngine` imported but unused; consider using `importlib.util.find_spec` to test for availability
+    |
+218 |         GibiruFallaEngine,
+219 |         GoogleFallaEngine,
+220 |         MojeekFallaEngine,
+    |         ^^^^^^^^^^^^^^^^^ F401
+221 |         QwantFallaEngine,
+222 |         YahooFallaEngine,
+    |
+    = help: Remove unused import
+
+src/twat_search/web/engines/__init__.py:221:9: F401 `twat_search.web.engines.falla.QwantFallaEngine` imported but unused; consider using `importlib.util.find_spec` to test for availability
+    |
+219 |         GoogleFallaEngine,
+220 |         MojeekFallaEngine,
+221 |         QwantFallaEngine,
+    |         ^^^^^^^^^^^^^^^^ F401
+222 |         YahooFallaEngine,
+223 |         YandexFallaEngine,
+    |
+    = help: Remove unused import
+
+src/twat_search/web/engines/__init__.py:222:9: F401 `twat_search.web.engines.falla.YahooFallaEngine` imported but unused; consider using `importlib.util.find_spec` to test for availability
+    |
+220 |         MojeekFallaEngine,
+221 |         QwantFallaEngine,
+222 |         YahooFallaEngine,
+    |         ^^^^^^^^^^^^^^^^ F401
+223 |         YandexFallaEngine,
+224 |         aol_falla,
+    |
+    = help: Remove unused import
+
+src/twat_search/web/engines/__init__.py:223:9: F401 `twat_search.web.engines.falla.YandexFallaEngine` imported but unused; consider using `importlib.util.find_spec` to test for availability
+    |
+221 |         QwantFallaEngine,
+222 |         YahooFallaEngine,
+223 |         YandexFallaEngine,
+    |         ^^^^^^^^^^^^^^^^^ F401
+224 |         aol_falla,
+225 |         ask_falla,
+    |
+    = help: Remove unused import
+
+src/twat_search/web/engines/base.py:32:121: E501 Line too long (124 > 120)
+   |
+30 | USER_AGENTS = [
+31 |     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",
+32 |     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5 Safari/605.1.15",
+   |                                                                                                                         ^^^^ E501
+33 |     "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0",
+34 |     "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",
+   |
+
+src/twat_search/web/engines/base.py:35:121: E501 Line too long (142 > 120)
+   |
+33 | …0101 Firefox/114.0",
+34 | …e Gecko) Chrome/114.0.0.0 Safari/537.36",
+35 | …bKit/605.1.15 (KHTML, like Gecko) Version/16.5 Mobile/15E148 Safari/604.1",
+   |                                                       ^^^^^^^^^^^^^^^^^^^^^^ E501
+36 | …
+   |
+
+src/twat_search/web/engines/base.py:97:64: PLR2004 Magic value used in comparison, consider replacing `4` with a constant variable
+   |
+95 |                 # Safely log a portion of the API key
+96 |                 key_value = self.config.api_key
+97 |                 key_prefix = key_value[:4] if len(key_value) > 4 else "****"
+   |                                                                ^ PLR2004
+98 |                 key_suffix = key_value[-4:] if len(key_value) > 4 else "****"
+99 |                 logger.debug(f"Config API key value: {key_prefix}...{key_suffix}")
+   |
+
+src/twat_search/web/engines/base.py:98:65: PLR2004 Magic value used in comparison, consider replacing `4` with a constant variable
+   |
+96 |                 key_value = self.config.api_key
+97 |                 key_prefix = key_value[:4] if len(key_value) > 4 else "****"
+98 |                 key_suffix = key_value[-4:] if len(key_value) > 4 else "****"
+   |                                                                 ^ PLR2004
+99 |                 logger.debug(f"Config API key value: {key_prefix}...{key_suffix}")
+   |
+
+src/twat_search/web/engines/base.py:107:68: PLR2004 Magic value used in comparison, consider replacing `4` with a constant variable
+    |
+105 |                 if env_value:
+106 |                     # Safely log a portion of the environment variable value
+107 |                     env_prefix = env_value[:4] if len(env_value) > 4 else "****"
+    |                                                                    ^ PLR2004
+108 |                     env_suffix = env_value[-4:] if len(env_value) > 4 else "****"
+109 |                     logger.debug(f"Env var {env_var} value: {env_prefix}...{env_suffix}")
+    |
+
+src/twat_search/web/engines/base.py:108:69: PLR2004 Magic value used in comparison, consider replacing `4` with a constant variable
+    |
+106 |                     # Safely log a portion of the environment variable value
+107 |                     env_prefix = env_value[:4] if len(env_value) > 4 else "****"
+108 |                     env_suffix = env_value[-4:] if len(env_value) > 4 else "****"
+    |                                                                     ^ PLR2004
+109 |                     logger.debug(f"Env var {env_var} value: {env_prefix}...{env_suffix}")
+    |
+
+src/twat_search/web/engines/base.py:250:37: S311 Standard pseudo-random generators are not suitable for cryptographic purposes
+    |
+249 |         if self.use_random_user_agent and "user-agent" not in {k.lower() for k in headers}:
+250 |             headers["User-Agent"] = random.choice(USER_AGENTS)
+    |                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^ S311
+251 |
+252 |         delay = actual_retry_delay  # Initial delay
+    |
+
+src/twat_search/web/engines/base.py:277:26: S311 Standard pseudo-random generators are not suitable for cryptographic purposes
+    |
+276 |                 # Add jitter to retry delay to avoid thundering herd effect
+277 |                 jitter = random.uniform(0.5, 1.5)
+    |                          ^^^^^^^^^^^^^^^^^^^^^^^^ S311
+278 |                 actual_delay = delay * jitter
+    |
+
+src/twat_search/web/engines/bing_scraper.py:56:26: ARG002 Unused method argument: `query`
+   |
+54 |             self.delay_between_requests = delay_between_requests
+55 |
+56 |         def search(self, query: str, num_results: int = 10) -> list[Any]:
+   |                          ^^^^^ ARG002
+57 |             """
+58 |             Dummy search method for type checking.
+   |
+
+src/twat_search/web/engines/bing_scraper.py:56:38: ARG002 Unused method argument: `num_results`
+   |
+54 |             self.delay_between_requests = delay_between_requests
+55 |
+56 |         def search(self, query: str, num_results: int = 10) -> list[Any]:
+   |                                      ^^^^^^^^^^^ ARG002
+57 |             """
+58 |             Dummy search method for type checking.
+   |
+
+src/twat_search/web/engines/bing_scraper.py:113:9: FBT002 Boolean default positional argument in function definition
+    |
+111 |         country: str | None = None,
+112 |         language: str | None = None,
+113 |         safe_search: bool | str | None = True,
+    |         ^^^^^^^^^^^ FBT002
+114 |         time_frame: str | None = None,
+115 |         **kwargs: Any,
+    |
+
+src/twat_search/web/engines/brave.py:44:9: FBT001 Boolean-typed positional argument in function definition
+   |
+42 |         country: str | None = None,
+43 |         language: str | None = None,
+44 |         safe_search: bool = False,
+   |         ^^^^^^^^^^^ FBT001
+45 |         time_frame: str | None = None,
+46 |         **kwargs: Any,
+   |
+
+src/twat_search/web/engines/brave.py:44:9: FBT002 Boolean default positional argument in function definition
+   |
+42 |         country: str | None = None,
+43 |         language: str | None = None,
+44 |         safe_search: bool = False,
+   |         ^^^^^^^^^^^ FBT002
+45 |         time_frame: str | None = None,
+46 |         **kwargs: Any,
+   |
+
+src/twat_search/web/engines/brave.py:46:11: ARG002 Unused method argument: `kwargs`
+   |
+44 |         safe_search: bool = False,
+45 |         time_frame: str | None = None,
+46 |         **kwargs: Any,
+   |           ^^^^^^ ARG002
+47 |     ) -> None:
+48 |         """Initialize the Brave Search engine."""
+   |
+
+src/twat_search/web/engines/brave.py:354:5: FBT002 Boolean default positional argument in function definition
+    |
+352 |     country: str | None = None,
+353 |     language: str | None = None,
+354 |     safe_search: bool | str | None = True,
+    |     ^^^^^^^^^^^ FBT002
+355 |     time_frame: str | None = None,
+356 |     api_key: str | None = None,
+    |
+
+src/twat_search/web/engines/brave.py:394:5: FBT002 Boolean default positional argument in function definition
+    |
+392 |     country: str | None = None,
+393 |     language: str | None = None,
+394 |     safe_search: bool | str | None = True,
+    |     ^^^^^^^^^^^ FBT002
+395 |     time_frame: str | None = None,
+396 |     api_key: str | None = None,
+    |
+
+src/twat_search/web/engines/critique.py:59:9: ARG002 Unused method argument: `num_results`
+   |
+57 |         self,
+58 |         config: EngineConfig,
+59 |         num_results: int = DEFAULT_NUM_RESULTS,
+   |         ^^^^^^^^^^^ ARG002
+60 |         country: str | None = None,
+61 |         language: str | None = None,
+   |
+
+src/twat_search/web/engines/critique.py:62:9: FBT002 Boolean default positional argument in function definition
+   |
+60 |         country: str | None = None,
+61 |         language: str | None = None,
+62 |         safe_search: bool | None = True,
+   |         ^^^^^^^^^^^ FBT002
+63 |         time_frame: str | None = None,
+64 |         image_url: str | None = None,
+   |
+
+src/twat_search/web/engines/critique.py:101:121: E501 Line too long (154 > 120)
+    |
+ 99 | …
+100 | …
+101 | …e env vars: {', '.join(self.env_api_key_names)} or use the --api-key parameter",
+    |                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ E501
+102 | …
+    |
+
+src/twat_search/web/engines/critique.py:120:13: B904 Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling
+    |
+118 |                   return f"data:image/jpeg;base64,{encoded}"
+119 |           except httpx.RequestError as e:
+120 | /             raise EngineError(
+121 | |                 self.engine_code,
+122 | |                 f"Failed to fetch image from URL: {e}",
+123 | |             )
+    | |_____________^ B904
+124 |           except Exception as e:
+125 |               raise EngineError(self.engine_code, f"Error processing image: {e}")
+    |
+
+src/twat_search/web/engines/critique.py:125:13: B904 Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling
+    |
+123 |             )
+124 |         except Exception as e:
+125 |             raise EngineError(self.engine_code, f"Error processing image: {e}")
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ B904
+126 |
+127 |     async def _build_payload(self, query: str) -> dict[str, Any]:
+    |
+
+src/twat_search/web/engines/critique.py:248:5: FBT002 Boolean default positional argument in function definition
+    |
+246 |     country: str | None = None,
+247 |     language: str | None = None,
+248 |     safe_search: bool | None = True,
+    |     ^^^^^^^^^^^ FBT002
+249 |     time_frame: str | None = None,
+250 |     image_url: str | None = None,
+    |
+
+src/twat_search/web/engines/duckduckgo.py:54:9: FBT002 Boolean default positional argument in function definition
+   |
+52 |         country: str | None = None,
+53 |         language: str | None = None,
+54 |         safe_search: bool | str | None = True,
+   |         ^^^^^^^^^^^ FBT002
+55 |         time_frame: str | None = None,
+56 |         **kwargs: Any,
+   |
+
+src/twat_search/web/engines/duckduckgo.py:206:5: FBT001 Boolean-typed positional argument in function definition
+    |
+204 |     country: str | None = None,
+205 |     language: str | None = None,
+206 |     safe_search: bool = True,
+    |     ^^^^^^^^^^^ FBT001
+207 |     time_frame: str | None = None,
+208 |     proxy: str | None = None,
+    |
+
+src/twat_search/web/engines/duckduckgo.py:206:5: FBT002 Boolean default positional argument in function definition
+    |
+204 |     country: str | None = None,
+205 |     language: str | None = None,
+206 |     safe_search: bool = True,
+    |     ^^^^^^^^^^^ FBT002
+207 |     time_frame: str | None = None,
+208 |     proxy: str | None = None,
+    |
+
+src/twat_search/web/engines/google_scraper.py:48:24: ARG001 Unused function argument: `args`
+   |
+46 |             self.description = description
+47 |
+48 |     def google_search(*args, **kwargs):  # type: ignore
+   |                        ^^^^ ARG001
+49 |         """Dummy function for type checking when googlesearch-python is not installed."""
+50 |         return []
+   |
+
+src/twat_search/web/engines/google_scraper.py:48:32: ARG001 Unused function argument: `kwargs`
+   |
+46 |             self.description = description
+47 |
+48 |     def google_search(*args, **kwargs):  # type: ignore
+   |                                ^^^^^^ ARG001
+49 |         """Dummy function for type checking when googlesearch-python is not installed."""
+50 |         return []
+   |
+
+src/twat_search/web/engines/google_scraper.py:106:9: FBT002 Boolean default positional argument in function definition
+    |
+104 |         country: str | None = None,
+105 |         language: str | None = None,
+106 |         safe_search: bool | str | None = True,
+    |         ^^^^^^^^^^^ FBT002
+107 |         time_frame: str | None = None,
+108 |         **kwargs: Any,
+    |
+
+src/twat_search/web/engines/google_scraper.py:304:5: FBT001 Boolean-typed positional argument in function definition
+    |
+302 |     language: str = "en",
+303 |     country: str | None = None,
+304 |     safe_search: bool = True,
+    |     ^^^^^^^^^^^ FBT001
+305 |     sleep_interval: float = 0.0,
+306 |     ssl_verify: bool | None = None,
+    |
+
+src/twat_search/web/engines/google_scraper.py:304:5: FBT002 Boolean default positional argument in function definition
+    |
+302 |     language: str = "en",
+303 |     country: str | None = None,
+304 |     safe_search: bool = True,
+    |     ^^^^^^^^^^^ FBT002
+305 |     sleep_interval: float = 0.0,
+306 |     ssl_verify: bool | None = None,
+    |
+
+src/twat_search/web/engines/google_scraper.py:308:5: FBT001 Boolean-typed positional argument in function definition
+    |
+306 |     ssl_verify: bool | None = None,
+307 |     proxy: str | None = None,
+308 |     unique: bool = True,
+    |     ^^^^^^ FBT001
+309 |     **kwargs: Any,
+310 | ) -> list[SearchResult]:
+    |
+
+src/twat_search/web/engines/google_scraper.py:308:5: FBT002 Boolean default positional argument in function definition
+    |
+306 |     ssl_verify: bool | None = None,
+307 |     proxy: str | None = None,
+308 |     unique: bool = True,
+    |     ^^^^^^ FBT002
+309 |     **kwargs: Any,
+310 | ) -> list[SearchResult]:
+    |
+
+src/twat_search/web/engines/lib_falla/core/falla.py:10:8: F401 `os` imported but unused
+   |
+ 8 | import asyncio
+ 9 | import logging
+10 | import os
+   |        ^^ F401
+11 | import re
+12 | import subprocess
+   |
+   = help: Remove unused import: `os`
+
+src/twat_search/web/engines/lib_falla/core/falla.py:11:8: F401 `re` imported but unused
+   |
+ 9 | import logging
+10 | import os
+11 | import re
+   |        ^^ F401
+12 | import subprocess
+13 | import sys
+   |
+   = help: Remove unused import: `re`
+
+src/twat_search/web/engines/lib_falla/core/falla.py:12:8: F401 `subprocess` imported but unused
+   |
+10 | import os
+11 | import re
+12 | import subprocess
+   |        ^^^^^^^^^^ F401
+13 | import sys
+14 | from collections.abc import Mapping
+   |
+   = help: Remove unused import: `subprocess`
+
+src/twat_search/web/engines/lib_falla/core/falla.py:13:8: F401 `sys` imported but unused
+   |
+11 | import re
+12 | import subprocess
+13 | import sys
+   |        ^^^ F401
+14 | from collections.abc import Mapping
+15 | from pathlib import Path
+   |
+   = help: Remove unused import: `sys`
+
+src/twat_search/web/engines/lib_falla/core/falla.py:14:29: F401 `collections.abc.Mapping` imported but unused
+   |
+12 | import subprocess
+13 | import sys
+14 | from collections.abc import Mapping
+   |                             ^^^^^^^ F401
+15 | from pathlib import Path
+16 | from typing import Any, ClassVar, Optional, Union, cast
+   |
+   = help: Remove unused import: `collections.abc.Mapping`
+
+src/twat_search/web/engines/lib_falla/core/falla.py:15:21: F401 `pathlib.Path` imported but unused
+   |
+13 | import sys
+14 | from collections.abc import Mapping
+15 | from pathlib import Path
+   |                     ^^^^ F401
+16 | from typing import Any, ClassVar, Optional, Union, cast
+   |
+   = help: Remove unused import: `pathlib.Path`
+
+src/twat_search/web/engines/lib_falla/core/falla.py:16:25: F401 `typing.ClassVar` imported but unused
+   |
+14 | from collections.abc import Mapping
+15 | from pathlib import Path
+16 | from typing import Any, ClassVar, Optional, Union, cast
+   |                         ^^^^^^^^ F401
+17 |
+18 | import bs4
+   |
+   = help: Remove unused import
+
+src/twat_search/web/engines/lib_falla/core/falla.py:16:35: F401 `typing.Optional` imported but unused
+   |
+14 | from collections.abc import Mapping
+15 | from pathlib import Path
+16 | from typing import Any, ClassVar, Optional, Union, cast
+   |                                   ^^^^^^^^ F401
+17 |
+18 | import bs4
+   |
+   = help: Remove unused import
+
+src/twat_search/web/engines/lib_falla/core/falla.py:16:45: F401 `typing.Union` imported but unused
+   |
+14 | from collections.abc import Mapping
+15 | from pathlib import Path
+16 | from typing import Any, ClassVar, Optional, Union, cast
+   |                                             ^^^^^ F401
+17 |
+18 | import bs4
+   |
+   = help: Remove unused import
+
+src/twat_search/web/engines/lib_falla/core/falla.py:16:52: F401 `typing.cast` imported but unused
+   |
+14 | from collections.abc import Mapping
+15 | from pathlib import Path
+16 | from typing import Any, ClassVar, Optional, Union, cast
+   |                                                    ^^^^ F401
+17 |
+18 | import bs4
+   |
+   = help: Remove unused import
+
+src/twat_search/web/engines/lib_falla/core/falla.py:69:121: E501 Line too long (145 > 120)
+   |
+67 | …
+68 | …
+69 | … AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+   |                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^ E501
+70 | …
+   |
+
+src/twat_search/web/engines/lib_falla/core/falla.py:265:121: E501 Line too long (153 > 120)
+    |
+263 | …
+264 | …
+265 | …x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+    |                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ E501
+266 | …
+    |
+
+src/twat_search/web/engines/lib_falla/core/falla.py:371:121: E501 Line too long (148 > 120)
+    |
+369 | …
+370 | …
+371 | …) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+    |                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ E501
+372 | …
+373 | …
+    |
+
+src/twat_search/web/engines/lib_falla/core/falla.py:422:23: ARG002 Unused method argument: `query`
+    |
+420 |             return []
+421 |
+422 |     def get_url(self, query: str) -> str:
+    |                       ^^^^^ ARG002
+423 |         """
+424 |         Get the search URL for a query.
+    |
+
+src/twat_search/web/engines/lib_falla/core/fetch_page.py:44:121: E501 Line too long (145 > 120)
+   |
+42 | …
+43 | …
+44 | … AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+   |                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^ E501
+45 | …
+   |
+
+src/twat_search/web/engines/lib_falla/core/google.py:11:40: F401 `typing.Optional` imported but unused
+   |
+ 9 | import urllib.parse
+10 | from pathlib import Path
+11 | from typing import TYPE_CHECKING, Any, Optional, cast
+   |                                        ^^^^^^^^ F401
+12 |
+13 | from bs4 import BeautifulSoup
+   |
+   = help: Remove unused import: `typing.Optional`
+
+src/twat_search/web/engines/pplx.py:110:13: B904 Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling
+    |
+108 |               data = response.json()
+109 |           except EngineError as e:
+110 | /             raise EngineError(
+111 | |                 self.engine_code,
+112 | |                 f"API request failed: {str(e)!s}",
+113 | |             )
+    | |_____________^ B904
+114 |           except Exception as e:
+115 |               raise EngineError(
+    |
+
+src/twat_search/web/engines/pplx.py:115:13: B904 Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling
+    |
+113 |               )
+114 |           except Exception as e:
+115 | /             raise EngineError(
+116 | |                 self.engine_code,
+117 | |                 f"Unexpected error: {str(e)!s}",
+118 | |             )
+    | |_____________^ B904
+119 |
+120 |           results = []
+    |
+
+src/twat_search/web/engines/pplx.py:154:5: FBT002 Boolean default positional argument in function definition
+    |
+152 |     country: str | None = None,
+153 |     language: str | None = None,
+154 |     safe_search: bool | None = True,
+    |     ^^^^^^^^^^^ FBT002
+155 |     time_frame: str | None = None,
+156 |     api_key: str | None = None,
+    |
+
+src/twat_search/web/engines/pplx.py:191:52: PLR2004 Magic value used in comparison, consider replacing `4` with a constant variable
+    |
+189 |     if api_key is not None:
+190 |         # Safely log a portion of the API key
+191 |         key_prefix = api_key[:4] if len(api_key) > 4 else "****"
+    |                                                    ^ PLR2004
+192 |         key_suffix = api_key[-4:] if len(api_key) > 4 else "****"
+193 |         logger.debug(f"Final API key value: {key_prefix}...{key_suffix}")
+    |
+
+src/twat_search/web/engines/pplx.py:192:53: PLR2004 Magic value used in comparison, consider replacing `4` with a constant variable
+    |
+190 |         # Safely log a portion of the API key
+191 |         key_prefix = api_key[:4] if len(api_key) > 4 else "****"
+192 |         key_suffix = api_key[-4:] if len(api_key) > 4 else "****"
+    |                                                     ^ PLR2004
+193 |         logger.debug(f"Final API key value: {key_prefix}...{key_suffix}")
+194 |     else:
+    |
+
+src/twat_search/web/engines/pplx.py:196:121: E501 Line too long (130 > 120)
+    |
+194 |     else:
+195 |         logger.error(
+196 |             "No API key available for Perplexity AI. Please set PERPLEXITYAI_API_KEY or PERPLEXITY_API_KEY environment variable.",
+    |                                                                                                                         ^^^^^^^^^^ E501
+197 |         )
+198 |         raise EngineError(
+    |
+
+src/twat_search/web/engines/serpapi.py:61:9: FBT002 Boolean default positional argument in function definition
+   |
+59 |         country: str | None = None,
+60 |         language: str | None = None,
+61 |         safe_search: bool | str | None = True,
+   |         ^^^^^^^^^^^ FBT002
+62 |         time_frame: str | None = None,
+63 |         **kwargs: Any,
+   |
+
+src/twat_search/web/engines/serpapi.py:181:5: FBT002 Boolean default positional argument in function definition
+    |
+179 |     country: str | None = None,
+180 |     language: str | None = None,
+181 |     safe_search: bool | str | None = True,
+    |     ^^^^^^^^^^^ FBT002
+182 |     time_frame: str | None = None,
+183 |     google_domain: str | None = None,
+    |
+
+src/twat_search/web/engines/tavily.py:64:9: FBT002 Boolean default positional argument in function definition
+   |
+62 |         country: str | None = None,
+63 |         language: str | None = None,
+64 |         safe_search: bool | None = True,
+   |         ^^^^^^^^^^^ FBT002
+65 |         time_frame: str | None = None,
+66 |         search_depth: str = "basic",
+   |
+
+src/twat_search/web/engines/tavily.py:69:9: FBT001 Boolean-typed positional argument in function definition
+   |
+67 |         include_domains: list[str] | None = None,
+68 |         exclude_domains: list[str] | None = None,
+69 |         include_answer: bool = False,
+   |         ^^^^^^^^^^^^^^ FBT001
+70 |         max_tokens: int | None = None,
+71 |         search_type: str = "search",
+   |
+
+src/twat_search/web/engines/tavily.py:69:9: FBT002 Boolean default positional argument in function definition
+   |
+67 |         include_domains: list[str] | None = None,
+68 |         exclude_domains: list[str] | None = None,
+69 |         include_answer: bool = False,
+   |         ^^^^^^^^^^^^^^ FBT002
+70 |         max_tokens: int | None = None,
+71 |         search_type: str = "search",
+   |
+
+src/twat_search/web/engines/tavily.py:180:17: B904 Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling
+    |
+178 |                 data = response.json()
+179 |             except httpx.HTTPStatusError as e:
+180 |                 raise EngineError(self.engine_code, f"HTTP error: {e}")
+    |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ B904
+181 |             except httpx.RequestError as e:
+182 |                 raise EngineError(self.engine_code, f"Request error: {e}")
+    |
+
+src/twat_search/web/engines/tavily.py:182:17: B904 Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling
+    |
+180 |                 raise EngineError(self.engine_code, f"HTTP error: {e}")
+181 |             except httpx.RequestError as e:
+182 |                 raise EngineError(self.engine_code, f"Request error: {e}")
+    |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ B904
+183 |             except Exception as e:
+184 |                 raise EngineError(self.engine_code, f"Error: {e!s}")
+    |
+
+src/twat_search/web/engines/tavily.py:184:17: B904 Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling
+    |
+182 |                 raise EngineError(self.engine_code, f"Request error: {e}")
+183 |             except Exception as e:
+184 |                 raise EngineError(self.engine_code, f"Error: {e!s}")
+    |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ B904
+185 |
+186 |         results = []
+    |
+
+src/twat_search/web/engines/tavily.py:211:5: FBT002 Boolean default positional argument in function definition
+    |
+209 |     country: str | None = None,
+210 |     language: str | None = None,
+211 |     safe_search: bool | None = True,
+    |     ^^^^^^^^^^^ FBT002
+212 |     time_frame: str | None = None,
+213 |     search_depth: str = "basic",
+    |
+
+src/twat_search/web/engines/tavily.py:216:5: FBT001 Boolean-typed positional argument in function definition
+    |
+214 |     include_domains: list[str] | None = None,
+215 |     exclude_domains: list[str] | None = None,
+216 |     include_answer: bool = False,
+    |     ^^^^^^^^^^^^^^ FBT001
+217 |     max_tokens: int | None = None,
+218 |     search_type: str = "search",
+    |
+
+src/twat_search/web/engines/tavily.py:216:5: FBT002 Boolean default positional argument in function definition
+    |
+214 |     include_domains: list[str] | None = None,
+215 |     exclude_domains: list[str] | None = None,
+216 |     include_answer: bool = False,
+    |     ^^^^^^^^^^^^^^ FBT002
+217 |     max_tokens: int | None = None,
+218 |     search_type: str = "search",
+    |
+
+src/twat_search/web/engines/you.py:93:13: B904 Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling
+   |
+91 |             return response.json()
+92 |         except EngineError as e:
+93 |             raise EngineError(self.engine_code, f"API request failed: {str(e)!s}")
+   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ B904
+94 |         except Exception as e:
+95 |             raise EngineError(self.engine_code, f"Unexpected error: {str(e)!s}")
+   |
+
+src/twat_search/web/engines/you.py:95:13: B904 Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling
+   |
+93 |             raise EngineError(self.engine_code, f"API request failed: {str(e)!s}")
+94 |         except Exception as e:
+95 |             raise EngineError(self.engine_code, f"Unexpected error: {str(e)!s}")
+   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ B904
+   |
+
+src/twat_search/web/engines/you.py:195:5: FBT002 Boolean default positional argument in function definition
+    |
+193 |     country: str | None = None,
+194 |     language: str | None = None,
+195 |     safe_search: bool | None = True,
+    |     ^^^^^^^^^^^ FBT002
+196 |     time_frame: str | None = None,
+197 |     api_key: str | None = None,
+    |
+
+src/twat_search/web/engines/you.py:237:5: FBT002 Boolean default positional argument in function definition
+    |
+235 |     country: str | None = None,
+236 |     language: str | None = None,
+237 |     safe_search: bool | None = True,
+    |     ^^^^^^^^^^^ FBT002
+238 |     time_frame: str | None = None,
+239 |     api_key: str | None = None,
+    |
+
+src/twat_search/web/utils.py:23:22: FBT001 Boolean-typed positional argument in function definition
+   |
+23 | def load_environment(force_reload: bool = False) -> None:
+   |                      ^^^^^^^^^^^^ FBT001
+24 |     """
+25 |     Load environment variables from .env file.
+   |
+
+src/twat_search/web/utils.py:23:22: FBT002 Boolean default positional argument in function definition
+   |
+23 | def load_environment(force_reload: bool = False) -> None:
+   |                      ^^^^^^^^^^^^ FBT002
+24 |     """
+25 |     Load environment variables from .env file.
+   |
+
+tests/unit/web/engines/test_base.py:89:32: ARG002 Unused method argument: `query`
+   |
+87 |         engine_code = "new_engine"
+88 |
+89 |         async def search(self, query: str) -> list[SearchResult]:
+   |                                ^^^^^ ARG002
+90 |             return []
+   |
+
+tests/unit/web/test_api.py:100:5: ARG001 Unused function argument: `setup_teardown`
+    |
+ 98 | async def test_search_with_mock_engine(
+ 99 |     mock_config: Config,
+100 |     setup_teardown: None,
+    |     ^^^^^^^^^^^^^^ ARG001
+101 | ) -> None:
+102 |     """Test search with a mock engine."""
+    |
+
+tests/unit/web/test_api.py:114:5: ARG001 Unused function argument: `setup_teardown`
+    |
+112 | async def test_search_with_additional_params(
+113 |     mock_config: Config,
+114 |     setup_teardown: None,
+    |     ^^^^^^^^^^^^^^ ARG001
+115 | ) -> None:
+116 |     """Test search with additional parameters."""
+    |
+
+tests/unit/web/test_api.py:130:5: ARG001 Unused function argument: `setup_teardown`
+    |
+128 | async def test_search_with_engine_specific_params(
+129 |     mock_config: Config,
+130 |     setup_teardown: None,
+    |     ^^^^^^^^^^^^^^ ARG001
+131 | ) -> None:
+132 |     """Test search with engine-specific parameters."""
+    |
+
+tests/unit/web/test_api.py:144:39: ARG001 Unused function argument: `setup_teardown`
+    |
+143 | @pytest.mark.asyncio
+144 | async def test_search_with_no_engines(setup_teardown: None) -> None:
+    |                                       ^^^^^^^^^^^^^^ ARG001
+145 |     """Test search with no engines specified raises SearchError."""
+146 |     with pytest.raises(SearchError, match="No search engines configured"):
+    |
+
+tests/unit/web/test_api.py:153:5: ARG001 Unused function argument: `setup_teardown`
+    |
+151 | async def test_search_with_failing_engine(
+152 |     mock_config: Config,
+153 |     setup_teardown: None,
+    |     ^^^^^^^^^^^^^^ ARG001
+154 | ) -> None:
+155 |     """Test search with a failing engine returns empty results."""
+    |
+
+tests/unit/web/test_api.py:169:5: ARG001 Unused function argument: `setup_teardown`
+    |
+167 | async def test_search_with_nonexistent_engine(
+168 |     mock_config: Config,
+169 |     setup_teardown: None,
+    |     ^^^^^^^^^^^^^^ ARG001
+170 | ) -> None:
+171 |     """Test search with a non-existent engine raises SearchError."""
+    |
+
+tests/unit/web/test_api.py:179:5: ARG001 Unused function argument: `monkeypatch`
+    |
+177 | async def test_search_with_disabled_engine(
+178 |     mock_config: Config,
+179 |     monkeypatch: MonkeyPatch,
+    |     ^^^^^^^^^^^ ARG001
+180 |     setup_teardown: None,
+181 | ) -> None:
+    |
+
+tests/unit/web/test_api.py:180:5: ARG001 Unused function argument: `setup_teardown`
+    |
+178 |     mock_config: Config,
+179 |     monkeypatch: MonkeyPatch,
+180 |     setup_teardown: None,
+    |     ^^^^^^^^^^^^^^ ARG001
+181 | ) -> None:
+182 |     """Test search with a disabled engine raises SearchError."""
+    |
+
+tests/unit/web/test_config.py:41:26: ARG001 Unused function argument: `isolate_env_vars`
+   |
+41 | def test_config_defaults(isolate_env_vars: None) -> None:
+   |                          ^^^^^^^^^^^^^^^^ ARG001
+42 |     """Test Config with default values."""
+43 |     config = Config()
+   |
+
+tests/unit/web/test_config.py:49:31: ARG001 Unused function argument: `monkeypatch`
+   |
+49 | def test_config_with_env_vars(monkeypatch: MonkeyPatch, env_vars_for_brave: None) -> None:
+   |                               ^^^^^^^^^^^ ARG001
+50 |     """Test Config loads settings from environment variables."""
+51 |     # Create config
+   |
+
+tests/unit/web/test_config.py:49:57: ARG001 Unused function argument: `env_vars_for_brave`
+   |
+49 | def test_config_with_env_vars(monkeypatch: MonkeyPatch, env_vars_for_brave: None) -> None:
+   |                                                         ^^^^^^^^^^^^^^^^^^ ARG001
+50 |     """Test Config loads settings from environment variables."""
+51 |     # Create config
+   |
+
+tests/unit/web/test_exceptions.py:46:13: PT017 Found assertion on exception `e` in `except` block, use `pytest.raises()` instead
+   |
+44 |         # Only check engine_name if it's EngineError
+45 |         if isinstance(e, EngineError):
+46 |             assert e.engine_name == "test_engine"
+   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ PT017
+   |
+
+tests/web/test_bing_scraper.py:69:25: N803 Argument name `mock_BingScraper` should be lowercase
+   |
+68 |     @patch("twat_search.web.engines.bing_scraper.BingScraper")
+69 |     def test_init(self, mock_BingScraper: MagicMock, engine: Any) -> None:
+   |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^ N803
+70 |         """Test BingScraperSearchEngine initialization."""
+71 |         assert engine.engine_code == "bing_scraper"
+   |
+
+tests/web/test_bing_scraper.py:82:9: N803 Argument name `mock_BingScraper` should be lowercase
+   |
+80 |     async def test_search_basic(
+81 |         self,
+82 |         mock_BingScraper: MagicMock,
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^ N803
+83 |         engine: BingScraperSearchEngine,
+84 |         mock_results: list[MockSearchResult],
+   |
+
+tests/web/test_bing_scraper.py:109:44: N803 Argument name `mock_BingScraper` should be lowercase
+    |
+107 |     @patch("twat_search.web.engines.bing_scraper.BingScraper")
+108 |     @pytest.mark.asyncio
+109 |     async def test_custom_parameters(self, mock_BingScraper: MagicMock) -> None:
+    |                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^ N803
+110 |         """Test custom parameters for engine initialization."""
+111 |         # Create engine with custom parameters
+    |
+
+tests/web/test_bing_scraper.py:138:47: N803 Argument name `mock_BingScraper` should be lowercase
+    |
+136 |     @patch("twat_search.web.engines.bing_scraper.BingScraper")
+137 |     @pytest.mark.asyncio
+138 |     async def test_invalid_url_handling(self, mock_BingScraper: MagicMock, engine: BingScraperSearchEngine) -> None:
+    |                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^ N803
+139 |         """Test handling of invalid URLs."""
+140 |         # Setup mock
+    |
+
+tests/web/test_bing_scraper.py:202:38: N803 Argument name `mock_BingScraper` should be lowercase
+    |
+200 |     @patch("twat_search.web.engines.bing_scraper.BingScraper")
+201 |     @pytest.mark.asyncio
+202 |     async def test_empty_query(self, mock_BingScraper: MagicMock, engine: BingScraperSearchEngine) -> None:
+    |                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^ N803
+203 |         """Test behavior with empty query string."""
+204 |         # Empty query should raise an EngineError
+    |
+
+tests/web/test_bing_scraper.py:213:37: N803 Argument name `mock_BingScraper` should be lowercase
+    |
+211 |     @patch("twat_search.web.engines.bing_scraper.BingScraper")
+212 |     @pytest.mark.asyncio
+213 |     async def test_no_results(self, mock_BingScraper: MagicMock, engine: BingScraperSearchEngine) -> None:
+    |                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^ N803
+214 |         """Test handling of no results returned from BingScraper."""
+215 |         # Setup mock to return empty list
+    |
+
+tests/web/test_bing_scraper.py:227:40: N803 Argument name `mock_BingScraper` should be lowercase
+    |
+225 |     @patch("twat_search.web.engines.bing_scraper.BingScraper")
+226 |     @pytest.mark.asyncio
+227 |     async def test_network_error(self, mock_BingScraper: MagicMock, engine: BingScraperSearchEngine) -> None:
+    |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^ N803
+228 |         """Test handling of network errors."""
+229 |         # Setup mock to raise ConnectionError
+    |
+
+tests/web/test_bing_scraper.py:242:40: N803 Argument name `mock_BingScraper` should be lowercase
+    |
+240 |     @patch("twat_search.web.engines.bing_scraper.BingScraper")
+241 |     @pytest.mark.asyncio
+242 |     async def test_parsing_error(self, mock_BingScraper: MagicMock, engine: BingScraperSearchEngine) -> None:
+    |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^ N803
+243 |         """Test handling of parsing errors."""
+244 |         # Setup mock to raise RuntimeError
+    |
+
+tests/web/test_bing_scraper.py:257:48: N803 Argument name `mock_BingScraper` should be lowercase
+    |
+255 |     @patch("twat_search.web.engines.bing_scraper.BingScraper")
+256 |     @pytest.mark.asyncio
+257 |     async def test_invalid_result_format(self, mock_BingScraper: MagicMock, engine: BingScraperSearchEngine) -> None:
+    |                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^ N803
+258 |         """Test handling of invalid result format."""
+259 |         # Setup mock to return results with missing attributes
+    |
+
+Found 247 errors (1 fixed, 246 remaining).
+
+2025-03-04 05:57:33 - 56 files left unchanged
+
+2025-03-04 05:57:33 - >>>Running type checks...
+2025-03-04 05:57:58 - src/twat_search/web/engines/lib_falla/core/fetch_page.py:15: error: Cannot find implementation or library stub for module named "playwright.async_api"  [import-not-found]
+src/twat_search/web/engines/lib_falla/core/falla.py:19: error: Library stubs not installed for "requests"  [import-untyped]
+src/twat_search/web/engines/lib_falla/core/falla.py:19: note: Hint: "python3 -m pip install types-requests"
+src/twat_search/web/engines/lib_falla/core/falla.py:19: note: (or run "mypy --install-types" to install all missing stub packages)
+src/twat_search/web/engines/lib_falla/core/falla.py:21: error: Cannot find implementation or library stub for module named "playwright.async_api"  [import-not-found]
+src/twat_search/web/engines/lib_falla/core/falla.py:21: note: See https://mypy.readthedocs.io/en/stable/running_mypy.html#missing-imports
+src/twat_search/web/engines/lib_falla/core/google.py:285: error: Argument "attrs" to "find_all" of "Tag" has incompatible type "Mapping[str, Any]"; expected "dict[str, str | bytes | Pattern[str] | bool | Callable[[str], bool] | Iterable[str | bytes | Pattern[str] | bool | Callable[[str], bool]]]"  [arg-type]
+src/twat_search/web/engines/lib_falla/core/google.py:289: error: Incompatible types in assignment (expression has type "tuple[str, Mapping[str, Any]]", variable has type "tuple[str, dict[str, Any]]")  [assignment]
+src/twat_search/web/engines/lib_falla/utils.py:119: error: Missing positional argument "name" in call to "Falla"  [call-arg]
+src/twat_search/web/engines/lib_falla/utils.py:150: error: Missing positional argument "name" in call to "Falla"  [call-arg]
+tests/unit/web/test_utils.py:53: error: No overload variant of "range" matches argument type "float"  [call-overload]
+tests/unit/web/test_utils.py:53: note: Possible overload variants:
+tests/unit/web/test_utils.py:53: note:     def __new__(cls, SupportsIndex, /) -> range
+tests/unit/web/test_utils.py:53: note:     def __new__(cls, SupportsIndex, SupportsIndex, SupportsIndex = ..., /) -> range
+src/twat_search/web/engines/google_scraper.py:28: error: Cannot find implementation or library stub for module named "googlesearch"  [import-not-found]
+src/twat_search/web/engines/duckduckgo.py:17: error: Cannot find implementation or library stub for module named "duckduckgo_search"  [import-not-found]
+tests/conftest.py:52: error: Only concrete class can be given where "type[SearchEngine]" is expected  [type-abstract]
+src/twat_search/web/cli.py:21: error: Skipping analyzing "fire.core": module is installed, but missing library stubs or py.typed marker  [import-untyped]
+src/twat_search/web/cli.py:21: error: Skipping analyzing "fire": module is installed, but missing library stubs or py.typed marker  [import-untyped]
+Found 13 errors in 9 files (checked 57 source files)
+
+2025-03-04 05:57:58 - >>> Running tests...
+2025-03-04 05:58:02 - ============================= test session starts ==============================
+platform darwin -- Python 3.12.8, pytest-8.3.5, pluggy-1.5.0 -- /Users/adam/Developer/vcs/github.twardoch/pub/twat-packages/_good/twat/plugins/repos/twat_search/.venv/bin/python
+cachedir: .pytest_cache
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+rootdir: /Users/adam/Developer/vcs/github.twardoch/pub/twat-packages/_good/twat
+configfile: pyproject.toml
+plugins: cov-6.0.0, asyncio-0.25.3, anyio-4.8.0, benchmark-5.1.0, xdist-3.6.1
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=None
+collecting ... collected 49 items
+
+tests/test_twat_search.py::test_version PASSED                           [  2%]
+tests/unit/web/engines/test_base.py::test_search_engine_is_abstract PASSED [  4%]
+tests/unit/web/engines/test_base.py::test_search_engine_name_class_var PASSED [  6%]
+tests/unit/web/engines/test_base.py::test_engine_registration PASSED     [  8%]
+tests/unit/web/engines/test_base.py::test_get_engine_with_invalid_name FAILED [ 10%]
+tests/unit/web/engines/test_base.py::test_get_engine_with_disabled_engine PASSED [ 12%]
+tests/unit/web/engines/test_base.py::test_get_engine_with_config PASSED  [ 14%]
+tests/unit/web/engines/test_base.py::test_get_engine_with_kwargs PASSED  [ 16%]
+tests/unit/web/test_api.py::test_search_with_mock_engine FAILED          [ 18%]
+tests/unit/web/test_api.py::test_search_with_additional_params PASSED    [ 20%]
+tests/unit/web/test_api.py::test_search_with_engine_specific_params PASSED [ 22%]
+tests/unit/web/test_api.py::test_search_with_no_engines FAILED           [ 24%]
+tests/unit/web/test_api.py::test_search_with_failing_engine PASSED       [ 26%]
+tests/unit/web/test_api.py::test_search_with_nonexistent_engine PASSED   [ 28%]
+tests/unit/web/test_api.py::test_search_with_disabled_engine PASSED      [ 30%]
+tests/unit/web/test_config.py::test_engine_config_defaults PASSED        [ 32%]
+tests/unit/web/test_config.py::test_engine_config_values PASSED          [ 34%]
+tests/unit/web/test_config.py::test_config_defaults FAILED               [ 36%]
+tests/unit/web/test_config.py::test_config_with_env_vars FAILED          [ 38%]
+tests/unit/web/test_config.py::test_config_with_direct_initialization PASSED [ 40%]
+tests/unit/web/test_config.py::test_config_env_vars_override_direct_config PASSED [ 42%]
+tests/unit/web/test_exceptions.py::test_search_error PASSED              [ 44%]
+tests/unit/web/test_exceptions.py::test_engine_error PASSED              [ 46%]
+tests/unit/web/test_exceptions.py::test_engine_error_inheritance PASSED  [ 48%]
+tests/unit/web/test_exceptions.py::test_search_error_as_base_class PASSED [ 51%]
+tests/unit/web/test_models.py::test_search_result_valid_data PASSED      [ 53%]
+tests/unit/web/test_models.py::test_search_result_with_optional_fields PASSED [ 55%]
+tests/unit/web/test_models.py::test_search_result_invalid_url PASSED     [ 57%]
+tests/unit/web/test_models.py::test_search_result_empty_fields PASSED    [ 59%]
+tests/unit/web/test_models.py::test_search_result_serialization PASSED   [ 61%]
+tests/unit/web/test_models.py::test_search_result_deserialization PASSED [ 63%]
+tests/unit/web/test_utils.py::test_rate_limiter_init PASSED              [ 65%]
+tests/unit/web/test_utils.py::test_rate_limiter_wait_when_not_needed PASSED [ 67%]
+tests/unit/web/test_utils.py::test_rate_limiter_wait_when_needed PASSED  [ 69%]
+tests/unit/web/test_utils.py::test_rate_limiter_cleans_old_timestamps PASSED [ 71%]
+tests/unit/web/test_utils.py::test_rate_limiter_with_different_rates[1] PASSED [ 73%]
+tests/unit/web/test_utils.py::test_rate_limiter_with_different_rates[5] PASSED [ 75%]
+tests/unit/web/test_utils.py::test_rate_limiter_with_different_rates[10] PASSED [ 77%]
+tests/unit/web/test_utils.py::test_rate_limiter_with_different_rates[100] PASSED [ 79%]
+tests/web/test_bing_scraper.py::TestBingScraperEngine::test_init PASSED  [ 81%]
+tests/web/test_bing_scraper.py::TestBingScraperEngine::test_search_basic PASSED [ 83%]
+tests/web/test_bing_scraper.py::TestBingScraperEngine::test_custom_parameters PASSED [ 85%]
+tests/web/test_bing_scraper.py::TestBingScraperEngine::test_invalid_url_handling PASSED [ 87%]
+tests/web/test_bing_scraper.py::TestBingScraperEngine::test_bing_scraper_convenience_function FAILED [ 89%]
+tests/web/test_bing_scraper.py::TestBingScraperEngine::test_empty_query PASSED [ 91%]
+tests/web/test_bing_scraper.py::TestBingScraperEngine::test_no_results PASSED [ 93%]
+tests/web/test_bing_scraper.py::TestBingScraperEngine::test_network_error PASSED [ 95%]
+tests/web/test_bing_scraper.py::TestBingScraperEngine::test_parsing_error PASSED [ 97%]
+tests/web/test_bing_scraper.py::TestBingScraperEngine::test_invalid_result_format PASSED [100%]
+
+=================================== FAILURES ===================================
+______________________ test_get_engine_with_invalid_name _______________________
+
+    def test_get_engine_with_invalid_name() -> None:
+        """Test that get_engine raises an error for invalid engine names."""
+        with pytest.raises(SearchError, match="Unknown search engine"):
+>           get_engine("nonexistent_engine", EngineConfig())
+
+tests/unit/web/engines/test_base.py:106: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+engine_name = 'nonexistent_engine'
+config = EngineConfig(enabled=True, api_key=None, default_params={}, engine_code=None)
+kwargs = {}
+engines = {'bing_scraper': <class 'twat_search.web.engines.bing_scraper.BingScraperSearchEngine'>, 'brave': <class 'twat_search....ngines.brave.BraveNewsSearchEngine'>, 'critique': <class 'twat_search.web.engines.critique.CritiqueSearchEngine'>, ...}
+standardize_engine_name = <function standardize_engine_name at 0x105d740e0>
+std_engine_name = 'nonexistent_engine', engine_class = None
+available_engines = 'bing_scraper, brave, brave_news, critique, disabled_engine, google_hasdata, google_hasdata_full, google_scraper, google_serpapi, mock, new_engine, pplx, tavily, test_engine, you, you_news'
+msg = "Engine 'nonexistent_engine' not found. Available engines: bing_scraper, brave, brave_news, critique, disabled_engine,...sdata, google_hasdata_full, google_scraper, google_serpapi, mock, new_engine, pplx, tavily, test_engine, you, you_news"
+
+    def get_engine(engine_name: str, config: EngineConfig, **kwargs: Any) -> SearchEngine:
+        """
+        Get an instance of a search engine by name.
+    
+        This function looks up the engine class by name, then instantiates it
+        with the provided configuration and parameters.
+    
+        Args:
+            engine_name: Name of the engine to instantiate
+            config: Engine configuration
+            **kwargs: Additional engine-specific parameters
+    
+        Returns:
+            An instance of the requested search engine
+    
+        Raises:
+            EngineError: If the engine is not found, disabled, or fails to initialize
+        """
+        # Get the registry of engines
+        engines = get_registered_engines()
+    
+        # Standardize the engine name for lookup
+        from twat_search.web.engines import standardize_engine_name
+    
+        std_engine_name = standardize_engine_name(engine_name)
+    
+        # Try to find the engine class
+        engine_class = engines.get(std_engine_name)
+    
+        # If not found with standardized name, try original name (for backward compatibility)
+        if engine_class is None:
+            engine_class = engines.get(engine_name)
+    
+        # If still not found, provide a helpful error message
+        if engine_class is None:
+            available_engines = ", ".join(sorted(engines.keys()))
+            msg = f"Engine '{engine_name}' not found. Available engines: {available_engines}"
+            logger.error(msg)
+>           raise EngineError(engine_name, msg)
+E           twat_search.web.exceptions.EngineError: Engine 'nonexistent_engine': Engine 'nonexistent_engine' not found. Available engines: bing_scraper, brave, brave_news, critique, disabled_engine, google_hasdata, google_hasdata_full, google_scraper, google_serpapi, mock, new_engine, pplx, tavily, test_engine, you, you_news
+
+src/twat_search/web/engines/base.py:412: EngineError
+
+During handling of the above exception, another exception occurred:
+
+    def test_get_engine_with_invalid_name() -> None:
+        """Test that get_engine raises an error for invalid engine names."""
+>       with pytest.raises(SearchError, match="Unknown search engine"):
+E       AssertionError: Regex pattern did not match.
+E        Regex: 'Unknown search engine'
+E        Input: "Engine 'nonexistent_engine': Engine 'nonexistent_engine' not found. Available engines: bing_scraper, brave, brave_news, critique, disabled_engine, google_hasdata, google_hasdata_full, google_scraper, google_serpapi, mock, new_engine, pplx, tavily, test_engine, you, you_news"
+
+tests/unit/web/engines/test_base.py:105: AssertionError
+------------------------------ Captured log call -------------------------------
+ERROR    twat_search.web.engines.base:base.py:411 Engine 'nonexistent_engine' not found. Available engines: bing_scraper, brave, brave_news, critique, disabled_engine, google_hasdata, google_hasdata_full, google_scraper, google_serpapi, mock, new_engine, pplx, tavily, test_engine, you, you_news
+_________________________ test_search_with_mock_engine _________________________
+
+mock_config = Config(engines={'mock': EngineConfig(enabled=True, api_key='mock_key', default_params={'result_count': 2}, engine_code=None)})
+setup_teardown = None
+
+    @pytest.mark.asyncio
+    async def test_search_with_mock_engine(
+        mock_config: Config,
+        setup_teardown: None,
+    ) -> None:
+        """Test search with a mock engine."""
+        results = await search("test query", engines=["mock"], config=mock_config)
+    
+>       assert len(results) == 2
+E       AssertionError: assert 1 == 2
+E        +  where 1 = len([SearchResult(title='Mock Result 1 for test query', url=HttpUrl('https://example.com/1'), snippet='This is mock result 1 for query: test query', source='mock', rank=None, raw=None)])
+
+tests/unit/web/test_api.py:105: AssertionError
+_________________________ test_search_with_no_engines __________________________
+
+setup_teardown = None
+
+    @pytest.mark.asyncio
+    async def test_search_with_no_engines(setup_teardown: None) -> None:
+        """Test search with no engines specified raises SearchError."""
+>       with pytest.raises(SearchError, match="No search engines configured"):
+E       Failed: DID NOT RAISE <class 'twat_search.web.exceptions.SearchError'>
+
+tests/unit/web/test_api.py:146: Failed
+------------------------------ Captured log call -------------------------------
+ERROR    twat_search.web.engines.base:base.py:411 Engine 'duckduckgo' not found. Available engines: bing_scraper, brave, brave_news, critique, disabled_engine, google_hasdata, google_hasdata_full, google_scraper, google_serpapi, mock, new_engine, pplx, tavily, test_engine, you, you_news
+WARNING  twat_search.web.api:api.py:128 Engine 'duckduckgo' is disabled. Enable it in your configuration to use it.
+ERROR    twat_search.web.engines.base:base.py:119 API key validation failed: API key is required for brave. Please set it via one of these env vars: BRAVE_API_KEY
+ERROR    twat_search.web.engines.base:base.py:436 Engine 'brave': API key is required for brave. Please set it via one of these env vars: BRAVE_API_KEY Environment variables for this engine: BRAVE_API_KEY
+ERROR    twat_search.web.api:api.py:123 Failed to initialize engine 'brave': Missing or invalid API key. Check your environment variables or configuration.
+ERROR    twat_search.web.engines.base:base.py:119 API key validation failed: API key is required for tavily. Please set it via one of these env vars: TAVILY_API_KEY
+ERROR    twat_search.web.engines.base:base.py:436 Engine 'tavily': API key is required for tavily. Please set it via one of these env vars: TAVILY_API_KEY Environment variables for this engine: TAVILY_API_KEY
+ERROR    twat_search.web.api:api.py:123 Failed to initialize engine 'tavily': Missing or invalid API key. Check your environment variables or configuration.
+ERROR    twat_search.web.engines.base:base.py:119 API key validation failed: API key is required for you. Please set it via one of these env vars: YOUCOM_API_KEY, YOU_API_KEY
+ERROR    twat_search.web.engines.base:base.py:436 Engine 'you': API key is required for you. Please set it via one of these env vars: YOUCOM_API_KEY, YOU_API_KEY Environment variables for this engine: YOUCOM_API_KEY, YOU_API_KEY
+ERROR    twat_search.web.api:api.py:123 Failed to initialize engine 'you': Missing or invalid API key. Check your environment variables or configuration.
+ERROR    twat_search.web.engines.base:base.py:119 API key validation failed: API key is required for you_news. Please set it via one of these env vars: YOUCOM_API_KEY, YOU_API_KEY
+ERROR    twat_search.web.engines.base:base.py:436 Engine 'you_news': API key is required for you_news. Please set it via one of these env vars: YOUCOM_API_KEY, YOU_API_KEY Environment variables for this engine: YOUCOM_API_KEY, YOU_API_KEY
+ERROR    twat_search.web.api:api.py:123 Failed to initialize engine 'you_news': Missing or invalid API key. Check your environment variables or configuration.
+ERROR    twat_search.web.engines.base:base.py:119 API key validation failed: API key is required for pplx. Please set it via one of these env vars: PERPLEXITYAI_API_KEY, PERPLEXITY_API_KEY
+ERROR    twat_search.web.engines.base:base.py:436 Engine 'pplx': API key is required for pplx. Please set it via one of these env vars: PERPLEXITYAI_API_KEY, PERPLEXITY_API_KEY Environment variables for this engine: PERPLEXITYAI_API_KEY, PERPLEXITY_API_KEY
+ERROR    twat_search.web.api:api.py:123 Failed to initialize engine 'pplx': Missing or invalid API key. Check your environment variables or configuration.
+ERROR    twat_search.web.engines.base:base.py:119 API key validation failed: API key is required for critique. Please set it via one of these env vars: CRITIQUE_LABS_API_KEY, CRITIQUE_API_KEY
+ERROR    twat_search.web.engines.base:base.py:436 Engine 'critique': API key is required for critique. Please set it via one of these env vars: CRITIQUE_LABS_API_KEY, CRITIQUE_API_KEY Environment variables for this engine: CRITIQUE_LABS_API_KEY, CRITIQUE_API_KEY
+ERROR    twat_search.web.api:api.py:123 Failed to initialize engine 'critique': Missing or invalid API key. Check your environment variables or configuration.
+ERROR    twat_search.web.engines.base:base.py:119 API key validation failed: API key is required for brave_news. Please set it via one of these env vars: BRAVE_API_KEY
+ERROR    twat_search.web.engines.base:base.py:436 Engine 'brave_news': API key is required for brave_news. Please set it via one of these env vars: BRAVE_API_KEY Environment variables for this engine: BRAVE_API_KEY
+ERROR    twat_search.web.api:api.py:123 Failed to initialize engine 'brave_news': Missing or invalid API key. Check your environment variables or configuration.
+ERROR    twat_search.web.engines.base:base.py:119 API key validation failed: API key is required for google_hasdata. Please set it via one of these env vars: HASDATA_API_KEY
+ERROR    twat_search.web.engines.base:base.py:436 Engine 'google_hasdata': API key is required for google_hasdata. Please set it via one of these env vars: HASDATA_API_KEY Environment variables for this engine: HASDATA_API_KEY
+ERROR    twat_search.web.api:api.py:123 Failed to initialize engine 'google_hasdata': Missing or invalid API key. Check your environment variables or configuration.
+ERROR    twat_search.web.engines.base:base.py:119 API key validation failed: API key is required for google_hasdata_full. Please set it via one of these env vars: HASDATA_API_KEY
+ERROR    twat_search.web.engines.base:base.py:436 Engine 'google_hasdata_full': API key is required for google_hasdata_full. Please set it via one of these env vars: HASDATA_API_KEY Environment variables for this engine: HASDATA_API_KEY
+ERROR    twat_search.web.api:api.py:123 Failed to initialize engine 'google_hasdata_full': Missing or invalid API key. Check your environment variables or configuration.
+ERROR    twat_search.web.engines.base:base.py:119 API key validation failed: API key is required for google_serpapi. Please set it via one of these env vars: SERPAPI_API_KEY
+ERROR    twat_search.web.engines.base:base.py:436 Engine 'google_serpapi': API key is required for google_serpapi. Please set it via one of these env vars: SERPAPI_API_KEY Environment variables for this engine: SERPAPI_API_KEY
+ERROR    twat_search.web.api:api.py:123 Failed to initialize engine 'google_serpapi': Missing or invalid API key. Check your environment variables or configuration.
+ERROR    twat_search.web.engines.base:base.py:411 Engine 'google_falla' not found. Available engines: bing_scraper, brave, brave_news, critique, disabled_engine, google_hasdata, google_hasdata_full, google_scraper, google_serpapi, mock, new_engine, pplx, tavily, test_engine, you, you_news
+WARNING  twat_search.web.api:api.py:128 Engine 'google_falla' is disabled. Enable it in your configuration to use it.
+ERROR    twat_search.web.engines.base:base.py:411 Engine 'bing_falla' not found. Available engines: bing_scraper, brave, brave_news, critique, disabled_engine, google_hasdata, google_hasdata_full, google_scraper, google_serpapi, mock, new_engine, pplx, tavily, test_engine, you, you_news
+WARNING  twat_search.web.api:api.py:128 Engine 'bing_falla' is disabled. Enable it in your configuration to use it.
+ERROR    twat_search.web.engines.base:base.py:411 Engine 'duckduckgo_falla' not found. Available engines: bing_scraper, brave, brave_news, critique, disabled_engine, google_hasdata, google_hasdata_full, google_scraper, google_serpapi, mock, new_engine, pplx, tavily, test_engine, you, you_news
+WARNING  twat_search.web.api:api.py:128 Engine 'duckduckgo_falla' is disabled. Enable it in your configuration to use it.
+ERROR    twat_search.web.engines.base:base.py:411 Engine 'yahoo_falla' not found. Available engines: bing_scraper, brave, brave_news, critique, disabled_engine, google_hasdata, google_hasdata_full, google_scraper, google_serpapi, mock, new_engine, pplx, tavily, test_engine, you, you_news
+WARNING  twat_search.web.api:api.py:128 Engine 'yahoo_falla' is disabled. Enable it in your configuration to use it.
+ERROR    twat_search.web.engines.base:base.py:411 Engine 'ask_falla' not found. Available engines: bing_scraper, brave, brave_news, critique, disabled_engine, google_hasdata, google_hasdata_full, google_scraper, google_serpapi, mock, new_engine, pplx, tavily, test_engine, you, you_news
+WARNING  twat_search.web.api:api.py:128 Engine 'ask_falla' is disabled. Enable it in your configuration to use it.
+ERROR    twat_search.web.engines.base:base.py:411 Engine 'aol_falla' not found. Available engines: bing_scraper, brave, brave_news, critique, disabled_engine, google_hasdata, google_hasdata_full, google_scraper, google_serpapi, mock, new_engine, pplx, tavily, test_engine, you, you_news
+WARNING  twat_search.web.api:api.py:128 Engine 'aol_falla' is disabled. Enable it in your configuration to use it.
+ERROR    twat_search.web.engines.base:base.py:411 Engine 'dogpile_falla' not found. Available engines: bing_scraper, brave, brave_news, critique, disabled_engine, google_hasdata, google_hasdata_full, google_scraper, google_serpapi, mock, new_engine, pplx, tavily, test_engine, you, you_news
+WARNING  twat_search.web.api:api.py:128 Engine 'dogpile_falla' is disabled. Enable it in your configuration to use it.
+ERROR    twat_search.web.engines.base:base.py:411 Engine 'gibiru_falla' not found. Available engines: bing_scraper, brave, brave_news, critique, disabled_engine, google_hasdata, google_hasdata_full, google_scraper, google_serpapi, mock, new_engine, pplx, tavily, test_engine, you, you_news
+WARNING  twat_search.web.api:api.py:128 Engine 'gibiru_falla' is disabled. Enable it in your configuration to use it.
+ERROR    twat_search.web.engines.base:base.py:411 Engine 'mojeek_falla' not found. Available engines: bing_scraper, brave, brave_news, critique, disabled_engine, google_hasdata, google_hasdata_full, google_scraper, google_serpapi, mock, new_engine, pplx, tavily, test_engine, you, you_news
+WARNING  twat_search.web.api:api.py:128 Engine 'mojeek_falla' is disabled. Enable it in your configuration to use it.
+ERROR    twat_search.web.engines.base:base.py:411 Engine 'qwant_falla' not found. Available engines: bing_scraper, brave, brave_news, critique, disabled_engine, google_hasdata, google_hasdata_full, google_scraper, google_serpapi, mock, new_engine, pplx, tavily, test_engine, you, you_news
+WARNING  twat_search.web.api:api.py:128 Engine 'qwant_falla' is disabled. Enable it in your configuration to use it.
+ERROR    twat_search.web.engines.base:base.py:411 Engine 'yandex_falla' not found. Available engines: bing_scraper, brave, brave_news, critique, disabled_engine, google_hasdata, google_hasdata_full, google_scraper, google_serpapi, mock, new_engine, pplx, tavily, test_engine, you, you_news
+WARNING  twat_search.web.api:api.py:128 Engine 'yandex_falla' is disabled. Enable it in your configuration to use it.
+WARNING  twat_search.web.api:api.py:233 Failed to initialize engines: duckduckgo, brave, tavily, you, you_news, pplx, critique, brave_news, google_hasdata, google_hasdata_full, google_serpapi, google_falla, bing_falla, duckduckgo_falla, yahoo_falla, ask_falla, aol_falla, dogpile_falla, gibiru_falla, mojeek_falla, qwant_falla, yandex_falla
+_____________________________ test_config_defaults _____________________________
+
+isolate_env_vars = None
+
+    def test_config_defaults(isolate_env_vars: None) -> None:
+        """Test Config with default values."""
+        config = Config()
+    
+        assert isinstance(config.engines, dict)
+>       assert len(config.engines) == 0
+E       AssertionError: assert 24 == 0
+E        +  where 24 = len({'aol_falla': EngineConfig(enabled=True, api_key=None, default_params={'num_results': 5}, engine_code=None), 'ask_falla': EngineConfig(enabled=True, api_key=None, default_params={'num_results': 5}, engine_code=None), 'bing_falla': EngineConfig(enabled=True, api_key=None, default_params={'num_results': 5}, engine_code=None), 'bing_scraper': EngineConfig(enabled=True, api_key=None, default_params={'num_pages': 1, 'delay': 0.5}, engine_code=None), ...})
+E        +    where {'aol_falla': EngineConfig(enabled=True, api_key=None, default_params={'num_results': 5}, engine_code=None), 'ask_falla': EngineConfig(enabled=True, api_key=None, default_params={'num_results': 5}, engine_code=None), 'bing_falla': EngineConfig(enabled=True, api_key=None, default_params={'num_results': 5}, engine_code=None), 'bing_scraper': EngineConfig(enabled=True, api_key=None, default_params={'num_pages': 1, 'delay': 0.5}, engine_code=None), ...} = Config(engines={'duckduckgo': EngineConfig(enabled=True, api_key=None, default_params={'region': 'us-en', 'safesearch': 'moderate', 'timelimit': 'y', 'num_results': 20}, engine_code=None), 'brave': EngineConfig(enabled=True, api_key=None, default_params={'country': 'US', 'language': 'en-US', 'safe_search': True}, engine_code=None), 'tavily': EngineConfig(enabled=True, api_key=None, default_params={'num_results': 5, 'search_depth': 'basic', 'include_domains': [], 'exclude_domains': [], 'include_answer': False, 'include_raw_content': False, 'include_images': False}, engine_code=None), 'you': EngineConfig(enabled=True, api_key=None, default_params={'num_results': 5, 'country_code': 'us', 'safe_search': True}, engine_code=None), 'you_news': EngineConfig(enabled=True, api_key=None, default_params={'num_results': 5, 'country_code': 'us', 'safe_search': True}, engine_code=None), 'pplx': EngineConfig(enabled=True, api_key=None, default_params={'num_results': 5, 'focus': None}, engine_code=None), 'critique': EngineConfig(enabled=True, api_key=None, default_params={'num_results': 5, 'relevance_adjustment': 0.5}, engine_code=None), 'brave_news': EngineConfig(enabled=True, api_key=None, defa...ngineConfig(enabled=True, api_key=None, default_params={'num_results': 5}, engine_code=None), 'bing_falla': EngineConfig(enabled=True, api_key=None, default_params={'num_results': 5}, engine_code=None), 'duckduckgo_falla': EngineConfig(enabled=True, api_key=None, default_params={'num_results': 5}, engine_code=None), 'yahoo_falla': EngineConfig(enabled=True, api_key=None, default_params={'num_results': 5}, engine_code=None), 'ask_falla': EngineConfig(enabled=True, api_key=None, default_params={'num_results': 5}, engine_code=None), 'aol_falla': EngineConfig(enabled=True, api_key=None, default_params={'num_results': 5}, engine_code=None), 'dogpile_falla': EngineConfig(enabled=True, api_key=None, default_params={'num_results': 5}, engine_code=None), 'gibiru_falla': EngineConfig(enabled=True, api_key=None, default_params={'num_results': 5}, engine_code=None), 'mojeek_falla': EngineConfig(enabled=True, api_key=None, default_params={'num_results': 5}, engine_code=None), 'qwant_falla': EngineConfig(enabled=True, api_key=None, default_params={'num_results': 5}, engine_code=None), 'yandex_falla': EngineConfig(enabled=True, api_key=None, default_params={'num_results': 5}, engine_code=None)}).engines
+
+tests/unit/web/test_config.py:46: AssertionError
+__________________________ test_config_with_env_vars ___________________________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x106792cf0>
+env_vars_for_brave = None
+
+    def test_config_with_env_vars(monkeypatch: MonkeyPatch, env_vars_for_brave: None) -> None:
+        """Test Config loads settings from environment variables."""
+        # Create config
+        config = Config()
+    
+        # Check the brave engine was configured
+        assert "brave" in config.engines
+        brave_config = config.engines["brave"]
+        assert brave_config.api_key == "test_brave_key"
+        assert brave_config.enabled is True
+>       assert brave_config.default_params == {"count": 10}
+E       AssertionError: assert {'country': '...search': True} == {'count': 10}
+E         
+E         Left contains 3 more items:
+E         {'country': 'US', 'language': 'en-US', 'safe_search': True}
+E         Right contains 1 more item:
+E         {'count': 10}
+E         
+E         Full diff:...
+E         
+E         ...Full output truncated (8 lines hidden), use '-vv' to show
+
+tests/unit/web/test_config.py:59: AssertionError
+------------------------------ Captured log setup ------------------------------
+ERROR    twat_search.web.engines.base:base.py:370 Failed to register engine MockBraveEngine: Engine must define a non-empty 'engine_code' attribute.
+_________ TestBingScraperEngine.test_bing_scraper_convenience_function _________
+
+self = <test_bing_scraper.TestBingScraperEngine object at 0x10675fbf0>
+mock_search = <AsyncMock name='search' id='4404067504'>
+
+    @patch("twat_search.web.api.search")
+    @pytest.mark.asyncio
+    async def test_bing_scraper_convenience_function(self, mock_search: AsyncMock) -> None:
+        """Test the bing_scraper convenience function."""
+        # Setup mock
+        mock_results = [
+            SearchResult(
+                title="Test Result",
+                url=HttpUrl("https://example.com"),
+                snippet="Test description",
+                source="bing_scraper",
+            ),
+        ]
+        mock_search.return_value = mock_results
+    
+        # Use convenience function
+        results = await bing_scraper(
+            "test query",
+            num_results=10,
+            max_retries=5,
+            delay_between_requests=2.0,
+        )
+    
+        # Verify results
+>       assert results == mock_results
+E       AssertionError: assert [] == [SearchResult...ne, raw=None)]
+E         
+E         Right contains one more item: SearchResult(title='Test Result', url=HttpUrl('https://example.com/'), snippet='Test description', source='bing_scraper', rank=None, raw=None)
+E         
+E         Full diff:
+E         + []
+E         - [
+E         -     SearchResult(title='Test Result', url=HttpUrl('https://example.com/'), snippet='Test description', source='bing_scraper', rank=None, raw=None),
+E         - ]
+
+tests/web/test_bing_scraper.py:189: AssertionError
+=========================== short test summary info ============================
+FAILED tests/unit/web/engines/test_base.py::test_get_engine_with_invalid_name
+FAILED tests/unit/web/test_api.py::test_search_with_mock_engine - AssertionEr...
+FAILED tests/unit/web/test_api.py::test_search_with_no_engines - Failed: DID ...
+FAILED tests/unit/web/test_config.py::test_config_defaults - AssertionError: ...
+FAILED tests/unit/web/test_config.py::test_config_with_env_vars - AssertionEr...
+FAILED tests/web/test_bing_scraper.py::TestBingScraperEngine::test_bing_scraper_convenience_function
+========================= 6 failed, 43 passed in 2.84s =========================
+
+2025-03-04 05:58:02 - All checks completed
+2025-03-04 05:58:02 - 
+=== TODO.md ===
+2025-03-04 05:58:02 - --- 
+this_file: TODO.md
+--- 
+
+# TODO
+
+Tip: Periodically run `./cleanup.py status` to see results of lints and tests.
+
+This is the test command that we are targeting: 
+
+```bash
+for engine in $(twat-search web info --plain); do echo; echo; echo; echo ">>> $engine"; twat-search web q -e $engine "Adam Twardoch" -n 1 --json --verbose; done;
+```
+
+## High Priority
+
+### Phase 1: Fix Falla-based Search Engines
+
+- [ ] Fix Yahoo and Qwant search engines
+  - [ ] Update selectors in Yahoo implementation to match current page structure
+  - [ ] Update selectors in Qwant implementation to match current page structure
+  - [ ] Test with various search queries to ensure reliability
+  - [ ] Handle consent pages and other interactive elements
+
+- [ ] Fix Google and DuckDuckGo search engines
+  - [ ] Update selectors in Google implementation to match current page structure
+  - [ ] Update selectors in DuckDuckGo implementation to match current page structure
+  - [ ] Implement proper handling of CAPTCHA challenges
+  - [ ] Test with various search queries to ensure reliability
+
+- [ ] Fix type errors in `google.py`:
+  - [ ] Fix type error in `wait_for_selector` where `self.wait_for_selector` could be `None`
+  - [ ] Fix type error in `find_all` where `attrs` parameter has incompatible type
+  - [ ] Fix type error in `get_title`, `get_link`, and `get_snippet` where `elem` parameter has incompatible type
+  - [ ] Fix type error in `elem.find` where `PageElement` has no attribute `find`
+
+- [ ] Improve Falla integration with Playwright:
+  - [ ] Ensure proper browser and context management for efficient resource usage
+  - [ ] Implement specific exception handling for common Playwright errors
+  - [ ] Return empty results on failure instead of raising exceptions
+  - [ ] Add comprehensive type hinting throughout the codebase
+  - [ ] Improve method docstrings for better code documentation
+
+### Phase 2: Fix Critical Engine Failures
+
+- [ ] Improve `get_engine` function and error handling
+  - [ ] Add descriptive error messages when engines are not found or disabled
+  - [ ] Handle engine initialization failures gracefully
+  - [ ] Add comprehensive tests for engine initialization
+
+- [ ] Fix engines returning empty results
+  - [ ] Identify and address common failure patterns
+  - [ ] Add detailed logging for debugging
+  - [ ] Create test script to isolate issues
+
+## Medium Priority
+
+### Improve Code Quality
+
+- [ ] Implement comprehensive error handling:
+  - [ ] Add try-except blocks for all external API calls
+  - [ ] Implement proper error logging with context information
+  - [ ] Create custom exception classes for different error scenarios
+  - [ ] Add graceful fallbacks for common error cases
+
+- [ ] Improve test coverage:
+  - [ ] Add unit tests for all search engine implementations
+  - [ ] Add integration tests for the entire search pipeline
+  - [ ] Implement mock responses for external API calls in tests
+  - [ ] Add performance benchmarks for search operations
+
+- [ ] Enhance documentation:
+  - [ ] Add detailed docstrings to all classes and methods
+  - [ ] Create comprehensive API documentation
+  - [ ] Add usage examples for all search engines
+  - [ ] Document configuration options and environment variables
+
+### Standardize JSON Output Format
+
+- [ ] Standardize JSON output across all engines
+  - [ ] Utilize the existing `SearchResult` model consistently
+  - [ ] Remove utility functions like `_process_results` and `_display_json_results`
+  - [ ] Remove `CustomJSONEncoder` class
+  - [ ] Update engine `search` methods to return list of `SearchResult` objects
+
+- [ ] Update API function return types
+  - [ ] Change return type to `list[SearchResult]`
+  - [ ] Ensure proper handling of results from engines
+
+- [ ] Update CLI display functions
+  - [ ] Use `model_dump` for JSON serialization
+  - [ ] Implement simplified result display
+
+## Low Priority
+
+### Feature Enhancements
+
+- [ ] Add support for additional search engines:
+  - [ ] Implement Ecosia search
+  - [ ] Implement Startpage search
+  - [ ] Implement other alternative search engines
+  - [ ] Implement Qwant AI engine using the QwantAI package (https://pypi.org/project/QwantAI/)
+
+- [ ] Enhance result processing:
+  - [ ] Implement result deduplication across engines
+  - [ ] Add result ranking based on relevance
+  - [ ] Implement result filtering options
+  - [ ] Add support for different result formats (HTML, Markdown, etc.)
+
+- [ ] Improve CLI functionality:
+  - [ ] Add interactive mode for search operations
+  - [ ] Implement result pagination in CLI output
+  - [ ] Add support for saving search results to file
+  - [ ] Implement search history functionality
+
+- [ ] Add advanced search features:
+  - [ ] Implement image search capabilities
+  - [ ] Add support for news search
+  - [ ] Implement video search functionality
+  - [ ] Add support for academic/scholarly search
+
+- [ ] Optimize performance:
+  - [ ] Implement caching for search results
+  - [ ] Optimize concurrent search operations
+  - [ ] Reduce memory usage during search operations
+  - [ ] Implement timeout handling for slow search engines
+
+## Completed Tasks
+
+- [x] Setup and dependencies
+  - [x] Create new module `src/twat_search/web/engines/falla.py`
+  - [x] Add necessary dependencies to `pyproject.toml`
+  - [x] Define engine constants in `src/twat_search/web/engine_constants.py`
+  - [x] Update `src/twat_search/web/engines/__init__.py` to import and register new engines
+  - [x] Create utility function to check if Falla is installed and accessible
+
+- [x] Create base `FallaSearchEngine` class
+  - [x] Inherit from `SearchEngine`
+  - [x] Implement `search` method with proper error handling and retries
+  - [x] Create fallback implementation for when Falla is not available
+
+- [x] Implement specific Falla-based engines
+  - [x] `google-falla`: Google search using Falla
+  - [x] `bing-falla`: Bing search using Falla
+  - [x] `duckduckgo-falla`: DuckDuckGo search using Falla
+  - [x] `yahoo-falla`: Yahoo search using Falla
+  - [x] `qwant-falla`: Qwant search using Falla
+  - [x] And other engines (Aol, Ask, Dogpile, Gibiru, Mojeek, Yandex)
+
+- [x] Fix linting errors in the codebase:
+  - [x] Replace `os.path.abspath()` with `Path.resolve()` in `google.py`
+  - [x] Replace `os.path.exists()` with `Path.exists()` in `google.py`
+  - [x] Replace insecure usage of temporary file directory `/tmp` with `tempfile.gettempdir()` in `test_google_falla_debug.py`
+  - [x] Replace `os.path.join()` with `Path` and the `/` operator in `test_google_falla_debug.py`
+  - [x] Remove unused imports (`os` and `NavigableString`) from `google.py`
+
+
+2025-03-04 05:58:08 - 
+📦 Repomix v0.2.29
+
+No custom config found at repomix.config.json or global config at /Users/adam/.config/repomix/repomix.config.json.
+You can add a config file for additional settings. Please check https://github.com/yamadashy/repomix for more information.
+⠙ Collecting files...
+[2K[1A[2K[G⠹ Collecting files...
+[2K[1A[2K[G⠸ Collecting files...
+[2K[1A[2K[G⠼ Collect file... (2/99) .cursor/rules/cleanup.mdc
+[2K[1A[2K[G⠴ Collect file... (5/99) .github/workflows/release.yml
+[2K[1A[2K[G⠦ Collect file... (5/99) .github/workflows/release.yml
+[2K[1A[2K[G⠧ Collect file... (5/99) .github/workflows/release.yml
+[2K[1A[2K[G⠇ Collect file... (5/99) .github/workflows/release.yml
+[2K[1A[2K[G⠏ Collect file... (5/99) .github/workflows/release.yml
+[2K[1A[2K[G⠋ Collect file... (5/99) .github/workflows/release.yml
+[2K[1A[2K[G⠙ Collect file... (5/99) .github/workflows/release.yml
+[2K[1A[2K[G⠹ Collect file... (5/99) .github/workflows/release.yml
+[2K[1A[2K[G⠸ Collect file... (5/99) .github/workflows/release.yml
+[2K[1A[2K[G⠼ Collect file... (5/99) .github/workflows/release.yml
+[2K[1A[2K[G⠴ Collect file... (5/99) .github/workflows/release.yml
+[2K[1A[2K[G⠦ Collect file... (5/99) .github/workflows/release.yml
+[2K[1A[2K[G⠧ Collect file... (5/99) .github/workflows/release.yml
+[2K[1A[2K[G⠇ Collect file... (5/99) .github/workflows/release.yml
+[2K[1A[2K[G⠏ Collect file... (5/99) .github/workflows/release.yml
+[2K[1A[2K[G⠋ Collect file... (5/99) .github/workflows/release.yml
+[2K[1A[2K[G⠙ Collect file... (5/99) .github/workflows/release.yml
+[2K[1A[2K[G⠹ Collect file... (5/99) .github/workflows/release.yml
+[2K[1A[2K[G⠸ Collect file... (5/99) .github/workflows/release.yml
+[2K[1A[2K[G⠼ Collect file... (5/99) .github/workflows/release.yml
+[2K[1A[2K[G⠴ Collect file... (5/99) .github/workflows/release.yml
+[2K[1A[2K[G⠦ Collect file... (5/99) .github/workflows/release.yml
+[2K[1A[2K[G⠧ Collect file... (5/99) .github/workflows/release.yml
+[2K[1A[2K[G⠇ Collect file... (5/99) .github/workflows/release.yml
+[2K[1A[2K[G⠏ Collect file... (5/99) .github/workflows/release.yml
+[2K[1A[2K[G⠋ Collect file... (5/99) .github/workflows/release.yml
+[2K[1A[2K[G⠙ Collect file... (5/99) .github/workflows/release.yml
+[2K[1A[2K[G⠹ Collect file... (5/99) .github/workflows/release.yml
+[2K[1A[2K[G⠸ Collect file... (5/99) .github/workflows/release.yml
+[2K[1A[2K[G⠼ Collect file... (7/99) debug_output/qwant_analysis.txt
+[2K[1A[2K[G⠴ Collect file... (12/99) debug_output/yahoo_screenshot.png
+[2K[1A[2K[G⠦ Collect file... (17/99) resources/pplx/pplx_urls.txt
+[2K[1A[2K[G⠧ Collect file... (20/99) resources/you/you_news.txt
+[2K[1A[2K[G⠇ Collect file... (59/99) src/twat_search/web/api.py
+[2K[1A[2K[G⠏ Running security check...
+[2K[1A[2K[G⠋ Running security check...
+[2K[1A[2K[G⠙ Running security check... (5/97) .github/workflows/release.yml
+[2K[1A[2K[G⠹ Running security check... (5/97) .github/workflows/release.yml
+[2K[1A[2K[G⠸ Running security check... (16/97) resources/pplx/pplx.md
+[2K[1A[2K[G⠼ Running security check... (85/97) google_debug_Python_programming_language.htm
+l
+[2K[1A[2K[1A[2K[G⠴ Processing files...
+[2K[1A[2K[G⠦ Processing files...
+[2K[1A[2K[G⠧ Processing file... (25/96) src/twat_search/web/engines/lib_falla/core/dogpile.
+py
+[2K[1A[2K[1A[2K[G⠇ Processing file... (34/96) src/twat_search/web/engines/lib_falla/core/startpag
+e.py
+[2K[1A[2K[1A[2K[G⠏ Processing file... (49/96) src/twat_search/web/engines/google_scraper.py
+[2K[1A[2K[G⠋ Processing file... (61/96) src/twat_search/web/models.py
+[2K[1A[2K[G⠙ Writing output file...
+[2K[1A[2K[G⠹ Calculating metrics...
+[2K[1A[2K[G⠸ Calculating metrics...
+[2K[1A[2K[G⠼ Calculating metrics...
+[2K[1A[2K[G⠴ Calculating metrics...
+[2K[1A[2K[G⠦ Calculating metrics...
+[2K[1A[2K[G⠧ Calculating metrics...
+[2K[1A[2K[G⠇ Calculating metrics... (2/96) .cursor/rules/cleanup.mdc
+[2K[1A[2K[G⠏ Calculating metrics... (8/96) debug_output/yahoo_analysis.txt
+[2K[1A[2K[G⠋ Calculating metrics... (9/96) debug_output/yahoo_content.html
+[2K[1A[2K[G⠙ Calculating metrics... (14/96) resources/pplx/pplx_urls.txt
+[2K[1A[2K[G⠹ Calculating metrics... (17/96) resources/you/you_news.txt
+[2K[1A[2K[G⠸ Calculating metrics... (56/96) src/twat_search/web/api.py
+[2K[1A[2K[G⠼ Calculating metrics... (95/96) TODO.md
+[2K[1A[2K[G✔ Packing completed successfully!
+
+📈 Top 5 Files by Character Count and Token Count:
+──────────────────────────────────────────────────
+1.  debug_output/qwant_content.html (102,253 chars, 32,062 tokens)
+2.  debug_output/yahoo_content.html (90,485 chars, 33,724 tokens)
+3.  resources/brave/brave.md (66,964 chars, 16,684 tokens)
+4.  resources/you/you_news.md (58,202 chars, 19,062 tokens)
+5.  resources/you/you.md (55,634 chars, 13,005 tokens)
+
+🔎 Security Check:
+──────────────────
+1 suspicious file(s) detected and excluded from the output:
+1. .specstory/history.txt
+   - found OpenAI API token: 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
+
+These files have been excluded from the output for security reasons.
+Please review these files for potential sensitive information.
+
+📊 Pack Summary:
+────────────────
+  Total Files: 96 files
+  Total Chars: 679,876 chars
+ Total Tokens: 191,181 tokens
+       Output: twat_search.txt
+     Security: 1 suspicious file(s) detected and excluded
+
+🎉 All Done!
+Your repository has been successfully packed.
+
+💡 Repomix is now available in your browser! Try it at https://repomix.com
+
+2025-03-04 05:58:09 - Repository content mixed into twat_search.txt
