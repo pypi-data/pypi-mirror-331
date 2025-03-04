@@ -1,0 +1,27 @@
+default_app_config = 'djangae.contrib.googleauth.apps.GoogleauthConfig'
+
+_CLIENT_ID_SETTING = "GOOGLEAUTH_CLIENT_ID"
+_CLIENT_SECRET_SETTING = "GOOGLEAUTH_CLIENT_SECRET"
+_DEFAULT_SCOPES_SETTING = "GOOGLEAUTH_OAUTH_SCOPES"
+_DEFAULT_SCOPES_SETTING = "GOOGLEAUTH_OAUTH_SCOPES"
+_OAUTH_REDIRECT_HOST = "GOOGLEAUTH_OAUTH_REDIRECT_HOST"
+_IAP_AUDIENCE = "GOOGLEAUTH_IAP_JWT_AUDIENCE"
+_JWT_SIGNING_ENABLED_SETTING = "GOOGLEAUTH_IAP_JWT_ENABLED"
+
+_GOOG_AUTHENTICATED_USER_ID_HEADER = "HTTP_X_GOOG_AUTHENTICATED_USER_ID"
+_GOOG_AUTHENTICATED_USER_EMAIL_HEADER = "HTTP_X_GOOG_AUTHENTICATED_USER_EMAIL"
+_GOOG_JWT_ASSERTION_HEADER = "HTTP_X_GOOG_IAP_JWT_ASSERTION"
+
+_SCOPE_SESSION_KEY = "_googleauth_scopes_requested"
+
+
+def _stash_scopes(request, scopes, offline):
+    """
+        Stores requested scopes in the session
+    """
+
+    request.session[_SCOPE_SESSION_KEY] = (scopes, offline)
+
+
+def _pop_scopes(request):
+    return request.session.pop(_SCOPE_SESSION_KEY, ([], False))

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="canonical" href="https://potato-oss.gitlab.io/djangae/djangae/sandbox/">
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Local/remote management commands - Djangae Documentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Local/remote management commands";
+    var mkdocs_page_input_path = "sandbox.md";
+    var mkdocs_page_url = "/djangae/djangae/sandbox/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Djangae Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation & Deployment</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Local/remote management commands</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#running-commands-locally">Running Commands Locally</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../environment/">Environment</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../utils/">Utils</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../storage/">Storage backends</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../deferred/">Background Processing</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Contrib apps</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../googleauth/">Googleauth</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../contrib_search/">Search</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../pagination/">Pagination</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../backup/">Scheduled backups</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../security/">Security</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../locking/">Thread locking</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../contributing/">Contributing & Testing</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Djangae Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Local/remote management commands</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://gitlab.com/potato-oss/djangae/djangae/edit/master/docs/sandbox.md"
+          class="icon icon-gitlab"
+        > Edit on GitLab</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="localremote-management-commands">Local/remote management commands</h1>
+<p>If you set your manage.py up as described <a href="../installation/">in Installation</a>, Djangae will allow you to run management commands locally or remotely.</p>
+<h2 id="running-commands-locally">Running Commands Locally</h2>
+<p>Django management commands run as normal, e.g.</p>
+<pre><code>./manage.py shell
+</code></pre>
+<h1 id="local-server-port-configuration">Local Server Port Configuration</h1>
+<p>When you call <code>runserver</code> the following ports are used by default:</p>
+<ul>
+<li>The default module (the main webserver) runs on port 8000</li>
+<li>Additional modules (defined by the <code>DJANGAE_ADDITIONAL_MODULES</code> setting) will use sequential ports from 8001</li>
+<li>The API server runs at port 8010</li>
+<li>The admin server runs at port 8011</li>
+<li>The blobstore service (which is used for uploads locally) runs on port 8012</li>
+</ul>
+<p>If you override the base port (e.g. <code>./manage.py runserver localhost:9000</code>) then additional modules will use sequential
+ports from 9001+. The admin, api and blobstore ports will remain the same.</p>
+<p>If any ports are found to be in use, the port number will be incremented until a free one is found.</p>
+<h1 id="additional-modules">Additional modules</h1>
+<p>App Engine apps can be made up of multiple modules (the default being the one defined by app.yaml). If your
+project makes use of additional modules then you can specify a list of yaml file paths in the <code>DJANGAE_ADDITIONAL_MODULES</code>
+and these will be forwarded to the dev_appserver when <code>runserver</code> is called</p>
+<h2 id="running-commands-remotely">Running Commands Remotely</h2>
+<p>Djangae also lets you run management commands which connect remotely to the Datastore of your deployed App Engine application.  To do this you need to:</p>
+<p>Add the <code>remote_api</code> built-in to app.yaml, and deploy that change.</p>
+<pre><code>builtins:
+  - remote_api: on
+</code></pre>
+<p>You also need to ensure that the <code>application</code> in app.yaml is set to the application which you wish to connect to.</p>
+<p>Then run your management command specifying the <code>remote</code> sandbox.</p>
+<pre><code>./manage.py --sandbox=remote shell
+</code></pre>
+<p>This will use your <strong>local</strong> Python code, but all database operations will be performed on the remote Datastore.</p>
+<p>Additionally, you can specify the application to run commands against by providing an <code>--app_id</code>. Eg</p>
+<p>./manage.py --sandbox=remote --app_id=myapp shell  # Starts a remote shell with the "myapp" instance</p>
+<h3 id="deferring-tasks-remotely">Deferring Tasks Remotely</h3>
+<p>App Engine tasks are stored in the Datastore, so when you are in the remote shell any tasks that you defer will run on the live application, not locally.  For example:</p>
+<pre><code>./manage.py --sandbox=remote shell
+&gt;&gt;&gt; from my_code import my_function
+&gt;&gt;&gt; from google.appengine.ext.deferred import defer
+&gt;&gt;&gt; defer(my_function, arg1, arg2, _queue="queue_name")
+</code></pre>
+<h1 id="testing">Testing</h1>
+<p>Along with the local/remote sandboxes, Djangae ships with a test sandbox. This should be called explicitly
+from your manage.py when tests are being run. This sandbox sets up the bare minimum to use the Datastore
+connector (the memcache and Datastore stubs only). This prevents accesses to the Datastore from throwing an error
+when you do so outside a test case (e.g. from <code>settings.py</code>).</p>
+<p>Your tests should setup and teardown a full testbed instance (see <code>DjangaeDiscoverRunner</code> and the nose plugin).</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../environment/" class="btn btn-neutral float-right" title="Environment">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../installation/" class="btn btn-neutral" title="Installation & Deployment"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://gitlab.com/potato-oss/djangae/djangae/" class="icon icon-gitlab" style="color: #fcfcfc"> GitLab</a>
+        </span>
+    
+    
+      <span><a href="../installation/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../environment/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
