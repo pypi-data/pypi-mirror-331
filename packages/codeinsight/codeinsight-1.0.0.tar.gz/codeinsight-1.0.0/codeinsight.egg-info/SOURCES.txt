@@ -1,0 +1,14 @@
+README.md
+setup.py
+codeanalyzer/__init__.py
+codeanalyzer/analyzer.py
+codeanalyzer/cli.py
+codeanalyzer/test.py
+codeinsight.egg-info/PKG-INFO
+codeinsight.egg-info/SOURCES.txt
+codeinsight.egg-info/dependency_links.txt
+codeinsight.egg-info/entry_points.txt
+codeinsight.egg-info/not-zip-safe
+codeinsight.egg-info/requires.txt
+codeinsight.egg-info/top_level.txt
+tests/test_analyzer.py
