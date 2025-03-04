@@ -1,0 +1,2 @@
+[console_scripts]
+kontik1337 = kontik1337:main
