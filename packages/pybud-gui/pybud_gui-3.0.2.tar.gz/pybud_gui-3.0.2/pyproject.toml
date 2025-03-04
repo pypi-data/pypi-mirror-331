@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools >= 61.0", "setuptools-rust"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pybud-gui"
+version = "3.0.2"
+
+dependencies = [
+  "readchar",
+]
+requires-python = ">= 3.10"
+authors = [
+  {name = "Amirali Mollaei", email = "me.amiralimollaei@gmail.com"},
+]
+description = "A library for creating GUIs in console, with a Rust backend, with tons of different modules, such as `Session`, `Window`s, `Widget`s, and many more!"
+license = {text = "BSD 4-clause License"}
+classifiers = [
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: MacOS",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+readme = "README.md"
+
+[tool.setuptools.packages]
+# Pure Python packages/modules
+find = { where = ["pybud"] }
+
+[[tool.setuptools-rust.ext-modules]]
+# Private Rust extension module to be nested into the Python package
+target = "pybud._drawer"  # The last part of the name (e.g. "_lib") has to match lib.name in Cargo.toml,
+                             # but you can add a prefix to nest it inside of a Python package.
