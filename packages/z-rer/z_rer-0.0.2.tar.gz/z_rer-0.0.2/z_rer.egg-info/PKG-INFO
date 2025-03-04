@@ -1,0 +1,24 @@
+Metadata-Version: 2.2
+Name: z-rer
+Version: 0.0.2
+Summary: rer is a thin wrapper around pip that automatically handles requirements txt files.
+Author-email: Marko Zolo Gozano Untalan <mzguntalan@gmail.com>
+License: Apache-2.0
+Project-URL: Repository, https://github.com/mzguntalan/z-rer
+Project-URL: Homepage, https://github.com/mzguntalan/z-rer
+Keywords: package manager,pip,resolver
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pip
+
+# z-rer
+
+Useful wrapper for pip

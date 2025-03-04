@@ -1,0 +1,2 @@
+[console_scripts]
+rer = rer:main

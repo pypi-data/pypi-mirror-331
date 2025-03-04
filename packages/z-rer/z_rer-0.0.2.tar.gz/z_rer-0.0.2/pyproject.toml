@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "z-rer"
+version = "0.0.2"
+authors = [
+    {name="Marko Zolo Gozano Untalan", email="mzguntalan@gmail.com"},
+]
+description = "rer is a thin wrapper around pip that automatically handles requirements txt files."
+readme = "README.md"
+requires-python = ">=3.8"
+keywords = ["package manager", "pip", "resolver"]
+dependencies = ["pip"] 
+license = {text="Apache-2.0"}
+classifiers=[
+        "Development Status :: 3 - Alpha",
+        "License :: OSI Approved :: Apache Software License",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
+        "Programming Language :: Python :: 3.13",
+        "Programming Language :: Python :: 3.14",
+    ]
+
+
+
+[project.scripts]
+rer = "rer:main"
+
+[project.urls]
+Repository = "https://github.com/mzguntalan/z-rer"
+Homepage = "https://github.com/mzguntalan/z-rer"
