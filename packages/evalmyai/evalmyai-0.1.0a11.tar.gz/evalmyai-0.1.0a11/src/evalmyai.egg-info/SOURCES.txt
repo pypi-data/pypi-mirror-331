@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+src/evalmyai/__init__.py
+src/evalmyai/_evalmyai.py
+src/evalmyai/_utils.py
+src/evalmyai/_validators.py
+src/evalmyai.egg-info/PKG-INFO
+src/evalmyai.egg-info/SOURCES.txt
+src/evalmyai.egg-info/dependency_links.txt
+src/evalmyai.egg-info/requires.txt
+src/evalmyai.egg-info/top_level.txt
+tests/test_evalmyai.py
+tests/test_validators.py
