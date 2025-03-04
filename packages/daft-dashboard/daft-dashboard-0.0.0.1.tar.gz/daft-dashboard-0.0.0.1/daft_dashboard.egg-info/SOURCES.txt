@@ -1,0 +1,6 @@
+README.md
+setup.py
+daft_dashboard.egg-info/PKG-INFO
+daft_dashboard.egg-info/SOURCES.txt
+daft_dashboard.egg-info/dependency_links.txt
+daft_dashboard.egg-info/top_level.txt
