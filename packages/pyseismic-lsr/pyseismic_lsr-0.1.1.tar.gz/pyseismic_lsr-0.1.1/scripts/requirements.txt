@@ -1,0 +1,8 @@
+numpy 
+pandas
+ir_measures
+termcolor
+psutil
+toml
+ranx 
+pytrec_eval
