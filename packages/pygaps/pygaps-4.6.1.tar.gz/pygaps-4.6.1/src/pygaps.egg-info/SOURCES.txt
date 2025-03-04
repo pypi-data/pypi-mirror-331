@@ -1,0 +1,315 @@
+.editorconfig
+.gitignore
+.readthedocs.yaml
+.release.info
+AUTHORS.rst
+CHANGELOG.rst
+CITATION.cff
+CONTRIBUTING.rst
+LICENSE
+README.rst
+pyproject.toml
+.github/dependabot.yml
+.github/ISSUE_TEMPLATE/bug_report.md
+.github/ISSUE_TEMPLATE/feature_request.md
+.github/workflows/CI.yaml
+ci/[all-deprecated]
+ci/bootstrap.py
+ci/ci_old/appveyor-download.py
+ci/ci_old/appveyor-with-compiler.cmd
+ci/ci_old/windows-conda-bootstrap.ps1
+ci/ci_old/templates/.travis.yml
+ci/ci_old/templates/appveyor.yml
+ci/templates/pyproject.toml
+docs/authors.rst
+docs/changelog.rst
+docs/cli.rst
+docs/conf.py
+docs/contributing.rst
+docs/docutils.conf
+docs/favicon.ico
+docs/favicon.png
+docs/favicon.svg
+docs/index.rst
+docs/indices.rst
+docs/installation.rst
+docs/logo.png
+docs/logo.svg
+docs/spelling_wordlist.txt
+docs/_static/css/custom.css
+docs/_templates/layout.html
+docs/examples/__init__.py
+docs/examples/alphas.ipynb
+docs/examples/area_calcs.ipynb
+docs/examples/characterisation.rst
+docs/examples/database.ipynb
+docs/examples/dr_da_plots.ipynb
+docs/examples/enthalpy_sorption.ipynb
+docs/examples/iast.ipynb
+docs/examples/import.ipynb
+docs/examples/index.rst
+docs/examples/initial_enthalpy.ipynb
+docs/examples/initial_henryc.ipynb
+docs/examples/inspection.ipynb
+docs/examples/modelling.ipynb
+docs/examples/novel.png
+docs/examples/parsing.ipynb
+docs/examples/plotting.ipynb
+docs/examples/psd.ipynb
+docs/examples/quickstart.ipynb
+docs/examples/test.png
+docs/examples/tplot.ipynb
+docs/examples/data/carbon_x1_n2.json
+docs/examples/data/isotherm.json
+docs/examples/data/calorimetry/HKUST-1(Cu) CO2 303K.json
+docs/examples/data/calorimetry/Takeda 5A CO2 303K.json
+docs/examples/data/characterisation/MCM-41 N2 77K.json
+docs/examples/data/characterisation/NaY N2 77K.json
+docs/examples/data/characterisation/SiO2 N2 77K.json
+docs/examples/data/characterisation/Takeda 5A N2 77K.json
+docs/examples/data/characterisation/UiO-66(Zr) N2 77K.json
+docs/examples/data/enth_isosteric/BAX 1500 C4H10 298K.json
+docs/examples/data/enth_isosteric/BAX 1500 C4H10 323K.json
+docs/examples/data/enth_isosteric/BAX 1500 C4H10 348K.json
+docs/examples/data/enth_whittaker/whittaker_iso_1.aiff
+docs/examples/data/iast/MOF-5(Zn) C2H6 298K.json
+docs/examples/data/iast/MOF-5(Zn) CH4 298K.json
+docs/examples/data/parsing/aif/ar_test_77k.aif
+docs/examples/data/parsing/aif/dmof_C2H6_298k.aif
+docs/examples/data/parsing/aif/dut-8_etoh_298k.aif
+docs/examples/data/parsing/commercial/3p/MOF_N2_77K.xlsx
+docs/examples/data/parsing/commercial/3p/README.txt
+docs/examples/data/parsing/commercial/bel/DUT-13-CH4-190K.DAT
+docs/examples/data/parsing/commercial/bel/README.txt
+docs/examples/data/parsing/commercial/mic/README.txt
+docs/examples/data/parsing/commercial/mic/Sample_C.xls
+docs/examples/data/parsing/commercial/qnt/DUT-6_N2_77K (Raw Analysis Data).txt
+docs/examples/data/parsing/commercial/qnt/README
+docs/examples/data/parsing/commercial/smsdvs/13X water 30c.xlsx
+docs/examples/data/parsing/commercial/smsdvs/README.txt
+docs/examples/data/parsing/csv/HKUST-1(Cu) CO2 303K.csv
+docs/examples/data/parsing/csv/MCM-41 N2 77K.csv
+docs/examples/data/parsing/excel/HKUST-1(Cu) CO2 303K.xls
+docs/examples/data/parsing/excel/MCM-41 N2 77K.xls
+docs/examples/data/parsing/json/HKUST-1(Cu) CO2 303K.json
+docs/examples/data/parsing/json/MCM-41 N2 77K.json
+docs/figures/SMS-Logo.jpg
+docs/figures/db_schema.png
+docs/figures/svp_graph.png
+docs/figures/vle_graph.png
+docs/files/isotherm.aif
+docs/files/isotherm.csv
+docs/files/isotherm.json
+docs/files/isotherm.xls
+docs/manual/adsorbate.rst
+docs/manual/characterisation.rst
+docs/manual/eqstate.rst
+docs/manual/iast.rst
+docs/manual/index.rst
+docs/manual/isotherm.rst
+docs/manual/material.rst
+docs/manual/modelling.rst
+docs/manual/parsing.rst
+docs/manual/parsing_modes.rst
+docs/manual/plotting.rst
+docs/manual/sqlitedb.rst
+docs/manual/units.rst
+docs/reference/characterisation.rst
+docs/reference/core.rst
+docs/reference/fitting.rst
+docs/reference/iast.rst
+docs/reference/index.rst
+docs/reference/parsing.rst
+docs/reference/plotting.rst
+docs/reference/units.rst
+docs/reference/utilities.rst
+docs/reference/characterisation/alphas_plot.rst
+docs/reference/characterisation/area_bet.rst
+docs/reference/characterisation/area_lang.rst
+docs/reference/characterisation/dubinin.rst
+docs/reference/characterisation/enthalpy_sorption.rst
+docs/reference/characterisation/initial_hk.rst
+docs/reference/characterisation/psd_kernel.rst
+docs/reference/characterisation/psd_meso.rst
+docs/reference/characterisation/psd_micro.rst
+docs/reference/characterisation/t_plot.rst
+docs/reference/characterisation/thickness_models.rst
+docs/reference/core/adsorbate.rst
+docs/reference/core/isotherms.rst
+docs/reference/core/material.rst
+src/pygaps/__init__.py
+src/pygaps/_version.py
+src/pygaps/logging.py
+src/pygaps.egg-info/PKG-INFO
+src/pygaps.egg-info/SOURCES.txt
+src/pygaps.egg-info/dependency_links.txt
+src/pygaps.egg-info/entry_points.txt
+src/pygaps.egg-info/requires.txt
+src/pygaps.egg-info/top_level.txt
+src/pygaps.egg-info/zip-safe
+src/pygaps/characterisation/__init__.py
+src/pygaps/characterisation/alphas_plots.py
+src/pygaps/characterisation/area_bet.py
+src/pygaps/characterisation/area_lang.py
+src/pygaps/characterisation/dr_da_plots.py
+src/pygaps/characterisation/enth_sorp_clapeyron.py
+src/pygaps/characterisation/enth_sorp_initial.py
+src/pygaps/characterisation/enth_sorp_whittaker.py
+src/pygaps/characterisation/initial_henry.py
+src/pygaps/characterisation/models_hk.py
+src/pygaps/characterisation/models_kelvin.py
+src/pygaps/characterisation/models_thickness.py
+src/pygaps/characterisation/psd_kernel.py
+src/pygaps/characterisation/psd_meso.py
+src/pygaps/characterisation/psd_micro.py
+src/pygaps/characterisation/t_plots.py
+src/pygaps/cli/__init__.py
+src/pygaps/cli/cli.py
+src/pygaps/core/__init__.py
+src/pygaps/core/adsorbate.py
+src/pygaps/core/baseisotherm.py
+src/pygaps/core/material.py
+src/pygaps/core/modelisotherm.py
+src/pygaps/core/pointisotherm.py
+src/pygaps/data/__init__.py
+src/pygaps/data/adsorbate_props.json
+src/pygaps/data/adsorbates.json
+src/pygaps/data/default.db
+src/pygaps/data/kernels/DFT-N2-77K-carbon-slit.csv
+src/pygaps/data/stdiso/Cabot BP280 carbon black.csv
+src/pygaps/data/stdiso/LiChrospher Si-1000 silica.csv
+src/pygaps/graphing/__init__.py
+src/pygaps/graphing/calc_graphs.py
+src/pygaps/graphing/iast_graphs.py
+src/pygaps/graphing/isotherm_graphs.py
+src/pygaps/graphing/labels.py
+src/pygaps/graphing/model_graphs.py
+src/pygaps/graphing/mpl_styles.py
+src/pygaps/graphing/prediction_graphs.py
+src/pygaps/modelling/__init__.py
+src/pygaps/modelling/base_model.py
+src/pygaps/modelling/bet.py
+src/pygaps/modelling/chemiphysisorption.py
+src/pygaps/modelling/da.py
+src/pygaps/modelling/dr.py
+src/pygaps/modelling/dslangmuir.py
+src/pygaps/modelling/dstoth.py
+src/pygaps/modelling/fhvst.py
+src/pygaps/modelling/freundlich.py
+src/pygaps/modelling/gab.py
+src/pygaps/modelling/henry.py
+src/pygaps/modelling/jensenseaton.py
+src/pygaps/modelling/langmuir.py
+src/pygaps/modelling/quadratic.py
+src/pygaps/modelling/temkinapprox.py
+src/pygaps/modelling/toth.py
+src/pygaps/modelling/tslangmuir.py
+src/pygaps/modelling/virial.py
+src/pygaps/modelling/wvst.py
+src/pygaps/parsing/__init__.py
+src/pygaps/parsing/aif.py
+src/pygaps/parsing/csv.py
+src/pygaps/parsing/excel.py
+src/pygaps/parsing/isodb.py
+src/pygaps/parsing/json.py
+src/pygaps/parsing/sqlite.py
+src/pygaps/prediction/__init__.py
+src/pygaps/prediction/enthalpy_to_isotherm.py
+src/pygaps/prediction/iast.py
+src/pygaps/units/__init__.py
+src/pygaps/units/converter_mode.py
+src/pygaps/units/converter_unit.py
+src/pygaps/utilities/__init__.py
+src/pygaps/utilities/coolprop_utilities.py
+src/pygaps/utilities/exceptions.py
+src/pygaps/utilities/hashgen.py
+src/pygaps/utilities/isotherm_interpolator.py
+src/pygaps/utilities/math_utilities.py
+src/pygaps/utilities/pygaps_utilities.py
+src/pygaps/utilities/python_utilities.py
+src/pygaps/utilities/sqlite_db_creator.py
+src/pygaps/utilities/sqlite_db_pragmas.py
+src/pygaps/utilities/sqlite_utilities.py
+src/pygaps/utilities/string_utilities.py
+tests/__init__.py
+tests/conftest.py
+tests/test_utils.py
+tests/characterisation/__init__.py
+tests/characterisation/conftest.py
+tests/characterisation/test_alphas_plots.py
+tests/characterisation/test_area_bet.py
+tests/characterisation/test_area_langmuir.py
+tests/characterisation/test_dr_da_plots.py
+tests/characterisation/test_enth_sorp_clapeyron.py
+tests/characterisation/test_enth_sorp_initial.py
+tests/characterisation/test_enth_sorp_whittaker.py
+tests/characterisation/test_initial_henry.py
+tests/characterisation/test_models_hk.py
+tests/characterisation/test_models_kelvin.py
+tests/characterisation/test_models_thickness.py
+tests/characterisation/test_psd_kernel.py
+tests/characterisation/test_psd_meso.py
+tests/characterisation/test_psd_micro.py
+tests/characterisation/test_t_plots.py
+tests/cli/__init__.py
+tests/cli/test_cli.py
+tests/core/__init__.py
+tests/core/conftest.py
+tests/core/test_adsorbate.py
+tests/core/test_baseisotherm.py
+tests/core/test_material.py
+tests/core/test_modelisotherm.py
+tests/core/test_pointisotherm.py
+tests/graphing/__init__.py
+tests/graphing/test_calc_graphs.py
+tests/graphing/test_iast_graphs.py
+tests/graphing/test_iso_graphs.py
+tests/modelling/__init__.py
+tests/modelling/conftest.py
+tests/modelling/test_models_isotherm.py
+tests/parsing/__init__.py
+tests/parsing/conftest.py
+tests/parsing/test_aif.py
+tests/parsing/test_csv.py
+tests/parsing/test_excel.py
+tests/parsing/test_isodb.py
+tests/parsing/test_json.py
+tests/parsing/test_sqlite_db.py
+tests/prediction/__init__.py
+tests/prediction/conftest.py
+tests/prediction/test_enthalpy_to_isotherm.py
+tests/prediction/test_iast.py
+tests/test_data/calorimetry/HKUST-1(Cu) CO2 303K.json
+tests/test_data/calorimetry/Takeda 5A CO2 303K.json
+tests/test_data/characterisation/MCM-41 N2 77K.json
+tests/test_data/characterisation/NaY N2 77K.json
+tests/test_data/characterisation/SiO2 N2 77K.json
+tests/test_data/characterisation/Takeda 5A N2 77K.json
+tests/test_data/characterisation/UiO-66(Zr) N2 77K.json
+tests/test_data/enth_isosteric/BAX 1500 C4H10 298K.json
+tests/test_data/enth_isosteric/BAX 1500 C4H10 323K.json
+tests/test_data/enth_isosteric/BAX 1500 C4H10 348K.json
+tests/test_data/enth_whittaker/whittaker_iso_1.aiff
+tests/test_data/iast/MOF-5(Zn) C2H6 298K.json
+tests/test_data/iast/MOF-5(Zn) CH4 298K.json
+tests/test_data/parsing/aif/AC Ar 77K.aif
+tests/test_data/parsing/aif/DMOF C2H6 298K.aif
+tests/test_data/parsing/aif/DUT-8 EtOH 298K.aif
+tests/test_data/parsing/csv/HKUST-1(Cu) CO2 303.0.csv
+tests/test_data/parsing/csv/MCM-41 N2 77.0.csv
+tests/test_data/parsing/excel/HKUST-1(Cu) CO2 303.0.xls
+tests/test_data/parsing/excel/MCM-41 N2 77.0.xls
+tests/test_data/parsing/json/AC Ar 77K.json
+tests/test_data/parsing/json/AC BAX1500 butane 298K.json
+tests/test_data/parsing/json/DUT-8 EtOH 298K.json
+tests/test_data/parsing/json/HKUST-1(Cu) CO2 303K.json
+tests/test_data/parsing/json/MCM-41 N2 77K.json
+tests/test_data/parsing/json/SURF N2 77K.json
+tests/test_data/parsing/json/UiO-66(Zr) N2 77K.json
+tests/test_data/parsing/nist/nist_iso.json
+tests/utilities/__init__.py
+tests/utilities/test_converter.py
+tests/utilities/test_coolprop_interaction.py
+tests/utilities/test_python_utilities.py
+tests/utilities/test_sqlite_utilities.py
+tests/utilities/test_string_utilities.py

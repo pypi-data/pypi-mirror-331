@@ -1,0 +1,237 @@
+# General project info
+[project]
+name = "pygaps"
+dynamic = ["version"]
+description = "Framework for processing gas adsorption isotherms"
+readme = "README.rst"
+keywords = ["adsorption", "isotherm", "characterization", "processing", "material"]
+requires-python = ">=3.8"
+license = {file = "LICENSE"}
+authors = [
+    {name = "Paul Iacomi", email = "mail@pauliacomi.com"}
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Chemistry",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+dependencies = [
+    "numpy>=1.16.5",
+    "scipy>=1.5.0",
+    "pandas>=1.1.0",
+    "matplotlib>=3.3.0",
+    "coolprop>=6.0.0; python_version < '3.13'",
+    "coolprop>=6.7.0; python_version >= '3.13'",
+    "adsorption-file-parser >= 0.2.6",
+    "xlrd>=1.1",
+    "xlwt>=1.3",
+    "openpyxl",
+    "gemmi",
+    "requests",
+    "importlib_resources; python_version < '3.9'",
+]
+
+[project.optional-dependencies]
+all = ["pygaps[dev,docs,test]"]
+dev = [
+    "pygaps[test,docs]",
+    "codecov",
+    "yapf",
+    "isort",
+    "pylint",
+    "flake8",
+    "flake8-pyproject",
+    "autopep8",
+    "pydocstyle",
+    "pygments",
+    "docutils",
+]
+docs = [
+    "pygments >= 2.11",
+    "docutils >= 0.11",
+    "doc8",
+    "pandoc",
+    "restructuredtext-lint",
+    "ipykernel",
+    "sphinx >= 4.0",
+    "sphinx-copybutton",
+    "nbsphinx",
+    "furo",
+]
+test = [
+    "pytest>=6.0.0",
+    "pytest-cov",
+    "coverage[toml]",
+    "nose",
+]
+
+# Entry points for CLI
+[project.scripts]
+pygaps = "pygaps.cli:main"
+
+# Other project info
+[project.urls]
+Homepage = "https://github.com/pauliacomi/pygaps"
+Repository = "https://github.com/pauliacomi/pygaps.git"
+Documentation = "https://pygaps.readthedocs.io"
+
+
+# build system: setuptools
+[build-system]
+requires = [
+    "setuptools>=61.0.0",
+    "wheel",
+    "setuptools_scm[toml]>=6.2",
+]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+zip-safe = true
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+pygaps = ["*.txt", "*.rst"]
+"pygaps.data" = ["*", "**"]
+
+# versioning: setuptools_scm
+[tool.setuptools_scm]
+write_to = "src/pygaps/_version.py"
+local_scheme = 'dirty-tag'
+fallback_version = '4.3.0'
+
+
+# linting: pylint
+[tool.pylint.basic]
+extension-pkg-whitelist = [
+    "numpy",
+    "pandas",
+    "matplotlib",
+]
+[tool.pylint.messages_control]
+disable = [
+    "logging-fstring-interpolation", # fstrings are fast
+    "import-outside-toplevel", # required for optimisations
+    "wrong-import-position", # often done through code for optimisations
+    "too-many-instance-attributes", # we don't need these
+    "too-many-branches", # we don't need these
+    "too-many-locals", # we don't need these
+    "too-many-arguments", # we don't need these
+    "too-many-statements", # we don't need these
+    "invalid-name", # we don't need these
+]
+
+# linting: flake8
+[tool.flake8]
+max-line-length = 140
+ignore = ["E402", "W503", "W504", "E126", "E731"]
+exclude = [".tox", ".eggs", "ci/templates", "build", "dist"]
+docstring_style = "numpy"
+
+# linting: pydocstyle
+[tool.pydocstyle]
+convention = "numpy"
+match-dir = "src\\/.*"
+
+
+# analysis: pyright
+[tool.pyright]
+
+
+# formatting: yapf
+[tool.yapf]
+based_on_style = "pep8"
+dedent_closing_brackets = true
+coalesce_brackets = true
+split_complex_comprehension = true
+split_before_dot = true
+
+# formatting: isort
+[tool.isort]
+force_single_line = true
+line_length = 120
+known_first_party = "pygaps"
+default_section = "THIRDPARTY"
+forced_separate = "test_pygaps"
+skip = [".tox", ".eggs", "ci/templates", "build", "dist", "src/pygaps/_version.py"]
+
+
+# testing: pytest.py
+[tool.pytest.ini_options]
+testpaths = [
+    "tests",
+]
+norecursedirs = [
+    ".git",
+    ".tox",
+    ".env",
+    "dist",
+    "build",
+    "migrations",
+    ]
+python_files = [
+    "test_*.py",
+    "*_test.py",
+    "tests.py",
+]
+addopts = [
+    "-ra",
+    "--cov",
+    "--cov-report=xml",
+    "--doctest-glob=\\*.rst",
+    "--tb=short",
+]
+markers = [
+    "core: core pygaps python functionality.",
+    "utilities: python and scientific tools/utilities.",
+    "characterisation: characterisation tests on isotherms.",
+    "modelling: model generation from isotherms.",
+    "graphing: plotting functionality testing.",
+    "parsing: parsing functionality testing.",
+    "okay: custom emtpy marker.",
+]
+filterwarnings = [
+    "ignore::UserWarning",
+]
+
+# testing: coverage.py
+[tool.coverage.run]
+branch = false
+source = [
+    "src",
+]
+omit = [
+    "*/tests/*",
+]
+parallel = true
+[tool.coverage.paths]
+source = [
+    "src",
+    "*/site-packages",
+]
+[tool.coverage.report]
+ignore_errors = true
+show_missing = true
+precision = 1
+omit = [
+    "*migrations*",
+]
+exclude_lines = [
+    "pragma: no cover",
+    "if self.debug",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.",
+]
