@@ -1,0 +1,8 @@
+README.md
+setup.py
+telebot_plugins/__init__.py
+telebot_plugins.egg-info/PKG-INFO
+telebot_plugins.egg-info/SOURCES.txt
+telebot_plugins.egg-info/dependency_links.txt
+telebot_plugins.egg-info/requires.txt
+telebot_plugins.egg-info/top_level.txt
