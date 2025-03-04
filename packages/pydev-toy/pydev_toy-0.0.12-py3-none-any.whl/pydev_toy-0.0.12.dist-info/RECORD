@@ -1,0 +1,11 @@
+pydev/__init__.py,sha256=3H2wSwFItJ0CVerbufpZpLEpBzIQ0-eaaLTLHDicmbU,55
+pydev/__main__.py,sha256=RuMAgYKzb_XBjavYrHY_Sbir7VNnScJLpoXsldPjoK4,91
+pydev/legacy.py,sha256=twN8hL77ddbgyIIE7iGp5G8L9hUQ8sVIg28M2KGDAV0,1967
+pydev/messages.py,sha256=lel3lmjwgIz0sR6Y3DFaq_7zDvTMMhX4TTqP_FjMmj0,176
+pydev/program.py,sha256=FJyYIV1iChIWjUptXd1pOk-B6CwTyxV-JjxYkY5WGXs,2617
+pydev/utils.py,sha256=FxQw2m9rQ2MIv32oxG_qezRBqIGpQHmwUVoASsJoBuM,3905
+pydev_toy-0.0.12.dist-info/METADATA,sha256=CBXnLfBe0NR8AJAKCR9v726HV1X6ZB6zdP-313Ghayk,2453
+pydev_toy-0.0.12.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pydev_toy-0.0.12.dist-info/entry_points.txt,sha256=L6H0Fwlj56gNrb5uL742o-PJu7qfzjhutweccfHPabk,37
+pydev_toy-0.0.12.dist-info/licenses/LICENSE.txt,sha256=DIlFPn0SByCQ9Yo17k9tT_lOnUI32CTC4DYG_hOsO5U,1080
+pydev_toy-0.0.12.dist-info/RECORD,,
