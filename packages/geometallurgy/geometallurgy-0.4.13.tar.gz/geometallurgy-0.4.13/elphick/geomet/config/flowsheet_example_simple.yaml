@@ -1,0 +1,25 @@
+FLOWSHEET:
+  flowsheet:
+    name: Flowsheet
+  streams:  # graph edges
+    Feed:
+      name: Feed
+      node_in: feed
+      node_out: screen
+    Coarse:
+      name: Coarse
+      node_in: screen
+      node_out: lump
+    Fine:
+      name: Fine
+      node_in: screen
+      node_out: fines
+  operations:  # graph nodes
+    feed:
+      name: feed
+    screen:
+      name: screen
+    lump:
+      name: lump
+    fines:
+      name: fines
