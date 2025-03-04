@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+chatterer/__init__.py
+chatterer/language_model.py
+chatterer.egg-info/PKG-INFO
+chatterer.egg-info/SOURCES.txt
+chatterer.egg-info/dependency_links.txt
+chatterer.egg-info/requires.txt
+chatterer.egg-info/top_level.txt
+chatterer/strategies/__init__.py
+chatterer/strategies/atom_of_thoughts.py
+chatterer/strategies/base.py
