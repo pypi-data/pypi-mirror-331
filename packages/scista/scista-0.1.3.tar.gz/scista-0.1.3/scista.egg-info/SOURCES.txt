@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+scista/__init__.py
+scista/article_fetcher.py
+scista.egg-info/PKG-INFO
+scista.egg-info/SOURCES.txt
+scista.egg-info/dependency_links.txt
+scista.egg-info/requires.txt
+scista.egg-info/top_level.txt
