@@ -1,0 +1,11 @@
+pillow>=8.0.0
+importlib-resources
+
+[modern]
+ttkbootstrap>=1.0
+
+[portals]
+
+[portals:sys_platform == "linux"]
+dbus-python
+pygobject
