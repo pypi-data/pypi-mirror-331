@@ -1,0 +1,10 @@
+sbrunner_hooks/__init__.py,sha256=CUhpFl4TpYSf079IEYKzQ2YcJgtNv0tNH-bnWi1OoQk,24
+sbrunner_hooks/canonicalize.py,sha256=znQdQi-9E6bVUqEQ3HoZ0JGrOn4v0LZp8qihU5pjaB0,9569
+sbrunner_hooks/copyright.py,sha256=z_GFenICBlPFN6JFteml4qzwY-Es715mIxW3qHHRJCQ,6399
+sbrunner_hooks/run_in_dir.py,sha256=PQtNver0oEZiS_Su29waXXSRx5oNEF0b6W-Aoy7qbEk,2194
+sbrunner_hooks/workflow_timeout.py,sha256=CgAV0qneB26X1epIMmNXiSKuHyzzDJKFBRyeRRmfxXw,1116
+sbrunner_hooks-1.4.0.dist-info/LICENSE,sha256=j5RYb7wtt4OW3M3iYmZpOeOLTft6eOPnEKK9yPFC_Us,1289
+sbrunner_hooks-1.4.0.dist-info/METADATA,sha256=SWrB2LkURfWKAp8zW7Jou9tUFOax9GSqEiNvkO5I0wI,2812
+sbrunner_hooks-1.4.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+sbrunner_hooks-1.4.0.dist-info/entry_points.txt,sha256=1-dfUTSJpnnhD3wS-onewhKvOFXosU4NFqLk_2Nd6XQ,222
+sbrunner_hooks-1.4.0.dist-info/RECORD,,
