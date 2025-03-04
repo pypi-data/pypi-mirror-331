@@ -1,0 +1,11 @@
+fast_langdetect-0.3.1.dist-info/METADATA,sha256=M6TmuvHW0rUKWickTa0Vd37mm-cOA1urFmWcg7XuuDE,6256
+fast_langdetect-0.3.1.dist-info/WHEEL,sha256=thaaA2w1JzcGC48WYufAs8nrYZjJm8LqNfnXFOFyCC4,90
+fast_langdetect-0.3.1.dist-info/entry_points.txt,sha256=6OYgBcLyFCUgeqLgnvMyOJxPCWzgy7se4rLPKtNonMs,34
+fast_langdetect-0.3.1.dist-info/licenses/LICENSE,sha256=8u28K1sYUp8UBl7JcpqtMJPvs4ppPu1GBrlyuO5FH6c,1065
+fast_langdetect-0.3.1.dist-info/licenses/NOTICE.MD,sha256=1iYkdzOKi9M3Vxw8cdMPerdDw3RsUucDbxcxDE74QZQ,186
+fast_langdetect/LICENSE,sha256=oIjKk21VnOkMTwO_x4t78BrL6tPd0rfN_IwtI3OdrYY,1070
+fast_langdetect/__init__.py,sha256=J8LoSk9n8jtr_w3032dRBEjs5njuymnXR-5-Mt_HI5I,796
+fast_langdetect/infer.py,sha256=ksEv0Tu3nqW19Zbsvo0OmQZdf5B3nFGEbijzpxRmhUM,14957
+fast_langdetect/resources/NOTICE.MD,sha256=b2DkJjHhvgete2IgyQBB_aQZ0MgfDBKQE8VPfHFsIeo,340
+fast_langdetect/resources/lid.176.ftz,sha256=jzRyz-hzintgmejpmcPL-uDc0VaWqsfXc4qAOdtgPoM,938013
+fast_langdetect-0.3.1.dist-info/RECORD,,
