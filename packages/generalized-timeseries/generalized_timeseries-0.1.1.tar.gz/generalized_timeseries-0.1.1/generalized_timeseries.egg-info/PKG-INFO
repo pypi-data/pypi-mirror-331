@@ -1,0 +1,65 @@
+Metadata-Version: 2.2
+Name: generalized_timeseries
+Version: 0.1.1
+Summary: A package for time series data processing and modeling using ARIMA and GARCH models
+Author-email: Garth Mortensen <mortensengarth@hotmail.com>
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: pytest==8.3.4; extra == "dev"
+Requires-Dist: black==24.10.0; extra == "dev"
+Requires-Dist: coverage==7.6.12; extra == "dev"
+Requires-Dist: tabulate==0.9.0; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: Sphinx==8.2.1; extra == "docs"
+Requires-Dist: sphinx-rtd-theme==3.0.2; extra == "docs"
+Requires-Dist: tabulate==0.9.0; extra == "docs"
+
+# Generalized Timeseries
+
+A package for time series data processing and modeling using ARIMA and GARCH models.
+
+## Features
+
+- Price series generation for simulation.
+- Data preprocessing including missing data handling and scaling.
+- Stationarity testing and transformation.
+- ARIMA and GARCH models for time series forecasting.
+
+## Installation
+
+```bash
+python -m venv venv
+source venv/bin/activate
+pip install generalized-timeseries
+```
+## Usage
+
+```python
+from generalized_timeseries import data_generator, data_processor, stats_model
+
+# generate price series data
+price_series = data_generator.generate_price_series(length=1000)
+
+# preprocess the data
+processed_data = data_processor.preprocess_data(price_series)
+
+# fit ARIMA model
+arima_model = stats_model.fit_arima(processed_data)
+
+# fit GARCH model
+garch_model = stats_model.fit_garch(processed_data)
+
+# forecast using ARIMA model
+arima_forecast = stats_model.forecast_arima(arima_model, steps=10)
+
+# forecast using GARCH model
+garch_forecast = stats_model.forecast_garch(garch_model, steps=10)
+
+print("ARIMA Forecast:", arima_forecast)
+print("GARCH Forecast:", garch_forecast)
+```

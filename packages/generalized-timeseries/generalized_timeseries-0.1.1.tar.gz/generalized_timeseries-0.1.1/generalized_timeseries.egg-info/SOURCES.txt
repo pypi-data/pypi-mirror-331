@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+generalized_timeseries/__init__.py
+generalized_timeseries/data_generator.py
+generalized_timeseries/data_processor.py
+generalized_timeseries/stats_model.py
+generalized_timeseries.egg-info/PKG-INFO
+generalized_timeseries.egg-info/SOURCES.txt
+generalized_timeseries.egg-info/dependency_links.txt
+generalized_timeseries.egg-info/requires.txt
+generalized_timeseries.egg-info/top_level.txt
+tests/__init__.py
+tests/test_data_generator.py
+tests/test_data_processor.py
+tests/test_stats_model.py
