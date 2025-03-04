@@ -1,0 +1,2 @@
+[console_scripts]
+fairsenseai = fairsenseai.app:start_server
