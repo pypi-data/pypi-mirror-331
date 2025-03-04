@@ -1,0 +1,9 @@
+ccaf_avro_schema_helpers_python_lib/__init__.py,sha256=9KtWEEp-RzeRKRJEDl7Xm459B_pNlZMpeIJVwBQDBok,70
+ccaf_avro_schema_helpers_python_lib/generate_flink_sql_statements_for_fully_flatten_root_record.py,sha256=6-l5NrhHovtsl_c752-y-onr5nYaygeBLknRPYYaSNE,39508
+ccaf_avro_schema_helpers_python_lib/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ccaf_avro_schema_helpers_python_lib/swap_camelcase_with_snakecase.py,sha256=fmH0If2bHjX_KXZXhv1UbrjwtOB1HCLGdUJqEC-Vwew,5751
+ccaf_avro_schema_helpers_python_lib/utility.py,sha256=xJ80jhBgU91a09wBPeUOZ0vaNZohUxJawdbFO-lhIhA,820
+ccaf_avro_schema_helpers_python_lib-0.3.2.0.dist-info/METADATA,sha256=4IvvQjv-im4tBRt8-BJiwmRdcViFlK0TM1yhNy1mcuI,3202
+ccaf_avro_schema_helpers_python_lib-0.3.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+ccaf_avro_schema_helpers_python_lib-0.3.2.0.dist-info/licenses/LICENSE.md,sha256=TDdlRUOlZxl_uKnqmMEQ0WZpMzbeb4cZOKT3dGZNWdQ,1068
+ccaf_avro_schema_helpers_python_lib-0.3.2.0.dist-info/RECORD,,
