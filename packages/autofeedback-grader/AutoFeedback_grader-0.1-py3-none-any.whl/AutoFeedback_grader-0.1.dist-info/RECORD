@@ -1,0 +1,13 @@
+AutoFeedback_grader/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+AutoFeedback_grader/_version.py,sha256=WSW-wXofj2QX3H9Em1kXWJYJ5---XGhnSVM8H9wB8t0,495
+AutoFeedback_grader/conftest.py,sha256=SlhBj9ZJf7_sqGeUrWuqEaBg3gghzIipuTT8SevtI88,115
+AutoFeedback_grader/convert.py,sha256=7LaPapt1_D5BRE8ZTvBwz5UkqRIvDpCiUFQjrW5bG4U,584
+AutoFeedback_grader/grade_ipynbs.py,sha256=qPS8E_tLod2vGaf9Rb7u5UkppkoC2Tv2GX1ImFI9jMk,2448
+AutoFeedback_grader/reformat_ipynb.py,sha256=j3HidY3U5hLviafUSjOl6fdUmH3d7pdXXoN3bNblp6o,489
+AutoFeedback_grader/search.py,sha256=fYLlXkOJtHI1lVADMGA7IacL5wuBMwkEPMfubvxJRkM,407
+AutoFeedback_grader/test_exercises.py,sha256=Gw_HD4REcIYkQxtbJX6ZPEw5HFgiPITo9Vk0rBltacM,7802
+AutoFeedback_grader-0.1.dist-info/METADATA,sha256=SdZu885TwP0Ho6V_GJe3dvHL3WAbjW1LQ6GFJrsRqjU,4614
+AutoFeedback_grader-0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+AutoFeedback_grader-0.1.dist-info/entry_points.txt,sha256=ntJFmZUQtm-6w5jKtTZtNLyr2YDFQveuKxIdrmGxqIU,71
+AutoFeedback_grader-0.1.dist-info/top_level.txt,sha256=FUKH6iI10gUK0OvcqEGJpiuJhuB6Wz4uF32jqPbLOg4,20
+AutoFeedback_grader-0.1.dist-info/RECORD,,
