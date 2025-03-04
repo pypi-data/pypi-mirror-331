@@ -1,0 +1,6 @@
+opentelemetry-sdk<2.0.0,>=1.29.0
+opentelemetry-api<2.0.0,>=1.29.0
+opentelemetry-instrumentation-logging==0.50b0
+opentelemetry-instrumentation-requests==0.50b0
+opentelemetry-exporter-richconsole==0.50b0
+opentelemetry.exporter.otlp.proto.grpc<2.0.0,>=1.29.0

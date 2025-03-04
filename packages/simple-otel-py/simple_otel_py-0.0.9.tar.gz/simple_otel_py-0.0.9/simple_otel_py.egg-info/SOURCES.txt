@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+simple_otel_py/__init__.py
+simple_otel_py/simple_otel.py
+simple_otel_py.egg-info/PKG-INFO
+simple_otel_py.egg-info/SOURCES.txt
+simple_otel_py.egg-info/dependency_links.txt
+simple_otel_py.egg-info/requires.txt
+simple_otel_py.egg-info/top_level.txt
