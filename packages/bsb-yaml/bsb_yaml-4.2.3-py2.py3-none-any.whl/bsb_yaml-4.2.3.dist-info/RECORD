@@ -1,0 +1,11 @@
+bsb_yaml/__init__.py,sha256=g_8zHsLT5sTjIoqLHGP9I0eWhSWGlEsnJyRpU8qeCUM,117
+bsb_yaml/components.py,sha256=uQaXXakTxMh6TEgQIPIOjY7vGOWBl-EohBEsMm5S-8M,409
+bsb_yaml/parser.py,sha256=AiTbR9kVPPHpvkF1fITuUhQ-9qMeZ3q-ThXLJCiT-Xw,775
+bsb_yaml/templates/__init__.py,sha256=lY5H_P07XnpMbjkUE9GhH8xiBf1DaCRe1pSpc0gtNsE,169
+bsb_yaml/templates/skeleton.yaml,sha256=aFLIZZZnI0eirZvsRlEiGZQqRFZ-cYZCzVHs7QUH8_A,259
+bsb_yaml/templates/starting_example.yaml,sha256=usxU2kfRzE9b8yeUsJavSsQhnWvNJb-mJzdqQTuc2IE,423
+bsb_yaml-4.2.3.dist-info/entry_points.txt,sha256=Y4QLDiqyXEZp0PQh0hjfaNsEnzI6eNhELuqOuEoVqBg,101
+bsb_yaml-4.2.3.dist-info/licenses/LICENSE,sha256=0SAgqCl8RI6Vm7Rv5YC6CPyLA2MXedQM9tq17WMXl-o,33041
+bsb_yaml-4.2.3.dist-info/WHEEL,sha256=BXjIu84EnBiZ4HkNUBN93Hamt5EPQMQ6VkF7-VZ_Pu0,100
+bsb_yaml-4.2.3.dist-info/METADATA,sha256=Uevz1lBhAAWmR4QXP_70s1vIID7AoabeMefel2139PQ,1380
+bsb_yaml-4.2.3.dist-info/RECORD,,

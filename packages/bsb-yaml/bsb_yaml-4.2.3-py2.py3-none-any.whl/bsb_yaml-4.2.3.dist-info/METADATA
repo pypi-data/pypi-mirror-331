@@ -1,0 +1,32 @@
+Metadata-Version: 2.4
+Name: bsb-yaml
+Version: 4.2.3
+Summary: YAML parser for the BSB framework.
+Author-email: Robin De Schepper <robingilbert.deschepper@unipv.it>
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+License-File: LICENSE
+Requires-Dist: bsb-core~=5.0
+Requires-Dist: PyYAML~=6.0
+Requires-Dist: bsb-yaml[test] ; extra == "dev"
+Requires-Dist: build~=1.0 ; extra == "dev"
+Requires-Dist: twine~=4.0 ; extra == "dev"
+Requires-Dist: pre-commit~=3.5 ; extra == "dev"
+Requires-Dist: black~=25.1.0 ; extra == "dev"
+Requires-Dist: isort~=6.0.0 ; extra == "dev"
+Requires-Dist: bump-my-version~=0.24 ; extra == "dev"
+Requires-Dist: bsb-core[parallel]~=5.0 ; extra == "test"
+Requires-Dist: bsb-test~=4.0 ; extra == "test"
+Requires-Dist: coverage~=7.0 ; extra == "test"
+Provides-Extra: dev
+Provides-Extra: test
+
+[![Build Status](https://github.com/dbbs-lab/bsb-yaml/actions/workflows/main.yml/badge.svg)](https://github.com/dbbs-lab/bsb-yaml/actions/workflows/main.yml)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+# bsb-yaml
+
+`bsb-yaml` is a plugin of the [BSB](https://github.com/dbbs-lab/bsb) (see also 
+[bsb-core](https://github.com/dbbs-lab/bsb-core)). 
+It allows the user to write their models' configuration in the yaml format.
+
