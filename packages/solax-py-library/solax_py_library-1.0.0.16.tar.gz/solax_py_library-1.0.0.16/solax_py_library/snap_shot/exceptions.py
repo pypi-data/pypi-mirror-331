@@ -1,0 +1,6 @@
+class SnapshotError(Exception):
+    ...
+
+
+class SnapshotTimeoutError(SnapshotError):
+    ...
