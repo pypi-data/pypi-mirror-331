@@ -1,0 +1,22 @@
+{
+    "name": "i2p.topology",
+    "attributes": {
+        "depends": [
+            "graph"
+        ],
+        "provides": [
+            "topology",
+            "i2p_topology"
+        ]
+    },
+    "model_components": {
+        "depends": [
+            "base_objects",
+            "generic_vm_objects",
+            "dns.dns_objects",
+            "ntp.time_server",
+            "i2p.i2p_objects"
+        ]
+    },
+    "plugin": "topology.py"
+}

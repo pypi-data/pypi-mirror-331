@@ -1,0 +1,22 @@
+{
+    "name": "i2p.multiple_clients",
+    "attributes": {
+        "depends": [
+            "i2p_topology",
+            "i2p_snark"
+        ],
+        "provides": [
+            "i2p_multiple_clients"
+        ]
+    },
+    "model_components": {
+        "depends": [
+            "i2p.i2p_objects"
+        ]
+    },
+    "plugin": "multiple_clients.py",
+    "vm_resources": [
+        "vm_resources/*.sh",
+        "vm_resources/*.tgz"
+    ]
+}

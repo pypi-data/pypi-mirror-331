@@ -1,0 +1,19 @@
+{
+    "name": "i2p.config_victim_groups",
+    "attributes": {
+        "depends": [
+            "i2p_snark"
+        ],
+        "provides": [
+            "i2p_victims"
+        ]
+    },
+    "model_components": {
+        "depends": ["i2p.i2p_objects"]
+    },
+    "plugin": "config_victims.py",
+    "vm_resources": [
+        "vm_resources/*.py",
+        "vm_resources/*.sh"
+    ]
+}

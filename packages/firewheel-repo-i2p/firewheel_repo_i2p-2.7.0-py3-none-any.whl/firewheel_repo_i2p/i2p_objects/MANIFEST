@@ -1,0 +1,20 @@
+{
+    "name": "i2p.i2p_objects",
+    "attributes": {
+        "depends": [],
+        "provides": []
+    },
+    "model_components": {
+        "depends": [
+            "linux.ubuntu",
+            "linux.ubuntu1404",
+            "common.dropper"
+        ]
+    },
+    "model_component_objects": "model_component_objects.py",
+    "vm_resources": [
+        "vm_resources/*.py",
+        "vm_resources/*.sh",
+        "vm_resources/*.tgz"
+    ]
+}
