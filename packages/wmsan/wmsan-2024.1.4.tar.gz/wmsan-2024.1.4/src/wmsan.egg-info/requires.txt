@@ -1,0 +1,15 @@
+numpy<2.0.0
+pandas
+scipy
+h5py
+xarray
+dask
+matplotlib
+pyproj
+tqdm
+netcdf4
+cartopy
+obspy
+datetime
+ipykernel
+notebook

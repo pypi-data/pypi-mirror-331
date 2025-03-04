@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+src/wmsan/__init__.py
+src/wmsan/read_hs_p2l.py
+src/wmsan/subfunctions_body_waves.py
+src/wmsan/subfunctions_rayleigh_waves.py
+src/wmsan/synthetics.py
+src/wmsan/temporal_variation.py
+src/wmsan/wmsan_to_noisi.py
+src/wmsan.egg-info/PKG-INFO
+src/wmsan.egg-info/SOURCES.txt
+src/wmsan.egg-info/dependency_links.txt
+src/wmsan.egg-info/requires.txt
+src/wmsan.egg-info/top_level.txt
