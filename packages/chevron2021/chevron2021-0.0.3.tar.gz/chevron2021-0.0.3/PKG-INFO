@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: chevron2021
+Version: 0.0.3
+Summary: Mustache templating language renderer
+Home-page: https://github.com/noahmorrison/chevron
+Author: noah morrison
+Author-email: noah@morrison.ph
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Text Processing :: Markup
+Description-Content-Type: text/markdown
+
+# THIS IS A CLONE
+
+[Clone](https://github.com/alexberazouski/chevron) of [original chevron](https://github.com/noahmorrison/chevron) (all credits go there).
+Clone was created for a single purpose of releasing a package with the latest merged changes in the original repo.
+And to let other people know how to install it.
+
+## Usage
+See the [original repo](https://github.com/noahmorrison/chevron)
