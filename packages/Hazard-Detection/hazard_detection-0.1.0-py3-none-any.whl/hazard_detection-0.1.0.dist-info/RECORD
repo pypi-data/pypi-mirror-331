@@ -1,0 +1,10 @@
+hazard_detection-0.1.0.data/scripts/example.py,sha256=GTeqicdObgl4iJqXn-rBKcIu-L9GQ3c5LHws3vunHG8,142
+hazdet/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hazdet/inference.py,sha256=qb_lo121J8lR8cNbL8BPF3LpEYGQxbp5g4lbbJtSvq4,2806
+hazdet/train.py,sha256=0bijPevFH_DGQreuVSl6ADLrK5tbnfAB0_X7vxbWtpI,21350
+hazdet/test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hazard_detection-0.1.0.dist-info/LICENSE.txt,sha256=ACwmltkrXIz5VsEQcrqljq-fat6ZXAMepjXGoe40KtE,1069
+hazard_detection-0.1.0.dist-info/METADATA,sha256=LCPzVTfR2Sm2swVgllenTww35FGWKXwRXqwRZ31p4Go,1099
+hazard_detection-0.1.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+hazard_detection-0.1.0.dist-info/top_level.txt,sha256=F7USxuv1aIp7WgwhJ54FTyfg5KkGGTnW3aY1JEZWv3E,7
+hazard_detection-0.1.0.dist-info/RECORD,,
