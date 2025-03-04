@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: changesets-darwin-x64
+Version: 0.2.0
+Summary: Git-based changelog manager for JavaScript, Python, and Go projects.
+Project-URL: Repository, https://github.com/dworthen/changelog
+Author-email: Derek Worthen <worthend.derek@gmail.com>
+License-Expression: MIT
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+
+# Changelog2
