@@ -1,0 +1,57 @@
+[project]
+name = "fast-prometheus"
+version = "0.1.1"
+description = "Prometheus metrics for projects on starlette, fastapi"
+readme = "README.md"
+authors = [
+    { name = "Vadim Shadrin", email = "kod3852@gmail.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "prometheus-client>=0.21.1",
+    "psutil>=6.1.1",
+    "starlette>=0.37.2",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+version_files = [
+    "src/__version__.py",
+    "pyproject.toml:version"
+]
+version_provider = "pep621"
+update_changelog_on_bump = true
+
+[tool.ruff]
+preview = true
+
+select = [
+    "A", "B", "C", "C4", "E", "F", "I", "Q", "ASYNC", "N", "W", 
+    "UP", "T20", "PT", "SIM", "C90", "ANN", "PERF", "RUF", "R", 
+    "RET", "PYI", "PIE", "FBT", "S"
+]
+ignore = [
+    "Q000", "B904", "ANN101", "ANN102", "ANN401", "RET504",
+    "RUF001", "S101", "RUF002", "S105", "RET505", "A005", "UP040",
+    "FBT002", "FBT001", "W391"
+]
+exclude = ["tests"]
+line-length = 100
+
+[project.scripts]
+fast-prometheus = "fast_prometheus:main"
+
+[dependency-groups]
+dev = [
+    "commitizen>=4.1.0",
+    "fastapi==0.110.1",
+    "httpx>=0.28.1",
+    "pre-commit>=4.1.0",
+    "pytest>=8.3.4",
+    "types-psutil>=6.1.0.20241221",
+    "uvicorn>=0.34.0",
+]
