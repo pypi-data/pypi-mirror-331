@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: cellvoyager-types
+Version: 0.7.0
+Summary: Pydantic models for CellVoyager metadata
+Author-email: Jan Eglinger <jan.eglinger@fmi.ch>
+License-File: LICENSE
+Requires-Python: >=3.10
+Requires-Dist: pydantic
+Requires-Dist: xmltodict
+Provides-Extra: xarray
+Requires-Dist: dask; extra == 'xarray'
+Requires-Dist: numpy; extra == 'xarray'
+Requires-Dist: tifffile; extra == 'xarray'
+Requires-Dist: xarray; extra == 'xarray'
+Requires-Dist: zarr<3; extra == 'xarray'
