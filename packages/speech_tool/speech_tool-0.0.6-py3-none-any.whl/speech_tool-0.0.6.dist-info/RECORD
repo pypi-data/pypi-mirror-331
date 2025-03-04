@@ -1,0 +1,7 @@
+speech_tool/__init__.py,sha256=lXjn2ixT2EHQ-4HN9bXEzOr7W8vvcG9yzBxggN_0Jmg,75
+speech_tool/config.py,sha256=24rzOCY2Z7oe6HqLk8dCT_ZmJqT51DhBNtK2hfRyPYI,1450
+speech_tool/kokoro_server.py,sha256=gj4IUbneWC2M2cMxUq6aWEmCaXnpPDiUNMv-KlutnwI,2774
+speech_tool-0.0.6.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+speech_tool-0.0.6.dist-info/METADATA,sha256=RX2L9nAgJlEBq9gkGUvKipNWZcl7Qwcb9KCg6whL84k,4246
+speech_tool-0.0.6.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+speech_tool-0.0.6.dist-info/RECORD,,
