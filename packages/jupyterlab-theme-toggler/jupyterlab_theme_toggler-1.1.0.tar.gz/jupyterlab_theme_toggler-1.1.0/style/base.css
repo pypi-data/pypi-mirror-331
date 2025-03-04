@@ -1,0 +1,4 @@
+/* To increase the slider size */
+.jp-Toolbar .jp-Toolbar-item {
+  --density: 0;
+}
