@@ -1,0 +1,14 @@
+gldas/GLDASp4_landmask_025d.nc4,sha256=EyhoFGyLIHQGaOXXOFEzGI25qxkhh4eVlepU-wpJ5q4,72112
+gldas/__init__.py,sha256=YwyxVLH1HZMJgsfMnAgJ2HFniknlUq13mveS9L8rvRc,593
+gldas/download.py,sha256=Sy9MnBBgvQpjVgiA-EbrLYWrVplKqaFUHsKCIVR1cr4,10230
+gldas/grid.py,sha256=bHaV_bHngkMGhxiINZF8eSrYxOYNBpsOBluToN-Ujzs,3491
+gldas/interface.py,sha256=C2XadqpxmCzNrpKRuz0vjSb_LwVfA0jNoRE1VUDLJNU,17982
+gldas/reshuffle.py,sha256=a2BVElerpIwhwD6NwnZI8HXCADiAQUwqfKQ7EARxCrI,8146
+gldas/utils.py,sha256=Y7nrLM5YBEqDwevl0FgNW9Evq1FMDqspN4CIbaJQ9cA,1305
+gldas-0.7.1.dist-info/AUTHORS.rst,sha256=D41ZrwRD3A-tK5RvYGimntg_9Jh_zG8QcCeoEXHJfNk,168
+gldas-0.7.1.dist-info/LICENSE.txt,sha256=z7YdY1XGp59Gt3xSplOgYJSbEImpIjXww63zfoX1eRc,1497
+gldas-0.7.1.dist-info/METADATA,sha256=R8dJyDr7whWK1u3P3WGpXZyUUiZ3c5Uw7k3AAeJA5AI,4684
+gldas-0.7.1.dist-info/WHEEL,sha256=rF4EZyR2XVS6irmOHQIJx2SUqXLZKRMUrjsg8UwN-XQ,109
+gldas-0.7.1.dist-info/entry_points.txt,sha256=mVnSTexNHHtUw951LWDpFFPtf_Ls7TlNAOD5Utt5u2c,92
+gldas-0.7.1.dist-info/top_level.txt,sha256=hXv_BLH5fkf2SxtdnNleurs-9CcI5AIK9azfNu4jPVY,6
+gldas-0.7.1.dist-info/RECORD,,
