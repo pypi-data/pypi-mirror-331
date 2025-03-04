@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+kwwutils/__init__.py
+kwwutils/kwwutils.py
+kwwutils.egg-info/PKG-INFO
+kwwutils.egg-info/SOURCES.txt
+kwwutils.egg-info/dependency_links.txt
+kwwutils.egg-info/requires.txt
+kwwutils.egg-info/top_level.txt
+tests/_1_test.py
+tests/__init__.py

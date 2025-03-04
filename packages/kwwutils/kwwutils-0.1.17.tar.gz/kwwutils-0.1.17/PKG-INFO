@@ -1,0 +1,81 @@
+Metadata-Version: 2.2
+Name: kwwutils
+Version: 0.1.17
+Summary: Add your description here
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: langchain-chroma>=0.1.0
+Requires-Dist: langchain>=0.3.0
+Requires-Dist: langchain-community>=0.3.0
+Requires-Dist: langchain-ollama>=0.2.0
+Requires-Dist: transformers>=4.0.0
+Requires-Dist: pypdf>=5.0.0
+Requires-Dist: gpt4all>=2.0.0
+Requires-Dist: sentence-transformers>=3.0.0
+Requires-Dist: bs4>=0.0.1
+Requires-Dist: langchain-huggingface>=0.1.0
+Requires-Dist: faiss-cpu>=0.1.0.post1
+Requires-Dist: langchain-faiss>=0.1.0
+Requires-Dist: pgvector>=0.3.0
+Provides-Extra: dev
+Requires-Dist: pytest>=8.3.4; extra == "dev"
+Requires-Dist: pytest-bdd>=7.1.2; extra == "dev"
+Requires-Dist: pytest-cov>=5.0.0; extra == "dev"
+Requires-Dist: pytest-datadir>=1.5.0; extra == "dev"
+Requires-Dist: pytest-flake8>=1.1.1; extra == "dev"
+Requires-Dist: pytest-instafail>=0.5.0; extra == "dev"
+Requires-Dist: pytest-json>=0.4.0; extra == "dev"
+Requires-Dist: pytest-leaks>=0.3.1; extra == "dev"
+Requires-Dist: pytest-pycodestyle>=2.3.1; extra == "dev"
+Requires-Dist: pytest-redis>=3.0.2; extra == "dev"
+Requires-Dist: pytest-regressions>=2.5.0; extra == "dev"
+Requires-Dist: pytest-repeat>=0.9.3; extra == "dev"
+Requires-Dist: pytest-replay>=1.5.1; extra == "dev"
+Requires-Dist: pytest-rerunfailures>=14.0; extra == "dev"
+Requires-Dist: pytest-selenium>=4.1.0; extra == "dev"
+Requires-Dist: pytest-sugar>=1.0.0; extra == "dev"
+Requires-Dist: pytest-timeout>=2.3.1; extra == "dev"
+Requires-Dist: pytest-vagrant>=2.1.0; extra == "dev"
+Requires-Dist: pytest-vcr>=1.0.2; extra == "dev"
+Requires-Dist: pytest-xdist>=3.5.0; extra == "dev"
+Requires-Dist: pytest-xvfb>=3.0.0; extra == "dev"
+
+cat kwwutils.egg-info/PKG-INFO
+
+from setuptools import setup, find_packages
+
+setup(
+    name='kwwutils',
+    version='0.1.14',
+    packages=find_packages(include=['kwwutils', 'tests']),
+    # other options like install_requires, author, etc.
+)
+
+
+mv setup.cfg setup_old.cfg  # Move any existing setup.cfg file
+nano setup.cfg
+
+
+[metadata]
+name = kwwutils
+version = 0.1.14
+
+
+rm -rf build dist kwwutils.egg-info
+python setup.py sdist bdist_wheel
+uv pip install --force-reinstall --no-cache-dir -e .
+
+
+- debugging
+from setuptools import setup, find_packages
+
+version = '0.1.14'
+print(f"Building version {version}")
+
+setup(
+    name='kwwutils',
+    version=version,
+    packages=find_packages(include=['kwwutils', 'tests']),
+    # other options like install_requires, author, etc.
+)
+
