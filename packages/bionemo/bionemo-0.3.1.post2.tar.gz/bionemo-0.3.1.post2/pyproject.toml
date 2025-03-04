@@ -1,0 +1,62 @@
+[project]
+# Basic info
+name = "bionemo"
+version = "0.3.1.post2"
+description = "[DEPRECATED] Python client for the BioNeMo Service"
+
+dependencies = [
+    "click >= 8.1",
+    "h5py",
+    "numpy",
+    "requests",
+    "requests_futures",
+    "typing_extensions" #for python version < 3.8
+]
+
+# Contact info
+authors = [
+    {name = "NVIDIA Bionemo", email = "bionemofeedback@nvidia.com"}
+]
+maintainers = [
+    {name = "Kevin Boyd", email = "kboyd@nvidia.com"}
+]
+
+# Metadata
+readme = "README.md"
+license = {file = "LICENSE.md"}
+keywords = ["bionemo"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+]
+
+[project.urls]
+Homepage = "https://www.nvidia.com/en-us/clara/bionemo/"
+Documentation = "https://developer.nvidia.com/docs/bionemo-service/index.html"
+Examples = "https://github.com/NVIDIA/BioNeMo/tree/main/examples/service"
+
+[project.optional-dependencies]
+devtools = [
+    "pytest",
+    "pytest-cov>=2.8.1",
+    "pytest-json-report",
+    "pytest-parallel"
+]
+
+[project.scripts]
+bionemo="bionemo.cli.cli:cli"
+
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+exclude = ["tests*"]

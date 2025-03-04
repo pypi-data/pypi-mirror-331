@@ -1,0 +1,69 @@
+# ref: https://docs.gitlab.com/ee/ci/README.html
+
+stages:
+  - .pre
+  - unit_test
+  - build
+
+code_format:
+  stage: .pre
+  script:
+    - pre-commit run --all-files
+  image: gitlab-master.nvidia.com:5005/dl/ai-services/python-clients/codeformat:latest
+  tags:
+  - os/linux
+  - type/docker
+
+# Skips folding and diffdock, which may time out.
+.tests-lightweight:
+  stage: unit_test
+  script:
+   - pip -v install .[devtools]
+   - pytest --cov=bionemo -k "not folding and not diffdock and not test_cli" --workers=8
+  allow_failure: true
+  tags:
+  - os/linux
+  - type/docker
+
+.tests-full:
+  stage: unit_test
+  script:
+   - pip -v install .[devtools]
+   - pytest --cov=bionemo --workers=4 --json-report --json-report-file=test_report.json
+  allow_failure: false
+  tags:
+  - os/linux
+  - type/docker
+  artifacts:
+    paths:
+      - test_report.json
+    when: always
+
+
+test-3.8:
+  extends: .tests-lightweight
+  image: python:3.8
+test-3.9:
+  extends: .tests-lightweight
+  image: python:3.9
+test-3.10:
+  extends: .tests-lightweight
+  image: python:3.10
+test-3.11:
+  extends: .tests-lightweight
+  image: python:3.11
+
+
+build_whl:
+  stage: build
+  needs: ["code_format"]
+  image: python:3.6
+  script:
+    - rm -rf dist/*
+    - python3 setup.py bdist_wheel
+  artifacts:
+    paths:
+      - dist/*.whl
+  tags:
+  - os/linux
+  - type/docker

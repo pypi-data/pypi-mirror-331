@@ -1,0 +1,12 @@
+click>=8.1
+h5py
+numpy
+requests
+requests_futures
+typing_extensions
+
+[devtools]
+pytest
+pytest-cov>=2.8.1
+pytest-json-report
+pytest-parallel

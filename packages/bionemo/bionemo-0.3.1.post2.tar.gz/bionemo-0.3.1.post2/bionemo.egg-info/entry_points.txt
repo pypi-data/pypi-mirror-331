@@ -1,0 +1,2 @@
+[console_scripts]
+bionemo = bionemo.cli.cli:cli
