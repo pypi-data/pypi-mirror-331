@@ -1,0 +1,11 @@
+aiohttp_msal/__init__.py,sha256=d45XCuUfsRnjvk8QpDn6zc5Shu22wmBkzFjy83FpvsY,4039
+aiohttp_msal/msal_async.py,sha256=RsLuoYAH_RsGfS9-ScDPPwNKSb2K0RWW-sRKHJJKLH4,9345
+aiohttp_msal/redis_tools.py,sha256=Xea6hmXRy9uRiUdXz6uYdVbvCpTOTOLIFqrSKpVeyPA,6492
+aiohttp_msal/routes.py,sha256=lddC59xSBfSa69mewrRsj7nEqICzm0CZf2JMycSAQk4,8120
+aiohttp_msal/settings.py,sha256=0kaGEOaK-P9zG0ZCo4P30MNeIgPtyikTjIEEzX-3CZs,1487
+aiohttp_msal/settings_base.py,sha256=P8WfpqcXBbWFdPuKtbB0SAZeP9D04zjrKSJiGW2FOtE,3126
+aiohttp_msal/user_info.py,sha256=WIgXThCM_PvXOUT1XS7om_p9-mYoNzYfO2o7ovu_vFQ,1792
+aiohttp_msal-0.8.5.dist-info/METADATA,sha256=QYw9Qqfn_za8_EaxuNnrQ3nLfUrV9pPnzW8FnNEFev8,4806
+aiohttp_msal-0.8.5.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+aiohttp_msal-0.8.5.dist-info/top_level.txt,sha256=Mjl6FTSlhh0F0IiQ8VaJI45EMkRctlC25rG3-mARt5g,13
+aiohttp_msal-0.8.5.dist-info/RECORD,,
