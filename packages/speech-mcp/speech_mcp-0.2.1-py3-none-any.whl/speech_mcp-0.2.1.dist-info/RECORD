@@ -1,0 +1,13 @@
+src/speech_mcp/__init__.py,sha256=s37oGubeFLO9rIil8hwy2o2YPLYAGFXU41qJBrqI5J4,917
+src/speech_mcp/__main__.py,sha256=bfgb-5-bRy7PtnUxJ0DQ556F-UX54e1zfA3GXkhXKX0,35
+src/speech_mcp/server.py,sha256=8opSqHDQag5GWUsQFWWBC5D9h0OS1tU9zjzwykbZ6BQ,42525
+src/speech_mcp/resources/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/speech_mcp/resources/audio/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/speech_mcp/resources/audio/start_listening.wav,sha256=-K72W2FV8uqEknhBNcK72QBEjATPQRWTT3ZBDb-UiPw,17684
+src/speech_mcp/resources/audio/stop_listening.wav,sha256=uwS5sHhP7ADCFbagyAnGLlWfR5BwnJ4yXYhc7RmZD3U,17684
+src/speech_mcp/ui/__init__.py,sha256=40NzNcdXzMTML_NEUJYwL3gwWoN17xw8gIKFGgy-XJc,35916
+src/speech_mcp/ui/__main__.py,sha256=RWr2IgS8bWtNgKwr7meURFA1gJejw39Y9dMFcdLw8Po,69
+speech_mcp-0.2.1.dist-info/METADATA,sha256=cUVrhC7oWLYmy29ZCqQQj7ViO26CWNCESiaH1BI2j70,4578
+speech_mcp-0.2.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+speech_mcp-0.2.1.dist-info/entry_points.txt,sha256=WuW-srju-INc9XJp9Kz4XbgrfdGzRkASwEKPeQ-iJ_w,47
+speech_mcp-0.2.1.dist-info/RECORD,,
