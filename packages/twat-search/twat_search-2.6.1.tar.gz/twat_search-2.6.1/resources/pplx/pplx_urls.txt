@@ -1,0 +1,7 @@
+https://docs.perplexity.ai/guides/getting-started
+https://docs.perplexity.ai/guides/model-cards
+https://docs.perplexity.ai/guides/pricing
+https://docs.perplexity.ai/guides/structured-outputs
+https://docs.perplexity.ai/guides/prompt-guide
+https://docs.perplexity.ai/guides/bots
+https://docs.perplexity.ai/api-reference/chat-completions
