@@ -1,0 +1,5 @@
+[console_scripts]
+cliptargets = cliptargets.cli:cli
+
+[gui_scripts]
+
