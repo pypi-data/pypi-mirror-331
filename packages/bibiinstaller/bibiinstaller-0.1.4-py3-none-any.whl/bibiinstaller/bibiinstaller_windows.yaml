@@ -1,0 +1,124 @@
+flags:
+  - dest: python_version
+    help: Python version of the installer
+    option_strings:
+      - --python_version
+    type: str
+
+  - dest: bitness
+    help: Bitness of the installer (32, 64)
+    option_strings:
+      - --bitness
+    type: int
+
+  - dest: project_root
+    help: Path root with the setup.py or pyproject.toml in it.
+    option_strings:
+      - --project_root
+    type: str
+
+  - dest: entrypoint
+    help: Entrypoint to execute the package
+    option_strings:
+      - --entrypoint
+    type: str
+
+  - dest: package
+    help: Name of the package
+    option_strings:
+      - --package
+    type: str
+
+  - dest: icon_path
+    help: Path to icon to use for the installer
+    option_strings:
+      - --icon_path
+    type: str
+
+  - dest: license_txt_path
+    help: Path to license file
+    option_strings:
+      - --license_txt_path
+    type: str
+
+  - dest: extra_requirements_txt_path
+    help: Path to a .txt file with a list of packages to be installed by [pip install -r *.txt] besides the dependencies of the main package
+    option_strings:
+      - -xr
+      - --extra_requirements_txt_path
+    type: str
+
+  - dest: extra_packages_txt_path
+    help: Path to a .txt file with a list of packages to be added to the installer besides the dependencies of the main package
+    option_strings:
+      - -xp
+      - --extra_packages_txt_path
+    type: str
+
+  - dest: editable_packages_txt_path
+    help: Path to a .txt file with a list of packages to be installed using the editable flag
+    option_strings:
+      - -ep
+      - --editable_packages_txt_path
+    type: str
+
+  - dest: skip_pypi_packages_txt_path
+    help: Path to a .txt file with a list of packages will not use online pypi packages
+    option_strings:
+      - -sp
+      - --skip_pypi_packages_txt_path
+    type: str
+
+  - dest: unwanted_packages_txt_path
+    help: Path to a .txt file with a list of packages to be removed from the requirements
+    option_strings:
+      - -up
+      - --unwanted_packages_txt_path
+    type: str
+
+  - dest: local_wheel_path
+    help: Path to *.whl wheel files on the local filesystem.
+    option_strings:
+      - --local_wheel_path
+    type: str
+
+  - dest: conda_path
+    help: Path to conda executable
+    option_strings:
+      - --conda_path
+    type: str
+
+  - dest: suffix
+    help: Suffix for the name of the generated executable
+    option_strings:
+      - --suffix
+    type: str
+
+  - default: nsi_templates\bibiinstaller.nsi
+    dest: nsi_template_path
+    help: Path to .nsi template for the installer
+    option_strings:
+      - --nsi_template_path
+    type: str
+
+  - default: 2.8
+    dest: pynsist_version
+    help: pynsist version of the installer
+    option_strings:
+      - --pynsist_version
+    type: str
+
+  - default: false
+    dest: is_wheel_first
+    help: pynsist using wheel online instead of local installed packages.
+    option_strings:
+      - --is_wheel_first
+    type: bool
+
+  - dest: pypi_server
+    # default: https://pypi.tuna.tsinghua.edu.cn/pypi/
+    help: pypi server allow json information by path /{package_name}/json
+    option_strings:
+      - --pypi_server
+      - -ps
+    type: str
