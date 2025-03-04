@@ -1,0 +1,21 @@
+Metadata-Version: 2.3
+Name: retrvtme
+Version: 0.1.0
+Summary:     retrvTME: Bulk RNA-seq Deconvolution with Tumor MicroEnvironment Retrieval     retrvTME is a deep learning-powered tool designed to decode bulk RNA-seq data using large-scale single-cell atlases.      The tool precisely reconstructs cell-type proportions and cell-type-specific gene expression profiles, with specialized capabilities for resolving intricate tumor microenvironment (TME) biology from bulk transcriptomes.
+Author-email: Wade Huang <fastwade11@gmail.com>
+Requires-Python: >=3.11
+Requires-Dist: anndata>=0.11
+Requires-Dist: hdf5plugin>=5.0.0
+Requires-Dist: lightning>=2.2.0
+Requires-Dist: numpy>=2.2.3
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: pytorch-lightning>=2.3.3
+Requires-Dist: scikit-learn>=1.6.1
+Requires-Dist: torch>=2.0.1
+Requires-Dist: torchmetrics>=1.4.0
+Requires-Dist: wandb>=0.19.7
+Description-Content-Type: text/markdown
+
+# retrvtme: Bulk RNA-seq Deconvolution with Tumor MicroEnvironment Retrieval
+
+retrvTME is a deep learning-powered tool designed to decode bulk RNA-seq data using large-scale single-cell atlases. The tool precisely reconstructs cell-type proportions and cell-type-specific gene expression profiles, with specialized capabilities for resolving intricate tumor microenvironment (TME) biology from bulk transcriptomes.
