@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pd_to_sheet
+Version: 1.0.0
+Summary: 一个将pandas数据框输出到Excel并美化表格的工具。
+Author: sgg
+Author-email: police@foxmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: xlsxwriter
+Requires-Dist: openpyxl
+
