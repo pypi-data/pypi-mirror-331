@@ -1,0 +1,175 @@
+Metadata-Version: 2.2
+Name: zeroguess
+Version: 0.7.2
+Summary: Machine Learning for Curve Fitting Parameter Estimation
+Home-page: https://github.com/deniz195/zeroguess
+Author: Deniz Bozyigit
+Author-email: Deniz Bozyigit <deniz195@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/deniz195/zeroguess
+Project-URL: Bug Tracker, https://github.com/deniz195/zeroguess/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.20.0
+Requires-Dist: scipy>=1.7.0
+Requires-Dist: torch>=1.10.0
+Requires-Dist: matplotlib>=3.5.0
+Requires-Dist: tqdm>=4.62.0
+Provides-Extra: lmfit
+Requires-Dist: lmfit>=1.0.0; extra == "lmfit"
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.0.0; extra == "dev"
+Requires-Dist: pytest-benchmark>=4.0.0; extra == "dev"
+Requires-Dist: pytest-xdist>=3.0.0; extra == "dev"
+Requires-Dist: black>=23.3.0; extra == "dev"
+Requires-Dist: isort>=5.12.0; extra == "dev"
+Requires-Dist: flake8>=6.0.0; extra == "dev"
+Requires-Dist: flake8-bugbear>=23.3.23; extra == "dev"
+Requires-Dist: flake8-pyproject>=1.2.0; extra == "dev"
+Requires-Dist: mypy>=1.3.0; extra == "dev"
+Requires-Dist: vulture>=2.7; extra == "dev"
+Requires-Dist: bandit>=1.7.5; extra == "dev"
+Requires-Dist: safety>=2.3.5; extra == "dev"
+Requires-Dist: dotenv>=1.0.1; extra == "dev"
+Requires-Dist: pre-commit>=3.3.2; extra == "dev"
+Requires-Dist: pip-tools>=6.13.0; extra == "dev"
+Requires-Dist: sphinx>=7.0.0; extra == "dev"
+Requires-Dist: sphinx-rtd-theme>=1.2.0; extra == "dev"
+Dynamic: author
+Dynamic: home-page
+Dynamic: requires-python
+
+# ZeroGuess: Machine Learning for Curve Fitting Parameter Estimation
+
+[![Build Status](https://github.com/deniz195/zeroguess/actions/workflows/test.yml/badge.svg)](https://github.com/deniz195/zeroguess/actions/workflows/test.yml)
+[![Coverage Status](https://codecov.io/gh/deniz195/zeroguess/branch/main/graph/badge.svg)](https://codecov.io/gh/deniz195/zeroguess)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python Versions](https://img.shields.io/pypi/pyversions/zeroguess.svg)](https://pypi.org/project/zeroguess/)
+
+ZeroGuess is a Python library that simplifies the estimation of starting parameters for curve fitting by leveraging machine learning. It supports SciPy and lmfit, two widely used curve fitting libraries in the scientific Python ecosystem.
+
+## Problem Statement
+
+While curve fitting is a well-understood problem, the process of estimating starting parameters is not. It is a very tedious and error-prone process that often requires domain expertise, trial and error, or both. Poor initial parameter estimates can cause fitting algorithms to:
+- Converge to suboptimal local minima
+- Require more iterations to converge
+- Fail to converge entirely
+
+ZeroGuess uses machine learning to learn from the fitting function itself, providing optimal starting parameters without manual tuning.
+
+## Installation
+
+```bash
+pip install zeroguess
+```
+
+## Quick Start
+
+### Basic Usage
+
+```python
+import zeroguess
+import numpy as np
+from scipy import optimize
+
+# Define function to fit
+def gaussian(x, amplitude, center, width):
+    return amplitude * np.exp(-(x - center)**2 / (2 * width**2))
+
+# Define sampling points for training
+x_sampling = np.linspace(-10, 10, 100)
+
+# Create and train parameter estimator
+estimator = zeroguess.create_estimator(
+    function=gaussian,
+    param_ranges={
+        'amplitude': (0, 10),
+        'center': (-5, 5),
+        'width': (0.1, 2)
+    },
+    independent_vars_sampling={
+        'x': x_sampling
+    }
+)
+estimator.train()
+
+# Get parameter estimates for new data
+x_data = np.linspace(-10, 10, 100)
+y_data = ... # Your experimental data
+initial_params = estimator.predict(x_data, y_data)
+
+# Use in standard curve fitting
+optimal_params, _ = optimize.curve_fit(
+    gaussian, x_data, y_data,
+    p0=initial_params
+)
+```
+
+### SciPy Integration
+
+```python
+from zeroguess.integration import scipy_integration
+import numpy as np
+
+# Enhanced curve_fit with automatic parameter estimation
+optimal_params, pcov = scipy_integration.curve_fit(
+    gaussian, x_data, y_data,
+    param_ranges={
+        'amplitude': (0, 10),
+        'center': (-5, 5),
+        'width': (0.1, 2)
+    },
+    independent_vars_sampling={
+        'x': np.linspace(-10, 10, 100)
+    }
+)
+```
+
+### lmfit Integration
+
+```python
+from zeroguess.integration import lmfit_integration
+import lmfit
+import numpy as np
+
+# Enhanced lmfit Model with parameter estimation
+model = lmfit_integration.Model(
+    gaussian,
+    param_ranges={
+        'amplitude': (0, 10),
+        'center': (-5, 5),
+        'width': (0.1, 2)
+    },
+    independent_vars_sampling={
+        'x': np.linspace(-10, 10, 100)
+    }
+)
+
+# Standard lmfit workflow
+result = model.fit(y_data, x=x_data)
+```
+
+## Features
+
+- Automatic estimation of starting parameters for curve fitting
+- Support for both SciPy and lmfit curve fitting libraries
+- Neural network-based parameter estimation
+- Model persistence for reuse without retraining
+- Detailed diagnostics and visualization tools
+
+## Requirements
+
+- Python 3.10+
+- Dependencies: numpy, scipy, torch, lmfit (optional)
+
+## License
+
+MIT
