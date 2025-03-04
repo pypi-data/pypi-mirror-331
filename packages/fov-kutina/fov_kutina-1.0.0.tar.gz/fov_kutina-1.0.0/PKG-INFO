@@ -1,0 +1,23 @@
+Metadata-Version: 2.2
+Name: fov-kutina
+Version: 1.0.0
+Summary: FOV-kutina
+Home-page: https://github.com/Cache-Cloud/FOV-Kutina
+Author: Kutina
+Author-email: wang@kutina.cn
+License: MIT Licence
+Keywords: pip,Kutina
+Platform: any
+Requires-Dist: setuptools
+Requires-Dist: setuptools-scm
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: platform
+Dynamic: requires-dist
+Dynamic: summary
+
+FOV-kutina
