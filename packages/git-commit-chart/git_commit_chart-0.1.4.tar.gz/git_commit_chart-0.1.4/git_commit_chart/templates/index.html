@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Commit Chart</title>
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='favicon/favicon-light.svg') }}">
+    <link rel="alternate icon" type="image/x-icon" href="{{ url_for('static', filename='favicon/favicon.ico') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='theme.js') }}"></script>
+    <script src="{{ url_for('static', filename='favicon.js') }}"></script>
+</head>
+<body>
+    <div class="theme-switch-wrapper">
+        <i class="fas fa-sun icon"></i>
+        <label class="theme-switch">
+            <input type="checkbox" id="theme-switch" onchange="toggleTheme()">
+            <span class="slider"></span>
+        </label>
+        <i class="fas fa-moon icon"></i>
+    </div>
+
+    <div class="container">
+        <h1>Git Commit History Visualization</h1>
+        <div class="nav-links">
+            <a href="#" onclick="navigateToByUser(); return false;">View Commits by User</a>
+        </div>
+        <div class="form-container">
+            <input type="text" id="owner" placeholder="Repository Owner" value="{{ default_owner }}" required>
+            <input type="text" id="repo" placeholder="Repository Name" value="{{ default_repo }}" required>
+            <button onclick="fetchCommits()">Generate Chart</button>
+        </div>
+        <div class="chart-container">
+            <canvas id="commitChart"></canvas>
+        </div>
+    </div>
+
+    <script>
+        let chart = null;
+        let currentOwner = '{{ default_owner }}';
+        let currentRepo = '{{ default_repo }}';
+
+        // Initialize theme on page load
+        document.addEventListener('DOMContentLoaded', initTheme);
+
+        // Check URL parameters on load
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const owner = urlParams.get('owner');
+            const repo = urlParams.get('repo');
+            
+            if (owner && repo) {
+                document.getElementById('owner').value = owner;
+                document.getElementById('repo').value = repo;
+            }
+            // Always fetch commits on load
+            fetchCommits();
+        };
+
+        function navigateToByUser() {
+            const owner = document.getElementById('owner').value;
+            const repo = document.getElementById('repo').value;
+            if (owner && repo) {
+                window.location.href = `/by-user?owner=${encodeURIComponent(owner)}&repo=${encodeURIComponent(repo)}`;
+            } else {
+                window.location.href = '/by-user';
+            }
+        }
+
+        async function fetchCommits() {
+            const owner = document.getElementById('owner').value;
+            const repo = document.getElementById('repo').value;
+
+            if (!owner || !repo) {
+                alert('Please enter both owner and repository name');
+                return;
+            }
+
+            currentOwner = owner;
+            currentRepo = repo;
+
+            try {
+                const response = await fetch('/get_commits', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ owner, repo })
+                });
+
+                const data = await response.json();
+
+                if (data.error) {
+                    alert('Error: ' + data.error);
+                    return;
+                }
+
+                createChart(data);
+                
+                // Update URL with current repository
+                const newUrl = `${window.location.pathname}?owner=${encodeURIComponent(owner)}&repo=${encodeURIComponent(repo)}`;
+                window.history.pushState({ path: newUrl }, '', newUrl);
+            } catch (error) {
+                alert('Error fetching commit data');
+                console.error('Error:', error);
+            }
+        }
+
+        function createChart(data) {
+            const ctx = document.getElementById('commitChart').getContext('2d');
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            const textColor = isDark ? '#e2e8f0' : '#2d3748';
+            const gridColor = isDark ? '#4a5568' : '#e2e8f0';
+            const accentColor = getComputedStyle(document.documentElement).getPropertyValue('--accent-color').trim();
+            
+            if (chart) {
+                chart.destroy();
+            }
+
+            chart = window.chart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: data.dates,
+                    datasets: [{
+                        label: 'Commits per Day',
+                        data: data.counts,
+                        borderColor: accentColor,
+                        tension: 0.1,
+                        fill: false
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Commit History (Last 30 Days)',
+                            color: textColor
+                        }
+                    },
+                    scales: {
+                        x: {
+                            grid: {
+                                color: gridColor
+                            },
+                            ticks: {
+                                color: textColor
+                            }
+                        },
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                color: gridColor
+                            },
+                            ticks: {
+                                stepSize: 1,
+                                color: textColor
+                            }
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html> 

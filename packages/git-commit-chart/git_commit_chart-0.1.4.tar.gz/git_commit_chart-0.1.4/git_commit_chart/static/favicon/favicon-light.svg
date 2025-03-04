@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Git branch circle -->
+    <circle cx="16" cy="16" r="14" stroke="#2d3748" stroke-width="2" fill="none"/>
+    <!-- Graph line representing commits -->
+    <path d="M6 20 L12 14 L18 22 L26 10" stroke="#2d3748" stroke-width="2" fill="none"/>
+    <!-- Branch symbol -->
+    <circle cx="12" cy="14" r="2" fill="#2d3748"/>
+    <circle cx="18" cy="22" r="2" fill="#2d3748"/>
+</svg> 
