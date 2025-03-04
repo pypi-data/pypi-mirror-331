@@ -1,0 +1,12 @@
+trossen_arm-1.6.0.dist-info/RECORD,,
+trossen_arm-1.6.0.dist-info/WHEEL,sha256=ERGCrsYkr6VChVf5NCT1wBgvGx1UzTBFxptceylMUzs,154
+trossen_arm-1.6.0.dist-info/METADATA,sha256=fq-Mn4FKqerWTCbFM07if3nltUj-xfDYk2ufCpYMobM,728
+lib/libtrossen_arm.a,sha256=l1pxJCeXfpU52laaw67_y_xezkNzGa5X-cziOd5BHyo,282814
+trossen_arm/trossen_arm.pyi,sha256=kf7la3fMhJEupl1Vvvrg9dbmITO93SnJLzzJ49zbJdc,36707
+trossen_arm/__init__.py,sha256=VExp7GwR9NJqhrrTU9xDra3iObDeQNthbErp1iVRzwI,1725
+trossen_arm/__init__.pyi,sha256=bmgulWs833djebZqLXVq66yG0hs2DnXjrmC_8nVcTls,627
+trossen_arm/trossen_arm.cpython-39-aarch64-linux-gnu.so,sha256=ZZ6GwdwBCnAhGw7f0V7NWb3uwCLvYiPTE6txj52BbQI,1320656
+include/libtrossen_arm/trossen_arm_interpolate.hpp,sha256=ie3eY97FX341rbeGk3B0gE9Z_d84iC1YrkzJmvsmx9E,4807
+include/libtrossen_arm/trossen_arm.hpp,sha256=0zMDzbsL_svDKkgkjiKsaLUZtjdmYKssKcU4VOmc5Y4,36474
+include/libtrossen_arm/trossen_arm_logging.hpp,sha256=_463slwutyTgrsP0iFLdokSB2okJaDS5wwDI_iolkTc,3144
+include/libtrossen_arm/trossen_arm_udp_client.hpp,sha256=B4VUPe1M2dae59Gt9pNDxYLJfmluTMkajafWvxszE9E,3593
