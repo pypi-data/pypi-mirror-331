@@ -1,0 +1,21 @@
+{
+    "name": "i2p.config_bandwidth",
+    "attributes": {
+        "depends": [
+            "i2p_victims"
+        ],
+        "provides": [
+            "i2p_bandwidth"
+        ]
+    },
+    "model_components": {
+        "depends": [
+            "i2p.i2p_objects"
+        ]
+    },
+    "plugin": "advertised_bandwidth.py",
+    "vm_resources": [
+        "vm_resources/*.py",
+        "vm_resources/*.sh"
+    ]
+}

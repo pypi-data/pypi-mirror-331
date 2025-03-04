@@ -1,0 +1,18 @@
+{
+    "name": "i2p.setup",
+    "attributes": {
+        "depends": [
+            "i2p_topology",
+            "dns",
+            "i2p_floodfills",
+           #"i2p_webservers",
+            "i2p_snark",
+            "i2p_victims",
+            "i2p_bandwidth"
+        ],
+        "provides": ["i2p_base_config"]
+    },
+    "model_components": {
+        "depends": []
+    }
+}

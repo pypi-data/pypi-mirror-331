@@ -1,0 +1,21 @@
+{
+    "name": "i2p.config_webservers",
+    "attributes": {
+        "depends": [
+            "i2p_topology",
+            "dns"
+        ],
+        "provides": [
+            "i2p_webservers"
+        ]
+    },
+    "model_components": {
+        "depends": ["i2p.i2p_objects"]
+    },
+    "plugin": "config_webservers.py",
+    "vm_resources": [
+        "vm_resources/*.py",
+        "vm_resources/*.sh",
+        "vm_resources/*.tgz"
+    ]
+}

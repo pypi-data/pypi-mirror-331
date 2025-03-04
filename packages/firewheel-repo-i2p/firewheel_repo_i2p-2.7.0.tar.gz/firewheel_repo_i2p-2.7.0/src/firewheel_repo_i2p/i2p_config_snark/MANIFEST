@@ -1,0 +1,21 @@
+{
+    "name": "i2p.config_snark",
+    "attributes": {
+        "depends": [
+            "i2p_floodfills"
+        ],
+        "provides": [
+            "i2p_snark"
+        ]
+    },
+    "model_components": {
+        "depends": [
+            "i2p.i2p_objects"
+        ]
+    },
+    "plugin": "config_snark.py",
+    "vm_resources": [
+        "vm_resources/*.py",
+        "vm_resources/*.sh",
+    ]
+}

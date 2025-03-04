@@ -1,0 +1,25 @@
+{
+"victim_groups": [
+    { "id": 1, "cpu_cores": 1, "bw_rate": 8, "i2p_share": 100, "torrent": "none" },
+    { "id": 2, "cpu_cores": 1, "bw_rate": 8, "i2p_share": 100, "torrent": "seeder" },
+    { "id": 3, "cpu_cores": 1, "bw_rate": 8, "i2p_share": 100, "torrent": "leecher" },
+    { "id": 4, "cpu_cores": 1, "bw_rate": 16, "i2p_share": 100, "torrent": "none" },
+    { "id": 5, "cpu_cores": 1, "bw_rate": 16, "i2p_share": 100, "torrent": "seeder" },
+    { "id": 6, "cpu_cores": 1, "bw_rate": 16, "i2p_share": 100, "torrent": "leecher" },
+    { "id": 7, "cpu_cores": 1, "bw_rate": 32, "i2p_share": 100, "torrent": "none" },
+    { "id": 8, "cpu_cores": 1, "bw_rate": 32, "i2p_share": 100, "torrent": "seeder" },
+    { "id": 9, "cpu_cores": 1, "bw_rate": 32, "i2p_share": 100, "torrent": "leecher" },
+    { "id": 10, "cpu_cores": 1, "bw_rate": 64, "i2p_share": 100, "torrent": "none" },
+    { "id": 11, "cpu_cores": 1, "bw_rate": 64, "i2p_share": 100, "torrent": "seeder" },
+    { "id": 12, "cpu_cores": 1, "bw_rate": 64, "i2p_share": 100, "torrent": "leecher" },
+    { "id": 13, "cpu_cores": 1, "bw_rate": 128, "i2p_share": 100, "torrent": "none" },
+    { "id": 14, "cpu_cores": 1, "bw_rate": 128, "i2p_share": 100, "torrent": "seeder" },
+    { "id": 15, "cpu_cores": 1, "bw_rate": 128, "i2p_share": 100, "torrent": "leecher" },
+    { "id": 16, "cpu_cores": 1, "bw_rate": 256, "i2p_share": 100, "torrent": "none" },
+    { "id": 17, "cpu_cores": 1, "bw_rate": 256, "i2p_share": 100, "torrent": "seeder" },
+    { "id": 18, "cpu_cores": 1, "bw_rate": 256, "i2p_share": 100, "torrent": "leecher" },
+    { "id": 19, "cpu_cores": 1, "bw_rate": 512, "i2p_share": 100, "torrent": "none" },
+    { "id": 20, "cpu_cores": 1, "bw_rate": 512, "i2p_share": 100, "torrent": "seeder" },
+    { "id": 21, "cpu_cores": 1, "bw_rate": 512, "i2p_share": 100, "torrent": "leecher" }
+    ]
+}

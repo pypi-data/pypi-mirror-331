@@ -1,0 +1,18 @@
+{
+"num_group_sets": 0,
+"group_size_num": 8,
+"victim_groups": [
+    { "id": 1, "cpu_cores": 1, "bw_rate": 12, "i2p_share": 100, "num_tunnels": "def", "len_tunnels": "def", "torrent": "seeder" },
+    { "id": 2, "cpu_cores": 1, "bw_rate": 12, "i2p_share": 100, "num_tunnels": "def", "len_tunnels": "def", "torrent": "leecher" },
+    { "id": 3, "cpu_cores": 1, "bw_rate": 48, "i2p_share": 100, "num_tunnels": "def", "len_tunnels": "max", "torrent": "seeder" },
+    { "id": 4, "cpu_cores": 1, "bw_rate": 48, "i2p_share": 100, "num_tunnels": "def", "len_tunnels": "max", "torrent": "leecher" },
+    { "id": 5, "cpu_cores": 1, "bw_rate": 128, "i2p_share": 100, "num_tunnels": "max", "len_tunnels": "max", "torrent": "seeder" },
+    { "id": 6, "cpu_cores": 1, "bw_rate": 128, "i2p_share": 100, "num_tunnels": "max", "len_tunnels": "def", "torrent": "seeder" },
+    { "id": 7, "cpu_cores": 4, "bw_rate": 128, "i2p_share": 100, "num_tunnels": "def", "len_tunnels": "max", "torrent": "seeder" },
+    { "id": 8, "cpu_cores": 4, "bw_rate": 128, "i2p_share": 100, "num_tunnels": "def", "len_tunnels": "def", "torrent": "seeder" },
+    { "id": 9, "cpu_cores": 1, "bw_rate": 512, "i2p_share": 100, "num_tunnels": "max", "len_tunnels": "max", "torrent": "seeder" },
+    { "id": 10, "cpu_cores": 1, "bw_rate": 512, "i2p_share": 100, "num_tunnels": "max", "len_tunnels": "def", "torrent": "seeder" },
+    { "id": 11, "cpu_cores": 4, "bw_rate": 512, "i2p_share": 100, "num_tunnels": "def", "len_tunnels": "max", "torrent": "seeder" },
+    { "id": 12, "cpu_cores": 4, "bw_rate": 512, "i2p_share": 100, "num_tunnels": "def", "len_tunnels": "def", "torrent": "seeder" }
+    ]
+}
