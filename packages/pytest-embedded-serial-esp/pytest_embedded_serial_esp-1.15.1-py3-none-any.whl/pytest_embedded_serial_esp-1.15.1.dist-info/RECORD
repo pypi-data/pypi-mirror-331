@@ -1,0 +1,6 @@
+pytest_embedded_serial_esp/__init__.py,sha256=RUXxmT2RDfHZi7vYBaHjtGleikp-DlWTyeXzNV_2WYg,156
+pytest_embedded_serial_esp/serial.py,sha256=l-Ex9xr5cQzmdcaBGQyGF8KOJqc1B9-VpwlcdXCnBbA,7277
+pytest_embedded_serial_esp-1.15.1.dist-info/licenses/LICENSE,sha256=_Um-MzeKCR0JCDg5Ac_WFmZEfsPTd7PNlNi9JF1GBX8,1094
+pytest_embedded_serial_esp-1.15.1.dist-info/WHEEL,sha256=_2ozNFCLWc93bK4WKHCO-eDUENDlo-dgc9cU3qokYO4,82
+pytest_embedded_serial_esp-1.15.1.dist-info/METADATA,sha256=eGFdiWk5Kuj1I3DisElAIA17tejQ5ThRHjc_au08dHU,1658
+pytest_embedded_serial_esp-1.15.1.dist-info/RECORD,,
