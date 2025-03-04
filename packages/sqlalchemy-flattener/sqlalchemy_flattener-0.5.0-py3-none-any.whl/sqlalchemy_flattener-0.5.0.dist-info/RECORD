@@ -1,0 +1,9 @@
+sqlalchemy_flattener/__init__.py,sha256=Rk5NaYf8qeF2MGF6jwf6AbhTpv2ra4kpcYIC6CFOEO0,78
+sqlalchemy_flattener/__main__.py,sha256=Azq4iI9h37VqvLUZji9FnpPcz320hSgMEVocXTAbt9U,1924
+sqlalchemy_flattener/flattener.py,sha256=NwbsFf8cyIdq6xXxWMlLlOqPnUsDR5WlBoF6fmkSouc,6876
+sqlalchemy_flattener/writers.py,sha256=e4MtUMpe6qNZSSNL6Tporb3cSDXVWqFcZO8bGhF2deY,1627
+sqlalchemy_flattener-0.5.0.dist-info/METADATA,sha256=yrmWY97jBLVQEZF-Ct7ZLIdoJT4tdzyRc4iiboYlOyE,1394
+sqlalchemy_flattener-0.5.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+sqlalchemy_flattener-0.5.0.dist-info/entry_points.txt,sha256=2EnfhI8P7Qtcq2BpUkwIYfEkoH7ZHjoDsWZwXlJCQRo,63
+sqlalchemy_flattener-0.5.0.dist-info/licenses/LICENSE,sha256=LXlxbrasQQx_hKZnjhaMffDmlTt85aFM4lhoQtbs0cU,1070
+sqlalchemy_flattener-0.5.0.dist-info/RECORD,,
