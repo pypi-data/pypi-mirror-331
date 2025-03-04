@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: changesets
+Version: 0.2.0
+Summary: Git-based changelog manager for JavaScript, Python, and Go projects.
+Project-URL: Repository, https://github.com/dworthen/changelog
+Author-email: Derek Worthen <worthend.derek@gmail.com>
+License-Expression: MIT
+Requires-Python: >=3.11
+Requires-Dist: changesets-darwin-arm64==0.2.0; sys_platform == 'darwin' and platform_machine == 'arm64'
+Requires-Dist: changesets-darwin-x64==0.2.0; sys_platform == 'darwin' and platform_machine == 'x86_64'
+Requires-Dist: changesets-linux-arm64==0.2.0; sys_platform == 'linux' and platform_machine == 'aarch64'
+Requires-Dist: changesets-linux-x64==0.2.0; sys_platform == 'linux' and platform_machine == 'x86_64'
+Requires-Dist: changesets-win32-arm64==0.2.0; sys_platform == 'win32' and platform_machine == 'ARM64'
+Requires-Dist: changesets-win32-x64==0.2.0; sys_platform == 'win32' and platform_machine == 'AMD64'
+Description-Content-Type: text/markdown
+
+# Changelog2

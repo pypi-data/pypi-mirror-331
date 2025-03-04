@@ -1,0 +1,2 @@
+[console_scripts]
+changelog = py_changelog.__init__:run
