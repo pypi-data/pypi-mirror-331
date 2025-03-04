@@ -1,0 +1,10 @@
+pyimpBB/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyimpBB/analyzing.py,sha256=Kvz3vz-k0D_ns6nmwu5iAjI9p3Fx3vf0Mf4BZK0CPtg,9736
+pyimpBB/bounding.py,sha256=tzL-r9uGf8S3rlvUhzpt1Ord4VU85XaJNyBp7xUSSqo,6137
+pyimpBB/helper.py,sha256=psAUHTpI2nBFz3eqSfUpkEiliA9QqRuW6Lkb3cuY_mo,14088
+pyimpBB/solver.py,sha256=i61U3MaC3QDcC4gX2_8DPNs-N9wktzW_AfSng7MSl6w,10264
+pyimpbb-0.0.4.dist-info/LICENSE.txt,sha256=Avv6CCaAxNBj4aNnceNTRjX9fBaURz8cw3JHO9v6PyM,1072
+pyimpbb-0.0.4.dist-info/METADATA,sha256=muRvHbGTKWlZ3FKPTJzWHbPPOumzaUo3UslvPz4Z9RE,15386
+pyimpbb-0.0.4.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+pyimpbb-0.0.4.dist-info/top_level.txt,sha256=JhLHoSq6VZpjqTv8tbD0sZz2n8zVSWWIDa3uwNhYXmo,8
+pyimpbb-0.0.4.dist-info/RECORD,,
