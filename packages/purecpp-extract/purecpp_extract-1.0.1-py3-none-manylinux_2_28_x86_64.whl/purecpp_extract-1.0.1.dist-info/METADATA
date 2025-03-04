@@ -1,0 +1,16 @@
+Metadata-Version: 2.2
+Name: purecpp_extract
+Version: 1.0.1
+Summary: High-performance data extractor for RAG, developed in C++. This package is a part of the PureCPP ecosystem.
+Home-page: https://github.com/pureai-ecosystem/purecpp
+Author: Diogo Vieira
+Author-email: contato@pureai.com.br
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: POSIX :: Linux
+Requires-Dist: purecpp_libs
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: summary
