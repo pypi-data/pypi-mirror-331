@@ -1,0 +1,2 @@
+[nbdev]
+shopify_l402 = shopify_l402._modidx:d
