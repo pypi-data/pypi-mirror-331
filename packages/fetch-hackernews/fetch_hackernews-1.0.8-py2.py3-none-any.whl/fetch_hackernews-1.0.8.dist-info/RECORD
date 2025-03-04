@@ -1,0 +1,13 @@
+fetch_hackernews/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fetch_hackernews/app_config.py,sha256=w0SiN8OkrtC--ufdIwL33a7ebrcIgczZv5luoGQ22Z0,1029
+fetch_hackernews/cli_output.py,sha256=oy4ChjpTTHyp0HfCfnxqD2dDbRvqeiS-mkdlODy5sL8,767
+fetch_hackernews/common.py,sha256=CQ9P5sg2Wo19lXZJmLSup5KPNUyMfP0HmvcthElBI6g,798
+fetch_hackernews/data_container.py,sha256=I_Fb0Ivgw69KqtNPTbVObx8AG9gtc2NzkiY0skSrLMQ,889
+fetch_hackernews/data_manager.py,sha256=pxJwzLYfn9t-g0eh3x-FgI5NtFgBceD2gQHK-Q9jiTw,3700
+fetch_hackernews/main.py,sha256=fP4PIiBCV0kBIpvna2NJaJotI8xMJMXdBAym29IufBE,1865
+fetch_hackernews-1.0.8.dist-info/LICENSE,sha256=0vonilcI5mMDDhisjh6tYdq3NDkXk96uWxzZTSk8A6k,1079
+fetch_hackernews-1.0.8.dist-info/METADATA,sha256=GJYNhjSJmAFi_BjDKVVG_mMc9M54IKStfbdlcivu4rU,3381
+fetch_hackernews-1.0.8.dist-info/WHEEL,sha256=rF4EZyR2XVS6irmOHQIJx2SUqXLZKRMUrjsg8UwN-XQ,109
+fetch_hackernews-1.0.8.dist-info/entry_points.txt,sha256=3y_2r5L7aq7cueS0FFytZZtORB_qisxqpvZ8FRrw8T8,64
+fetch_hackernews-1.0.8.dist-info/top_level.txt,sha256=3CZ_WMoCl-jZfYp6QPsxyOvDfk8nxYm6-Xpb_gYhjTg,17
+fetch_hackernews-1.0.8.dist-info/RECORD,,
