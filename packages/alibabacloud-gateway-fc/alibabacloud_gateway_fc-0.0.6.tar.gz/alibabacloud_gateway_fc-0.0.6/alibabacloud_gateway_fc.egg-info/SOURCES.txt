@@ -1,0 +1,9 @@
+setup.py
+alibabacloud_gateway_fc/__init__.py
+alibabacloud_gateway_fc/client.py
+alibabacloud_gateway_fc/models.py
+alibabacloud_gateway_fc.egg-info/PKG-INFO
+alibabacloud_gateway_fc.egg-info/SOURCES.txt
+alibabacloud_gateway_fc.egg-info/dependency_links.txt
+alibabacloud_gateway_fc.egg-info/requires.txt
+alibabacloud_gateway_fc.egg-info/top_level.txt
