@@ -1,0 +1,7 @@
+20230101|ABC123456789WXYZ|TESTBATCH
+1001|John Smith|5000.00|2001|Jane Doe|10
+1002|Alice Johnson|6500.50|2001|Jane Doe|12
+1003|Bob Williams|4200.75|2002|Mike Brown|8
+1004|Carol Davis|7800.25|2002|Mike Brown|15
+1005|David Miller|3900.00|2001|Jane Doe|5
+23400.50 

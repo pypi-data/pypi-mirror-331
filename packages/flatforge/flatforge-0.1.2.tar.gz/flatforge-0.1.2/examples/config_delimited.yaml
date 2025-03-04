@@ -1,0 +1,71 @@
+# Configuration for a delimited flat file with pipe separator
+# File has three sections: header, body, and footer
+
+# Global parameters
+parameters:
+  text_format_code: DEL
+  field_separator: '|'
+  record_separator: '\n'
+  section_separator: '\n'
+  allow_space_to_pad_numbers: 'true'
+
+# Arrays (including section metadata)
+arrays:
+  section_metadata:
+    # Header section (0)
+    '0':
+      format: DEL
+      instructions:
+        - name: del
+      columns:
+        - checks:
+            - name: date
+              parameters: ['yyyyMMdd']
+              column_alias: date
+        - checks:
+            - name: str
+              parameters: ['16']
+              column_alias: file_ref
+        - checks:
+            - name: str
+              parameters: ['TESTBATCH']
+              column_alias: file_type
+    
+    # Body section (1)
+    '1':
+      format: DEL
+      instructions:
+        - name: del
+      columns:
+        - checks:
+            - name: num
+              column_alias: emp_id
+        - checks:
+            - name: str
+              column_alias: emp_name
+        - checks:
+            - name: num
+              parameters: ['9', '2', '4']
+              column_alias: salary
+        - checks:
+            - name: num
+              column_alias: manager_id
+        - checks:
+            - name: str
+              is_optional: true
+              column_alias: manager_name
+        - checks:
+            - name: num
+              parameters: ['2']
+              column_alias: job_grade
+    
+    # Footer section (2)
+    '2':
+      format: DEL
+      instructions:
+        - name: del
+      columns:
+        - checks:
+            - name: cr_sum
+              parameters: ['1', '2']
+              column_alias: total_salary 

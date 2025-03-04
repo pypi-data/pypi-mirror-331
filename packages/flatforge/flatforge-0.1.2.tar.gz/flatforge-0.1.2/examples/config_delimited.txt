@@ -1,0 +1,16 @@
+# Configuration for a delimited flat file with pipe separator
+# File has three sections: header, body, and footer
+
+# Global settings
+text_format_code=DEL
+field_separator=|
+record_separator=\n
+section_separator=\n
+
+# Section metadata
+section_metadata@0=del%date{yyyyMMdd}:date|str{16}:file_ref|str{TESTBATCH}:file_type
+section_metadata@1=del%num:emp_id|str:emp_name|num{9,2,4}:salary|num:manager_id|!str:manager_name|num{2}:job_grade
+section_metadata@2=del%cr_sum{1,2}:total_salary
+
+# Validation rules
+allow_space_to_pad_numbers=true 

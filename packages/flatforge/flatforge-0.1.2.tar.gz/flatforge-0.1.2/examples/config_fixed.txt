@@ -1,0 +1,16 @@
+# Configuration for a fixed-length flat file
+# File has three sections: header, body, and footer
+
+# Global settings
+text_format_code=FL
+record_separator=\n
+section_separator=\n
+
+# Section metadata
+section_metadata@0=fl{8,16,9}%date{yyyyMMdd}:date|str{16}:file_ref|str{TESTBATCH}:file_type
+section_metadata@1=fl{10,30,10,10,30,2}%num:emp_id|str:emp_name|num{9,2,4}:salary|num:manager_id|!str:manager_name|num{2}:job_grade
+section_metadata@2=fl{10}%cr_sum{1,2}:total_salary
+
+# Validation rules
+allow_space_to_pad_numbers=true
+accept_trailing_white_space=true 
