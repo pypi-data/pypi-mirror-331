@@ -1,0 +1,11 @@
+gnome-terminal --geometry=120x40+100+200 --
+# more common: gnome-terminal --geometry=120x40+100+200 --
+# I like this better: konsole -e
+# other options:
+# konsole --new-tab --separate -e
+# konsole --new-tab -e
+# tmux can be used in a tmux session, e.g. with Termux:
+# -----------------------------------------------------
+# tmux split-window -h
+# tmux split-window -v
+# terminator --new-tab -e

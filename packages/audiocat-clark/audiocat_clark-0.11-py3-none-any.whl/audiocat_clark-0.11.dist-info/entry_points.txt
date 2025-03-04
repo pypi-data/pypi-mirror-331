@@ -1,0 +1,2 @@
+[console_scripts]
+audiocat = audiocat_clark.audiocat:main
