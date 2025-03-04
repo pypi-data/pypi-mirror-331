@@ -1,0 +1,10 @@
+PyYAML==6.0.2
+toml==0.10.2
+
+[development]
+mkdocs
+mkdocs-material
+ruff
+pytest
+build
+twine

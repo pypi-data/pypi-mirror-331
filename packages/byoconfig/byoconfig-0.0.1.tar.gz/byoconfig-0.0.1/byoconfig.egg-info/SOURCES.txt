@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+byo_config/__init__.py
+byo_config/config.py
+byo_config/error.py
+byoconfig.egg-info/PKG-INFO
+byoconfig.egg-info/SOURCES.txt
+byoconfig.egg-info/dependency_links.txt
+byoconfig.egg-info/requires.txt
+byoconfig.egg-info/top_level.txt
+tests/test_config.py
+tests/test_error.py
+tests/test_sources_base.py
+tests/test_sources_env.py
+tests/test_sources_file.py
