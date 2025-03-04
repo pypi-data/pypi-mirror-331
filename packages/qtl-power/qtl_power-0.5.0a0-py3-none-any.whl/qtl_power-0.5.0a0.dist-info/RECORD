@@ -1,0 +1,13 @@
+qtl_power/__init__.py,sha256=xZF5Lr1P6Q76ESuEodfKQI-eDm9MW_AaV2iW_-09vBA,66
+qtl_power/extreme_pheno.py,sha256=aRYpbugG7YtDIYC9O3lrGgc1yIS1bY5-Mhvqm7rfMuc,2796
+qtl_power/gwas.py,sha256=mUMsbeCv6nBUuRRSIvFovYi8imrn3u2D4Gf6x0SGTA8,12619
+qtl_power/rare_variants.py,sha256=e6tRR1dCD-fuDBJWK15cG3FIfb1Wkxj6zzxvv0sDenQ,15755
+tests/__init__.py,sha256=cdFX3-tlnh9Ught2cEeLuEbARxVI-zGvzMGYhmB4t0E,36
+tests/test_extreme_pheno.py,sha256=bBV-BK9hSgm0u9yqSrZ_jvZUe0SHsbdpjOXuVrvgMDE,1734
+tests/test_gwas.py,sha256=E3BNvpRRMeKLbcg75bJ2bhGMs_J4q5s3onSuclIsT0Q,9453
+tests/test_rare_variants.py,sha256=1hymiWrT4DUO-vwK2vT9KKdKP1pEEh0YUSKQNbLfWfY,8924
+qtl_power-0.5.0a0.dist-info/LICENSE.txt,sha256=Pb-bX0CcEzirLdJRP2BP2wSD5PqwrpntDLvgWNNoGq0,1072
+qtl_power-0.5.0a0.dist-info/METADATA,sha256=CyJ5TDApFVNbROmGsxlNmA2HrDtebenho1x-3FsPK6w,778
+qtl_power-0.5.0a0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+qtl_power-0.5.0a0.dist-info/top_level.txt,sha256=ertvyLiwQf92nFf0XIBUHUj4AZ-FyF2ar0W_bcnSk5E,16
+qtl_power-0.5.0a0.dist-info/RECORD,,

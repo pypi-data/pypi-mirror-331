@@ -1,0 +1,21 @@
+Metadata-Version: 2.2
+Name: qtl-power
+Version: 0.5.0a0
+Summary: "Power calculations for GWAS study design."
+Author-email: Arjun Biddanda <aabiddanda@gmail.com>
+Project-URL: Homepage, https://github.com/aabiddanda/qtl-power
+Project-URL: Issues, https://github.com/aabiddanda/qtl-power/issues
+Keywords: genetics,GWAS
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+License-File: LICENSE.txt
+Requires-Dist: numpy
+Requires-Dist: scipy
+Provides-Extra: tests
+Requires-Dist: pytest; extra == "tests"
+Requires-Dist: pytest-cov; extra == "tests"
+Requires-Dist: hypothesis; extra == "tests"
+Requires-Dist: flake8; extra == "tests"
+Requires-Dist: sphinx; extra == "tests"
