@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "py-file-stats"
+version = "0.1.0"
+description = "A CLI tool that collects statistics about the types of file extensions found in a given directory"
+authors = ["cameronhelsby <cameron@autone.io>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "file_stats"}]
+
+[tool.poetry.scripts]
+file-stats = "file_stats.main:app"
+
+[tool.poetry.dependencies]
+python = "~3.13"
+typer = "0.15.2"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.9.9"
+mypy = "^1.15.0"
+pytest = "8.3.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+output-format = "full"
+show-fixes = true
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "ANN401", # Do not use dynamic typing (Any)
+    "COM812", # Missing trailing comma in a tuple is not allowed
+    "D", # Disable all docstring checks
+    "D203", # 1 blank line required before class docstring - conflicts with D211
+    "D212", # Multi-line docstring summary should start at the second line - conflicts with D213
+    "EM101", # Assign exception message to a variable
+    "EM102", # Assign exception f-string message to a variable
+    "ISC001", # Single line implicit string concatenation is not allowed
+    "TRY003", # Avoid specifying long messages outside the exception class
+    "S101", # Use of assert detected
+]
