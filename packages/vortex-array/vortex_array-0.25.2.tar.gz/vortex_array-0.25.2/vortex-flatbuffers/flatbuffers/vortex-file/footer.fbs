@@ -1,0 +1,66 @@
+include "vortex-array/array.fbs";
+include "vortex-layout/layout.fbs";
+
+// [footer]
+/// The `Footer` stores the root `Layout` as well as location information for each referenced segment.
+table Footer {
+    layout: Layout;
+    segments: [Segment];
+    statistics: [ArrayStats];
+    array_encodings: [ArrayEncoding];
+    layout_encodings: [LayoutEncoding];
+}
+
+/// A `Segment` acts as the locator for a buffer within the file.
+struct Segment {
+    offset: uint64;
+    length: uint32;
+    alignment_exponent: uint8;
+    // These two fields are reserved for future use and act as pointers
+    // into `FileLayout::compression_schemes` and `FileLayout::encryption_schemes`
+    // respectively. They are not used in the current version of the file format.
+    _compression: uint8;
+    _encryption: uint16;
+}
+
+/// An `ArrayEncoding` describes the type of a particular array.
+///
+/// These are identified by a globally unique string identifier, and looked up in the Vortex registry
+/// at read-time.
+table ArrayEncoding {
+    id: string (required);
+}
+
+/// A `LayoutEncoding` describes the type of a particular layout.
+///
+/// These are identified by a globally unique string identifier, and looked up in the Vortex registry
+/// at read-time.
+table LayoutEncoding {
+    id: string (required);
+}
+
+// [footer]
+
+// [postscript]
+/// The `Postscript` is guaranteed by the file format to never exceed
+/// 65528 bytes (i.e., u16::MAX - 8 bytes) in length, and is immediately
+/// followed by an 8-byte `EndOfFile` struct.
+/// The initial read of a Vortex file is always at least 64KB (u16::MAX bytes) and therefore
+/// is guaranteed to cover at least the Postscript.
+table Postscript {
+    dtype: Segment;
+    footer: Segment;
+}
+// [postscript]
+
+/// The `EndOfFile` struct cannot change size without breaking backwards compatibility. It is not written/read
+/// using flatbuffers, but the equivalent flatbuffer definition would be:
+///
+// struct EndOfFile {
+//     version: uint16;
+//     footer_length: uint16;
+//     magic: [uint8; 4]; // "VTXF"
+// }
+
+root_type Footer;
+root_type Postscript;

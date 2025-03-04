@@ -1,0 +1,29 @@
+[package]
+name = "vortex-zigzag"
+version = { workspace = true }
+description = "Vortex zig zag array"
+homepage = { workspace = true }
+repository = { workspace = true }
+authors = { workspace = true }
+license = { workspace = true }
+keywords = { workspace = true }
+include = { workspace = true }
+edition = { workspace = true }
+rust-version = { workspace = true }
+categories = { workspace = true }
+readme = "README.md"
+
+[dependencies]
+vortex-array = { workspace = true }
+vortex-buffer = { workspace = true }
+vortex-dtype = { workspace = true }
+vortex-error = { workspace = true }
+vortex-mask = { workspace = true }
+vortex-scalar = { workspace = true }
+zigzag = { workspace = true }
+
+[dev-dependencies]
+vortex-array = { workspace = true, features = ["test-harness"] }
+
+[lints]
+workspace = true

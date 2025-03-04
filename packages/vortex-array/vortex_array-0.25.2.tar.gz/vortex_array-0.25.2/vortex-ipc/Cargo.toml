@@ -1,0 +1,32 @@
+[package]
+name = "vortex-ipc"
+description = "IPC message format to exchange Vortex arrays across processes"
+version = { workspace = true }
+homepage = { workspace = true }
+repository = { workspace = true }
+authors = { workspace = true }
+license = { workspace = true }
+keywords = { workspace = true }
+include = { workspace = true }
+edition = { workspace = true }
+rust-version = { workspace = true }
+readme = "README.md"
+categories = { workspace = true }
+
+[dependencies]
+bytes = { workspace = true }
+flatbuffers = { workspace = true }
+futures-util = { workspace = true, features = ["io"] }
+itertools = { workspace = true }
+pin-project-lite = { workspace = true }
+vortex-array = { workspace = true }
+vortex-buffer = { workspace = true }
+vortex-dtype = { workspace = true }
+vortex-error = { workspace = true }
+vortex-flatbuffers = { workspace = true, features = ["ipc"] }
+
+[dev-dependencies]
+tokio = { workspace = true, features = ["full"] }
+
+[lints]
+workspace = true

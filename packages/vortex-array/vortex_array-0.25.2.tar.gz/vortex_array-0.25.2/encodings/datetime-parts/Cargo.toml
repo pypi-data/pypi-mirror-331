@@ -1,0 +1,33 @@
+[package]
+name = "vortex-datetime-parts"
+description = "Vortex physical encoding that compresses temporal components individually"
+version = { workspace = true }
+homepage = { workspace = true }
+repository = { workspace = true }
+authors = { workspace = true }
+license = { workspace = true }
+keywords = { workspace = true }
+include = { workspace = true }
+edition = { workspace = true }
+rust-version = { workspace = true }
+categories = { workspace = true }
+readme = "README.md"
+
+[lints]
+workspace = true
+
+[dependencies]
+getrandom_v02 = { workspace = true }
+rkyv = { workspace = true }
+serde = { workspace = true, features = ["derive"] }
+vortex-array = { workspace = true }
+vortex-buffer = { workspace = true }
+vortex-datetime-dtype = { workspace = true }
+vortex-dtype = { workspace = true }
+vortex-error = { workspace = true }
+vortex-mask = { workspace = true }
+vortex-scalar = { workspace = true }
+
+[dev-dependencies]
+rstest = { workspace = true }
+vortex-array = { workspace = true, features = ["test-harness"] }

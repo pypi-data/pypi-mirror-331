@@ -1,0 +1,245 @@
+[workspace]
+members = ["encodings/*", "pyvortex", "vortex", "vortex-array", "vortex-btrblocks", "vortex-buffer", "vortex-datetime-dtype", "vortex-dtype", "vortex-error", "vortex-expr", "vortex-file", "vortex-flatbuffers", "vortex-io", "vortex-ipc", "vortex-layout", "vortex-mask", "vortex-metrics", "vortex-proto", "vortex-scalar"]
+exclude = ["wasm-test"]
+resolver = "2"
+
+[workspace.package]
+version = "0.25.2"
+homepage = "https://github.com/spiraldb/vortex"
+repository = "https://github.com/spiraldb/vortex"
+authors = ["Vortex Authors <hello@vortex.dev>"]
+license = "Apache-2.0"
+keywords = ["vortex"]
+include = [
+    "benches/*.rs",
+    "build.rs",
+    "src/**/*.rs",
+    "Cargo.toml",
+    "proto/**/*.proto",
+    "flatbuffers/**/*.fbs",
+    "README.md",
+]
+edition = "2024"
+rust-version = "1.86"
+readme = "README.md"
+categories = ["database-implementations", "data-structures", "compression"]
+
+[workspace.dependencies]
+anyhow = "1.0.95"
+arbitrary = "1.3.2"
+arrayref = "0.3.7"
+arrow = "54.2"
+arrow-arith = "54.2"
+arrow-array = "54.2"
+arrow-buffer = "54.2"
+arrow-cast = "54.2"
+arrow-ord = "54.2"
+arrow-schema = "54.2"
+arrow-select = "54.2"
+arrow-string = "54.2"
+async-once-cell = "0.5.4"
+async-trait = "0.1.86"
+backtrace = "0.3.74"
+bit-vec = "0.8.0"
+bytes = "1.9"
+bzip2 = "0.5.0"
+cfg-if = "1"
+chrono = "0.4.38"
+clap = "4"
+compio = { version = "0.13", features = ["io-uring"], default-features = false }
+crossterm = "0.28"
+datafusion = { version = "45", default-features = false }
+datafusion-common = { version = "45", default-features = false }
+datafusion-execution = "45"
+datafusion-expr = "45"
+datafusion-physical-expr = "45"
+datafusion-physical-plan = "45"
+divan = { package = "codspeed-divan-compat", version = "2.8.0" }
+dyn-hash = "0.2.0"
+enum-iterator = "2.0.0"
+exponential-decay-histogram = "=0.1.13"
+fastlanes = "0.1.8"
+flatbuffers = "25"
+flexbuffers = "25"
+flume = "0.11"
+fsst-rs = "0.5.0"
+futures = { version = "0.3.31", default-features = false }
+futures-executor = "0.3.31"
+futures-util = "0.3.31"
+getrandom = "0.3"
+goldenfile = "1"
+half = { version = "2.2.1", features = ["std", "num-traits"] }
+hashbrown = "0.15.1"
+homedir = "0.3.3"
+humansize = "2.1.3"
+indicatif = "0.17.8"
+itertools = "0.14.0"
+jiff = "0.2.0"
+libfuzzer-sys = "0.4"
+log = { version = "0.4.21" }
+mimalloc = "0.1.42"
+moka = { version = "0.12.10", default-features = false }
+governor = "0.8"
+num-traits = "0.2.19"
+num_enum = "0.7.2"
+object_store = "0.11.0"
+oneshot = "0.1.10"
+opentelemetry = "0.28.0"
+opentelemetry-otlp = "0.28.0"
+opentelemetry_sdk = "0.28.0"
+parking_lot = "0.12.3"
+parquet = "54.2"
+paste = "1.0.15"
+pin-project = "1.1.5"
+pin-project-lite = "0.2.15"
+prost = "0.13.4"
+prost-build = "0.13.4"
+prost-types = "0.13.4"
+pyo3 = { version = "0.23.4", features = ["extension-module", "abi3-py310"] }
+pyo3-log = "0.12.1"
+rancor = "0.1.0"
+rand = "0.9.0"
+rand_distr = "0.5"
+ratatui = "0.29"
+rayon = "1.10.0"
+regex = "1.11.0"
+reqwest = { version = "0.12.0", features = [
+    "charset",
+    "http2",
+    "macos-system-configuration",
+    "blocking",
+    "rustls-tls",
+], default-features = false }
+# TODO(ngates): remove the unaligned rkyv feature when we move to 8-byte metadata.
+rkyv = { version = "0.8.10", features = [
+    "little_endian",
+    "pointer_width_32",
+    "bytecheck",
+    "unaligned",
+] }
+rstest = "0.25"
+rustc-hash = "2"
+serde = "1.0.203"
+serde_json = "1.0.116"
+serde_test = "1.0.176"
+static_assertions = "1.1"
+tabled = { version = "0.18.0", default-features = false }
+tar = "0.4"
+tempfile = "3"
+tikv-jemallocator = "0.6"
+thiserror = "2.0.3"
+tokio = "1.36"
+tracing = { version = "0.1.41" }
+tracing-chrome = "0.7.2"
+tracing-futures = "0.2.5"
+tracing-subscriber = "0.3.19"
+url = "2.5.4"
+uuid = { version = "1.14", features = ["js"] }
+wasm-bindgen-futures = "0.4.39"
+witchcraft-metrics = "1.0.1"
+
+# BEGIN crates published by this project
+vortex = { version = "0.25.2", path = "./vortex" }
+vortex-alp = { version = "0.25.2", path = "./encodings/alp" }
+vortex-array = { version = "0.25.2", path = "./vortex-array" }
+vortex-btrblocks = { version = "0.25.2", path = "./vortex-btrblocks" }
+vortex-buffer = { version = "0.25.2", path = "./vortex-buffer" }
+vortex-bytebool = { version = "0.25.2", path = "./encodings/bytebool" }
+vortex-datafusion = { version = "0.25.2", path = "./vortex-datafusion" }
+vortex-datetime-dtype = { version = "0.25.2", path = "./vortex-datetime-dtype" }
+vortex-datetime-parts = { version = "0.25.2", path = "./encodings/datetime-parts" }
+vortex-dict = { version = "0.25.2", path = "./encodings/dict" }
+vortex-dtype = { version = "0.25.2", path = "./vortex-dtype", default-features = false }
+vortex-error = { version = "0.25.2", path = "./vortex-error" }
+vortex-expr = { version = "0.25.2", path = "./vortex-expr" }
+vortex-fastlanes = { version = "0.25.2", path = "./encodings/fastlanes" }
+vortex-file = { version = "0.25.2", path = "./vortex-file", default-features = false }
+vortex-flatbuffers = { version = "0.25.2", path = "./vortex-flatbuffers" }
+vortex-fsst = { version = "0.25.2", path = "./encodings/fsst" }
+vortex-io = { version = "0.25.2", path = "./vortex-io" }
+vortex-ipc = { version = "0.25.2", path = "./vortex-ipc" }
+vortex-layout = { version = "0.25.2", path = "./vortex-layout" }
+vortex-mask = { version = "0.25.2", path = "./vortex-mask" }
+vortex-metrics = { version = "0.25.2", path = "./vortex-metrics" }
+vortex-proto = { version = "0.25.2", path = "./vortex-proto" }
+vortex-runend = { version = "0.25.2", path = "./encodings/runend" }
+vortex-scalar = { version = "0.25.2", path = "./vortex-scalar", default-features = false }
+vortex-sparse = { version = "0.25.2", path = "./encodings/sparse" }
+vortex-zigzag = { version = "0.25.2", path = "./encodings/zigzag" }
+# END crates published by this project
+
+worker = "0.5.0"
+xshell = "0.2.6"
+zigzag = "0.1.0"
+
+[workspace.dependencies.getrandom_v03]
+package = "getrandom"
+version = "0.3.1"
+features = ["wasm_js"]
+
+[workspace.dependencies.getrandom_v02]
+package = "getrandom"
+version = "0.2.15"
+features = ["js"]
+
+[workspace.lints.rust]
+macro_use_extern_crate = "deny"
+redundant_lifetimes = "deny"
+unsafe_op_in_unsafe_fn = "deny"
+unused_lifetimes = "deny"
+unused_qualifications = "deny"
+warnings = "deny"
+
+[workspace.lints.clippy]
+all = { level = "deny", priority = -1 }
+as_ptr_cast_mut = "deny"
+borrow_as_ptr = "deny"
+cargo = { level = "deny", priority = -1 }
+cast_possible_truncation = "deny"
+collection_is_never_read = "deny"
+cognitive_complexity = "deny"
+dbg_macro = "deny"
+debug_assert_with_mut_call = "deny"
+derive_partial_eq_without_eq = "deny"
+exit = "deny"
+expect_fun_call = "deny"
+expect_used = "deny"
+equatable_if_let = "deny"
+fallible_impl_from = "deny"
+get_unwrap = "deny"
+host_endian_bytes = "deny"
+if_then_some_else_none = "deny"
+inconsistent_struct_constructor = "deny"
+manual_assert = "deny"
+manual_is_variant_and = "deny"
+many_single_char_names = "deny"
+mem_forget = "deny"
+multiple_crate_versions = "allow"
+or_fun_call = "deny"
+panic = "deny"
+# panic_in_result_fn = "deny" -- we cannot disable this for tests to use assertions
+redundant_clone = "deny"
+same_name_method = "deny"
+tests_outside_test_module = "deny"
+# todo = "deny"
+# unimplemented = "deny"
+unwrap_in_result = "deny"
+unwrap_used = "deny"
+use_debug = "deny"
+
+[profile.release]
+codegen-units = 1
+lto = "thin"      # attempts to perform optimizations across all crates within the dependency graph
+
+[profile.release_debug]
+inherits = "release"
+debug = "full"
+
+[profile.bench]
+codegen-units = 16
+debug = "full"
+lto = false
+
+[profile.bench_assert]
+inherits = "bench"
+debug-assertions = true

@@ -1,0 +1,46 @@
+[package]
+name = "vortex-runend"
+version = { workspace = true }
+description = "Vortex run end encoded array"
+homepage = { workspace = true }
+repository = { workspace = true }
+authors = { workspace = true }
+license = { workspace = true }
+keywords = { workspace = true }
+include = { workspace = true }
+edition = { workspace = true }
+rust-version = { workspace = true }
+categories = { workspace = true }
+readme = "README.md"
+
+[dependencies]
+arrow-buffer = { workspace = true }
+itertools = { workspace = true }
+num-traits = { workspace = true }
+serde = { workspace = true }
+vortex-array = { workspace = true }
+vortex-buffer = { workspace = true }
+vortex-dtype = { workspace = true }
+vortex-error = { workspace = true }
+vortex-mask = { workspace = true }
+vortex-scalar = { workspace = true }
+
+[lints]
+workspace = true
+
+[dev-dependencies]
+divan = { workspace = true }
+rand = { workspace = true }
+vortex-array = { workspace = true, features = ["test-harness"] }
+
+[[bench]]
+name = "run_end_filter"
+harness = false
+
+[[bench]]
+name = "run_end_null_count"
+harness = false
+
+[[bench]]
+name = "run_end_compress"
+harness = false

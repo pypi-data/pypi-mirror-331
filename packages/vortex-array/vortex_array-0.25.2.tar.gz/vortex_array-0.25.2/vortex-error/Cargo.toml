@@ -1,0 +1,41 @@
+[package]
+name = "vortex-error"
+version = { workspace = true }
+description = "Vortex errors"
+homepage = { workspace = true }
+repository = { workspace = true }
+authors = { workspace = true }
+license = { workspace = true }
+keywords = { workspace = true }
+include = { workspace = true }
+edition = { workspace = true }
+rust-version = { workspace = true }
+categories = { workspace = true }
+readme = "README.md"
+
+[lib]
+name = "vortex_error"
+path = "src/lib.rs"
+
+[features]
+flatbuffers = ["dep:flatbuffers"]
+datafusion = ["datafusion-common"]
+python = ["dep:pyo3"]
+
+[dependencies]
+arrow-schema = { workspace = true }
+datafusion-common = { workspace = true, optional = true }
+flatbuffers = { workspace = true, optional = true }
+flexbuffers = { workspace = true, optional = true }
+jiff = { workspace = true }
+object_store = { workspace = true, optional = true }
+parquet = { workspace = true, optional = true }
+pyo3 = { workspace = true, optional = true }
+rancor = { workspace = true, optional = true }
+thiserror = { workspace = true }
+tokio = { workspace = true, features = ["rt"], optional = true }
+url = { workspace = true }
+worker = { workspace = true, optional = true }
+
+[lints]
+workspace = true
