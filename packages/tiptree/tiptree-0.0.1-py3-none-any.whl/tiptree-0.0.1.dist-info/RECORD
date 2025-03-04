@@ -1,0 +1,13 @@
+tiptree/__init__.py,sha256=E6cgYGZwWcvmkIAV57-UVklkiP_Sj55CiFhrnvvL37M,1438
+tiptree/client.py,sha256=KGuooMzndXZTiHqwVJjhrj8BzVb9Jiu5kgufLp5ujtk,37260
+tiptree/exceptions.py,sha256=D01gea7rucAsrF4T9n_pzDkPig7aeYctj9qDPpKmOxQ,39
+tiptree/interface_models.py,sha256=wgT0Y3wCT-Uub4P8hFf8GYbtIppgzt0Bnr-hghMKltg,7598
+tiptree/utils.py,sha256=Xe7jH-uL0pnWSoLgfROI-Sf9SrW066pqN5Bybyav7m8,672
+tiptree/mixins/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tiptree/mixins/agent.py,sha256=BDHieUl4VdA4Q2AZjljUn_am2uYWP_dN6YQxm9aoRgk,10827
+tiptree/mixins/agent_session.py,sha256=EuC31-wa0ahP0jm36JrigMK_k5Sc1FXj-1mDQRQIjlQ,10823
+tiptree/mixins/message.py,sha256=mNFGgTEY-hF1CaBdeut80-D_Lf2-dW9rfzrc40zD-44,1794
+tiptree-0.0.1.dist-info/METADATA,sha256=7WghyBDQzgJVJbHRW3tEwFfd8fo5ELBPawzRdDHVeLw,2797
+tiptree-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+tiptree-0.0.1.dist-info/licenses/LICENSE,sha256=XFT59exxPwbcqdb85pxZREOxBTeEvl2X3YxsAk2a48k,1093
+tiptree-0.0.1.dist-info/RECORD,,
