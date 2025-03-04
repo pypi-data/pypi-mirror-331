@@ -1,0 +1,2 @@
+include pysnapping/test/complex_trip.geojson
+include pysnapping/py.typed

@@ -1,0 +1,87 @@
+[project]
+name = "pysnapping"
+description = "Snap points to a line string keeping a given order or spacing intact"
+readme = "README.md"
+dependencies = [
+  "shapely",
+  "numpy<2",
+  "pyproj>=3.2.0",  # for defining custom CRS
+]
+requires-python = ">=3.9"
+license = {file = "LICENSE"}
+authors = [{name = "Alexander Held | geOps", email = "alexander.held@geops.com"}]
+maintainers = [{name = "Alexander Held | geOps", email = "alexander.held@geops.com"}]
+keywords = [
+  "snapping",
+  "projecting",
+  "linear referencing",
+  "order",
+  "linestring",
+  "GIS",
+  "GTFS",
+  "kilometrage",
+  "DAG",
+  "shortest path",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python :: 3",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Scientific/Engineering :: GIS",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Typing :: Typed",
+]
+dynamic = ["version"]
+
+[project.urls]
+homepage = "https://github.com/geops/pysnapping"
+geOps = "https://geops.com/en"
+
+[build-system]
+requires = ["setuptools>=61", "setuptools_scm[toml]>=6.2", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+
+[tool.setuptools.packages.find]
+include = ["pysnapping", "pysnapping.*"]
+
+[tool.ruff.lint]
+select = [
+    "F", # pyflakes
+    "E",  # pycodestyle
+    "W", # pycodestyle
+    "UP",  # pyupgrade
+    "C901",  # mccabe
+    "YTT",  # no sys.version tuple comparisons
+    "ASYNC",  # no obviously blocking io in corotine
+    "G",  #  flake8-logging-format
+    "PIE",  # unnecessary statements
+    "SLOT",   # str, tuple, namedtuple subclasses need __slots__
+    "FIX003",  # line contains XXX
+]
+ignore = [
+    "E501",  # line too long
+    "UP038",  # see https://github.com/astral-sh/ruff/issues/7871
+]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 12
+
+[tool.mypy]
+ignore_missing_imports = true
+plugins = [
+    "numpy.typing.mypy_plugin",
+]
+install_types = true
+non_interactive = true
+
+[tool.coverage.run]
+branch = true
+source = [
+    "pysnapping"
+]
+omit = [
+    "pysnapping/test/*",
+]
