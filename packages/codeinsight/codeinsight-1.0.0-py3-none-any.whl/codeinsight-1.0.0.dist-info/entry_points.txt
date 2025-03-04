@@ -1,0 +1,2 @@
+[console_scripts]
+codeanalyzer = codeanalyzer.cli:main

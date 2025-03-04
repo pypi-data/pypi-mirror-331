@@ -1,0 +1,9 @@
+codeanalyzer/__init__.py,sha256=66pKX-Hp-FT1dvfzbm_hmQ9AnxM7__rg2kA2oitnSVM,786
+codeanalyzer/analyzer.py,sha256=eArqt3cIZlMBnQcO1xQ6us8NkYGqHdfSY1FQpfFfxSA,39472
+codeanalyzer/cli.py,sha256=e1gghFC_QxXqoti_7Qc6k7Dc8LXv635a8_Wfaqoh9Tg,10129
+codeanalyzer/test.py,sha256=vh626M0iqielt1hHSRRWgxVTX08XcAmZfTG3b7mkm5w,143
+codeinsight-1.0.0.dist-info/METADATA,sha256=5jOdReps9mGA1c9s2vNznxnxkpCVzMpbz9pGlGoqQYU,3961
+codeinsight-1.0.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+codeinsight-1.0.0.dist-info/entry_points.txt,sha256=AHaYunbzFixXojB7uw-2G6DnZtezR0l2HWlPKoYYxv4,55
+codeinsight-1.0.0.dist-info/top_level.txt,sha256=mTKjqbRxzBw1jL8h-zywdCM-w64lBdMQeD7dUqg2_rg,13
+codeinsight-1.0.0.dist-info/RECORD,,
