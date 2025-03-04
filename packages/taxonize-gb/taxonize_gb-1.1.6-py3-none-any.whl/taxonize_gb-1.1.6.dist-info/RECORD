@@ -1,0 +1,17 @@
+taxonize_gb/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+taxonize_gb/get_db.py,sha256=H6FTahXMcQAISbygT96qEKCErVtjBKe3A-rxs0HIDy8,5473
+taxonize_gb/get_taxonomy.py,sha256=mIFmHTeTPPUA-zGSaEpxgxDIDA3zCK_yJmWPQlJtEL0,2506
+taxonize_gb/main.py,sha256=TUcMJ8zfD_F955wM0gEaCICvIJ4QXfp3djDGuRTzmZo,12281
+taxonize_gb/taxonize_gb.py,sha256=CAqIjX11GIfnB7oP-jTdBfLwWIJQ4axMG6nuOLw631c,10820
+taxonize_gb/test_main.py,sha256=j7Hc9a1tWEUwYJXr0G7_Si4TTtdNaiH4edn2n95euXk,3893
+taxonize_gb/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+taxonize_gb/utils/filter_utils.py,sha256=yUrw4UgJcPsl0CUuIQZzrany-GuvyMl3waX9oqJjoNw,7540
+taxonize_gb/utils/get_db.py,sha256=w-d2OPOfnko6lFCniU2SGM4y3Lc62lfUTPSa4h5RHPI,5473
+taxonize_gb/utils/get_taxonomy.py,sha256=HPjoXfEq3AAe05qKu1Zq4flwps4S9E9Mgq8i7qVXiho,2607
+taxonize_gb/utils/taxonomy_utils.py,sha256=Y53nQWPeiTrQnyiPbDCBSxC3SUwJwm3n1oW97EcizJg,1938
+taxonize_gb-1.1.6.dist-info/LICENSE,sha256=vYM7wW7SzZjATJuoasxz0m6GwPpIDi5OkGuduDdd6mY,1073
+taxonize_gb-1.1.6.dist-info/METADATA,sha256=pSD4UKqckwWGsOh_aMY9cH450QpGXyG4yyeB80XqElo,5857
+taxonize_gb-1.1.6.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+taxonize_gb-1.1.6.dist-info/entry_points.txt,sha256=QX1sJdFQhJ8AtRAx_tYbPIwZFrPaML_o2DMQOWrTwVM,144
+taxonize_gb-1.1.6.dist-info/top_level.txt,sha256=okgRxUaDSveff3xPL7rOATM11gHmTlkAZhwpmwwsSjE,12
+taxonize_gb-1.1.6.dist-info/RECORD,,
