@@ -1,0 +1,2 @@
+[console_scripts]
+launch_open_source = pruna_launch_party.cli:main
