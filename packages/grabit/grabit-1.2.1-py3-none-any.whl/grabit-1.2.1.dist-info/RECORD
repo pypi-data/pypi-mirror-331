@@ -1,0 +1,11 @@
+grabit/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+grabit/default.grabit,sha256=5CQ9mAIVF_63yXsVg6o4V50EYdJhZs-UhymbWTpbFy0,719
+grabit/grabit.py,sha256=QDouquMn1Mxbn2E9f4rgXgpFVcSEesTclsT6NCVbxMY,10365
+grabit/initialisation.py,sha256=ZT15LVHoIp--S9MXnDhyglqQGn8PQSsEaIe2CoivbfI,561
+grabit/models.py,sha256=6c469etkk9j5-TGFGGpNMQROqz1SnjJoROUuJvoLrto,318
+grabit/present.py,sha256=gWTkLtqrFG4ukAPVbGAroSW0NZX1QJUjBh20d8ZjtH8,3182
+grabit-1.2.1.dist-info/LICENSE,sha256=ecOf8yk-1AvGjS4Tvk9F0F4rd_WILl0yH1zXEQTWxLo,1072
+grabit-1.2.1.dist-info/METADATA,sha256=HwShLX8-5i0sNDRnTiAJoRFr-9MENqERsFgbf80mwIc,6076
+grabit-1.2.1.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+grabit-1.2.1.dist-info/entry_points.txt,sha256=fUvXOYHD0l_KmY5Ojmha8JZk7XDbT5lfTFsZZ7cedxE,45
+grabit-1.2.1.dist-info/RECORD,,
