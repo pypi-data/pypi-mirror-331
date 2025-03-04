@@ -1,0 +1,43 @@
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.9.9
+    hooks:
+      - id: ruff
+        args: [--fix, --exit-non-zero-on-fix]
+      - id: ruff-format
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.3.0
+    hooks:
+      - id: codespell
+        exclude: >-
+          ^(.*comments\.csv|.*uv.lock)$
+  - repo: local
+    hooks:
+      - id: mypy
+        name: mypy
+        language: system
+        types: [python]
+        pass_filenames: false
+        entry: uv
+        args:
+          - run
+          - mypy
+          - --show-error-codes
+          - --config-file
+          - pyproject.toml
+          - aiohttp_msal
+  - repo: local
+    hooks:
+      - id: pylint
+        name: pylint
+        entry: uv
+        language: system
+        types: [python]
+        pass_filenames: false
+        args:
+          - run
+          - pylint
+          - aiohttp_msal
+          #- tests
+          - -rn # Only display messages
+          - -sn # Don't display the score

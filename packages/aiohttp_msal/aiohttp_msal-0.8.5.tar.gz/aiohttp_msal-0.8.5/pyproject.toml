@@ -1,0 +1,124 @@
+
+[project]
+name = "aiohttp_msal"
+version = "0.8.5"
+description = "Helper Library to use the Microsoft Authentication Library (MSAL) with aiohttp"
+keywords = ["msal", "oauth", "aiohttp", "asyncio"]
+readme = "README.md"
+authors = [{ name = "Johann Kellerman", email = "kellerza@gmail.com" }]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+requires-python = ">=3.11"
+dependencies = [
+    "attrs>25",
+    "aiohttp>=3.8",
+    "aiohttp_session>=2.12",
+    "msal>=1.31.1",
+]
+license = { text = "MIT" }
+
+[project.urls]
+Homepage = "https://github.com/kellerza/aiohttp_msal"
+
+[project.optional-dependencies]
+redis = [ # keep for backward compatibility
+    "aiohttp_session[aioredis]>=2.12",
+]
+aioredis = ["aiohttp_session[aioredis]>=2.12"]
+tests = [
+    "mypy",
+    "pylint==3.3.4",
+    "types-redis",
+    "pytest",
+    "pytest-aiohttp",
+    "pytest-asyncio",
+    "pytest-cov",
+    "pytest-env",
+]
+
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+# requires = ["uv-build"] # >=0.5.15,<0.6
+# build-backend = "uv_build"
+
+[tool.setuptools]
+license-files = [] # https://github.com/astral-sh/uv/issues/9513
+
+[tool.ruff]
+line-length = 121
+# pyflakes, pycodestyle, isort
+include = ["tests/*.py", "aiohttp_msal/**/*.py"]
+
+[tool.ruff.lint]
+select = ["F", "E", "W", "I001"]
+
+[tool.ruff.lint.flake8-import-conventions]
+# Declare the banned `from` imports.
+banned-from = ["typing"]
+
+[tool.ruff.lint.isort]
+no-lines-before = ["future", "standard-library"]
+
+[tool.mypy]
+disallow_untyped_defs = true
+ignore_missing_imports = true
+
+# https://stackoverflow.com/questions/64162504/settings-for-pylint-in-setup-cfg-are-not-getting-used
+[tool.pylint.'MESSAGES CONTROL']
+max-line-length = 120
+good-names = ["db", "fr", "cr", "k", "i"]
+disable = [
+    "line-too-long",
+    "unsubscriptable-object",
+    "unused-argument",
+    "too-many-branches",
+    "too-many-locals",
+    "too-many-statements",
+    "too-many-instance-attributes",
+    "too-few-public-methods",
+    "R0401",
+    "R0801",
+    "wrong-import-order",
+]
+
+[tool.pylint.design]
+# limiting the number of returns might discourage
+# the use of guard clauses. So we increase the
+# allowed number of returns from 6 to 8
+max-returns = 8
+
+[tool.pytest.ini_options]
+pythonpath = [".", "src"]
+filterwarnings = "ignore:.+@coroutine.+deprecated.+"
+testpaths = "tests"
+norecursedirs = [".git", "modules"]
+log_cli = true
+log_cli_level = "DEBUG"
+asyncio_mode = "auto"
+addopts = "--cov=aiohttp_msal --cov-report xml:cov.xml"
+
+env = [
+    "X_SP_APP_PW=p1",
+    "X_SP_APP_ID=i1",
+    "X_SP_AUTHORITY=a1",
+
+    "Y_SP_APP_PW=p2",
+    "Y_SP_APP_ID=i2",
+    "Y_SP_AUTHORITY=a2",
+
+    "A_NUM=5",
+    "A_BOOL=True",
+
+    "B_NUM=10",
+    "B_BOOL=False",
+    "B_ROOT=/c/",
+]
