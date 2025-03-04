@@ -1,0 +1,13 @@
+# Requirements for setup a development environment
+setuptools
+tox>=4.0
+coverage
+lxml
+xmlschema>=3.3.2
+Sphinx
+memory-profiler
+memray
+flake8
+mypy
+lxml-stubs
+-e .
