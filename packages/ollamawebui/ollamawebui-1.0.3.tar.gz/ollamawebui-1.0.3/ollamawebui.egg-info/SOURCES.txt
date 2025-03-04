@@ -1,0 +1,7 @@
+setup.py
+ollamawebui.egg-info/PKG-INFO
+ollamawebui.egg-info/SOURCES.txt
+ollamawebui.egg-info/dependency_links.txt
+ollamawebui.egg-info/entry_points.txt
+ollamawebui.egg-info/requires.txt
+ollamawebui.egg-info/top_level.txt
