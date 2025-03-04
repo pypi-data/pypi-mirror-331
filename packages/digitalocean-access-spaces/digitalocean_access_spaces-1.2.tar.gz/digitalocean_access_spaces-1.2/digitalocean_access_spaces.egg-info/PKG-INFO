@@ -1,0 +1,11 @@
+Metadata-Version: 2.2
+Name: digitalocean_access_spaces
+Version: 1.2
+Home-page: https://github.com/lupin-oomura/digitalocean_access_spaces.git
+Author: Shin Oomura
+Author-email: shin.oomura@gmail.com
+Requires-Dist: boto3==1.35.99
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: requires-dist
