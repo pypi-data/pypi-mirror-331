@@ -1,0 +1,9 @@
+xero_mcp/__init__.py,sha256=bkiJl7sZqx6U3I1fcFetef8SxK2MTeAtax2uRyl4kbE,44
+xero_mcp/app.py,sha256=_EQnjeaGWahFir0g8gU2e8Jd0c0WtS_F8lXmIZKaaFg,40851
+xero_mcp/auth_success.html,sha256=tXnV4zw0t_KGDE9xNnTr-lQxgfCUIhXPR9qj__JL-z0,1835
+xero_mcp/cli.py,sha256=7V-Mvx6lt6bVzt7k8nEWtLvdJjhMzgZ_JK1GXt4au2E,150
+xero_mcp-0.1.8.dist-info/METADATA,sha256=YAeXPbEUA1j9CVgY3zlQpBsJJDTngwxvE5hcbULCrYM,3346
+xero_mcp-0.1.8.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+xero_mcp-0.1.8.dist-info/entry_points.txt,sha256=6ndzzMYsOKeoRz4odiJ74uRj6d8ObQAtSClgcRlrlys,46
+xero_mcp-0.1.8.dist-info/top_level.txt,sha256=tM1KSJrI6BA2U0d3UbzVJHrmNhqzLPeTtEKJiU6SBLE,9
+xero_mcp-0.1.8.dist-info/RECORD,,
