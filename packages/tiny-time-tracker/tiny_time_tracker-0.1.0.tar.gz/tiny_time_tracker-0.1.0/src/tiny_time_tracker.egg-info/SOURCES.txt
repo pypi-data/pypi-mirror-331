@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+src/comptute_stats.py
+src/track_time.py
+src/write_report.py
+src/tiny_time_tracker.egg-info/PKG-INFO
+src/tiny_time_tracker.egg-info/SOURCES.txt
+src/tiny_time_tracker.egg-info/dependency_links.txt
+src/tiny_time_tracker.egg-info/top_level.txt
