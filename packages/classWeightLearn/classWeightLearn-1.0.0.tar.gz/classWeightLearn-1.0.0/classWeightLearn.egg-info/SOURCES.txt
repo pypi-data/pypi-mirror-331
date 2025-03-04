@@ -1,0 +1,9 @@
+README.md
+setup.py
+classWeightLearn/__init__.py
+classWeightLearn/main.py
+classWeightLearn.egg-info/PKG-INFO
+classWeightLearn.egg-info/SOURCES.txt
+classWeightLearn.egg-info/dependency_links.txt
+classWeightLearn.egg-info/requires.txt
+classWeightLearn.egg-info/top_level.txt

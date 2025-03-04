@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: classWeightLearn
+Version: 1.0.0
+Summary: Optuna Class Weight Cost-Sensitive Learning
+Home-page: 
+Author: Mahayasa Adiputra
+Author-email: mahayasa.a@kkumail.com
+Description-Content-Type: text/markdown
+
+### Cost Sensitive Learning
+This is an Extended research from CTGAN-ENN, on algorithm-level approach by fine tuning class-weight using optuna, the supported model are SVM, Random Forest and LightBGM (other models come soon), the classifier model will run with the best class_weight parameter<br>
+
+### Instalation
+```bash
+pip install classWeightLearn
+```
+### Example Usage
+```bash
+from classWeightLearn import find_best_class_weight
+
+best_weight_svc = find_best_class_weight(X, y, model_name='svc', n_trials=1)
+classifier = SVC(class_weight=best_weight_svc)
+```
+
+### Variables
+- X : all features of your dataset
+- y : target label of your dataset
+- model_name : supported models are (svc, lightgbm and random_forest)
+- n_trials : the number of trial that optuna will run (default:1)
