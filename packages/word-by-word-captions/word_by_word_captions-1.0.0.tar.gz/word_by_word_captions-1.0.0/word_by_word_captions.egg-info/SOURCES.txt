@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+tests/test_wbw_captions.py
+wbw_captions/__init__.py
+wbw_captions/__main__.py
+wbw_captions/wbw_captions.py
+word_by_word_captions.egg-info/PKG-INFO
+word_by_word_captions.egg-info/SOURCES.txt
+word_by_word_captions.egg-info/dependency_links.txt
+word_by_word_captions.egg-info/entry_points.txt
+word_by_word_captions.egg-info/requires.txt
+word_by_word_captions.egg-info/top_level.txt

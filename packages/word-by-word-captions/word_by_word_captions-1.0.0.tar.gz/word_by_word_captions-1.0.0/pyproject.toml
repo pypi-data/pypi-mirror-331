@@ -1,0 +1,51 @@
+[project]
+name = "word-by-word-captions"
+version = "1.0.0"
+description = "Generate synchronized word-by-word captions for videos using WhisperX timestamps"
+readme = "README.md"
+authors = [
+    {name = "Xabi Ezpeleta"}
+]
+keywords = ["captions", "video", "whisperx", "subtitles"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+]
+
+requires-python = ">=3.8"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "black>=23.0.0",
+    "isort>=5.12.0",
+    "flake8>=6.0.0",
+    "mypy>=1.0.0",
+    "setuptools",
+    "wheel"
+]
+
+[project.scripts]
+wbw-captions = "wbw_captions.__main__:main"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.package-data]
+wbw_captions = ["py.typed"]
+
+[project.urls]
+"Homepage" = "https://github.com/xezpeleta/word-by-word-captions"
+"Bug Tracker" = "https://github.com/xezpeleta/word-by-word-captions/issues"
+
+
+
+
+
+
+
