@@ -1,0 +1,9 @@
+acma_orm/__init__.py,sha256=pSaVAhwiGefvRVITnFQLMwnz7lvH6qOLUKNl_hj-csY,589
+acma_orm/database.py,sha256=swrl-gs0cwUcng503XwCucyQwMZwfZJqKlrGQD22wOs,1478
+acma_orm/importer.py,sha256=5MaGO0maQd8T2jtcBs-6-jW0MW8bl2LYrQqSrTE3Ihg,3672
+acma_orm/importer2.py,sha256=IZAXJLq9M5Btsg1ITw4HPcMRWbMAgZX93LlnNCZbuqM,35500
+acma_orm/models.py,sha256=nYssYi84WkMtjHpPSHU5ED3nkysZpZq_42gdSFHbSt8,12373
+acma_orm/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+acma_orm-0.1.0.dist-info/METADATA,sha256=j7kcSjtpxsJsUrtDFllf3h3y3YFt-owkrH4GrvI2B-c,313
+acma_orm-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+acma_orm-0.1.0.dist-info/RECORD,,
