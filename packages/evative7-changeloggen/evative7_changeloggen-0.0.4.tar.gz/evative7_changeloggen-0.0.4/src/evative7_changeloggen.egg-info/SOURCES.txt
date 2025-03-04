@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/changelog.py
+src/evative7_changeloggen.egg-info/PKG-INFO
+src/evative7_changeloggen.egg-info/SOURCES.txt
+src/evative7_changeloggen.egg-info/dependency_links.txt
+src/evative7_changeloggen.egg-info/entry_points.txt
+src/evative7_changeloggen.egg-info/requires.txt
+src/evative7_changeloggen.egg-info/top_level.txt
