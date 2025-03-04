@@ -1,0 +1,13 @@
+generalized_timeseries/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+generalized_timeseries/data_generator.py,sha256=YdgUnh2_FWtDeUzBg7o6DIFr33Ks0B4M7MJR8s6GU-M,4132
+generalized_timeseries/data_processor.py,sha256=T4p6mppGi5pzfLBsKrExxd6kvxy_MYoVB10wUKtoQQA,17102
+generalized_timeseries/stats_model.py,sha256=EBYWR-Zv7lzIqt9LyOVspC3GuwbJth62KTBGtaj4ebs,9392
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_data_generator.py,sha256=xYopwYeqlc6_9MGYOF95TdB96s0VhEfi9RupW0b8VDo,856
+tests/test_data_processor.py,sha256=eIyS0SQpjZWbot8rEngJirr9xsx6TvTy3wBRjL3yGX0,1226
+tests/test_stats_model.py,sha256=g6CxjBHkOxyh4AzRvtMbYMs2CZ1WujgYF7ush1p53C0,1712
+generalized_timeseries-0.1.1.dist-info/LICENSE,sha256=TrWwnkDfpIvaYH6haWvQLrVgSsjr9PUCp0_P1HnFScE,61
+generalized_timeseries-0.1.1.dist-info/METADATA,sha256=0e_UbzBxMfy9zSqq9SbzaKxjdN34PrQ3dZENDwf_Hbk,1932
+generalized_timeseries-0.1.1.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+generalized_timeseries-0.1.1.dist-info/top_level.txt,sha256=ABmguLCqmVDOQDZfhgCEPhKoPnw_UKD_o6qCacvM74o,29
+generalized_timeseries-0.1.1.dist-info/RECORD,,
