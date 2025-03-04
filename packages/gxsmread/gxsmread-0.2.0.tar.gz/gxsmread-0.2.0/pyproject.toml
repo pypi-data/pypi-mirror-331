@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "gxsmread"
+version = "0.2.0"
+description = "Read gxsm data files"
+authors = ["Nick Sullivan <nsulmol@gmail.com>"]
+license = "GPL"
+readme = "README.md"
+packages = [{include = "gxsmread"}]
+
+[tool.poetry.dependencies]
+python = ">=3.9"
+netcdf4 = "^1.6.4"
+xarray = "^2023.9.0"
+tomli = "^2.0.1"
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^7.4.0"
+
+
+[tool.poetry.group.parallel.dependencies]
+xarray = {extras = ["parallel"], version = "^2023.9.0"}
+
+
+[tool.poetry.group.io.dependencies]
+xarray = {extras = ["io"], version = "^2023.9.0"}
+
+
+[tool.poetry.group.dev.dependencies]
+debugpy = "^1.6.7"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
