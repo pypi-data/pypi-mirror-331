@@ -1,0 +1,7 @@
+[obspy.plugin.waveform]
+MSEED3 = simplemseed_obspy_plugin.core
+
+[obspy.plugin.waveform.MSEED3]
+isFormat = simplemseed_obspy_plugin.core:_is_mseed3
+readFormat = simplemseed_obspy_plugin.core:_read_mseed3
+writeFormat = simplemseed_obspy_plugin.core:_write_mseed3
