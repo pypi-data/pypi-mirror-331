@@ -1,0 +1,2 @@
+[console_scripts]
+SeriesMaster-ReadMe = SeriesMaster:ReadMe
