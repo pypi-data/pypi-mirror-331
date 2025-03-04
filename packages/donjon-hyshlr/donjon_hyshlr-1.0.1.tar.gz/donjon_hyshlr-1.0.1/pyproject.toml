@@ -1,0 +1,24 @@
+[project]
+name = "donjon-hyshlr"
+version = "1.0.1"
+description = "Python3 API for the Hayashi light remote control dongle"
+authors = [
+    { name = "Olivier Hériveaux", email = "olivier.heriveaux@ledger.fr" },
+]
+maintainers = [
+    { name = "Michael Mouchous", email = "michael.mouchous@ledger.fr" },
+]
+license = "LGPL-3.0-or-later"
+readme = "README.md"
+dependencies = ["pyserial"]
+requires-python = ">=3.6"
+
+[project.urls]
+Repository = "https://github.com/Ledger-Donjon/hayashi-light-remote"
+
+[tool.poetry]
+packages = [{ include = "hyshlr", from = "." }]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

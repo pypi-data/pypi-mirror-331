@@ -1,0 +1,28 @@
+Metadata-Version: 2.3
+Name: donjon-hyshlr
+Version: 1.0.1
+Summary: Python3 API for the Hayashi light remote control dongle
+License: LGPL-3.0-or-later
+Author: Olivier Hériveaux
+Author-email: olivier.heriveaux@ledger.fr
+Maintainer: Michael Mouchous
+Maintainer-email: michael.mouchous@ledger.fr
+Requires-Python: >=3.6
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: pyserial
+Project-URL: Repository, https://github.com/Ledger-Donjon/hayashi-light-remote
+Description-Content-Type: text/markdown
+
+# Hayashi light remote
+
+Python library for controlling Hayashi light with the hardware dongle.
+
