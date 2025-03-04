@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eeg_auto_tools"
+version = "0.0.26"
+description = "The set of tools for working with EEG data"
+readme = "README.md"
+authors = [
+  { name = "Sear", email = "vasilijkrukovskij2015@gmail.com" }
+]
+license = { file = "LICENSE" }
+dependencies = []
