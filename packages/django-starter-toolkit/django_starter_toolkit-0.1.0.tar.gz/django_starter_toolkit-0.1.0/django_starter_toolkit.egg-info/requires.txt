@@ -1,0 +1,8 @@
+Django>=2.2
+requests
+pandas
+beautifulsoup4
+firebase-admin
+pymongo
+django-tinymce==3.5.0
+django-autocomplete-light

@@ -1,0 +1,51 @@
+Metadata-Version: 2.2
+Name: django-starter-toolkit
+Version: 0.1.0
+Summary: Un toolkit con utilidades y helpers para Django, que incluye formularios, funciones JS y utilidades generales.
+Home-page: https://github.com/tuusuario/django-starter-toolkit
+Author: Tu Nombre
+Author-email: tu.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Framework :: Django
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Django>=2.2
+Requires-Dist: requests
+Requires-Dist: pandas
+Requires-Dist: beautifulsoup4
+Requires-Dist: firebase-admin
+Requires-Dist: pymongo
+Requires-Dist: django-tinymce==3.5.0
+Requires-Dist: django-autocomplete-light
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: summary
+
+# django-starter-toolkit
+
+## Descripción
+
+**django-starter-toolkit** es un paquete de utilidades para proyectos Django que te ayuda a acelerar el desarrollo al incluir:
+
+- **Formularios Mejorados**: Mixins y clases base (como `BootstrapFieldsMixin`, `BaseForm` y `ModelBaseForm`) que integran automáticamente estilos de Bootstrap y validaciones en tus formularios.
+- **Funciones Utilitarias**: Helpers y funciones comunes para facilitar tareas recurrentes en Django (definidas en `utils.py`).
+- **Recursos JavaScript**: Un archivo `functions.js` con funcionalidades para tooltips, peticiones AJAX con manejo de CSRF, manejo de formularios modales, entre otros, que podrás incluir fácilmente en tus templates.
+
+## Características
+
+- **Formularios Dinámicos**: Configuración automática de campos en formularios Django.
+- **Helpers Generales**: Funciones útiles para mejorar la eficiencia en tareas diarias.
+- **Integración de JS**: Archivo JavaScript listo para ser usado en tus proyectos, facilitando interacciones y mejoras en la UI.
+
+## Instalación
+
+Instala el paquete mediante pip:
+
+```bash
+pip install django-starter-toolkit
