@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+simple_chat_structure/__init__.py
+simple_chat_structure/chat.py
+simple_chat_structure.egg-info/PKG-INFO
+simple_chat_structure.egg-info/SOURCES.txt
+simple_chat_structure.egg-info/dependency_links.txt
+simple_chat_structure.egg-info/top_level.txt
+tests/__init__.py
+tests/test_chat.py
