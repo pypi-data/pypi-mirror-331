@@ -1,0 +1,11 @@
+jupad/__init__.py,sha256=HLs6q6Djh7c4NNPLCy08F5XNlt1cIBrDYhCgdvxyZZw,55262
+jupad/__main__.py,sha256=IiLh4CIZk4p8-NNIAc4JcEsVSWd45YGz27_rfO-mS5M,1590
+jupad/_version.py,sha256=EY1c6JeG6uVHQoQcoxYAagjmJgQQxJk7iQ23gAoevU4,511
+jupad/resources/icon.svg,sha256=HEmcpxCWtzsPoWdb-MtZuIqjHxsJrVUp4JQiHmrD-B8,5363
+jupad/tests/test_jupad.py,sha256=MTX8dO6dNg5o-0545bKqUnow4AQIdXSKPR5IasHmtFs,1924
+jupad-0.0.4.dist-info/LICENSE,sha256=d4oZhMfNqQPox157zWfVOBjDTAzlf6v-_QKDnentoKI,2582
+jupad-0.0.4.dist-info/METADATA,sha256=CvH2sd7GQzwQq87_QsWcAk41faC-thSivQE0SUcEPeY,4640
+jupad-0.0.4.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+jupad-0.0.4.dist-info/entry_points.txt,sha256=qt1Uc0bPcz3UtwKOi1sl2RKFHkg2-6QeCAduHWMxgtw,42
+jupad-0.0.4.dist-info/top_level.txt,sha256=iW_vy27f9f6IYio1-Qvtxk8AEM7mOy7Kg0KJOWIt1dg,6
+jupad-0.0.4.dist-info/RECORD,,
