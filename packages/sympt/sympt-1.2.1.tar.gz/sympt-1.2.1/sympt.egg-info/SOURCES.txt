@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+sympt/__init__.py
+sympt/classes.py
+sympt/logging_config.py
+sympt/solver.py
+sympt/utils.py
+sympt.egg-info/PKG-INFO
+sympt.egg-info/SOURCES.txt
+sympt.egg-info/dependency_links.txt
+sympt.egg-info/requires.txt
+sympt.egg-info/top_level.txt
+tests/test_classes.py
