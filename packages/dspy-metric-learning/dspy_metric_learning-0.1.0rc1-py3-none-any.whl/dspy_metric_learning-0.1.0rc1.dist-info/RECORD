@@ -1,0 +1,9 @@
+metric_learner/__init__.py,sha256=3PhPdND20wooNjnBNIwSRIZJC5i440iFY-Q9qgVCABg,378
+metric_learner/data_manager.py,sha256=RrtsUqBrMSXenf-a7966J_2K_VNVjJxAujXMI1x7R2g,4913
+metric_learner/metric_module.py,sha256=NQ-Bn421LlXYeIW5HogaURPHP4PGIneJDbRTKAbbpKg,3988
+metric_learner/optimization.py,sha256=SnTMLuFtaju4Y5Qll4EKbjefUj-OF4j8FVndbfbdj_c,4228
+metric_learner/repl_interface.py,sha256=XABuZAMSBx7akp18lCiuk-0esOSoiPSiSlRF3MK8os8,2953
+dspy_metric_learning-0.1.0rc1.dist-info/LICENSE,sha256=u6_aqEx4xWIfRO5T9-sEETIRWx_Gz28K1zuB_7JBQ_Q,1066
+dspy_metric_learning-0.1.0rc1.dist-info/METADATA,sha256=odaSoTHbQEgdm9oVwphJgvEdE1-7Uo9bdb3Nu0jFB44,9319
+dspy_metric_learning-0.1.0rc1.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+dspy_metric_learning-0.1.0rc1.dist-info/RECORD,,
