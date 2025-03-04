@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: territory-python-scanner
+Version: 1.1
+Summary: Python scanner for Territory.dev
+Author-email: Pawel Stiasny <pawel@territory.dev>
+License-Expression: MIT
+License-File: LICENSE
+Requires-Dist: protobuf>=5.29.3
+Requires-Dist: jedi
+Requires-Dist: parso
+Requires-Dist: pytest
+Project-URL: Homepage, https://territory.dev
+Project-URL: Issues, https://discord.gg/34FmMARaKP
+Project-URL: Repository, https://github.com/territory-dev/territory-python-scanner
