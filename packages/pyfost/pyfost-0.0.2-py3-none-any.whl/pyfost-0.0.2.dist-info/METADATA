@@ -1,0 +1,44 @@
+Metadata-Version: 2.4
+Name: pyfost
+Version: 0.0.2
+Project-URL: Documentation, https://github.com/Dee/pyfost#readme
+Project-URL: Issues, https://github.com/Dee/pyfost/issues
+Project-URL: Source, https://github.com/Dee/pyfost
+Author-email: Dee <dee.somethech@gmail.com>
+License-Expression: Apache-2.0
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# pyfost
+
+[![PyPI - Version](https://img.shields.io/pypi/v/pyfost.svg)](https://pypi.org/project/pyfost)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pyfost.svg)](https://pypi.org/project/pyfost)
+
+This is a namespace package for [Fost](https://fost.studio/) open-source python tools.
+
+-----
+
+## Table of Contents
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install pyfost
+```
+
+## License
+
+`pyfost` is distributed under the terms of the [Apache-2.0](https://spdx.org/licenses/Apache-2.0.html) license.
