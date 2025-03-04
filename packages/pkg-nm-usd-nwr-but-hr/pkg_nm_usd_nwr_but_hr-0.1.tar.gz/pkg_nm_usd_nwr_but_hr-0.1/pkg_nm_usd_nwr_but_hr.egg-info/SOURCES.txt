@@ -1,0 +1,5 @@
+setup.py
+pkg_nm_usd_nwr_but_hr.egg-info/PKG-INFO
+pkg_nm_usd_nwr_but_hr.egg-info/SOURCES.txt
+pkg_nm_usd_nwr_but_hr.egg-info/dependency_links.txt
+pkg_nm_usd_nwr_but_hr.egg-info/top_level.txt
