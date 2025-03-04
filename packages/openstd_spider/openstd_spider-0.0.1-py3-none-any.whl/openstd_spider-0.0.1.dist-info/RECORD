@@ -1,0 +1,17 @@
+openstd_spider/__init__.py,sha256=MXY5z_wMKn5XhCs-jQeoqJme3VeWCTr3yLgB2UFKWP4,1675
+openstd_spider/__main__.py,sha256=Jt9P7s2MywlYOoEqXaLqihWmrQkmWu1ndinZO1OFhPA,45
+openstd_spider/captcha.py,sha256=rGnYeyNbDInXSP1DK12Dxf5akv0t01QRNxKOC_H2Z1o,468
+openstd_spider/cli.py,sha256=pr_z4yM7wrF_BeZr3Ecgpq4lGdYctJZKWyg1pbzccys,11586
+openstd_spider/exception.py,sha256=gipJ0LfU4Fl8vkHmcIqLT3KYXEXuhKV5M4wZvc2xkrk,257
+openstd_spider/pdf.py,sha256=CGMrQiq8OV0FkaSdZWzPjtmf_4VA8z8154dritcfpYU,1332
+openstd_spider/request.py,sha256=sTX0qMuRr-oDoEE5Z9SIXROUZowrFE2U_ahnu237VOI,5821
+openstd_spider/schema.py,sha256=u8Ny-q1w8t8UD5xlEQDBisCopOCICe4sRofdq1W-Ijw,1332
+openstd_spider/utils.py,sha256=XnfTfuh472rGlWF2A1Suoq7DGNnXZnI-bEUGOlejHAw,1391
+openstd_spider/parse/gb688.py,sha256=POKL5H5UEKebHcFDL2pbDr_cRE-ckvNkdnGZDU_df2Y,2713
+openstd_spider/parse/openstd.py,sha256=NjUQwDL1KBm9TTbx0BgF8vIv-6qOZ1eJWMsmJoPhujg,3114
+openstd_spider-0.0.1.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+openstd_spider-0.0.1.dist-info/METADATA,sha256=1nJJh2krfBP9AC2cZP3ZyIWZ0zhwGNyiI2RMV-2WWoU,5722
+openstd_spider-0.0.1.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+openstd_spider-0.0.1.dist-info/entry_points.txt,sha256=rqhwv5t04Bt1d9qBDev2esNMaC1z6WCf10wpp2Z7rDA,63
+openstd_spider-0.0.1.dist-info/top_level.txt,sha256=M2Jz4JplYgj8FRWdrJw85VEMECb6SfTiWK2afxCJcZM,15
+openstd_spider-0.0.1.dist-info/RECORD,,
