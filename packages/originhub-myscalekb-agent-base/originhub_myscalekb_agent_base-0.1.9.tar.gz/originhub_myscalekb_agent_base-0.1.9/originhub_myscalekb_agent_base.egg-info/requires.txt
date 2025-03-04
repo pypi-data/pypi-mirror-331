@@ -1,0 +1,9 @@
+pydantic~=2.8.2
+langchain==0.3.19
+langchain-openai==0.3.7
+langchain-community==0.3.18
+langgraph==0.2.35
+nanoid~=2.0.0
+clickhouse-connect~=0.7.18
+json5~=0.9.25
+json_repair~=0.30.0
