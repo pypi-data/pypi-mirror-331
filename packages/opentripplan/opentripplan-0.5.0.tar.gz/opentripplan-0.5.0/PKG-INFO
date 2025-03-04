@@ -1,0 +1,18 @@
+Metadata-Version: 2.2
+Name: opentripplan
+Version: 0.5.0
+Summary: opentripplan is now otripy
+Classifier: Development Status :: 7 - Inactive
+Description-Content-Type: text/markdown
+Requires-Dist: otripy
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: summary
+
+# opentripplan is now otripy
+
+This package has been renamed. Use `pip install otripy` instead.
+
+New package: https://pypi.org/project/otripy/

@@ -1,0 +1,7 @@
+README.md
+setup.py
+opentripplan.egg-info/PKG-INFO
+opentripplan.egg-info/SOURCES.txt
+opentripplan.egg-info/dependency_links.txt
+opentripplan.egg-info/requires.txt
+opentripplan.egg-info/top_level.txt
