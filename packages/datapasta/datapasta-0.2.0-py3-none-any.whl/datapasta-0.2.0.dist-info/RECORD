@@ -1,0 +1,13 @@
+datapasta-0.2.0.dist-info/METADATA,sha256=sVdYvpNXwNo9lmcwB7f76PE7eWwdrR-4c9Qtv6XML2Y,11962
+datapasta-0.2.0.dist-info/WHEEL,sha256=thaaA2w1JzcGC48WYufAs8nrYZjJm8LqNfnXFOFyCC4,90
+datapasta-0.2.0.dist-info/entry_points.txt,sha256=s89v6NWniJfYns0AnranVXYnOQsDKA51eqfS26NH1zI,66
+datapasta-0.2.0.dist-info/licenses/LICENSE,sha256=3PTP0N-rYq4J61SlDnoFJTa8U1-BqOTm-1xBUdd4lIc,1069
+datapasta/__init__.py,sha256=9NfhJk9Z37O-Q7hDT4Sm5tl5gZK9z_OiQQ9KXext5IQ,1044
+datapasta/clipboard.py,sha256=I1az_ID1ScQsu2ddftN5Fpq1SRKrsO14F6exfnihUN8,560
+datapasta/clipboard_targets.py,sha256=cLc7rlpX1LzX1xkJwRgutsC7Zm0OyZCC8uoz_QTeCnU,8321
+datapasta/formatter.py,sha256=tTvZ27CP8psJaYXEr5bYLKvFZwifykBq3imFDhBghpw,3149
+datapasta/html_parser.py,sha256=Ip0xgM1FtiShQoGtl0deeupjYLdzmGiIID-IXGj0NBc,9339
+datapasta/main.py,sha256=YaCjR0bMP5nGZ1XO-mruIGmwly7Z-V9gbwcSAkIWtoU,7942
+datapasta/parser.py,sha256=xdKeZ-_K7BcRQrmv6eU7kgDxYpP3FTvVrjk19tw0k98,6513
+datapasta/type_inference.py,sha256=ZERNXRHsYiHDURi9knwGtMOMW2cCP2PeIgISqXCpqTY,2908
+datapasta-0.2.0.dist-info/RECORD,,
