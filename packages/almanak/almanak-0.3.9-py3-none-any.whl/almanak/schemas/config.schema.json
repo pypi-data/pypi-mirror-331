@@ -1,0 +1,76 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "version": "0.1.0",
+  "required": ["name", "shared_configs", "strategy_configs"],
+  "properties": {
+    "description": {
+      "type": "string",
+      "description": "A description of the strategy"
+    },
+    "name": {
+      "type": "string",
+      "description": "name of the strategy"
+    },
+    "shared_configs": {
+      "description": "The shared configurations for the strategy",
+      "properties": {
+        "default_config": {
+          "type": "object",
+          "description": "The default configuration for the strategy",
+          "required": [
+            "network",
+            "chain",
+            "protocol",
+            "initiate_teardown",
+            "pause_strategy",
+            "mode",
+            "granularity"
+          ],
+          "properties": {
+            "network": {
+              "type": "string"
+            },
+            "chain": {
+              "type": "string"
+            },
+            "protocol": {
+              "type": "string"
+            },
+            "initiate_teardown": {
+              "type": "boolean"
+            },
+            "pause_strategy": {
+              "type": "boolean"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "granularity": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "strategy_configs": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "test_tokens": {
+      "elements": {
+        "properties": {
+          "address": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string",
+            "optional": true
+          }
+        }
+      }
+    }
+  }
+}

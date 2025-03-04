@@ -1,0 +1,34 @@
+{
+  "name": "Strategy_Template",
+  "description": "",
+  "strategy_wallets_requirements": {},
+  "strategy_parameters": {},
+  "strategy_required_env": {
+    "CHAINBOUND_API_KEY": "",
+    "ALCHEMY_API_KEY": "",
+    "COINGECKO_API_KEY": "",
+    "DEBUG_ALWAYS_REBALANCE": "True",
+    "READ_ONLY_MODE": "False",
+    "ENABLE_DEBUG": "True"
+  },
+  "shared_configs": {
+    "default_config": {
+      "network": "ANVIL",
+      "chain": "ARBITRUM",
+      "protocol": "UNISWAP_V3",
+      "wallet_address": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+      "initiate_teardown": false,
+      "pause_strategy": false,
+      "mode": "EXECUTION",
+      "granularity": "1h"
+    }
+  },
+  "strategy_configs": {
+    "PENDLE_WETH": {
+      "strategy_name": "Strategy_Template",
+      "parameters": {
+        "shared_parameters": "default_config"
+      }
+    }
+  }
+}
