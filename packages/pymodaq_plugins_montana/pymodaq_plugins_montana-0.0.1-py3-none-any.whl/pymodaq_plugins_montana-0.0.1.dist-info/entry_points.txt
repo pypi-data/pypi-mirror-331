@@ -1,0 +1,5 @@
+[pymodaq.instruments]
+montana = pymodaq_plugins_montana
+
+[pymodaq.plugins]
+montana = pymodaq_plugins_montana

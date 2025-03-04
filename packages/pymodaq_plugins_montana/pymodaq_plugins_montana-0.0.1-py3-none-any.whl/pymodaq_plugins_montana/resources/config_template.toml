@@ -1,0 +1,11 @@
+title = 'this is the configuration file of the plugin Montana'
+
+ip_address = '10.35.3.38'
+
+cryo_port = 47101
+rook_port = 47171
+
+temp_stability = 0.05  # K
+
+target_temp_1 = 292.0  # Kelvin
+target_temp_2 = 4.0 #Kelvin
