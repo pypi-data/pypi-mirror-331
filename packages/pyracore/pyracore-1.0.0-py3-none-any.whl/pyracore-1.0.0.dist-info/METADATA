@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: pyracore
+Version: 1.0.0
+Summary: Uma biblioteca modular para operações avançadas em sistemas.
+Home-page: https://github.com/joaquimtimoteo/pyracore
+Author: Joaquim Carlos Timóteo
+Author-email: joaquimcarlostimoteo1@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: cryptography
+Requires-Dist: pynput
+Requires-Dist: requests
+Requires-Dist: scapy
+Requires-Dist: psutil
+
+# PyraCore
+
+**PyraCore** é uma biblioteca Python modular e robusta projetada para facilitar o desenvolvimento de ferramentas avançadas para operações em sistemas, redes e segurança.
+
