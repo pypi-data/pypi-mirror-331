@@ -1,0 +1,11 @@
+Metadata-Version: 2.2
+Name: szn-search-mlops-common
+Version: 0.0.78
+Summary: Common utilities for MLOps applications, including tracking functionality.
+Home-page: https://example.com/szn-search-mlops-common
+Author: Pen Test
+Author-email: test.skvara@seznam.cz
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: summary
