@@ -1,0 +1,21 @@
+{
+  "ignore": [
+    "shiny/api-examples",
+    "examples",
+    "build",
+    "dist",
+    "typings",
+    "sandbox",
+    "_dev",
+    "docs",
+    "tests/playwright/deploys/*/app.py",
+    "shiny/templates",
+    "tests/playwright/shiny/tests_for_ai_generated_apps"
+  ],
+  "typeCheckingMode": "strict",
+  "reportImportCycles": "none",
+  "reportUnusedFunction": "none",
+  "reportPrivateUsage": "none",
+  "reportUnnecessaryIsInstance": "none",
+  "executionEnvironments": [{ "root": "examples/" }]
+}
