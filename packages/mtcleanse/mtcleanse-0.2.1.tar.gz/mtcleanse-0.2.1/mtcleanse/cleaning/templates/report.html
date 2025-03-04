@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MT-Cleaner Report</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        border: "hsl(var(--border))",
+                        input: "hsl(var(--input))",
+                        ring: "hsl(var(--ring))",
+                        background: "hsl(var(--background))",
+                        foreground: "hsl(var(--foreground))",
+                        primary: {
+                            DEFAULT: "hsl(var(--primary))",
+                            foreground: "hsl(var(--primary-foreground))",
+                        },
+                        secondary: {
+                            DEFAULT: "hsl(var(--secondary))",
+                            foreground: "hsl(var(--secondary-foreground))",
+                        },
+                        card: {
+                            DEFAULT: "hsl(var(--card))",
+                            foreground: "hsl(var(--card-foreground))",
+                        },
+                        muted: {
+                            DEFAULT: "hsl(var(--muted))",
+                            foreground: "hsl(var(--muted-foreground))",
+                        },
+                        accent: {
+                            DEFAULT: "hsl(var(--accent))",
+                            foreground: "hsl(var(--accent-foreground))",
+                        }
+                    },
+                    borderRadius: {
+                        lg: "var(--radius)",
+                        md: "calc(var(--radius) - 2px)",
+                        sm: "calc(var(--radius) - 4px)",
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        :root {
+            --background: 0 0% 100%;
+            --foreground: 240 10% 3.9%;
+            --muted: 240 4.8% 95.9%;
+            --muted-foreground: 240 3.8% 46.1%;
+            --popover: 0 0% 100%;
+            --popover-foreground: 240 10% 3.9%;
+            --card: 0 0% 100%;
+            --card-foreground: 240 10% 3.9%;
+            --border: 240 5.9% 90%;
+            --input: 240 5.9% 90%;
+            --primary: 240 5.9% 10%;
+            --primary-foreground: 0 0% 98%;
+            --secondary: 240 4.8% 95.9%;
+            --secondary-foreground: 240 5.9% 10%;
+            --accent: 240 4.8% 95.9%;
+            --accent-foreground: 240 5.9% 10%;
+            --ring: 240 5% 64.9%;
+            --radius: 0.5rem;
+        }
+
+        .dark {
+            --background: 240 10% 3.9%;
+            --foreground: 0 0% 98%;
+            --muted: 240 3.7% 15.9%;
+            --muted-foreground: 240 5% 64.9%;
+            --popover: 240 10% 3.9%;
+            --popover-foreground: 0 0% 98%;
+            --card: 240 10% 3.9%;
+            --card-foreground: 0 0% 98%;
+            --border: 240 3.7% 15.9%;
+            --input: 240 3.7% 15.9%;
+            --primary: 0 0% 98%;
+            --primary-foreground: 240 5.9% 10%;
+            --secondary: 240 3.7% 15.9%;
+            --secondary-foreground: 0 0% 98%;
+            --accent: 240 3.7% 15.9%;
+            --accent-foreground: 0 0% 98%;
+            --ring: 240 4.9% 83.9%;
+        }
+
+        /* Additional custom styles */
+        .chart-container {
+            min-height: 400px;
+        }
+        
+        .sample-text {
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+        }
+
+        .shadcn-card {
+            border-radius: var(--radius);
+            background-color: hsl(var(--card));
+            color: hsl(var(--card-foreground));
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .shadcn-card:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .shadcn-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--radius);
+            font-weight: 500;
+            font-size: 0.875rem;
+            height: 2.5rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            transition-property: color, background-color, border-color;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 150ms;
+        }
+
+        .shadcn-button-primary {
+            background-color: hsl(var(--primary));
+            color: hsl(var(--primary-foreground));
+        }
+
+        .shadcn-button-primary:hover {
+            opacity: 0.9;
+        }
+
+        .shadcn-button-secondary {
+            background-color: hsl(var(--secondary));
+            color: hsl(var(--secondary-foreground));
+        }
+
+        .shadcn-button-secondary:hover {
+            opacity: 0.9;
+        }
+
+        .theme-toggle {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            z-index: 50;
+        }
+    </style>
+</head>
+<body class="bg-background text-foreground min-h-screen">
+    <button class="theme-toggle shadcn-button shadcn-button-secondary" onclick="document.documentElement.classList.toggle('dark')">
+        Toggle Theme
+    </button>
+
+    <div class="py-12 px-4 mx-auto max-w-7xl">
+        <!-- Header Section -->
+        <header class="text-center mb-16">
+            <div class="inline-block mb-4 p-2 bg-muted rounded-lg">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-auto text-primary">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+            </div>
+            <h1 class="text-4xl font-bold mb-2">MT-Cleaner Report</h1>
+            <p class="text-xl text-muted-foreground">Text Cleaning Statistics and Analysis</p>
+        </header>
+
+        <!-- Overview Section -->
+        <section class="mb-14">
+            <div class="flex items-center mb-6">
+                <h2 class="text-2xl font-semibold">Overview</h2>
+                <div class="ml-4 h-px bg-border flex-1"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="shadcn-card p-6">
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-sm font-medium text-muted-foreground uppercase tracking-wider">Total Pairs</h3>
+                        <p class="text-3xl font-bold">{{ stats.total_pairs }}</p>
+                    </div>
+                </div>
+                <div class="shadcn-card p-6">
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-sm font-medium text-muted-foreground uppercase tracking-wider">Final Pairs</h3>
+                        <p class="text-3xl font-bold">{{ stats.final_pairs }}</p>
+                    </div>
+                </div>
+                <div class="shadcn-card p-6">
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-sm font-medium text-muted-foreground uppercase tracking-wider">Reduction</h3>
+                        <p class="text-3xl font-bold">{{ "%.2f"|format(stats.reduction_percentage) }}%</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filtering Results Section -->
+        <section class="mb-14">
+            <div class="flex items-center mb-6">
+                <h2 class="text-2xl font-semibold">Filtering Results</h2>
+                <div class="ml-4 h-px bg-border flex-1"></div>
+            </div>
+            <div class="shadcn-card p-6">
+                <div class="chart-container">
+                    {{ filtering_chart | safe }}
+                </div>
+            </div>
+        </section>
+
+        <!-- Length Distribution Section -->
+        <section class="mb-14">
+            <div class="flex items-center mb-6">
+                <h2 class="text-2xl font-semibold">Length Distribution</h2>
+                <div class="ml-4 h-px bg-border flex-1"></div>
+            </div>
+            <div class="shadcn-card p-6">
+                <div class="chart-container">
+                    {{ length_plot | safe }}
+                </div>
+            </div>
+        </section>
+
+        <!-- Quality Statistics Section -->
+        {% if stats.quality_stats %}
+        <section class="mb-14">
+            <div class="flex items-center mb-6">
+                <h2 class="text-2xl font-semibold">Quality Statistics</h2>
+                <div class="ml-4 h-px bg-border flex-1"></div>
+            </div>
+            <div class="shadcn-card p-6">
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead>
+                            <tr class="border-b border-border">
+                                <th class="py-3 px-6 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider">Metric</th>
+                                <th class="py-3 px-6 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for key, value in stats.quality_stats.items() %}
+                            <tr class="border-b border-border">
+                                <td class="py-4 px-6 text-sm font-medium">{{ key }}</td>
+                                <td class="py-4 px-6 text-sm text-muted-foreground">{{ "%.3f"|format(value) if value is number else value }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        {% endif %}
+
+        <!-- Sample Filtered Pairs Section -->
+        <section class="mb-14">
+            <div class="flex items-center mb-6">
+                <h2 class="text-2xl font-semibold">Sample Filtered Pairs</h2>
+                <div class="ml-4 h-px bg-border flex-1"></div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                {% if stats.filtered_samples.empty_samples %}
+                <div class="shadcn-card p-6">
+                    <h4 class="text-lg font-medium mb-4 pb-2 border-b border-border">Empty After Cleaning</h4>
+                    {% for src, tgt in stats.filtered_samples.empty_samples %}
+                    <div class="mb-4">
+                        <div class="bg-muted p-3 rounded-md mb-2 sample-text text-sm overflow-x-auto">
+                            <span class="text-muted-foreground font-medium">Source:</span> {{ src }}
+                        </div>
+                        <div class="bg-muted p-3 rounded-md sample-text text-sm overflow-x-auto">
+                            <span class="text-muted-foreground font-medium">Target:</span> {{ tgt }}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+
+                {% if stats.filtered_samples.too_short_samples %}
+                <div class="shadcn-card p-6">
+                    <h4 class="text-lg font-medium mb-4 pb-2 border-b border-border">Too Short</h4>
+                    {% for src, tgt in stats.filtered_samples.too_short_samples %}
+                    <div class="mb-4">
+                        <div class="bg-muted p-3 rounded-md mb-2 sample-text text-sm overflow-x-auto">
+                            <span class="text-muted-foreground font-medium">Source:</span> {{ src }}
+                        </div>
+                        <div class="bg-muted p-3 rounded-md sample-text text-sm overflow-x-auto">
+                            <span class="text-muted-foreground font-medium">Target:</span> {{ tgt }}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+
+                {% if stats.filtered_samples.too_long_samples %}
+                <div class="shadcn-card p-6">
+                    <h4 class="text-lg font-medium mb-4 pb-2 border-b border-border">Too Long</h4>
+                    {% for src, tgt in stats.filtered_samples.too_long_samples %}
+                    <div class="mb-4">
+                        <div class="bg-muted p-3 rounded-md mb-2 sample-text text-sm overflow-x-auto">
+                            <span class="text-muted-foreground font-medium">Source:</span> {{ src }}
+                        </div>
+                        <div class="bg-muted p-3 rounded-md sample-text text-sm overflow-x-auto">
+                            <span class="text-muted-foreground font-medium">Target:</span> {{ tgt }}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+
+                {% if stats.filtered_samples.word_count_samples %}
+                <div class="shadcn-card p-6">
+                    <h4 class="text-lg font-medium mb-4 pb-2 border-b border-border">Word Count Filtered</h4>
+                    {% for src, tgt in stats.filtered_samples.word_count_samples %}
+                    <div class="mb-4">
+                        <div class="bg-muted p-3 rounded-md mb-2 sample-text text-sm overflow-x-auto">
+                            <span class="text-muted-foreground font-medium">Source:</span> {{ src }}
+                        </div>
+                        <div class="bg-muted p-3 rounded-md sample-text text-sm overflow-x-auto">
+                            <span class="text-muted-foreground font-medium">Target:</span> {{ tgt }}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+
+                {% if stats.filtered_samples.length_outliers_samples %}
+                <div class="shadcn-card p-6">
+                    <h4 class="text-lg font-medium mb-4 pb-2 border-b border-border">Length Outliers</h4>
+                    {% for src, tgt in stats.filtered_samples.length_outliers_samples %}
+                    <div class="mb-4">
+                        <div class="bg-muted p-3 rounded-md mb-2 sample-text text-sm overflow-x-auto">
+                            <span class="text-muted-foreground font-medium">Source:</span> {{ src }}
+                        </div>
+                        <div class="bg-muted p-3 rounded-md sample-text text-sm overflow-x-auto">
+                            <span class="text-muted-foreground font-medium">Target:</span> {{ tgt }}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+
+                {% if stats.filtered_samples.domain_outliers_samples %}
+                <div class="shadcn-card p-6">
+                    <h4 class="text-lg font-medium mb-4 pb-2 border-b border-border">Domain Outliers</h4>
+                    {% for src, tgt in stats.filtered_samples.domain_outliers_samples %}
+                    <div class="mb-4">
+                        <div class="bg-muted p-3 rounded-md mb-2 sample-text text-sm overflow-x-auto">
+                            <span class="text-muted-foreground font-medium">Source:</span> {{ src }}
+                        </div>
+                        <div class="bg-muted p-3 rounded-md sample-text text-sm overflow-x-auto">
+                            <span class="text-muted-foreground font-medium">Target:</span> {{ tgt }}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+
+                {% if stats.filtered_samples.quality_filtered_samples %}
+                <div class="shadcn-card p-6">
+                    <h4 class="text-lg font-medium mb-4 pb-2 border-b border-border">Quality Filtered</h4>
+                    {% for src, tgt in stats.filtered_samples.quality_filtered_samples %}
+                    <div class="mb-4">
+                        <div class="bg-muted p-3 rounded-md mb-2 sample-text text-sm overflow-x-auto">
+                            <span class="text-muted-foreground font-medium">Source:</span> {{ src }}
+                        </div>
+                        <div class="bg-muted p-3 rounded-md sample-text text-sm overflow-x-auto">
+                            <span class="text-muted-foreground font-medium">Target:</span> {{ tgt }}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center mt-16 mb-8 text-sm text-muted-foreground">
+            <p>Generated with MT-Cleaner &copy; {{ stats.date if stats.date else '2023' }}</p>
+        </footer>
+    </div>
+
+    <script>
+        // Check for dark mode preference
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+</body>
+</html> 
