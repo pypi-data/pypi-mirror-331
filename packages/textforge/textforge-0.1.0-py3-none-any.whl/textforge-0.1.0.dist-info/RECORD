@@ -1,0 +1,13 @@
+textforge/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+textforge/base.py,sha256=g4zFdCt4cXGsTa0RJfGNzBAyQcb9I0zmeLZGqrL4eSc,175
+textforge/deployment.py,sha256=OR23weRokY9O_8hqAg3dj9O26PmN9s-VmZV4VJ0ZCzU,1295
+textforge/pipeline.py,sha256=hEIIJS-OQDRzwgCMU8oAYqUwl-MTmBa_vtd7vS3vpdU,4849
+textforge/quantize.py,sha256=olMzwOVGW_8cXv6-tMD7ScXJN97waU-kBdptZhEclN8,3252
+textforge/serve.py,sha256=STrR-QbzhjatLaaeauzup_MDWQCH7dfGPyU49rrHZrc,2291
+textforge/synthetic.py,sha256=1lce3KF8_8Lwl5LCop7rHJlJ2Y3s04SBhlsccnYoihY,13694
+textforge/train.py,sha256=RLfXHarJfsNPDa-cFcDcVwqXf9W9qoORcRypkWcYRy4,7765
+textforge/utils.py,sha256=Kt7OaSvK5vW0JlLMYXv7KxHBo4JpulIRO3C-7JBqQkg,3742
+textforge-0.1.0.dist-info/LICENSE,sha256=4BXruA2vmwqVZCQR1DOABYp4qI5T9ssdoKuC4-Q8CIs,1068
+textforge-0.1.0.dist-info/METADATA,sha256=PZ9JurOfbaNUGLmSkcYWtgtCwLh0MnWzDlu2kWACXks,2670
+textforge-0.1.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+textforge-0.1.0.dist-info/RECORD,,
