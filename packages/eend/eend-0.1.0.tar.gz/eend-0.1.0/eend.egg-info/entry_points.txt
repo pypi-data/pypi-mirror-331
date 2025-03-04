@@ -1,0 +1,7 @@
+[console_scripts]
+eend = eend:cli
+eend-infer = eend.bin.infer:main
+eend-make-mixture = eend.bin.make_mixture:main
+eend-make-rttm = eend.bin.make_rttm:main
+eend-random-mixture = eend.bin.random_mixture:main
+eend-train = eend.bin.train:main

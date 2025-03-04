@@ -1,0 +1,24 @@
+Metadata-Version: 2.2
+Name: eend
+Version: 0.1.0
+Summary: End-to-End Neural Diarization
+Author: Original: Hitachi, Ltd. (Yusuke Fujita); Module adaptation by Claude
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: librosa
+Requires-Dist: h5py
+Requires-Dist: soundfile
+Requires-Dist: matplotlib
+Requires-Dist: pyyaml
+Requires-Dist: chainer
+Provides-Extra: gpu
+Dynamic: author
+Dynamic: classifier
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
