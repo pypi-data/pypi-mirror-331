@@ -1,0 +1,3 @@
+[console_scripts]
+ppi-toolkit=ppi.cli.commands:main
+
