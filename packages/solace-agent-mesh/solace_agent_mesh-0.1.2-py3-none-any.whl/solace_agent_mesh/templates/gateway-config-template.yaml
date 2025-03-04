@@ -1,0 +1,5 @@
+- {{SNAKE_CASE_NAME}}_config: &gateway_interface_config
+    key: "value" # Add your configuration here
+
+- response_format_prompt: &response_format_prompt >
+    Return all responses in markdown format and if the response contains a file or image, return it with the <file> tags and not as a link.
