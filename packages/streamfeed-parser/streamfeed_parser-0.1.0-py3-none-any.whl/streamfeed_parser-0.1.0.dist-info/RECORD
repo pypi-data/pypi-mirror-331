@@ -1,0 +1,11 @@
+streamfeed/__init__.py,sha256=Y18LUWKkG2DtdBbMfCDLiJyuzt_yoT1OTo8Ps85Vbns,386
+streamfeed/csv_parser.py,sha256=K-DnowL3jQMtBs2HYfonf8GR8_Y6QTbbgQi-MpGc9O8,8178
+streamfeed/detect.py,sha256=MJ6ZTi3-HVNXKljzf5PxvInd1Ns8eF8xx1zN0201WNw,3129
+streamfeed/feed_streamer.py,sha256=ad0qaIGyBBx3HuNfgXJ3h3oT5Qblb2aCqy8wPDyGQ3Y,5468
+streamfeed/ftp_handler.py,sha256=LCCvYotrQglLoQd1nH591dNngY-h_vx6tNmLwI3Rofk,1421
+streamfeed/transform.py,sha256=MeLgvI06uJS3Pmi9w7q8rZFr89eR4rfGIZaNQDIp6gI,2164
+streamfeed/xml_parser.py,sha256=OrMY8GsmVOhfLSRUKOp8juxa08uePoJae0w_LtatiCI,3713
+streamfeed_parser-0.1.0.dist-info/METADATA,sha256=U94wJcU3-8QL2-3NTcRrrl9J65ncvZxDumE9YNBHFlk,450
+streamfeed_parser-0.1.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+streamfeed_parser-0.1.0.dist-info/top_level.txt,sha256=T4V6X5kxhl2syhcWGYYmAjKMpD1Kyx8Esz4fo5U4yjQ,11
+streamfeed_parser-0.1.0.dist-info/RECORD,,
