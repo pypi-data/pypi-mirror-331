@@ -1,0 +1,15 @@
+py3mf_slicer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+py3mf_slicer/get_items.py,sha256=3rqF02yXJF-TQPcWa2l4y4E-hjyFjJ1bmketFiKnaXA,10172
+py3mf_slicer/load.py,sha256=9BjAuPBREQq_OUxYsv8mNm7Ts_XKJiMcieIs2B-hYOc,1595
+py3mf_slicer/slice.py,sha256=1W8lk75Z4D7ndHARCfcub-1C1HrQ17WzAbAP2JgyEZE,3662
+py3mf_slicer/transform.py,sha256=ikW7M7rW_BKsHNrt-f83di3RGE4dOxR_LLQXyKMiMa4,766
+py3mf_slicer/visualize.py,sha256=JItoAkHsfAgyqLQ31kQEZbiu2KoXLbrIos28k5eECw0,1511
+py3mf_slicer/write.py,sha256=TSoSNO_82CuVrvHcR2IK16y7KKTmfAKwWdC9TYmUcWY,114
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/dev1.py,sha256=tynI3yT_Fd3RenkZoIC8n_-OaM1wZ11MAZoCx6SAQPw,988
+tests/test_module1.py,sha256=H1Z4D5C4aA6irOITJbxPn-9fWAfWaieQ3z1HswdkCok,3170
+py3mf_slicer-0.0.3.dist-info/LICENSE,sha256=Zudy7_muSGUoFcQh98FEHSS-Qr4HF4vjkcL4Bh5lYwg,1065
+py3mf_slicer-0.0.3.dist-info/METADATA,sha256=cxq0cMW3PYibwcbQSz17O8-xe_puNT7P8QIxwDMIZG4,870
+py3mf_slicer-0.0.3.dist-info/WHEEL,sha256=GV9aMThwP_4oNCtvEC2ec3qUYutgWeAzklro_0m4WJQ,91
+py3mf_slicer-0.0.3.dist-info/top_level.txt,sha256=qd3djEjw6yF4c78GsNhMt4Uwas4X-xloq8oOtp_Pe-c,19
+py3mf_slicer-0.0.3.dist-info/RECORD,,
