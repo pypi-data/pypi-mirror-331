@@ -1,0 +1,155 @@
+[project]
+name = "osc-transformer-based-extractor"
+version = "v0.1.7"
+description = "OS-Climate Data Extraction Tool"
+authors = [
+    { name = "Tanishq More", email = "tanishq.more@investmentdataservices.com" },
+]
+requires-python = ">=3.9"
+readme = "README.rst"
+classifiers = [
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: MacOS",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: Unix",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.9",
+    "Topic :: Office/Business :: Financial",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Software Development",
+]
+dependencies = [
+    "torch>=2.6.0",
+    "pandas>=2.2.3",
+    "tokenizers>=0.21.0",
+    "transformers>=4.48.2",
+    "pre-commit>=4.1.0",
+    "pytest>=8.3.4",
+    "pytest-cov>=6.0.0",
+    "scikit-learn>=1.6.1",
+    "accelerate>=1.3.0",
+    "typer[all]>=0.15.1",
+    "rich>=13.9.4",
+    "numpy>=1.26.4",
+    "openpyxl>=3.1.5",
+    "datasets>=3.2.0",
+    "torchvision>=0.21.0",
+    "torchaudio>=2.6.0",
+]
+
+[project.license]
+file = "LICENSE.txt"
+
+[project.urls]
+Homepage = "https://github.com/os-climate/osc-transformer-based-extractor"
+Repository = "https://github.com/os-climate/osc-transformer-based-extractor"
+Downloads = "https://github.com/os-climate/osc-transformer-based-extractor/releases"
+"Bug Tracker" = "https://github.com/os-climate/osc-transformer-based-extractor/issues"
+Documentation = "https://github.com/os-climate/osc-transformer-based-extractor/tree/main/docs"
+"Source Code" = "https://github.com/os-climate/osc-transformer-based-extractor"
+
+[project.scripts]
+osc-transformer-based-extractor = "osc_transformer_based_extractor.main_cli:app"
+
+[project.optional-dependencies]
+dev = [
+    "pylint",
+    "toml",
+    "yapf",
+    "pdm",
+]
+test = [
+    "pytest",
+    "pytest-cov",
+]
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[metadata]
+license-files = [
+    "LICENSES.txt",
+]
+
+[tool.pdm.scripts]
+pre_release = "scripts/dev-versioning.sh"
+release = "scripts/release-versioning.sh"
+test = [
+    "pdm[pytest]",
+    "pytest-cov",
+]
+tox = "tox"
+lint = "pre-commit run --all-files"
+osc-transformer-based-extractor = "osc_transformer_based_extractor.main_cli:app"
+
+[tool.pdm.scripts.docs]
+shell = "cd docs && mkdocs serve"
+help = "Start the dev server for doc preview"
+
+[tool.pdm.scripts.complete]
+call = "tasks.complete:main"
+help = "Create autocomplete files for bash and fish"
+
+[tool.pdm.dev-dependencies]
+test = [
+    "pdm[pytest]",
+    "pytest-cov",
+]
+tox = [
+    "tox",
+    "tox-pdm>=0.5",
+]
+docs = [
+    "sphinx>=7.2.6",
+    "sphinx-copybutton>=0.5.2",
+]
+dev = [
+    "tox>=4.11.3",
+    "tox-pdm>=0.7.0",
+]
+lint = [
+    "pre-commit",
+    "pyproject-flake8",
+]
+
+[tool.pdm.dev-dependencies.osc-transformer-based-extractor]
+path = "osc_transformer_based_extractor"
+
+[tool.coverage.run]
+source = [
+    "src",
+]
+
+[tool.yapf]
+blank_line_before_nested_class_or_def = true
+column_limit = 120
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+profile = "black"
+
+[tool.flake8]
+max-line-length = 120
+extend-ignore = [
+    "E501",
+]
+
+[tool.mypy]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = [
+    "test/",
+]
+addopts = "--cov --cov-report html --cov-report term-missing --cov-fail-under 70"
