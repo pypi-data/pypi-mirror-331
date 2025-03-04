@@ -1,0 +1,33 @@
+[project]
+name = "Monepy"
+description = "Currency classes to work with monetary values"
+dynamic = ["version", "dependencies"]
+authors = [{ name = "Vítor dos Santos Araujo", email = "vitoraraujo@tuta.com" }]
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.11"
+
+[tool.hatch.version]
+path = "src/monepy/__init__.py"
+
+[project.urls]
+Documentation = "https://vsbits.net/monepy/"
+Repository = "https://github.com/vsbits/monepy"
+Issues = "https://github.com/vsbits/monepy/issues"
+
+[project.optional-dependencies]
+tests = ["flake8", "mypy", "pytest", "pytest-cov", "pandas"]
+
+[build-system]
+requires = ["hatchling", "hatch-requirements-txt"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata.hooks.requirements_txt]
+files = ["requirements.txt"]
+
+[tool.pytest.ini_options]
+pythonpath = "src"
+
+[tool.ruff]
+line-length = 79
