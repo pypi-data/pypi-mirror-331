@@ -1,0 +1,6 @@
+changesets_linux_x64/__init__.py,sha256=ACdjPH14A08xTtHOHKEbAugWUSZC5fyPAWaDIPJRzLI,138
+changesets_linux_x64/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+changesets_linux_x64/bin/changelog,sha256=wqYh1pJKLl-rvU8Qi2i7wF78-vS6dawjZgBdUeyuX9w,15347896
+changesets_linux_x64-0.4.0.dist-info/METADATA,sha256=ONj9-g585fEVHwwnlxnr_FnjngpMoKbsv573GEjziPM,7069
+changesets_linux_x64-0.4.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+changesets_linux_x64-0.4.0.dist-info/RECORD,,
