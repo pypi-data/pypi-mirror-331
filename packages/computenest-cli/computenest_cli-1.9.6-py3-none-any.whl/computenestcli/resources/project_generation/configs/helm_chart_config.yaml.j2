@@ -1,0 +1,63 @@
+Service:
+  RegionId: {{ RegionId }}
+  DeployType: ros
+  OperationMetadata:
+    ModifyParametersConfig:
+      - TemplateName: 容器集群版
+        Operation:
+          - Name: 修改Helm参数
+            Description: 修改Helm参数
+            Type: Custom
+            SupportPredefinedParameters: false
+            EnableLogging: false
+            Parameters:
+              - ChartValues
+  DeployMetadata:
+    SupplierDeployMetadata:
+      {%- if ServiceType == 'managed' %}
+      RoleName: {{ RoleName }}
+      UserType: Aliyun
+      SupplierTemplateConfigs:
+        - Name: 容器集群版
+          Url: 'ros_templates/template.yaml'
+          PredefinedParameters: []
+          HiddenParameterKeys:
+            - ClusterId
+          ParameterMappings:
+            - ParameterKey: RegionId
+              ParameterMappingKeys:
+                - ClusterId
+              ParameterValueMapping:
+                {{ RegionId }}:
+                  Parameters:
+                    ClusterId: {{ ClusterId }}
+      {%- endif %}
+      HelmChartArtifactRelation:
+        '{{ '{{ computenest::helmchart::' ~ RepoName }} }}':
+          ArtifactId: ${Artifact.Artifact_1.ArtifactId}
+          ArtifactVersion: ${Artifact.Artifact_1.ArtifactVersion}
+    {%- if ServiceType == 'private' %}
+    TemplateConfigs:
+      - Name: 容器集群版
+        Url: 'ros_templates/template.yaml'
+        AllowedRegions:
+          - {{ ServiceBuildRegion }}
+    {%- endif %}
+  ServiceType: {{ ServiceType }}
+  ServiceInfo:
+    Locale: zh-CN
+    ShortDescription: helm chart deploy
+    Image: 'resources/icons/service_logo.png'
+Artifact:
+  Artifact_1:
+    ArtifactType: HelmChart
+    ArtifactName: {{ RepoName }}-helm-chart
+    ArtifactProperty:
+      RepoName: ${HelmChartBuilder.HelmChart_1.RepoName}
+      Tag: ${HelmChartBuilder.HelmChart_1.Tag}
+      RepoType: {% if ServiceType == 'managed' %}Private{% else %}Public{% endif %}
+HelmChartBuilder:
+  HelmChart_1:
+    HelmChartPath: 'resources/artifact_resources/helm_chart/{{ HelmChartParam.ChartName }}-{{ HelmChartParam.ChartTag }}.tgz'
+    RepoName: {{ HelmChartParam.ChartName }}
+    Tag: {{ HelmChartParam.ChartTag }}

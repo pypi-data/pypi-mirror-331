@@ -1,0 +1,31 @@
+Metadata-Version: 2.2
+Name: computenest-cli
+Version: 1.9.6
+Summary: A command line interface for running the compute nest project
+Author-email: Saner <xuhaoran.xhr@alibaba-inc.com>, Renyun <lyh376240@alibaba-inc.com>, Yehan <gn398171@alibaba-inc.com>
+Project-URL: Homepage, https://computenest.console.aliyun.com/welcome
+Project-URL: English Documentation, https://github.com/aliyun-computenest/computenest-cli-docs/blob/main/README-en.md
+Project-URL: Chinese Documentation, https://github.com/aliyun-computenest/computenest-cli-docs/blob/main/README-zh.md
+Description-Content-Type: text/markdown
+Requires-Dist: alibabacloud-computenestsupplier20210521==5.0.1
+Requires-Dist: alibabacloud_ecs20140526>=3.0.9
+Requires-Dist: pyyaml>=1.0.0
+Requires-Dist: oss2>=1.0.0
+Requires-Dist: oos>=0.0.1
+Requires-Dist: alibabacloud_oos20190601==2.0.0
+Requires-Dist: argparse>=1.0.0
+Requires-Dist: urllib3==1.26.15
+Requires-Dist: click>=8.0.0
+Requires-Dist: ruamel.yaml>=0.17.35
+Requires-Dist: jinja2==3.0.3
+Requires-Dist: importlib_resources>=5.0.0
+Requires-Dist: dockerfile-parse>=2.0.1
+Requires-Dist: alibabacloud-ros-tran==0.15.0
+
+# ComputeNest-CLI
+
+`computenest-cli` is a command-line tool that integrates the creation, updating, and deployment of artifacts, as well as
+the creation and updating of services within the ComputeNest framework. It allows users to manage their services,
+construct artifacts, and handle custom operations, such as custom image creation.
+
+Documentation for operations can be found in the Project Links or [computenest-cli-docs](https://github.com/aliyun-computenest/computenest-cli-docs).

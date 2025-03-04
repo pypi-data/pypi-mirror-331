@@ -1,0 +1,7 @@
+PROCESS_LOGGER = "process_config.yaml"
+DEFAULT_PROGRESS = "1/1"
+SPLIT_LINE = 40 * "="
+DEVELOPER_INFO_LOG_HANDLER_NAME = "developerFileHandler"
+LOGGING_CLOSURE_NAME = "dynamic_logging_message"
+BUILD_SERVICE = "BuildService"
+SETUP_PROJECT = "SetupProject"

@@ -1,0 +1,13 @@
+# service name - process name ：order - task name(default empty)
+# 导入服务的流程
+# task name可在具体调用时动态设置
+BuildService:
+  BuildArtifacts: 1
+  CreateService: 2
+  UpdateService: 2
+# 生成项目的流程
+SetupProject:
+  ValidateParameters: 1
+  SaveComputeNestParameters: 2
+  GenerateTemplates: 3
+  CopyResources: 4
