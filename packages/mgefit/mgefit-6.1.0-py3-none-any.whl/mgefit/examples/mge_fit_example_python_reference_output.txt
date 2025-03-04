@@ -1,0 +1,161 @@
+###############################################################################
+#
+# Reference expected output of the MgeFit 6.0.2 examples (05 August 2024).
+# Python 3.12 using NumPy 2.0, SciPy 1.14, Matplotlib 3.9
+#
+###############################################################################
+
+Running mge_fit_example.py
+
+Fitting 1-dim profile-----------------------------------
+
+Iteration: 0  chi2: 0.1107  Nonzero: 16/16
+Iteration: 10  chi2: 0.002883  Nonzero: 16/16
+Iteration: 20  chi2: 0.001309  Nonzero: 16/16
+Iteration: 26  chi2: 0.001280  Nonzero: 16/16
+############################################
+CapFit Terminating on small step (xtol), status: 3
+  Computation time: 0.41 seconds
+  Total Iterations:  26
+ Nonzero Gaussians:  16
+  Unused Gaussians:  0
+ Chi2: 0.001280 
+ STDEV: 0.002065
+ MEANABSDEV: 0.001846
+############################################
+  Total_Counts       Sigma
+############################################
+   4.5441e-03       0.02117
+   2.8093e-02       0.06281
+   9.3755e-02        0.1444
+   1.7093e-01        0.2841
+   1.7640e-01        0.5116
+   1.1393e-01        0.8791
+   5.2047e-02         1.473
+   1.8736e-02         2.435
+   5.7618e-03         3.995
+   1.6003e-03         6.525
+   4.1675e-04         10.63
+   1.0435e-04         17.27
+   2.5559e-05         28.04
+   6.2162e-06         45.69
+   1.5099e-06         76.91
+   3.1016e-07         152.6
+############################################
+
+Fitting M32---------------------------------------------
+
+Iteration: 0  chi2: 14.81  Nonzero: 11/11
+Iteration: 7  chi2: 1.988  Nonzero: 11/11
+Nonzero Gaussians: 11/11
+Eliminating not useful Gaussians...
+ngauss: 10          chi2: 1.989
+Starting nonlinear fit...
+Iteration: 0  chi2: 1.989  Nonzero: 10/10
+Iteration: 2  chi2: 1.988  Nonzero: 10/10
+Nonzero Gaussians: 10/10
+Eliminating not useful Gaussians...
+All Gaussians are needed!
+############################################
+CapFit Terminating on small function variation (ftol), status: 2 
+  Computation time: 0.79 seconds
+  Total Iterations:  7
+ Nonzero Gaussians:  10
+  Unused Gaussians:  1
+ Sectors used in the fit:  19
+ Total number of points fitted:  1599
+ Chi2: 1.988
+ STDEV: 0.03524
+ MEANABSDEV: 0.02061
+############################################
+  Total_Counts   sigma_Pixels     q_obs
+############################################
+   1.2805e+05       0.7895       0.7918
+   1.5278e+06        2.904       0.8027
+   6.2407e+06        7.593       0.7808
+   1.4494e+07        16.19       0.7273
+   1.8197e+07        31.82       0.7328
+   3.2126e+07        64.79       0.7330
+   6.7854e+07        133.2       0.7169
+   1.2162e+08        272.6       0.7472
+   2.4298e+08        569.8       0.8213
+   2.7948e+08        1307.       0.8815
+++++++++++++++++++++++++++++++++++++++++++++
+
+Fitting NGC4342-----------------------------------------
+
+ Pixels used: 22608
+ Peak Img[j, k]: 356 366
+ Mean (j, k): 356.10 365.58
+ Theta (deg): 54.2
+ Astro PA (deg): 35.8
+ Eps: 0.579
+ Major axis (pix): 146.4
+Iteration: 0  chi2: 32.32  Nonzero: 12/12
+Iteration: 10  chi2: 0.5145  Nonzero: 12/12
+Iteration: 17  chi2: 0.4779  Nonzero: 12/12
+Nonzero Gaussians: 12/12
+Eliminating not useful Gaussians...
+All Gaussians are needed!
+############################################
+CapFit Terminating on small step (xtol), status: 3
+  Computation time: 1.53 seconds
+  Total Iterations:  17
+ Nonzero Gaussians:  12
+  Unused Gaussians:  0
+ Sectors used in the fit:  19
+ Total number of points fitted:  854
+ Chi2: 0.4779
+ STDEV: 0.02365 
+ MEANABSDEV: 0.01579
+############################################
+  Total_Counts   sigma_Pixels     q_obs
+############################################
+   8.6775e+03       0.6061       0.8053
+   2.9933e+04        2.130       0.8969
+   1.3463e+05        6.447       0.7137
+   4.8648e+04        7.387       0.1786
+   2.6724e+05        13.39       0.7584
+   2.5733e+05        24.56       0.8821
+   1.3695e+05        44.91       1.0000
+   3.4537e+05        57.38       0.3687
+   1.0531e+05        88.02       1.0000
+   8.8999e+05        144.1       0.2612
+   8.0238e+05        260.5       0.2983
+   2.5798e+05        260.7       1.0000
+++++++++++++++++++++++++++++++++++++++++++++
+
+Fitting NGC5831 twist-----------------------------------
+
+Iteration: 0  chi2: 75.53  Nonzero: 11/11
+Iteration: 10  chi2: 1.543  Nonzero: 11/11
+Iteration: 20  chi2: 1.506  Nonzero: 11/11
+Iteration: 30  chi2: 1.481  Nonzero: 11/11
+Iteration: 40  chi2: 1.325  Nonzero: 11/11
+Iteration: 44  chi2: 1.324  Nonzero: 11/11
+############################################
+CapFit Terminating on small function variation (ftol), status: 2 
+  Computation time: 5.23 seconds
+  Total Iterations:  44
+ Nonzero Gaussians:  11
+  Unused Gaussians:  0
+ Sectors used in the fit:  36
+ Total number of points fitted:  1809
+ Chi2: 1.324
+ STDEV: 0.02704
+ MEANABSDEV: 0.01376
+#####################################################
+  Total_Counts   Sigma_Pixels     q_obs        PA
+#####################################################
+   2.8186e+04       0.8913       0.8541      12.46
+   1.0917e+05        2.325       0.8420       0.57
+   2.8681e+05        5.556       0.8145      -1.84
+   5.2898e+05        11.61       0.7354      -1.43
+   1.0110e+06        22.81       0.7793      -0.30
+   3.5635e+05        23.72       0.5130      -0.57
+   1.6018e+06        51.42       0.5847      -1.27
+   3.5540e+06        79.75       0.8393       4.52
+   5.7970e+06        162.1       0.9101    -153.07
+   1.5509e+06        409.8       0.5226      31.29
+   9.6973e+06        409.8       1.0000      25.22
++++++++++++++++++++++++++++++++++++++++++++++++++++++
