@@ -1,0 +1,9 @@
+chatterer/__init__.py,sha256=jLwLwmF65vqnuC22lYs6CZT105DqJuNBiladUg902HM,427
+chatterer/language_model.py,sha256=ngcKXqevlnUWTqdrw7_i0Y58_vCuuCrVvzkhTeFWOn4,39229
+chatterer/strategies/__init__.py,sha256=AKDBC06AdNjPskERssCOsz3qGfFN31mxklmnfhHatJo,389
+chatterer/strategies/atom_of_thoughts.py,sha256=VywNKwp_6QB2gTmjbb_YDmrlUmMMc-lyVFENKULWtuU,24882
+chatterer/strategies/base.py,sha256=b2gMPqodp97OP1dkHfj0UqixjdjVhmTw_V5qJ7i2S6g,427
+chatterer-0.1.4.dist-info/METADATA,sha256=U-d7QPaVIktFVppsqNkGsG7XAbO6nqm1zbisY_rZQzY,3373
+chatterer-0.1.4.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+chatterer-0.1.4.dist-info/top_level.txt,sha256=7nSQKP0bHxPRc7HyzdbKsJdkvPgYD0214o6slRizv9s,10
+chatterer-0.1.4.dist-info/RECORD,,
