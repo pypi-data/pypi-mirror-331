@@ -1,0 +1,12 @@
+Metadata-Version: 2.2
+Name: glaium_sdk
+Version: 0.1.1
+Summary: Glaium SDK in Python for managing your Systems and Optimization
+Author-email: Glaium Labs <labs@glaium.io>
+Project-URL: Homepage, https://glaium.io/
+Keywords: Glaium,AI_System,Optimization
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.25.0
+
+#Glaium SDK
