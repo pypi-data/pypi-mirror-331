@@ -1,0 +1,19 @@
+Metadata-Version: 2.2
+Name: PyJotformAJM
+Version: 0.5
+Summary: *** Overall project description goes here ***
+Home-page: https://github.com/amcsparron2793-Water/PyJotformAJM
+Download-URL: https://github.com/amcsparron2793-Water/PyJotformAJM/archive/refs/tags/0.5.tar.gz
+Author: Amcsparron
+Author-email: amcsparron@albanyny.gov
+License: MIT License
+License-File: LICENSE.txt
+Requires-Dist: jotform
+Requires-Dist: ApiKeyAJM
+Dynamic: author
+Dynamic: author-email
+Dynamic: download-url
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: summary
