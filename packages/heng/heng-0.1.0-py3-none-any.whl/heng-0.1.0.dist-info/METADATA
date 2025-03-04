@@ -1,0 +1,9 @@
+Metadata-Version: 2.2
+Name: heng
+Version: 0.1.0
+Summary: A sample Python package
+Author-email: Heng <ximen0806449@gmail.com>
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: requests
