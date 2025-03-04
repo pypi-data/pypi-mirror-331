@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+gepo/__init__.py
+gepo/gepo.py
+gepo.egg-info/PKG-INFO
+gepo.egg-info/SOURCES.txt
+gepo.egg-info/dependency_links.txt
+gepo.egg-info/entry_points.txt
+gepo.egg-info/top_level.txt
