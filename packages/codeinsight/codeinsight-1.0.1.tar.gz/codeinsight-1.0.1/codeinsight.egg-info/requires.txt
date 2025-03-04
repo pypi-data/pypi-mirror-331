@@ -1,0 +1,6 @@
+radon
+memory_profiler
+astor
+numpy
+rich
+click
