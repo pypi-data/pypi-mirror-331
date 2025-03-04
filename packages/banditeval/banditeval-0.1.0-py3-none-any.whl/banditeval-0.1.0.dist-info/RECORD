@@ -1,0 +1,8 @@
+banditeval/__init__.py,sha256=Jlsg6FatAlApNMvOqbB5p0vkpowvmI9HbGepvd1nDV4,1823
+banditeval/bandits.py,sha256=Es73JI07nYKPWPmsdZEfNJAM3LOtF7ODfVeob2ez8cM,4053
+banditeval/factorization.py,sha256=siKMml7vnPF41IqSw0jIb2-Xc7gUZrgJiotH0tX48D0,3479
+banditeval-0.1.0.dist-info/LICENSE,sha256=JjVaOPmQf0GP72_uFGiu1IRSXERP2DnwEY7fT9VlQrE,1103
+banditeval-0.1.0.dist-info/METADATA,sha256=7do9Ck2lRqAw6_vghwkFBIovlfzY-k1Ox0Xm_R88SQ4,2556
+banditeval-0.1.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+banditeval-0.1.0.dist-info/top_level.txt,sha256=untnVkVimNV-aDGbLdjDR4x1ACAoy35dQ-9OYen6Di0,11
+banditeval-0.1.0.dist-info/RECORD,,
