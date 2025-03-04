@@ -1,0 +1,8 @@
+cms_plots
+hsd
+numpy
+pandas
+seamm
+seamm-exec
+seamm_util
+tabulate
