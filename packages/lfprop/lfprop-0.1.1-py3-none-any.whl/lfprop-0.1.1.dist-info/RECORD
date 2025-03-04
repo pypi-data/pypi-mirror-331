@@ -1,0 +1,17 @@
+lfprop/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lfprop/model/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lfprop/model/activations.py,sha256=w0fnQ84IcQQogN3vpSa2KgvZi1igzeMYkCEODcF-hOk,337
+lfprop/model/custom_resnet.py,sha256=QYWLOLFn3CAqpjq9H0PHSaKhyG6hWLp7zqjrIV9mnvk,20688
+lfprop/model/spiking_networks.py,sha256=VaMmPHx71lhMLswod25wOYRYHnoo6MWz9XPye_zqTD0,13856
+lfprop/propagation/__init__.py,sha256=VVgC_eaZwU3WaomFh5LQbSAMTppDAPqdvuJS3FMrI5I,309
+lfprop/propagation/make_canonizers.py,sha256=tzHVrm3Xb9SPexBrs5LgSUTIvxdPe2fT_eSCLNIQQ0w,558
+lfprop/propagation/propagator_lxt.py,sha256=-jthjmqLIPy5dnumi2qbqefIw91C0U2Lz4gqTqzp4Ao,9655
+lfprop/propagation/propagator_snn.py,sha256=5KK5HYEBTvoAOSYBBxLADNLdfTRadWX8ahyowO-QH4I,16481
+lfprop/propagation/propagator_zennit.py,sha256=G8W-Zymm27evrFlN2m1Ybb6vvifMvki4PzO7f0NUeD8,11601
+lfprop/rewards/__init__.py,sha256=rxq4wX_wrRTlxMPkajeJx4KbXkGzfD89fXuAp_e1j_c,851
+lfprop/rewards/reward_functions.py,sha256=Vzq-bfD-cyMnMeGQQmqKA1dR8KXk9makszos79C0mp8,6685
+lfprop/rewards/rewards.py,sha256=icRIw5mF5rdCix0cMU5lWxvbz2nSoRkrWg5id8WD1fo,4647
+lfprop-0.1.1.dist-info/LICENSE,sha256=plHFYdigP4rpIEFFRzSnjCDYtti65xuhAyHlMNhiSD8,2135
+lfprop-0.1.1.dist-info/METADATA,sha256=-Axzqvfk93N82-ah4zODMv3QzolgG7NF9_6W2hp5RfU,10801
+lfprop-0.1.1.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+lfprop-0.1.1.dist-info/RECORD,,
