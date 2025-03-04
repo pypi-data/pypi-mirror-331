@@ -1,0 +1,2 @@
+[console_scripts]
+ioregistry = ioregistry.__main__:cli
