@@ -1,0 +1,16 @@
+numpy
+hpgeom>=1.2.0
+astropy
+
+[fitsio]
+fitsio
+
+[parquet]
+pyarrow>=5.0.0
+
+[test]
+pytest
+flake8
+
+[test_with_healpy]
+healpy
