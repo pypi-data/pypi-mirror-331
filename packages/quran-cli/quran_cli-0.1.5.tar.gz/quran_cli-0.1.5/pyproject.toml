@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "quran-cli"
+version = "0.1.5"
+description = "Quran CLI, A tool to generate the most sophisticated Quran data."
+authors = ["Yousuf Abu Shanab <josephyousef249@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+include = []
+homepage = "https://github.com/youzarsiph/quran-cli"
+repository = "https://github.com/youzarsiph/quran-cli"
+documentation = "https://github.com/youzarsiph/quran-cli"
+packages = [{ include = "quran_cli" }]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+typer = "^0.12.5"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.8.0"
+ruff = "^0.6.5"
+
+[tool.poetry.scripts]
+quran-cli = "quran_cli.main:app"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
