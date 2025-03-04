@@ -1,0 +1,2 @@
+[console_scripts]
+plot_mesh = bas_geoplot.cli:plot_mesh_cli
