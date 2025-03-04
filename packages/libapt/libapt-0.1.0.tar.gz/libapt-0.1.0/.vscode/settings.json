@@ -1,0 +1,9 @@
+{
+    "cSpell.words": [
+        "libapt"
+    ],
+    "editor.formatOnSave": true,
+	"[python]": {
+    	"editor.defaultFormatter": "charliermarsh.ruff"
+  	}
+}
