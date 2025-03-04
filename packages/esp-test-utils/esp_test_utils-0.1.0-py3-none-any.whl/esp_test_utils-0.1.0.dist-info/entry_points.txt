@@ -1,0 +1,2 @@
+[console_scripts]
+esp_copy_bin = esp_test_utils.tools.copy_bin:main
