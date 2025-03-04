@@ -1,0 +1,3 @@
+[console_scripts]
+print-calendar = thermalprinter.recipes.calendar.__main__:main
+print-weather = thermalprinter.recipes.weather.__main__:main
