@@ -1,0 +1,8 @@
+google-cloud-bigquery
+google-cloud-run
+google-cloud-secret-manager
+pyyaml
+jinja2
+click
+click-help-colors
+pipx
