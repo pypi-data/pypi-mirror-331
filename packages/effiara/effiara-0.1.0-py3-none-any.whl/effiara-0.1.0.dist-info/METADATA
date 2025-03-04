@@ -1,0 +1,31 @@
+Metadata-Version: 2.2
+Name: effiara
+Version: 0.1.0
+Summary: Package for distributing annotations and calculating annotator agreement/reliability using the EffiARA framework.
+Author: Owen Cook
+Author-email: owenscook1@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Requires-Dist: datasets
+Requires-Dist: krippendorff
+Requires-Dist: matplotlib
+Requires-Dist: networkx
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scikit-learn
+Requires-Dist: seaborn
+Requires-Dist: sphinx
+Requires-Dist: sphinx_rtd_theme
+Requires-Dist: statsmodels
+Requires-Dist: sympy
+Requires-Dist: transformers
+Requires-Dist: pytest
+Requires-Dist: pytest-mock
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
