@@ -1,0 +1,8 @@
+name = "smoothDE"
+dependencies = [
+                "scikit-sparse",
+                "numpy",
+                "scipy",
+                "scikit-learn",
+                "sympy",
+]
