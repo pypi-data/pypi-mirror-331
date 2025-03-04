@@ -1,0 +1,14 @@
+cpypes/__init__.py,sha256=dwqBuMNmWif2pajZl8MFFevfbBG1NIqCmN57qq4wW-0,2199
+cpypes/__main__.py,sha256=at98XLhG0t72SHIJv8EKyweEnBRQ0h2qnkStyYSRy1k,856
+cpypes/carray.py,sha256=egSIcVvwABr_2MDLVCi6g0zXN180DPlIqBhAqutV3Pk,2209
+cpypes/cpointer.py,sha256=aqL1CZrLikRYrpiohHqYSwRsWFmGCWnlnMgwoD9nYfY,1327
+cpypes/cpype.py,sha256=5f-uAsPm024e-LavXQuhIdikeYTC-AwTLZBQxWYp4Oo,8218
+cpypes/cstruct.py,sha256=Eroane94uztvBeV3zM1zR_A-miIvQNxrzAOCORuAbJY,1829
+cpypes/install.py,sha256=A3AXBlrRsQCqi80h11k_iaau-P6B_AKndE8f64jOsIg,2455
+cpypes/simple_types.py,sha256=wOGJKe6BnBQyDVQ8xbE-rD0nuPkQuLJvdF5x_KQ7-GA,7116
+cpypes/data/server.tar.gz,sha256=oCQ64ohascmBpe3NaCWKlZL6hG4BA9GOPRwZwajni7E,5274
+cpypes-0.0.1.dist-info/LICENSE,sha256=nUP4EqaHsfch5-lMlzQ4_fKrYyXLqDmTf0HoHD8gKoc,1067
+cpypes-0.0.1.dist-info/METADATA,sha256=UZLSoRHNPH1ugpWp7emoqTC7zpCg8oKaFCdFWFY3odk,2654
+cpypes-0.0.1.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+cpypes-0.0.1.dist-info/top_level.txt,sha256=7EajX7wHCjc2I-WhJirpyxxxk7EBHl4vTvnDt-eXIbc,7
+cpypes-0.0.1.dist-info/RECORD,,
