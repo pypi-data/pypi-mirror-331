@@ -1,0 +1,13 @@
+README.md
+setup.py
+src/emailynma/__Init__.py
+src/emailynma/api_client.py
+src/emailynma/config.py
+src/emailynma/contacts.py
+src/emailynma/lists.py
+src/emailynma/tags.py
+src/emailynma.egg-info/PKG-INFO
+src/emailynma.egg-info/SOURCES.txt
+src/emailynma.egg-info/dependency_links.txt
+src/emailynma.egg-info/requires.txt
+src/emailynma.egg-info/top_level.txt
