@@ -1,0 +1,8 @@
+pwdlib[argon2]
+python-jose[cryptography]
+xn-model
+
+[dev]
+build
+python-dotenv
+twine
