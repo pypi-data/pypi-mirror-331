@@ -1,0 +1,23 @@
+Metadata-Version: 2.2
+Name: skyfire-sdk
+Version: 0.6.11
+Summary: Skyfire SDK
+Home-page: 
+Author: OpenAPI Generator community
+Author-email: support@skyfire.xyz
+Keywords: OpenAPI,OpenAPI-Generator,Skyfire SDK
+Description-Content-Type: text/markdown
+Requires-Dist: urllib3<2.1.0,>=1.25.3
+Requires-Dist: python-dateutil
+Requires-Dist: pydantic>=2
+Requires-Dist: typing-extensions>=4.7.1
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: keywords
+Dynamic: requires-dist
+Dynamic: summary
+
+    The Skyfire SDK is designed to allow agents to interact with the Skyfire platform to enable autonomous payments.
+    
