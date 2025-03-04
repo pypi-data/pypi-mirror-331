@@ -1,0 +1,2 @@
+[console_scripts]
+msys2w = msys2_wrapper.main:main

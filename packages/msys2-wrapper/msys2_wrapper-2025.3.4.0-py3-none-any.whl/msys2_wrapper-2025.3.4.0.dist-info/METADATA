@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: msys2-wrapper
+Version: 2025.3.4.0
+Summary: start msys2 without bat
+License-File: LICENSE
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# msys2_wrapper
+
+a Python wrapper for starting msys2 without bat
