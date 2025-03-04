@@ -1,0 +1,3 @@
+[console_scripts]
+create_template = assignment_template_creator:main
+
