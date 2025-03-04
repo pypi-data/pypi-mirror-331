@@ -1,0 +1,10 @@
+[tool.poetry]
+name = "fluxbuild"
+version = "0.0.1"
+description = "Deploy AI Agents to AWS"
+authors = ["fluxbuild"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">= 3.10"

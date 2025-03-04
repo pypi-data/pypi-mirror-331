@@ -1,0 +1,18 @@
+Metadata-Version: 2.3
+Name: fluxbuild
+Version: 0.0.1
+Summary: Deploy AI Agents to AWS
+License: MIT
+Author: fluxbuild
+Requires-Python: >=3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Description-Content-Type: text/markdown
+
+# fluxbuild-sdk - Deploy AI Agents to AWS
+
+
