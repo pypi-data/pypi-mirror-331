@@ -1,0 +1,25 @@
+name: EvaP Release
+
+on:
+  workflow_dispatch:
+  # TODO: remove
+  pull_request:
+
+
+jobs:
+  pypi-publish:
+    name: upload release to PyPI
+    runs-on: ubuntu-latest
+    environment: release
+    permissions:
+      id-token: write
+    steps:
+      - run: |
+          RUN_ID=$(gh run list --commit "$GITHUB_REF" --status success --workflow "EvaP Test Suite" --json databaseId --jq '.[].databaseId')
+          gh run download "$RUN_ID" --name wheel --dir dist
+        env:
+          GH_TOKEN: ${{ github.token }}
+      - run: tar tvf dist/*.tar.gz
+      - run: unzip -l dist/*.whl
+      - name: Publish package distributions to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
