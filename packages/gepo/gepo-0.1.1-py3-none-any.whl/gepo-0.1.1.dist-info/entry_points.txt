@@ -1,0 +1,2 @@
+[console_scripts]
+gepo = gepo.gepo:main
