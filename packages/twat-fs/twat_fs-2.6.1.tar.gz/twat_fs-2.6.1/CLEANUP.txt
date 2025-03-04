@@ -1,0 +1,2535 @@
+2025-03-04 08:26:21 - 
+=== PROJECT STATEMENT ===
+2025-03-04 08:26:21 - ---
+description: About this project
+globs:
+---
+# About this project
+
+`twat-fs` is a file system utility library focused on robust and extensible file upload capabilities with multiple provider support. It provides:
+
+- Multi-provider upload system with smart fallback (catbox.moe default, plus Dropbox, S3, etc.)
+- Automatic retry for temporary failures, fallback for permanent ones
+- URL validation and clean developer experience with type hints
+- Simple CLI: `python -m twat_fs upload_file path/to/file.txt`
+- Easy installation: `uv pip install twat-fs` (basic) or `uv pip install 'twat-fs[all,dev]'` (all features)
+
+## Development Notes
+- Uses `uv` for Python package management
+- Quality tools: ruff, mypy, pytest
+- Clear provider protocol for adding new storage backends
+- Strong typing and runtime checks throughout
+
+2025-03-04 08:26:21 - 
+=== Current Status ===
+2025-03-04 08:26:21 - Error: LOG.md is missing
+2025-03-04 08:26:21 - [1.1K]  .
+├── [  64]  .benchmarks
+├── [  96]  .cursor
+│   └── [ 224]  rules
+│       ├── [ 821]  0project.mdc
+│       ├── [ 516]  cleanup.mdc
+│       ├── [3.5K]  filetree.mdc
+│       └── [2.0K]  quality.mdc
+├── [  96]  .github
+│   └── [ 128]  workflows
+│       ├── [2.7K]  push.yml
+│       └── [1.4K]  release.yml
+├── [3.5K]  .gitignore
+├── [ 470]  .pre-commit-config.yaml
+├── [  96]  .specstory
+│   └── [ 320]  history
+│       ├── [2.7K]  .what-is-this.md
+│       ├── [146K]  2025-03-04_03-45-refining-todo-list-from-codebase-review.md
+│       ├── [186K]  2025-03-04_04-43-incorporating-ideas-from-ideas-md-into-todo-md.md
+│       ├── [164K]  2025-03-04_05-33-implementing-todo-phases-1,-2,-and-3.md
+│       ├── [242K]  2025-03-04_06-19-implementation-of-todo-md-phases.md
+│       ├── [4.2K]  2025-03-04_07-52-untitled.md
+│       ├── [123K]  2025-03-04_07-59-project-maintenance-and-documentation-update.md
+│       └── [205K]  2025-03-04_08-39-project-documentation-and-cleanup-tasks.md
+├── [7.1K]  CHANGELOG.md
+├── [ 986]  CLEANUP.txt
+├── [ 56K]  IDEAS.md
+├── [1.0K]  LICENSE
+├── [ 153]  MANIFEST.in
+├── [ 12K]  README.md
+├── [186K]  REPO_CONTENT.txt
+├── [5.8K]  TODO.md
+├── [   7]  VERSION.txt
+├── [ 13K]  cleanup.py
+├── [ 192]  dist
+├── [  96]  examples
+│   └── [ 948]  upload_example.py
+├── [ 439]  mypy.ini
+├── [7.0K]  pyproject.toml
+├── [ 128]  src
+│   └── [ 384]  twat_fs
+│       ├── [ 447]  __init__.py
+│       ├── [ 733]  __main__.py
+│       ├── [8.9K]  cli.py
+│       ├── [ 128]  data
+│       │   ├── [1.5K]  _test.jpg
+│       │   └── [383K]  test.jpg
+│       ├── [   1]  py.typed
+│       ├── [ 25K]  upload.py
+│       └── [ 704]  upload_providers
+│           ├── [1.9K]  __init__.py
+│           ├── [6.5K]  async_utils.py
+│           ├── [5.5K]  bashupload.py
+│           ├── [4.9K]  catbox.py
+│           ├── [ 12K]  core.py
+│           ├── [ 24K]  dropbox.py
+│           ├── [5.4K]  factory.py
+│           ├── [7.7K]  fal.py
+│           ├── [6.7K]  filebin.py
+│           ├── [ 11K]  litterbox.py
+│           ├── [6.9K]  pixeldrain.py
+│           ├── [3.9K]  protocols.py
+│           ├── [ 10K]  s3.py
+│           ├── [9.3K]  simple.py
+│           ├── [ 728]  types.py
+│           ├── [5.1K]  uguu.py
+│           ├── [7.6K]  utils.py
+│           └── [5.0K]  www0x0.py
+├── [ 128]  templates
+│   ├── [9.6K]  authenticated_provider_template.py
+│   └── [6.5K]  simple_provider_template.py
+├── [ 416]  tests
+│   ├── [  63]  __init__.py
+│   ├── [  96]  data
+│   │   └── [ 100]  test.txt
+│   ├── [8.6K]  test_async_utils.py
+│   ├── [3.8K]  test_filebin_pixeldrain.py
+│   ├── [9.2K]  test_integration.py
+│   ├── [8.9K]  test_s3_advanced.py
+│   ├── [ 180]  test_twat_fs.py
+│   ├── [ 32K]  test_upload.py
+│   └── [ 13K]  test_utils.py
+├── [2.8K]  update_providers.py
+└── [383K]  uv.lock
+
+17 directories, 67 files
+
+2025-03-04 08:26:21 - 
+Project structure:
+2025-03-04 08:26:21 - [1.1K]  .
+├── [  64]  .benchmarks
+├── [  96]  .cursor
+│   └── [ 224]  rules
+│       ├── [ 821]  0project.mdc
+│       ├── [ 516]  cleanup.mdc
+│       ├── [3.5K]  filetree.mdc
+│       └── [2.0K]  quality.mdc
+├── [  96]  .github
+│   └── [ 128]  workflows
+│       ├── [2.7K]  push.yml
+│       └── [1.4K]  release.yml
+├── [3.5K]  .gitignore
+├── [ 470]  .pre-commit-config.yaml
+├── [  96]  .specstory
+│   └── [ 320]  history
+│       ├── [2.7K]  .what-is-this.md
+│       ├── [146K]  2025-03-04_03-45-refining-todo-list-from-codebase-review.md
+│       ├── [186K]  2025-03-04_04-43-incorporating-ideas-from-ideas-md-into-todo-md.md
+│       ├── [164K]  2025-03-04_05-33-implementing-todo-phases-1,-2,-and-3.md
+│       ├── [242K]  2025-03-04_06-19-implementation-of-todo-md-phases.md
+│       ├── [4.2K]  2025-03-04_07-52-untitled.md
+│       ├── [123K]  2025-03-04_07-59-project-maintenance-and-documentation-update.md
+│       └── [205K]  2025-03-04_08-39-project-documentation-and-cleanup-tasks.md
+├── [7.1K]  CHANGELOG.md
+├── [ 986]  CLEANUP.txt
+├── [ 56K]  IDEAS.md
+├── [1.0K]  LICENSE
+├── [ 153]  MANIFEST.in
+├── [ 12K]  README.md
+├── [186K]  REPO_CONTENT.txt
+├── [5.8K]  TODO.md
+├── [   7]  VERSION.txt
+├── [ 13K]  cleanup.py
+├── [ 192]  dist
+├── [  96]  examples
+│   └── [ 948]  upload_example.py
+├── [ 439]  mypy.ini
+├── [7.0K]  pyproject.toml
+├── [ 128]  src
+│   └── [ 384]  twat_fs
+│       ├── [ 447]  __init__.py
+│       ├── [ 733]  __main__.py
+│       ├── [8.9K]  cli.py
+│       ├── [ 128]  data
+│       │   ├── [1.5K]  _test.jpg
+│       │   └── [383K]  test.jpg
+│       ├── [   1]  py.typed
+│       ├── [ 25K]  upload.py
+│       └── [ 704]  upload_providers
+│           ├── [1.9K]  __init__.py
+│           ├── [6.5K]  async_utils.py
+│           ├── [5.5K]  bashupload.py
+│           ├── [4.9K]  catbox.py
+│           ├── [ 12K]  core.py
+│           ├── [ 24K]  dropbox.py
+│           ├── [5.4K]  factory.py
+│           ├── [7.7K]  fal.py
+│           ├── [6.7K]  filebin.py
+│           ├── [ 11K]  litterbox.py
+│           ├── [6.9K]  pixeldrain.py
+│           ├── [3.9K]  protocols.py
+│           ├── [ 10K]  s3.py
+│           ├── [9.3K]  simple.py
+│           ├── [ 728]  types.py
+│           ├── [5.1K]  uguu.py
+│           ├── [7.6K]  utils.py
+│           └── [5.0K]  www0x0.py
+├── [ 128]  templates
+│   ├── [9.6K]  authenticated_provider_template.py
+│   └── [6.5K]  simple_provider_template.py
+├── [ 416]  tests
+│   ├── [  63]  __init__.py
+│   ├── [  96]  data
+│   │   └── [ 100]  test.txt
+│   ├── [8.6K]  test_async_utils.py
+│   ├── [3.8K]  test_filebin_pixeldrain.py
+│   ├── [9.2K]  test_integration.py
+│   ├── [8.9K]  test_s3_advanced.py
+│   ├── [ 180]  test_twat_fs.py
+│   ├── [ 32K]  test_upload.py
+│   └── [ 13K]  test_utils.py
+├── [2.8K]  update_providers.py
+└── [383K]  uv.lock
+
+17 directories, 67 files
+
+2025-03-04 08:26:21 - On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   .cursor/rules/filetree.mdc
+	modified:   CHANGELOG.md
+	modified:   CLEANUP.txt
+	modified:   README.md
+	modified:   REPO_CONTENT.txt
+	modified:   TODO.md
+	modified:   tests/test_integration.py
+	modified:   tests/test_s3_advanced.py
+	modified:   tests/test_upload.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.specstory/history/2025-03-04_08-39-project-documentation-and-cleanup-tasks.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+2025-03-04 08:26:21 - On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   .cursor/rules/filetree.mdc
+	modified:   CHANGELOG.md
+	modified:   CLEANUP.txt
+	modified:   README.md
+	modified:   REPO_CONTENT.txt
+	modified:   TODO.md
+	modified:   tests/test_integration.py
+	modified:   tests/test_s3_advanced.py
+	modified:   tests/test_upload.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.specstory/history/2025-03-04_08-39-project-documentation-and-cleanup-tasks.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+2025-03-04 08:26:21 - 
+=== Environment Status ===
+2025-03-04 08:26:21 - Setting up virtual environment
+2025-03-04 08:26:22 - Virtual environment created and activated
+2025-03-04 08:26:22 - Installing package with all extras
+2025-03-04 08:26:22 - Setting up virtual environment
+2025-03-04 08:26:22 - Virtual environment created and activated
+2025-03-04 08:26:23 - Package installed successfully
+2025-03-04 08:26:23 - Running code quality checks
+2025-03-04 08:26:23 - >>> Running code fixes...
+2025-03-04 08:26:23 - src/twat_fs/cli.py:61:9: C901 `status` is too complex (12 > 10)
+   |
+59 |     """Commands for managing upload providers."""
+60 |
+61 |     def status(self, provider_id: str | None = None, online: bool = False) -> None:
+   |         ^^^^^^ C901
+62 |         """
+63 |         Show provider setup status.
+   |
+
+src/twat_fs/cli.py:61:9: PLR0912 Too many branches (15 > 12)
+   |
+59 |     """Commands for managing upload providers."""
+60 |
+61 |     def status(self, provider_id: str | None = None, online: bool = False) -> None:
+   |         ^^^^^^ PLR0912
+62 |         """
+63 |         Show provider setup status.
+   |
+
+src/twat_fs/cli.py:61:9: PLR0915 Too many statements (52 > 50)
+   |
+59 |     """Commands for managing upload providers."""
+60 |
+61 |     def status(self, provider_id: str | None = None, online: bool = False) -> None:
+   |         ^^^^^^ PLR0915
+62 |         """
+63 |         Show provider setup status.
+   |
+
+src/twat_fs/cli.py:61:54: FBT001 Boolean-typed positional argument in function definition
+   |
+59 |     """Commands for managing upload providers."""
+60 |
+61 |     def status(self, provider_id: str | None = None, online: bool = False) -> None:
+   |                                                      ^^^^^^ FBT001
+62 |         """
+63 |         Show provider setup status.
+   |
+
+src/twat_fs/cli.py:61:54: FBT002 Boolean default positional argument in function definition
+   |
+59 |     """Commands for managing upload providers."""
+60 |
+61 |     def status(self, provider_id: str | None = None, online: bool = False) -> None:
+   |                                                      ^^^^^^ FBT002
+62 |         """
+63 |         Show provider setup status.
+   |
+
+src/twat_fs/cli.py:137:21: PLW2901 `with` statement variable `status` overwritten by assignment target
+    |
+136 |                 for provider, info in sorted_providers:
+137 |                     status = (
+    |                     ^^^^^^ PLW2901
+138 |                         "[green]Ready[/green]"
+139 |                         if info.success
+    |
+
+src/twat_fs/cli.py:162:20: FBT001 Boolean-typed positional argument in function definition
+    |
+160 |             console.print(table)
+161 |
+162 |     def list(self, online: bool = False) -> None:
+    |                    ^^^^^^ FBT001
+163 |         """List all available (ready) provider IDs, one per line. If --online is provided, run online tests.
+164 |         In online mode, reconfigure logger so that info messages are printed to stderr."""
+    |
+
+src/twat_fs/cli.py:162:20: FBT002 Boolean default positional argument in function definition
+    |
+160 |             console.print(table)
+161 |
+162 |     def list(self, online: bool = False) -> None:
+    |                    ^^^^^^ FBT002
+163 |         """List all available (ready) provider IDs, one per line. If --online is provided, run online tests.
+164 |         In online mode, reconfigure logger so that info messages are printed to stderr."""
+    |
+
+src/twat_fs/cli.py:180:13: B007 Loop control variable `provider` not used within loop body
+    |
+179 |         # Print each active provider ID, one per line, to stdout
+180 |         for provider in active_providers:
+    |             ^^^^^^^^ B007
+181 |             pass
+    |
+    = help: Rename unused `provider` to `_provider`
+
+src/twat_fs/cli.py:198:9: PLR0913 Too many arguments in function definition (6 > 5)
+    |
+196 |         self.upload_provider = UploadProviderCommands()
+197 |
+198 |     def upload(
+    |         ^^^^^^ PLR0913
+199 |         self,
+200 |         file_path: str | Path,
+    |
+
+src/twat_fs/cli.py:202:9: FBT001 Boolean-typed positional argument in function definition
+    |
+200 |         file_path: str | Path,
+201 |         provider: str | list[str] = PROVIDERS_PREFERENCE,
+202 |         unique: bool = False,
+    |         ^^^^^^ FBT001
+203 |         force: bool = False,
+204 |         remote_path: str | None = None,
+    |
+
+src/twat_fs/cli.py:202:9: FBT002 Boolean default positional argument in function definition
+    |
+200 |         file_path: str | Path,
+201 |         provider: str | list[str] = PROVIDERS_PREFERENCE,
+202 |         unique: bool = False,
+    |         ^^^^^^ FBT002
+203 |         force: bool = False,
+204 |         remote_path: str | None = None,
+    |
+
+src/twat_fs/cli.py:203:9: FBT001 Boolean-typed positional argument in function definition
+    |
+201 |         provider: str | list[str] = PROVIDERS_PREFERENCE,
+202 |         unique: bool = False,
+203 |         force: bool = False,
+    |         ^^^^^ FBT001
+204 |         remote_path: str | None = None,
+205 |         fragile: bool = False,
+    |
+
+src/twat_fs/cli.py:203:9: FBT002 Boolean default positional argument in function definition
+    |
+201 |         provider: str | list[str] = PROVIDERS_PREFERENCE,
+202 |         unique: bool = False,
+203 |         force: bool = False,
+    |         ^^^^^ FBT002
+204 |         remote_path: str | None = None,
+205 |         fragile: bool = False,
+    |
+
+src/twat_fs/cli.py:205:9: FBT001 Boolean-typed positional argument in function definition
+    |
+203 |         force: bool = False,
+204 |         remote_path: str | None = None,
+205 |         fragile: bool = False,
+    |         ^^^^^^^ FBT001
+206 |     ) -> str:
+207 |         """
+    |
+
+src/twat_fs/cli.py:205:9: FBT002 Boolean default positional argument in function definition
+    |
+203 |         force: bool = False,
+204 |         remote_path: str | None = None,
+205 |         fragile: bool = False,
+    |         ^^^^^^^ FBT002
+206 |     ) -> str:
+207 |         """
+    |
+
+src/twat_fs/upload.py:57:5: C901 `_test_provider_online` is too complex (19 > 10)
+   |
+57 | def _test_provider_online(
+   |     ^^^^^^^^^^^^^^^^^^^^^ C901
+58 |     provider_name: str,
+59 | ) -> tuple[bool, str, dict[str, float] | None]:
+   |
+
+src/twat_fs/upload.py:57:5: PLR0911 Too many return statements (11 > 6)
+   |
+57 | def _test_provider_online(
+   |     ^^^^^^^^^^^^^^^^^^^^^ PLR0911
+58 |     provider_name: str,
+59 | ) -> tuple[bool, str, dict[str, float] | None]:
+   |
+
+src/twat_fs/upload.py:57:5: PLR0912 Too many branches (21 > 12)
+   |
+57 | def _test_provider_online(
+   |     ^^^^^^^^^^^^^^^^^^^^^ PLR0912
+58 |     provider_name: str,
+59 | ) -> tuple[bool, str, dict[str, float] | None]:
+   |
+
+src/twat_fs/upload.py:57:5: PLR0915 Too many statements (73 > 50)
+   |
+57 | def _test_provider_online(
+   |     ^^^^^^^^^^^^^^^^^^^^^ PLR0915
+58 |     provider_name: str,
+59 | ) -> tuple[bool, str, dict[str, float] | None]:
+   |
+
+src/twat_fs/upload.py:250:5: C901 `setup_provider` is too complex (13 > 10)
+    |
+250 | def setup_provider(
+    |     ^^^^^^^^^^^^^^ C901
+251 |     provider: str, verbose: bool = False, online: bool = False
+252 | ) -> ProviderInfo:
+    |
+
+src/twat_fs/upload.py:250:5: PLR0911 Too many return statements (7 > 6)
+    |
+250 | def setup_provider(
+    |     ^^^^^^^^^^^^^^ PLR0911
+251 |     provider: str, verbose: bool = False, online: bool = False
+252 | ) -> ProviderInfo:
+    |
+
+src/twat_fs/upload.py:250:5: PLR0912 Too many branches (14 > 12)
+    |
+250 | def setup_provider(
+    |     ^^^^^^^^^^^^^^ PLR0912
+251 |     provider: str, verbose: bool = False, online: bool = False
+252 | ) -> ProviderInfo:
+    |
+
+src/twat_fs/upload.py:251:20: FBT001 Boolean-typed positional argument in function definition
+    |
+250 | def setup_provider(
+251 |     provider: str, verbose: bool = False, online: bool = False
+    |                    ^^^^^^^ FBT001
+252 | ) -> ProviderInfo:
+253 |     """
+    |
+
+src/twat_fs/upload.py:251:20: FBT002 Boolean default positional argument in function definition
+    |
+250 | def setup_provider(
+251 |     provider: str, verbose: bool = False, online: bool = False
+    |                    ^^^^^^^ FBT002
+252 | ) -> ProviderInfo:
+253 |     """
+    |
+
+src/twat_fs/upload.py:251:43: FBT001 Boolean-typed positional argument in function definition
+    |
+250 | def setup_provider(
+251 |     provider: str, verbose: bool = False, online: bool = False
+    |                                           ^^^^^^ FBT001
+252 | ) -> ProviderInfo:
+253 |     """
+    |
+
+src/twat_fs/upload.py:251:43: FBT002 Boolean default positional argument in function definition
+    |
+250 | def setup_provider(
+251 |     provider: str, verbose: bool = False, online: bool = False
+    |                                           ^^^^^^ FBT002
+252 | ) -> ProviderInfo:
+253 |     """
+    |
+
+src/twat_fs/upload.py:268:17: FBT003 Boolean positional value in function call
+    |
+266 |         if provider.lower() == "simple":
+267 |             return ProviderInfo(
+268 |                 False,
+    |                 ^^^^^ FBT003
+269 |                 f"Provider '{provider}' is not available.",
+270 |                 {},
+    |
+
+src/twat_fs/upload.py:279:21: FBT003 Boolean positional value in function call
+    |
+277 |             if not help_info:
+278 |                 return ProviderInfo(
+279 |                     False,
+    |                     ^^^^^ FBT003
+280 |                     f"Provider '{provider}' is not available.",
+281 |                     {},
+    |
+
+src/twat_fs/upload.py:285:17: FBT003 Boolean positional value in function call
+    |
+283 |             setup_info = help_info.get("setup", "")
+284 |             return ProviderInfo(
+285 |                 False,
+    |                 ^^^^^ FBT003
+286 |                 f"Provider '{provider}' is not available.",
+287 |                 {"setup": setup_info},
+    |
+
+src/twat_fs/upload.py:306:21: FBT003 Boolean positional value in function call
+    |
+304 |                 setup_info = help_info.get("setup", "") if help_info else ""
+305 |                 return ProviderInfo(
+306 |                     False,
+    |                     ^^^^^ FBT003
+307 |                     f"Provider '{provider}' needs configuration.",
+308 |                     {"setup": setup_info},
+    |
+
+src/twat_fs/upload.py:329:21: FBT003 Boolean positional value in function call
+    |
+327 |             if (has_async and has_sync) or has_sync:
+328 |                 provider_info = ProviderInfo(
+329 |                     True,
+    |                     ^^^^ FBT003
+330 |                     f"{provider} ({type(client).__name__})"
+331 |                     + (f" - {retention_note}" if retention_note else ""),
+    |
+
+src/twat_fs/upload.py:337:21: FBT003 Boolean positional value in function call
+    |
+335 |                 setup_info = help_info.get("setup", "") if help_info else ""
+336 |                 provider_info = ProviderInfo(
+337 |                     False,
+    |                     ^^^^^ FBT003
+338 |                     f"Provider '{provider}' needs configuration.",
+339 |                     {"setup": setup_info},
+    |
+
+src/twat_fs/upload.py:346:25: FBT003 Boolean positional value in function call
+    |
+344 |                 if not online_status:
+345 |                     provider_info = ProviderInfo(
+346 |                         False,
+    |                         ^^^^^ FBT003
+347 |                         message,
+348 |                         provider_info.help_info,
+    |
+
+src/twat_fs/upload.py:366:17: FBT003 Boolean positional value in function call
+    |
+364 |             setup_info = help_info.get("setup", "") if help_info else ""
+365 |             return ProviderInfo(
+366 |                 False,
+    |                 ^^^^^ FBT003
+367 |                 f"Provider '{provider}' setup failed: {e}",
+368 |                 {"setup": setup_info},
+    |
+
+src/twat_fs/upload.py:374:13: FBT003 Boolean positional value in function call
+    |
+372 |         logger.error(f"Unexpected error setting up provider {provider}: {e}")
+373 |         return ProviderInfo(
+374 |             False,
+    |             ^^^^^ FBT003
+375 |             f"Provider '{provider}' failed: {e}",
+376 |             {},
+    |
+
+src/twat_fs/upload.py:381:5: FBT001 Boolean-typed positional argument in function definition
+    |
+380 | def setup_providers(
+381 |     verbose: bool = False, online: bool = False
+    |     ^^^^^^^ FBT001
+382 | ) -> dict[str, ProviderInfo]:
+383 |     """
+    |
+
+src/twat_fs/upload.py:381:5: FBT002 Boolean default positional argument in function definition
+    |
+380 | def setup_providers(
+381 |     verbose: bool = False, online: bool = False
+    |     ^^^^^^^ FBT002
+382 | ) -> dict[str, ProviderInfo]:
+383 |     """
+    |
+
+src/twat_fs/upload.py:381:28: FBT001 Boolean-typed positional argument in function definition
+    |
+380 | def setup_providers(
+381 |     verbose: bool = False, online: bool = False
+    |                            ^^^^^^ FBT001
+382 | ) -> dict[str, ProviderInfo]:
+383 |     """
+    |
+
+src/twat_fs/upload.py:381:28: FBT002 Boolean default positional argument in function definition
+    |
+380 | def setup_providers(
+381 |     verbose: bool = False, online: bool = False
+    |                            ^^^^^^ FBT002
+382 | ) -> dict[str, ProviderInfo]:
+383 |     """
+    |
+
+src/twat_fs/upload.py:411:5: PLR0913 Too many arguments in function definition (6 > 5)
+    |
+411 | def _try_upload_with_provider(
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^ PLR0913
+412 |     provider_name: str,
+413 |     file_path: str | Path,
+    |
+
+src/twat_fs/upload.py:550:5: PLR0913 Too many arguments in function definition (8 > 5)
+    |
+550 | def _try_next_provider(
+    |     ^^^^^^^^^^^^^^^^^^ PLR0913
+551 |     remaining_providers: Sequence[str],
+552 |     file_path: str | Path,
+    |
+
+src/twat_fs/upload.py:619:5: PLR0913 Too many arguments in function definition (7 > 5)
+    |
+617 |     exceptions=(RetryableError,),  # Only retry on RetryableError
+618 | )
+619 | def upload_file(
+    |     ^^^^^^^^^^^ PLR0913
+620 |     file_path: str | Path,
+621 |     provider: str | Sequence[str] | None = None,
+    |
+
+src/twat_fs/upload.py:687:13: B904 Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling
+    |
+685 |         if fragile or len(providers) == 1:
+686 |             msg = f"Provider {providers[0]} failed: {e}"
+687 |             raise NonRetryableError(msg, providers[0])
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ B904
+688 |
+689 |         # Try remaining providers with circular fallback
+    |
+
+src/twat_fs/upload.py:703:5: PLR0913 Too many arguments in function definition (7 > 5)
+    |
+703 | def _try_upload_with_fallback(
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^ PLR0913
+704 |     provider: str,
+705 |     local_path: str | Path,
+    |
+
+src/twat_fs/upload_providers/__init__.py:11:20: F401 `loguru.logger` imported but unused
+   |
+ 9 | from typing import TYPE_CHECKING
+10 |
+11 | from loguru import logger
+   |                    ^^^^^^ F401
+12 |
+13 | from twat_fs.upload_providers.core import RetryableError, NonRetryableError, UploadError
+   |
+   = help: Remove unused import: `loguru.logger`
+
+src/twat_fs/upload_providers/__init__.py:19:25: F401 `pathlib.Path` imported but unused
+   |
+18 | if TYPE_CHECKING:
+19 |     from pathlib import Path
+   |                         ^^^^ F401
+20 |
+21 | # List of available providers in order of preference
+   |
+   = help: Remove unused import: `pathlib.Path`
+
+src/twat_fs/upload_providers/core.py:168:13: S101 Use of `assert` detected
+    |
+166 |                     time.sleep(delay)
+167 |
+168 |             assert last_exception is not None  # for type checker
+    |             ^^^^^^ S101
+169 |             raise last_exception
+    |
+
+src/twat_fs/upload_providers/core.py:214:13: S101 Use of `assert` detected
+    |
+212 |                     await asyncio.sleep(delay)
+213 |
+214 |             assert last_exception is not None  # for type checker
+    |             ^^^^^^ S101
+215 |             raise last_exception
+    |
+
+src/twat_fs/upload_providers/dropbox.py:124:11: ARG002 Unused method argument: `kwargs`
+    |
+122 |         unique: bool = False,
+123 |         upload_path: str | None = DEFAULT_UPLOAD_PATH,
+124 |         **kwargs: Any,
+    |           ^^^^^^ ARG002
+125 |     ) -> UploadResult:
+126 |         """
+    |
+
+src/twat_fs/upload_providers/fal.py:51:25: RUF012 Mutable class attributes should be annotated with `typing.ClassVar`
+   |
+50 |     # Environment variables
+51 |     REQUIRED_ENV_VARS = ["FAL_KEY"]
+   |                         ^^^^^^^^^^^ RUF012
+52 |     OPTIONAL_ENV_VARS: list[str] = []
+   |
+
+src/twat_fs/upload_providers/fal.py:52:36: RUF012 Mutable class attributes should be annotated with `typing.ClassVar`
+   |
+50 |     # Environment variables
+51 |     REQUIRED_ENV_VARS = ["FAL_KEY"]
+52 |     OPTIONAL_ENV_VARS: list[str] = []
+   |                                    ^^ RUF012
+53 |
+54 |     def __init__(self, key: str) -> None:
+   |
+
+src/twat_fs/upload_providers/fal.py:67:13: B904 Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling
+   |
+65 |             logger.error(f"Failed to create FAL client: {e}")
+66 |             msg = f"Failed to create FAL client: {e}"
+67 |             raise NonRetryableError(msg, self.provider_name)
+   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ B904
+68 |
+69 |     @classmethod
+   |
+
+src/twat_fs/upload_providers/litterbox.py:223:9: PLR0913 Too many arguments in function definition (6 > 5)
+    |
+221 |             raise
+222 |
+223 |     def upload_file(
+    |         ^^^^^^^^^^^ PLR0913
+224 |         self,
+225 |         local_path: str | Path,
+    |
+
+src/twat_fs/upload_providers/litterbox.py:300:5: PLR0913 Too many arguments in function definition (6 > 5)
+    |
+300 | def upload_file(
+    |     ^^^^^^^^^^^ PLR0913
+301 |     local_path: str | Path,
+302 |     remote_path: str | Path | None = None,
+    |
+
+src/twat_fs/upload_providers/s3.py:182:11: ARG002 Unused method argument: `kwargs`
+    |
+180 |         file: BinaryIO,
+181 |         remote_path: str | Path | None = None,
+182 |         **kwargs: Any,
+    |           ^^^^^^ ARG002
+183 |     ) -> UploadResult:
+184 |         """
+    |
+
+src/twat_fs/upload_providers/simple.py:78:9: ARG002 Unused method argument: `remote_path`
+   |
+76 |         self,
+77 |         local_path: str | Path,
+78 |         remote_path: str | Path | None = None,
+   |         ^^^^^^^^^^^ ARG002
+79 |         *,
+80 |         unique: bool = False,
+   |
+
+src/twat_fs/upload_providers/simple.py:80:9: ARG002 Unused method argument: `unique`
+   |
+78 |         remote_path: str | Path | None = None,
+79 |         *,
+80 |         unique: bool = False,
+   |         ^^^^^^ ARG002
+81 |         force: bool = False,
+82 |         upload_path: str | None = None,
+   |
+
+src/twat_fs/upload_providers/simple.py:81:9: ARG002 Unused method argument: `force`
+   |
+79 |         *,
+80 |         unique: bool = False,
+81 |         force: bool = False,
+   |         ^^^^^ ARG002
+82 |         upload_path: str | None = None,
+83 |         **kwargs: Any,
+   |
+
+src/twat_fs/upload_providers/simple.py:82:9: ARG002 Unused method argument: `upload_path`
+   |
+80 |         unique: bool = False,
+81 |         force: bool = False,
+82 |         upload_path: str | None = None,
+   |         ^^^^^^^^^^^ ARG002
+83 |         **kwargs: Any,
+84 |     ) -> UploadResult:
+   |
+
+src/twat_fs/upload_providers/simple.py:83:11: ARG002 Unused method argument: `kwargs`
+   |
+81 |         force: bool = False,
+82 |         upload_path: str | None = None,
+83 |         **kwargs: Any,
+   |           ^^^^^^ ARG002
+84 |     ) -> UploadResult:
+85 |         """
+   |
+
+src/twat_fs/upload_providers/simple.py:123:9: ARG002 Unused method argument: `remote_path`
+    |
+121 |         self,
+122 |         file_path: str | Path,
+123 |         remote_path: str | Path | None = None,
+    |         ^^^^^^^^^^^ ARG002
+124 |         *,
+125 |         unique: bool = False,
+    |
+
+src/twat_fs/upload_providers/simple.py:125:9: ARG002 Unused method argument: `unique`
+    |
+123 |         remote_path: str | Path | None = None,
+124 |         *,
+125 |         unique: bool = False,
+    |         ^^^^^^ ARG002
+126 |         force: bool = False,
+127 |         upload_path: str | None = None,
+    |
+
+src/twat_fs/upload_providers/simple.py:126:9: ARG002 Unused method argument: `force`
+    |
+124 |         *,
+125 |         unique: bool = False,
+126 |         force: bool = False,
+    |         ^^^^^ ARG002
+127 |         upload_path: str | None = None,
+128 |         **kwargs: Any,
+    |
+
+src/twat_fs/upload_providers/simple.py:127:9: ARG002 Unused method argument: `upload_path`
+    |
+125 |         unique: bool = False,
+126 |         force: bool = False,
+127 |         upload_path: str | None = None,
+    |         ^^^^^^^^^^^ ARG002
+128 |         **kwargs: Any,
+129 |     ) -> Coroutine[Any, Any, UploadResult]:
+    |
+
+src/twat_fs/upload_providers/simple.py:128:11: ARG002 Unused method argument: `kwargs`
+    |
+126 |         force: bool = False,
+127 |         upload_path: str | None = None,
+128 |         **kwargs: Any,
+    |           ^^^^^^ ARG002
+129 |     ) -> Coroutine[Any, Any, UploadResult]:
+130 |         """
+    |
+
+src/twat_fs/upload_providers/types.py:1:1: A005 Module `types` shadows a Python standard-library module
+src/twat_fs/upload_providers/utils.py:251:5: FBT001 Boolean-typed positional argument in function definition
+    |
+249 |     provider_name: str,
+250 |     file_path: str | Path,
+251 |     success: bool,
+    |     ^^^^^^^ FBT001
+252 |     error: Exception | None = None,
+253 | ) -> None:
+    |
+
+tests/test_integration.py:24:42: F401 `twat_fs.upload_providers.fal` imported but unused; consider using `importlib.util.find_spec` to test for availability
+   |
+22 | # Conditionally import fal and s3 modules
+23 | try:
+24 |     from twat_fs.upload_providers import fal
+   |                                          ^^^ F401
+25 |
+26 |     HAS_FAL = True
+   |
+   = help: Remove unused import: `twat_fs.upload_providers.fal`
+
+tests/test_integration.py:31:42: F401 `twat_fs.upload_providers.s3` imported but unused; consider using `importlib.util.find_spec` to test for availability
+   |
+30 | try:
+31 |     from twat_fs.upload_providers import s3
+   |                                          ^^ F401
+32 |
+33 |     HAS_S3 = True
+   |
+   = help: Remove unused import: `twat_fs.upload_providers.s3`
+
+tests/test_s3_advanced.py:39:19: S105 Possible hardcoded password assigned to: "TEST_SECRET_KEY"
+   |
+37 | TEST_BUCKET = "test-bucket"
+38 | TEST_ACCESS_KEY = "test_key"
+39 | TEST_SECRET_KEY = "test_secret"
+   |                   ^^^^^^^^^^^^^ S105
+40 |
+41 | # Test data
+   |
+
+tests/test_upload.py:400:9: ARG002 Unused method argument: `mock_dropbox_provider`
+    |
+398 |         test_file: Path,
+399 |         mock_s3_provider: MagicMock,
+400 |         mock_dropbox_provider: MagicMock,
+    |         ^^^^^^^^^^^^^^^^^^^^^ ARG002
+401 |     ) -> None:
+402 |         """Test fallback to next provider on auth failure."""
+    |
+
+tests/test_utils.py:104:55: ARG002 Unused method argument: `mock_access`
+    |
+103 |     @mock.patch("os.access", return_value=False)
+104 |     def test_validate_file_with_unreadable_file(self, mock_access):
+    |                                                       ^^^^^^^^^^^ ARG002
+105 |         """Test that validate_file raises PermissionError for unreadable files."""
+106 |         with tempfile.NamedTemporaryFile(delete=False) as temp_file:
+    |
+
+tests/test_utils.py:340:62: FBT003 Boolean positional value in function call
+    |
+338 |     def test_log_upload_attempt_success(self, mock_logger_info):
+339 |         """Test that log_upload_attempt logs success correctly."""
+340 |         log_upload_attempt("test_provider", "test_file.txt", True)
+    |                                                              ^^^^ FBT003
+341 |
+342 |         mock_logger_info.assert_called_once()
+    |
+
+tests/test_utils.py:349:62: FBT003 Boolean positional value in function call
+    |
+347 |         """Test that log_upload_attempt logs failure correctly."""
+348 |         error = Exception("Test error")
+349 |         log_upload_attempt("test_provider", "test_file.txt", False, error)
+    |                                                              ^^^^^ FBT003
+350 |
+351 |         mock_logger_error.assert_called_once()
+    |
+
+Found 75 errors.
+
+2025-03-04 08:26:24 - 30 files left unchanged
+
+2025-03-04 08:26:24 - >>>Running type checks...
+2025-03-04 08:26:44 - src/twat_fs/upload_providers/factory.py:105: error: Incompatible types in assignment (expression has type Module, variable has type "Provider | None")  [assignment]
+src/twat_fs/upload_providers/async_utils.py:197: error: Returning Any from function declared to return "list[T_co | BaseException]"  [no-any-return]
+src/twat_fs/upload_providers/simple.py:118: error: Argument 1 to "with_url_validation" has incompatible type "Callable[[BaseProvider, str | Path, str | Path | None, DefaultNamedArg(bool, 'unique'), DefaultNamedArg(bool, 'force'), DefaultNamedArg(str | None, 'upload_path'), KwArg(Any)], Awaitable[Coroutine[Any, Any, UploadResult]]]"; expected "Callable[[BaseProvider, str | Path, str | Path | None, DefaultNamedArg(bool, 'unique'), DefaultNamedArg(bool, 'force'), DefaultNamedArg(str | None, 'upload_path'), KwArg(Any)], Awaitable[str | UploadResult]]"  [arg-type]
+src/twat_fs/upload_providers/simple.py:120: error: Return type "Awaitable[UploadResult]" of "async_upload_file" incompatible with return type "Coroutine[Any, Any, Coroutine[Any, Any, UploadResult]]" in supertype "Provider"  [override]
+src/twat_fs/upload_providers/simple.py:156: error: Incompatible return value type (got "UploadResult", expected "Coroutine[Any, Any, UploadResult]")  [return-value]
+src/twat_fs/upload_providers/simple.py:237: error: Need type annotation for "sync_upload"  [var-annotated]
+src/twat_fs/upload_providers/simple.py:237: error: Argument 1 to "to_sync" has incompatible type "Callable[[str | Path, str | Path | None, DefaultNamedArg(bool, 'unique'), DefaultNamedArg(bool, 'force'), DefaultNamedArg(str | None, 'upload_path'), KwArg(Any)], Awaitable[UploadResult]]"; expected "Callable[[str | Path, str | Path | None, DefaultNamedArg(bool, 'unique'), DefaultNamedArg(bool, 'force'), DefaultNamedArg(str | None, 'upload_path'), KwArg(Any)], Coroutine[Any, Any, Never]]"  [arg-type]
+src/twat_fs/upload_providers/simple.py:238: error: Returning Any from function declared to return "UploadResult"  [no-any-return]
+src/twat_fs/upload_providers/simple.py:261: error: Need type annotation for "sync_upload"  [var-annotated]
+src/twat_fs/upload_providers/simple.py:261: error: Argument 1 to "to_sync" has incompatible type "Callable[[str | Path, str | Path | None, DefaultNamedArg(bool, 'unique'), DefaultNamedArg(bool, 'force'), DefaultNamedArg(str | None, 'upload_path'), KwArg(Any)], Awaitable[UploadResult]]"; expected "Callable[[str | Path, str | Path | None, DefaultNamedArg(bool, 'unique'), DefaultNamedArg(bool, 'force'), DefaultNamedArg(str | None, 'upload_path'), KwArg(Any)], Coroutine[Any, Any, Never]]"  [arg-type]
+src/twat_fs/upload_providers/simple.py:262: error: Returning Any from function declared to return "UploadResult"  [no-any-return]
+src/twat_fs/upload_providers/simple.py:273: error: Return type "Coroutine[Any, Any, UploadResult]" of "async_upload_file" incompatible with return type "Coroutine[Any, Any, Coroutine[Any, Any, UploadResult]]" in supertype "Provider"  [override]
+src/twat_fs/upload_providers/uguu.py:71: error: Returning Any from function declared to return "str"  [no-any-return]
+src/twat_fs/upload_providers/litterbox.py:48: error: Cannot override instance variable (previously declared on base class "Provider") with class variable  [misc]
+src/twat_fs/cli.py:138: error: Incompatible types in assignment (expression has type "str", variable has type "Status")  [assignment]
+src/twat_fs/cli.py:147: error: Incompatible types in assignment (expression has type "str", variable has type "float")  [assignment]
+src/twat_fs/cli.py:152: error: Incompatible types in assignment (expression has type "str", variable has type "float")  [assignment]
+src/twat_fs/cli.py:157: error: Argument 1 to "add_row" of "Table" has incompatible type "*list[object]"; expected "ConsoleRenderable | RichCast | str | None"  [arg-type]
+src/twat_fs/upload_providers/s3.py:62: error: Cannot override instance variable (previously declared on base class "Provider") with class variable  [misc]
+src/twat_fs/upload_providers/s3.py:87: error: Cannot assign to class variable "provider_name" via instance  [misc]
+tests/test_upload.py:24: error: Name "ClientError" already defined (possibly by an import)  [no-redef]
+tests/test_s3_advanced.py:24: error: Name "ClientError" already defined (possibly by an import)  [no-redef]
+Found 22 errors in 9 files (checked 31 source files)
+
+2025-03-04 08:26:44 - >>> Running tests...
+2025-03-04 08:27:02 - ============================= test session starts ==============================
+platform darwin -- Python 3.12.8, pytest-8.3.5, pluggy-1.5.0 -- /Users/adam/Developer/vcs/github.twardoch/pub/twat-packages/_good/twat/plugins/repos/twat_fs/.venv/bin/python
+cachedir: .pytest_cache
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+rootdir: /Users/adam/Developer/vcs/github.twardoch/pub/twat-packages/_good/twat/plugins/repos/twat_fs
+configfile: pyproject.toml
+plugins: cov-6.0.0, asyncio-0.25.3, anyio-4.8.0, benchmark-5.1.0, timeout-2.3.1, mock-3.14.0, typeguard-4.4.2
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function
+collecting ... collected 126 items
+
+tests/test_async_utils.py::TestRunAsync::test_run_async_with_successful_coroutine PASSED [  0%]
+tests/test_async_utils.py::TestRunAsync::test_run_async_with_exception PASSED [  1%]
+tests/test_async_utils.py::TestRunAsync::test_run_async_with_existing_event_loop PASSED [  2%]
+tests/test_async_utils.py::TestToSync::test_to_sync_with_direct_decoration PASSED [  3%]
+tests/test_async_utils.py::TestToSync::test_to_sync_with_arguments PASSED [  3%]
+tests/test_async_utils.py::TestToSync::test_to_sync_preserves_docstring PASSED [  4%]
+tests/test_async_utils.py::TestToSync::test_to_sync_preserves_arguments PASSED [  5%]
+tests/test_async_utils.py::TestToAsync::test_to_async_with_direct_decoration PASSED [  6%]
+tests/test_async_utils.py::TestToAsync::test_to_async_with_arguments PASSED [  7%]
+tests/test_async_utils.py::TestToAsync::test_to_async_preserves_docstring PASSED [  7%]
+tests/test_async_utils.py::TestToAsync::test_to_async_preserves_arguments PASSED [  8%]
+tests/test_async_utils.py::TestGatherWithConcurrency::test_gather_with_concurrency PASSED [  9%]
+tests/test_async_utils.py::TestGatherWithConcurrency::test_gather_with_concurrency_with_exceptions PASSED [ 10%]
+tests/test_async_utils.py::TestAsyncContextManager::test_async_context_manager PASSED [ 11%]
+tests/test_async_utils.py::TestWithAsyncTimeout::test_with_async_timeout_success PASSED [ 11%]
+tests/test_async_utils.py::TestWithAsyncTimeout::test_with_async_timeout_timeout PASSED [ 12%]
+tests/test_async_utils.py::TestWithAsyncTimeout::test_with_async_timeout_preserves_metadata PASSED [ 13%]
+tests/test_filebin_pixeldrain.py::test_filebin_upload_success PASSED     [ 14%]
+tests/test_filebin_pixeldrain.py::test_filebin_upload_failure PASSED     [ 15%]
+tests/test_filebin_pixeldrain.py::test_pixeldrain_upload_success PASSED  [ 15%]
+tests/test_filebin_pixeldrain.py::test_pixeldrain_upload_failure PASSED  [ 16%]
+tests/test_filebin_pixeldrain.py::test_filebin_provider_initialization PASSED [ 17%]
+tests/test_filebin_pixeldrain.py::test_pixeldrain_provider_initialization PASSED [ 18%]
+tests/test_integration.py::TestS3Integration::test_s3_setup SKIPPED      [ 19%]
+tests/test_integration.py::TestS3Integration::test_s3_upload_small_file SKIPPED [ 19%]
+tests/test_integration.py::TestS3Integration::test_s3_upload_large_file SKIPPED [ 20%]
+tests/test_integration.py::TestS3Integration::test_s3_upload_with_custom_endpoint SKIPPED [ 21%]
+tests/test_integration.py::TestDropboxIntegration::test_dropbox_setup FAILED [ 22%]
+tests/test_integration.py::TestDropboxIntegration::test_dropbox_upload_small_file FAILED [ 23%]
+tests/test_integration.py::TestDropboxIntegration::test_dropbox_upload_large_file FAILED [ 23%]
+tests/test_integration.py::TestFalIntegration::test_fal_setup SKIPPED    [ 24%]
+tests/test_integration.py::TestFalIntegration::test_fal_upload_small_file SKIPPED [ 25%]
+tests/test_integration.py::TestFalIntegration::test_fal_upload_large_file SKIPPED [ 26%]
+tests/test_integration.py::TestSetupIntegration::test_setup_all_providers FAILED [ 26%]
+tests/test_integration.py::TestCatboxIntegration::test_catbox_setup FAILED [ 27%]
+tests/test_integration.py::TestCatboxIntegration::test_catbox_upload_small_file ERROR [ 28%]
+tests/test_integration.py::TestCatboxIntegration::test_catbox_upload_large_file ERROR [ 29%]
+tests/test_integration.py::TestCatboxIntegration::test_catbox_authenticated_upload SKIPPED [ 30%]
+tests/test_integration.py::TestLitterboxIntegration::test_litterbox_setup FAILED [ 30%]
+tests/test_integration.py::TestLitterboxIntegration::test_litterbox_upload_small_file ERROR [ 31%]
+tests/test_integration.py::TestLitterboxIntegration::test_litterbox_upload_large_file ERROR [ 32%]
+tests/test_integration.py::TestLitterboxIntegration::test_litterbox_different_expirations ERROR [ 33%]
+tests/test_s3_advanced.py::TestAwsCredentialProviders::test_environment_credentials SKIPPED [ 34%]
+tests/test_s3_advanced.py::TestAwsCredentialProviders::test_shared_credentials_file SKIPPED [ 34%]
+tests/test_s3_advanced.py::TestAwsCredentialProviders::test_assume_role SKIPPED [ 35%]
+tests/test_s3_advanced.py::TestS3Configurations::test_custom_endpoint FAILED [ 36%]
+tests/test_s3_advanced.py::TestS3Configurations::test_path_style_endpoint FAILED [ 37%]
+tests/test_s3_advanced.py::TestS3Configurations::test_custom_region_endpoint FAILED [ 38%]
+tests/test_s3_advanced.py::TestS3MultipartUploads::test_multipart_upload FAILED [ 38%]
+tests/test_s3_advanced.py::TestS3MultipartUploads::test_multipart_upload_failure FAILED [ 39%]
+tests/test_twat_fs.py::test_version PASSED                               [ 40%]
+tests/test_upload.py::TestProviderSetup::test_setup_working_provider SKIPPED [ 41%]
+tests/test_upload.py::TestProviderSetup::test_setup_missing_credentials SKIPPED [ 42%]
+tests/test_upload.py::TestProviderSetup::test_setup_missing_dependencies SKIPPED [ 42%]
+tests/test_upload.py::TestProviderSetup::test_setup_invalid_provider FAILED [ 43%]
+tests/test_upload.py::TestProviderSetup::test_setup_all_providers SKIPPED [ 44%]
+tests/test_upload.py::TestProviderSetup::test_setup_all_providers_with_failures SKIPPED [ 45%]
+tests/test_upload.py::TestProviderSetup::test_setup_provider_success FAILED [ 46%]
+tests/test_upload.py::TestProviderSetup::test_setup_provider_failure PASSED [ 46%]
+tests/test_upload.py::TestProviderSetup::test_setup_provider_dropbox SKIPPED [ 47%]
+tests/test_upload.py::TestProviderSetup::test_setup_all_providers_check PASSED [ 48%]
+tests/test_upload.py::TestProviderAuth::test_fal_auth_with_key SKIPPED   [ 49%]
+tests/test_upload.py::TestProviderAuth::test_fal_auth_without_key SKIPPED [ 50%]
+tests/test_upload.py::TestProviderAuth::test_dropbox_auth_with_token SKIPPED [ 50%]
+tests/test_upload.py::TestProviderAuth::test_dropbox_auth_without_token SKIPPED [ 51%]
+tests/test_upload.py::TestProviderAuth::test_s3_auth_with_credentials SKIPPED [ 52%]
+tests/test_upload.py::TestProviderAuth::test_s3_auth_without_credentials SKIPPED [ 53%]
+tests/test_upload.py::TestProviderAuth::test_s3_auth_with_invalid_credentials SKIPPED [ 53%]
+tests/test_upload.py::TestUploadFile::test_upload_with_default_provider ERROR [ 54%]
+tests/test_upload.py::TestUploadFile::test_upload_with_specific_provider ERROR [ 55%]
+tests/test_upload.py::TestUploadFile::test_upload_with_provider_list ERROR [ 56%]
+tests/test_upload.py::TestUploadFile::test_upload_fallback_on_auth_failure ERROR [ 57%]
+tests/test_upload.py::TestUploadFile::test_upload_fallback_on_upload_failure ERROR [ 57%]
+tests/test_upload.py::TestUploadFile::test_all_providers_fail FAILED     [ 58%]
+tests/test_upload.py::TestUploadFile::test_invalid_provider PASSED       [ 59%]
+tests/test_upload.py::TestUploadFile::test_upload_with_s3_provider ERROR [ 60%]
+tests/test_upload.py::TestUploadFile::test_s3_upload_failure ERROR       [ 61%]
+tests/test_upload.py::TestEdgeCases::test_empty_file SKIPPED (S3 dep...) [ 61%]
+tests/test_upload.py::TestEdgeCases::test_special_characters_in_filename SKIPPED [ 62%]
+tests/test_upload.py::TestEdgeCases::test_unicode_filename SKIPPED (...) [ 63%]
+tests/test_upload.py::TestEdgeCases::test_very_long_filename SKIPPED     [ 64%]
+tests/test_upload.py::TestEdgeCases::test_nonexistent_file PASSED        [ 65%]
+tests/test_upload.py::TestEdgeCases::test_directory_upload PASSED        [ 65%]
+tests/test_upload.py::TestEdgeCases::test_no_read_permission FAILED      [ 66%]
+tests/test_upload.py::TestEdgeCases::test_different_file_sizes[1] SKIPPED [ 67%]
+tests/test_upload.py::TestEdgeCases::test_different_file_sizes[5] SKIPPED [ 68%]
+tests/test_upload.py::TestEdgeCases::test_different_file_sizes[10] SKIPPED [ 69%]
+tests/test_upload.py::TestCatboxProvider::test_catbox_auth_with_userhash PASSED [ 69%]
+tests/test_upload.py::TestCatboxProvider::test_catbox_auth_without_userhash PASSED [ 70%]
+tests/test_upload.py::TestCatboxProvider::test_catbox_upload_file PASSED [ 71%]
+tests/test_upload.py::TestCatboxProvider::test_catbox_upload_url PASSED  [ 72%]
+tests/test_upload.py::TestLitterboxProvider::test_litterbox_default_expiration PASSED [ 73%]
+tests/test_upload.py::TestLitterboxProvider::test_litterbox_custom_expiration PASSED [ 73%]
+tests/test_upload.py::TestLitterboxProvider::test_litterbox_invalid_expiration PASSED [ 74%]
+tests/test_upload.py::TestLitterboxProvider::test_litterbox_upload_file PASSED [ 75%]
+tests/test_upload.py::test_circular_fallback SKIPPED (S3 or Dropbox ...) [ 76%]
+tests/test_upload.py::test_fragile_mode SKIPPED (S3 dependencies not...) [ 76%]
+tests/test_upload.py::test_custom_provider_list_circular_fallback SKIPPED [ 77%]
+tests/test_utils.py::TestCreateProviderHelp::test_create_provider_help PASSED [ 78%]
+tests/test_utils.py::TestSafeFileHandle::test_safe_file_handle_with_valid_file PASSED [ 79%]
+tests/test_utils.py::TestSafeFileHandle::test_safe_file_handle_with_nonexistent_file PASSED [ 80%]
+tests/test_utils.py::TestSafeFileHandle::test_safe_file_handle_with_directory PASSED [ 80%]
+tests/test_utils.py::TestValidateFile::test_validate_file_with_valid_file PASSED [ 81%]
+tests/test_utils.py::TestValidateFile::test_validate_file_with_nonexistent_file PASSED [ 82%]
+tests/test_utils.py::TestValidateFile::test_validate_file_with_directory PASSED [ 83%]
+tests/test_utils.py::TestValidateFile::test_validate_file_with_unreadable_file PASSED [ 84%]
+tests/test_utils.py::TestHandleHttpResponse::test_handle_http_response_with_200_requests PASSED [ 84%]
+tests/test_utils.py::TestHandleHttpResponse::test_handle_http_response_with_200_aiohttp PASSED [ 85%]
+tests/test_utils.py::TestHandleHttpResponse::test_handle_http_response_with_429_requests PASSED [ 86%]
+tests/test_utils.py::TestHandleHttpResponse::test_handle_http_response_with_429_aiohttp PASSED [ 87%]
+tests/test_utils.py::TestHandleHttpResponse::test_handle_http_response_with_503_requests PASSED [ 88%]
+tests/test_utils.py::TestHandleHttpResponse::test_handle_http_response_with_400_requests PASSED [ 88%]
+tests/test_utils.py::TestHandleHttpResponse::test_handle_http_response_with_other_error_requests PASSED [ 89%]
+tests/test_utils.py::TestGetEnvCredentials::test_get_env_credentials_with_all_required_vars PASSED [ 90%]
+tests/test_utils.py::TestGetEnvCredentials::test_get_env_credentials_with_missing_required_vars PASSED [ 91%]
+tests/test_utils.py::TestGetEnvCredentials::test_get_env_credentials_with_optional_vars PASSED [ 92%]
+tests/test_utils.py::TestGetEnvCredentials::test_get_env_credentials_with_missing_optional_vars PASSED [ 92%]
+tests/test_utils.py::TestCreateProviderInstance::test_create_provider_instance_with_get_provider PASSED [ 93%]
+tests/test_utils.py::TestCreateProviderInstance::test_create_provider_instance_with_direct_instantiation PASSED [ 94%]
+tests/test_utils.py::TestCreateProviderInstance::test_create_provider_instance_with_credentials PASSED [ 95%]
+tests/test_utils.py::TestCreateProviderInstance::test_create_provider_instance_with_no_credentials PASSED [ 96%]
+tests/test_utils.py::TestCreateProviderInstance::test_create_provider_instance_with_error PASSED [ 96%]
+tests/test_utils.py::TestStandardUploadWrapper::test_standard_upload_wrapper_with_valid_provider PASSED [ 97%]
+tests/test_utils.py::TestStandardUploadWrapper::test_standard_upload_wrapper_with_none_provider PASSED [ 98%]
+tests/test_utils.py::TestLogUploadAttempt::test_log_upload_attempt_success PASSED [ 99%]
+tests/test_utils.py::TestLogUploadAttempt::test_log_upload_attempt_failure PASSED [100%]
+
+==================================== ERRORS ====================================
+____ ERROR at setup of TestCatboxIntegration.test_catbox_upload_small_file _____
+file /Users/adam/Developer/vcs/github.twardoch/pub/twat-packages/_good/twat/plugins/repos/twat_fs/tests/test_integration.py, line 199
+      def test_catbox_upload_small_file(self, small_file):
+E       fixture 'small_file' not found
+>       available fixtures: _session_event_loop, anyio_backend, anyio_backend_name, anyio_backend_options, benchmark, benchmark_weave, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, class_mocker, cleanup_test_files, cov, doctest_namespace, event_loop, event_loop_policy, large_test_file, mocker, module_mocker, monkeypatch, no_cover, package_mocker, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, session_mocker, tests/test_integration.py::<event_loop>, tests/test_integration.py::TestCatboxIntegration::<event_loop>, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, unused_tcp_port, unused_tcp_port_factory, unused_udp_port, unused_udp_port_factory
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/Users/adam/Developer/vcs/github.twardoch/pub/twat-packages/_good/twat/plugins/repos/twat_fs/tests/test_integration.py:199
+____ ERROR at setup of TestCatboxIntegration.test_catbox_upload_large_file _____
+file /Users/adam/Developer/vcs/github.twardoch/pub/twat-packages/_good/twat/plugins/repos/twat_fs/tests/test_integration.py, line 205
+      def test_catbox_upload_large_file(self, large_file):
+E       fixture 'large_file' not found
+>       available fixtures: _session_event_loop, anyio_backend, anyio_backend_name, anyio_backend_options, benchmark, benchmark_weave, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, class_mocker, cleanup_test_files, cov, doctest_namespace, event_loop, event_loop_policy, large_test_file, mocker, module_mocker, monkeypatch, no_cover, package_mocker, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, session_mocker, tests/test_integration.py::<event_loop>, tests/test_integration.py::TestCatboxIntegration::<event_loop>, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, unused_tcp_port, unused_tcp_port_factory, unused_udp_port, unused_udp_port_factory
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/Users/adam/Developer/vcs/github.twardoch/pub/twat-packages/_good/twat/plugins/repos/twat_fs/tests/test_integration.py:205
+_ ERROR at setup of TestLitterboxIntegration.test_litterbox_upload_small_file __
+file /Users/adam/Developer/vcs/github.twardoch/pub/twat-packages/_good/twat/plugins/repos/twat_fs/tests/test_integration.py, line 237
+      def test_litterbox_upload_small_file(self, small_file):
+E       fixture 'small_file' not found
+>       available fixtures: _session_event_loop, anyio_backend, anyio_backend_name, anyio_backend_options, benchmark, benchmark_weave, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, class_mocker, cleanup_test_files, cov, doctest_namespace, event_loop, event_loop_policy, large_test_file, mocker, module_mocker, monkeypatch, no_cover, package_mocker, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, session_mocker, tests/test_integration.py::<event_loop>, tests/test_integration.py::TestLitterboxIntegration::<event_loop>, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, unused_tcp_port, unused_tcp_port_factory, unused_udp_port, unused_udp_port_factory
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/Users/adam/Developer/vcs/github.twardoch/pub/twat-packages/_good/twat/plugins/repos/twat_fs/tests/test_integration.py:237
+_ ERROR at setup of TestLitterboxIntegration.test_litterbox_upload_large_file __
+file /Users/adam/Developer/vcs/github.twardoch/pub/twat-packages/_good/twat/plugins/repos/twat_fs/tests/test_integration.py, line 244
+      def test_litterbox_upload_large_file(self, large_file):
+E       fixture 'large_file' not found
+>       available fixtures: _session_event_loop, anyio_backend, anyio_backend_name, anyio_backend_options, benchmark, benchmark_weave, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, class_mocker, cleanup_test_files, cov, doctest_namespace, event_loop, event_loop_policy, large_test_file, mocker, module_mocker, monkeypatch, no_cover, package_mocker, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, session_mocker, tests/test_integration.py::<event_loop>, tests/test_integration.py::TestLitterboxIntegration::<event_loop>, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, unused_tcp_port, unused_tcp_port_factory, unused_udp_port, unused_udp_port_factory
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/Users/adam/Developer/vcs/github.twardoch/pub/twat-packages/_good/twat/plugins/repos/twat_fs/tests/test_integration.py:244
+_ ERROR at setup of TestLitterboxIntegration.test_litterbox_different_expirations _
+file /Users/adam/Developer/vcs/github.twardoch/pub/twat-packages/_good/twat/plugins/repos/twat_fs/tests/test_integration.py, line 253
+      def test_litterbox_different_expirations(self, small_file):
+E       fixture 'small_file' not found
+>       available fixtures: _session_event_loop, anyio_backend, anyio_backend_name, anyio_backend_options, benchmark, benchmark_weave, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, class_mocker, cleanup_test_files, cov, doctest_namespace, event_loop, event_loop_policy, large_test_file, mocker, module_mocker, monkeypatch, no_cover, package_mocker, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, session_mocker, tests/test_integration.py::<event_loop>, tests/test_integration.py::TestLitterboxIntegration::<event_loop>, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, unused_tcp_port, unused_tcp_port_factory, unused_udp_port, unused_udp_port_factory
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/Users/adam/Developer/vcs/github.twardoch/pub/twat-packages/_good/twat/plugins/repos/twat_fs/tests/test_integration.py:253
+______ ERROR at setup of TestUploadFile.test_upload_with_default_provider ______
+
+    @pytest.fixture
+    def mock_s3_provider() -> Generator[MagicMock, None, None]:
+        """Mock S3 provider."""
+>       with patch("twat_fs.upload_providers.s3.S3Provider") as mock:
+
+tests/test_upload.py:104: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/unittest/mock.py:1451: in __enter__
+    self.target = self.getter()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'twat_fs.upload_providers.s3'
+
+    def resolve_name(name):
+        """
+        Resolve a name to an object.
+    
+        It is expected that `name` will be a string in one of the following
+        formats, where W is shorthand for a valid Python identifier and dot stands
+        for a literal period in these pseudo-regexes:
+    
+        W(.W)*
+        W(.W)*:(W(.W)*)?
+    
+        The first form is intended for backward compatibility only. It assumes that
+        some part of the dotted name is a package, and the rest is an object
+        somewhere within that package, possibly nested inside other objects.
+        Because the place where the package stops and the object hierarchy starts
+        can't be inferred by inspection, repeated attempts to import must be done
+        with this form.
+    
+        In the second form, the caller makes the division point clear through the
+        provision of a single colon: the dotted name to the left of the colon is a
+        package to be imported, and the dotted name to the right is the object
+        hierarchy within that package. Only one import is needed in this form. If
+        it ends with the colon, then a module object is returned.
+    
+        The function will return an object (which might be a module), or raise one
+        of the following exceptions:
+    
+        ValueError - if `name` isn't in a recognised format
+        ImportError - if an import failed when it shouldn't have
+        AttributeError - if a failure occurred when traversing the object hierarchy
+                         within the imported package to get to the desired object.
+        """
+        global _NAME_PATTERN
+        if _NAME_PATTERN is None:
+            # Lazy import to speedup Python startup time
+            import re
+            dotted_words = r'(?!\d)(\w+)(\.(?!\d)(\w+))*'
+            _NAME_PATTERN = re.compile(f'^(?P<pkg>{dotted_words})'
+                                       f'(?P<cln>:(?P<obj>{dotted_words})?)?$',
+                                       re.UNICODE)
+    
+        m = _NAME_PATTERN.match(name)
+        if not m:
+            raise ValueError(f'invalid format: {name!r}')
+        gd = m.groupdict()
+        if gd.get('cln'):
+            # there is a colon - a one-step import is all that's needed
+            mod = importlib.import_module(gd['pkg'])
+            parts = gd.get('obj')
+            parts = parts.split('.') if parts else []
+        else:
+            # no colon - have to iterate to find the package boundary
+            parts = name.split('.')
+            modname = parts.pop(0)
+            # first part *must* be a module/package.
+            mod = importlib.import_module(modname)
+            while parts:
+                p = parts[0]
+                s = f'{modname}.{p}'
+                try:
+                    mod = importlib.import_module(s)
+                    parts.pop(0)
+                    modname = s
+                except ImportError:
+                    break
+        # if we reach this point, mod is the module, already imported, and
+        # parts is the list of parts in the object hierarchy to be traversed, or
+        # an empty list if just the module is wanted.
+        result = mod
+        for p in parts:
+>           result = getattr(result, p)
+E           AttributeError: module 'twat_fs.upload_providers' has no attribute 's3'
+
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/pkgutil.py:528: AttributeError
+_____ ERROR at setup of TestUploadFile.test_upload_with_specific_provider ______
+
+    @pytest.fixture
+    def mock_s3_provider() -> Generator[MagicMock, None, None]:
+        """Mock S3 provider."""
+>       with patch("twat_fs.upload_providers.s3.S3Provider") as mock:
+
+tests/test_upload.py:104: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/unittest/mock.py:1451: in __enter__
+    self.target = self.getter()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'twat_fs.upload_providers.s3'
+
+    def resolve_name(name):
+        """
+        Resolve a name to an object.
+    
+        It is expected that `name` will be a string in one of the following
+        formats, where W is shorthand for a valid Python identifier and dot stands
+        for a literal period in these pseudo-regexes:
+    
+        W(.W)*
+        W(.W)*:(W(.W)*)?
+    
+        The first form is intended for backward compatibility only. It assumes that
+        some part of the dotted name is a package, and the rest is an object
+        somewhere within that package, possibly nested inside other objects.
+        Because the place where the package stops and the object hierarchy starts
+        can't be inferred by inspection, repeated attempts to import must be done
+        with this form.
+    
+        In the second form, the caller makes the division point clear through the
+        provision of a single colon: the dotted name to the left of the colon is a
+        package to be imported, and the dotted name to the right is the object
+        hierarchy within that package. Only one import is needed in this form. If
+        it ends with the colon, then a module object is returned.
+    
+        The function will return an object (which might be a module), or raise one
+        of the following exceptions:
+    
+        ValueError - if `name` isn't in a recognised format
+        ImportError - if an import failed when it shouldn't have
+        AttributeError - if a failure occurred when traversing the object hierarchy
+                         within the imported package to get to the desired object.
+        """
+        global _NAME_PATTERN
+        if _NAME_PATTERN is None:
+            # Lazy import to speedup Python startup time
+            import re
+            dotted_words = r'(?!\d)(\w+)(\.(?!\d)(\w+))*'
+            _NAME_PATTERN = re.compile(f'^(?P<pkg>{dotted_words})'
+                                       f'(?P<cln>:(?P<obj>{dotted_words})?)?$',
+                                       re.UNICODE)
+    
+        m = _NAME_PATTERN.match(name)
+        if not m:
+            raise ValueError(f'invalid format: {name!r}')
+        gd = m.groupdict()
+        if gd.get('cln'):
+            # there is a colon - a one-step import is all that's needed
+            mod = importlib.import_module(gd['pkg'])
+            parts = gd.get('obj')
+            parts = parts.split('.') if parts else []
+        else:
+            # no colon - have to iterate to find the package boundary
+            parts = name.split('.')
+            modname = parts.pop(0)
+            # first part *must* be a module/package.
+            mod = importlib.import_module(modname)
+            while parts:
+                p = parts[0]
+                s = f'{modname}.{p}'
+                try:
+                    mod = importlib.import_module(s)
+                    parts.pop(0)
+                    modname = s
+                except ImportError:
+                    break
+        # if we reach this point, mod is the module, already imported, and
+        # parts is the list of parts in the object hierarchy to be traversed, or
+        # an empty list if just the module is wanted.
+        result = mod
+        for p in parts:
+>           result = getattr(result, p)
+E           AttributeError: module 'twat_fs.upload_providers' has no attribute 's3'
+
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/pkgutil.py:528: AttributeError
+_______ ERROR at setup of TestUploadFile.test_upload_with_provider_list ________
+
+    @pytest.fixture
+    def mock_s3_provider() -> Generator[MagicMock, None, None]:
+        """Mock S3 provider."""
+>       with patch("twat_fs.upload_providers.s3.S3Provider") as mock:
+
+tests/test_upload.py:104: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/unittest/mock.py:1451: in __enter__
+    self.target = self.getter()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'twat_fs.upload_providers.s3'
+
+    def resolve_name(name):
+        """
+        Resolve a name to an object.
+    
+        It is expected that `name` will be a string in one of the following
+        formats, where W is shorthand for a valid Python identifier and dot stands
+        for a literal period in these pseudo-regexes:
+    
+        W(.W)*
+        W(.W)*:(W(.W)*)?
+    
+        The first form is intended for backward compatibility only. It assumes that
+        some part of the dotted name is a package, and the rest is an object
+        somewhere within that package, possibly nested inside other objects.
+        Because the place where the package stops and the object hierarchy starts
+        can't be inferred by inspection, repeated attempts to import must be done
+        with this form.
+    
+        In the second form, the caller makes the division point clear through the
+        provision of a single colon: the dotted name to the left of the colon is a
+        package to be imported, and the dotted name to the right is the object
+        hierarchy within that package. Only one import is needed in this form. If
+        it ends with the colon, then a module object is returned.
+    
+        The function will return an object (which might be a module), or raise one
+        of the following exceptions:
+    
+        ValueError - if `name` isn't in a recognised format
+        ImportError - if an import failed when it shouldn't have
+        AttributeError - if a failure occurred when traversing the object hierarchy
+                         within the imported package to get to the desired object.
+        """
+        global _NAME_PATTERN
+        if _NAME_PATTERN is None:
+            # Lazy import to speedup Python startup time
+            import re
+            dotted_words = r'(?!\d)(\w+)(\.(?!\d)(\w+))*'
+            _NAME_PATTERN = re.compile(f'^(?P<pkg>{dotted_words})'
+                                       f'(?P<cln>:(?P<obj>{dotted_words})?)?$',
+                                       re.UNICODE)
+    
+        m = _NAME_PATTERN.match(name)
+        if not m:
+            raise ValueError(f'invalid format: {name!r}')
+        gd = m.groupdict()
+        if gd.get('cln'):
+            # there is a colon - a one-step import is all that's needed
+            mod = importlib.import_module(gd['pkg'])
+            parts = gd.get('obj')
+            parts = parts.split('.') if parts else []
+        else:
+            # no colon - have to iterate to find the package boundary
+            parts = name.split('.')
+            modname = parts.pop(0)
+            # first part *must* be a module/package.
+            mod = importlib.import_module(modname)
+            while parts:
+                p = parts[0]
+                s = f'{modname}.{p}'
+                try:
+                    mod = importlib.import_module(s)
+                    parts.pop(0)
+                    modname = s
+                except ImportError:
+                    break
+        # if we reach this point, mod is the module, already imported, and
+        # parts is the list of parts in the object hierarchy to be traversed, or
+        # an empty list if just the module is wanted.
+        result = mod
+        for p in parts:
+>           result = getattr(result, p)
+E           AttributeError: module 'twat_fs.upload_providers' has no attribute 's3'
+
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/pkgutil.py:528: AttributeError
+____ ERROR at setup of TestUploadFile.test_upload_fallback_on_auth_failure _____
+
+    @pytest.fixture
+    def mock_s3_provider() -> Generator[MagicMock, None, None]:
+        """Mock S3 provider."""
+>       with patch("twat_fs.upload_providers.s3.S3Provider") as mock:
+
+tests/test_upload.py:104: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/unittest/mock.py:1451: in __enter__
+    self.target = self.getter()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'twat_fs.upload_providers.s3'
+
+    def resolve_name(name):
+        """
+        Resolve a name to an object.
+    
+        It is expected that `name` will be a string in one of the following
+        formats, where W is shorthand for a valid Python identifier and dot stands
+        for a literal period in these pseudo-regexes:
+    
+        W(.W)*
+        W(.W)*:(W(.W)*)?
+    
+        The first form is intended for backward compatibility only. It assumes that
+        some part of the dotted name is a package, and the rest is an object
+        somewhere within that package, possibly nested inside other objects.
+        Because the place where the package stops and the object hierarchy starts
+        can't be inferred by inspection, repeated attempts to import must be done
+        with this form.
+    
+        In the second form, the caller makes the division point clear through the
+        provision of a single colon: the dotted name to the left of the colon is a
+        package to be imported, and the dotted name to the right is the object
+        hierarchy within that package. Only one import is needed in this form. If
+        it ends with the colon, then a module object is returned.
+    
+        The function will return an object (which might be a module), or raise one
+        of the following exceptions:
+    
+        ValueError - if `name` isn't in a recognised format
+        ImportError - if an import failed when it shouldn't have
+        AttributeError - if a failure occurred when traversing the object hierarchy
+                         within the imported package to get to the desired object.
+        """
+        global _NAME_PATTERN
+        if _NAME_PATTERN is None:
+            # Lazy import to speedup Python startup time
+            import re
+            dotted_words = r'(?!\d)(\w+)(\.(?!\d)(\w+))*'
+            _NAME_PATTERN = re.compile(f'^(?P<pkg>{dotted_words})'
+                                       f'(?P<cln>:(?P<obj>{dotted_words})?)?$',
+                                       re.UNICODE)
+    
+        m = _NAME_PATTERN.match(name)
+        if not m:
+            raise ValueError(f'invalid format: {name!r}')
+        gd = m.groupdict()
+        if gd.get('cln'):
+            # there is a colon - a one-step import is all that's needed
+            mod = importlib.import_module(gd['pkg'])
+            parts = gd.get('obj')
+            parts = parts.split('.') if parts else []
+        else:
+            # no colon - have to iterate to find the package boundary
+            parts = name.split('.')
+            modname = parts.pop(0)
+            # first part *must* be a module/package.
+            mod = importlib.import_module(modname)
+            while parts:
+                p = parts[0]
+                s = f'{modname}.{p}'
+                try:
+                    mod = importlib.import_module(s)
+                    parts.pop(0)
+                    modname = s
+                except ImportError:
+                    break
+        # if we reach this point, mod is the module, already imported, and
+        # parts is the list of parts in the object hierarchy to be traversed, or
+        # an empty list if just the module is wanted.
+        result = mod
+        for p in parts:
+>           result = getattr(result, p)
+E           AttributeError: module 'twat_fs.upload_providers' has no attribute 's3'
+
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/pkgutil.py:528: AttributeError
+___ ERROR at setup of TestUploadFile.test_upload_fallback_on_upload_failure ____
+
+    @pytest.fixture
+    def mock_s3_provider() -> Generator[MagicMock, None, None]:
+        """Mock S3 provider."""
+>       with patch("twat_fs.upload_providers.s3.S3Provider") as mock:
+
+tests/test_upload.py:104: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/unittest/mock.py:1451: in __enter__
+    self.target = self.getter()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'twat_fs.upload_providers.s3'
+
+    def resolve_name(name):
+        """
+        Resolve a name to an object.
+    
+        It is expected that `name` will be a string in one of the following
+        formats, where W is shorthand for a valid Python identifier and dot stands
+        for a literal period in these pseudo-regexes:
+    
+        W(.W)*
+        W(.W)*:(W(.W)*)?
+    
+        The first form is intended for backward compatibility only. It assumes that
+        some part of the dotted name is a package, and the rest is an object
+        somewhere within that package, possibly nested inside other objects.
+        Because the place where the package stops and the object hierarchy starts
+        can't be inferred by inspection, repeated attempts to import must be done
+        with this form.
+    
+        In the second form, the caller makes the division point clear through the
+        provision of a single colon: the dotted name to the left of the colon is a
+        package to be imported, and the dotted name to the right is the object
+        hierarchy within that package. Only one import is needed in this form. If
+        it ends with the colon, then a module object is returned.
+    
+        The function will return an object (which might be a module), or raise one
+        of the following exceptions:
+    
+        ValueError - if `name` isn't in a recognised format
+        ImportError - if an import failed when it shouldn't have
+        AttributeError - if a failure occurred when traversing the object hierarchy
+                         within the imported package to get to the desired object.
+        """
+        global _NAME_PATTERN
+        if _NAME_PATTERN is None:
+            # Lazy import to speedup Python startup time
+            import re
+            dotted_words = r'(?!\d)(\w+)(\.(?!\d)(\w+))*'
+            _NAME_PATTERN = re.compile(f'^(?P<pkg>{dotted_words})'
+                                       f'(?P<cln>:(?P<obj>{dotted_words})?)?$',
+                                       re.UNICODE)
+    
+        m = _NAME_PATTERN.match(name)
+        if not m:
+            raise ValueError(f'invalid format: {name!r}')
+        gd = m.groupdict()
+        if gd.get('cln'):
+            # there is a colon - a one-step import is all that's needed
+            mod = importlib.import_module(gd['pkg'])
+            parts = gd.get('obj')
+            parts = parts.split('.') if parts else []
+        else:
+            # no colon - have to iterate to find the package boundary
+            parts = name.split('.')
+            modname = parts.pop(0)
+            # first part *must* be a module/package.
+            mod = importlib.import_module(modname)
+            while parts:
+                p = parts[0]
+                s = f'{modname}.{p}'
+                try:
+                    mod = importlib.import_module(s)
+                    parts.pop(0)
+                    modname = s
+                except ImportError:
+                    break
+        # if we reach this point, mod is the module, already imported, and
+        # parts is the list of parts in the object hierarchy to be traversed, or
+        # an empty list if just the module is wanted.
+        result = mod
+        for p in parts:
+>           result = getattr(result, p)
+E           AttributeError: module 'twat_fs.upload_providers' has no attribute 's3'
+
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/pkgutil.py:528: AttributeError
+________ ERROR at setup of TestUploadFile.test_upload_with_s3_provider _________
+
+    @pytest.fixture
+    def mock_s3_provider() -> Generator[MagicMock, None, None]:
+        """Mock S3 provider."""
+>       with patch("twat_fs.upload_providers.s3.S3Provider") as mock:
+
+tests/test_upload.py:104: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/unittest/mock.py:1451: in __enter__
+    self.target = self.getter()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'twat_fs.upload_providers.s3'
+
+    def resolve_name(name):
+        """
+        Resolve a name to an object.
+    
+        It is expected that `name` will be a string in one of the following
+        formats, where W is shorthand for a valid Python identifier and dot stands
+        for a literal period in these pseudo-regexes:
+    
+        W(.W)*
+        W(.W)*:(W(.W)*)?
+    
+        The first form is intended for backward compatibility only. It assumes that
+        some part of the dotted name is a package, and the rest is an object
+        somewhere within that package, possibly nested inside other objects.
+        Because the place where the package stops and the object hierarchy starts
+        can't be inferred by inspection, repeated attempts to import must be done
+        with this form.
+    
+        In the second form, the caller makes the division point clear through the
+        provision of a single colon: the dotted name to the left of the colon is a
+        package to be imported, and the dotted name to the right is the object
+        hierarchy within that package. Only one import is needed in this form. If
+        it ends with the colon, then a module object is returned.
+    
+        The function will return an object (which might be a module), or raise one
+        of the following exceptions:
+    
+        ValueError - if `name` isn't in a recognised format
+        ImportError - if an import failed when it shouldn't have
+        AttributeError - if a failure occurred when traversing the object hierarchy
+                         within the imported package to get to the desired object.
+        """
+        global _NAME_PATTERN
+        if _NAME_PATTERN is None:
+            # Lazy import to speedup Python startup time
+            import re
+            dotted_words = r'(?!\d)(\w+)(\.(?!\d)(\w+))*'
+            _NAME_PATTERN = re.compile(f'^(?P<pkg>{dotted_words})'
+                                       f'(?P<cln>:(?P<obj>{dotted_words})?)?$',
+                                       re.UNICODE)
+    
+        m = _NAME_PATTERN.match(name)
+        if not m:
+            raise ValueError(f'invalid format: {name!r}')
+        gd = m.groupdict()
+        if gd.get('cln'):
+            # there is a colon - a one-step import is all that's needed
+            mod = importlib.import_module(gd['pkg'])
+            parts = gd.get('obj')
+            parts = parts.split('.') if parts else []
+        else:
+            # no colon - have to iterate to find the package boundary
+            parts = name.split('.')
+            modname = parts.pop(0)
+            # first part *must* be a module/package.
+            mod = importlib.import_module(modname)
+            while parts:
+                p = parts[0]
+                s = f'{modname}.{p}'
+                try:
+                    mod = importlib.import_module(s)
+                    parts.pop(0)
+                    modname = s
+                except ImportError:
+                    break
+        # if we reach this point, mod is the module, already imported, and
+        # parts is the list of parts in the object hierarchy to be traversed, or
+        # an empty list if just the module is wanted.
+        result = mod
+        for p in parts:
+>           result = getattr(result, p)
+E           AttributeError: module 'twat_fs.upload_providers' has no attribute 's3'
+
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/pkgutil.py:528: AttributeError
+___________ ERROR at setup of TestUploadFile.test_s3_upload_failure ____________
+
+    @pytest.fixture
+    def mock_s3_provider() -> Generator[MagicMock, None, None]:
+        """Mock S3 provider."""
+>       with patch("twat_fs.upload_providers.s3.S3Provider") as mock:
+
+tests/test_upload.py:104: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/unittest/mock.py:1451: in __enter__
+    self.target = self.getter()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'twat_fs.upload_providers.s3'
+
+    def resolve_name(name):
+        """
+        Resolve a name to an object.
+    
+        It is expected that `name` will be a string in one of the following
+        formats, where W is shorthand for a valid Python identifier and dot stands
+        for a literal period in these pseudo-regexes:
+    
+        W(.W)*
+        W(.W)*:(W(.W)*)?
+    
+        The first form is intended for backward compatibility only. It assumes that
+        some part of the dotted name is a package, and the rest is an object
+        somewhere within that package, possibly nested inside other objects.
+        Because the place where the package stops and the object hierarchy starts
+        can't be inferred by inspection, repeated attempts to import must be done
+        with this form.
+    
+        In the second form, the caller makes the division point clear through the
+        provision of a single colon: the dotted name to the left of the colon is a
+        package to be imported, and the dotted name to the right is the object
+        hierarchy within that package. Only one import is needed in this form. If
+        it ends with the colon, then a module object is returned.
+    
+        The function will return an object (which might be a module), or raise one
+        of the following exceptions:
+    
+        ValueError - if `name` isn't in a recognised format
+        ImportError - if an import failed when it shouldn't have
+        AttributeError - if a failure occurred when traversing the object hierarchy
+                         within the imported package to get to the desired object.
+        """
+        global _NAME_PATTERN
+        if _NAME_PATTERN is None:
+            # Lazy import to speedup Python startup time
+            import re
+            dotted_words = r'(?!\d)(\w+)(\.(?!\d)(\w+))*'
+            _NAME_PATTERN = re.compile(f'^(?P<pkg>{dotted_words})'
+                                       f'(?P<cln>:(?P<obj>{dotted_words})?)?$',
+                                       re.UNICODE)
+    
+        m = _NAME_PATTERN.match(name)
+        if not m:
+            raise ValueError(f'invalid format: {name!r}')
+        gd = m.groupdict()
+        if gd.get('cln'):
+            # there is a colon - a one-step import is all that's needed
+            mod = importlib.import_module(gd['pkg'])
+            parts = gd.get('obj')
+            parts = parts.split('.') if parts else []
+        else:
+            # no colon - have to iterate to find the package boundary
+            parts = name.split('.')
+            modname = parts.pop(0)
+            # first part *must* be a module/package.
+            mod = importlib.import_module(modname)
+            while parts:
+                p = parts[0]
+                s = f'{modname}.{p}'
+                try:
+                    mod = importlib.import_module(s)
+                    parts.pop(0)
+                    modname = s
+                except ImportError:
+                    break
+        # if we reach this point, mod is the module, already imported, and
+        # parts is the list of parts in the object hierarchy to be traversed, or
+        # an empty list if just the module is wanted.
+        result = mod
+        for p in parts:
+>           result = getattr(result, p)
+E           AttributeError: module 'twat_fs.upload_providers' has no attribute 's3'
+
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/pkgutil.py:528: AttributeError
+=================================== FAILURES ===================================
+__________________ TestDropboxIntegration.test_dropbox_setup ___________________
+
+self = <tests.test_integration.TestDropboxIntegration object at 0x1058492e0>
+
+    def test_dropbox_setup(self) -> None:
+        """Test Dropbox setup."""
+        result = setup_provider("dropbox")
+        # Test should pass if either:
+        # 1. Provider is properly configured (success is True)
+        # 2. Provider needs setup (success is False and explanation contains setup instructions)
+>       assert result.success is True or (
+            result.success is False
+            and "DROPBOX_ACCESS_TOKEN" in result.explanation
+            and "setup" in result.explanation.lower()
+        )
+E       assert (False is True or (False is False and 'DROPBOX_ACCESS_TOKEN' in "Provider 'dropbox' is not available."))
+E        +  where False = ProviderInfo(success=False, explanation="Provider 'dropbox' is not available.", help_info={}, timing=None).success
+E        +  and   False = ProviderInfo(success=False, explanation="Provider 'dropbox' is not available.", help_info={}, timing=None).success
+E        +  and   "Provider 'dropbox' is not available." = ProviderInfo(success=False, explanation="Provider 'dropbox' is not available.", help_info={}, timing=None).explanation
+
+tests/test_integration.py:113: AssertionError
+____________ TestDropboxIntegration.test_dropbox_upload_small_file _____________
+
+self = <tests.test_integration.TestDropboxIntegration object at 0x1058494f0>
+
+    def test_dropbox_upload_small_file(self) -> None:
+        """Test uploading a small file to Dropbox."""
+        try:
+            url = upload_file(SMALL_FILE, provider="dropbox")
+>           assert url.startswith("https://")
+E           AssertionError: assert False
+E            +  where False = <built-in method startswith of str object at 0x103e7d538>('https://')
+E            +    where <built-in method startswith of str object at 0x103e7d538> = ''.startswith
+
+tests/test_integration.py:123: AssertionError
+____________ TestDropboxIntegration.test_dropbox_upload_large_file _____________
+
+self = <tests.test_integration.TestDropboxIntegration object at 0x105849400>
+large_test_file = PosixPath('/Users/adam/Developer/vcs/github.twardoch/pub/twat-packages/_good/twat/plugins/repos/twat_fs/tests/data/large_test.bin')
+
+    def test_dropbox_upload_large_file(self, large_test_file: Path) -> None:
+        """Test uploading a large file to Dropbox."""
+        try:
+            url = upload_file(large_test_file, provider="dropbox")
+>           assert url.startswith("https://")
+E           AssertionError: assert False
+E            +  where False = <built-in method startswith of str object at 0x103e7d538>('https://')
+E            +    where <built-in method startswith of str object at 0x103e7d538> = ''.startswith
+
+tests/test_integration.py:133: AssertionError
+________________ TestSetupIntegration.test_setup_all_providers _________________
+
+self = <tests.test_integration.TestSetupIntegration object at 0x105849df0>
+
+    def test_setup_all_providers(self) -> None:
+        """Test checking setup status for all providers."""
+        # setup_providers() returns None, we just check it runs without errors
+        setup_providers()
+    
+        # We can still test individual providers
+        for provider in PROVIDERS_PREFERENCE:
+            if provider.lower() == "simple":
+                continue
+            result = setup_provider(provider)
+            # At least one provider should be available or have setup instructions
+>           assert result.success or (
+                "not configured" in result.explanation
+                or "setup" in result.explanation.lower()
+            )
+E           assert (False or ('not configured' in "Provider 'fal' is not available." or 'setup' in "provider 'fal' is not available."))
+E            +  where False = ProviderInfo(success=False, explanation="Provider 'fal' is not available.", help_info={}, timing=None).success
+E            +  and   "Provider 'fal' is not available." = ProviderInfo(success=False, explanation="Provider 'fal' is not available.", help_info={}, timing=None).explanation
+E            +  and   "provider 'fal' is not available." = <built-in method lower of str object at 0x105e23500>()
+E            +    where <built-in method lower of str object at 0x105e23500> = "Provider 'fal' is not available.".lower
+E            +      where "Provider 'fal' is not available." = ProviderInfo(success=False, explanation="Provider 'fal' is not available.", help_info={}, timing=None).explanation
+
+tests/test_integration.py:183: AssertionError
+___________________ TestCatboxIntegration.test_catbox_setup ____________________
+
+self = <tests.test_integration.TestCatboxIntegration object at 0x10584a030>
+
+    def test_catbox_setup(self):
+        """Test Catbox provider setup."""
+>       status, _ = setup_provider("catbox")
+E       TypeError: cannot unpack non-iterable ProviderInfo object
+
+tests/test_integration.py:194: TypeError
+________________ TestLitterboxIntegration.test_litterbox_setup _________________
+
+self = <tests.test_integration.TestLitterboxIntegration object at 0x10584a810>
+
+    def test_litterbox_setup(self):
+        """Test Litterbox provider setup."""
+>       status, _ = setup_provider("litterbox")
+E       TypeError: cannot unpack non-iterable ProviderInfo object
+
+tests/test_integration.py:234: TypeError
+__________________ TestS3Configurations.test_custom_endpoint ___________________
+
+self = <tests.test_s3_advanced.TestS3Configurations object at 0x105854ef0>
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x105db97c0>
+
+    def test_custom_endpoint(self, monkeypatch):
+        """Test using a custom S3 endpoint."""
+        monkeypatch.setenv("AWS_ENDPOINT_URL", "https://custom-s3.example.com")
+        monkeypatch.setenv("AWS_S3_BUCKET", "test-bucket")
+    
+>       creds = s3.get_credentials()
+E       NameError: name 's3' is not defined
+
+tests/test_s3_advanced.py:125: NameError
+________________ TestS3Configurations.test_path_style_endpoint _________________
+
+self = <tests.test_s3_advanced.TestS3Configurations object at 0x105855730>
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x10584a5d0>
+
+    def test_path_style_endpoint(self, monkeypatch):
+        """Test using path-style S3 endpoint."""
+        monkeypatch.setenv("AWS_S3_PATH_STYLE", "true")
+        monkeypatch.setenv("AWS_S3_BUCKET", "test-bucket")
+    
+>       creds = s3.get_credentials()
+E       NameError: name 's3' is not defined
+
+tests/test_s3_advanced.py:144: NameError
+_______________ TestS3Configurations.test_custom_region_endpoint _______________
+
+self = <tests.test_s3_advanced.TestS3Configurations object at 0x1058558e0>
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x105db9130>
+
+    def test_custom_region_endpoint(self, monkeypatch):
+        """Test using a custom region endpoint."""
+        monkeypatch.setenv("AWS_DEFAULT_REGION", "eu-central-1")
+        monkeypatch.setenv("AWS_S3_BUCKET", "test-bucket")
+    
+>       creds = s3.get_credentials()
+E       NameError: name 's3' is not defined
+
+tests/test_s3_advanced.py:168: NameError
+_________________ TestS3MultipartUploads.test_multipart_upload _________________
+
+self = <tests.test_s3_advanced.TestS3MultipartUploads object at 0x105855d00>
+large_file = PosixPath('/private/var/folders/05/clcynl0509ldxltl599hhhx40000gn/T/pytest-of-adam/pytest-69/test_multipart_upload0/large_test.bin')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x105ac9070>
+
+    def test_multipart_upload(self, large_file, monkeypatch):
+        """Test multipart upload of a large file."""
+        # Set up environment variables
+        monkeypatch.setenv("AWS_S3_BUCKET", "test-bucket")
+        monkeypatch.setenv("AWS_ACCESS_KEY_ID", "test_key")
+        monkeypatch.setenv("AWS_SECRET_ACCESS_KEY", "test_secret")
+    
+        # Create a mock S3 client
+        mock_s3 = MagicMock()
+        mock_s3.list_buckets.return_value = {"Buckets": []}
+        mock_s3.upload_fileobj.return_value = None  # Successful upload returns None
+    
+        # Mock both boto3 module and client
+>       with patch("twat_fs.upload_providers.s3.boto3.client", return_value=mock_s3):
+
+tests/test_s3_advanced.py:204: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/unittest/mock.py:1451: in __enter__
+    self.target = self.getter()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'twat_fs.upload_providers.s3.boto3'
+
+    def resolve_name(name):
+        """
+        Resolve a name to an object.
+    
+        It is expected that `name` will be a string in one of the following
+        formats, where W is shorthand for a valid Python identifier and dot stands
+        for a literal period in these pseudo-regexes:
+    
+        W(.W)*
+        W(.W)*:(W(.W)*)?
+    
+        The first form is intended for backward compatibility only. It assumes that
+        some part of the dotted name is a package, and the rest is an object
+        somewhere within that package, possibly nested inside other objects.
+        Because the place where the package stops and the object hierarchy starts
+        can't be inferred by inspection, repeated attempts to import must be done
+        with this form.
+    
+        In the second form, the caller makes the division point clear through the
+        provision of a single colon: the dotted name to the left of the colon is a
+        package to be imported, and the dotted name to the right is the object
+        hierarchy within that package. Only one import is needed in this form. If
+        it ends with the colon, then a module object is returned.
+    
+        The function will return an object (which might be a module), or raise one
+        of the following exceptions:
+    
+        ValueError - if `name` isn't in a recognised format
+        ImportError - if an import failed when it shouldn't have
+        AttributeError - if a failure occurred when traversing the object hierarchy
+                         within the imported package to get to the desired object.
+        """
+        global _NAME_PATTERN
+        if _NAME_PATTERN is None:
+            # Lazy import to speedup Python startup time
+            import re
+            dotted_words = r'(?!\d)(\w+)(\.(?!\d)(\w+))*'
+            _NAME_PATTERN = re.compile(f'^(?P<pkg>{dotted_words})'
+                                       f'(?P<cln>:(?P<obj>{dotted_words})?)?$',
+                                       re.UNICODE)
+    
+        m = _NAME_PATTERN.match(name)
+        if not m:
+            raise ValueError(f'invalid format: {name!r}')
+        gd = m.groupdict()
+        if gd.get('cln'):
+            # there is a colon - a one-step import is all that's needed
+            mod = importlib.import_module(gd['pkg'])
+            parts = gd.get('obj')
+            parts = parts.split('.') if parts else []
+        else:
+            # no colon - have to iterate to find the package boundary
+            parts = name.split('.')
+            modname = parts.pop(0)
+            # first part *must* be a module/package.
+            mod = importlib.import_module(modname)
+            while parts:
+                p = parts[0]
+                s = f'{modname}.{p}'
+                try:
+                    mod = importlib.import_module(s)
+                    parts.pop(0)
+                    modname = s
+                except ImportError:
+                    break
+        # if we reach this point, mod is the module, already imported, and
+        # parts is the list of parts in the object hierarchy to be traversed, or
+        # an empty list if just the module is wanted.
+        result = mod
+        for p in parts:
+>           result = getattr(result, p)
+E           AttributeError: module 'twat_fs.upload_providers' has no attribute 's3'
+
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/pkgutil.py:528: AttributeError
+_____________ TestS3MultipartUploads.test_multipart_upload_failure _____________
+
+self = <tests.test_s3_advanced.TestS3MultipartUploads object at 0x105855f40>
+large_file = PosixPath('/private/var/folders/05/clcynl0509ldxltl599hhhx40000gn/T/pytest-of-adam/pytest-69/test_multipart_upload_failure0/large_test.bin')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x105ac19d0>
+
+    def test_multipart_upload_failure(self, large_file, monkeypatch):
+        """Test handling of multipart upload failure."""
+        # Set up environment variables
+        monkeypatch.setenv("AWS_S3_BUCKET", "test-bucket")
+        monkeypatch.setenv("AWS_ACCESS_KEY_ID", "test_key")
+        monkeypatch.setenv("AWS_SECRET_ACCESS_KEY", "test_secret")
+    
+        # Create a mock S3 client that fails on upload
+        mock_s3 = MagicMock()
+        mock_s3.list_buckets.return_value = {"Buckets": []}
+        mock_s3.upload_fileobj.side_effect = ClientError(
+            {"Error": {"Code": "InternalError", "Message": "Internal error"}},
+            "UploadFileObj",
+        )
+    
+        # Mock both boto3 module and client
+>       with patch("twat_fs.upload_providers.s3.boto3.client", return_value=mock_s3):
+
+tests/test_s3_advanced.py:234: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/unittest/mock.py:1451: in __enter__
+    self.target = self.getter()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'twat_fs.upload_providers.s3.boto3'
+
+    def resolve_name(name):
+        """
+        Resolve a name to an object.
+    
+        It is expected that `name` will be a string in one of the following
+        formats, where W is shorthand for a valid Python identifier and dot stands
+        for a literal period in these pseudo-regexes:
+    
+        W(.W)*
+        W(.W)*:(W(.W)*)?
+    
+        The first form is intended for backward compatibility only. It assumes that
+        some part of the dotted name is a package, and the rest is an object
+        somewhere within that package, possibly nested inside other objects.
+        Because the place where the package stops and the object hierarchy starts
+        can't be inferred by inspection, repeated attempts to import must be done
+        with this form.
+    
+        In the second form, the caller makes the division point clear through the
+        provision of a single colon: the dotted name to the left of the colon is a
+        package to be imported, and the dotted name to the right is the object
+        hierarchy within that package. Only one import is needed in this form. If
+        it ends with the colon, then a module object is returned.
+    
+        The function will return an object (which might be a module), or raise one
+        of the following exceptions:
+    
+        ValueError - if `name` isn't in a recognised format
+        ImportError - if an import failed when it shouldn't have
+        AttributeError - if a failure occurred when traversing the object hierarchy
+                         within the imported package to get to the desired object.
+        """
+        global _NAME_PATTERN
+        if _NAME_PATTERN is None:
+            # Lazy import to speedup Python startup time
+            import re
+            dotted_words = r'(?!\d)(\w+)(\.(?!\d)(\w+))*'
+            _NAME_PATTERN = re.compile(f'^(?P<pkg>{dotted_words})'
+                                       f'(?P<cln>:(?P<obj>{dotted_words})?)?$',
+                                       re.UNICODE)
+    
+        m = _NAME_PATTERN.match(name)
+        if not m:
+            raise ValueError(f'invalid format: {name!r}')
+        gd = m.groupdict()
+        if gd.get('cln'):
+            # there is a colon - a one-step import is all that's needed
+            mod = importlib.import_module(gd['pkg'])
+            parts = gd.get('obj')
+            parts = parts.split('.') if parts else []
+        else:
+            # no colon - have to iterate to find the package boundary
+            parts = name.split('.')
+            modname = parts.pop(0)
+            # first part *must* be a module/package.
+            mod = importlib.import_module(modname)
+            while parts:
+                p = parts[0]
+                s = f'{modname}.{p}'
+                try:
+                    mod = importlib.import_module(s)
+                    parts.pop(0)
+                    modname = s
+                except ImportError:
+                    break
+        # if we reach this point, mod is the module, already imported, and
+        # parts is the list of parts in the object hierarchy to be traversed, or
+        # an empty list if just the module is wanted.
+        result = mod
+        for p in parts:
+>           result = getattr(result, p)
+E           AttributeError: module 'twat_fs.upload_providers' has no attribute 's3'
+
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/pkgutil.py:528: AttributeError
+________________ TestProviderSetup.test_setup_invalid_provider _________________
+
+self = <tests.test_upload.TestProviderSetup object at 0x105856450>
+
+    def test_setup_invalid_provider(self) -> None:
+        """Test setup check for an invalid provider."""
+        result = setup_provider("invalid")
+        assert result.success is False
+>       assert "Provider not found" in result.explanation.lower()
+E       assert 'Provider not found' in "provider 'invalid' is not available."
+E        +  where "provider 'invalid' is not available." = <built-in method lower of str object at 0x105b2f4b0>()
+E        +    where <built-in method lower of str object at 0x105b2f4b0> = "Provider 'invalid' is not available.".lower
+E        +      where "Provider 'invalid' is not available." = ProviderInfo(success=False, explanation="Provider 'invalid' is not available.", help_info={}, timing=None).explanation
+
+tests/test_upload.py:150: AssertionError
+________________ TestProviderSetup.test_setup_provider_success _________________
+
+self = <tests.test_upload.TestProviderSetup object at 0x1058566f0>
+
+    def test_setup_provider_success(self) -> None:
+        """Test setup_provider with a valid provider."""
+        # Use a provider that should always be available
+>       with patch(
+            "twat_fs.upload_providers.factory.get_provider"
+        ) as mock_get_provider:
+
+tests/test_upload.py:223: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/unittest/mock.py:1467: in __enter__
+    original, local = self.get_original()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <unittest.mock._patch object at 0x10599daf0>
+
+    def get_original(self):
+        target = self.getter()
+        name = self.attribute
+    
+        original = DEFAULT
+        local = False
+    
+        try:
+            original = target.__dict__[name]
+        except (AttributeError, KeyError):
+            original = getattr(target, name, DEFAULT)
+        else:
+            local = True
+    
+        if name in _builtins and isinstance(target, ModuleType):
+            self.create = True
+    
+        if not self.create and original is DEFAULT:
+>           raise AttributeError(
+                "%s does not have the attribute %r" % (target, name)
+            )
+E           AttributeError: <module 'twat_fs.upload_providers.factory' from '/Users/adam/Developer/vcs/github.twardoch/pub/twat-packages/_good/twat/plugins/repos/twat_fs/src/twat_fs/upload_providers/factory.py'> does not have the attribute 'get_provider'
+
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/unittest/mock.py:1437: AttributeError
+____________________ TestUploadFile.test_all_providers_fail ____________________
+
+self = <tests.test_upload.TestUploadFile object at 0x10598b9b0>
+test_file = PosixPath('/private/var/folders/05/clcynl0509ldxltl599hhhx40000gn/T/pytest-of-adam/pytest-69/test_all_providers_fail0/test.txt')
+
+    def test_all_providers_fail(self, test_file: Path) -> None:
+        """Test error when all providers fail."""
+        # Instead of patching specific provider modules, patch the factory.get_provider function
+>       with patch(
+            "twat_fs.upload_providers.factory.get_provider"
+        ) as mock_get_provider:
+
+tests/test_upload.py:480: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/unittest/mock.py:1467: in __enter__
+    original, local = self.get_original()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <unittest.mock._patch object at 0x105a2be00>
+
+    def get_original(self):
+        target = self.getter()
+        name = self.attribute
+    
+        original = DEFAULT
+        local = False
+    
+        try:
+            original = target.__dict__[name]
+        except (AttributeError, KeyError):
+            original = getattr(target, name, DEFAULT)
+        else:
+            local = True
+    
+        if name in _builtins and isinstance(target, ModuleType):
+            self.create = True
+    
+        if not self.create and original is DEFAULT:
+>           raise AttributeError(
+                "%s does not have the attribute %r" % (target, name)
+            )
+E           AttributeError: <module 'twat_fs.upload_providers.factory' from '/Users/adam/Developer/vcs/github.twardoch/pub/twat-packages/_good/twat/plugins/repos/twat_fs/src/twat_fs/upload_providers/factory.py'> does not have the attribute 'get_provider'
+
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/unittest/mock.py:1437: AttributeError
+____________________ TestEdgeCases.test_no_read_permission _____________________
+
+self = <tests.test_upload.TestEdgeCases object at 0x10598fce0>
+tmp_path = PosixPath('/private/var/folders/05/clcynl0509ldxltl599hhhx40000gn/T/pytest-of-adam/pytest-69/test_no_read_permission0')
+
+    def test_no_read_permission(self, tmp_path: Path) -> None:
+        """Test uploading a file without read permission."""
+        test_file = tmp_path / "noperm.txt"
+        test_file.write_text("test content")
+    
+        # Use a mock provider that raises PermissionError
+>       with patch(
+            "twat_fs.upload_providers.factory.get_provider"
+        ) as mock_get_provider:
+
+tests/test_upload.py:634: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/unittest/mock.py:1467: in __enter__
+    original, local = self.get_original()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <unittest.mock._patch object at 0x105ac06b0>
+
+    def get_original(self):
+        target = self.getter()
+        name = self.attribute
+    
+        original = DEFAULT
+        local = False
+    
+        try:
+            original = target.__dict__[name]
+        except (AttributeError, KeyError):
+            original = getattr(target, name, DEFAULT)
+        else:
+            local = True
+    
+        if name in _builtins and isinstance(target, ModuleType):
+            self.create = True
+    
+        if not self.create and original is DEFAULT:
+>           raise AttributeError(
+                "%s does not have the attribute %r" % (target, name)
+            )
+E           AttributeError: <module 'twat_fs.upload_providers.factory' from '/Users/adam/Developer/vcs/github.twardoch/pub/twat-packages/_good/twat/plugins/repos/twat_fs/src/twat_fs/upload_providers/factory.py'> does not have the attribute 'get_provider'
+
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/unittest/mock.py:1437: AttributeError
+============================= slowest 10 durations =============================
+6.02s call     tests/test_filebin_pixeldrain.py::test_pixeldrain_upload_failure
+6.01s call     tests/test_filebin_pixeldrain.py::test_filebin_upload_failure
+0.46s call     tests/test_async_utils.py::TestGatherWithConcurrency::test_gather_with_concurrency
+0.11s setup    tests/test_s3_advanced.py::TestS3MultipartUploads::test_multipart_upload
+0.11s setup    tests/test_integration.py::TestDropboxIntegration::test_dropbox_upload_large_file
+0.10s setup    tests/test_s3_advanced.py::TestS3MultipartUploads::test_multipart_upload_failure
+0.10s call     tests/test_async_utils.py::TestWithAsyncTimeout::test_with_async_timeout_timeout
+0.10s call     tests/test_async_utils.py::TestWithAsyncTimeout::test_with_async_timeout_success
+0.10s call     tests/test_async_utils.py::TestWithAsyncTimeout::test_with_async_timeout_preserves_metadata
+0.02s call     tests/test_filebin_pixeldrain.py::test_filebin_upload_success
+=========================== short test summary info ============================
+FAILED tests/test_integration.py::TestDropboxIntegration::test_dropbox_setup
+FAILED tests/test_integration.py::TestDropboxIntegration::test_dropbox_upload_small_file
+FAILED tests/test_integration.py::TestDropboxIntegration::test_dropbox_upload_large_file
+FAILED tests/test_integration.py::TestSetupIntegration::test_setup_all_providers
+FAILED tests/test_integration.py::TestCatboxIntegration::test_catbox_setup - ...
+FAILED tests/test_integration.py::TestLitterboxIntegration::test_litterbox_setup
+FAILED tests/test_s3_advanced.py::TestS3Configurations::test_custom_endpoint
+FAILED tests/test_s3_advanced.py::TestS3Configurations::test_path_style_endpoint
+FAILED tests/test_s3_advanced.py::TestS3Configurations::test_custom_region_endpoint
+FAILED tests/test_s3_advanced.py::TestS3MultipartUploads::test_multipart_upload
+FAILED tests/test_s3_advanced.py::TestS3MultipartUploads::test_multipart_upload_failure
+FAILED tests/test_upload.py::TestProviderSetup::test_setup_invalid_provider
+FAILED tests/test_upload.py::TestProviderSetup::test_setup_provider_success
+FAILED tests/test_upload.py::TestUploadFile::test_all_providers_fail - Attrib...
+FAILED tests/test_upload.py::TestEdgeCases::test_no_read_permission - Attribu...
+ERROR tests/test_integration.py::TestCatboxIntegration::test_catbox_upload_small_file
+ERROR tests/test_integration.py::TestCatboxIntegration::test_catbox_upload_large_file
+ERROR tests/test_integration.py::TestLitterboxIntegration::test_litterbox_upload_small_file
+ERROR tests/test_integration.py::TestLitterboxIntegration::test_litterbox_upload_large_file
+ERROR tests/test_integration.py::TestLitterboxIntegration::test_litterbox_different_expirations
+ERROR tests/test_upload.py::TestUploadFile::test_upload_with_default_provider
+ERROR tests/test_upload.py::TestUploadFile::test_upload_with_specific_provider
+ERROR tests/test_upload.py::TestUploadFile::test_upload_with_provider_list - ...
+ERROR tests/test_upload.py::TestUploadFile::test_upload_fallback_on_auth_failure
+ERROR tests/test_upload.py::TestUploadFile::test_upload_fallback_on_upload_failure
+ERROR tests/test_upload.py::TestUploadFile::test_upload_with_s3_provider - At...
+ERROR tests/test_upload.py::TestUploadFile::test_s3_upload_failure - Attribut...
+============ 15 failed, 65 passed, 34 skipped, 12 errors in 16.44s =============
+
+2025-03-04 08:27:02 - All checks completed
+2025-03-04 08:27:02 - 
+=== TODO.md ===
+2025-03-04 08:27:02 - ---
+this_file: TODO.md
+---
+
+# TODO
+
+Tip: Periodically run `python ./cleanup.py status` to see results of lints and tests. Use `uv pip ...` not `pip ...`
+
+## High Priority
+
+- [ ] Fix missing dependencies for tests
+  - [ ] Install missing dependencies for tests or implement proper test skipping
+    - Issue: ModuleNotFoundError for 'fal_client', 'botocore', 'responses'
+    - Fix: Add `uv pip install 'twat-fs[test,dev]'` or implement conditional imports with proper test skipping
+    - Affected files:
+      - `tests/test_integration.py`: Needs 'fal_client'
+      - `tests/test_s3_advanced.py`: Needs 'botocore'
+      - `tests/test_upload.py`: Needs 'botocore'
+
+- [ ] Fix failing unit tests
+  - [ ] Fix `TestLogUploadAttempt.test_log_upload_attempt_success` test
+    - Issue: logger.info is not being called in the log_upload_attempt function
+    - Fix: Implement proper logger.info call in the success branch
+  - [ ] Fix `TestGatherWithConcurrency.test_gather_with_concurrency_with_exceptions` test
+    - Issue: Test is failing with RuntimeError instead of ValueError
+    - Fix: Ensure the correct exception type is propagated in gather_with_concurrency
+
+- [ ] Fix boolean argument issues
+  - [ ] Fix FBT001/FBT002 linter errors for boolean positional arguments
+    - Issue: Boolean-typed positional arguments in function definitions
+    - Fix: Convert boolean positional arguments to keyword-only arguments
+    - Affected files:
+      - `utils.py` line 251: `log_upload_attempt` function
+      - `upload.py` lines 251, 381: `setup_provider` and `setup_providers` functions
+      - `cli.py` lines 202, 203, 205: `upload` method
+  - [ ] Fix FBT003 linter errors for boolean positional values in function calls
+    - Affected files:
+      - `upload.py` multiple instances in `ProviderInfo` instantiation
+      - `test_utils.py` lines 340, 349: `log_upload_attempt` calls
+
+- [ ] Fix type annotation issues
+  - [ ] Fix incompatible return types in async methods
+    - Issue: Return type mismatches in async functions
+    - Affected files:
+      - `simple.py` lines 120, 156, 273: Return type incompatibilities
+  - [ ] Fix type mismatches in factory.py
+    - Issue: Incompatible types in assignment (expression has type Module, variable has type "Provider | None")
+  - [ ] Fix missing type annotations
+    - Issue: Need type annotation for variables
+    - Affected files:
+      - `simple.py` lines 237, 261: Missing type annotations for "sync_upload"
+
+## Medium Priority
+
+- [ ] Fix exception handling issues
+  - [ ] Fix B904 linter errors (raise with from)
+    - Issue: Within an `except` clause, raise exceptions with `raise ... from err`
+    - Affected files:
+      - `upload.py` line 687
+      - `fal.py` line 67
+  - [ ] Fix S101 linter errors (use of assert)
+    - Affected files:
+      - `core.py` lines 168, 214
+
+- [ ] Fix unused arguments and imports
+  - [ ] Fix ARG002 linter errors (unused method arguments)
+    - Affected files:
+      - `dropbox.py` line 124: Unused `kwargs`
+      - `s3.py` line 182: Unused `kwargs`
+      - `simple.py` multiple instances: Unused arguments
+  - [ ] Fix F401 linter errors (unused imports)
+    - Affected files:
+      - `__init__.py` lines 11, 19: Unused imports
+
+- [ ] Fix function complexity issues
+  - [ ] Refactor functions with too many arguments (PLR0913)
+    - Affected files:
+      - `cli.py` line 198: `upload` method
+      - `upload.py` lines 411, 550, 619, 703: Multiple functions
+      - `litterbox.py` lines 223, 300: `upload_file` functions
+  - [ ] Refactor complex functions (C901)
+    - Affected files:
+      - `upload.py` lines 57, 250: `_test_provider_online` and `setup_provider` functions
+  - [ ] Fix functions with too many branches/statements/returns (PLR0911, PLR0912, PLR0915)
+    - Affected files:
+      - `upload.py` lines 57, 250: Multiple complexity issues
+
+## Low Priority
+
+- [ ] Fix linter issues in `cleanup.py`
+  - [ ] Address DTZ005: datetime.datetime.now() called without a tz argument
+  - [ ] Fix S603/S607: Subprocess call security issues
+
+- [ ] Update `pyproject.toml` to fix deprecated linter settings
+  - [ ] Update ruff configuration
+  - [ ] Add explicit Python version targets
+  - [ ] Configure mypy settings
+
+- [ ] Fix RUF012 linter errors (mutable class attributes)
+  - Affected files:
+    - `fal.py` lines 51, 52: Mutable class attributes should be annotated with `typing.ClassVar`
+
+- [ ] Fix A005 linter error (module shadows standard library)
+  - Affected files:
+    - `types.py` line 1: Module `types` shadows a Python standard-library module
+
+- [ ] Fix S105 linter error (possible hardcoded password)
+  - Affected files:
+    - `test_s3_advanced.py` line 21: Hardcoded "TEST_SECRET_KEY"
+
+## Documentation
+
+- [ ] Document best practices for creating new providers
+  - [ ] Create comprehensive provider development guide
+  - [ ] Add examples for common provider patterns
+
+- [ ] Update API documentation with latest changes
+
+- [ ] Create troubleshooting guide for common issues
+
+## New Providers
+
+- [ ] Add support for Imgur
+- [ ] Add support for Cloudinary
+- [ ] Add support for Google Drive
+- [ ] Add support for OneDrive
+- [ ] Add support for Box
+- [ ] Add support for Mega
+- [ ] Add support for Backblaze B2
+- [ ] Add support for Wasabi
+
+## Completed Tasks
+
+- [x] Fix `TestCreateProviderInstance` tests
+- [x] Fix `TestGatherWithConcurrency` tests
+- [x] Create `utils.py` module for shared functionality
+- [x] Refactor provider modules to use `utils.py`
+- [x] Create provider templates
+- [x] Implement factory pattern for provider instantiation
+- [x] Standardize async/sync conversion patterns
+- [x] Write unit tests for utility functions
+- [x] Create provider base classes
+- [x] Improve error classification with `RetryableError` and `NonRetryableError` classes
+- [x] Standardize logging patterns with `log_upload_attempt` function
+- [x] Enhance type hints for better IDE support and runtime type checking
+- [x] Improve URL validation to ensure returned URLs are accessible before returning them
+
+
+2025-03-04 08:27:05 - 
+📦 Repomix v0.2.29
+
+No custom config found at repomix.config.json or global config at /Users/adam/.config/repomix/repomix.config.json.
+You can add a config file for additional settings. Please check https://github.com/yamadashy/repomix for more information.
+⠙ Collecting files...
+[2K[1A[2K[G⠹ Collecting files...
+[2K[1A[2K[G⠸ Collect file... (2/56) .cursor/rules/cleanup.mdc
+[2K[1A[2K[G⠼ Collect file... (47/56) cleanup.py
+[2K[1A[2K[G⠴ Running security check...
+[2K[1A[2K[G⠦ Running security check...
+[2K[1A[2K[G⠧ Running security check... (36/54) tests/test_filebin_pixeldrain.py
+[2K[1A[2K[G⠇ Processing files...
+[2K[1A[2K[G⠏ Processing files...
+[2K[1A[2K[G⠋ Processing file... (6/54) .github/workflows/release.yml
+[2K[1A[2K[G⠙ Processing file... (18/54) src/twat_fs/upload_providers/pixeldrain.py
+[2K[1A[2K[G⠹ Processing file... (40/54) tests/test_upload.py
+[2K[1A[2K[G⠸ Calculating metrics...
+[2K[1A[2K[G⠼ Calculating metrics...
+[2K[1A[2K[G⠴ Calculating metrics...
+[2K[1A[2K[G⠦ Calculating metrics...
+[2K[1A[2K[G⠧ Calculating metrics...
+[2K[1A[2K[G⠇ Calculating metrics...
+[2K[1A[2K[G⠏ Calculating metrics... (3/54) .cursor/rules/filetree.mdc
+[2K[1A[2K[G⠋ Calculating metrics... (44/54) CHANGELOG.md
+[2K[1A[2K[G✔ Packing completed successfully!
+
+📈 Top 5 Files by Character Count and Token Count:
+──────────────────────────────────────────────────
+1.  IDEAS.md (57,524 chars, 12,212 tokens)
+2.  README.md (11,775 chars, 2,671 tokens)
+3.  tests/test_upload.py (9,368 chars, 2,096 tokens)
+4.  src/twat_fs/upload_providers/dropbox.py (7,904 chars, 1,693 tokens)
+5.  CHANGELOG.md (7,229 chars, 1,485 tokens)
+
+🔎 Security Check:
+──────────────────
+✔ No suspicious files detected.
+
+📊 Pack Summary:
+────────────────
+  Total Files: 54 files
+  Total Chars: 189,989 chars
+ Total Tokens: 43,633 tokens
+       Output: REPO_CONTENT.txt
+     Security: ✔ No suspicious files detected
+
+🎉 All Done!
+Your repository has been successfully packed.
+
+💡 Repomix is now available in your browser! Try it at https://repomix.com
+
+2025-03-04 08:27:05 - Repository content mixed into REPO_CONTENT.txt
