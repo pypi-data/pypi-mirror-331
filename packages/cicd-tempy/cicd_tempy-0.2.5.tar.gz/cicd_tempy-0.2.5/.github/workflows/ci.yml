@@ -1,0 +1,74 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  lint:
+    uses: ./.github/workflows/lint.yml
+    secrets: inherit
+
+  test:
+    uses: ./.github/workflows/test.yml
+    secrets: inherit
+
+  build-wheels:
+    uses: ./.github/workflows/build.yml
+    secrets: inherit
+    with:
+      dry-run: true
+
+  build-docs:
+    uses: ./.github/workflows/docs.yml
+    secrets: inherit
+    with:
+      dry-run: true
+
+  release-dry-run:
+    uses: ./.github/workflows/release.yml
+    secrets: inherit
+    with:
+      dry-run: true
+
+  check:  # This job does nothing and is only used for the branch protection
+    needs:
+      - lint
+      - test
+      - build-wheels
+      - build-docs
+      - release-dry-run
+    outputs:
+      result: ${{ steps.all-green.outputs.result }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Decide whether the needed jobs succeeded or failed
+        uses: re-actors/alls-green@release/v1
+        id: all-green
+        with:
+          jobs: ${{ toJSON(needs) }}
+
+  release:
+    needs: check
+    if: needs.check.outputs.result == 'success' && github.ref_name == 'main'
+    uses: ./.github/workflows/release.yml
+    secrets: inherit
+
+  docs:
+    needs: release
+    uses: ./.github/workflows/docs.yml
+    secrets: inherit
+    with:
+      sha: ${{ needs.release.outputs.sha }}
+
+  wheels:
+    needs: release
+    uses: ./.github/workflows/build.yml
+    secrets: inherit
+    with:
+      sha: ${{ needs.release.outputs.sha }}

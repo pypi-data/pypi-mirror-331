@@ -1,0 +1,49 @@
+name: release
+description: Create a new semantic release.
+
+on:
+  push:
+    tags:
+      - '**'
+  workflow_call:
+    inputs:
+      dry-run:
+        description: 'Do not push changes.'
+        required: false
+        default: false
+        type: boolean
+    outputs:
+      sha:
+        description: "The latest commit SHA after release"
+        value: ${{ jobs.release.outputs.sha }}
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    outputs:
+      sha: ${{ steps.get-sha.outputs.sha }}
+    steps:
+      - name: Check out
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          token: "${{ secrets.GITHUB_TOKEN }}"
+      - name: Setup | Force correct release branch on workflow sha
+        run: git checkout -B ${{ github.ref_name }} ${{ github.sha }}
+      - name: Determine release options
+        run: |
+          if [[ "${{ inputs.dry-run }}" == true ]]; then
+            echo "ROOT_OPTIONS=-vv --noop" >> $GITHUB_ENV
+          else
+            echo "ROOT_OPTIONS=-vv" >> $GITHUB_ENV
+          fi
+      - id: release
+        name: Create bump and changelog (or dry-run)
+        uses: python-semantic-release/python-semantic-release@v9.18.1
+        with:
+          root_options: "${{ env.ROOT_OPTIONS }}"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          git_committer_name: "github-actions"
+          git_committer_email: "actions@users.noreply.github.com"
+      - id: get-sha
+        run: echo "sha=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
