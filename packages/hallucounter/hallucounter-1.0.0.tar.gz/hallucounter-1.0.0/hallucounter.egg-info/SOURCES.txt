@@ -1,0 +1,10 @@
+README.md
+setup.py
+hallucounter/__init__.py
+hallucounter/detector.py
+hallucounter/nli_scores.py
+hallucounter.egg-info/PKG-INFO
+hallucounter.egg-info/SOURCES.txt
+hallucounter.egg-info/dependency_links.txt
+hallucounter.egg-info/requires.txt
+hallucounter.egg-info/top_level.txt
