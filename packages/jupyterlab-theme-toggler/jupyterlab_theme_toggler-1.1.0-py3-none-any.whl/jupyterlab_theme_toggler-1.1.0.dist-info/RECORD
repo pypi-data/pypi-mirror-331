@@ -1,0 +1,14 @@
+jupyterlab_theme_toggler/__init__.py,sha256=FJKnZuWg2EFgm3w-3R84YQ7Xn_oVZc7zrAGyjVO-ROQ,167
+jupyterlab_theme_toggler/_version.py,sha256=B4JbJXpoTlxg9RtB6Um3WFUO6LNGAJF3fD8L3-DcNkw,171
+jupyterlab_theme_toggler-1.1.0.data/data/share/jupyter/labextensions/jupyterlab-theme-toggler/package.json,sha256=E3Si54o4SUvVmewTa4sl5g_sR3k3Eoz5ei1XmDNEqv0,3382
+jupyterlab_theme_toggler-1.1.0.data/data/share/jupyter/labextensions/jupyterlab-theme-toggler/schemas/jupyterlab-theme-toggler/package.json.orig,sha256=7PFhgt7v2dX8XlR0pg9mMtgJ649TTb9xiKDQ8vsxG8A,3564
+jupyterlab_theme_toggler-1.1.0.data/data/share/jupyter/labextensions/jupyterlab-theme-toggler/schemas/jupyterlab-theme-toggler/plugin.json,sha256=wxZUUUzybmFbnpI7o2-rTuejRDC_vf80Eo7w5IJxYuI,272
+jupyterlab_theme_toggler-1.1.0.data/data/share/jupyter/labextensions/jupyterlab-theme-toggler/static/218.19afdf46f3c2dd08cdd5.js,sha256=Ga_fRvPC3QjN1fpzeUEgQRXKRui1y3MsWU7E1OggiHA,5085
+jupyterlab_theme_toggler-1.1.0.data/data/share/jupyter/labextensions/jupyterlab-theme-toggler/static/remoteEntry.1d63eaf454a7d5779aa0.js,sha256=HWPq9FSn1XeaoOG_Bs3630lGw9XjJ7N0hjLB6x6Kn3c,6726
+jupyterlab_theme_toggler-1.1.0.data/data/share/jupyter/labextensions/jupyterlab-theme-toggler/static/style.js,sha256=-CQt0ZTPaCTvrRiLcznxflAbfvIKlOVzjOos-muaXQ8,118
+jupyterlab_theme_toggler-1.1.0.data/data/share/jupyter/labextensions/jupyterlab-theme-toggler/static/third-party-licenses.json,sha256=W6N2sSD7tQihMqQk64F9xMd1Flfr2KO97esAiHUOYdM,2453
+jupyterlab_theme_toggler-1.1.0.data/data/share/jupyter/labextensions/jupyterlab-theme-toggler/install.json,sha256=bltOwNWZhGpQxKje80H1oduMNyieVvvOlLGqp4w_ZtY,202
+jupyterlab_theme_toggler-1.1.0.dist-info/METADATA,sha256=O9X3fQ8uCuDj56iSdjGdGPH0CeKeebslz4cFSUL5mUo,5979
+jupyterlab_theme_toggler-1.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+jupyterlab_theme_toggler-1.1.0.dist-info/licenses/LICENSE,sha256=cFETqAPbZPAiaEvqn0VLRRJXDSFKqa57Xnj54qNlk1Y,1538
+jupyterlab_theme_toggler-1.1.0.dist-info/RECORD,,
