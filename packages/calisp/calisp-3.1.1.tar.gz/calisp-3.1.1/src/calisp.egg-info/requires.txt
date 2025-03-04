@@ -1,0 +1,16 @@
+numpy
+scipy
+pandas
+tqdm
+pymzml
+pyarrow
+
+[dev]
+setuptools
+build
+twine
+
+[test]
+jupyter
+matplotlib
+jinja2

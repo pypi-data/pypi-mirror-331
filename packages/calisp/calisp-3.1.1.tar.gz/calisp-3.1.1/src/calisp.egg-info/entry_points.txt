@@ -1,0 +1,4 @@
+[console_scripts]
+calisp = calisp.main:main
+calisp_compute_medians = calisp.calisp_compute_medians:main
+calisp_filter_patterns = calisp.calisp_filter_patterns:main
