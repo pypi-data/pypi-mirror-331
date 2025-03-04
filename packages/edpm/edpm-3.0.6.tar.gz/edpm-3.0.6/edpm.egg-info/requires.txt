@@ -1,0 +1,6 @@
+click
+appdirs
+ruamel.yaml
+
+[test]
+pytest
