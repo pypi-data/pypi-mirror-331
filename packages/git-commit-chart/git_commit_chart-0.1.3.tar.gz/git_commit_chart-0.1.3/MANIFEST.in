@@ -1,0 +1,4 @@
+include LICENSE
+include README.md
+recursive-include git_commit_chart/templates *
+recursive-include git_commit_chart/static * 
