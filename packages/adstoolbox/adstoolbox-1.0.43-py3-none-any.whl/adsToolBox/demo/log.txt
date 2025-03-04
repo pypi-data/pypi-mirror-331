@@ -1,0 +1,10 @@
+DEBUG - Fichier spécifié pour l'environnement trouvé
+INFO - Message d'info
+DEBUG - Message de debug
+WARNING - Message de warning
+ERROR - **************************************************
+ERROR - Message d'erreur
+ERROR - **************************************************
+Level 25 - Message custom
+INFO - Fermeture des logs en cours...
+WARNING - Pas de connexion valide ou logs désactivés.
