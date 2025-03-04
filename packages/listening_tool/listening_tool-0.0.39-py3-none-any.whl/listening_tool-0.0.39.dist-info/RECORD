@@ -1,0 +1,11 @@
+listening_tool/__init__.py,sha256=ueBHAgBtO7_0RxHYNnOccCE3SRQoy0pB5pa6kTleoF8,254
+listening_tool/config.py,sha256=B3KB81JUa84hoPQ7VB04yLjb8d-kVgWOlBgp4Xh-K1g,1084
+listening_tool/listening_tool.py,sha256=shb6nkaRa7MgBocK9jKgmFC51Z3POpRVTgdB-wWuhi0,7125
+listening_tool/logging_config.py,sha256=PhoBLqaNRJF_UQ9vRYHMHnwT6KlktuwM4Gwy55SlbEM,674
+listening_tool/mic.py,sha256=JXcS97EobZL3ShUkiZb2SiAeNeNAVNcEglkw1Y1B6Mk,1666
+listening_tool/recording_device.py,sha256=zuCRmEEH_2LMshn1CGnHbYD-Lpy4pJtoL7jkVhRIYXA,859
+listening_tool/transcription.py,sha256=ZsYq9B5HHCH6RrHG4wrnDUco9uNfSmM7ABVU0YCTZNM,5961
+listening_tool-0.0.39.dist-info/LICENSE,sha256=k42gkScZBi-7z2W8oN5H0C6Lc8LJu81uEiR53auVFVE,1105
+listening_tool-0.0.39.dist-info/METADATA,sha256=FVtiRbD-gQiKBG-7DeEgylfQ_Rj3uZ0dd3jhN3Ws-Nk,9172
+listening_tool-0.0.39.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+listening_tool-0.0.39.dist-info/RECORD,,
