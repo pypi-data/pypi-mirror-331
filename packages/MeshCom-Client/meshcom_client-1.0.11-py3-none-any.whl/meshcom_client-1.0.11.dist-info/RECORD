@@ -1,0 +1,16 @@
+MeshCom_Client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+MeshCom_Client/__main__.py,sha256=SnHXQF0sZInzjV80ACGyDG6IVqgPHCu3_xa6d48JRN4,32473
+MeshCom_Client/locales/MeshCom-Client.pot,sha256=PpC2cEFeQ4J8q5XNVYBGtPoRJ6vE-OgdU5sGV5vBaug,6203
+MeshCom_Client/locales/de/LC_MESSAGES/MeshCom-Client.mo,sha256=p6gyh9XRY_aR3EcuOAn1GWqdJdCQ71oNH-oYblYIqH0,6272
+MeshCom_Client/locales/de/LC_MESSAGES/MeshCom-Client.po,sha256=bTFPbtLBG9dKb7D46M1Lz8M16zhRGC2m7J0B9X690-A,8392
+MeshCom_Client/locales/en/LC_MESSAGES/MeshCom-Client.mo,sha256=ofZhkuatTQuMl11xPSzeZaNpd_MYm19cnOTsLza9bhs,5867
+MeshCom_Client/locales/en/LC_MESSAGES/MeshCom-Client.po,sha256=7H0roMgcndulABHegfscUrzsf1HU3fZ-Qv6e0bO-m5E,7981
+MeshCom_Client/sounds/alert.wav,sha256=KAYEbwM1iLArwd4PQD7EGZ5y1_SJ-ChK7VJRjrtbnCk,148876
+MeshCom_Client/sounds/mycall.wav,sha256=gSH5IVwsVcpONiU3zriPb3p1g3jSPhOOnvio-Ff82OE,181804
+MeshCom_Client/sounds/new_message.wav,sha256=upzmZ9aPtMaVN7g0BH1S2N9r-RN7tTcZbQYwKSpWiSc,140252
+meshcom_client-1.0.11.dist-info/LICENSE,sha256=oKUchSxIrIkORJbKuHtjSkr86TX_NE9EgFkZBJouNF0,1068
+meshcom_client-1.0.11.dist-info/METADATA,sha256=hYUk-IX5DvLnoHFG9Nik3C1rdy1HV5sPeFbNZSzG4IY,5061
+meshcom_client-1.0.11.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+meshcom_client-1.0.11.dist-info/entry_points.txt,sha256=PKmDkdA19C7t7QYZFtU18Catv_Uq3hyJEihy7FUBFV8,64
+meshcom_client-1.0.11.dist-info/top_level.txt,sha256=Q_v4cSo19IM_tRuAjwWjjxAq-ECmGX07NwTiilNLT6w,15
+meshcom_client-1.0.11.dist-info/RECORD,,
