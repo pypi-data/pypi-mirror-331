@@ -1,0 +1,9 @@
+Metadata-Version: 2.2
+Name: livekit-plugins-noise-cancellation
+Version: 0.1.1
+Summary: Livekit plugin for noice cancellation of inbound AudioStream
+License: SEE LICENSE IN https://livekit.io/legal/terms-of-service
+Keywords: webrtc,realtime,audio,livekit
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: livekit>=0.20.4
