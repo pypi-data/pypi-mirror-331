@@ -1,0 +1,10 @@
+BrowserPOM/__init__.py,sha256=IatlDeb_mK9XJ4bW2wm_-A5uPlJLQVraXAaDFGQzZhs,4660
+BrowserPOM/childobject.py,sha256=PTL8FnBd2C1L3Lw_hF773-X0yMDhtf3T_Cc7XpjQQV4,1748
+BrowserPOM/keywords.py,sha256=BCy23YMSumdUoG8ZIiUrVVeWU0VXv9kc_9raQnmONfM,3651
+BrowserPOM/mypy_plugin.py,sha256=z2SF5DTyoylpLtFQ1a6j2jXjCiD49YTaTKW29t6RE4w,1752
+BrowserPOM/pageobject.py,sha256=o5Loo5yt53bFN-zVZC-niAtm2bdLH58H2Jyl9pnX5U0,2222
+BrowserPOM/uiobject.py,sha256=CqHdipcYpZSTnFqlHLSQ82I3w03REpMNpmCgwE5UvWA,1754
+robotframework_browserpom-0.2.0.dist-info/LICENSE,sha256=tAkwu8-AdEyGxGoSvJ2gVmQdcicWw3j1ZZueVV74M-E,11357
+robotframework_browserpom-0.2.0.dist-info/METADATA,sha256=rYoBUcBfrJRvZI-VgkFOwumuqN5Z74eP132A51L69rs,4833
+robotframework_browserpom-0.2.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+robotframework_browserpom-0.2.0.dist-info/RECORD,,
