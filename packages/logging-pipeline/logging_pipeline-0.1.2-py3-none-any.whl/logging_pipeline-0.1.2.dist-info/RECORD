@@ -1,0 +1,9 @@
+logging_pipeline/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+logging_pipeline/bootstrap.py,sha256=I3AN3mGdhKb2JjQqvlUp2nODSkHx1PXb6_6xRD32r7Q,2576
+logging_pipeline/version.py,sha256=roYD_w4JTCOYZ1hXr-fVq4p8bJ02ALFtXTdty2RbOTs,120
+logging_pipeline/wrapt_logging.py,sha256=_v5e9DXs-5mctJ2ENrBFqjXE7GcOnPL2B8Ns8UejHy4,2495
+hatch_autorun_logging_pipeline.pth,sha256=ehyaXQgZRJRnY20Qzq7KPqfh_Shhe2CRP7Y2MBiuPDI,120
+logging_pipeline-0.1.2.dist-info/METADATA,sha256=IN0hDU7ZKDdcvYE6MlbE7hyvkI8E16ddXHiYWzknYoE,2766
+logging_pipeline-0.1.2.dist-info/WHEEL,sha256=3U_NnUcV_1B1kPkYaPzN-irRckL5VW_lytn0ytO_kRY,87
+logging_pipeline-0.1.2.dist-info/licenses/LICENSE,sha256=SjJaxeAe6-g1m1iZ6L2rfEsWnSlcR8_OIkb9La0GHvE,1504
+logging_pipeline-0.1.2.dist-info/RECORD,,
