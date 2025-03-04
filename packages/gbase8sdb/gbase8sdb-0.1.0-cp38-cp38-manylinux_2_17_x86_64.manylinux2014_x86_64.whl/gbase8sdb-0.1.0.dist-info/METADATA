@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: gbase8sdb
+Version: 0.1.0
+Summary: Python interface to GBase 8s Database
+License: MIT
+Keywords: GBase 8s,database
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Cython
+Classifier: Topic :: Database
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+License-File: THIRD_PARTY_LICENSES.txt
+
+# python-gbase8sdb
+
+python-gbase8sdb 是一个 [Python 编程语言][python] 扩展模块，允许 Python 程序连接到 GBase 8s 数据库。
+
+该模块符合 [Python 数据库 API 2.0 规范][pep249]，并且包含大量扩展和少数排除项。
+
+
+## 安装
+
+运行 `python -m pip install gbase8sdb` 安装。
+
+
+## 依赖和互操作性
+
+- 支持的 Python 版本：3.7 至 3.12 。
+
+- 支持的 GBase 8s 数据库版本：GBase 8s V8.8_3.6.2版本及以上。
+
+- 支持的操作系统：Linux x86_64 。
+
+- 依赖 GSDK 3.0.0 版本及以上。
+
+
+## 文档
+
+进入 [/doc][doc]目录，执行如下编译命令生成 HTML 文档：
+
+```bash
+make html
+```
+编译后生成的HTML文档位于 */doc/build/html/index.html* 。
+
+## 示例
+
+示例代码位于 [/samples][samples] 目录中。
+
+## 测试
+
+请参阅 [/tests][tests]
+
+
+[python]: https://www.python.org/
+[pep249]: https://peps.python.org/pep-0249/
+[tests]: https://gitee.com/GBase8s/dev_gbaseDB/tree/master/tests
+[samples]: https://gitee.com/GBase8s/dev_gbaseDB/tree/master/samples
+[doc]: https://gitee.com/GBase8s/dev_gbaseDB/tree/master/doc
