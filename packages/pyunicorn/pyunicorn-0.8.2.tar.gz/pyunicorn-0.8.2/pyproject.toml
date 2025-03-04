@@ -1,0 +1,68 @@
+# This file is part of pyunicorn.
+# Copyright (C) 2008--2025 Jonathan F. Donges and pyunicorn authors
+# URL: <https://www.pik-potsdam.de/members/donges/software-2/software>
+# License: BSD (3-clause)
+
+# package ======================================================================
+
+[build-system]
+requires = [
+    "setuptools>=65",
+    "wheel",
+    "Cython>=3.0",
+    "numpy>=1.24"
+]
+build-backend = "setuptools.build_meta"
+
+# unit tests ===================================================================
+
+[tool.pytest.ini_options]
+minversion = 7.3
+addopts = "-v -r a -n auto"
+testpaths = ["tests"]
+python_files = ["test*.py", "Test*.py"]
+norecursedirs = [".git", ".cache", ".tox", ".ropeproject", "build"]
+filterwarnings = [
+    "ignore:datetime.datetime.utcfromtimestamp():DeprecationWarning:dateutil|tqdm",
+]
+
+[tool.coverage.run]
+parallel = true
+concurrency = ["multiprocessing"]
+source = ["src/pyunicorn"]
+
+# static analysis ==============================================================
+
+[tool.pylint.main]
+ignore = [
+    ".cache", "__pycache__", ".pytest_cache", ".tox", ".venv", ".ropeproject",
+    "build", "mpi.py"
+]
+ignore-patterns = ["navigator", "numerics"]
+persistent = false
+jobs = 0
+
+[tool.pylint."messages control"]
+disable = [
+    "duplicate-code", "invalid-name", "fixme",
+    "missing-docstring", "no-else-return",
+    "arguments-differ", "no-name-in-module"
+]
+
+[tool.pylint.format]
+max-line-length = 79
+max-module-lines = 6000
+
+[tool.pylint.refactoring]
+max-nested-blocks = 6
+
+[tool.pylint.design]
+max-args = 12
+max-locals = 95
+max-branches = 50
+max-statements = 230
+max-attributes = 23
+max-public-methods = 120
+
+[tool.pylint.reports]
+output-format = "colorized"
