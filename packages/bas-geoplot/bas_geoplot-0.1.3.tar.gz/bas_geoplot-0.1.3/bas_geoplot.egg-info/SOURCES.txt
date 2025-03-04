@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+bas_geoplot/__init__.py
+bas_geoplot/cli.py
+bas_geoplot/interactive.py
+bas_geoplot/utils.py
+bas_geoplot.egg-info/PKG-INFO
+bas_geoplot.egg-info/SOURCES.txt
+bas_geoplot.egg-info/dependency_links.txt
+bas_geoplot.egg-info/entry_points.txt
+bas_geoplot.egg-info/requires.txt
+bas_geoplot.egg-info/top_level.txt
+bas_geoplot/config/interactive.json

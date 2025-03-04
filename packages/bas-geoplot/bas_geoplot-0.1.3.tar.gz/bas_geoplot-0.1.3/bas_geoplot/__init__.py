@@ -1,0 +1,6 @@
+name = "bas_geoplot"
+__version__ = "0.1.3"
+__description__ = "GeoPlot: BAS AI Lab plotting scripts for internal plotting & visualisation"
+__license__ = "MIT"
+__author__ = "Autonomous Marine Operations Planning (AMOP) Team, AI Lab, British Antarctic Survey"
+__email__ = "amop@bas.ac.uk"
