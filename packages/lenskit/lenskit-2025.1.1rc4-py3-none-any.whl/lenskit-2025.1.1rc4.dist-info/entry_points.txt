@@ -1,0 +1,6 @@
+[console_scripts]
+lenskit = lenskit.cli:lenskit
+
+[lenskit.cli.plugins]
+lenskit-data = lenskit.cli.data:data
+lenskit-doctor = lenskit.cli.doctor:doctor
