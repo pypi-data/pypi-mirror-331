@@ -1,0 +1,2 @@
+[console_scripts]
+ollamawebui = ollamawebui:run_app
