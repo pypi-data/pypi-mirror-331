@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: AISuperServer
+Version: 0.1.5
+Summary: Es un experimento simple para crear una interfaz simple y rápida de server de Inferencia en Local
+Author-email: "Rivera.ai/Fredy Rivera" <riveraaai200678@gmail.com>
+Requires-Python: >=3.8
+Requires-Dist: flask
+Requires-Dist: flask-cors
+Requires-Dist: ollama
+Requires-Dist: psutil
+Requires-Dist: waitress
