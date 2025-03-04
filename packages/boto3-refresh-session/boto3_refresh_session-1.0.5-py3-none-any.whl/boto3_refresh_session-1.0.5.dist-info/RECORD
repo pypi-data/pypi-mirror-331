@@ -1,0 +1,6 @@
+boto3_refresh_session/__init__.py,sha256=fhdmmJvDMjsAMZIl9911pQ4yfIcEKrPsfMd5aPFhOfM,157
+boto3_refresh_session/session.py,sha256=rQHJDvOAz0glymYXQBfSt1keFvQAM_G8AQXgMDLZq2U,5349
+boto3_refresh_session-1.0.5.dist-info/LICENSE,sha256=I3ZYTXAjbIly6bm6J-TvFTuuHwTKws4h89QaY5c5HiY,1067
+boto3_refresh_session-1.0.5.dist-info/METADATA,sha256=SkOptv4Q18voBDOooLYjs7VW7Jgsby-6kY8SikHK08U,4395
+boto3_refresh_session-1.0.5.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+boto3_refresh_session-1.0.5.dist-info/RECORD,,
