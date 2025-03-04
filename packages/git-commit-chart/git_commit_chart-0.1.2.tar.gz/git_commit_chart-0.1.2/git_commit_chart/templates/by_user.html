@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Commits by User</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='theme.js') }}"></script>
+</head>
+<body>
+    <div class="theme-switch-wrapper">
+        <i class="fas fa-sun icon"></i>
+        <label class="theme-switch">
+            <input type="checkbox" id="theme-switch" onchange="toggleTheme()">
+            <span class="slider"></span>
+        </label>
+        <i class="fas fa-moon icon"></i>
+    </div>
+
+    <div class="container">
+        <h1>Git Commits by User</h1>
+        <div class="nav-links">
+            <a href="#" onclick="navigateToIndex(); return false;">View Total Commits</a>
+        </div>
+        <div class="form-container">
+            <input type="text" id="owner" placeholder="Repository Owner" value="{{ default_owner }}" required>
+            <input type="text" id="repo" placeholder="Repository Name" value="{{ default_repo }}" required>
+            <button onclick="fetchCommitsByUser()">Generate Chart</button>
+        </div>
+        <div class="chart-container">
+            <canvas id="commitChart"></canvas>
+        </div>
+    </div>
+
+    <script>
+        let chart = null;
+        let currentOwner = '{{ default_owner }}';
+        let currentRepo = '{{ default_repo }}';
+
+        // Initialize theme on page load
+        document.addEventListener('DOMContentLoaded', initTheme);
+
+        // Check URL parameters on load
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const owner = urlParams.get('owner');
+            const repo = urlParams.get('repo');
+            
+            if (owner && repo) {
+                document.getElementById('owner').value = owner;
+                document.getElementById('repo').value = repo;
+            }
+            // Always fetch commits on load
+            fetchCommitsByUser();
+        };
+
+        function navigateToIndex() {
+            const owner = document.getElementById('owner').value;
+            const repo = document.getElementById('repo').value;
+            if (owner && repo) {
+                window.location.href = `/?owner=${encodeURIComponent(owner)}&repo=${encodeURIComponent(repo)}`;
+            } else {
+                window.location.href = '/';
+            }
+        }
+
+        // Function to generate a random color with good contrast
+        function getRandomColor() {
+            const hue = Math.floor(Math.random() * 360);
+            const saturation = 70 + Math.random() * 10; // 70-80%
+            const lightness = 45 + Math.random() * 10; // 45-55%
+            return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+        }
+
+        async function fetchCommitsByUser() {
+            const owner = document.getElementById('owner').value;
+            const repo = document.getElementById('repo').value;
+
+            if (!owner || !repo) {
+                alert('Please enter both owner and repository name');
+                return;
+            }
+
+            currentOwner = owner;
+            currentRepo = repo;
+
+            try {
+                const response = await fetch('/get_commits_by_user', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ owner, repo })
+                });
+
+                const data = await response.json();
+
+                if (data.error) {
+                    alert('Error: ' + data.error);
+                    return;
+                }
+
+                createChart(data);
+                
+                // Update URL with current repository
+                const newUrl = `${window.location.pathname}?owner=${encodeURIComponent(owner)}&repo=${encodeURIComponent(repo)}`;
+                window.history.pushState({ path: newUrl }, '', newUrl);
+            } catch (error) {
+                alert('Error fetching commit data');
+                console.error('Error:', error);
+            }
+        }
+
+        function createChart(data) {
+            const ctx = document.getElementById('commitChart').getContext('2d');
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            const textColor = isDark ? '#e2e8f0' : '#2d3748';
+            const gridColor = isDark ? '#4a5568' : '#e2e8f0';
+            
+            if (chart) {
+                chart.destroy();
+            }
+
+            // Create datasets with random colors for each user
+            const datasets = data.datasets.map(dataset => ({
+                label: dataset.user,
+                data: dataset.commits,
+                backgroundColor: getRandomColor(),
+                borderColor: 'rgba(0, 0, 0, 0.1)',
+                borderWidth: 1
+            }));
+
+            chart = window.chart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: data.dates,
+                    datasets: datasets
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Commits by User (Last 30 Days)',
+                            color: textColor
+                        },
+                        legend: {
+                            display: true,
+                            position: 'top',
+                            labels: {
+                                usePointStyle: true,
+                                color: textColor,
+                                generateLabels: function(chart) {
+                                    const labels = Chart.defaults.plugins.legend.labels.generateLabels(chart);
+                                    labels.forEach(label => {
+                                        label.pointStyle = 'github';
+                                    });
+                                    return labels;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            stacked: true,
+                            grid: {
+                                color: gridColor
+                            },
+                            ticks: {
+                                color: textColor
+                            }
+                        },
+                        y: {
+                            stacked: true,
+                            beginAtZero: true,
+                            grid: {
+                                color: gridColor
+                            },
+                            ticks: {
+                                stepSize: 1,
+                                color: textColor
+                            }
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+
+    <style>
+        .nav-links {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        
+        .nav-links a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* GitHub logo style for legend */
+        .github {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background-image: url('data:image/svg+xml,<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path fill="%23000" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>');
+            background-repeat: no-repeat;
+            background-size: contain;
+            margin-right: 8px;
+            filter: var(--icon-filter);
+        }
+    </style>
+</body>
+</html> 
