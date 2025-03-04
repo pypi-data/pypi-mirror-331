@@ -1,0 +1,13 @@
+iotaa/__init__.py,sha256=KtTr2CNrAcHYLp0VFn5UrfSvMXR4jvlS8KpRxwvaOQ8,27209
+iotaa/demo.py,sha256=f-_uab2P7QbzhnXSCIEyy74LQYnPfhuYfSLz-Jp44Zw,3023
+iotaa/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+iotaa/pylint.py,sha256=goJ-5T1FwWMFHZp3YhsSemUvS53-all1LCI0DuAHQ9o,2222
+iotaa/resources/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+iotaa/resources/info.json,sha256=ckS_CZz6hlkYjVp0dNqKzcbFrxy-sCwmJxQm9KC_74c,44
+iotaa/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+iotaa/tests/test_iotaa.py,sha256=vBYGsrW_R3uf7Lhg3LYYGEdwE3hzTlgmffbXCF_Mfrs,26693
+iotaa-1.1.4.dist-info/METADATA,sha256=WesLd1n6zry4SJO-qcNR9nZ5-jKpVi9XjXKdCUKX8Hg,449
+iotaa-1.1.4.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+iotaa-1.1.4.dist-info/entry_points.txt,sha256=7aF41y1-KNzX5_sdAdduzyo7oD-QHyXsHjYTBhEJpKE,37
+iotaa-1.1.4.dist-info/top_level.txt,sha256=UwHT08GJHaAsxZGUqkQpWHqFCHaWfNw_4aAyAATeuPk,6
+iotaa-1.1.4.dist-info/RECORD,,
