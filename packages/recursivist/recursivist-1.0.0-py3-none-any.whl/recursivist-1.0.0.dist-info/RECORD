@@ -1,0 +1,12 @@
+recursivist/__init__.py,sha256=BvvQ9--pDSpw4Q5iPXObbQTZ1D4cLnoG3x6H7jjDu-Q,193
+recursivist/__main__.py,sha256=27eCRiFeaNbNNYk-7z3HZjaRzYlGKfBcf_13rqOQltQ,213
+recursivist/cli.py,sha256=2ohOZm6pGmXJ1vQMQVggzYIfPXzy6Slac271VRL9660,26474
+recursivist/compare.py,sha256=yjglNqM4FcBMWpbhr4Cjb5Q-2IRkJ9PRqBDQTruy4u4,26974
+recursivist/core.py,sha256=C2dO-CffnRxxKZHiLmPzbAMkhmb5Nl7x7b8S3kJVntg,19357
+recursivist/exports.py,sha256=6aj2z-GkEeZN8ypEHAxgNIhIwdA9UdbdKGmN3ri1TCg,13797
+recursivist/jsx_export.py,sha256=LnHcAayOddyUS7GALs7dOe7y-qEw86X3_OSrmngMd6U,7566
+recursivist-1.0.0.dist-info/METADATA,sha256=vgUecZ3tgz4YQJ41YyqfmEmoQ8pZPwT-t57lFSFElac,17734
+recursivist-1.0.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+recursivist-1.0.0.dist-info/entry_points.txt,sha256=G7abycmqBAI-ITNzaWYcZpTqyWZhpVEjsEcMQdemlxQ,53
+recursivist-1.0.0.dist-info/licenses/LICENSE,sha256=P0hma1EBHJyMvCtOy65sW9Nmo-_7il7JEUMQNDYYchA,1101
+recursivist-1.0.0.dist-info/RECORD,,
