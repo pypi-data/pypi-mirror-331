@@ -1,0 +1,12 @@
+__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+detection_moving_mnist/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+detection_moving_mnist/mmnist/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+detection_moving_mnist/mmnist/mmnist.py,sha256=TWaRY9a_OgGMDq2ZtvGyaMViDmvTIxV8saoqFQ3Ive4,14610
+detection_moving_mnist/mmnist/trajectory.py,sha256=GWp37dN6qZegrQyYXGnqobNnbKXM8Uh7Hknr3zh6ukE,7657
+detection_moving_mnist/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+detection_moving_mnist/utils/utils.py,sha256=Y6H9HBLYbOv_z7jGljBz69adqUJSuRkac7HRW-yGToI,1052
+detection_moving_mnist-0.0.0.dist-info/LICENSE,sha256=3OVjyJXCbCyo2FzeDzKatxEIoxDXVBaxD5qp7NB_Exo,11340
+detection_moving_mnist-0.0.0.dist-info/METADATA,sha256=MiBt75T3FkCOCQhdYTE6Azc9i6N778jpxMrP_cGGLI4,4350
+detection_moving_mnist-0.0.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+detection_moving_mnist-0.0.0.dist-info/top_level.txt,sha256=5Y9d5gQBHaDvSTfT14pbMC5mQPBOj8-W7SKSqsktGvI,32
+detection_moving_mnist-0.0.0.dist-info/RECORD,,
