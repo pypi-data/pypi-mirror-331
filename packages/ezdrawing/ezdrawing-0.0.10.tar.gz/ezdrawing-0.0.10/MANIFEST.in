@@ -1,0 +1,7 @@
+exclude test.py
+exclude README.md
+exclude LICENCE
+exclude build/*
+exclude dist/*
+exclude ezdrawing.egg-info/*
+exclude buildCommands.txt

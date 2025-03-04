@@ -1,0 +1,5 @@
+LICENCE
+MANIFEST.in
+ezdrawingpg.py
+ezdrawingtk.py
+setup.py
