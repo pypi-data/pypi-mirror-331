@@ -1,0 +1,9 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "rusrul_lib"
+version = "1.1"
+description = "Adds a revolver class for playing russian roulette with python."
+readme = "README.md"
+keywords = ["silly", "random", "russian roulette", "русская рулетка"]

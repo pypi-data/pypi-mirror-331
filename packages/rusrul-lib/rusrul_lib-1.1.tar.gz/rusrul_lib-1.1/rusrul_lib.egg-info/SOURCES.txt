@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+rusrul_lib/__init__.py
+rusrul_lib/main.py
+rusrul_lib.egg-info/PKG-INFO
+rusrul_lib.egg-info/SOURCES.txt
+rusrul_lib.egg-info/dependency_links.txt
+rusrul_lib.egg-info/top_level.txt
