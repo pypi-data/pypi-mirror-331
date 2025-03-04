@@ -1,0 +1,10 @@
+grok3api/chat_completion.py,sha256=HA0swLkvdm3CGmPaw6xD0OiI70cu1nvUz3-chDFETQs,20856
+grok3api/client.py,sha256=CKK9_VbOiGruCTImexh6kkWMVxv12dPS_EETDG4BvOc,3649
+grok3api/grok3api_logger.py,sha256=6cs0Obsv_h9xBsJ20ab0QOxLKIR97gSvrSS5PyGBhzo,345
+grok3api/types/GeneratedImage.py,sha256=_t6EZ_JgOoEHcXjz4uLbTOCuRZxDtVRvQURY5-0rCZo,3100
+grok3api/types/GrokResponse.py,sha256=2Hgw4f-jjJpg8phz1OBM13OjIWRbx7Q6F2WwRqv4DgU,3640
+grok3api-0.0.1a10.dist-info/LICENSE,sha256=rOJkgX5jZ7tqIRUAj0OZJQpSDQlxw6iZ8CH6EbRGsto,1086
+grok3api-0.0.1a10.dist-info/METADATA,sha256=ZIWIWRmZ8Y4eabFOvLbJpB_fVqGoBtmlP4R-xiboFko,9081
+grok3api-0.0.1a10.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+grok3api-0.0.1a10.dist-info/top_level.txt,sha256=T_aiOGJ9qme5ei7tGzA9vl_7Ul5EnXGl7iH1YyDheiY,9
+grok3api-0.0.1a10.dist-info/RECORD,,
