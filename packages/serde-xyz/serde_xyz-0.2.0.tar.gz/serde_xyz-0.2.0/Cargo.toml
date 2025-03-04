@@ -1,0 +1,13 @@
+[package]
+name = "serde_xyz"
+version = "0.2.0"
+edition = "2024"
+
+[dependencies]
+serde = { version = "1.0.218", features = ["derive"] }
+pyo3 = { version = "0.23.4", features = ["extension-module"] }
+serde_json = "1.0.140"
+
+[lib]
+name = "serde_xyz"
+crate-type = ["cdylib"]
