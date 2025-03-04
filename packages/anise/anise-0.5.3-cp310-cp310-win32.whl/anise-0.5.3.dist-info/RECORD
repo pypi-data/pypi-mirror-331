@@ -1,0 +1,7 @@
+anise-0.5.3.dist-info/METADATA,sha256=GawIertefWPAiguu-de9_2PQKhU_GskoitqNXSNLyY0,7757
+anise-0.5.3.dist-info/WHEEL,sha256=llpIZtG9qmirq2FnzUf9nTaYmiIYjze0Nurl8yEaJ8M,92
+anise/__init__.py,sha256=fxCM8U0C0Arf9lTTNySPgdYsVN94D95GuBje4ASb8J8,103
+anise/__init__.pyi,sha256=YP3C1Io2OZKfu-kg7ok3tZoB8UeMX3NiGx62Kti8RGw,105130
+anise/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+anise/anise.cp310-win32.pyd,sha256=5RAYHDecgJ4sa8IXpALg2dAwjgSmS50sS7UIjIuSUlw,7269376
+anise-0.5.3.dist-info/RECORD,,
