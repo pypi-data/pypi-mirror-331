@@ -1,0 +1,21 @@
+[project]
+name = "python_boiler_controller"
+version = "0.5.0"
+description = "A sample cli app to control boiler state."
+authors = [
+    {name = "BarathVikraman-Sol-CBE",email = "barath.deivasigamani@solitontech.com"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+]
+packages=[{include="python_boiler_controller"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+inquirerpy = "^0.3"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
