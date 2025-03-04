@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+langrs/__init__.py
+langrs/common.py
+langrs/core.py
+langrs/outlier_detection.py
+langrs.egg-info/PKG-INFO
+langrs.egg-info/SOURCES.txt
+langrs.egg-info/dependency_links.txt
+langrs.egg-info/requires.txt
+langrs.egg-info/top_level.txt
