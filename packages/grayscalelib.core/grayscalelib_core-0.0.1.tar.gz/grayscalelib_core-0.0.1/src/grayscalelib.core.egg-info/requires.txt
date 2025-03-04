@@ -1,0 +1,12 @@
+numpy
+
+[dev]
+black
+isort
+ruff
+pre-commit
+
+[test]
+coverage
+pytest
+pytest-cov

@@ -1,0 +1,70 @@
+[project]
+name = "grayscalelib.core"
+version = "0.0.1"
+description = "A protocol for manipulating grayscale data."
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "GPL-3.0-or-later"}
+authors = [
+    { name = "Marco Heisig" },
+]
+keywords = ["grayscale", "video", "image", "pixel"]
+dependencies = ["numpy"]
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "isort",
+    "ruff",
+    "pre-commit",
+]
+test = [
+    "coverage",
+    "pytest",
+    "pytest-cov",
+]
+
+[build-system]
+requires = ["setuptools>=75.6"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.black]
+line-length = 98
+target-version = ['py311']
+include = '\.pyi?$'
+
+[tool.isort]
+atomic = true
+profile = "black"
+line_length = 98
+skip_gitignore = true
+known_first_party = ["grayscalelib"]
+
+[tool.ruff]
+line-length = 98
+select = [
+    "F",  # pyflakes
+    "E",  # pycodestyle
+    "B",  # bugbear
+]
+src = ["src"]
+target-version = "py311"
+ignore = [
+    "B008", # function calls in argument defaults
+    "E741", # variables named I, O, or l
+]
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "src"
+]
+
+[tool.pyright]
+include = ["src"]
+exclude = [".venv"]
+venv = ".venv"
+venvPath = "."
+pythonVersion = "3.11"
