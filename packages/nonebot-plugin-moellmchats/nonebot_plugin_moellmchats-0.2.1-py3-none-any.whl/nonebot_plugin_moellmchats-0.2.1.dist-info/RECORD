@@ -1,0 +1,13 @@
+nonebot_plugin_moellmchats/Categorize.py,sha256=jMV2fDJPoGJ7CJkxSrA31Y5Y0rkbdSrwus2hwt8S9fw,2844
+nonebot_plugin_moellmchats/Config.py,sha256=JwmP4yEo0VJDoqJcWVRg8ch5aUrFSU09-9DOItkZmVg,1177
+nonebot_plugin_moellmchats/MessagesHandler.py,sha256=gPUJ337PceVWTgEJa3XtaoZo7g5ygaA09KfjUc5DXpo,3036
+nonebot_plugin_moellmchats/ModelSelector.py,sha256=l6Mdc0XxA7tNN90-bZHnqCaAl0t8kGt8COfxq0IL010,5181
+nonebot_plugin_moellmchats/Search.py,sha256=zPqkgwU2bY1NX27Qsqqlknc7oe5ijSgpXdcrTsNAAts,921
+nonebot_plugin_moellmchats/TemperamentManager.py,sha256=tfwS59Yskm8ViS5_WGRVxD-kTPeEPxBEL7BNjrpzkuE,3292
+nonebot_plugin_moellmchats/__init__.py,sha256=20JsqCBTvj9YyRMRnoYgkadxFzDmN-JCU7fkLy9Lzco,8252
+nonebot_plugin_moellmchats/moe_llm.py,sha256=Q1H_S2lFJqdDqzeLyvfqW0Qd5y99HazoipyUG-5EnNA,7309
+nonebot_plugin_moellmchats/utils.py,sha256=6AXal6TNii3utSopVUzTAkyTA0ZV_KuxyvuNFcBq_2Q,2483
+nonebot_plugin_moellmchats-0.2.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+nonebot_plugin_moellmchats-0.2.1.dist-info/METADATA,sha256=3QMoW6-MhRnLvoA_p8tyq6-P7_56t_VQKwPfkRAN5kw,10256
+nonebot_plugin_moellmchats-0.2.1.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+nonebot_plugin_moellmchats-0.2.1.dist-info/RECORD,,
