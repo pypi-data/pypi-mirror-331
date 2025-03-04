@@ -1,0 +1,7 @@
+setup.py
+szn-sasanka/__init__.py
+szn_sasanka.egg-info/PKG-INFO
+szn_sasanka.egg-info/SOURCES.txt
+szn_sasanka.egg-info/dependency_links.txt
+szn_sasanka.egg-info/entry_points.txt
+szn_sasanka.egg-info/top_level.txt

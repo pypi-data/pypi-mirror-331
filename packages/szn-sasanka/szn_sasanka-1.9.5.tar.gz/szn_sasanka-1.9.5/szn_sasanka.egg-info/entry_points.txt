@@ -1,0 +1,2 @@
+[console_scripts]
+szn_sasanka = szn_sasanka.__init__:main
