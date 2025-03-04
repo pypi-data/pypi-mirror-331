@@ -1,0 +1,43 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+dynamic = ["version"]
+name = "dnscli"
+description = "一个用于管理多云DNS记录的命令行工具"
+authors = [{name = "liwanggui", email = "liwanggui@163.com"}]
+readme = "README.md"
+requires-python = ">=3.6"
+license = {text = "MIT"}
+dependencies = [
+    "click>=8.0.0",
+    "PyYAML>=6.0",
+    "prettytable>=3.14.0",
+    "aliyun-python-sdk-core>=2.13.36",
+    "aliyun-python-sdk-alidns>=2.6.42",
+    "tencentcloud-sdk-python>=3.0.0"
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Internet :: Name Service (DNS)",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+]
+keywords = ["dns", "dnscli", "aliyun", "tencent", "dnspod"]
+
+[project.urls]
+"Homepage" = "https://github.com/liwanggui/dnscli"
+"Bug Reports" = "https://github.com/liwanggui/dnscli/issues"
+"Source" = "https://github.com/liwanggui/dnscli"
+
+[project.scripts]
+dnscli = "dnscli:cli"
+
+[tool.hatch.version]
+path = "dnscli/version.py"
