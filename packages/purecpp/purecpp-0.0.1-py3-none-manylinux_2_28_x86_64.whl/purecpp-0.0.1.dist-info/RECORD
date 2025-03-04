@@ -1,0 +1,11 @@
+purecpp/RagPUREAI_chuncks_clean.cpython-311-x86_64-linux-gnu.so,sha256=K3ii8bkfOMnbnlOgFKfXuaECjOkSkFMWOD5YrzMGnh0,51292289
+purecpp/RagPUREAI_embed.cpython-311-x86_64-linux-gnu.so,sha256=PeDNqU8IJyeE-MFBeb06cSutwCTM9Uj64miOtNKvb_Y,14207873
+purecpp/RagPUREAI_extract.cpython-311-x86_64-linux-gnu.so,sha256=BfWVn6vd0dZbnm2xdGWTJkYGZO-iRhnFoyZynC-UDiU,25698777
+purecpp/RagPUREAI_libs.cpython-311-x86_64-linux-gnu.so,sha256=AVARP95wjGeoVYGlCyTOBDU3z0yE_R-ZCSq8Xto3l-g,3078169
+purecpp/RagPUREAI_meta.cpython-311-x86_64-linux-gnu.so,sha256=CDS31X03aqjCXcizYVU26CkNaT-_GSxHimHHnGjC9dg,42245825
+purecpp/__init__.py,sha256=-NkptCJS4ZdiqvKCjcIchypdxBRHCbDiSfITZjlK65Q,4516
+purecpp.libs/libgomp-25c89faf.so.1.0.0,sha256=ER-tX8X98Xk3FxWrn1zUcJcih7Rgjyg3YIFvdS3M1U8,253289
+purecpp-0.0.1.dist-info/METADATA,sha256=W0cF6fE272-BQL5yJ5qwLaM14BIjcMuoiaMSq8kRzKE,574
+purecpp-0.0.1.dist-info/WHEEL,sha256=QPKtPB2VqMouuBz0Dxfil1fXyDK0aqPtiT7O-cTtOrM,132
+purecpp-0.0.1.dist-info/top_level.txt,sha256=qHlioHpJArH9GfRCfT7XDDnh8aMxphdL2J_18sV9uSU,8
+purecpp-0.0.1.dist-info/RECORD,,
