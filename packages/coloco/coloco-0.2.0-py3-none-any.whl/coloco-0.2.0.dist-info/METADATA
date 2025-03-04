@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: coloco
+Version: 0.2.0
+Summary: A kit for creating FastAPI + Svelte applications
+Author-Email: Channel Cat <channelcat@gmail.com>
+License: MIT
+Requires-Python: >=3.11
+Requires-Dist: aerich[toml]==0.8.1
+Requires-Dist: fastapi==0.115.0
+Requires-Dist: PyJWT==2.10.1
+Requires-Dist: tortoise-orm[asyncpg]==0.24.0
+Requires-Dist: typer==0.15.2
+Requires-Dist: uvicorn==0.31.0
+Description-Content-Type: text/markdown
+
+# Coloco
+
+A kit for creating full-stack apps with co-located code, built on FastAPI and Svelte.  Bundle your front-end and back-end code and easily tie them together with codegen.
+
+Example:
+
+`hello/api.py`
+```python
+from coloco import api
+
+@api
+def test(name: str) -> str:
+    return f"Hello {name}!"
+
+```
+
+`hello/index.svelte`
+```svelte
+<script lang="ts">
+  import { test } from "./api";
+
+  const response = test({ query: { name: "Coloco" } });
+</script>
+
+{#if $response.loading}
+    Loading...
+{:else}
+    The server says {$response.data}
+{/if}
+```
+
+Serves the page `myapp.com/hello`, which calls `myapp.com/hello/test?name=Coloco` and prints the message `Hello Coloco!`
+
+# Opinions
+
+This framework is opinionated and combines the following excellent tools:
+ * FastAPI
+ * Svelte
+ * openapi-ts (codegen)
+ * svelte5-router (file-based routing)
+ * tortoise-orm (optional)
+
+# Plans
+ * Deploy tools
+ * ORM Support
+ * SQLite/Postgres support
+
+# Dreams
+ * Move `node_modules` into `+node`
+ * Remove the need for `query`, `params`, `body` for simple REST requests (maybe use legacy client but support the new one?)
