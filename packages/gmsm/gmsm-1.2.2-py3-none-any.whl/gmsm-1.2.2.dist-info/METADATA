@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: gmsm
+Version: 1.2.2
+Summary: A dependency library for GM, SM, and AES encryption, supporting CBC and ECB modes.
+Home-page: 
+Author: Jimmy Huang
+Author-email: huang1832910@163.com
+Keywords: gmsm
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+
+# GMSM: Cryptographic Library  
+
+GMSM provides essential cryptographic functionalities, including:  
+
+## SM2 - Chinese National Elliptic Curve Cryptography  
+A secure elliptic curve algorithm for encryption, digital signatures, and key exchange.  
+
+## SM3 - Chinese National Hash Algorithm  
+A high-security hash function designed for data integrity and authentication.  
+
+## SM4 - Chinese National Block Cipher  
+A symmetric encryption algorithm optimized for secure communication.  
+
+## Additional Encryption Support  
+**MD5** - A widely used hashing algorithm for checksums and digital signatures.  
+**AES (CBC/ECB)** - Advanced Encryption Standard with Cipher Block Chaining (CBC) and Electronic Codebook (ECB) modes.  
