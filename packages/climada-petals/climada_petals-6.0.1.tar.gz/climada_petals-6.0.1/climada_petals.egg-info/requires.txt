@@ -1,0 +1,9 @@
+boario
+climada>=6.0
+cdsapi
+osm-flex
+pymrio
+rioxarray
+ruamel.yaml
+scikit-image
+xesmf
