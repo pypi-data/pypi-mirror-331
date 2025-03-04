@@ -1,0 +1,27 @@
+Metadata-Version: 2.2
+Name: odoobeast
+Version: 0.1.0
+Summary: OdooBeast: The ultimate AI-powered personal assistant library
+Home-page: https://github.com/MaybeHellobro/odoobeast
+Author: Atharva Chourasia
+Author-email: harvestwithhellobro@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Requires-Dist: numpy>=1.21.0
+Requires-Dist: scikit-learn>=1.0.0
+Requires-Dist: nltk>=3.6.0
+Requires-Dist: transformers>=4.6.0
+Requires-Dist: torch>=1.9.0
+Requires-Dist: tensorflow>=2.5.0
+Requires-Dist: spacy>=3.1.0
+Requires-Dist: flask>=2.0.1
+Requires-Dist: loguru>=0.5.3
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
