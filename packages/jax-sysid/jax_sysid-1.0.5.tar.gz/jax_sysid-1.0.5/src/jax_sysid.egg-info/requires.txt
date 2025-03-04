@@ -1,0 +1,9 @@
+numpy
+scipy
+jax<=0.4.31
+jaxopt
+tqdm
+matplotlib
+joblib
+equinox<=0.11.10
+diffrax<=0.6.1
