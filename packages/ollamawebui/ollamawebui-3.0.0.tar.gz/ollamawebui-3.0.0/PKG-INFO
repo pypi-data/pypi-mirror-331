@@ -1,0 +1,38 @@
+Metadata-Version: 2.2
+Name: ollamawebui
+Version: 3.0.0
+Summary: OllamaWebUI-A Simple Flask WebUI, You Can Chat With Ollama On Web|Flask聊天界面，可以自定义设置Ollama Api（python学霸公众号）
+Author: Python学霸
+Author-email: python@xueba.com
+Description-Content-Type: text/markdown
+Requires-Dist: Flask
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: summary
+
+
+# 安装
+
+ ``` bush
+ pip install ollamawebui
+ ``` 
+
+## 使用
+
+ollamawebui 
+
+**在浏览器中访问:**
+    打开您的 Web 浏览器并访问 http://127.0.0.1:5200
+
+
+## 依赖项
+*   Flask
+*   requests
+*   beautifulsoup4
+
+**喜欢，关注Python学霸公众号**
