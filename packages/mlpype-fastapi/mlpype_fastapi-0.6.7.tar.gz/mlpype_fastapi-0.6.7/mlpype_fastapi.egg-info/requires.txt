@@ -1,0 +1,12 @@
+mlpype-base==0.6.7
+fastapi>=0.86.0
+anyio<4
+typing-extensions>=4.8.0
+
+[dev]
+uvicorn==0.18.2
+
+[strict]
+fastapi==0.86.0
+anyio<4
+typing-extensions==4.8.0
