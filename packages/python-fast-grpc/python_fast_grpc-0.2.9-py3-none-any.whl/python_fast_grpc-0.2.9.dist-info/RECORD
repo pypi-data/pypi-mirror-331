@@ -1,0 +1,14 @@
+fast_grpc/.DS_Store,sha256=Ama99liLabV0oNDUSmf-0shGlVnELSikejJcpPdrTZk,6148
+fast_grpc/__init__.py,sha256=yfkCGtQENC95rgVKP62THfICzTAmSLdkuUu3LSA2pE4,238
+fast_grpc/app.py,sha256=yNXZYabnuRUNfsi-svL3cBcR2k3FJAUWBqeibXbHQz0,7388
+fast_grpc/context.py,sha256=0rbXtdXt6bXL4KbW9070d17v5dpDYdwap0XMeNBEQ0k,1589
+fast_grpc/middleware.py,sha256=y4_nu7g_IiJ1NLKn8lzQ6bmrqA-UkdlrDTIK8udN658,1397
+fast_grpc/proto.py,sha256=-dUqJgsYCLQJfXU3cz3fieKMlz4kh0URZdGPO0-sD-4,15168
+fast_grpc/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fast_grpc/service.py,sha256=qn45CCbZU4f4BZN7QxF2e7u-UD8C8mvPHh20HS8uCQM,13921
+fast_grpc/types.py,sha256=YXdp6Pz8rvAhlvaYmRfLVBsioZd3_FE7fq3MKFvcg8M,906
+fast_grpc/utils.py,sha256=ilUBpSEmWBfOD83Vs0LqrpW01AhoONqiPMsI_FTPQmQ,7595
+python_fast_grpc-0.2.9.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+python_fast_grpc-0.2.9.dist-info/METADATA,sha256=5D08phnAt4A99GUu3smU5sfVBTe81T_KScBEVBRSO3A,1781
+python_fast_grpc-0.2.9.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+python_fast_grpc-0.2.9.dist-info/RECORD,,
