@@ -1,0 +1,2 @@
+[console_scripts]
+postfiat-wallet = postfiat_wallet.cli:main
