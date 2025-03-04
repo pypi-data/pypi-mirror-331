@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "speech_tool"
+version = "0.0.8"
+description = ""
+authors = ["C. Thomas Brittain <cthomasbrittain@hotmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+soundfile = "^0.13.1"
+fastapi = {extras = ["standard"], version = "^0.115.8"}
+pyyaml = "^6.0.2"
+sounddevice = "^0.5.1"
+kokoro-onnx = "^0.4.0"
+poethepoet = "^0.32.2"
+
+[tool.poetry.group.dev.dependencies]
+black = "^25.1.0"
+sphinx = "^8.1.3"
+myst-parser = "^4.0.1"
+sphinx-autobuild = "^2024.10.3"
+furo = "^2024.8.6"
+sphinx-autoapi = "^3.5.0"
+sphinx-autodoc2 = "^0.5.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poe.tasks]
+docs         = "sphinx-build docs/source docs/build/html" # a simple command task
+docs_view    = "sphinx-autobuild docs/source docs/build/html" # a simple command task
+patch        = "poetry version patch" # a simple command task
+_publish      = "poetry publish --build" # a simple command task
+release = ["docs", "patch", "_publish"] # a task that depends on other tasks
