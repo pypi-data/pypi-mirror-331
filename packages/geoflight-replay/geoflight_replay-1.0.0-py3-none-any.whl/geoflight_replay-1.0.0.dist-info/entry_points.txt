@@ -1,0 +1,2 @@
+[console_scripts]
+geoflight_replay = geoflight_replay.cli:main
