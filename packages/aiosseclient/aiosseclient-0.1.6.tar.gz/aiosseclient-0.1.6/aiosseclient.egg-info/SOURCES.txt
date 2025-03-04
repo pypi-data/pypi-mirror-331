@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+aiosseclient.py
+pyproject.toml
+setup.cfg
+setup.py
+aiosseclient.egg-info/PKG-INFO
+aiosseclient.egg-info/SOURCES.txt
+aiosseclient.egg-info/dependency_links.txt
+aiosseclient.egg-info/requires.txt
+aiosseclient.egg-info/top_level.txt
