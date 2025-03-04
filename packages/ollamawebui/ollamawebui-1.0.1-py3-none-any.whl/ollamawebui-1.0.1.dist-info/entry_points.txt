@@ -1,0 +1,2 @@
+[console_scripts]
+start = ollamawebui:run_app
