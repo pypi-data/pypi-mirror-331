@@ -1,0 +1,16 @@
+feature_flags/__init__.py,sha256=xeBDhY1qDB6geWj4HVILPwqV4lTat22NvDDMun79OyQ,521
+feature_flags/v1/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+feature_flags/v1/interfaces/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+feature_flags/v1/interfaces/istatefulresourcerepository.py,sha256=gHlVOmhnUqVSsyxUDBnW5utCrhebfbj1cuiNh_vtjPI,490
+feature_flags/v1/repositories/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+feature_flags/v1/repositories/basic_feature_repository.py,sha256=f7NJMwZ_DcnQeQ4DyUJra79XJVPyJCf6qUXZNoUWVnk,1428
+feature_flags/v1/services/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+feature_flags/v1/services/feature_flag_service.py,sha256=nZDh1vAY5Bfl48AdrHgZVVn4AcPoa5vnVNLK9b5J0M8,1045
+feature_flags/v1/strategies/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+feature_flags/v1/strategies/using_basic_flat_file.py,sha256=OMXS-D25fKqYPCtGEdZd0Y9H_f1vKKBN4rSz-Gd13yA,2090
+feature_flags/v1/utilities/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+feature_flags/v1/utilities/find_feature_yaml.py,sha256=oRx--lLe1_BoaLnrZimlusxpLMVswN05H0RJUfHYBxs,1500
+basicfeatureflags-1.0.0.277.dist-info/METADATA,sha256=fAh6DSjQboNLFGvwj9CTmVQw_ZZXIJlYcxRA3ypEIcw,379
+basicfeatureflags-1.0.0.277.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+basicfeatureflags-1.0.0.277.dist-info/top_level.txt,sha256=VJ_09LYdPSIHqpC9ymzIOkTBQXRgHDDcsOYMJsG1Dmg,14
+basicfeatureflags-1.0.0.277.dist-info/RECORD,,

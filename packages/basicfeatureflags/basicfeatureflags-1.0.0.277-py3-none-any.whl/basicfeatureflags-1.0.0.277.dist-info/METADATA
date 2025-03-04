@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: basicfeatureflags
+Version: 1.0.0.277
+Summary: Basic Implementation of Feature Flags in Python
+Home-page: UNKNOWN
+Author: Albert Willett Jr
+Author-email: albert.willett2@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: PyYAML (==6.0.2)
+
+UNKNOWN
+
