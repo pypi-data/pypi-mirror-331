@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+bowser/__init__.py
+bowser/bowser tests.py
+bowser/browser.py
+bowser.egg-info/PKG-INFO
+bowser.egg-info/SOURCES.txt
+bowser.egg-info/dependency_links.txt
+bowser.egg-info/requires.txt
+bowser.egg-info/top_level.txt
