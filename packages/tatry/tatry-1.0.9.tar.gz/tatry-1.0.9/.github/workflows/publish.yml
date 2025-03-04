@@ -1,0 +1,78 @@
+name: Publish to PyPI
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  test-pypi:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        repository: tatryai/tatry
+        fetch-depth: 0
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.x"
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install build twine
+
+    - name: Build package
+      run: python -m build
+
+    - name: Check distribution
+      run: twine check dist/*
+
+    - name: Test Build Version
+      run: |
+        pip install dist/*.whl
+        PACKAGE_VERSION=$(python -c "from tatry import __version__; print(__version__)")
+        TAG_VERSION=${GITHUB_REF#refs/tags/v}
+        echo "Package version: $PACKAGE_VERSION"
+        echo "Tag version: $TAG_VERSION"
+        if [ "$PACKAGE_VERSION" != "$TAG_VERSION" ]; then
+          echo "::error::Package version ($PACKAGE_VERSION) does not match tag version ($TAG_VERSION)"
+          exit 1
+        fi
+
+    - name: Publish to Test PyPI
+      uses: pypa/gh-action-pypi-publish@release/v1
+      with:
+        repository-url: https://test.pypi.org/legacy/
+        skip-existing: true
+
+  pypi:
+    needs: test-pypi
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        repository: tatryai/tatry
+        fetch-depth: 0
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.x"
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install build
+
+    - name: Build package
+      run: python -m build
+
+    - name: Publish to PyPI
+      uses: pypa/gh-action-pypi-publish@release/v1
