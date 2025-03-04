@@ -1,0 +1,6 @@
+changesets_win32_x64/__init__.py,sha256=5_5fTk-l2lOnVWXC1aoeC1tIYZxtHN2r_Bd4aXpTCcc,142
+changesets_win32_x64/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+changesets_win32_x64/bin/changelog.exe,sha256=ybQrbYj8OcAqGIkKoBY4Ph64GPpoUU1_ebtoMiX7Wgo,15946240
+changesets_win32_x64-0.4.0.dist-info/METADATA,sha256=IcEPWPU1qX_oyYyiH1zZJ18EXPfM84pVJWglbaMiPoU,7069
+changesets_win32_x64-0.4.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+changesets_win32_x64-0.4.0.dist-info/RECORD,,
