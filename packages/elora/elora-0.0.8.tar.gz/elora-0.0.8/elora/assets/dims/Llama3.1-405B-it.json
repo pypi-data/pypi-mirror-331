@@ -1,0 +1,1 @@
+{"num_layers": 126, "dims": {"q_proj": 32768, "k_proj": 17408, "v_proj": 17408, "o_proj": 32768, "gate_proj": 69632, "up_proj": 69632, "down_proj": 69632}}
