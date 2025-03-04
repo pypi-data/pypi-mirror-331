@@ -1,0 +1,12 @@
+diffraxtra/__init__.py,sha256=m8zIJVnRyU47LSdEcqHUDU5nYrHD1qJYIz30POvQYPE,422
+diffraxtra/_version.py,sha256=qEW4HoWHYDkBguijNs9nZzHd38qlKSeRTDG2QQbYrGY,511
+diffraxtra/_version.pyi,sha256=o7uNL6MhuJoiqpEnriU7rBT6TmkJZA-i2qMoNz9YcgQ,82
+diffraxtra/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+diffraxtra/_src/__init__.py,sha256=NgwGN3KusooWtukkUZSNcLEMan9XAL6FG7EvN6gDpW8,363
+diffraxtra/_src/diffeq.py,sha256=lyC3IG1JRGYsJtgIWQWwbDBFJyVjFnF96-KMxojV_Qo,4565
+diffraxtra/_src/diffeq_abc.py,sha256=vqSw0kcGxQZ0VdP2yaPgI7j26cZN2DFpbkxbhB1wAps,9514
+diffraxtra/_src/interp.py,sha256=bIeSNWIF3qlxK_0jzV42djUcaN0LDLmMLhLkC_LpCSM,15788
+diffraxtra-1.5.0.dist-info/METADATA,sha256=hzFY2URsnq3phN3_5RsEJmGTy8vVyPaCW-hl8nwyoYQ,13517
+diffraxtra-1.5.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+diffraxtra-1.5.0.dist-info/licenses/LICENSE,sha256=ZGyWUYfbcM3ad2EqV6tSTBV55tHRGXbG3Ft8TyO_AtQ,1058
+diffraxtra-1.5.0.dist-info/RECORD,,
