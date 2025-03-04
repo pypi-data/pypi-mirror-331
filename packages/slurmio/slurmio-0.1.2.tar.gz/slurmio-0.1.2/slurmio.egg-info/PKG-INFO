@@ -1,0 +1,85 @@
+Metadata-Version: 2.2
+Name: slurmio
+Version: 0.1.2
+Summary: Python tools to read SLURM job parameters
+Author-email: Adam Tyson <code@adamltyson.com>
+License: MIT
+Project-URL: Homepage, https://github.com/neuroinformatics-unit/slurmio
+Project-URL: Bug Tracker, https://github.com/neuroinformatics-unit/slurmio/issues
+Project-URL: Documentation, https://github.com/neuroinformatics-unit/slurmio
+Project-URL: Source Code, https://github.com/neuroinformatics-unit/slurmio
+Project-URL: User Support, https://neuroinformatics.zulipchat.com/#narrow/stream/416291-slurmio
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: coverage; extra == "dev"
+Requires-Dist: tox; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: pre-commit; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: setuptools_scm; extra == "dev"
+
+[![Python Version](https://img.shields.io/pypi/pyversions/slurmio.svg)](https://pypi.org/project/slurmio)
+[![PyPI](https://img.shields.io/pypi/v/slurmio.svg)](https://pypi.org/project/slurmio)
+[![Downloads](https://pepy.tech/badge/slurmio)](https://pepy.tech/project/slurmio)
+[![Development Status](https://img.shields.io/pypi/status/slurmio.svg)](https://github.com/neuroinformatics-unit/slurmio)
+[![Tests](https://img.shields.io/github/workflow/status/neuroinformatics-unit/slurmio/tests)](https://github.com/neuroinformatics-unit/slurmio/actions)
+[![codecov](https://codecov.io/gh/neuroinformatics-unit/slurmio/graph/badge.svg?token=utApXQgGMa)](https://codecov.io/gh/neuroinformatics-unit/slurmio)
+
+# slurmio
+Python tools to read [SLURM](https://slurm.schedmd.com/documentation.html) job
+parameters.
+
+### Installation
+Pip
+```bash
+pip install slurmio
+```
+
+Conda
+```bash
+conda install -c conda-forge slurmio
+```
+
+From source:
+```bash
+git clone https://github.com/neuroinformatics-unit/slurmio
+cd slurmio
+pip install .
+```
+
+
+### Usage
+```bash
+>>> from slurmio import SlurmJobParameters
+>>> slurm_parameters = SlurmJobParameters()
+>>> slurm_parameters.job_id
+994986
+>>> slurm_parameters.job_name
+'bash'
+>>> slurm_parameters.partition
+'cpu'
+>>> slurm_parameters.requested_cores
+10
+>>> slurm_parameters.allocated_cores
+10
+>>> slurm_parameters.requested_nodes
+10
+>>> slurm_parameters.allocated_nodes
+10
+>>> slurm_parameters.requested_memory
+10240 # in bytes
+>>> slurm_parameters.allocated_memory
+10240 # in bytes

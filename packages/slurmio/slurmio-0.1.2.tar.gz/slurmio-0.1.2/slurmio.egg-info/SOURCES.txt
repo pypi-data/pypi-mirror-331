@@ -1,0 +1,13 @@
+.gitignore
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+.github/workflows/test_and_deploy.yml
+slurmio/__init__.py
+slurmio/slurmio.py
+slurmio.egg-info/PKG-INFO
+slurmio.egg-info/SOURCES.txt
+slurmio.egg-info/dependency_links.txt
+slurmio.egg-info/requires.txt
+slurmio.egg-info/top_level.txt
