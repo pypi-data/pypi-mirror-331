@@ -1,0 +1,22 @@
+class {{ vars.ext|class_header }}:
+    def init_app_callback_rdm_models(self, app):
+        rdm_model_config = {
+            "model_service": "{{ vars.service.class }}",
+            "service_config": "{{ vars.service_config.class }}",
+            "ui_resource_config": "ui.{{ vars.module.qualified }}.{{vars.module.prefix}}UIResourceConfig",
+            "api_resource_config": "{{ vars.resource_config.class }}",
+        }
+
+        app.config.setdefault('GLOBAL_SEARCH_MODELS', [])
+        for cfg in app.config['GLOBAL_SEARCH_MODELS']:
+            if cfg['model_service'] == rdm_model_config['model_service']:
+                break
+        else:
+            app.config['GLOBAL_SEARCH_MODELS'].append(rdm_model_config)
+
+        app.config.setdefault('RDM_MODELS', [])
+        for cfg in app.config['RDM_MODELS']:
+            if cfg['model_service'] == rdm_model_config['model_service']:
+                break
+        else:
+            app.config['RDM_MODELS'].append(rdm_model_config)
