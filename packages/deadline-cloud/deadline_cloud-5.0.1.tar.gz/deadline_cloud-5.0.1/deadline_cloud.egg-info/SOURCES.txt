@@ -1,0 +1,6 @@
+README.md
+setup.py
+deadline_cloud.egg-info/PKG-INFO
+deadline_cloud.egg-info/SOURCES.txt
+deadline_cloud.egg-info/dependency_links.txt
+deadline_cloud.egg-info/top_level.txt
