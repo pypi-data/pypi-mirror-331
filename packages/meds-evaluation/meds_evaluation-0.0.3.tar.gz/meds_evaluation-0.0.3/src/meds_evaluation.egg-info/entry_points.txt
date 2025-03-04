@@ -1,0 +1,2 @@
+[console_scripts]
+meds-evaluation-cli = meds_evaluation.__main__:main

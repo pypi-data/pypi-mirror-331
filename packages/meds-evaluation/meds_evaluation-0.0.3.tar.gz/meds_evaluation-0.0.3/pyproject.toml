@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=64", "setuptools-scm>=8.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "meds-evaluation"
+dynamic = ["version"]
+authors = [
+    { name = "Kamilė Stankevičiūtė", email = "kamile.stankeviciute@cst.cam.ac.uk" },
+    { name = "Vincent Jeanselme", email = "vincent.jeanselme@mrc-bsu.cam.ac.uk" },
+    { name = "Matthew McDermott", email = "mattmcdermott8@gmail.com" },
+]
+description = "A module for evaluating the predictions of the models trained on MEDS datasets."
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "polars>=1.5.0",
+    "pyarrow",
+    "numpy",
+    "scikit-learn",
+    "hydra-core",
+    "loguru",
+]
+
+[tool.setuptools_scm]
+
+[tool.pytest.ini_options]
+addopts = [
+  "--color=yes",
+  "--doctest-modules",
+  "--ignore=docs",
+]
+
+[project.optional-dependencies]
+dev = ["pre-commit<4"]
+tests = ["pytest", "pytest-cov"]
+
+[project.scripts]
+meds-evaluation-cli = "meds_evaluation.__main__:main"
+
+[project.urls]
+Homepage = "https://github.com/kamilest/meds-evaluation"
+Issues = "https://github.com/kamilest/meds-evaluation/issues"

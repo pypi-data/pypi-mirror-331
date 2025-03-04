@@ -1,0 +1,13 @@
+polars>=1.5.0
+pyarrow
+numpy
+scikit-learn
+hydra-core
+loguru
+
+[dev]
+pre-commit<4
+
+[tests]
+pytest
+pytest-cov
