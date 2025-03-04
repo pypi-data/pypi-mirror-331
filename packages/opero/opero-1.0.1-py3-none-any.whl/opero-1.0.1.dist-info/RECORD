@@ -1,0 +1,15 @@
+opero/__init__.py,sha256=U-VbcwH4fb5xZpqT7mHeLSzaVwdarTaTaD8YorD0910,1116
+opero/__version__.py,sha256=2Cl9kcQGg7NiH_eHRcv8wDYSW0X4uS5J0mGdZFO9-h0,511
+opero/_version.py,sha256=9BAxHjFzy-uWY2uzrwFwARGIdO2mwQR6eZTSR-NGhLU,130
+opero/concurrency.py,sha256=aQxeY0bWdWyMoFfol0gqGWF3qAvZnKSX85CtiV2FDNc,10114
+opero/core.py,sha256=k4ouiLRy6uc9JX6Vx9Fj7-0TyhrdM2owww_gTKhgG6w,9728
+opero/decorators.py,sha256=l9MzikdDxcTUByXU68A_GNaBGGWy9h5a6P9lXxxRWFc,3151
+opero/exceptions.py,sha256=p-gKRvzZ8yccLoO3j7LPheKkKKeT3HroZocZs27_7L0,563
+opero/opero.py,sha256=rj7VwBlAEiaiuzPwc0JkkVoO6teEB8Gv_IIF1PCJbMQ,1599
+opero/rate_limit.py,sha256=ubu8_MpiA5rLoflOXFwqW48hJoOVaH_t8BrBZCO_Ch8,4088
+opero/retry.py,sha256=WljG89H4OjZGZqcQnzjTDG8x0NpddDqIShuOMxnWuXc,8008
+opero/utils.py,sha256=8zARfDd5doS7iPF8-d4InaDh6qGCsZLtPSnRUeBFBtI,1983
+opero-1.0.1.dist-info/METADATA,sha256=MoQA3TU5568163QDuTMCkqbSYeeLd7J6jg6XyhjhCnk,12960
+opero-1.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+opero-1.0.1.dist-info/licenses/LICENSE,sha256=ZMAJpSuarzr23IJGvncVH1ouB-SWSySQTQtSc3Pmrsg,1070
+opero-1.0.1.dist-info/RECORD,,
