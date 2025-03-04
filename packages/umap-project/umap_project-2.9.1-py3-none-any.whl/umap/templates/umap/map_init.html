@@ -1,0 +1,13 @@
+{% load umap_tags static %}
+
+{% include "umap/messages.html" %}
+<div id="map">
+</div>
+<!-- djlint:off -->
+<script defer type="module">
+    {% autoescape off %}
+    import Umap from '{% static "umap/js/modules/umap.js" %}'
+    {% endautoescape %}
+    U.MAP = new Umap("map", {{ map_settings|notag|safe }})
+</script>
+<!-- djlint:on -->
