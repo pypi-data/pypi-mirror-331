@@ -1,0 +1,12 @@
+Metadata-Version: 2.2
+Name: fuzzy-controller
+Version: 0.1.1
+Summary: A simple fuzzy logic controller for speed and acceleration
+Home-page: https://github.com/prem-dharshan/fuzzy-controller
+Author: Prem Dharshan
+Author-email: DPD <whizzkid.dpd@gmail.com>
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Dynamic: author
+Dynamic: home-page
