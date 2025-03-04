@@ -1,0 +1,617 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Converted .py to HTML</title>
+        <style>pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.hll { background-color: #ffffcc }
+.c { color: #3D7B7B; font-style: italic } /* Comment */
+.err { border: 1px solid #FF0000 } /* Error */
+.k { color: #008000; font-weight: bold } /* Keyword */
+.o { color: #666666 } /* Operator */
+.ch { color: #3D7B7B; font-style: italic } /* Comment.Hashbang */
+.cm { color: #3D7B7B; font-style: italic } /* Comment.Multiline */
+.cp { color: #9C6500 } /* Comment.Preproc */
+.cpf { color: #3D7B7B; font-style: italic } /* Comment.PreprocFile */
+.c1 { color: #3D7B7B; font-style: italic } /* Comment.Single */
+.cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
+.gd { color: #A00000 } /* Generic.Deleted */
+.ge { font-style: italic } /* Generic.Emph */
+.ges { font-weight: bold; font-style: italic } /* Generic.EmphStrong */
+.gr { color: #E40000 } /* Generic.Error */
+.gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.gi { color: #008400 } /* Generic.Inserted */
+.go { color: #717171 } /* Generic.Output */
+.gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.gs { font-weight: bold } /* Generic.Strong */
+.gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.gt { color: #0044DD } /* Generic.Traceback */
+.kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.kp { color: #008000 } /* Keyword.Pseudo */
+.kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.kt { color: #B00040 } /* Keyword.Type */
+.m { color: #666666 } /* Literal.Number */
+.s { color: #BA2121 } /* Literal.String */
+.na { color: #687822 } /* Name.Attribute */
+.nb { color: #008000 } /* Name.Builtin */
+.nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.no { color: #880000 } /* Name.Constant */
+.nd { color: #AA22FF } /* Name.Decorator */
+.ni { color: #717171; font-weight: bold } /* Name.Entity */
+.ne { color: #CB3F38; font-weight: bold } /* Name.Exception */
+.nf { color: #0000FF } /* Name.Function */
+.nl { color: #767600 } /* Name.Label */
+.nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.nt { color: #008000; font-weight: bold } /* Name.Tag */
+.nv { color: #19177C } /* Name.Variable */
+.ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.w { color: #bbbbbb } /* Text.Whitespace */
+.mb { color: #666666 } /* Literal.Number.Bin */
+.mf { color: #666666 } /* Literal.Number.Float */
+.mh { color: #666666 } /* Literal.Number.Hex */
+.mi { color: #666666 } /* Literal.Number.Integer */
+.mo { color: #666666 } /* Literal.Number.Oct */
+.sa { color: #BA2121 } /* Literal.String.Affix */
+.sb { color: #BA2121 } /* Literal.String.Backtick */
+.sc { color: #BA2121 } /* Literal.String.Char */
+.dl { color: #BA2121 } /* Literal.String.Delimiter */
+.sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.s2 { color: #BA2121 } /* Literal.String.Double */
+.se { color: #AA5D1F; font-weight: bold } /* Literal.String.Escape */
+.sh { color: #BA2121 } /* Literal.String.Heredoc */
+.si { color: #A45A77; font-weight: bold } /* Literal.String.Interpol */
+.sx { color: #008000 } /* Literal.String.Other */
+.sr { color: #A45A77 } /* Literal.String.Regex */
+.s1 { color: #BA2121 } /* Literal.String.Single */
+.ss { color: #19177C } /* Literal.String.Symbol */
+.bp { color: #008000 } /* Name.Builtin.Pseudo */
+.fm { color: #0000FF } /* Name.Function.Magic */
+.vc { color: #19177C } /* Name.Variable.Class */
+.vg { color: #19177C } /* Name.Variable.Global */
+.vi { color: #19177C } /* Name.Variable.Instance */
+.vm { color: #19177C } /* Name.Variable.Magic */
+.il { color: #666666 } /* Literal.Number.Integer.Long */</style>
+    </head>
+    <body>
+        <div><?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.20.1: https://docutils.sourceforge.io/" />
+<title>&lt;string&gt;</title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 8954 2022-01-20 10:10:25Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See https://docutils.sourceforge.io/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+.subscript {
+  vertical-align: sub;
+  font-size: smaller }
+
+.superscript {
+  vertical-align: super;
+  font-size: smaller }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title, .code .error {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left, table.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right, table.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table.align-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+.align-top    {
+  vertical-align: top }
+
+.align-middle {
+  vertical-align: middle }
+
+.align-bottom {
+  vertical-align: bottom }
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math, pre.code {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+pre.code .ln { color: grey; } /* line numbers */
+pre.code, code { background-color: #eeeeee }
+pre.code .comment, code .comment { color: #5C6576 }
+pre.code .keyword, code .keyword { color: #3B0D06; font-weight: bold }
+pre.code .literal.string, code .literal.string { color: #0C5404 }
+pre.code .name.builtin, code .name.builtin { color: #352B84 }
+pre.code .deleted, code .deleted { background-color: #DEB0A1}
+pre.code .inserted, code .inserted { background-color: #A3D289}
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+/* "booktabs" style (no vertical lines) */
+table.docutils.booktabs {
+  border: 0px;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-collapse: collapse;
+}
+table.docutils.booktabs * {
+  border: 0px;
+}
+table.docutils.booktabs th {
+  border-bottom: thin solid;
+  text-align: left;
+}
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document">
+
+
+<p>&quot;&quot;&quot;
+Interval Data
+=============</p>
+<p>This example adds a second dimension.  The second dimension is an interval, of the form interval_from, interval_to.
+It is also known as binned data, where each 'bin' is bounded between and upper and lower limit.</p>
+<p>An interval is relevant in geology, when analysing drill hole data.</p>
+<p>Intervals are also encountered in metallurgy, but in that discipline they are often called fractions,
+e.g. size fractions.  In that case the typical nomenclature is size_retained, size passing, since the data
+originates from a sieve stack.</p>
+<p>&quot;&quot;&quot;
+import logging</p>
+<p>import pandas as pd
+import plotly.io
+from matplotlib import pyplot as plt</p>
+<p>from elphick.geomet import Sample, IntervalSample
+from elphick.geomet.data.downloader import Downloader
+from elphick.geomet.utils.pandas import weight_average
+import plotly.graph_objects as go</p>
+<p># %%
+logging.basicConfig(level=logging.INFO,</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">&lt;string&gt;</tt>, line 28)</p>
+Unexpected indentation.</div>
+<blockquote>
+format='%(asctime)s %(levelname)s %(module)s - %(funcName)s: %(message)s',
+datefmt='%Y-%m-%dT%H:%M:%S%z',
+)</blockquote>
+<p># %%
+#
+# Create a MassComposition object
+# -------------------------------
+#
+# We get some demo data in the form of a pandas DataFrame
+# We create this object as 1D based on the pandas index</p>
+<p>iron_ore_sample_data: pd.DataFrame = Downloader().load_data(datafile='iron_ore_sample_A072391.zip', show_report=False)
+df_data: pd.DataFrame = iron_ore_sample_data
+df_data.head()</p>
+<p># %%</p>
+<p>obj_mc: Sample = Sample(df_data, name='Drill program')
+obj_mc</p>
+<p># %%</p>
+<p>obj_mc.aggregate</p>
+<p># %%
+#
+# Use the normal pandas groupby-apply as needed.  Here we leverage the weight_average function
+# from utils.pandas</p>
+<p>hole_average: pd.DataFrame = obj_mc.data.groupby('DHID').apply(weight_average)
+hole_average</p>
+<p># %%
+#
+# We will now make a 2D dataset using DHID and the intervals.
+df_data['DHID'] = df_data['DHID'].astype('category')
+df_data = df_data.reset_index(drop=True).set_index(['DHID', 'interval_from', 'interval_to'])</p>
+<p>obj_mc_2d: IntervalSample = IntervalSample(df_data, name='Drill program')
+print(obj_mc_2d)</p>
+<p># %%
+obj_mc_2d.aggregate</p>
+<p># %%
+obj_mc_2d.data.groupby('DHID').apply(weight_average, <a href="#system-message-1"><span class="problematic" id="problematic-1">**</span></a>{'mass_wet': 'mass_wet', 'moisture_column_name': 'H2O'})</p>
+<div class="system-message" id="system-message-1">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">&lt;string&gt;</tt>, line 73); <em><a href="#problematic-1">backlink</a></em></p>
+Inline strong start-string without end-string.</div>
+<p># %%
+#
+# View some plots
+#</p>
+<p>fig: go.Figure = obj_mc_2d.plot_parallel(color='DHID')
+plotly.io.show(fig)</p>
+<p># %%
+obj_mc_2d.query('DHID==&quot;CBS02&quot;').reset_index('DHID').plot_intervals(variables=['mass_dry', 'Fe', 'SiO2', 'Al2O3'],</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">&lt;string&gt;</tt>, line 86)</p>
+Unexpected indentation.</div>
+<blockquote>
+cumulative=False)</blockquote>
+</div>
+</body>
+</html>
+</div>
+        <pre><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Interval Data</span>
+<span class="sd">=============</span>
+
+<span class="sd">This example adds a second dimension.  The second dimension is an interval, of the form interval_from, interval_to.</span>
+<span class="sd">It is also known as binned data, where each &#39;bin&#39; is bounded between and upper and lower limit.</span>
+
+<span class="sd">An interval is relevant in geology, when analysing drill hole data.</span>
+
+<span class="sd">Intervals are also encountered in metallurgy, but in that discipline they are often called fractions,</span>
+<span class="sd">e.g. size fractions.  In that case the typical nomenclature is size_retained, size passing, since the data</span>
+<span class="sd">originates from a sieve stack.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">plotly.io</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+
+<span class="kn">from</span> <span class="nn">elphick.geomet</span> <span class="kn">import</span> <span class="n">Sample</span><span class="p">,</span> <span class="n">IntervalSample</span>
+<span class="kn">from</span> <span class="nn">elphick.geomet.data.downloader</span> <span class="kn">import</span> <span class="n">Downloader</span>
+<span class="kn">from</span> <span class="nn">elphick.geomet.utils.pandas</span> <span class="kn">import</span> <span class="n">weight_average</span>
+<span class="kn">import</span> <span class="nn">plotly.graph_objects</span> <span class="k">as</span> <span class="nn">go</span>
+
+<span class="c1"># %%</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">,</span>
+                    <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%(asctime)s</span><span class="s1"> </span><span class="si">%(levelname)s</span><span class="s1"> </span><span class="si">%(module)s</span><span class="s1"> - </span><span class="si">%(funcName)s</span><span class="s1">: </span><span class="si">%(message)s</span><span class="s1">&#39;</span><span class="p">,</span>
+                    <span class="n">datefmt</span><span class="o">=</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">T%H:%M:%S%z&#39;</span><span class="p">,</span>
+                    <span class="p">)</span>
+
+<span class="c1"># %%</span>
+<span class="c1">#</span>
+<span class="c1"># Create a MassComposition object</span>
+<span class="c1"># -------------------------------</span>
+<span class="c1">#</span>
+<span class="c1"># We get some demo data in the form of a pandas DataFrame</span>
+<span class="c1"># We create this object as 1D based on the pandas index</span>
+
+<span class="n">iron_ore_sample_data</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span> <span class="o">=</span> <span class="n">Downloader</span><span class="p">()</span><span class="o">.</span><span class="n">load_data</span><span class="p">(</span><span class="n">datafile</span><span class="o">=</span><span class="s1">&#39;iron_ore_sample_A072391.zip&#39;</span><span class="p">,</span> <span class="n">show_report</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">df_data</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span> <span class="o">=</span> <span class="n">iron_ore_sample_data</span>
+<span class="n">df_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+
+<span class="c1"># %%</span>
+
+<span class="n">obj_mc</span><span class="p">:</span> <span class="n">Sample</span> <span class="o">=</span> <span class="n">Sample</span><span class="p">(</span><span class="n">df_data</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Drill program&#39;</span><span class="p">)</span>
+<span class="n">obj_mc</span>
+
+<span class="c1"># %%</span>
+
+<span class="n">obj_mc</span><span class="o">.</span><span class="n">aggregate</span>
+
+<span class="c1"># %%</span>
+<span class="c1">#</span>
+<span class="c1"># Use the normal pandas groupby-apply as needed.  Here we leverage the weight_average function</span>
+<span class="c1"># from utils.pandas</span>
+
+<span class="n">hole_average</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span> <span class="o">=</span> <span class="n">obj_mc</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;DHID&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">weight_average</span><span class="p">)</span>
+<span class="n">hole_average</span>
+
+<span class="c1"># %%</span>
+<span class="c1">#</span>
+<span class="c1"># We will now make a 2D dataset using DHID and the intervals.</span>
+<span class="n">df_data</span><span class="p">[</span><span class="s1">&#39;DHID&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_data</span><span class="p">[</span><span class="s1">&#39;DHID&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;category&#39;</span><span class="p">)</span>
+<span class="n">df_data</span> <span class="o">=</span> <span class="n">df_data</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="s1">&#39;DHID&#39;</span><span class="p">,</span> <span class="s1">&#39;interval_from&#39;</span><span class="p">,</span> <span class="s1">&#39;interval_to&#39;</span><span class="p">])</span>
+
+<span class="n">obj_mc_2d</span><span class="p">:</span> <span class="n">IntervalSample</span> <span class="o">=</span> <span class="n">IntervalSample</span><span class="p">(</span><span class="n">df_data</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Drill program&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">obj_mc_2d</span><span class="p">)</span>
+
+<span class="c1"># %%</span>
+<span class="n">obj_mc_2d</span><span class="o">.</span><span class="n">aggregate</span>
+
+<span class="c1"># %%</span>
+<span class="n">obj_mc_2d</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;DHID&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">weight_average</span><span class="p">,</span> <span class="o">**</span><span class="p">{</span><span class="s1">&#39;mass_wet&#39;</span><span class="p">:</span> <span class="s1">&#39;mass_wet&#39;</span><span class="p">,</span> <span class="s1">&#39;moisture_column_name&#39;</span><span class="p">:</span> <span class="s1">&#39;H2O&#39;</span><span class="p">})</span>
+
+<span class="c1"># %%</span>
+<span class="c1">#</span>
+<span class="c1"># View some plots</span>
+<span class="c1">#</span>
+
+<span class="n">fig</span><span class="p">:</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span> <span class="o">=</span> <span class="n">obj_mc_2d</span><span class="o">.</span><span class="n">plot_parallel</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;DHID&#39;</span><span class="p">)</span>
+<span class="n">plotly</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+
+<span class="c1"># %%</span>
+<span class="n">obj_mc_2d</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;DHID==&quot;CBS02&quot;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="s1">&#39;DHID&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">plot_intervals</span><span class="p">(</span><span class="n">variables</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;mass_dry&#39;</span><span class="p">,</span> <span class="s1">&#39;Fe&#39;</span><span class="p">,</span> <span class="s1">&#39;SiO2&#39;</span><span class="p">,</span> <span class="s1">&#39;Al2O3&#39;</span><span class="p">],</span>
+                                                                    <span class="n">cumulative</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</pre>
+    </body>
+    </html>
+    
