@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "root-binance-api-1.2025.2.28"
+version = "1.2025.2.28"
+description = "API for querying binance backend"
+readme = {file = "README.txt", content-type = "text/markdown"}
+license = {file = "LICENSE"}
+dependencies = [
+  "binance",
+]
+
+authors = [
+  {name = "Daniel Lando"},
+]

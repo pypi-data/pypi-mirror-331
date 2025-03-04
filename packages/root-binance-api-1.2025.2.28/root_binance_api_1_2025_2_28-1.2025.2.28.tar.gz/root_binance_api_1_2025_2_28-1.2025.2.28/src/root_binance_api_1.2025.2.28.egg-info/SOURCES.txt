@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+src/root_binance_api_1.2025.2.28.egg-info/PKG-INFO
+src/root_binance_api_1.2025.2.28.egg-info/SOURCES.txt
+src/root_binance_api_1.2025.2.28.egg-info/dependency_links.txt
+src/root_binance_api_1.2025.2.28.egg-info/requires.txt
+src/root_binance_api_1.2025.2.28.egg-info/top_level.txt
