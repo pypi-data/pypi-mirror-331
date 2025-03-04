@@ -1,0 +1,3 @@
+[fedora.messages]
+discourse.event.v1=discourse2fedmsg_messages:DiscourseMessageV1
+

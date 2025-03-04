@@ -1,0 +1,27 @@
+Metadata-Version: 2.3
+Name: discourse2fedmsg-messages
+Version: 1.1.0
+Summary: A schema package for messages sent by discourse2fedmsg
+License: GPL-3.0-or-later
+Keywords: fedora
+Author: Fedora Infrastructure Team
+Author-email: infrastructure@lists.fedoraproject.org
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: fedora-messaging (>=2.0.1)
+Project-URL: Homepage, https://github.com/fedora-infra/discourse2fedmsg-messages
+Project-URL: Repository, https://github.com/fedora-infra/discourse2fedmsg-messages
+Description-Content-Type: text/markdown
+
+# discourse2fedmsg messages
+
+A schema package for [discourse2fedmsg](http://github.com/fedora-infra/discourse2fedmsg).
+
+See the [detailed documentation](https://fedora-messaging.readthedocs.io/en/latest/messages.html) on packaging your schemas.
+
