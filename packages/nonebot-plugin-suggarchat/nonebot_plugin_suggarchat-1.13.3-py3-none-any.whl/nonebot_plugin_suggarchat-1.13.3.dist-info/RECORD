@@ -1,0 +1,14 @@
+nonebot_plugin_suggarchat-1.13.3.dist-info/METADATA,sha256=U4Pvjdvg3PnozYhrgRCJQG_qxBuIVnxM90I-QaGg28c,14671
+nonebot_plugin_suggarchat-1.13.3.dist-info/WHEEL,sha256=thaaA2w1JzcGC48WYufAs8nrYZjJm8LqNfnXFOFyCC4,90
+nonebot_plugin_suggarchat-1.13.3.dist-info/entry_points.txt,sha256=6OYgBcLyFCUgeqLgnvMyOJxPCWzgy7se4rLPKtNonMs,34
+nonebot_plugin_suggarchat-1.13.3.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+nonebot_plugin_suggarchat/API.py,sha256=ZW2SZZK5sN_qenN2x0KvCr65p0X67DmwRGHBcQ0WZm0,4180
+nonebot_plugin_suggarchat/__init__.py,sha256=a2hGnRqYDwz6DFuhHtsE0WYO5d-7ds7rcJD8Sygy5XE,724
+nonebot_plugin_suggarchat/conf.py,sha256=WYNXvRLR0iQfFUnfMlCBAYdwd_hrS3KySLYr2YBUAoc,1857
+nonebot_plugin_suggarchat/event.py,sha256=-gPLaR9IE5qrylRPPmcvfW0GKlG53NXPmwpQ6uWZCSQ,12412
+nonebot_plugin_suggarchat/exception.py,sha256=YhQNVXuYNQJOh0p8grpi0sDFHZMWylXONyv1bbGCgZQ,130
+nonebot_plugin_suggarchat/matcher.py,sha256=Z8SW08HNj4LZ-kjCB2_WI5v1u2pc6psqM5dn1_JJj40,8157
+nonebot_plugin_suggarchat/on_event.py,sha256=sHTgDFTmX3XMISaSdulw-oRW2xYIwYx3LFaEcPxnyvc,384
+nonebot_plugin_suggarchat/resources.py,sha256=CsroGcCYBwwRe5AEuiNahyxQ_i9KJ2S_H2E2ePKFS_I,22692
+nonebot_plugin_suggarchat/suggar.py,sha256=KqOk4ZExg1p-zjMv6DR9cU6ld8245lwwE6od4uc-wPM,62688
+nonebot_plugin_suggarchat-1.13.3.dist-info/RECORD,,
