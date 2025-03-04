@@ -1,0 +1,3 @@
+[console_scripts]
+site-scout = site_scout.main:main
+url-collection = site_scout.url_collection:main
