@@ -1,0 +1,92 @@
+description: test description
+cross_validation_type: <class 'sklearn.model_selection._search.GridSearchCV'>
+higher_score_is_better: true
+number_of_splits: 3
+score_names:
+- roc_auc
+parameter_names:
+- model__max_features
+- model__n_estimators
+- preparation__non_numeric_pipeline__encoder_chooser__transformer
+test_score_averages:
+  roc_auc:
+  - 0.7053210051130954
+  - 0.7009919354087835
+  - 0.7315742039460401
+  - 0.725827941573415
+  - 0.7172893577542624
+  - 0.705352666593457
+  - 0.7468785765163838
+  - 0.7447818280808485
+test_score_standard_deviations:
+  roc_auc:
+  - 0.018781568421315727
+  - 0.01137698083638955
+  - 0.01646438617323482
+  - 0.010675095300441985
+  - 0.015740207327694582
+  - 0.018421060103165368
+  - 0.020821625539795562
+  - 0.0027751249309435925
+trials:
+- model__max_features: 100
+  model__n_estimators: 10
+  preparation__non_numeric_pipeline__encoder_chooser__transformer: OneHotEncoder()
+- model__max_features: 100
+  model__n_estimators: 10
+  preparation__non_numeric_pipeline__encoder_chooser__transformer: CustomOrdinalEncoder()
+- model__max_features: 100
+  model__n_estimators: 50
+  preparation__non_numeric_pipeline__encoder_chooser__transformer: OneHotEncoder()
+- model__max_features: 100
+  model__n_estimators: 50
+  preparation__non_numeric_pipeline__encoder_chooser__transformer: CustomOrdinalEncoder()
+- model__max_features: sqrt
+  model__n_estimators: 10
+  preparation__non_numeric_pipeline__encoder_chooser__transformer: OneHotEncoder()
+- model__max_features: sqrt
+  model__n_estimators: 10
+  preparation__non_numeric_pipeline__encoder_chooser__transformer: CustomOrdinalEncoder()
+- model__max_features: sqrt
+  model__n_estimators: 50
+  preparation__non_numeric_pipeline__encoder_chooser__transformer: OneHotEncoder()
+- model__max_features: sqrt
+  model__n_estimators: 50
+  preparation__non_numeric_pipeline__encoder_chooser__transformer: CustomOrdinalEncoder()
+timings:
+  fit time averages:
+  - 0.018800973892211914
+  - 0.017049153645833332
+  - 0.07540527979532878
+  - 0.06085387865702311
+  - 0.009915431340535482
+  - 0.011853694915771484
+  - 0.03218833605448405
+  - 0.03490710258483887
+  fit time standard deviations:
+  - 0.00026857342336332864
+  - 0.00013205639483698025
+  - 0.000673070085889946
+  - 0.00020321994993104388
+  - 0.00022625578408830039
+  - 6.226423414083584e-05
+  - 7.090894371937396e-05
+  - 0.00047707091006224297
+  score time averages:
+  - 0.002783616383870443
+  - 0.0040128231048583984
+  - 0.004141648610432942
+  - 0.005506753921508789
+  - 0.002565304438273112
+  - 0.0039520263671875
+  - 0.004028797149658203
+  - 0.0055844783782958984
+  score time standard deviations:
+  - 0.00016202085732751472
+  - 5.581269792067799e-05
+  - 0.00028001862605596547
+  - 0.00012200991681234939
+  - 6.480815581599908e-06
+  - 1.1116545893549697e-05
+  - 8.161603452384525e-05
+  - 9.090659998494054e-05

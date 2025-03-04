@@ -1,0 +1,63 @@
+description: test description
+cross_validation_type: <class 'sklearn.model_selection._search.GridSearchCV'>
+higher_score_is_better: false
+number_of_splits: 3
+score_names:
+- neg_root_mean_squared_error
+parameter_names:
+- model__max_features
+- model__n_estimators
+test_score_averages:
+  neg_root_mean_squared_error:
+  - 56941.12041274917
+  - 53429.20451485544
+  - 56941.12041274917
+  - 53429.20451485544
+test_score_standard_deviations:
+  neg_root_mean_squared_error:
+  - 419.28835357482484
+  - 449.50624922469456
+  - 419.28835357482484
+  - 449.50624922469456
+train_score_averages:
+  neg_root_mean_squared_error:
+  - 24757.51417272673
+  - 20412.311312204587
+  - 24757.51417272673
+  - 20412.311312204587
+train_score_standard_deviations:
+  neg_root_mean_squared_error:
+  - 380.99929520269825
+  - 142.75931607858598
+  - 380.99929520269825
+  - 142.75931607858598
+trials:
+- model__max_features: 2
+  model__n_estimators: 10
+- model__max_features: 2
+  model__n_estimators: 50
+- model__max_features: sqrt
+  model__n_estimators: 10
+- model__max_features: sqrt
+  model__n_estimators: 50
+timings:
+  fit time averages:
+  - 0.11827357610066731
+  - 0.5918979644775391
+  - 0.11978554725646973
+  - 0.5871642430623373
+  fit time standard deviations:
+  - 0.0026346160356173183
+  - 0.007616014811028382
+  - 0.0016915076979482325
+  - 0.007419145707947114
+  score time averages:
+  - 0.00812379519144694
+  - 0.039839744567871094
+  - 0.008680582046508789
+  - 0.038548946380615234
+  score time standard deviations:
+  - 0.0003109283186906228
+  - 0.0003631095913315045
+  - 0.0011133443597756527
+  - 0.0001475178552749918
