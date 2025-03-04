@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+xero_mcp/__init__.py
+xero_mcp/app.py
+xero_mcp/auth_success.html
+xero_mcp/cli.py
+xero_mcp.egg-info/PKG-INFO
+xero_mcp.egg-info/SOURCES.txt
+xero_mcp.egg-info/dependency_links.txt
+xero_mcp.egg-info/entry_points.txt
+xero_mcp.egg-info/requires.txt
+xero_mcp.egg-info/top_level.txt
