@@ -1,0 +1,11 @@
+pytokei_new-1.0.5.dist-info/METADATA,sha256=ciiSTnTObsPgx3lL_BLzioDtwoev-Srqwo6A6k5RlR4,6271
+pytokei_new-1.0.5.dist-info/WHEEL,sha256=Z1HFrZPC9jRQIivfTAE-itjYBUf4Nxg3EsgOzhECnQU,94
+pytokei_new-1.0.5.dist-info/entry_points.txt,sha256=setKzHl5-i4eb1huN5kO46v6b26tIKuabZ8MLZYP9O8,46
+pytokei_new-1.0.5.dist-info/licenses/LICENSE,sha256=mGz9_16oR-h7Ycunj44CeYl-V5mDx3b6XAU5CuXY9nA,1082
+pytokei_new/cli.py,sha256=1zFmskacHYV6bZdNC7PukoqMIjpl76umM6Cr4fgBqcM,3946
+pytokei_new/data/ignore/.ignorerules.txt,sha256=PzKjxt8iowdZbZYc22iPJ7MvM6KfYpGf2tAYQ_BdJAo,27
+pytokei_new/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytokei_new/_pytokei.pyi,sha256=PmRAVi6DwBsdZlkFQwwX42zRwiw2WEM4rQCQszmxPQ4,17028
+pytokei_new/__init__.py,sha256=hKrLZyfcIYl01AnRRfMspsVQCCRRK0sLv5bRen9yFMQ,848
+pytokei_new/_pytokei.pyd,sha256=9t2slvAt9CsqaMioWN7VoLAQKVMHmHvY02emFT3jTPk,2999296
+pytokei_new-1.0.5.dist-info/RECORD,,
