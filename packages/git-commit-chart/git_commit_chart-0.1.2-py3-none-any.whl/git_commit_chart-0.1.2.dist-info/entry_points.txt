@@ -1,0 +1,2 @@
+[console_scripts]
+git-commit-chart = git_commit_chart.app:main
