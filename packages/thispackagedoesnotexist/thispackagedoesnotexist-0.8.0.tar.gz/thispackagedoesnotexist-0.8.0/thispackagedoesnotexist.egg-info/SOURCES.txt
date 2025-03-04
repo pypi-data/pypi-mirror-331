@@ -1,0 +1,10 @@
+MANIFEST.in
+setup.py
+thispackagedoesnotexist/__init__.py
+thispackagedoesnotexist/connection.py
+thispackagedoesnotexist.egg-info/PKG-INFO
+thispackagedoesnotexist.egg-info/SOURCES.txt
+thispackagedoesnotexist.egg-info/dependency_links.txt
+thispackagedoesnotexist.egg-info/requires.txt
+thispackagedoesnotexist.egg-info/top_level.txt
+thispackagedoesnotexist/plugins/proxy/reverse.exe
