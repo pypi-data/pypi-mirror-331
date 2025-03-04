@@ -1,0 +1,11 @@
+doctestcase/__init__.py,sha256=rBM1mAl-NotSt8ScBs9bGklIM1LDeK8ErRittCPyalE,246
+doctestcase/__version__.py,sha256=QQ0yjZQnvXM7JeLLZEZWX6NmVUPu1lSROWOXF49_gug,22
+doctestcase/case.py,sha256=NLQv9aODxyvYUGJXs5sICXiwqTXDXHVGGzUiCeF70Uc,4886
+doctestcase/case.pyi,sha256=TZrRsnDfirborG43JAuNYNpWkSkBn2Oq3IwYco1kIdE,792
+doctestcase/format.py,sha256=cPHvC9dR0G7FbPP9lSuKtpM8KRO2mlPwh1m1xM7PzOY,7682
+doctestcase/format.pyi,sha256=CMwX71L4l99bpAtnUgc-esQ4QTAqH0SRt3moHDcUM_s,722
+doctestcase/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+doctestcase-0.2.2.dist-info/METADATA,sha256=H9bxyDAvq2nm3I8Bl2gXWZBqG9-SM2LGD8my6hlNA_I,11720
+doctestcase-0.2.2.dist-info/WHEEL,sha256=tkmg4JIqwd9H8mL30xA7crRmoStyCtGp0VWshokd1Jc,105
+doctestcase-0.2.2.dist-info/licenses/LICENSE,sha256=yU2BVtBa14GTAN9NydSEsAYmq9eCvz1CTxfOMj8Ij9c,1072
+doctestcase-0.2.2.dist-info/RECORD,,
