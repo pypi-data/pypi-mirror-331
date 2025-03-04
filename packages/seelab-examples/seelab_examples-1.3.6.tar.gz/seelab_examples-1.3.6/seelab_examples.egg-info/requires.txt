@@ -1,0 +1,9 @@
+eyes17lib
+numpy
+pyopengl
+pyqt5
+pyqtgraph
+pyserial
+qtconsole
+scipy
+webserver
