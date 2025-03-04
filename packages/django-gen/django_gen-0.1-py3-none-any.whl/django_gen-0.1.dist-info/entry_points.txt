@@ -1,0 +1,2 @@
+[console_scripts]
+django-gen = django_gen.cli:main
