@@ -1,0 +1,12 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+src/__init__.py
+src/dataflow_trigger.py
+src/deferrable_dataflow_operator.py
+src/custom_deferrable_dataflow_operator.egg-info/PKG-INFO
+src/custom_deferrable_dataflow_operator.egg-info/SOURCES.txt
+src/custom_deferrable_dataflow_operator.egg-info/dependency_links.txt
+src/custom_deferrable_dataflow_operator.egg-info/requires.txt
+src/custom_deferrable_dataflow_operator.egg-info/top_level.txt
