@@ -1,0 +1,25 @@
+name: Basic Test
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  basis-test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.9", "3.10", "3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: Set up Python
+        run: uv python install ${{ matrix.python-version }}
+
+      - name: Test Package
+        run: |
+          cd test && uv run -m unittest basic_test.py
