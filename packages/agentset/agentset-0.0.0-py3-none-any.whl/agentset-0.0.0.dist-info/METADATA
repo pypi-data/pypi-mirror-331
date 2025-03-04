@@ -1,0 +1,8 @@
+Metadata-Version: 2.2
+Name: agentset
+Version: 0.0.0
+Summary: AgentSet Python SDK
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+
+# AgentSet
