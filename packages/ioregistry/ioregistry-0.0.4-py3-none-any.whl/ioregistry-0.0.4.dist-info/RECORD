@@ -1,0 +1,13 @@
+ioregistry/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ioregistry/_version.py,sha256=EY1c6JeG6uVHQoQcoxYAagjmJgQQxJk7iQ23gAoevU4,511
+ioregistry/allocated.py,sha256=FnU_8CUNTUsrHwNO9GRZMIIkg0RMhiOwxvGSECDENc8,491
+ioregistry/exceptions.py,sha256=TEbNdVunRBU8ik4ym5YAjib7QGgIcewtt9sdrObRkrA,47
+ioregistry/ioentry.py,sha256=mKtfiDxIZ8wFPu55Ek0d6CsaVG8XwxQ3b0zT49Zeqoc,4120
+ioregistry/native/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ioregistry/native/core_foundation.py,sha256=NptVV8B-YBQTiMiJ8IDfrJhl1Bxpst-q7o4Pfx6UHVU,1815
+ioregistry/native/iokit.py,sha256=I4tYaP_z0Z-zgM0edVWYq-GngF5RFl7lcVfNR4cmCRo,1698
+ioregistry-0.0.4.dist-info/LICENSE,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+ioregistry-0.0.4.dist-info/METADATA,sha256=Zcg_X-S0kEQ4BeMvPwKJtP7LRsOpw-JVZ_tcuJkeatc,2100
+ioregistry-0.0.4.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+ioregistry-0.0.4.dist-info/top_level.txt,sha256=DfZ4UsapNzUXK7XGTcPN02ipMcEIHZjaol6YuqiznaY,11
+ioregistry-0.0.4.dist-info/RECORD,,
