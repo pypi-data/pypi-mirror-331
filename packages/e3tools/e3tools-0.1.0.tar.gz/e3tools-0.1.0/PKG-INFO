@@ -1,0 +1,21 @@
+Metadata-Version: 2.4
+Name: e3tools
+Version: 0.1.0
+Summary: Add your description here
+Author-email: Joseph Kleinhenz <kleinhej@gene.com>
+License-File: LICENSE
+Requires-Python: >=3.11
+Requires-Dist: e3nn>=0.5.5
+Requires-Dist: jaxtyping>=0.2.38
+Requires-Dist: torch>=2.4.1
+Description-Content-Type: text/markdown
+
+# e3tools
+
+Tools for building equivariant neural networks.
+
+## Install
+
+```bash
+uv sync
+```
