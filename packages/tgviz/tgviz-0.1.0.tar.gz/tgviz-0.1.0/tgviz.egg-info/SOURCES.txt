@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+tgviz.egg-info/PKG-INFO
+tgviz.egg-info/SOURCES.txt
+tgviz.egg-info/dependency_links.txt
+tgviz.egg-info/requires.txt
+tgviz.egg-info/top_level.txt
