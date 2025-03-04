@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "foreverpy" 
+version = "0.1.1"
+authors = [
+    { name="Revati", email="kishorsinnur31@gmail.com" }
+]
+description = "A simple greeting package"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+keywords = ["greeting", "python package"]
+dependencies = []
+[project.urls]
+Homepage ="https://github.com/kishor-sinnur/forverpy"

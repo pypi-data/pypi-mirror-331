@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+foreverpy/__init__.py
+foreverpy/hello.py
+foreverpy.egg-info/PKG-INFO
+foreverpy.egg-info/SOURCES.txt
+foreverpy.egg-info/dependency_links.txt
+foreverpy.egg-info/top_level.txt
