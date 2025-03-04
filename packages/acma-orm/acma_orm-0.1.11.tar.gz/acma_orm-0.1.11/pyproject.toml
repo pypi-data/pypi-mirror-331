@@ -1,0 +1,18 @@
+[project]
+name = "acma-orm"
+version = "0.1.11"
+description = "A Python ORM of the ACMA database"
+readme = "README.md"
+authors = [{ name = "JacksonBowe", email = "jackson.bowe@powertec.com.au" }]
+requires-python = ">=3.12"
+dependencies = ["pandas>=2.2.3", "peewee>=3.17.9"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = []
+
+[tool.uv.sources]
+acma-orm = { workspace = true }
