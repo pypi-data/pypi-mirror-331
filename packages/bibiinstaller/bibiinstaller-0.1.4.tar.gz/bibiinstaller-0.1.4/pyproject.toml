@@ -1,0 +1,49 @@
+[project]
+name = "bibiinstaller"
+version = "0.1.4"
+description = "Bibi Installer using pynsist for Windows"
+authors = [
+    {name = "Chunqi SHI", email = "chunqishi@gmail.com"},
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+#    "yarg>=0.1.9",
+    "loguru>=0.7.2",
+    "bibiflags>=0.1.5",
+    "packaging>=24.0",
+    "tomli>=2.0.1",
+    "pillow>=10.3.0",
+#    "pyarmor>=8.5.2",
+]
+
+requires-python = ">=3.10"
+readme = "README.md"
+license = {text = "MIT"}
+
+
+[project.urls]
+Homepage = "https://github.com/bibiparrot/bibiinstaller"
+Issues = "https://github.com/bibiparrot/bibiinstaller/issues"
+
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.dev-dependencies]
+dev = [
+        "pip==24.0",
+        "setuptools>=69.2.0",
+]
+
+[tool.poetry]
+packages = [
+    { include = "*" , from = "src"},
+]
+
+[project.scripts]
+bibiinstaller= "bibiinstaller.bibiinstaller_windows:main"
