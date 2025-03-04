@@ -1,0 +1,100 @@
+Metadata-Version: 2.4
+Name: helpsk
+Version: 0.1.60
+Summary: Python helper functions and classes.
+License-File: LICENSE
+Requires-Python: >=3.11
+Requires-Dist: jinja2>=3.1.5
+Requires-Dist: matplotlib>=3.10.1
+Requires-Dist: numpy>=2.2.3
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: plotly-express>=0.4.1
+Requires-Dist: plotly>=6.0.0
+Requires-Dist: python-dateutil>=2.9.0.post0
+Requires-Dist: pyyaml>=6.0.2
+Requires-Dist: scikit-learn>=1.6.1
+Requires-Dist: seaborn>=0.13.2
+Description-Content-Type: text/markdown
+
+# helpsk package
+
+Helper package for python.
+
+**NOTE: This package is tested on Python `3.10`, `3.11`**
+
+- package source in `/helpsk`
+- unit tests in `/tests`
+
+---
+
+## Installing
+
+```commandline
+pip install helpsk
+```
+
+---
+
+## Contributing
+
+### Coding Standards
+
+- Coding standards should follow PEP 8 (Style Guide for Python Code)
+    - https://peps.python.org/pep-0008/
+    - Exceptions:
+        - use max line length of `99` rather than the suggested `79`
+- document all files, classes, functions
+    - following existing documentation style
+
+
+### Docker
+
+See `Makefile` for all commands.
+
+To build the docker container:
+
+```commandline
+make docker_build
+```
+
+To run the terminal inside the docker container:
+
+```commandline
+make docker_zsh
+```
+
+To run the unit tests (including linting and doc-tests) from the commandline inside the docker container:
+
+```commandline
+make tests
+```
+
+To run the unit tests (including linting and doc-tests) from the commandline outside the docker container:
+
+```commandline
+make docker_tests
+```
+
+To build the python package and uploat do PyPI via twine from the commandline outside the docker container:
+
+```commandline
+make all
+```
+
+### Pre-Check-in
+
+#### Unit Tests
+
+The unit tests in this project are all found in the `/tests` directory.
+
+In the terminal, in the project directory, either run the Makefile command,
+
+```commandline
+make tests
+```
+
+or the python command for running all tests
+
+```commandline
+python -m unittest discover ./tests
+```
