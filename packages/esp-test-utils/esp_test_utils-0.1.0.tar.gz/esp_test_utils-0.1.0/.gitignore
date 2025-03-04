@@ -1,0 +1,20 @@
+.mypy_cache/
+htmlcov/
+/.coverage
+/.coverage.*
+/.coverage.*
+gl-codequality.json
+/.nox/
+/.python-version
+/.pytype/
+/dist/
+/docs/_build/
+*.egg-info/
+__pycache__/
+venv/
+build/
+.vscode/
+/log/
+dut.log
+# TBD
+docs/
