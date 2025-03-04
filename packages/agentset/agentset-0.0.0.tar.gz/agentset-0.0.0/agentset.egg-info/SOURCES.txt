@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+agentset/__init__.py
+agentset/main.py
+agentset.egg-info/PKG-INFO
+agentset.egg-info/SOURCES.txt
+agentset.egg-info/dependency_links.txt
+agentset.egg-info/top_level.txt
+tests/test_main.py
