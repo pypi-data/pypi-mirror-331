@@ -1,0 +1,11 @@
+include pyproject.toml
+include README.md
+include License
+include requirements.txt
+
+recursive-include GenIText/configs *.yaml
+
+recursive-include GenIText/models *.py
+recursive-include GenIText/pipelines *.py
+recursive-include GenIText/prompt_refiner *.py
+recursive-include GenIText *.py

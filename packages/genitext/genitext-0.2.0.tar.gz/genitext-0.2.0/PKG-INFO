@@ -1,0 +1,88 @@
+Metadata-Version: 2.2
+Name: genitext
+Version: 0.2.0
+Summary: A CLI tool for generating image captions to fine-tune image generation models.
+Home-page: https://github.com/CodeKnight314/GenIText
+Author: Richard Tang
+Author-email: Richard G Tang <richardgtang@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2025 Richard Tang
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: torch
+Requires-Dist: torchvision
+Requires-Dist: Pillow
+Requires-Dist: tqdm
+Requires-Dist: matplotlib
+Requires-Dist: pyyaml
+Requires-Dist: bitsandbytes
+Requires-Dist: accelerate
+Requires-Dist: numpy
+Requires-Dist: transformers
+Requires-Dist: typing-extensions
+Requires-Dist: ollama
+Requires-Dist: click
+Dynamic: author
+Dynamic: home-page
+Dynamic: requires-python
+
+# GenIText: Generative Image-Text Automated package
+
+<p align="center">
+  <img src="resources/demo.gif" alt="Demonstration video of GenIText tool">
+</p>
+
+## Overview
+This repository is independently developed as a felxible framework to generate high-quality Image-Text pairs for finetuning Image-Generation models, such as Stable Diffusion, DALL-E, and other generative models. By leveraging open-source captioning models, GenIText automates the process of generating diverse captions for corresponding images, ensuring that the text data is well-suited for downstream applications such as style-specific generations or domain adaptation. This framework is designed to complement contemporary repositories or modules in the field, offering an additional option for flexibility and automation to create customized datasets.
+
+GenIText will become distributable as a CLI tool once package is ready for testing across systems. Please support in any way you see fit!
+
+## Table of Contents
+- [Installation](#installation)
+- [Results](#results)
+- [Usage](#usage)
+  - [Inference](#inference)
+  - [Training](#training)
+  - [Dataset Preparation](#dataset-preparation)
+
+## Installation
+GenIText is available as a Python package and can be installed easily using `pip`. 
+
+To install GenIText, simply run:
+```bash
+pip install genitext
+```
+After installation, you can verify that the CLI tool is accessible by running:
+```bash 
+genitext --help
+```
+To initiate the CLI tool, run: 
+```bash
+genitext
+```
+GenIText incorporates LLMs from Ollama to assist with prompt refinement which means ollama has to be available on the device when running `/refine` in the CLI tool. You can download the software for Mac or Windows OS from [here](https://ollama.com/download/). For Linux OS, you can install directly via the following: 
+```bash
+curl -fsSL https://ollama.com/install.sh | sh
+```
+After installing, pull the appropriate LLM you want to use in `/refine`. Currently, the default config is set to `deepseek-r1:7b` since it offers strong performance with it's reasoning capabilities while using relatively trivial memory. Options to switch the LLM in config will be made available soon.

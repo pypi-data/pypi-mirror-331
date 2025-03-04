@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "genitext"
+version = "0.2.0"
+description = "A CLI tool for generating image captions to fine-tune image generation models."
+authors = [{name = "Richard G Tang", email = "richardgtang@gmail.com"}]
+license = {file = "LICENSE"}
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "torch", 
+    "torchvision", 
+    "Pillow", 
+    "tqdm", 
+    "matplotlib",
+    "pyyaml", 
+    "bitsandbytes", 
+    "accelerate", 
+    "numpy", 
+    "transformers", 
+    "typing-extensions", 
+    "ollama",
+    "click"
+]
+
+[project.scripts]
+genitext = "genitext.cli:cli"
+
+[tool.setuptools]
+packages = ["genitext", "GenIText.models", "GenIText.pipelines", "GenIText.prompt_refiner"]
+include-package-data = true
+
+[tool.setuptools.package-data]
+"GenIText.configs" = ["*.yaml"]
