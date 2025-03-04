@@ -1,0 +1,12 @@
+Metadata-Version: 2.2
+Name: aTaiF
+Version: 0.16
+Author: Ali-Mahmoud-Fadhil
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Requires: requests
+License-File: LICENSE.txt
+Dynamic: author
+Dynamic: classifier
+Dynamic: requires
