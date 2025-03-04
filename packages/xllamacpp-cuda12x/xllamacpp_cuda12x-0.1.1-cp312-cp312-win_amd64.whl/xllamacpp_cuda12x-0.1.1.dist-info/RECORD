@@ -1,0 +1,8 @@
+xllamacpp/__init__.py,sha256=VXJBr0jUq_BbqHKVSk78ucKLqZXEKH__rDK8GaqJjds,102
+xllamacpp/_version.py,sha256=5SadwX_iiCj4NtcV2MBmIpz1Fb7dUY81bVeTWJ0aDcI,517
+xllamacpp/xllamacpp.cp312-win_amd64.pyd,sha256=mY5OgnP_YqO7MjREvtHww-diC9YgeMRR1bxjlJp9WS4,55261696
+xllamacpp_cuda12x-0.1.1.dist-info/LICENSE,sha256=z19nzhUc-YIumg55qyqdddc8vK1vf_24jBzNxg7Y-xU,1093
+xllamacpp_cuda12x-0.1.1.dist-info/METADATA,sha256=32oSVjlisvqEeuLOGmTO35-cb3qRBke_Uir2GOeGp1c,6782
+xllamacpp_cuda12x-0.1.1.dist-info/WHEEL,sha256=GNSMLKsI4JcODC8iIUwfCC2mP5aj3pHj8CNqlVH-mAI,101
+xllamacpp_cuda12x-0.1.1.dist-info/top_level.txt,sha256=Lu5vLPOlGYHI7Ox8hVqa-ys-gg-cULIAj4bfqNm5SY8,10
+xllamacpp_cuda12x-0.1.1.dist-info/RECORD,,
