@@ -1,0 +1,9 @@
+downlow/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+downlow/download.py,sha256=IvAvpuLT1wFeoDNGxOFmetWQthgKcUdXMLOzgKZGwMw,10321
+downlow/downlow_data_classes.py,sha256=7J1hholgxkgVe_T8f93p2zoPyulyUcPfLCcC_6QgSb0,8792
+downlow/utils.py,sha256=3T8zG4h_Nb3hceAE2EgH1kE2ysY20RZ2h0WLuilk-DI,3857
+downlow-0.0.4.dist-info/METADATA,sha256=-vOz2OBwsumN604Acf8_CAJyJo-6omzgsoQAv0PGroc,7487
+downlow-0.0.4.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+downlow-0.0.4.dist-info/entry_points.txt,sha256=lgE285rpnp6UADwmHr0wMvAAa3ecklKrNScn_Y_oXAs,50
+downlow-0.0.4.dist-info/licenses/LICENSE,sha256=AecrKb6VjoKNo1MZ4uvj7kLOpMKOK7hvQisjRUrRQYw,1072
+downlow-0.0.4.dist-info/RECORD,,
