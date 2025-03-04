@@ -1,0 +1,13 @@
+gemini_2_0_api/__init__.py,sha256=_1A-h4QouuvVotQON8iJEepQUCQAQ4phAXSEY6Pn4f0,558
+gemini_2_0_api/config.py,sha256=vK2vDTeZGOeLlPZDwDBC1QccHS5nOkJrV1GfkbDfeMM,2455
+gemini_2_0_api/functions.py,sha256=9kGO6J3mVt6x3jYiDAZnWNe9tDUtjr54dw3vrUrmfEE,2367
+gemini_2_0_api/main.py,sha256=P5uTPp04lbhqurgD_wUnmzAJT_PPlsBUJD6KvhLksTw,8228
+gemini_2_0_api/models.py,sha256=TU5GoaL6YTpENunazY64NRaFRf0ohYAkbCvEkM9xF9Y,3354
+gemini_2_0_api/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gemini_2_0_api/tuning.py,sha256=TiWlyfXgtZxwddejMoBfYsQmoz38gPhV1Yqnz_Wy2pw,3201
+gemini_2_0_api/types.py,sha256=fA9RheQVEw85LSTJ9H4jFTpU7yiQSxatlz9qwNC5npY,1320
+gemini_2_0_api/wrapper.py,sha256=OnQ9tOnXSx5NfYVw4ePshm_ExQ9Mn7ERKYWjkt1aXcY,7589
+gemini_2_0_api-0.1.0.dist-info/LICENSE,sha256=oaprBZWSt82-QjAMksEIsTAIJ8WuhD6_0t1mGjuiFAc,1087
+gemini_2_0_api-0.1.0.dist-info/METADATA,sha256=s1PwxkCRTP9GKRPl12eZx3ZQQ7n5y0980GWn7YRmAE4,5708
+gemini_2_0_api-0.1.0.dist-info/WHEEL,sha256=7dDg4QLnNKTvwIDR9Ac8jJaAmBC_owJrckbC0jjThyA,88
+gemini_2_0_api-0.1.0.dist-info/RECORD,,
