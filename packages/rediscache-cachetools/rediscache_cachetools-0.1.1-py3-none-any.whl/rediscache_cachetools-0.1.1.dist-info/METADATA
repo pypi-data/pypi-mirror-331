@@ -1,0 +1,25 @@
+Metadata-Version: 2.3
+Name: rediscache-cachetools
+Version: 0.1.1
+Summary: An extension of python cachetools for redis cache.
+Author: xy.kong
+Author-email: xy.kong@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: cachetools (>=5.5.0,<6.0.0)
+Requires-Dist: python-redis-cache (>=4.0.1,<5.0.0)
+Requires-Dist: redis (>=5.2.0,<6.0.0)
+Project-URL: Documentation, https://github.com/xykong/rediscache-cachetools
+Project-URL: Repository, https://github.com/xykong/rediscache-cachetools
+Project-URL: issues, https://github.com/xykong/rediscache-cachetools/issues
+Project-URL: package, https://pypi.org/project/rediscache-cachetools
+Description-Content-Type: text/markdown
+
+# rediscache-cachetools
+
+An extension of python cachetools for redis cache.
+
+
