@@ -1,0 +1,9 @@
+simple_chat_structure/__init__.py,sha256=30RcLsIuCJIvoAp15bgjvy8vLJw3SbuHww0xvI6w-I0,180
+simple_chat_structure/chat.py,sha256=nV5Dcplg8FhiufPpvZTGq9xEIv519jU48r0JKS3yCFg,6743
+tests/__init__.py,sha256=kUR5RAFc7HCeiqdlX36dZOHkUI5wI6V_43RpEcD8b-0,22
+tests/test_chat.py,sha256=4QA_v5_FahwnjvAW4Ai8T-PHoPaOqu04pB9467pninY,15010
+simple_chat_structure-0.1.0.dist-info/LICENSE,sha256=KkS9BbWs3Qnc38PYWGu8rwFRZvLOo40-4MwCMmXOxP4,1066
+simple_chat_structure-0.1.0.dist-info/METADATA,sha256=NBLluV26g8kZVMdZSY88JodPuzvxJRWzE2nTkZXXzcA,9053
+simple_chat_structure-0.1.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+simple_chat_structure-0.1.0.dist-info/top_level.txt,sha256=ePJraAOf5K7T2eF_-rJktEg5cjH8sRoOdzQaC7WHY0k,28
+simple_chat_structure-0.1.0.dist-info/RECORD,,
