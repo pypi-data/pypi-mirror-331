@@ -1,0 +1,125 @@
+Metadata-Version: 2.4
+Name: hud-python
+Version: 0.1.0
+Summary: SDK for the HUD evaluation platform.
+Project-URL: Homepage, https://github.com/Human-Data/hud-sdk
+Project-URL: Bug Tracker, https://github.com/Human-Data/hud-sdk/issues
+Project-URL: Documentation, https://hud.so
+Author-email: Human Union Data SDK <founders@hud.so>
+License: MIT License
+        
+        Copyright (c) 2025 Human Data Company
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: <3.14,>=3.9
+Requires-Dist: eval-type-backport>=0.2.2
+Requires-Dist: httpx<1,>=0.23.0
+Requires-Dist: pillow<12,>=11
+Requires-Dist: pydantic-settings<3,>=2
+Requires-Dist: pydantic<3,>=2
+Provides-Extra: dev
+Requires-Dist: anthropic; extra == 'dev'
+Requires-Dist: ipykernel; extra == 'dev'
+Requires-Dist: ipython<9; extra == 'dev'
+Requires-Dist: jupyter-client; extra == 'dev'
+Requires-Dist: jupyter-core; extra == 'dev'
+Requires-Dist: openai; extra == 'dev'
+Requires-Dist: pyright==1.1.364; extra == 'dev'
+Requires-Dist: pytest<9,>=8.1.1; extra == 'dev'
+Requires-Dist: ruff==0.9.8; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# HUD SDK (Alpha Release)
+
+A Python SDK for interacting with HUD environments and evaluation benchmarks for browser use and computer use models.
+
+Visit [hud.so](https://hud.so) for more information about HUD.
+
+> **Alpha Release Notice**: This SDK is currently in alpha status (v0.1.0-alpha). The API is still evolving and may change in future releases as we gather feedback and improve functionality.
+
+[![PyPI version](https://img.shields.io/pypi/v/hud-python)](https://pypi.org/project/hud-python/)
+
+[📚 Documentation](https://docs.hud.so) | [🏠 Homepage](https://hud.so)
+
+## Quick Start
+
+```bash
+# Install the latest stable release
+pip install hud-python
+
+# Install the latest alpha release (may include breaking changes)
+pip install --pre hud-python
+
+# Install a specific alpha version
+pip install hud-python==0.1.0-alpha
+```
+
+```python
+import asyncio
+from hud import HUDClient
+
+async def main():
+    # Initialize client with API key
+    client = HUDClient(api_key="your-api-key")
+    
+    # Load a gym and evaluation set
+    gym = await client.load_gym(id="OSWorld-Ubuntu")
+    evalset = await client.load_evalset(id="OSWorld-Ubuntu")
+    
+    # Create a run and environment
+    run = client.create_run(name="example-run", gym=gym, evalset=evalset)
+    env = await run.make(metadata={"agent_id": "example"})
+
+    # Agent loop goes here
+    # For complete examples and usage guides, see our documentation
+
+    # Close the environment when done
+    await env.close()
+
+if __name__ == "__main__":
+    asyncio.run(main())
+```
+
+## Key Features
+
+- Connect to HUD evaluation environments
+- Run benchmarks across various tasks
+- Support for different agent adapters
+- Asynchronous API for efficient interaction
+
+## Documentation
+
+For comprehensive guides, examples, and API reference, visit:
+- [Getting Started](https://docs.hud.so/introduction)
+- [Installation](https://docs.hud.so/installation)
+- [API Reference](https://docs.hud.so/api-reference)
+- [Examples](https://docs.hud.so/examples)
+
+## License
+
+[MIT License](LICENSE)
