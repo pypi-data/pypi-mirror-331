@@ -1,0 +1,4 @@
+[console_scripts]
+wabee=wabee.cli.main:main
+wb=wabee.cli.main:main
+
