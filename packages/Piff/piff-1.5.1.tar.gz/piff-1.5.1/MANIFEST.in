@@ -1,0 +1,8 @@
+include *.rst
+include LICENSE
+recursive-include tests *.py
+recursive-include share *
+prune *docs/_build
+prune *tests/input
+prune *tests/output
+prune *tests/.*
