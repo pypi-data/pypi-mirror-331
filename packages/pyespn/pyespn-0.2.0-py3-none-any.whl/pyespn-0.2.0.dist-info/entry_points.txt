@@ -1,0 +1,2 @@
+[console_scripts]
+sports-api-urls = espn.bin:get_all_sports_apis
