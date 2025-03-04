@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a711ec1e-87dc-4324-b9e0-25377e68ab2c" name="Changes" comment="readme fix2" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2sg9t4FeIFtXWz8qCE0ardWRBg0" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-d68999036c7f-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.14475.56" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a711ec1e-87dc-4324-b9e0-25377e68ab2c" name="Changes" comment="" />
+      <created>1738866562384</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1738866562384</updated>
+    </task>
+    <task id="LOCAL-00001" summary="research code">
+      <option name="closed" value="true" />
+      <created>1738866707771</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1738866707771</updated>
+    </task>
+    <task id="LOCAL-00002" summary="tests">
+      <option name="closed" value="true" />
+      <created>1738927328398</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1738927328399</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Readme, license">
+      <option name="closed" value="true" />
+      <created>1738935828447</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1738935828447</updated>
+    </task>
+    <task id="LOCAL-00004" summary="deploy pyproject">
+      <option name="closed" value="true" />
+      <created>1738940078790</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1738940078790</updated>
+    </task>
+    <task id="LOCAL-00005" summary="OpenpyxlWriter save -&gt; close">
+      <option name="closed" value="true" />
+      <created>1739461784162</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1739461784162</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Excel export">
+      <option name="closed" value="true" />
+      <created>1739464444785</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1739464444786</updated>
+    </task>
+    <task id="LOCAL-00007" summary=".toml version">
+      <option name="closed" value="true" />
+      <created>1739464607031</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1739464607031</updated>
+    </task>
+    <task id="LOCAL-00008" summary="readme update">
+      <option name="closed" value="true" />
+      <created>1739516671605</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1739516671605</updated>
+    </task>
+    <task id="LOCAL-00009" summary="readme fix2">
+      <option name="closed" value="true" />
+      <created>1739517042884</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1739517042884</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="research code" />
+    <MESSAGE value="tests" />
+    <MESSAGE value="Readme, license" />
+    <MESSAGE value="deploy pyproject" />
+    <MESSAGE value="OpenpyxlWriter save -&gt; close" />
+    <MESSAGE value="Excel export" />
+    <MESSAGE value=".toml version" />
+    <MESSAGE value="readme update" />
+    <MESSAGE value="readme fix2" />
+    <option name="LAST_COMMIT_MESSAGE" value="readme fix2" />
+  </component>
+</project>
