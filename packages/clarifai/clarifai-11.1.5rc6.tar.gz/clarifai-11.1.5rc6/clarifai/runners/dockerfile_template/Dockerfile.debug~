@@ -1,0 +1,9 @@
+FROM --platform=$TARGETPLATFORM public.ecr.aws/docker/library/python:3.12-slim-bookworm as pybase
+
+#############################
+# Final runtime image
+#############################
+FROM --platform=$TARGETPLATFORM ${RUNTIME_IMAGE} as final
+
+COPY --from=pybase --link=true /usr/bin/ls /usr/bin/cat  /usr/bin/which /usr/bin/bash /usr/bin/sort /usr/bin/du /usr/bin/
+COPY --from=pybase --link=true /bin/rbash /bin/sh /bin/rm /bin/
