@@ -1,0 +1,2 @@
+[console_scripts]
+haikubot = haikubot.cli:main
