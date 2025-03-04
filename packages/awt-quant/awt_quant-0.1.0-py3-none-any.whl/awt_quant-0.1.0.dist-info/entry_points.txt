@@ -1,0 +1,3 @@
+[console_scripts]
+download-lag-llama=scripts.download_model:main
+

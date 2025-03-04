@@ -1,0 +1,88 @@
+Metadata-Version: 2.3
+Name: awt-quant
+Version: 0.1.0
+Summary: Advanced Quantitative Forecasting with SPDE, GARCH, and LLMs
+License: MIT
+Author: William R. Astley
+Author-email: william.astley@algebraicwealth.com
+Requires-Python: >=3.12,<3.13
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Provides-Extra: cpu
+Provides-Extra: cuda
+Requires-Dist: gluonts (>=0.14.4,<0.15.0)
+Requires-Dist: huggingface_hub (>=0.29.1,<0.30.0)
+Requires-Dist: matplotlib (>=3.10.1,<4.0.0)
+Requires-Dist: numpy (>=1.26.0,<2.0.0)
+Requires-Dist: pandas (<2.2.0)
+Requires-Dist: scipy (>=1.15.2,<2.0.0)
+Requires-Dist: torch (==2.6.0+cu118) ; extra == "cpu" or extra == "cuda"
+Requires-Dist: torchaudio (==2.6.0+cu118) ; extra == "cpu" or extra == "cuda"
+Requires-Dist: torchvision (==0.21.0+cu118) ; extra == "cpu" or extra == "cuda"
+Requires-Dist: wandb (>=0.19.7,<0.20.0)
+Requires-Dist: yfinance (>=0.2.31,<0.3.0)
+Project-URL: Homepage, https://github.com/pr1m8/awt_quant
+Project-URL: Repository, https://github.com/pr1m8/awt_quant
+Description-Content-Type: text/markdown
+
+# SPDE Monte Carlo Simulator
+
+A Python package for simulating various stochastic partial differential equations commonly used in financial modeling.
+https://huggingface.co/time-series-foundation-models/Lag-Llama
+## Features
+
+- Geometric Brownian Motion (GBM)
+- Heston Model
+- Cox-Ingersoll-Ross (CIR) Model
+- Ornstein-Uhlenbeck (OU) Process
+- Merton Jump Diffusion (MJD) Model
+
+## Installation
+
+```bash
+poetry install
+```
+
+## Usage
+
+```python
+from spde_mc_simulator import SPDEMCSimulator
+
+# Initialize simulator
+simulator = SPDEMCSimulator(
+    symbol='AAPL',
+    start_date='2022-01-01',
+    end_date='2022-03-01',
+    dt=1,
+    num_paths=1000,
+    eq='gbm'
+)
+
+# Run simulation
+simulator.download_data()
+simulator.set_parameters()
+simulator.simulate()
+simulator.plot_simulation()
+```
+
+## Models
+
+### Geometric Brownian Motion (GBM)
+Standard model for stock price movements assuming log-normal distribution.
+
+### Heston Model
+Stochastic volatility model that captures volatility clustering.
+
+### Cox-Ingersoll-Ross (CIR)
+Mean-reverting square-root process, commonly used for interest rates.
+
+### Ornstein-Uhlenbeck (OU)
+Mean-reverting process useful for modeling mean-reverting financial quantities.
+
+### Merton Jump Diffusion (MJD)
+Extends GBM with jump components to capture sudden price movements.
+
+## License
+
+MIT 
