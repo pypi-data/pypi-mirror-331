@@ -1,0 +1,13 @@
+pysvgchart/__init__.py,sha256=Q4MMzXThGhjMsBd2TmEqrOOf5nBvJkNDgkTX6og9VkI,239
+pysvgchart/axes.py,sha256=rBrh-oXTL-jZ29RoJrOI6n7Dg29IqP3RkhxYx3EriDA,5712
+pysvgchart/charts.py,sha256=Jkb-s8YIX26jAo21LYmgzr-nZ1kWg5wyNaopF8xHJGw,12828
+pysvgchart/helpers.py,sha256=-2cQ0p4I7rDBO1kqtfIB4N-lNh3nYb0sP8aU863l7fk,4987
+pysvgchart/legends.py,sha256=kfYr_oB0IZi5FWJqh0eVmn0yEVNu9arWTEJNIwwr2as,1049
+pysvgchart/series.py,sha256=n9JKUUQHNomhynDe1qugvcElbC2TpgpSul5VFGl_r0Q,3775
+pysvgchart/shapes.py,sha256=EV2kTnZRbT7oXF6ufMqjrr9EHb4y_OCppvTJvhAxRyk,3085
+pysvgchart/styles.py,sha256=boQUzOk-COSNlhIVy7FAxj8MM6LPfwmtOpieY-thRQw,761
+pysvgchart-0.0.12.dist-info/LICENSE,sha256=drGzT7vWtF8MJr7LYAaDXtmwlagQkN2ZuzsiwSmt7nw,1068
+pysvgchart-0.0.12.dist-info/METADATA,sha256=xuRm3sR1pLKvUeYh097NX4X018YLXWj1CFttXsv5IzU,8342
+pysvgchart-0.0.12.dist-info/WHEEL,sha256=rF4EZyR2XVS6irmOHQIJx2SUqXLZKRMUrjsg8UwN-XQ,109
+pysvgchart-0.0.12.dist-info/top_level.txt,sha256=prP7ZKJFOgbNB2P1YqJpvHset15Z29o74SFy65B5DMU,11
+pysvgchart-0.0.12.dist-info/RECORD,,
