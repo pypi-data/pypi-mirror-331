@@ -1,0 +1,81 @@
+cpypes
+======
+
+`cpypes` is a drop-in substitute for `ctypes` that runs the compiled
+code in a separate process.
+
+This provides separation between the Python process and the process
+running the compiled code, which could allow you to debug the
+compiled code more easily, or even run it on a separate machine!
+
+Quick Start
+-----------
+
+```
+pip install cpypes
+```
+
+```
+>>> import cpypes
+
+>>> libc = cpypes.CDLL("libc.so.6")
+>>> dst = cpypes.create_string_buffer(10)
+>>> libc.strncpy(dst, b"Hello, world!", 5)
+-1783489504
+>>> dst.value
+b'Hello'
+```
+
+By default, `cpypes` starts up a server for itself. You can also start
+the server manually and then use
+
+```
+cpypes.connect(("127.0.0.1", 5555))
+```
+
+to connect to it (you should do right after importing it). The server
+is typically installed at `.venv/cpypes/server/main`. To start it
+listening on a port, run
+
+```
+.venv/cpypes/server/main 5555
+```
+
+Use Case Examples
+-----------------
+
+* You write a C library (`.so`) and want to write unit tests for the
+  public functions. You can write the unit tests in Python, run them
+  with `pytest`, and run the library under `valgrind`!
+
+* Say you have a `.so` on an embedded Linux device that you want to
+  test out. You can run the `cpypes` server on the embedded device
+  (you'll need to compile the server for that architecture, and make
+  sure the embedded device has `libffi` on it) and then connect to it
+  with `cpypes` running on your laptop!
+
+Requirements
+------------
+
+`cpypes` currently supports only Linux.
+
+`cpypes` requires `make`, `gcc`, and `libffi-dev` to build the server.
+
+Caveats
+-------
+
+Because it runs the compiled code in a separate process, `cpypes` is
+inherently unsuitable for some applications. For example, running
+`printf` in `cpypes` will always write to the server's standard output
+rather than the current process's (which, incidentally, will most
+likely cause a fatal error for `cpypes`). You can certainly use
+file descriptors in the server; you just need to make sure you don't
+try to use the *client's* file descriptors in the *server's* context,
+or anything equivalent.
+
+Coming Soon
+-----------
+
+* Option to start server under `valgrind`.
+
+* Support for more types.
