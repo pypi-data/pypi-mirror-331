@@ -1,0 +1,11 @@
+livekit/plugins/noise_cancellation/__init__.py,sha256=efSCYg8eBccLTtErk88QQNNIQidK1BDFDQYXlqKRrBQ,399
+livekit/plugins/noise_cancellation/plugin.py,sha256=hklmwQ0E26lAHpmBac9rtKJ54y70KK5dW4oWlz-GgGA,1561
+livekit/plugins/noise_cancellation/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+livekit/plugins/noise_cancellation/resources/c8.f.s.026300-1.0.0_2.1.kef,sha256=XaneopXA4ENb12zRVd3i4mSZ-EhO6CAHcTXGTdbfyBg,6319030
+livekit/plugins/noise_cancellation/resources/hs.c6.f.m.75df8f.kef,sha256=1YLXy_KEAKSAyIoyozjcdBe_9h93ub-CvBf21zXdaew,29434098
+livekit/plugins/noise_cancellation/resources/liblivekit_nc_plugin.so,sha256=xMXyys6GhbqgCU5rJqscW3KZB9OcJGvV19eEerpQfnQ,34626320
+livekit/plugins/noise_cancellation/resources/libonnxruntime.so,sha256=t3VCHWWjJICArUMc-QJeubSxgha5P3GbdgFgCKvl0xQ,19495640
+livekit_plugins_noise_cancellation-0.1.1.dist-info/METADATA,sha256=5vnz7jRTcumi6E1r6TvpsWyS6FD4MdZ-byhpb9Dpj5k,348
+livekit_plugins_noise_cancellation-0.1.1.dist-info/WHEEL,sha256=6tmE95pTM2ftymF7v3_LXwbxHXxRSEX2yqJPB_73KVU,109
+livekit_plugins_noise_cancellation-0.1.1.dist-info/top_level.txt,sha256=OoDok3xUmXbZRvOrfvvXB-Juu4DX79dlq188E19YHoo,8
+livekit_plugins_noise_cancellation-0.1.1.dist-info/RECORD,,
