@@ -1,0 +1,10 @@
+cloudspark/__init__.py,sha256=3BUm5TTSWyYdyQzxMX3jRQB-t6oXe8lmZB41TsGClQI,182
+cloudspark/aws_connect.py,sha256=8cL2F0kXwzIzFd3vQv1EOdEvhJNXRC85avCVYC3qXP4,1244
+cloudspark/lambda_connect.py,sha256=T8P5bfBN6WGnQY72j8_HAfLExS9hXtdIFipsJXxWeM8,166
+cloudspark/s3_connect.py,sha256=VU1Br1hk3wVpjQphv5rlxF4n3RByxiXDuKMjNWxb_4c,24876
+cloudspark/utils.py,sha256=O0kr4W1tFGm_wqMcaPjbEaNtMbL7DN5YtW2OqjC5ArY,343
+cloudspark-2.0.1.dist-info/LICENSE,sha256=K06e3NhpJzGg40LlQxpdukqNANC_Iifin3IbI01w2E8,1072
+cloudspark-2.0.1.dist-info/METADATA,sha256=g7pdklNQ-F34XJ8YjQO7-0Bg_tX4KDvFjPPv37FJx9c,11044
+cloudspark-2.0.1.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+cloudspark-2.0.1.dist-info/top_level.txt,sha256=0xN6vYYnzhKUx_KPugO1gZ_3AgsR7j8Edvc9qs1m25Q,11
+cloudspark-2.0.1.dist-info/RECORD,,
