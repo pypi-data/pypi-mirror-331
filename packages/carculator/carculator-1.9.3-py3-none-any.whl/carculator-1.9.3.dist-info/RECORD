@@ -1,0 +1,12 @@
+carculator/__init__.py,sha256=uaY8CSwTPvHtu3T1LsvWyR_SD4rBxE3i7-ewLXeGQY4,618
+carculator/car_input_parameters.py,sha256=YYMDXoJwhUJhsfoiX_3Mopr9gEWNh1adTJZZwHGLWGs,1494
+carculator/inventory.py,sha256=FfDNEzVUtPU3r5jU7tVsj1R8qUfdxwGppi-hyFM3SeQ,8325
+carculator/model.py,sha256=AEQSeN8Urys_T-jN1_F2GJdDhSARwgfZMP-Nhv5tD9A,26972
+carculator/data/default_parameters.json,sha256=viWvW-qSNlgOHxrfWaoG1c5CJ--rUIuLbs7jaQnlM5E,1061163
+carculator/data/extra_parameters.json,sha256=uaj1UkAZMJjsFaGhhtr-tbdB75r0Kgcs9xN_ZN-1B2E,9485
+carculator/data/purchase_cost_params.yaml,sha256=UkRtvZvDi7kctN7NCmbtSntO8Tt1yZ_Y3CqswO4GCZ0,525
+carculator-1.9.3.dist-info/LICENSE,sha256=t_KFQcrVVrjsv34Q_oA4wPXBchQUwfj3I8lhzj3jwmU,1501
+carculator-1.9.3.dist-info/METADATA,sha256=xPXSIDv7_sqGZf0RFKhbOvknRbG66AVpzS7iXgtkMx0,9966
+carculator-1.9.3.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+carculator-1.9.3.dist-info/top_level.txt,sha256=W8Irtdz1M6wR6Qb5A-AFJvoeLzqnOeQxTq7sdEpdYEg,11
+carculator-1.9.3.dist-info/RECORD,,
