@@ -1,0 +1,15 @@
+[project]
+name = "chatterer"
+version = "0.1.5"
+description = "The highest-level interface for various LLM APIs."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = ["instructor>=1.7.2", "langchain>=0.3.19"]
+
+[project.optional-dependencies]
+all = [
+    "langchain-openai>=0.3.7",
+    "langchain-anthropic>=0.3.8",
+    "langchain-google-genai>=2.0.10",
+    "langchain-ollama>=0.2.3",
+]
