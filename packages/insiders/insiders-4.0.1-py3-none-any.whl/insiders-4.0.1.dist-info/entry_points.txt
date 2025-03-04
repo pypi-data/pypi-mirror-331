@@ -1,0 +1,5 @@
+[console_scripts]
+insiders = insiders:main
+
+[gui_scripts]
+
