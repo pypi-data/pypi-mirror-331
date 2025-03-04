@@ -1,0 +1,16 @@
+docket/__init__.py,sha256=GoJYpyuO6QFeBB8GNaxGGvMMuai55Eaw_8u-o1PM3hk,743
+docket/__main__.py,sha256=Vkuh7aJ-Bl7QVpVbbkUksAd_hn05FiLmWbc-8kbhZQ4,34
+docket/annotations.py,sha256=GZwOPtPXyeIhnsLh3TQMBnXrjtTtSmF4Ratv4vjPx8U,950
+docket/cli.py,sha256=Qj2wzc3WjPDFsRiYJDVaqXKdTCUrFHDESwT8eebhvUk,7101
+docket/dependencies.py,sha256=iJ9RdrdgB7jVclxFUd2mR9OXh7GjdpyR6k8fIHn4Sz4,4309
+docket/docket.py,sha256=Z9gnS-vVFMqIThnUNEDvukN3InFz4T80SmPYxhbF9HQ,7006
+docket/execution.py,sha256=AEfNwmpBFJEf9ZFnbA37dqjWexGzmMcmvdxGnDsUQdY,2340
+docket/instrumentation.py,sha256=ZgXqjjPPspeQnfGakcBUS29FcRa-SKeqC0INTBzvIow,2515
+docket/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+docket/tasks.py,sha256=rFAO9z0ESpH1F-P02DJ3yj5E54TGMtNc2pUkpaiTLVY,1317
+docket/worker.py,sha256=DGvaSyiFKkV0k2YG9jhmRhStFm1gDhWZaxDXDDky2yo,13987
+pydocket-0.0.2.dist-info/METADATA,sha256=WWNNg9YXTL8zyPUzHFUvkS0ARvFw_Wl2w_nBf-KqFNE,2292
+pydocket-0.0.2.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pydocket-0.0.2.dist-info/entry_points.txt,sha256=4WOk1nUlBsUT5O3RyMci2ImuC5XFswuopElYcLHtD5k,47
+pydocket-0.0.2.dist-info/licenses/LICENSE,sha256=YuVWU_ZXO0K_k2FG8xWKe5RGxV24AhJKTvQmKfqXuyk,1087
+pydocket-0.0.2.dist-info/RECORD,,
