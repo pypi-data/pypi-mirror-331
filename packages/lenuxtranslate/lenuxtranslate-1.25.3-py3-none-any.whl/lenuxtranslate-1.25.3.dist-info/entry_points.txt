@@ -1,0 +1,2 @@
+[console_scripts]
+lenuxtranslate = lenuxtranslate.main:main
