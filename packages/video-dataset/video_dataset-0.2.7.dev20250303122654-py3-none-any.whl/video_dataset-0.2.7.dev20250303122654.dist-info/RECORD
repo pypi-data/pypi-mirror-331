@@ -1,0 +1,10 @@
+video_dataset/__init__.py,sha256=lFBBYggeoSvaRNqQggIgB02mAksApeI99faBl-8gztY,122
+video_dataset/annotations.py,sha256=tc7SAtwl1KExfWDNQKijZqrMSf-28NPSFJ1oRBZljrM,5337
+video_dataset/dataset.py,sha256=ZMCV6UJ3bM2IO7fpYHDKWZJUi5piMCCy46HoYVPQekM,8462
+video_dataset/padder.py,sha256=tRk8uox-UljeBDuZjifv23ISDLBf0loyQFBDBDLoHxg,2748
+video_dataset/preprocessor.py,sha256=66usWVhM1X5v0uQtsginPSqnYpF5hR7cgIYD3AXPP24,1884
+video_dataset/utils.py,sha256=RVn5bN_dhRrq2v1FEvzRw0x9tL_lsi2sxZNjKiChVJI,122
+video_dataset/video.py,sha256=y2MsNaAMiQQC4F0nlLncqVMsCLFe7WMM_qE-GV6nbc4,5477
+video_dataset-0.2.7.dev20250303122654.dist-info/METADATA,sha256=PxQh5sPOk3Ec4BGQvFX4lwRh9rcQ6h6eLxfVJ-xpn9Y,1242
+video_dataset-0.2.7.dev20250303122654.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+video_dataset-0.2.7.dev20250303122654.dist-info/RECORD,,
