@@ -1,0 +1,2 @@
+[console_scripts]
+pypysh=pypysh.__main__:pypysh.main
