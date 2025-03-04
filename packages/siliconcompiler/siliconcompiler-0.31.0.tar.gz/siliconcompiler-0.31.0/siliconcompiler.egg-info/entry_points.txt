@@ -1,0 +1,26 @@
+[console_scripts]
+sc = siliconcompiler.apps.sc:main
+sc-dashboard = siliconcompiler.apps.sc_dashboard:main
+sc-install = siliconcompiler.apps.sc_install:main
+sc-issue = siliconcompiler.apps.sc_issue:main
+sc-remote = siliconcompiler.apps.sc_remote:main
+sc-server = siliconcompiler.apps.sc_server:main
+sc-show = siliconcompiler.apps.sc_show:main
+siliconcompiler = siliconcompiler.apps.sc:main
+smake = siliconcompiler.apps.smake:main
+
+[siliconcompiler.docs]
+apps = siliconcompiler.sphinx_ext:apps
+checklists = siliconcompiler.sphinx_ext:checklists
+flows = siliconcompiler.sphinx_ext:flows
+libs = siliconcompiler.sphinx_ext:libraries
+linkcode = siliconcompiler.sphinx_ext:get_codeurl
+pdks = siliconcompiler.sphinx_ext:pdks
+targets = siliconcompiler.sphinx_ext:targets
+tools = siliconcompiler.sphinx_ext:tools
+
+[siliconcompiler.show]
+scsetup = siliconcompiler.utils.showtools:setup
+
+[siliconcompiler.target]
+targets = siliconcompiler.targets:get_targets
