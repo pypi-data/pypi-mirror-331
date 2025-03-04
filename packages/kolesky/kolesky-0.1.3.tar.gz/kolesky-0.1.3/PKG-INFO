@@ -1,0 +1,16 @@
+Metadata-Version: 2.2
+Name: kolesky
+Version: 0.1.3
+Author: Raymond Zeng
+Author-email: Raymond Zeng <rzeng42@gatech.edu>
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: scikit-learn
+Requires-Dist: mkl>=2021.4.0
+Dynamic: author
+
+# kolesky
+
+Python code for the paper [Sparse Cholesky Factorization by Kullback-Leibler Minimization](https://epubs.siam.org/doi/abs/10.1137/20M1336254)
