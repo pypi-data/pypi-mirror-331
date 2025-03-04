@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: django-ninja-shield
+Version: 0.0.2
+Summary: A python package to control permissions for django ninja.
+Home-page: https://github.com/medram/django-ninja-shield
+License: MIT
+Keywords: django,django-ninja,permissions,shield,ninja permissions
+Author: medram
+Author-email: mramouchy@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: django (>=5.0.0,<6.0.0)
+Project-URL: Documentation, https://github.com/medram/django-ninja-shield
+Project-URL: Repository, https://github.com/medram/django-ninja-shield
+Description-Content-Type: text/markdown
+
+# Django Ninja Shield
+
