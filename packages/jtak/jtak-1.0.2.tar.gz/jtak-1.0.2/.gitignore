@@ -1,0 +1,9 @@
+.vscode
+.venv
+dist/
+__pycache__
+*.egg-info
+*.py[co]
+*.tmp
+*.whl
+jam_*

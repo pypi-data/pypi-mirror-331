@@ -1,0 +1,57 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = [
+  "jtak",
+  "jtak_example.py"
+]
+exclude = ["jtak/takproto/proto"]
+
+[tool.hatch.version]
+path = "jtak/__version__.py"
+
+[project.scripts]
+jtak_example = "jtak_example:main"
+
+[project]
+name = "jtak"
+dynamic = ["version"]
+dependencies = [
+  "asyncio_dgram",
+  "cryptography",
+  "delimited-protobuf",
+  "ifaddr",
+  "protobuf>=5.29.0"
+]
+
+requires-python = ">=3.10,<4"
+authors = [
+  { name="Jeff Mattson", email="jmattson@sei.cmu.edu" }
+]
+maintainers = []
+description = "TAK client"
+readme = "README.md"
+license = { file="LICENSE.md" }
+keywords = ["TAK", "ATAK", "CoT", "Cursor on Target" ]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+]
+
+[project.optional-dependencies]
+
+[project.urls]
+Repository = "https://github.com/cmu-sei/jtak"
+Issues = "https://github.com/cmu-sei/jtak/issues"
+# Homepage = ""
+# Documentation = ""
+# Changelog = ""
