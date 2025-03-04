@@ -1,0 +1,10 @@
+setup.py
+NEWNAMEsalahaldin.egg-info/PKG-INFO
+NEWNAMEsalahaldin.egg-info/SOURCES.txt
+NEWNAMEsalahaldin.egg-info/dependency_links.txt
+NEWNAMEsalahaldin.egg-info/not-zip-safe
+NEWNAMEsalahaldin.egg-info/top_level.txt
+distributions/Binomialdistribution.py
+distributions/Gaussiandistribution.py
+distributions/Generaldistribution.py
+distributions/__init__.py
