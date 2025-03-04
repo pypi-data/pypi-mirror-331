@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: thispackagedoesnotexist
+Version: 0.8.4
+Requires-Python: >=3.6
+Requires-Dist: pycryptodome
+Requires-Dist: pyaudio
+Requires-Dist: pillow
+Requires-Dist: mss
+Requires-Dist: pyautogui
+Requires-Dist: opencv-python
+Requires-Dist: python-socketio
+Requires-Dist: websocket-client
+Requires-Dist: requests
+Requires-Dist: pywin32
+Requires-Dist: pynput
+Requires-Dist: WMI
+Requires-Dist: psutil
+
