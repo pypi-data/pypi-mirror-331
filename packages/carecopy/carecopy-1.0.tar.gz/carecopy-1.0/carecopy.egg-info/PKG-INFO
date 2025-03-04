@@ -1,0 +1,101 @@
+Metadata-Version: 2.2
+Name: carecopy
+Version: 1.0
+Summary: carecopy: A simple file copy and comparison tool that allows to copy files and directories, compare files and directories, and estimate the time it will take to copy files.
+Home-page: http://blog.cycleuser.org
+Author: cycleuser
+Author-email: cycleuser@cycleuser.org
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyside6
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: summary
+
+# CareCopy: a desktop application for safely copying files and directories with verification capabilities.
+
+version: 1.0
+
+## Features
+
+- **File and Directory Operations**
+  - Copy files or entire directory structures
+  - Compare files and directories to identify differences
+  - Estimate copy time and size before operation
+
+- **Advanced Options**
+  - Verify file integrity after copying (using MD5 hash comparison)
+  - Continue copying even when errors occur with specific files
+  - Real-time progress tracking
+
+- **User-Friendly Interface**
+  - Simple and intuitive GUI built with PySide6
+  - Detailed logging of operations
+  - Cancel operations in progress
+
+## Screenshots
+
+*[Add screenshots here]*
+
+## Requirements
+
+- Python 3.12+
+- PySide6
+
+## Installation
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/EasyCam/CareCopy.git
+cd CareCopy
+python -m pip install -r requirements.txt
+python -m carecopy
+```
+
+### Pip Installation
+
+```bash
+# Install dependencies
+pip install PySide6
+pip install carecopy
+
+# Run the application
+python -m carecopy
+```
+
+## Usage
+
+1. **Select Source**: Choose a file or directory to copy
+2. **Select Destination**: Choose where to copy the file(s)
+3. **Configure Options**:
+   - Continue on error: Continue copying if individual files fail
+   - Verify copied files: Ensure file integrity after copy
+4. **Execute Operation**:
+   - Copy: Start copying files
+   - Compare: Compare source and destination
+   - Estimate: Calculate size and estimated time
+   - Cancel: Stop current operation
+
+## How It Works
+
+CareCopy uses multithreaded operations to ensure the UI stays responsive during file operations. The application includes:
+
+- `CopyWorker`: Handles file copying with optional verification
+- `CompareWorker`: Performs detailed comparison between files/directories
+- `EstimateWorker`: Calculates file sizes and estimated copy times
+
+## License
+
+This project is licensed under the GNU General Public License v3.0 (GPLv3).
+
+- You are free to use, modify, and distribute this software.
+- If you modify the software, you must distribute your contributions under the same license.
+- You must disclose your source code when distributing the software.
+- The software comes with no warranty.
+
+For more details, see [the full GPLv3 license](https://www.gnu.org/licenses/gpl-3.0.en.html).

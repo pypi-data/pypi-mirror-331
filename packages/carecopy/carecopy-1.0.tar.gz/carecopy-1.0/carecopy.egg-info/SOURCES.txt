@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+carecopy/__init__.py
+carecopy/__main__.py
+carecopy/setup.py
+carecopy.egg-info/PKG-INFO
+carecopy.egg-info/SOURCES.txt
+carecopy.egg-info/dependency_links.txt
+carecopy.egg-info/requires.txt
+carecopy.egg-info/top_level.txt
