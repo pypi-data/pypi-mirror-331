@@ -1,0 +1,11 @@
+setup-win32.py
+setup.py
+adamlibrary.egg-info/PKG-INFO
+adamlibrary.egg-info/SOURCES.txt
+adamlibrary.egg-info/dependency_links.txt
+adamlibrary.egg-info/top_level.txt
+src/Win32/adam.cpp
+src/Win32/datasetname.cpp
+src/Win32/adam.cpp
+src/Win32/datasetname.cpp
+test/test.py
