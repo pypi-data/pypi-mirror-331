@@ -1,0 +1,19 @@
+[package]
+name = "pybind"
+version.workspace = true
+edition = "2024"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "netlist_db"
+crate-type = ["cdylib"]
+
+[dependencies]
+netlist-db = { path = "..", features = ['py'] }
+polars.workspace = true
+polars-arrow.workspace = true
+pyo3.workspace = true
+pyo3-polars.workspace = true
+tokio.workspace = true
+simple_logger.workspace = true
+log.workspace = true
