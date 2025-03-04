@@ -1,0 +1,14 @@
+dnscli/__init__.py,sha256=zEkgrppfZST4MlUDN5ijMa7NVGlzZfKC5X5afRo2O1Q,54
+dnscli/cli.py,sha256=nffMLyuUmDp1EN9VYs-U9ORA4mozs2M34kaR7P1ZylQ,13487
+dnscli/config.py,sha256=Mkt6dy83CmWVPtbwBTCg8dDHkk6B66muC34_AABTIbc,1511
+dnscli/version.py,sha256=UXtN4dnZwNQpm2xz4uj7xuAqy3owiIandfb5YGfRpY4,70
+dnscli/providers/__init__.py,sha256=NH6otEXmUtwKR902J8cozNkV3qPRxGMrNaGFOdwK1Mk,248
+dnscli/providers/aliyun.py,sha256=NkHyKZcj5l6lukuEYB83b7zhiu3kNaTsGOj7PUMVCn8,5080
+dnscli/providers/base.py,sha256=uotZ12uzN2q0dN-IJY7_IYbTpr1_M1PSGOymoJUUQA8,1454
+dnscli/providers/cloudflare.py,sha256=Cs_4yucxFwpStAhxcHnuJUF8_Vp67GEc3IgeCq8_xBs,5686
+dnscli/providers/tencent.py,sha256=n4Y7YLjLnlXOF1laGy88t6Esrpmj96OFGj-nY2SPMs0,4213
+dnscli-0.1.1.dist-info/METADATA,sha256=sn4zsj_-WVZVOUYPwZBuInPpf76m7QjVffxvGOI9ECE,4190
+dnscli-0.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+dnscli-0.1.1.dist-info/entry_points.txt,sha256=I_FrEZsYArzUmPMGAA5NL2i7SIPYUJ1v8rX7zMtK01s,38
+dnscli-0.1.1.dist-info/licenses/LICENSE,sha256=X8w5R1wlFhM_hu1grt6H7EV8flSWhoMtdEPGbJBPs-0,1065
+dnscli-0.1.1.dist-info/RECORD,,
