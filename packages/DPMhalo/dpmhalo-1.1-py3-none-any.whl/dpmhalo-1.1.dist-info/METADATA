@@ -1,0 +1,22 @@
+Metadata-Version: 2.2
+Name: DPMhalo
+Version: 1.1
+Summary: The Descriptive Parametric Model for gaseous halos
+Home-page: https://github.com/benopp99/DPMhalo
+Author: Benjamin D. Oppenheimer
+Author-email: beop5934@colorado.edu
+License: MIT
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: astropy
+Requires-Dist: scipy
+Requires-Dist: h5py
+Requires-Dist: colossus
+Requires-Dist: trident
+Requires-Dist: pyxsim
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: summary
