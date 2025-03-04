@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: ml_models_augustin
+Version: 0.1.1
+Summary: A simple machine learning package
+Home-page: https://github.com/augustin-cramer/ml_models
+Author: Augustin Cramer
+License: MIT
+License-File: LICENSE
