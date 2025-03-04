@@ -1,0 +1,9 @@
+AISuperServer/__init__.py,sha256=RPHGKdCEc1WRYNnpOkLQWViIZTsrFZYbdrScX61__Ko,312
+AISuperServer/create_server.py,sha256=fmNBYRrA3gXHJJQ250h3i-BsvK61UiOJck5Sx--PEKM,1406
+AISuperServer/inferenceapi.py,sha256=1ZsSozJ_f4IQ8_wJoD1bM8QNtnIR_UIIS3PvvkEWZ68,863
+AISuperServer/localmodel.py,sha256=_LfUpbup5iCorX6ml-DarEzKCdn2Bno3vkq1WqtTwPQ,2644
+AISuperServer/server.py,sha256=73JJkBvSokPXRZHwAQTyTbmtns45VbBub96sjIUlF_E,3406
+AISuperServer/waitress_server.py,sha256=35oOlGMtl6R8onMOAsC9ZPYDbIJGT3yKZCO4GVcOfZk,2689
+aisuperserver-0.1.5.dist-info/METADATA,sha256=r3HOSd4SQ9pJUzMhqhnS_XVEbWC2KkmlmFlQO3vclek,370
+aisuperserver-0.1.5.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+aisuperserver-0.1.5.dist-info/RECORD,,
