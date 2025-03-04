@@ -1,0 +1,10 @@
+pytemplify/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytemplify/base_classes.py,sha256=_DgUTJb8i2PfcDOEYk9J5b2zaTzd_Xq8D3qiVEtBOnM,1001
+pytemplify/main.py,sha256=HG7-mSjLroBrPv5TgF6CVeQZHZ5o4khA58ajbp1Quag,2416
+pytemplify/parser_loader.py,sha256=RI1fesQJN5ve0cF3L5vrXsQFA6uUGP9XKVHXKpSeq64,768
+pytemplify/renderer.py,sha256=l5jjmBTiiaF-daKvWqeeXu6TSM2j7Usal5vGiAsZf0E,14748
+pytemplify-0.1.0.dist-info/LICENSE,sha256=UnpT_kRnGaoACYG7gI2LRRgOqLAormFqgFiBD_3Djas,1066
+pytemplify-0.1.0.dist-info/METADATA,sha256=VIed3_1ku3C6GQ2J0zFvjDLb392gsSNT5vcA8AKWJXc,1434
+pytemplify-0.1.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+pytemplify-0.1.0.dist-info/entry_points.txt,sha256=NaxfMBYHHzApIa5SbL4e3enB0lzISFQC3UA4zqrEito,54
+pytemplify-0.1.0.dist-info/RECORD,,
