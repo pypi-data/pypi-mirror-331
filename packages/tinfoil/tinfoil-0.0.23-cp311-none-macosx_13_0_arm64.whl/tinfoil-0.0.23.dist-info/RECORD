@@ -1,0 +1,16 @@
+tinfoil-0.0.23.dist-info/RECORD,,
+tinfoil-0.0.23.dist-info/WHEEL,sha256=QZmlc1Midp5IJE8sLU0H4e2YQSEI1twGqK0UbEjqllo,134
+tinfoil-0.0.23.dist-info/top_level.txt,sha256=rdndpu0MZ3aQpFtdegXKTMOGVo90Jx2v5e9pQXm7LLU,8
+tinfoil-0.0.23.dist-info/METADATA,sha256=lBXH9mPfta_zS1h7hEEL05YGTNSjGNLviXLA6EmHyo8,1003
+tinfoil/__init__.py,sha256=cWHtrq-FoDC9n9DxOQG7QFRIw3OyoldsY2w8W0MpLjQ,1703
+tinfoil/tinfoil_verifier/build.py,sha256=4dzK-izxdQaqC1S-3PG1j1TZ-7Fzp_K4O51d7jbvaL0,34171
+tinfoil/tinfoil_verifier/Makefile,sha256=XW5_o9iaX6BzXAETw_bXpRVHLgd3lsMF8FBg3k34rnQ,1533
+tinfoil/tinfoil_verifier/client.py,sha256=hW4gDxranvAhfxfKm7RdGqUZuUQUrTWdsh_hMswUYKs,67666
+tinfoil/tinfoil_verifier/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tinfoil/tinfoil_verifier/client.go,sha256=Q23iUP0Gpo_9Fxz1CBJzDT_rywbnmR7o6pe9SsXbcEc,119300
+tinfoil/tinfoil_verifier/_client.cpython-311-darwin.so,sha256=JW7ehFJs8ymoN0QY-Z-Ov7qTAF43CDwqJ_cri6-2QlY,15198784
+tinfoil/tinfoil_verifier/client.c,sha256=40Qc0Vu3qoBF3AmJTKJlg6PFVzEE1g8JQDsvk0op7xM,249501
+tinfoil/tinfoil_verifier/go.py,sha256=3oH1G9btAb6LZCaCDUgczzGZMcdIWqkS-53T1xTdF48,103510
+tinfoil/tinfoil_verifier/_client.cpython-311-darwin.h,sha256=kZJ3ySysozIfHBh3Lo5J72DJ2HV5rtiN3MBrH95nIss,25772
+tinfoil/tinfoil_verifier/client_go.h,sha256=kZJ3ySysozIfHBh3Lo5J72DJ2HV5rtiN3MBrH95nIss,25772
+tinfoil/.dylibs/Python,sha256=n95XXWpvqmIT8R2FNoxaB2SA0m77xqg61EBgsJIM5yI,14303584
