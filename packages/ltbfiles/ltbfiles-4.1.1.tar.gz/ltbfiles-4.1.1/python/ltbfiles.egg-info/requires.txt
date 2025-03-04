@@ -1,0 +1,7 @@
+numpy
+pandas
+python-dateutil
+
+[tests]
+pytest
+pytest-cov
