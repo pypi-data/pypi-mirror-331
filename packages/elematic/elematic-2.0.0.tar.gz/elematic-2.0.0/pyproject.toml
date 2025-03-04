@@ -1,0 +1,41 @@
+[project]
+name = "elematic"
+version = "2.0.0"
+description = "Materials information management via MatML for Python"
+authors = [
+    {name = "Noah Gula"}
+]
+requires-python = ">=3.10,<3.14"
+license = {file = "LICENSE"}
+
+
+dependencies = [
+    "lxml (>=5.3.0,<6.0.0)",
+    "xsdata[cli] (>=24.12,<25.0)",
+    "xsdata-pydantic[cli,lxml,soap] (>=24.5,<25.0)",
+    "pyside6-essentials (>=6.8.2.1,<7.0.0.0)",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/nogula/elematic"
+"Repository" = "https://github.com/nogula/elematic"
+"Documentation" = "https://github.com/nogula/elematic/wiki"
+"Issues" = "https://github.com/nogula/elematic/issues"
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+readme = "README.md"
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.10.0"
+pylint = "^3.3.4"
+mkdocs = "^1.6.1"
+mkdocstrings-python = "^1.14.5"
+mkdocs-material = "^9.6.2"
