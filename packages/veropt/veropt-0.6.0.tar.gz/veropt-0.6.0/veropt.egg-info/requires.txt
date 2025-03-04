@@ -1,0 +1,9 @@
+
+[gui]
+PySide6
+
+[mpi]
+mpi4py
+
+[multi_processing_smp]
+pathos
