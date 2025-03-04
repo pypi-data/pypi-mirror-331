@@ -1,0 +1,3 @@
+[console_scripts]
+beancount-gocardless=src.beancount_gocardless.cli:main
+
