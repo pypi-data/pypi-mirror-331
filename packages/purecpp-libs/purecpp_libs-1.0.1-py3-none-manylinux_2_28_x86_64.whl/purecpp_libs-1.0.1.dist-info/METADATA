@@ -1,0 +1,14 @@
+Metadata-Version: 2.2
+Name: purecpp_libs
+Version: 1.0.1
+Summary: A set of methods for the PureAI framework(purecpp).
+Home-page: https://github.com/pureai-ecosystem/purecpp
+Author: Diogo Vieira
+Author-email: contato@pureai.com.br
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: POSIX :: Linux
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: summary
