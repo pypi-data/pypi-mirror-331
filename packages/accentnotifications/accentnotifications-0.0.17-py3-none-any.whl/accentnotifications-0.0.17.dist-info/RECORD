@@ -1,0 +1,11 @@
+accentnotifications/__init__.py,sha256=eHNBTj1YA3fRVs7WZ_jViFNYrpsoZ4iqIseVKadT398,82
+accentnotifications/manager.py,sha256=URrZctnTo0UzjTpT_NiwLcRL0nKoZPD5yYmqDrBH-Es,246
+accentnotifications/types.py,sha256=_gu_5mMK5q5o-GmWsWpOLs72ofEKqxXEuksuUBFLZCM,1670
+accentnotifications/notifications/__init__.py,sha256=eX2MjJO8yy3sezN127-gOeigu8WU_VPfh07eY1IZYU8,112
+accentnotifications/notifications/base.py,sha256=a-I078Ms5VZx6yxZ5jzVtcQv82pwbpdf8glxOUqB9SY,897
+accentnotifications/notifications/smtp.py,sha256=h2AodzDYoaQtr6s4uIoE8HtBgRTEuqZLzvs-vTOFNk8,2845
+accentnotifications/notifications/twilio_sms.py,sha256=W12WVEetGXtgLdGJdnRZPZlzCG7sYaR560zmBelpTf0,3038
+accentnotifications-0.0.17.dist-info/METADATA,sha256=qu7l3b8h1Gs9DJr1K2EHVRsZKa8mM54Lm3YfQBSgZ2M,2767
+accentnotifications-0.0.17.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+accentnotifications-0.0.17.dist-info/licenses/LICENSE,sha256=82EJSVgaK_pEz5t5eC9Tz3JFbgnyCt3Z4mp5Pe_eaYs,1089
+accentnotifications-0.0.17.dist-info/RECORD,,
