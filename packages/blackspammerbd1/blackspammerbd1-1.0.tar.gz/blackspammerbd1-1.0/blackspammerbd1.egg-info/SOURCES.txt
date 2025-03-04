@@ -1,0 +1,16 @@
+LICENSE.chromedriver
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+blackspammerbd/__init__.py
+blackspammerbd/core.py
+blackspammerbd1/__init__.py
+blackspammerbd1/main.py
+blackspammerbd1/server.py
+blackspammerbd1.egg-info/PKG-INFO
+blackspammerbd1.egg-info/SOURCES.txt
+blackspammerbd1.egg-info/dependency_links.txt
+blackspammerbd1.egg-info/entry_points.txt
+blackspammerbd1.egg-info/requires.txt
+blackspammerbd1.egg-info/top_level.txt

@@ -1,0 +1,8 @@
+Metadata-Version: 2.2
+Name: blackspammerbd1
+Version: 1.0
+License-File: LICENSE.chromedriver
+Requires-Dist: requests
+Requires-Dist: cryptography
+Requires-Dist: flask
+Dynamic: requires-dist
