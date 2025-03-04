@@ -1,0 +1,8 @@
+canvas_selector/__init__.py,sha256=x1GLa-PZ-6NNeBD8bU9fnE91po4uKQmGkoCj1qhY3PQ,331
+canvas_selector/_version.py,sha256=qt5aNhK-JKwgJd4J4lrD2Y8qt97bQPvububW8Bm_pHU,495
+canvas_selector/canvas_selector.py,sha256=UskgJdlW6Ui3EvN59aYyyh4WPcbwz0f-dV0eQAVc2yk,3566
+canvas_selector/load_config.py,sha256=e1m74ULas9xjVijMU2qeOAejaobvptVJ9bjPxyxMERc,824
+canvas_selector-0.6.dist-info/METADATA,sha256=JHEv9jtpqJ8AsKf6Ux11FxWrfgV1rcn5KvdiBGsxkrw,734
+canvas_selector-0.6.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+canvas_selector-0.6.dist-info/top_level.txt,sha256=YqBET8Nd18-hxtuGGbSZAwhisNJPM1VtkPfeNaWO8CQ,16
+canvas_selector-0.6.dist-info/RECORD,,
