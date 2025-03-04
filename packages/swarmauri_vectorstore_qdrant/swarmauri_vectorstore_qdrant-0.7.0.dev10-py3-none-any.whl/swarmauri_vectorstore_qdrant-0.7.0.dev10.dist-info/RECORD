@@ -1,0 +1,7 @@
+swarmauri_vectorstore_qdrant/CloudQdrantVectorStore.py,sha256=vXSyEE6kRbwTPCRvgtfnYChQsL1PCRuhfM28z_kyn-0,8770
+swarmauri_vectorstore_qdrant/PersistentQdrantVectorStore.py,sha256=mgR8yn2VxUmIk8rKS4ZkRqUO37SEtlM4o4hipqqk01g,8665
+swarmauri_vectorstore_qdrant/__init__.py,sha256=veeJLuR7rGr3tbtRfAJIkO2vm2Bt4O7uPIzqe56xxPQ,625
+swarmauri_vectorstore_qdrant-0.7.0.dev10.dist-info/LICENSE,sha256=djUXOlCxLVszShEpZXshZ7v33G-2qIC_j9KXpWKZSzQ,11359
+swarmauri_vectorstore_qdrant-0.7.0.dev10.dist-info/METADATA,sha256=3aawkW8TLIO0SDZBVIO-LQ6VGeWNOiUevA_ZhuVqnoQ,2550
+swarmauri_vectorstore_qdrant-0.7.0.dev10.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+swarmauri_vectorstore_qdrant-0.7.0.dev10.dist-info/RECORD,,
