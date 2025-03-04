@@ -1,0 +1,46 @@
+Metadata-Version: 2.2
+Name: BlackSpammerBd_Tg
+Version: 1.0.0
+Summary: BlackSpammerBd_Tg - A powerful Telegram bot automation tool
+Home-page: https://github.com/BLACKSPAMMERBD/BlackSpammerBd_Tg
+Author: BLACK SPAMMER BD
+Author-email: shawponsp6@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: termcolor
+Requires-Dist: requests
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# BlackSpammerBd_Tg
+Device connector Tgbot
+# BLACKSPAMMERBD_TG
+
+## FEATURES
+- TELEGRAM BOT INTEGRATION
+- AUTOMATIC DEVICE MONITORING
+- SMS MONITORING AND ALERTS
+- AUTOMATIC STARTUP AFTER REBOOT
+
+## INSTALLATION
+1. Clone the repository
+2. Run `python3 setup.py` to configure
+3. Run `python3 main.py` to start the bot
+
+## RUNNING THE BOT
+- Use the `/start` command to verify the bot status
+- Use the `/status` command to check system status
+
+## SUPPORT
+For help, contact: shawponsp6@gmail.com

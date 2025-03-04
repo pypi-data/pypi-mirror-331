@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+BlackSpammerBd_Tg.egg-info/PKG-INFO
+BlackSpammerBd_Tg.egg-info/SOURCES.txt
+BlackSpammerBd_Tg.egg-info/dependency_links.txt
+BlackSpammerBd_Tg.egg-info/requires.txt
+BlackSpammerBd_Tg.egg-info/top_level.txt
