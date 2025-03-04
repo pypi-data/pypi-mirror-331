@@ -1,0 +1,27 @@
+# MANIFEST.in defines which non-Python files to include in the package distribution
+# This ensures that data files, documentation, and other resources are properly packaged
+
+# Include license and readme files
+include LICENSE
+include README.md
+
+# Include model files and vocabulary data
+recursive-include julius_tokenizer/data/models *.json *.txt *.bin *.model
+
+# Exclude development and build files
+exclude .gitignore
+exclude .github/*
+exclude .coverage
+exclude .coveragerc
+exclude .travis.yml
+exclude tox.ini
+recursive-exclude __pycache__ *
+recursive-exclude *.egg-info *
+recursive-exclude *.egg *
+recursive-exclude build *
+recursive-exclude dist *
+recursive-exclude julius_tokenizer/data/corpus *
+recursive-exclude julius_tokenizer/examples *
+recursive-exclude julius_tokenizer/docs *
+recursive-exclude julius_tokenizer/tests *
+recursive-exclude julius_tokenizer/scripts * 

@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+julius_tokenizer/__init__.py
+julius_tokenizer/data/models/julius-base/tokenizer.json
+julius_tokenizer/data/models/julius-base/tokenizer_config.json
+julius_tokenizer/tokenizer/__init__.py
+julius_tokenizer/tokenizer/processor.py
+julius_tokenizer/tokenizer/tokenizer.py
+julius_tokenizer/tokenizer/vocabulary.py
