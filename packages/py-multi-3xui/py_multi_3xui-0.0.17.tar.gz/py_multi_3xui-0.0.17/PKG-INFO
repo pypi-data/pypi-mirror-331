@@ -1,0 +1,19 @@
+Metadata-Version: 2.2
+Name: py_multi_3xui
+Version: 0.0.17
+Summary: module for managing multiple 3x-ui panels
+Author-email: Dmeetrogon <dmeetrogon@example.com>
+Project-URL: Homepage, https://github.com/Dmeetrogon/py_multi_3xui
+Project-URL: Issues, https://github.com/Dmeetrogon/py_multi_3xui/issues
+Keywords: vpn,3x-ui
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: py3xui<0.4.0,==0.3.4
+Requires-Dist: six==1.17.0
+
+multi_3x_ui
