@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="371d84e7-d1e4-4f72-be24-f37853f69657" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.copier-answers.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.copier-answers.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NEWS.d/20250303_093408_makukha_11_optionally_ignore_title_on_formatting.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NEWS.d/20250303_124307_makukha_13_sync_with_project_template.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/badges.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/badges.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/sphinx/conf.py" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sphinx/conf.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/doctestcase/__version__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/doctestcase/__version__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uv.lock" beforeDir="false" afterPath="$PROJECT_DIR$/uv.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2sigcGYny8Pji3NFmkh4DGFV5fO" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "15-release-v022",
+    "last_opened_file_path": "/Users/m/repos/doctestcase/NEWS.d",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "configurable.group.tools",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/NEWS.d" />
+      <recent name="$PROJECT_DIR$/tests/usage" />
+      <recent name="$PROJECT_DIR$/tests/docsub" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/tests" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs/sphinx" />
+      <recent name="$PROJECT_DIR$/tests/docsub/tests" />
+      <recent name="$PROJECT_DIR$/tests/usage" />
+      <recent name="$PROJECT_DIR$/docs" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PY-241.18034.82" />
+        <option value="bundled-python-sdk-975db3bf15a3-2767605e8bc2-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.18034.82" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="371d84e7-d1e4-4f72-be24-f37853f69657" name="Changes" comment="" />
+      <created>1738943886703</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1738943886703</updated>
+      <workItem from="1738943887932" duration="23192000" />
+      <workItem from="1739005214744" duration="113867000" />
+      <workItem from="1739274708134" duration="2644000" />
+      <workItem from="1739366265993" duration="100000" />
+      <workItem from="1739388101988" duration="71650000" />
+      <workItem from="1740343875767" duration="362000" />
+      <workItem from="1740923727654" duration="18357000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
