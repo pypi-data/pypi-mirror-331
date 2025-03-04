@@ -1,0 +1,2 @@
+[console_scripts]
+clrun = clarena.main:clrun
