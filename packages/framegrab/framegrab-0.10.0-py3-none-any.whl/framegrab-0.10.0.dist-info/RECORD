@@ -1,0 +1,16 @@
+framegrab/__init__.py,sha256=Cb5aGKZ1Z33hIsNuDQczRKYYfk-35cAy_4DznF2Dc7k,708
+framegrab/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+framegrab/cli/autodiscover.py,sha256=WmXKyVJ3n4kVvIE0LGPcJIGEgx5y5qhSr2fBsu9ekT4,1923
+framegrab/cli/clitools.py,sha256=2E7FT9bWN_DJOwl_w5ukuLbzGqJWHEw6lALwdBA9DqE,2230
+framegrab/cli/main.py,sha256=RM_7J2Knwr8Qr6_eSFfBQFSqGG5Kk9aES9z_6YRc81E,297
+framegrab/cli/preview.py,sha256=3Id86OeU2M5JkxyKewuMMZ7ewQBHa3WZnNue-8Ucjt4,1751
+framegrab/exceptions.py,sha256=qF0LitsaffPLvJL4Gt36gkI4I7pO7VUkZtzYcyw9gxs,237
+framegrab/grabber.py,sha256=6jTKLgVXIVOi-jl83TaBHCjUXq6en2pPLemsl9aNWhI,59315
+framegrab/motion.py,sha256=dH1-0_pAkWC5_BZ9VtXOKRzkqoMviZjsoRHTU0j9HLw,3515
+framegrab/rtsp_discovery.py,sha256=Gf02XQZv3WIZOTtL9yleiFrrSsBI87vzFUY4pP1tDXc,8613
+framegrab/unavailable_module.py,sha256=2lFNhvMzc-SauWAgxfqK2qPYfK0xaD4XV33vikHQCTs,698
+framegrab-0.10.0.dist-info/LICENSE.txt,sha256=sktvZLOrXHlIqpr9OtT1ynCbiirjE62rjVkO4IXnlwk,1071
+framegrab-0.10.0.dist-info/METADATA,sha256=qVANm1nzWTpkjDMHJoKnbXMZiu39VfBD_ffkl272URA,16414
+framegrab-0.10.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+framegrab-0.10.0.dist-info/entry_points.txt,sha256=FnjO9UOQ_VgiJBhEfwteCV4VbJQEN3sLY0KapEX1oVA,56
+framegrab-0.10.0.dist-info/RECORD,,
