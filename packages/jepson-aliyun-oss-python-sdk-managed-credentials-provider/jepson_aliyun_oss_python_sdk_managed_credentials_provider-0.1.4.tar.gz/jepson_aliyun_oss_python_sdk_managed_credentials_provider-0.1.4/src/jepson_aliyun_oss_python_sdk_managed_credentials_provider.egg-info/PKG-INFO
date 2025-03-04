@@ -1,0 +1,28 @@
+Metadata-Version: 2.2
+Name: jepson-aliyun-oss-python-sdk-managed-credentials-provider
+Version: 0.1.4
+Summary: Managed Credentials Provider for Aliyun Python SDK OSS
+Author: Aliyun
+Maintainer: Aliyun
+License: Apache License 2.0
+Keywords: aliyun,kms,oss2
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Security
+Requires-Dist: jepson-aliyun-sdk-common-managed-credentials-provider==0.1.4
+Requires-Dist: oss2>=2.7.0
+Dynamic: author
+Dynamic: classifier
+Dynamic: keywords
+Dynamic: license
+Dynamic: maintainer
+Dynamic: requires-dist
+Dynamic: summary

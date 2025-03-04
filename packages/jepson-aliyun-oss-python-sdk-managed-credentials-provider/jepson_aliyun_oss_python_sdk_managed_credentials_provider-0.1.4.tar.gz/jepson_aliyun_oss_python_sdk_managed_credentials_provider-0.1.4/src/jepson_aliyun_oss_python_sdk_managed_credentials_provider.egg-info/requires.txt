@@ -1,0 +1,2 @@
+jepson-aliyun-sdk-common-managed-credentials-provider==0.1.4
+oss2>=2.7.0
