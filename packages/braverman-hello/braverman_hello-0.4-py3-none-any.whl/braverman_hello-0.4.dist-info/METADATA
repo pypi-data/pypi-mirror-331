@@ -1,0 +1,8 @@
+Metadata-Version: 2.2
+Name: braverman_hello
+Version: 0.4
+Description-Content-Type: text/markdown
+Dynamic: description
+Dynamic: description-content-type
+
+Simply print "hello" - learn to upload packages
