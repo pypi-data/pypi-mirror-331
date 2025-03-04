@@ -1,0 +1,11 @@
+baselibs/__init__.py,sha256=KFUmdFln3gB_MLqwqmsaHvYC45C2iVDAefFfkM4wLy0,477
+baselibs/baselibs.py,sha256=bDt0Vigl7JWoFvB7aML0MD3UcnZMg3fgLVbmY6B37vk,50281
+baselibs/llm_task.py,sha256=iHgYDA3zplzrsQsAmpY_WAb38odFaZf6l-6lPZga01M,7680
+baselibs/mtask_lib.py,sha256=CnSHKQMDwhs-ORqQSv7pm8TJn74WlRrPN4MFIdI6JFU,2905
+baselibs/rediscache.py,sha256=CEeMaD984mzIoocUJ-PR0VFFTycVwpf4m394jQkl--g,5234
+baselibs/simple_timer.py,sha256=rMfcYcsuo0C-AaINJhundG5-Ehe_EucwoZRdSYKtmWQ,5109
+baselibs-0.1.10.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+baselibs-0.1.10.dist-info/METADATA,sha256=Mca5gaqZXQeTfEj5rXDQIer7L4uTblPeAtq4pseSd7I,2184
+baselibs-0.1.10.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+baselibs-0.1.10.dist-info/top_level.txt,sha256=Uj3YgKFQpvitca3JQ-1vf6q7hWvB276r1F-od2NEayk,9
+baselibs-0.1.10.dist-info/RECORD,,
