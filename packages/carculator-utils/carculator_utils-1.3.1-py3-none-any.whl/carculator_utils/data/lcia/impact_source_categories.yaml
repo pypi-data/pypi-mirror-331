@@ -1,0 +1,75 @@
+glider:
+  - market for glider
+  - glider lightweighting
+  - other components
+  - frame, blanks and saddle, for lorry
+  - suspension, for lorry
+  - tires and wheels, for lorry
+  - assembly operation
+  - bicycle production
+  - motor scooter production
+  - glider, for electric scooter
+  - market for transport, freight, sea, container ship
+  - market group for transport, freight, lorry, unspecified
+
+powertrain:
+  - market for charger
+  - market for inverter
+  - market for converter
+  - electric motor
+  - power distribution unit
+  - gearbox
+  - power electronics
+  - retarder, for lorry
+  - transmission, for lorry
+  - exhaust system, for lorry
+  - electric motor production
+  - powertrain production
+  - charger production
+  - internal combustion engine
+
+energy storage:
+  - fuel cell
+  - market for battery,
+  - polyethylene production, high density
+  - glass fibre reinforced plastic production
+  - fuel tank
+  - lead acid battery, for lorry
+
+
+energy chain:
+  - fuel supply for
+  - electricity supply for electric vehicles
+  - electricity supply for fuel preparation
+  - overhead
+  - charging station, 500W
+  - charging station, 100W
+  - charging station, 3kW
+  - catenary
+  - pantograph
+  - charger
+
+maintenance:
+  - maintenance,
+  - market for refrigerant R134a
+
+EoL:
+  - treatment of used bicycle
+  - treatment of used electric bicycle
+  - treatment of used lorry, 16 metric ton
+  - treatment of used lorry, 28 metric ton
+  - treatment of used lorry, 40 metric ton
+  - treatment of used bus
+  - market for used Li
+  - manual dismantling of used electric scooter
+  - market for used powertrain from electric passenger car, manual dismantling
+  - market for waste plastic, industrial electronics
+
+road:
+  - market for road
+
+direct - non-exhaust:
+  - treatment of road wear
+  - treatment of tyre wear
+  - treatment of brake wear
+  - 1,1,1,2-Tetrafluoroethane
