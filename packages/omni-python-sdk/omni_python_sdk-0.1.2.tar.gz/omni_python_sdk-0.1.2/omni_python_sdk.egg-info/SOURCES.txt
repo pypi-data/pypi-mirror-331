@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+omni_python_sdk/__init__.py
+omni_python_sdk/api.py
+omni_python_sdk.egg-info/PKG-INFO
+omni_python_sdk.egg-info/SOURCES.txt
+omni_python_sdk.egg-info/dependency_links.txt
+omni_python_sdk.egg-info/requires.txt
+omni_python_sdk.egg-info/top_level.txt
