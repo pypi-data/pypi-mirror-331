@@ -1,0 +1,380 @@
+2025-03-04 06:49:34 -
+=== PROJECT STATEMENT ===
+2025-03-04 06:49:34 - ---
+description: About this project
+globs:
+---
+# About this project
+
+`twat-fs` is a file system utility library focused on robust and extensible file upload capabilities with multiple provider support. It provides:
+
+- Multi-provider upload system with smart fallback (catbox.moe default, plus Dropbox, S3, etc.)
+- Automatic retry for temporary failures, fallback for permanent ones
+- URL validation and clean developer experience with type hints
+- Simple CLI: `python -m twat_fs upload_file path/to/file.txt`
+- Easy installation: `uv pip install twat-fs` (basic) or `uv pip install 'twat-fs[all,dev]'` (all features)
+
+## Development Notes
+- Uses `uv` for Python package management
+- Quality tools: ruff, mypy, pytest
+- Clear provider protocol for adding new storage backends
+- Strong typing and runtime checks throughout
+
+2025-03-04 06:49:34 -
+=== Current Status ===
+2025-03-04 06:49:34 - [ 960]  .
+├── [  96]  .cursor
+│   └── [ 224]  rules
+│       ├── [ 821]  0project.mdc
+│       ├── [ 515]  cleanup.mdc
+│       ├── [1.6K]  filetree.mdc
+│       └── [2.0K]  quality.mdc
+├── [ 128]  .github
+│   └── [ 128]  workflows
+│       ├── [2.9K]  push.yml
+│       └── [1.4K]  release.yml
+├── [3.0K]  .gitignore
+├── [ 502]  .pre-commit-config.yaml
+├── [  96]  .specstory
+│   └── [ 192]  history
+│       ├── [2.7K]  .what-is-this.md
+│       ├── [ 58K]  2025-03-04_03-11-implementing-todo-md-plan.md
+│       ├── [ 69K]  2025-03-04_03-23-codebase-analysis-and-todo-list-creation.md
+│       └── [6.3K]  2025-03-04_06-17-fixing-hatch-configuration-error.md
+├── [ 288]  .venv
+├── [6.0K]  API_REFERENCE.md
+├── [2.8K]  CHANGELOG.md
+├── [ 939]  CLEANUP.txt
+├── [1.0K]  LICENSE
+├── [1.0K]  LOG.md
+├── [ 11K]  README.md
+├── [4.3K]  TODO.md
+├── [   7]  VERSION.txt
+├── [ 12K]  cleanup.py
+├── [ 160]  dist
+├── [  96]  docs
+│   └── [6.4K]  architecture.md
+├── [5.5K]  pyproject.toml
+├── [ 128]  src
+│   └── [ 256]  twat_mp
+│       ├── [ 503]  __init__.py
+│       ├── [ 11K]  async_mp.py
+│       └── [9.5K]  mp.py
+├── [ 224]  tests
+│   ├── [2.8K]  test_async_mp.py
+│   ├── [6.3K]  test_benchmark.py
+│   └── [3.7K]  test_twat_mp.py
+└── [ 69K]  twat_search.txt
+
+13 directories, 30 files
+
+2025-03-04 06:49:34 -
+Project structure:
+2025-03-04 06:49:34 - [ 960]  .
+├── [  96]  .cursor
+│   └── [ 224]  rules
+│       ├── [ 821]  0project.mdc
+│       ├── [ 515]  cleanup.mdc
+│       ├── [1.6K]  filetree.mdc
+│       └── [2.0K]  quality.mdc
+├── [ 128]  .github
+│   └── [ 128]  workflows
+│       ├── [2.9K]  push.yml
+│       └── [1.4K]  release.yml
+├── [3.0K]  .gitignore
+├── [ 502]  .pre-commit-config.yaml
+├── [  96]  .specstory
+│   └── [ 192]  history
+│       ├── [2.7K]  .what-is-this.md
+│       ├── [ 58K]  2025-03-04_03-11-implementing-todo-md-plan.md
+│       ├── [ 69K]  2025-03-04_03-23-codebase-analysis-and-todo-list-creation.md
+│       └── [6.3K]  2025-03-04_06-17-fixing-hatch-configuration-error.md
+├── [ 288]  .venv
+├── [6.0K]  API_REFERENCE.md
+├── [2.8K]  CHANGELOG.md
+├── [ 939]  CLEANUP.txt
+├── [1.0K]  LICENSE
+├── [1.0K]  LOG.md
+├── [ 11K]  README.md
+├── [4.3K]  TODO.md
+├── [   7]  VERSION.txt
+├── [ 12K]  cleanup.py
+├── [ 160]  dist
+├── [  96]  docs
+│   └── [6.4K]  architecture.md
+├── [5.5K]  pyproject.toml
+├── [ 128]  src
+│   └── [ 256]  twat_mp
+│       ├── [ 503]  __init__.py
+│       ├── [ 11K]  async_mp.py
+│       └── [9.5K]  mp.py
+├── [ 224]  tests
+│   ├── [2.8K]  test_async_mp.py
+│   ├── [6.3K]  test_benchmark.py
+│   └── [3.7K]  test_twat_mp.py
+└── [ 69K]  twat_search.txt
+
+13 directories, 30 files
+
+2025-03-04 06:49:34 - On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   .cursor/rules/filetree.mdc
+	modified:   .specstory/history/.what-is-this.md
+	modified:   .specstory/history/2025-03-04_06-17-fixing-hatch-configuration-error.md
+	modified:   CHANGELOG.md
+	modified:   CLEANUP.txt
+	modified:   README.md
+	modified:   TODO.md
+	modified:   twat_search.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	LOG.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+2025-03-04 06:49:34 - On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   .cursor/rules/filetree.mdc
+	modified:   .specstory/history/.what-is-this.md
+	modified:   .specstory/history/2025-03-04_06-17-fixing-hatch-configuration-error.md
+	modified:   CHANGELOG.md
+	modified:   CLEANUP.txt
+	modified:   README.md
+	modified:   TODO.md
+	modified:   twat_search.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	LOG.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+2025-03-04 06:49:34 -
+=== Environment Status ===
+2025-03-04 06:49:34 - Setting up virtual environment
+2025-03-04 06:49:35 - Virtual environment created and activated
+2025-03-04 06:49:35 - Installing package with all extras
+2025-03-04 06:49:35 - Setting up virtual environment
+2025-03-04 06:49:35 - Virtual environment created and activated
+2025-03-04 06:49:36 - Package installed successfully
+2025-03-04 06:49:36 - Running code quality checks
+2025-03-04 06:49:36 - >>> Running code fixes...
+2025-03-04 06:49:36 - >>>Running type checks...
+2025-03-04 06:49:36 - >>> Running tests...
+2025-03-04 06:52:06 - ============================= test session starts ==============================
+platform darwin -- Python 3.12.8, pytest-8.3.5, pluggy-1.5.0 -- /Users/adam/Developer/vcs/github.twardoch/pub/twat-packages/_good/twat/plugins/repos/twat_mp/.venv/bin/python
+cachedir: .pytest_cache
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+rootdir: /Users/adam/Developer/vcs/github.twardoch/pub/twat-packages/_good/twat/plugins/repos/twat_mp
+configfile: pyproject.toml
+plugins: cov-6.0.0, benchmark-5.1.0, xdist-3.6.1
+collecting ... collected 28 items
+
+tests/test_async_mp.py::test_async_multi_pool_map SKIPPED (async def...) [  3%]
+tests/test_async_mp.py::test_async_multi_pool_empty SKIPPED (async d...) [  7%]
+tests/test_async_mp.py::test_async_multi_pool_error SKIPPED (async d...) [ 10%]
+tests/test_async_mp.py::test_async_multi_pool_imap SKIPPED (async de...) [ 14%]
+tests/test_async_mp.py::test_async_multi_pool_starmap SKIPPED (async...) [ 17%]
+tests/test_async_mp.py::test_apmap_decorator SKIPPED (async def func...) [ 21%]
+tests/test_async_mp.py::test_pool_not_initialized SKIPPED (async def...) [ 25%]
+tests/test_async_mp.py::test_pool_cleanup SKIPPED (async def functio...) [ 28%]
+tests/test_benchmark.py::TestComputeIntensiveBenchmarks::test_sequential_vs_process_pool PASSED [ 32%]
+tests/test_benchmark.py::TestComputeIntensiveBenchmarks::test_parallel_implementations[100] PASSED [ 35%]
+tests/test_benchmark.py::TestComputeIntensiveBenchmarks::test_parallel_implementations[1000] PASSED [ 39%]
+tests/test_benchmark.py::TestComputeIntensiveBenchmarks::test_parallel_implementations[10000] PASSED [ 42%]
+tests/test_benchmark.py::TestIOIntensiveBenchmarks::test_thread_vs_process_pool PASSED [ 46%]
+tests/test_benchmark.py::TestScalabilityBenchmarks::test_worker_scaling[2] PASSED [ 50%]
+tests/test_benchmark.py::TestScalabilityBenchmarks::test_worker_scaling[4] PASSED [ 53%]
+tests/test_benchmark.py::TestScalabilityBenchmarks::test_worker_scaling[8] PASSED [ 57%]
+tests/test_benchmark.py::TestScalabilityBenchmarks::test_worker_scaling[16] PASSED [ 60%]
+tests/test_benchmark.py::TestCompositionBenchmarks::test_chained_operations PASSED [ 64%]
+tests/test_twat_mp.py::test_version PASSED                               [ 67%]
+tests/test_twat_mp.py::test_process_pool_context PASSED                  [ 71%]
+tests/test_twat_mp.py::test_thread_pool_context PASSED                   [ 75%]
+tests/test_twat_mp.py::test_amap_decorator PASSED                        [ 78%]
+tests/test_twat_mp.py::test_pmap_decorator PASSED                        [ 82%]
+tests/test_twat_mp.py::test_imap_decorator PASSED                        [ 85%]
+tests/test_twat_mp.py::test_composed_operations PASSED                   [ 89%]
+tests/test_twat_mp.py::test_pool_nodes_specification PASSED              [ 92%]
+tests/test_twat_mp.py::test_parallel_vs_sequential_performance PASSED    [ 96%]
+tests/test_twat_mp.py::test_mmap_decorator_variants PASSED               [100%]
+
+
+--------------------------------------------------------------------------------------------------- benchmark: 10 tests ----------------------------------------------------------------------------------------------------
+Name (time in ms)                                Min                    Max                   Mean              StdDev                 Median                 IQR            Outliers      OPS            Rounds  Iterations
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+test_worker_scaling[4]                       49.8735 (1.0)         128.2017 (1.99)         57.0728 (1.0)       18.4769 (15.58)        50.8839 (1.0)        1.3998 (1.08)          2;4  17.5215 (1.0)          19           1
+test_worker_scaling[8]                       60.5109 (1.21)         64.3537 (1.0)          62.0779 (1.09)       1.1860 (1.0)          61.9096 (1.22)       2.2224 (1.71)          7;0  16.1088 (0.92)         16           1
+test_worker_scaling[2]                       73.2841 (1.47)         79.3263 (1.23)         75.1485 (1.32)       1.5133 (1.28)         74.7754 (1.47)       1.8118 (1.40)          2;1  13.3070 (0.76)         14           1
+test_worker_scaling[16]                     107.3401 (2.15)        120.4691 (1.87)        110.6450 (1.94)       3.6222 (3.05)        109.8711 (2.16)       1.2962 (1.0)           1;1   9.0379 (0.52)         10           1
+test_thread_vs_process_pool                 227.9038 (4.57)        231.5380 (3.60)        230.4964 (4.04)       1.5126 (1.28)        231.2977 (4.55)       1.5978 (1.23)          1;0   4.3385 (0.25)          5           1
+test_sequential_vs_process_pool             230.2812 (4.62)        309.4886 (4.81)        259.0926 (4.54)      33.3617 (28.13)       251.8923 (4.95)      52.0929 (40.19)         1;0   3.8596 (0.22)          5           1
+test_parallel_implementations[100]          473.9156 (9.50)        539.3472 (8.38)        494.9328 (8.67)      25.7805 (21.74)       486.8220 (9.57)      24.6802 (19.04)         1;0   2.0205 (0.12)          5           1
+test_chained_operations                   1,765.8870 (35.41)     1,896.4892 (29.47)     1,802.8984 (31.59)     53.0871 (44.76)     1,782.9871 (35.04)     41.8454 (32.28)         1;1   0.5547 (0.03)          5           1
+test_parallel_implementations[1000]       1,778.4187 (35.66)     2,024.4212 (31.46)     1,899.9327 (33.29)    119.7486 (100.97)    1,880.3642 (36.95)    234.4085 (180.84)        3;0   0.5263 (0.03)          5           1
+test_parallel_implementations[10000]     12,165.4765 (243.93)   14,121.6614 (219.44)   13,089.9801 (229.36)   715.8854 (603.61)   13,097.8218 (257.41)   862.8712 (665.69)        2;0   0.0764 (0.00)          5           1
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Legend:
+  Outliers: 1 Standard Deviation from Mean; 1.5 IQR (InterQuartile Range) from 1st Quartile and 3rd Quartile.
+  OPS: Operations Per Second, computed as 1 / Mean
+================== 20 passed, 8 skipped in 148.62s (0:02:28) ===================
+
+2025-03-04 06:52:06 - All checks completed
+2025-03-04 06:52:06 -
+=== TODO.md ===
+2025-03-04 06:52:06 - ---
+this_file: TODO.md
+---
+
+# TODO
+
+Tip: Periodically run `./cleanup.py status` to see results of lints and tests.
+
+## High Priority
+
+- [ ] Fix version inconsistency between VERSION.txt (v2.5.3) and __version__.py (1.8.1.post2+gba50f5f)
+- [ ] Update __init__.py version to match the current package version
+- [ ] Create a LOG.md file to track development progress (required by cleanup.py)
+- [ ] Fix cleanup.py script to properly display status output
+- [ ] Add proper docstrings to all public functions and classes
+
+## Medium Priority
+
+- [ ] Improve error handling in AsyncMultiPool.__aexit__ for better resource cleanup
+- [ ] Add more comprehensive unit tests for edge cases
+- [ ] Enhance exception propagation from worker processes
+- [ ] Implement debug mode with detailed logging
+- [ ] Add more real-world examples in documentation
+
+## Low Priority
+
+- [ ] Create interactive examples in Jupyter notebooks
+- [ ] Add architecture diagrams explaining component relationships
+- [ ] Optimize performance for large datasets
+- [ ] Add benchmarking tools for comparing different pool implementations
+- [ ] Improve compatibility with Python 3.12+ async features
+
+## Completed Tasks
+
+- [x] Fixed build system configuration by adding proper `tool.hatch.version` settings
+- [x] Updated CHANGELOG.md with recent changes
+- [x] Updated README.md with information about recent updates
+- [x] Fixed package build error related to missing version configuration
+
+## Code Quality and Structure
+
+- [ ] Implement consistent error handling across all modules
+- [ ] Refactor code to reduce duplication between mp.py and async_mp.py
+- [ ] Add more assertions and runtime checks for better error messages
+- [ ] Standardize naming conventions across the codebase
+- [ ] Add comprehensive documentation for error handling strategies
+- [ ] Improve exception propagation from worker processes to main process
+
+## Features and Enhancements
+
+- [ ] Add support for cancellation of running tasks
+- [ ] Implement progress tracking for long-running parallel operations
+- [ ] Implement backpressure mechanisms for memory-intensive operations
+- [ ] Add support for process affinity and priority settings
+- [ ] Implement a unified interface for all pool types
+- [ ] Add support for custom serialization/deserialization
+- [ ] Add context manager for automatic resource cleanup across all parallel operations
+- [ ] Implement adaptive pool sizing based on workload and system resources
+- [ ] Add support for task prioritization and scheduling
+
+## Testing and Reliability
+
+- [ ] Increase test coverage to at least 90%
+- [x] Add more edge case tests for error conditions
+- [ ] Implement stress tests for high concurrency scenarios
+- [ ] Add tests for resource leaks and memory usage
+- [ ] Add tests for different Python versions and platforms
+- [ ] Implement property-based testing for robustness
+- [ ] Add tests for keyboard interrupt handling during execution
+- [ ] Implement regression tests for fixed bugs
+
+## Performance Optimizations
+
+- [ ] Optimize serialization/deserialization for better performance
+- [ ] Optimize memory usage for large datasets
+- [ ] Implement caching mechanisms for repeated operations
+- [ ] Profile and optimize critical code paths
+- [ ] Add performance comparison with native multiprocessing
+- [ ] Implement workload-specific optimization strategies
+
+## Compatibility and Integration
+
+- [ ] Implement compatibility with other multiprocessing libraries
+- [ ] Add support for distributed processing across multiple machines
+- [x] Ensure compatibility with containerized environments
+- [ ] Add support for GPU acceleration where applicable
+- [ ] Implement integration with dask and other distributed computing frameworks
+- [ ] Add support for cloud-based parallel processing
+
+## User Experience
+
+- [ ] Add a CLI interface for common operations
+- [ ] Implement automatic pool selection based on workload characteristics
+- [ ] Add progress bars and status reporting for long-running tasks
+- [ ] Add more intuitive error recovery suggestions
+- [ ] Create wizard-like interfaces for common operations
+
+## Package Management
+
+- [ ] Create a conda package for easier installation
+- [ ] Implement automated release process with GitHub Actions
+- [ ] Add support for Windows-specific optimizations
+- [ ] Create development documentation for contributors
+- [ ] Implement pre-commit hooks for code quality
+
+2025-03-04 06:52:07 -
+📦 Repomix v0.2.29
+
+No custom config found at repomix.config.json or global config at /Users/adam/.config/repomix/repomix.config.json.
+You can add a config file for additional settings. Please check https://github.com/yamadashy/repomix for more information.
+⠙ Collecting files...
+[2K[1A[2K[G⠹ Running security check...
+[2K[1A[2K[G⠸ Running security check... (17/24) CHANGELOG.md
+[2K[1A[2K[G⠼ Processing files...
+[2K[1A[2K[G⠴ Calculating metrics...
+[2K[1A[2K[G⠦ Calculating metrics...
+[2K[1A[2K[G⠧ Calculating metrics...
+[2K[1A[2K[G⠇ Calculating metrics...
+[2K[1A[2K[G✔ Packing completed successfully!
+
+📈 Top 5 Files by Character Count and Token Count:
+──────────────────────────────────────────────────
+1.  README.md (11,466 chars, 2,860 tokens)
+2.  docs/architecture.md (6,569 chars, 1,130 tokens)
+3.  API_REFERENCE.md (6,129 chars, 1,508 tokens)
+4.  cleanup.py (5,868 chars, 1,301 tokens)
+5.  pyproject.toml (5,615 chars, 1,597 tokens)
+
+🔎 Security Check:
+──────────────────
+✔ No suspicious files detected.
+
+📊 Pack Summary:
+────────────────
+  Total Files: 24 files
+  Total Chars: 70,765 chars
+ Total Tokens: 17,123 tokens
+       Output: twat_search.txt
+     Security: ✔ No suspicious files detected
+
+🎉 All Done!
+Your repository has been successfully packed.
+
+💡 Repomix is now available in your browser! Try it at https://repomix.com
+
+2025-03-04 06:52:07 - Repository content mixed into twat_search.txt
