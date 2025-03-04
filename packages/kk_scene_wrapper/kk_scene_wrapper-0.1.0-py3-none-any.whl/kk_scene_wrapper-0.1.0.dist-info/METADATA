@@ -1,0 +1,30 @@
+Metadata-Version: 2.3
+Name: kk_scene_wrapper
+Version: 0.1.0
+Summary: A wrapper for KK scene management
+Author: AX-MMD
+Author-email: ax.mmd.yt@gmail.com
+Requires-Python: >=3.10,<3.14
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Description-Content-Type: text/markdown
+
+### USAGE ##############################################################
+___
+```python
+path = "/path/to/scene-file"
+sd = SceneData(path)
+
+timeline_binary = sd.get_timeline_xml
+timeline = sd.get_timeline_xml_tree()
+(
+  timeline_status: str,     # "has_timeline", "no_timeline" 
+  image_type: Optional[str],# "animation", "dynamic", "static", None
+  sfx_status: bool,         # True if sfx found
+  duration: int
+) = sd.get_timeline_info()
+```
+
