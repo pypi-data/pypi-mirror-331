@@ -1,0 +1,2 @@
+https://documentation.you.com/api-modes/news-api
+https://documentation.you.com/api-reference/news

@@ -1,0 +1,5 @@
+https://api.you.com/
+https://documentation.you.com/docs/quickstart
+https://documentation.you.com/docs/quickstart#step-2%3A-write-the-search-function
+https://documentation.you.com/api-modes/search-api
+https://documentation.you.com/api-reference/search

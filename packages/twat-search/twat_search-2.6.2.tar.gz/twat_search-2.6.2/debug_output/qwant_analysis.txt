@@ -1,0 +1,15 @@
+Analysis for qwant
+================================================================================
+
+Potential containers found:
+div.dd.algo: 0 elements found
+div.algo-sr: 0 elements found
+div.dd.algo.algo-sr: 0 elements found
+article.webResult: 0 elements found
+div.result: 0 elements found
+div.web-result: 0 elements found
+div.result: 0 elements found
+div.search-result: 0 elements found
+li.result: 0 elements found
+
+Other potential elements:
