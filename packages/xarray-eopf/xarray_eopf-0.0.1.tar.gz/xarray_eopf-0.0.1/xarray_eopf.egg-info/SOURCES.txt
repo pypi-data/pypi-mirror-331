@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+tests/test_backend.py
+xarray_eopf/__init__.py
+xarray_eopf/backend.py
+xarray_eopf/version.py
+xarray_eopf.egg-info/PKG-INFO
+xarray_eopf.egg-info/SOURCES.txt
+xarray_eopf.egg-info/dependency_links.txt
+xarray_eopf.egg-info/entry_points.txt
+xarray_eopf.egg-info/requires.txt
+xarray_eopf.egg-info/top_level.txt
