@@ -1,0 +1,5 @@
+[console_scripts]
+datapasta = datapasta.main:main
+
+[gui_scripts]
+
