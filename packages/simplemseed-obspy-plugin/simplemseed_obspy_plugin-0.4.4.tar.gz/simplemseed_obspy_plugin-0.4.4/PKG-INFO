@@ -1,0 +1,57 @@
+Metadata-Version: 2.4
+Name: simplemseed-obspy-plugin
+Version: 0.4.4
+Summary: obspy plugin for miniseed3 in pure python
+Project-URL: Homepage, https://github.com/crotwell/simplemseed_obspy_plugin
+Project-URL: Documentation, https://github.com/crotwell/simplemseed_obspy_plugin
+Project-URL: Repository, https://github.com/crotwell/simplemseed_obspy_plugin
+Project-URL: Issues, https://github.com/crotwell/simplemseed_obspy_plugin/issues
+Author-email: Philip Crotwell <crotwell@seis.sc.edu>
+License-File: LICENSE
+Keywords: fdsn,miniseed3,obspy,seed,sourceid,steim1,steim2
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v2 or later (LGPLv2+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Requires-Dist: crc32c
+Requires-Dist: importlib-metadata; python_version < '3.10'
+Requires-Dist: jsonpointer
+Requires-Dist: numpy
+Requires-Dist: obspy
+Requires-Dist: simplemseed>=0.4.4
+Description-Content-Type: text/markdown
+
+# simplemseed_obspy_plugin
+Obspy plugin for reading miniseed3 files.
+
+See https://pypi.org/project/simplemseed/ for details.
+
+
+## Installation
+
+Install ObsPy, then
+
+```bash
+pip install simplemseed_obspy_plugin
+```
+
+
+## Usage
+
+It will hook into ObsPy's normal I/O handling and you just use it as you would
+use any format:
+
+```
+>>> import obspy
+>>> st = obspy.read("src/simplemseed_obspy_plugin/tests/data/bird_jsc.ms3")
+>>> for t in st:
+...   print(t)
+...
+CO.BIRD.00.HHE | 2024-02-06T11:30:00.009998Z - 2024-02-06T11:30:29.999998Z | 100.0 Hz, 3000 samples
+CO.BIRD.00.HHN | 2024-02-06T11:30:00.009998Z - 2024-02-06T11:30:29.999998Z | 100.0 Hz, 3000 samples
+CO.BIRD.00.HHZ | 2024-02-06T11:30:00.009998Z - 2024-02-06T11:30:29.999998Z | 100.0 Hz, 3000 samples
+CO.JSC.00.HHE | 2024-02-06T11:30:00.008392Z - 2024-02-06T11:30:29.998392Z | 100.0 Hz, 3000 samples
+CO.JSC.00.HHN | 2024-02-06T11:30:00.008392Z - 2024-02-06T11:30:29.998392Z | 100.0 Hz, 3000 samples
+CO.JSC.00.HHZ | 2024-02-06T11:30:00.008392Z - 2024-02-06T11:30:29.998392Z | 100.0 Hz, 3000 samples
+>>> st.write("out.ms3", format="mseed3")
+```
