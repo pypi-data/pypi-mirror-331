@@ -1,0 +1,6 @@
+click
+pyyaml
+requests
+tabulate
+sseclient-py
+python-dotenv
