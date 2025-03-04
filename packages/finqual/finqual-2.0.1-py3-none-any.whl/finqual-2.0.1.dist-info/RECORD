@@ -1,0 +1,12 @@
+finqual/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+finqual/balance_sheet.py,sha256=bfs0Cqii3sI7zo-wfweN4jbpziyvNf99OgBFprFETOQ,60728
+finqual/cashflow_statement.py,sha256=VnpHF7txB2EF7LjL2BbbrHyUejaGcXebhqjxLDrOsVA,13275
+finqual/finqual.py,sha256=WIV66iNYaFXCTkypjXKkcqXet38X4HMrpBhAA4A6LSs,36053
+finqual/income_statement.py,sha256=0l9H0xa4Kg54gfXb4Qf29kNR7ruZFeTPUSzttwKFRBo,30788
+finqual/node_tree.py,sha256=k5mGcZzjYbDA85LnboVa64oJfZH-ZD3xPdg6oTJZUXY,1310
+finqual/data/sec_sic.csv,sha256=mAVnpuWuNJrRMc4N6cN1pFH3vfeWNUzuvq_BNdSMTHs,434839
+finqual-2.0.1.dist-info/LICENSE.md,sha256=5-Lvu0V1MXB29EyIQ1eaAXywcY28TaT3Kv9R7IVSyoA,17529
+finqual-2.0.1.dist-info/METADATA,sha256=oroJPci7ly8I76iT9bS6VQ4bDdRPQbZQ_tmGqTS8vM0,5123
+finqual-2.0.1.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+finqual-2.0.1.dist-info/top_level.txt,sha256=4YaTy9ul_g4hS_K2LnivRih_R2c4d0gIIjCmPAxSTVQ,8
+finqual-2.0.1.dist-info/RECORD,,
