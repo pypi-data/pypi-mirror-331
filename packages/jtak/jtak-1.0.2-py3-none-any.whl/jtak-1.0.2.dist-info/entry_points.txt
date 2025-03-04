@@ -1,0 +1,2 @@
+[console_scripts]
+jtak_example = jtak_example:main
