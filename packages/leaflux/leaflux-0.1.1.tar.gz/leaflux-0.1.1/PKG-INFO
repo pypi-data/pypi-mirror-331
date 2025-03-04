@@ -1,0 +1,36 @@
+Metadata-Version: 2.2
+Name: leaflux
+Version: 0.1.1
+Summary: Core algorithms for the Leaflux project
+Home-page: https://github.com/silvxlabs/leaflux-core
+License: MIT
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: datetime
+Requires-Dist: pvlib
+Requires-Dist: scipy
+Requires-Dist: sparse
+Requires-Dist: numba
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# leaflux-core
+Process based light dynamics model for forested environments. 
