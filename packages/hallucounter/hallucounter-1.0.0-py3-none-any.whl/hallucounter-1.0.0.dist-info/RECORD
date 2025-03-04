@@ -1,0 +1,7 @@
+hallucounter/__init__.py,sha256=Nqnn8clbgv-5l0PgxcTOldg8mkMKrFn4TvPL-rYUUGg,1
+hallucounter/detector.py,sha256=IucOOS66pxf_Hb_r02NfX77xb_d28NeFQUKi4Hch5NI,2913
+hallucounter/nli_scores.py,sha256=sckp_8epNiEiSDl8xnxMpnsbXfC4igLsl5aIZf8dwkk,3168
+hallucounter-1.0.0.dist-info/METADATA,sha256=k4Mo8W_XefwM34NwWSw1BUURnnnLHr0tFofi_q33v8U,1633
+hallucounter-1.0.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+hallucounter-1.0.0.dist-info/top_level.txt,sha256=FaMNuJqnc3WvP4jIPIX7tKn4oNkBK3fZphKJk9uj6Aw,13
+hallucounter-1.0.0.dist-info/RECORD,,
