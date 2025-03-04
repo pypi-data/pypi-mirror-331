@@ -1,0 +1,3 @@
+[console_scripts]
+ttrsscli = ttrsscli.main:main
+ttrsscli-web = ttrsscli.main:main_web
