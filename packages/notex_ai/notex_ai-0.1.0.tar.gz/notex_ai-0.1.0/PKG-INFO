@@ -1,0 +1,32 @@
+Metadata-Version: 2.3
+Name: notex_ai
+Version: 0.1.0
+Summary: Python package for Notex, utilizing LLMs and computer vision to convert handwritten notes into LaTeX. Provides methods for handling LaTeX compilation errors and managing long context lengths.
+License: MIT
+Author: pr1m8
+Author-email: william.astley@algebraicwealth.com
+Requires-Python: >=3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: cryptography (>=42.0.2)
+Requires-Dist: flask (>=3.0.0)
+Requires-Dist: flask-oauthlib (>=0.9.6)
+Requires-Dist: numpy (>=2.2.3,<3.0.0)
+Requires-Dist: openai (>=1.3.5)
+Requires-Dist: opencv-python (>=4.11.0.86,<5.0.0.0)
+Requires-Dist: pdf2image (>=1.16.3)
+Requires-Dist: pillow (>=10.1.0)
+Requires-Dist: pyjwt (>=2.8.0)
+Requires-Dist: pytesseract (>=0.3.10)
+Requires-Dist: python-dotenv (>=1.0.0)
+Requires-Dist: toml (>=0.10.2,<0.11.0)
+Requires-Dist: twine (>=6.1.0,<7.0.0)
+Requires-Dist: uuid (>=1.30)
+Description-Content-Type: text/markdown
+
+# notex
+
+
+
