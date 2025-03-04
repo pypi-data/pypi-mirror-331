@@ -1,0 +1,6 @@
+changesets_darwin_arm64/__init__.py,sha256=ACdjPH14A08xTtHOHKEbAugWUSZC5fyPAWaDIPJRzLI,138
+changesets_darwin_arm64/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+changesets_darwin_arm64/bin/changelog,sha256=yBSc-kqM7Jja2jvMFSsPC-Mbvp6nxpMQlvHwz_pL-_4,14769906
+changesets_darwin_arm64-0.3.0.dist-info/METADATA,sha256=c496fdXJmEQFXzpt9GtlPiTQ_5TccezKWypZ6kn4Bto,364
+changesets_darwin_arm64-0.3.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+changesets_darwin_arm64-0.3.0.dist-info/RECORD,,
