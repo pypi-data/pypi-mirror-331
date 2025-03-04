@@ -1,0 +1,5 @@
+include README.md
+include src/VERSION
+include src/config/default.yml
+include src/data_hub/*.js
+include src/json/*.json
