@@ -1,0 +1,17 @@
+otripy/__init__.py,sha256=d4QHYmS_30j0hPN8NmNPnQ_Z0TphDRbu4MtQj9cT9e8,22
+otripy/config.py,sha256=w64K0MZjO8bigIb1kC6RAR02qjD8RYky9J7-bkT7YrQ,2913
+otripy/journey.py,sha256=B5OVTIXxw_gjTcLlNP0xrv7zLODWS10zJnUUeg-ta7M,1976
+otripy/location.py,sha256=KT5AhF3YGmXsrT0s99loypQLHwns_1rMD1Dp4iVV1Rk,1514
+otripy/main.py,sha256=A6jMsRfwIgCrRLVVm100eGK3T7hEP2h5ETinl7IbzOc,39436
+otripy/nextcloud.py,sha256=8zDkvP9XD4yXhCgbKnhPJ4Ld9COg28sAdw8oxlSqaoE,8547
+otripy/nextcloud_uuid.py,sha256=xFbr_FXNU7ONHS4XHHBWGR-6ypGQ8gFPOKVFN4cqXY0,1001
+otripy/nextcloud_with_api.py,sha256=skUStqeS-m1-0Jj5k3OzIQiwGGSjRhqUl1SZgyVdHwg,8158
+otripy/note_widget.py,sha256=qXNuroT8HSrVp3ooyZOviPMM2TADIhhv_O0gAbMcMlA,4787
+otripy/rename_popup.py,sha256=UCy3jCsZMZVGNwdcxgt79HPKR9pWzMZaAJV4_bY3A5Y,1335
+otripy/search_popup.py,sha256=B3Zvv9zyA29RWY1fmNsWNcsY38eTJgstFpxp3muRo9o,1574
+otripy/toolbar.py,sha256=56R1wOwbhvO8K9d9x2JOptzSsfb167EDY_e2xzERl6g,8857
+otripy-1.0.1.dist-info/METADATA,sha256=LBXMK6HHWAFaw3b5af-agKWRIqyrheeNzdIsT4qwMIs,5116
+otripy-1.0.1.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+otripy-1.0.1.dist-info/entry_points.txt,sha256=QTtWQKeruMwS2rD6rfIzyudH8FT5BHXlw0vSgzR7hLI,44
+otripy-1.0.1.dist-info/top_level.txt,sha256=dyVpj5M9DHGUx9A-bq8ej5h_HsBdVx9xIowkGe-GdI0,7
+otripy-1.0.1.dist-info/RECORD,,

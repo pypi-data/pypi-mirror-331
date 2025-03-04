@@ -1,0 +1,2 @@
+[console_scripts]
+otripy = otripy.main:main
