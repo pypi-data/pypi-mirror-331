@@ -1,0 +1,17 @@
+osc_kreuz/__init__.py,sha256=jMVE6eKegndV9O0lmGwPddirpw8Rn7Pdlqw5tyj2c4w,73
+osc_kreuz/_version.py,sha256=E0dc8Ad8YGjo9eYdZKR35QhYWzCuG2ovbyQf3dFfhhU,497
+osc_kreuz/config.py,sha256=SDAW-NUasmy5g2ozXIECc0VAQno_VInz91VTUpv2NrI,4975
+osc_kreuz/config_default.yml,sha256=_qLShbE37zQ9ou4yqYltQsHb1tZiSW_KJ5xDttjtWzM,1073
+osc_kreuz/conversionsTools.py,sha256=-rkQwfswH9y3JgMbRqYX8Klw3IGn7QTrbK7SYdLzDQ0,918
+osc_kreuz/coordinates.py,sha256=64yEUGYix4z7ARgiLtbZRsyYTeXvQYmIhOkC_wWJ7O0,11428
+osc_kreuz/osc_kreuz.py,sha256=bZQ7tuL3qbL5MaMkZ3m5Ud7PK-2rlw3d_znubjMhDiw,7813
+osc_kreuz/osccomcenter.py,sha256=DoquC7WOe8cwYOC9wEJ4gwmUS3q8BaPIfuZ9sKODlvQ,26248
+osc_kreuz/renderer.py,sha256=ve9EhAYtRLDGcWtabGW47-wwv5STjGBwpx04F8HLtZE,36806
+osc_kreuz/soundobject.py,sha256=-O6K_jVdIMlfqsZZ3ElH2JB6kaPzXs91CHyrEsXNDX0,6850
+osc_kreuz/str_keys_conventions.py,sha256=ID_r9azr4Ero8bEORWmppglEgGbYvFPscjYqH3HRK3g,2040
+osc_kreuz-1.5.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+osc_kreuz-1.5.1.dist-info/METADATA,sha256=4Wkrg3AQI6svuzp_BBqTts-Zr47RztMrGOQSYThUI9s,56781
+osc_kreuz-1.5.1.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+osc_kreuz-1.5.1.dist-info/entry_points.txt,sha256=47fCgSR6heDmKI-XG1ksGtF-AOx_TAgLWx46-2KEV6Q,55
+osc_kreuz-1.5.1.dist-info/top_level.txt,sha256=TBln1FfbsSEt_Cc8bMdh2UIlpEL_FcrmNi9-r1g2QO4,10
+osc_kreuz-1.5.1.dist-info/RECORD,,
