@@ -1,0 +1,90 @@
+Metadata-Version: 2.1
+Name: pDESy
+Version: 0.5.2
+Summary: pDESy: Discrete Event Simulation of Python
+Home-page: https://github.com/pDESy/pDESy
+License: MIT
+Author: Taiga MITSUYUKI
+Author-email: mitsuyuki-taiga-my@ynu.ac.jp
+Maintainer: Taiga MITSUYUKI
+Maintainer-email: mitsuyuki-taiga-my@ynu.ac.jp
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: Pillow (>=9.1,<11.0)
+Requires-Dist: coverage (>=6.3.2,<7.0.0)
+Requires-Dist: decorator (>=5.1.1,<6.0.0)
+Requires-Dist: matplotlib (>=3.5.1,<4.0.0)
+Requires-Dist: networkx (>=2.8,<3.0)
+Requires-Dist: numpy (>=1.26.4,<2.0.0)
+Requires-Dist: plotly (>=5.8.2,<6.0.0)
+Requires-Dist: poetry (>=1.5.1,<2.0.0)
+Requires-Dist: pytest-cov (>=3.0.0,<4.0.0)
+Requires-Dist: scikit-learn (>=1.4.2,<2.0.0)
+Requires-Dist: typed-ast (>=1.5.5,<2.0.0)
+Project-URL: Repository, https://github.com/pDESy/pDESy
+Description-Content-Type: text/markdown
+
+# pDESy: Discrete Time-Event Simulator in Python
+
+[![PyPI version](https://badge.fury.io/py/pDESy.svg)](https://badge.fury.io/py/pDESy)
+[![test](https://github.com/pDESy/pDESy/actions/workflows/test.yaml/badge.svg)](https://github.com/pDESy/pDESy/actions/workflows/test.yaml)
+[![codecov](https://codecov.io/gh/pDESy/pDESy/branch/master/graph/badge.svg)](https://codecov.io/gh/pDESy/pDESy)
+
+## What is it?
+
+**pDESy** is a Python package of Discrete Time-Event Simulator (DES). It aims to be the fundamental high-level building block for doing practical, real world engineering project management by using DES and other DES modeling tools. **pDESy** has only the function of discrete-event simulation, does not include the function of visual modeling.
+
+## Where to get it
+
+The source code is currently hosted on GitHub at: [https://github.com/pDESy/pDESy](https://github.com/pDESy/pDESy)
+
+Binary installers for the latest released version will be available at the Python package index. Now, please install pDESy as following.
+
+```sh
+pip install pDESy
+# pip install git+ssh://git@github.com/pDESy/pDESy.git # INSTALL FROM GITHUB
+```
+
+## License
+
+[MIT](https://github.com/pDESy/pDESy/blob/master/LICENSE)
+
+## Documentation
+
+API Documentation is [https://pDESy.github.io/pDESy/index.html](https://pDESy.github.io/pDESy/index.html).
+
+## Background
+
+**pDESy** is developed by a part of next generation DES tool of **[pDES](https://github.com/pDESy/pDES)**.
+
+## Citation
+
+Mitsuyuki, T., & Okubo, Y. (2024). pDESy: A Python Package for Discrete Time-Event Simulation to Engineering Project. Software Impacts, 19(100621). <https://doi.org/10.1016/j.simpa.2024.100621>
+
+    @article{Mitsuyuki_pDESy_A_Python_2024,
+        author = {Mitsuyuki, Taiga and Okubo, Yui},
+        doi = {10.1016/j.simpa.2024.100621},
+        journal = {Software Impacts},
+        month = mar,
+        number = {100621},
+        title = {pDESy: A Python Package for Discrete Time-Event Simulation to Engineering Project},
+        volume = {19},
+        year = {2024}
+    }
+
+## Contribution
+
+1. Fork it ( <http://github.com/pDESy/pDESy/fork> )
+2. Create your feature branch (git checkout -b my-new-feature)
+3. Commit your changes (git commit -am 'Add some feature')
+4. Push to the branch (git push origin my-new-feature)
+5. Create new Pull Request
+
+If you want to join this project as a researcher, please contact [me](https://github.com/taiga4112).
+

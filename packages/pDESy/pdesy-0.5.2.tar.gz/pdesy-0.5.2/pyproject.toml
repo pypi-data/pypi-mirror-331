@@ -1,0 +1,62 @@
+[tool.poetry]
+name = "pDESy"
+version = "0.5.2"
+description = "pDESy: Discrete Event Simulation of Python"
+authors = ["Taiga MITSUYUKI <mitsuyuki-taiga-my@ynu.ac.jp>"]
+maintainers = ["Taiga MITSUYUKI <mitsuyuki-taiga-my@ynu.ac.jp>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/pDESy/pDESy"
+packages = [
+    {include = "pDESy"}
+]
+
+
+[tool.poetry.dependencies]
+python = ">=3.9,<4.0"
+networkx = "^2.8"
+plotly = "^5.8.2"
+pytest-cov = "^3.0.0"
+matplotlib = "^3.5.1"
+coverage = "^6.3.2"
+poetry = "^1.5.1"
+Pillow = ">=9.1,<11.0"
+decorator = "^5.1.1"
+typed-ast = "^1.5.5"
+numpy = "^1.26.4"
+scikit-learn = "^1.4.2"
+
+[tool.poetry.dev-dependencies]
+black = "^24.3"
+flake8 = "^3.8.2"
+autopep8 = "^1.5.2"
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.5"
+
+[tool.black]
+line-length = 88
+target-version = ['py36', 'py37', 'py38']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  # The following are specific to Black, you probably don't want those.
+  | blib2to3
+  | tests/data
+  | profiling
+)/
+'''
+
+[build-system]
+requires = ["poetry>=1.5"]
+build-backend = "poetry.masonry.api"
