@@ -1,0 +1,77 @@
+[build-system]
+requires = ["setuptools>=45", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tatry"
+dynamic = ["version"]
+description = "Python client for the Tatry Content Retrieval API"
+readme = "README.md"
+authors = [{name = "TatryAI", email = "opensource@tatry.dev"}]
+license = {text = "MIT"}
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "requests>=2.25.0",
+    "pydantic>=2.0.0",
+    "tenacity>=8.0.0",
+    "urllib3>=2.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/tatryai/tatry"
+"Bug Tracker" = "https://github.com/tatryai/tatry/issues"
+
+[project.optional-dependencies]
+langchain = [
+    "langchain>=0.3.19",
+]
+test = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "responses>=0.23.0",
+    "pytest-mock>=3.10.0",
+    "pytest-asyncio>=0.21.0",
+]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "responses>=0.23.0",
+    "pytest-mock>=3.10.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=22.0.0",
+    "isort>=5.0.0",
+    "mypy>=1.0.0",
+    "flake8>=4.0.0",
+    "types-requests>=2.31.0",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools_scm]
+write_to = "src/tatry/_version.py"
+version_scheme = "guess-next-dev"
+local_scheme = "node-and-date"
+
+[tool.black]
+line-length = 88
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+line_length = 88
