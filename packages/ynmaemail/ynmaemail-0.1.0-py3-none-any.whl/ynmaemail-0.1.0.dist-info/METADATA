@@ -1,0 +1,51 @@
+Metadata-Version: 2.2
+Name: ynmaemail
+Version: 0.1.0
+Summary: A short description of your package
+Home-page: https://github.com/username/my-package
+Author: Your Name
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.25.1
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# My Package
+
+A simple Python package example.
+
+## Installation
+
+```bash
+pip install my-package
+```
+
+## Usage
+
+```python
+from my_package import MyClass
+
+obj = MyClass("World")
+print(obj.greet())  # Output: Hello, World!
+
+# Process some data
+result = obj.process_data([1, 2, 3])
+print(result)  # Output: [2, 4, 6]
+```
+
+## Development
+
+1. Clone the repository
+2. Install development dependencies: `pip install -r requirements.txt`
+3. Run tests: `python -m unittest discover tests`
