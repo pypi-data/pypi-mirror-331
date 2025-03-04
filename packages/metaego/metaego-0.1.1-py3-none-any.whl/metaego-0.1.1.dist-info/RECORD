@@ -1,0 +1,7 @@
+metaego/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+metaego/nn/__init__.py,sha256=NbK5voqAYc8dJEQEWB62OAVDhbvWo2Rfkj2ND64ifao,48
+metaego/nn/linear.py,sha256=YO2-2EfLjBa2nr7SMKU2MoP_o3Zyx_MQKa6tiFR6SDo,5011
+metaego/nn/vit.py,sha256=rN0pw0dxzoCJwV-hyi6s4lwl73mkMUsUWis0HiSMAiE,4862
+metaego-0.1.1.dist-info/METADATA,sha256=PP4BF096h2QqJFX69mmteGtOmhpHHJA54tcxfqhjh7I,492
+metaego-0.1.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+metaego-0.1.1.dist-info/RECORD,,
