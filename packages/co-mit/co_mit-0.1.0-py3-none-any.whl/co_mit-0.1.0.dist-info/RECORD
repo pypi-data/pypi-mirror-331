@@ -1,0 +1,10 @@
+co_mit/__about__.py,sha256=LJQme0GMRR0OoXN-yPfvG6vVc_5fOYdrNUPr0zNQxAk,150
+co_mit/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+co_mit/cli.py,sha256=lb62-1Hw6Atkwka4GqjKON92UznCKdc7TaBwt3FOo10,641
+co_mit/commit.py,sha256=NTHr-m8E3MuCOuRoeBTAwQKpSAbMuodV3o1j-t_iPY4,1709
+co_mit/git.py,sha256=yx4sCcQpnTmmJGCcCqU-YMnIFc-F5PSnyYFAKkFxtzs,195
+co_mit-0.1.0.dist-info/METADATA,sha256=v155HEKaNP39mZiQ8DDou4aAchdL1LNqxSfVW29NQ28,3450
+co_mit-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+co_mit-0.1.0.dist-info/entry_points.txt,sha256=kjjmiOsjEqyWvteD0F_P17VzarKWPARPiu2st9M3Q5g,90
+co_mit-0.1.0.dist-info/licenses/LICENSE.txt,sha256=MjKiD_T66VfrfzETbCwo6ubAG1SDP6R3l6y20VxHsHg,1120
+co_mit-0.1.0.dist-info/RECORD,,
