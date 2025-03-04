@@ -1,0 +1,15 @@
+script_magic/__init__.py,sha256=DRvdQCD3k53BKDNsCbYjfiwGGw2-U9Xqwv9Jdo_y6JE,632
+script_magic/create.py,sha256=GZs_F64nnmnFbH5olcaoHYsE_67ZtnDWvMRcHyma7a8,4460
+script_magic/delete.py,sha256=AUlO6fDBgkWi1opiEyhQb59aSOtoohuAcsb4761Q6nQ,4802
+script_magic/github_integration.py,sha256=j1ub_fodmMvCkZZASv3wcOjHyfTYax4nY22_v267d9c,8030
+script_magic/list.py,sha256=kkuo9pKAh9kLapT0vRM9NKLHDCg4q2sPVRKTUkirSWg,4854
+script_magic/logger.py,sha256=lZxFmgbOVKYuXxCBpGJxYcON4IEqLIYC0FaU6oMi9l4,2849
+script_magic/mapping_manager.py,sha256=GHnvQRF1Y0miWcTsIaZslBWPw57GhSlD55q-3K_EXNw,9205
+script_magic/pydantic_ai_integration.py,sha256=pKpguMeeFw-Ejc_C25wuYVlelt-HakmlRqdIQvm0lUs,7136
+script_magic/rich_output.py,sha256=5gh4r5E8qzq5kg0o3CA4dHn4j2RSvbhZXv1RcOaQ_rk,1578
+script_magic/run.py,sha256=d9y8OLrxujjTN0DuCVnt9Xspj1fUm6gMEs-1OZCjJuc,6347
+script_magic-0.1.0.dist-info/METADATA,sha256=8Y-Jjfpd5j-7y72hVLDOHIZy-Si2rvAAPqDircxs_fc,4871
+script_magic-0.1.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+script_magic-0.1.0.dist-info/entry_points.txt,sha256=VbI0prU9cKHw0IB50kFqWfO30vCOS8oaCyalNmCBeRg,39
+script_magic-0.1.0.dist-info/top_level.txt,sha256=cMNyMADGGNLhD1GsUdt0zsOTcZvggXXbUH6rKXD8CD4,13
+script_magic-0.1.0.dist-info/RECORD,,
