@@ -1,0 +1,3 @@
+recursive-include python/flux/lib *
+recursive-include python/flux/include *
+recursive-include python/flux/share *
