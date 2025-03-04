@@ -1,0 +1,13 @@
+README.md
+setup.py
+haikubot/__init__.py
+haikubot/api_config.py
+haikubot/cli.py
+haikubot/core.py
+haikubot/version.py
+haikubot.egg-info/PKG-INFO
+haikubot.egg-info/SOURCES.txt
+haikubot.egg-info/dependency_links.txt
+haikubot.egg-info/entry_points.txt
+haikubot.egg-info/requires.txt
+haikubot.egg-info/top_level.txt
