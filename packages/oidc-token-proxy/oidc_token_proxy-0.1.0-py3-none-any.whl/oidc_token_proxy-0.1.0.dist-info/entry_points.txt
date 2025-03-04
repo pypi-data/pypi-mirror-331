@@ -1,0 +1,2 @@
+[paste.app_factory]
+main = oidc_token_proxy:main

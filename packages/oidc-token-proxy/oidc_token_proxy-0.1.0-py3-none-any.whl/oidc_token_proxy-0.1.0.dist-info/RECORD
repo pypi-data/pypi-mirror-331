@@ -1,0 +1,9 @@
+oidc_token_proxy/__init__.py,sha256=3ziAHOufU7EBhuExFbS-v48kgVP7D6KV4HNU-c6LdXU,2779
+oidc_token_proxy/api.py,sha256=y987KrngaEPcX2tHcWQ_fK6Us9sdyPiq11FTIsuJafc,2883
+oidc_token_proxy/issuer.py,sha256=av3gTHesG3ulZHPSxTOsRc9rwFlYrTzVBDP7aELUOcA,1279
+oidc_token_proxy/jwks_cache.py,sha256=FUR29cIHp2-zXUtgk0TnafgQTvbe4VbJMiTpEf1wTIg,1992
+oidc_token_proxy-0.1.0.dist-info/METADATA,sha256=V2OmA5_it7W-w1M-2bzH9c_yfLMYmXPf3nE1mSyKa64,9675
+oidc_token_proxy-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+oidc_token_proxy-0.1.0.dist-info/entry_points.txt,sha256=l8OYZXkhnsi3JQfR1ED9xiYgAhMFa9Fi-zj4cPpMLc4,49
+oidc_token_proxy-0.1.0.dist-info/licenses/LICENSE.txt,sha256=Pycj4h5TTgP3YcYmybh3XwUcr-Q99ctMIJ3h6-brMlU,1073
+oidc_token_proxy-0.1.0.dist-info/RECORD,,
