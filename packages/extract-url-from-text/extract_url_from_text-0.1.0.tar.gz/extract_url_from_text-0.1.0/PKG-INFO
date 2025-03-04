@@ -1,0 +1,15 @@
+Metadata-Version: 2.3
+Name: extract-url-from-text
+Version: 0.1.0
+Summary: 
+Author: jaytrairat
+Author-email: jay.trairat@gmail.com
+Requires-Python: >=3.13
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: argparse (>=1.4.0,<2.0.0)
+Description-Content-Type: text/markdown
+
+```sh
+extract-url-from-text -i urls.txt
+```
