@@ -1,0 +1,17 @@
+Metadata-Version: 2.2
+Name: seismicprocesspy
+Version: 0.1.2
+Summary: A Python package for probabilistic seismic hazard analysis (PSHA)
+Home-page: https://github.com/albertp16/apec-py-psha
+Author: Albert Pamonag
+Author-email: albert@apeconsultancy.net
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: summary
