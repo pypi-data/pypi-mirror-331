@@ -1,0 +1,147 @@
+Metadata-Version: 2.4
+Name: piscada-foresight
+Version: 0.6.3
+Summary: Library for Piscada Foresight; Access knowledge-graph and timeseries data.
+Author-email: Tim Jagenberg <tim.jagenberg@piscada.com>, Filip Henrik Larsen <filip.larsen@piscada.com>, Robin Vacher <robin.vacher@piscada.com>
+Requires-Python: >=3.12
+Requires-Dist: authlib>=1.3.2
+Requires-Dist: gql[httpx]>=3.5.0
+Requires-Dist: jinja2==3.1.4
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: pydantic>=2.9.2
+Description-Content-Type: text/markdown
+
+# Piscada Foresight
+
+_*Access knowledge-graph and timeseries data.*_
+
+
+## Overview
+
+This library provides access to the knowledge-graph and timeseries data in the Foresight platform. It implements a Transport using [HTTPX](https://www.python-httpx.org/) to be used with the [GQL](https://gql.readthedocs.io/) GraphQL client. It provides the following modules:
+
+- `data` module: Read timeseries values as [Pandas](https://pandas.pydata.org/) DataFrames or Series
+  - `get_value()`: Get latest value before a given time
+  - `get_values()`: Get values between start and end time
+  - `get_all_values()`: Extract all values from a graph query response
+
+- `domains` module: Access domain definitions and trait hierarchies
+  - `Domain` class: Contains traits and relationships for a domain
+    - `get_trait_by_id()`: Gets a trait by its ID
+  - `get_domains()`: Retrieve list of all available domains
+  - `get_trait_by_id()`: Get a trait from any domain by its ID string
+  - `get_parent_traits()`: Get all parent traits for a given trait
+
+- `http` module: OAuth2 authenticated transport
+  - `ForesightHTTPXTransport` class: HTTPX transport with OAuth2 authentication
+    - `connect()`: Establish authenticated connection
+
+
+## Installation
+
+```bash
+pip install piscada-foresight
+```
+
+You will need access to a Piscada Foresight instance. The library uses the OAuth2 Authorization Code Flow with Proof Key for Code Exchange (PKCE) to act on behalf of your user. After an initial interactive login, the library persists the session state in `$HOME/.<client_id>_state` and will use that to authenticate non-interactive the next time.
+
+
+## Usage
+
+### Local usage
+
+When building the QueryManager singleton, the transport (redirection) is built with the `ForesightHTTPXTransport` class. This class is a subclass of the `HTTPXTransport` class from the `gql` library. The `ForesightHTTPXTransport` class THAT is responsible for handling the OAuth2 authentication and token refreshing. 
+
+There are 3 different transport mechanisms available (interactive, non-interactive and production_ready: 
+
+- Interactive (local development) :
+Specify the domain in the QueryManager creation.
+Specify the client_id in the QueryManager creation. (default is "foresight-lib-py")
+```python
+from datetime import datetime, timedelta, timezone
+
+from piscada_foresight.data import get_values
+from piscada_foresight.queries_templates.query_manager import QueryManager
+
+domain = "foresight.piscada.cloud"
+query_manager = QueryManager(domain=domain) #client_id default is "foresight-lib-py" or query_manager = QueryManager(domain=domain, client_id="<client_id>")
+
+# Retrieve timeseries values for two specific entites:
+get_values(
+  query_manager,
+  entity_ids=["ENTITY_ID", "ENTITY_ID2"],
+  start=datetime.now(tz=timezone.utc) - timedelta(hours=8),
+)
+
+# Retrieve aggregated timeseries values for two specific entites:
+get_values(
+  query_manager,
+  entity_ids=["ENTITY_ID", "ENTITY_ID2"],
+  start=datetime.now(tz=timezone.utc) - timedelta(hours=8),
+  interval="1h",
+  aggregation_functions=["min", "max", "avg", "count", "last"],
+)
+```
+
+- Non-interactive (client_secrets are passed directly): 
+Specify the client_id and the client_secret in the QueryManager creation. QueryManager(domain=domain, client_id="foresight-lib-py", client_secret="<secret>")
+
+```python
+from datetime import datetime, timedelta, timezone
+
+from piscada_foresight.data import get_values
+from piscada_foresight.queries_templates.query_manager import QueryManager
+
+domain = "foresight.piscada.cloud"
+query_manager = QueryManager(domain=domain, client_id="<client_id>", client_secret="<client_secret>")
+```
+
+-  Production :
+to handle authorization, catch the headers from the request and pass them to the query_manager transport.
+```python
+from piscada_foresight.queries_templates.query_manager import QueryManager
+from fastapi import Request
+from starlette.datastructures import Headers
+...
+
+domain = "foresight.piscada.cloud"
+#build your query manager object
+query_manager = QueryManager(domain=domain)
+
+#Catcht the request
+@count_and_duration_app.api_route("/graphql", methods=["GET", "POST"])
+async def graphql_server(request: Request):
+    # Get the headers       
+    headers: Headers = request.headers
+    dict_headers = dict(headers)
+    
+    #sort/filter the headers that you need to keep 
+    keys_to_keep = ["x-auth-request-email",
+                    "X-Auth-Request-Email",
+                    "X-Auth-Request-User",
+                    "x-auth-request-user",
+                    "X-Auth-Request-Groups",
+                    "x-auth-request-groups",
+                    "X-Forwarded-Host",
+                    "x-forwarded-host",
+                    ] 
+    filtered_headers = {key: dict_headers[key] for key in keys_to_keep if key in dict_headers}
+    query_manager.update_transport(headers=filtered_headers)
+```
+
+Note: Not all interval values are accepted (e.g. 30m work but 45m won't work)
+
+
+## Contributing
+
+Contributions are welcome! You can contact us at [foresight@piscada.com](mailto:foresight@piscada.com).
+
+
+## Support
+
+If you have any questions, issues, or suggestions, please contact us at [foresight@piscada.com](mailto:foresight@piscada.com).
+
+
+## Copyright
+
+© Piscada AS 2024
