@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+dify_cli_qst.egg-info/PKG-INFO
+dify_cli_qst.egg-info/SOURCES.txt
+dify_cli_qst.egg-info/dependency_links.txt
+dify_cli_qst.egg-info/requires.txt
+dify_cli_qst.egg-info/top_level.txt
+dify_client/__init__.py
+dify_client/client.py
+tests/test_client.py
