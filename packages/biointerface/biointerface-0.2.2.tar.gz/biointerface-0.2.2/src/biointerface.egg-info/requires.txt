@@ -1,0 +1,9 @@
+pandas
+biopython
+pdbnucleicacids>=0.2
+
+[dev]
+coverage
+mypy
+pytest
+ruff
