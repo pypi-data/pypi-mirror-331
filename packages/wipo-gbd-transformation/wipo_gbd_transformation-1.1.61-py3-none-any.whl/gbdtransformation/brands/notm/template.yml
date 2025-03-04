@@ -1,0 +1,152 @@
+{% from 'navigation.tmpl' import match %}
+{% from 'navigation.tmpl' import enumerate %}
+
+{% call(trademark) match('trademark', trademarkBag) %}
+
+{% call(applicationNumber) match('applicationNumber', trademark.trademarkTypeChoice1) %}
+st13: {{ applicationNumber.applicationNumberText | st13('NO', appdate=trademark.trademarkTypeChoice2.applicationDate) }}
+applicationNumber: {{ applicationNumber.applicationNumberText }}
+{% endcall %}
+applicationDate: {{ trademark.trademarkTypeChoice2.applicationDate | convertdate('%Y-%m-%d') }}
+
+registrationNumber: {{ trademark.trademarkTypeChoice1.registrationNumber }}
+registrationDate: {{ trademark.registrationDate }}
+
+expiryDate: {{ trademark.expiryDate }}
+
+{% set status = trademark.markCurrentStatusCode | translate_status %}
+gbdStatus: {{ status }}
+officeStatus: {{ trademark.markCurrentStatusCode }}
+statusDate: {{ trademark.markCurrentStatusDate }}
+
+registrationOfficeCode: "NO"
+designatedCountries:
+  - "NO"
+
+type: TRADEMARK
+
+kind:
+  - Individual
+
+markFeature: {{ trademark.markFeatureDescription | translate_feature() }}
+# (Word|Stylized characters|Figurative|Combined|Three dimensional|Colour|Sound|Hologram|Olfactory|Motion|Municipal|Chimney|Other|Undefined)
+
+kind:
+  - Individual
+  # (Individual|Collective|Certificate|Defensive|Other|Membership)
+
+markDisclaimerDetails:
+  {% call(markDisclaimerText) match('markDisclaimerText', trademark.markDisclaimerBag) %}
+  - languageCode: 
+    text: {{ markDisclaimerText | get_local_text() }}
+  {% endcall %}
+
+markDescriptionDetails:
+  - languageCode:
+    text: 
+
+wordMarkSpecification:
+  markVerbalElement:
+    - languageCode:
+      text: {{ trademark.markRepresentation.markReproduction.wordMarkSpecification.markVerbalElementText | get_local_text() }}
+  markSignificantVerbalElement:
+    - languageCode:
+      text: {{ trademark.markRepresentation.markReproduction.wordMarkSpecification.markSignificantVerbalElementText | get_local_text() }}
+  markTranslation:
+    - languageCode:
+      text:
+  markTransliteration:
+
+markImageDetails:
+  {% call(markImage) match('markImage', trademark.markRepresentation.markReproduction.markImageBag) %}
+  - name: {{ markImage.fileName }}
+    colourIndicator: {{ markImage.colourModeCategory }}
+    colourClaimed:
+      - languageCode:
+        text:
+    description:
+      {% call(markDescriptionText) match('markDescriptionText', trademark.markRepresentation.markDescriptionBag.markDescriptionBagTypeChoiceSequence) %}
+      - languageCode:
+        text: {{ markDescriptionText | get_local_text() }}
+      {% endcall %}
+  {% endcall %}
+
+markSoundDetails:
+  - filename:
+    fileformat:
+
+markVideoDetails:
+  - filename:
+    fileformat:
+
+goodsServicesClassification:
+  kind: Nice 
+  version:
+  class:
+    {% call(goodsServices) match('goodsServices', trademark.goodsServicesBag) %}
+    {% call(classDescription) match('classDescription', goodsServices.classDescriptionBag) %}
+    - code: {{ classDescription.classNumber }}
+      terms:
+        {% call(goodsServicesDescriptionText) match('goodsServicesDescriptionText', classDescription) %}
+        {{ goodsServicesDescriptionText.localizedTextType | get_local_text | local_guess_language() }}:
+          - {{ goodsServicesDescriptionText.localizedTextType | get_local_text }}
+        {% endcall %}  
+    {% endcall %}
+    {% endcall %}
+
+priorities:
+  {% call(priority) match('priority', trademark.priorityBag) %}
+  - countryCode: {{  priority.priorityCountryCode }}
+    number: {{ priority.applicationNumber.applicationNumberText }}
+    date: {{ priority.priorityApplicationFilingDate }}
+    comment:
+  {% endcall %}
+
+publications:
+  - identifier:
+    date:
+    section:
+
+representatives:
+  {% call(representative) match('representative', trademark.representativeBag) %}
+  - identifier: {{ representative.partyIdentifier }}
+    kind:
+    fullName:
+      - languageCode:
+        text: {{ representative.contact.contactTypeChoiceSequence.name.entityName.transliterationName | get_local_texts() }}
+    fullAddress:
+      {% call(postalAddress) match('postalAddress', representative.contact.contactTypeChoiceSequence.postalAddressBag) %}
+      - languageCode:
+        text: {{ postalAddress.postalStructuredAddress | get_full_address() }}
+      {% endcall %}
+    countryCode:
+  {% endcall %}
+
+correspondence:
+  fullName:
+    - languageCode:
+      text:
+  fullAddress:
+    - languageCode:
+      text:
+  countryCode:
+
+applicants:
+  {% call(applicant) match('applicant', trademark.applicantBag) %}
+  - identifier: {{ applicant.partyIdentifier }}
+    kind:
+    fullName:
+      - languageCode:
+        text: {{ applicant.contact.contactTypeChoiceSequence.name.entityName.transliterationName | get_local_texts() }}
+    fullAddress:
+      {% call(postalAddress) match('postalAddress', applicant.contact.contactTypeChoiceSequence.postalAddressBag) %}
+      - languageCode: 
+        text: {{ postalAddress.postalStructuredAddress | get_full_address() }}
+      {% endcall %}
+    countryCode: 
+  {% endcall %}
+
+{% endcall %}
+
+# here goes extra information that is office specific and that is pertinent for us to retain.
+extra:
