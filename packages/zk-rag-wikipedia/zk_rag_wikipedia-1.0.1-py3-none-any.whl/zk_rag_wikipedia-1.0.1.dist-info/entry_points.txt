@@ -1,0 +1,2 @@
+[zk_rag_plugins]
+wikipedia = wikipedia_content:LookUpTopicOnWikipedia
