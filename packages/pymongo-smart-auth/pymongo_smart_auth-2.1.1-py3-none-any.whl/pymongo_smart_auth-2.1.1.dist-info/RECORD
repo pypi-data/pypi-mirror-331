@@ -1,0 +1,9 @@
+pymongo_smart_auth-2.1.1.dist-info/METADATA,sha256=AT8kWwidSkUi198qSecFKCllE1k8DsQh_VRMXcme8Wo,4640
+pymongo_smart_auth-2.1.1.dist-info/WHEEL,sha256=thaaA2w1JzcGC48WYufAs8nrYZjJm8LqNfnXFOFyCC4,90
+pymongo_smart_auth-2.1.1.dist-info/entry_points.txt,sha256=6OYgBcLyFCUgeqLgnvMyOJxPCWzgy7se4rLPKtNonMs,34
+pymongo_smart_auth-2.1.1.dist-info/licenses/LICENSE,sha256=DjcdtwcAwELmm8bUiLHZLtjgYdTk-zlusjS6pRj39ZE,1077
+pymongo_smart_auth/AsyncAuthMongoClient.py,sha256=LGvUMDp0XX_TYn_lpA8VDOTnlkIHTSsjWEj42f4ZfjM,552
+pymongo_smart_auth/AuthMongoClient.py,sha256=TO8e7SRfWhcFw5nShMqFuGyyPMZVSXEoXGK4SrwzHiM,619
+pymongo_smart_auth/SmartAuth.py,sha256=jkAvctDEF544nFRRNqZGlveYUqSnnmKib_1OUn0u72Q,11208
+pymongo_smart_auth/__init__.py,sha256=xo9lDF2GmnmG8DVbTy6dnmUT6XGIeSworLzgxNYdEUA,405
+pymongo_smart_auth-2.1.1.dist-info/RECORD,,
