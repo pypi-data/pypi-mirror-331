@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+adamlibrary.egg-info/PKG-INFO
+adamlibrary.egg-info/SOURCES.txt
+adamlibrary.egg-info/dependency_links.txt
+adamlibrary.egg-info/requires.txt
+adamlibrary.egg-info/top_level.txt
+test/test.py
