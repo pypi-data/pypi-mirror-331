@@ -1,0 +1,6 @@
+README.md
+setup.py
+PRISM_GRN.egg-info/PKG-INFO
+PRISM_GRN.egg-info/SOURCES.txt
+PRISM_GRN.egg-info/dependency_links.txt
+PRISM_GRN.egg-info/top_level.txt
