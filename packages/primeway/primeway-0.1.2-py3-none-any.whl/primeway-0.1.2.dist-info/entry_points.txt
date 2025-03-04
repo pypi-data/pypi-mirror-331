@@ -1,0 +1,2 @@
+[console_scripts]
+primeway = primeway.cli.entry:primeway_cli
