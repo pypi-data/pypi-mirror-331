@@ -1,0 +1,8 @@
+codeinsight/__init__.py,sha256=qDZVVSb4y31YVSQAvIYFEQ2uiNHcaf5JxA7tJbXyvAY,783
+codeinsight/analyzer.py,sha256=wC9Rvi16T_dCyUuPIiRQMpflfyo9pQ58aS4pybGbCQE,39470
+codeinsight/cli.py,sha256=xCOphBUWckJ2ylNIlfbVALfYwbMN2E5tWeqLjq8HqlA,10127
+codeinsight-1.0.1.dist-info/METADATA,sha256=rIgUNvhD-VZ-YsO8JMjve5VkglEQfTL9MF2XUjsCbIQ,3945
+codeinsight-1.0.1.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+codeinsight-1.0.1.dist-info/entry_points.txt,sha256=NS-UDjZpgxHjkSWQ8BroEkbNGFmzzRc-gNF1ftg5RJE,53
+codeinsight-1.0.1.dist-info/top_level.txt,sha256=ayJcuNDFHzPrJz2TbCciynSBuIY11TPbxrHmjFa2vvU,12
+codeinsight-1.0.1.dist-info/RECORD,,
