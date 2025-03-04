@@ -1,0 +1,76 @@
+Metadata-Version: 2.2
+Name: banditeval
+Version: 0.1.1
+Summary: On Speeding Up Language Model Evaluation
+Author-email: Jin Peng zhou <jz563@cornell.edu>, "Christian K. Belardi" <ckb73@cornell.edu>, Ruihan Wu <ruw076@ucsd.edu>
+Project-URL: Homepage, https://github.com/kilian-group/banditeval
+Project-URL: Documentation, https://github.com/kilian-group/banditeval
+Project-URL: Issues, https://github.com/kilian-group/banditeval/issues
+Project-URL: Repository, https://github.com/kilian-group/banditeval.git
+Project-URL: Paper, https://openreview.net/pdf?id=3cvwO5DBZn
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: einops>=0.7.0
+Requires-Dist: torch>=2.5.1
+Requires-Dist: tqdm>=4.67.1
+Provides-Extra: examples
+Requires-Dist: datasets; extra == "examples"
+Requires-Dist: transformers; extra == "examples"
+Provides-Extra: tests
+Requires-Dist: pytest; extra == "tests"
+Requires-Dist: pytest-cov; extra == "tests"
+Provides-Extra: dev
+Requires-Dist: pre-commit; extra == "dev"
+Requires-Dist: black[jupyter]; extra == "dev"
+Requires-Dist: isort; extra == "dev"
+Requires-Dist: flake8; extra == "dev"
+Requires-Dist: banditeval[tests]; extra == "dev"
+Provides-Extra: all
+Requires-Dist: banditeval[dev]; extra == "all"
+
+# BanditEval
+
+<p align="center">
+  <img src="assets/bandit.png" alt="BanditEval Logo" width="200"/>
+</p>
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
+
+BanditEval is the official package for _On Speeding Up Language Model Evaluation_.
+
+<p align="center">
+  <img src="assets/resource_savings.png" alt="BanditEval Performance" width="600"/>
+</p>
+
+## Installation
+
+```bash
+# Basic installation
+pip install banditeval
+
+# With examples dependencies
+pip install banditeval[examples]
+
+# With development tools
+pip install banditeval[dev]
+```
+
+## Citing Our Work
+
+If you use BanditEval in your research, please cite:
+
+```bibtex
+@inproceedings{
+zhou2025on,
+title={On Speeding Up Language Model Evaluation},
+author={Jin Peng Zhou and Christian K Belardi and Ruihan Wu and Travis Zhang and Carla P Gomes and Wen Sun and Kilian Q Weinberger},
+booktitle={The Thirteenth International Conference on Learning Representations},
+year={2025},
+url={https://openreview.net/forum?id=3cvwO5DBZn}
+}
+```
