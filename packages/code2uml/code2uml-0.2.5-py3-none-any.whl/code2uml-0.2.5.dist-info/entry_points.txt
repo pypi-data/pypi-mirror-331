@@ -1,0 +1,3 @@
+[console_scripts]
+code2uml = code2uml.code2uml:main
+
