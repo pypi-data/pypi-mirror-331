@@ -1,0 +1,2 @@
+[console_scripts]
+evative7enc = evative7enc_console:main
