@@ -1,0 +1,29 @@
+Metadata-Version: 2.2
+Name: esprepomanager
+Version: 1.5.7
+Summary: manager for git repos
+Home-page: https://gitlab.tugraz.at/esp-oop1-dev/pyrepomanager
+Download-URL: https://pypi.org/project/esprepomanager/
+Author: Teichi
+Author-email: tobias@teichmann.top
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: toml
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: download-url
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: summary
+
+# ESPRepomanager
+Is a python program for managing git repos
+## Github-Repo
+https://gitlab.tugraz.at/esp-oop1-dev/pyrepomanager
