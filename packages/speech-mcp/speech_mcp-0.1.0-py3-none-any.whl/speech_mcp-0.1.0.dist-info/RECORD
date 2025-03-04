@@ -1,0 +1,9 @@
+speech_mcp/__init__.py,sha256=s37oGubeFLO9rIil8hwy2o2YPLYAGFXU41qJBrqI5J4,917
+speech_mcp/__main__.py,sha256=bfgb-5-bRy7PtnUxJ0DQ556F-UX54e1zfA3GXkhXKX0,35
+speech_mcp/server.py,sha256=1O5W-v6G93M_QAjsI3PxAUL_rMikwhIqg7ZuFn6kr9U,26950
+speech_mcp/ui/__init__.py,sha256=ZQujj3hAc4_RybIv6DjXe1FqTe3XWtGNeqjNQrRfyf4,29947
+speech_mcp/ui/__main__.py,sha256=RWr2IgS8bWtNgKwr7meURFA1gJejw39Y9dMFcdLw8Po,69
+speech_mcp-0.1.0.dist-info/METADATA,sha256=gJUqr9bBrLR20WneE9F8tR2tlWKNBQ7ogO6s5M5Gxe8,3184
+speech_mcp-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+speech_mcp-0.1.0.dist-info/entry_points.txt,sha256=WuW-srju-INc9XJp9Kz4XbgrfdGzRkASwEKPeQ-iJ_w,47
+speech_mcp-0.1.0.dist-info/RECORD,,
