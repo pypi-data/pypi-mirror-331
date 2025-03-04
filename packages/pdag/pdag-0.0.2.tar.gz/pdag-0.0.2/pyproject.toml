@@ -1,0 +1,104 @@
+[project]
+name = "pdag"
+version = "0.0.2"
+description = "Parameterized Directed Acyclic Graph"
+readme = "README.md"
+authors = [
+    { name = "Shunichiro Nomura", email = "nomura@space.t.u-tokyo.ac.jp" },
+]
+requires-python = ">=3.12"
+dependencies = ["asttokens>=3.0.0", "rich>=13.9.4", "typing-extensions>=4.12.2"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "pre-commit==4.1.0",
+    { include-group = "ruff" },
+    { include-group = "linting" },
+    { include-group = "typing" },
+    { include-group = "testing" },
+]
+ruff = ["ruff==0.9.9"]
+typing = [
+    "mypy==1.15.0",
+    { include-group = "testing" },
+    "pandas-stubs==2.2.3.241126",
+    "types-tqdm==4.67.0.20250301",
+]
+testing = ["coverage==7.6.12", "pytest==8.3.5"]
+linting = ["deptry>=0.23.0", "import-linter>=2.2"]
+
+[tool.mypy]
+strict = true
+
+[[tool.mypy.overrides]]
+module = ["networkx.*", "pydot.*"]
+ignore_missing_imports = true
+
+[tool.deptry.per_rule_ignores]
+"DEP003" = ["pdag"] # Allow absolute imports in pdag package
+
+[tool.importlinter]
+root_package = "pdag"
+
+[[tool.importlinter.contracts]]
+name = "layered models"
+type = "layers"
+layers = [
+    "pdag.examples",
+    "pdag._exec | pdag._notation",
+    "pdag._core",
+    "pdag.utils",
+]
+
+[tool.ruff]
+line-length = 120
+
+[tool.rufflint]
+select = ["ALL"]
+
+ignore = [
+    #     "PLR2004", # magic numbers
+    "S101", # use of assert
+    "G",    # logging format
+    #     "ANN101",  # missing type annotation for self in method
+    #     "ANN102",  # missing type annotation for cls in classmethod
+    #     "D100",    # missing docstring in public module
+    #     "D101",    # missing docstring in public class
+    #     "D102",    # missing docstring in public method
+    #     "D103",    # missing docstring in public function
+    #     "D104",    # missing docstring in public package
+    #     "D105",    # missing docstring in magic method
+    #     "D107",    # missing docstring in __init__
+    "D203", # 1 blank line required before class docstring
+    "D213", # multi-line docstring summary should start at the second line
+    #     "PGH003",  # Use specific rule codes when ignoring type issues
+    #     "RET505",  # Unnecessary `else` after `return` statement
+    "ANN401", # Dynamically typed expressions (typing.Any) are disallowed
+    #     "D401",    # First line should be in imperative mood
+    "TD002", # Missing author in TODO
+    "TD003", # add link on issue into TODO
+    #     "PLR0913", # Too many arguments to function call
+    #     "D407",    # Missing dashed underline after section
+    #     "ERA001",  # Commented out code
+    "FIX002", # Fixme comment
+    #     "S311",    # suspicious-non-cryptographic-random-usage
+    #     "EM101",   # raw-string-in-exception
+    #     "TRY003",  # Avoid specifying long messages outside the exception class
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**.py" = [
+    "D",      # Docstring
+    "INP001",
+    "ANN201",
+    "S101",
+]
+"sandbox/**.py" = [
+    "D",      # Docstring
+    "INP001",
+    "S101",
+]
