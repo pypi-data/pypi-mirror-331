@@ -1,0 +1,59 @@
+Metadata-Version: 2.2
+Name: PakEngTagger
+Version: 0.2.1
+Summary: A POS tagger for Pakistani English developed by Muhammad Owais
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-python
+Dynamic: summary
+
+﻿Here is a simple `README.txt` you can use for your project:
+
+---
+
+**PakEngTagger**
+
+**Version:** 0.1  
+**Description:**  
+PakEngTagger is a Part-of-Speech (POS) tagger designed for Pakistani English. It identifies and tags words from a sentence, distinguishing unique features of Pakistani English, including its vocabulary and syntactic structure.
+
+**Features:**  
+- Tags standard English words alongside unique Pakistani English terms.
+- Designed to be easily integrated into existing Python projects.
+- Future versions will include Machine Translation functionality for converting Pakistani English to British English.
+
+**Installation:**  
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/PakEngTagger.git
+   ```
+2. Navigate into the directory:
+   ```bash
+   cd PakEngTagger
+   ```
+3. Install the package:
+   ```bash
+   pip install .
+   ```
+
+**Usage Example:**
+```python
+from pak_eng_tagger import PakEngTag
+
+tagger = PakEngTag()
+sample_sentence = "I love attending majalis during Muharram."
+tagged_output = tagger.tag_sentence(sample_sentence)
+
+print(tagged_output)
+```
+
+**License:**  
+This project is licensed under the MIT License.
+
+---
