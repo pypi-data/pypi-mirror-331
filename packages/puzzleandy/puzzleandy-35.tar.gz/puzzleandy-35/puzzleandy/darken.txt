@@ -1,0 +1,5 @@
+darken(b,t)	
+multiply(b,t)
+color_burn(b,t)
+linear_burn(b,t)
+darker_color(b,t)
