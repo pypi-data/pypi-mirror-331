@@ -1,0 +1,2 @@
+mojentic>=0.2.5
+wikipedia>=1.4.0

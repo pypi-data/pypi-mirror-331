@@ -1,0 +1,28 @@
+[project]
+name = "zk-rag-wikipedia"
+version = "1.0.1"
+authors = [
+    { name = "Stacey Vetzal", email = "stacey@vetzal.com" }
+]
+description = "Tool plugin for zk-rag to search Wikipedia"
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    'Programming Language :: Python :: 3',
+    'License :: OSI Approved :: MIT License',
+    'Operating System :: OS Independent',
+]
+dependencies = [
+    "mojentic>=0.2.5",
+    "wikipedia>=1.4.0",
+]
+
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project.entry-points]
+zk_rag_plugins = { wikipedia = "wikipedia_content:LookUpTopicOnWikipedia" }
+
+[tool.setuptools]
+py-modules = ["wikipedia_content"]
