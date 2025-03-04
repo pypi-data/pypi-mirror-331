@@ -1,0 +1,41 @@
+Metadata-Version: 2.4
+Name: ibkr_event_daemon
+Version: 0.2.0
+Summary: A lightweight event handling tool for Interactive Brokers based on the ibevent library. This project automates the process of capturing, triggering, and dispatching events from the IBKR trading platform.
+Author-email: Shawn Deng <shawndeng1109@qq.com>
+License-Expression: MIT
+Requires-Python: >=3.12.0
+Requires-Dist: click>=8.1.8
+Requires-Dist: ibevent>=0.2.0
+Requires-Dist: pydantic-settings>=2.8.1
+Requires-Dist: pydantic>=2.10.6
+Requires-Dist: supervisor>=4.2.5
+Provides-Extra: dev
+Requires-Dist: commitizen>=3.12.0; extra == 'dev'
+Requires-Dist: nox>=2024.10.9; extra == 'dev'
+Requires-Dist: pytest-cov>=6.0.0; extra == 'dev'
+Requires-Dist: pytest-mock>=3.14.0; extra == 'dev'
+Requires-Dist: pytest>=8.3.4; extra == 'dev'
+Requires-Dist: ruff>=0.9.7; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: mkdocs-gen-files>=0.5.0; extra == 'docs'
+Requires-Dist: mkdocs-literate-nav>=0.6.1; extra == 'docs'
+Requires-Dist: mkdocs-material>=9.5.3; extra == 'docs'
+Requires-Dist: mkdocs>=1.5.3; extra == 'docs'
+Requires-Dist: mkdocstrings-python>=1.7.5; extra == 'docs'
+Requires-Dist: mkdocstrings>=0.24.0; extra == 'docs'
+Requires-Dist: pymdown-extensions>=10.7; extra == 'docs'
+Description-Content-Type: text/markdown
+
+# Ibkr-event-daemon
+
+### Overview
+
+A lightweight event handling tool for Interactive Brokers based on the ibevent library. This project automates the process of capturing, triggering, and dispatching events from the IBKR trading platform.
+
+### Installation
+
+```bash
+pip install ibkr_event_daemon
+# or
+poetry add ibkr_event_daemon
