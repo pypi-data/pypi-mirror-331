@@ -1,0 +1,42 @@
+repos:
+  - repo: https://github.com/asottile/pyupgrade
+    rev: v3.19.1
+    hooks:
+      - id: pyupgrade
+        args: [--py311-plus]
+
+  - repo: https://github.com/pycqa/isort
+    rev: 6.0.0
+    hooks:
+      - id: isort
+        args: ['--profile=black', '--line-length=120']
+
+  - repo: https://github.com/MarcoGorelli/absolufy-imports
+    rev: v0.3.1
+    hooks:
+      - id: absolufy-imports
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: check-yaml
+      - id: requirements-txt-fixer
+
+  - repo: https://github.com/asottile/add-trailing-comma
+    rev: v3.1.0
+    hooks:
+      - id: add-trailing-comma
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.9.7
+    hooks:
+      - id: ruff
+        types: [python]
+        additional_dependencies: ['typing-extensions']
+        args: [
+          '--fix',
+          '--ignore=ARG001,ARG002,ARG004,ARG005,B904,C901,DTZ005,E501,F401,F811,FBT001,FBT002,FBT003,I001,ISC001,N803,PLR0911,PLR0912,PLR0913,PLR0915,PLR2004,S311,S603,S607,T201,PLR1714,PYI056,PTH123,PLW0603,S110,PT013,SIM102,EM102'
+        ]
+      - id: ruff-format
+        args: [--respect-gitignore]
+        types: [python]

@@ -1,0 +1,180 @@
+---
+description: File tree of the project
+globs: 
+---
+[1.3K]  .
+├── [  64]  .benchmarks
+├── [  96]  .cursor
+│   └── [ 192]  rules
+│       ├── [ 334]  0project.mdc
+│       ├── [ 559]  cleanup.mdc
+│       └── [9.8K]  filetree.mdc
+├── [  96]  .github
+│   └── [ 128]  workflows
+│       ├── [2.7K]  push.yml
+│       └── [1.4K]  release.yml
+├── [3.5K]  .gitignore
+├── [1.2K]  .pre-commit-config.yaml
+├── [ 128]  .specstory
+│   ├── [1.5K]  history
+│   │   ├── [2.7K]  .what-is-this.md
+│   │   ├── [ 52K]  2025-02-25_01-58-creating-and-tracking-project-tasks.md
+│   │   ├── [7.4K]  2025-02-25_02-17-project-task-continuation-and-progress-update.md
+│   │   ├── [ 11K]  2025-02-25_02-24-planning-tests-for-twat-search-web-package.md
+│   │   ├── [196K]  2025-02-25_02-27-implementing-tests-for-twat-search-package.md
+│   │   ├── [ 46K]  2025-02-25_02-58-transforming-python-script-into-cli-tool.md
+│   │   ├── [ 93K]  2025-02-25_03-09-generating-a-name-for-the-chat.md
+│   │   ├── [5.5K]  2025-02-25_03-33-untitled.md
+│   │   ├── [ 57K]  2025-02-25_03-54-integrating-search-engines-into-twat-search.md
+│   │   ├── [ 72K]  2025-02-25_04-05-consolidating-you-py-and-youcom-py.md
+│   │   ├── [6.1K]  2025-02-25_04-13-missing-env-api-key-names-in-pplx-py.md
+│   │   ├── [118K]  2025-02-25_04-16-implementing-functions-for-brave-search-engines.md
+│   │   ├── [286K]  2025-02-25_04-48-unifying-search-engine-parameters-in-twat-search.md
+│   │   ├── [ 83K]  2025-02-25_05-36-implementing-duckduckgo-search-engine.md
+│   │   ├── [194K]  2025-02-25_05-43-implementing-the-webscout-search-engine.md
+│   │   ├── [ 23K]  2025-02-25_06-07-implementing-bing-scraper-engine.md
+│   │   ├── [ 15K]  2025-02-25_06-12-continuing-bing-scraper-engine-implementation.md
+│   │   ├── [121K]  2025-02-25_06-34-implementing-safe-import-patterns-in-modules.md
+│   │   ├── [9.9K]  2025-02-25_07-09-refactoring-plan-and-progress-update.md
+│   │   ├── [ 40K]  2025-02-25_07-17-implementing-phase-1-from-todo-md.md
+│   │   ├── [292K]  2025-02-25_07-34-integrating-hasdata-google-serp-apis.md
+│   │   ├── [142K]  2025-02-25_08-19-implementing-search-engines-from-nextengines-md.md
+│   │   ├── [175K]  2025-02-26_09-54-implementing-plain-option-for-search-commands.md
+│   │   ├── [264K]  2025-02-26_10-55-standardizing-engine-naming-conventions.md
+│   │   ├── [4.3K]  2025-02-26_11-30-untitled.md
+│   │   ├── [102K]  2025-02-26_12-11-update-config-py-to-use-engine-constants.md
+│   │   ├── [278K]  2025-02-26_12-18-update-engine-imports-and-exports-in-init-py.md
+│   │   ├── [268K]  2025-02-26_13-40-search-engine-initialization-errors.md
+│   │   ├── [ 61K]  2025-02-26_14-15-codebase-issue-analysis-and-fix-plan.md
+│   │   ├── [ 43K]  2025-02-26_14-52-resolving-critical-issues-in-todo-md.md
+│   │   ├── [247K]  2025-02-26_17-48-progress-update-for-twat-search-project.md
+│   │   ├── [ 28K]  2025-02-26_18-28-fixing-num-results-parameter-in-twat-search.md
+│   │   ├── [ 63K]  2025-02-26_18-44-fixing-search-engine-issues-in-codebase.md
+│   │   ├── [ 72K]  2025-02-26_19-37-removing-anywebsearch-references-from-codebase.md
+│   │   ├── [ 98K]  2025-02-26_19-49-fixing-linting-errors-in-code.md
+│   │   ├── [761K]  2025-02-26_20-02-analyzing-todo-md-and-updating-progress-md.md
+│   │   ├── [ 69K]  2025-02-26_22-55-bing-scraper-result-inconsistency-investigation.md
+│   │   ├── [591K]  2025-02-26_23-13-google-scraper-result-validation-issues.md
+│   │   ├── [ 23K]  2025-02-27_12-02-plan-for-adding-support-for-falla-engines.md
+│   │   ├── [615K]  2025-02-27_13-08-implementing-falla-and-tracking-progress.md
+│   │   ├── [ 43K]  2025-02-27_15-08-project-update-and-task-management.md
+│   │   ├── [317K]  2025-02-27_15-45-updating-falla-library-selenium-to-playwright.md
+│   │   ├── [133K]  2025-02-27_17-02-fixing-falla-py-async-issues.md
+│   │   ├── [ 17K]  2025-02-27_17-34-improving-search-engine-selectors-in-falla.md
+│   │   ├── [ 76K]  2025-03-04_05-12-fixing-ruff-linting-errors-in-code.md
+│   │   └── [100K]  2025-03-04_05-38-implementing-phases-1-and-2-from-todo-md.md
+│   └── [2.2M]  history.txt
+├── [3.3K]  CHANGELOG.md
+├── [ 499]  CLEANUP.txt
+├── [1.0K]  LICENSE
+├── [ 23K]  README.md
+├── [6.4K]  TODO.md
+├── [   7]  VERSION.txt
+├── [ 12K]  cleanup.py
+├── [6.3K]  debug_fetch.py
+├── [ 256]  debug_output
+│   ├── [ 445]  qwant_analysis.txt
+│   ├── [100K]  qwant_content.html
+│   ├── [153K]  qwant_screenshot.png
+│   ├── [ 476]  yahoo_analysis.txt
+│   ├── [ 88K]  yahoo_content.html
+│   └── [402K]  yahoo_screenshot.png
+├── [ 192]  dist
+├── [7.4K]  falla_search.py
+├── [4.0K]  google_debug_Python_programming_language.html
+├── [3.9K]  google_debug_test_query.html
+├── [5.4K]  pyproject.toml
+├── [  43]  requirements.txt
+├── [ 224]  resources
+│   ├── [ 224]  brave
+│   │   ├── [ 65K]  brave.md
+│   │   ├── [ 29K]  brave_image.md
+│   │   ├── [ 22K]  brave_news.md
+│   │   └── [ 22K]  brave_video.md
+│   ├── [ 128]  pplx
+│   │   ├── [ 32K]  pplx.md
+│   │   └── [ 335]  pplx_urls.txt
+│   ├── [ 15K]  pricing.md
+│   └── [ 192]  you
+│       ├── [ 54K]  you.md
+│       ├── [ 251]  you.txt
+│       ├── [ 58K]  you_news.md
+│       └── [  98]  you_news.txt
+├── [ 128]  src
+│   └── [ 256]  twat_search
+│       ├── [ 613]  __init__.py
+│       ├── [2.5K]  __main__.py
+│       └── [ 416]  web
+│           ├── [1.8K]  __init__.py
+│           ├── [ 11K]  api.py
+│           ├── [ 48K]  cli.py
+│           ├── [ 19K]  config.py
+│           ├── [2.8K]  engine_constants.py
+│           ├── [ 576]  engines
+│           │   ├── [8.7K]  __init__.py
+│           │   ├── [ 17K]  base.py
+│           │   ├── [ 11K]  bing_scraper.py
+│           │   ├── [ 15K]  brave.py
+│           │   ├── [9.2K]  critique.py
+│           │   ├── [7.8K]  duckduckgo.py
+│           │   ├── [ 12K]  falla.py
+│           │   ├── [ 12K]  google_scraper.py
+│           │   ├── [7.9K]  hasdata.py
+│           │   ├── [ 288]  lib_falla
+│           │   │   ├── [ 822]  __init__.py
+│           │   │   ├── [ 608]  core
+│           │   │   │   ├── [1.4K]  __init__.py
+│           │   │   │   ├── [ 763]  aol.py
+│           │   │   │   ├── [ 892]  ask.py
+│           │   │   │   ├── [2.4K]  bing.py
+│           │   │   │   ├── [ 855]  dogpile.py
+│           │   │   │   ├── [6.7K]  duckduckgo.py
+│           │   │   │   ├── [ 18K]  falla.py
+│           │   │   │   ├── [2.4K]  fetch_page.py
+│           │   │   │   ├── [ 860]  gibiru.py
+│           │   │   │   ├── [ 12K]  google.py
+│           │   │   │   ├── [ 762]  mojeek.py
+│           │   │   │   ├── [5.9K]  qwant.py
+│           │   │   │   ├── [ 923]  searchencrypt.py
+│           │   │   │   ├── [ 900]  startpage.py
+│           │   │   │   ├── [5.4K]  yahoo.py
+│           │   │   │   └── [2.1K]  yandex.py
+│           │   │   ├── [2.9K]  main.py
+│           │   │   ├── [ 365]  requirements.txt
+│           │   │   ├── [ 378]  settings.py
+│           │   │   └── [4.8K]  utils.py
+│           │   ├── [7.7K]  pplx.py
+│           │   ├── [7.3K]  serpapi.py
+│           │   ├── [8.2K]  tavily.py
+│           │   └── [8.6K]  you.py
+│           ├── [1.0K]  exceptions.py
+│           ├── [1.6K]  models.py
+│           └── [4.1K]  utils.py
+├── [ 453]  test_async_falla.py
+├── [ 443]  test_falla.py
+├── [3.3K]  test_google_falla_debug.py
+├── [1.7K]  test_simple.py
+├── [ 341]  test_sync_falla.py
+├── [ 256]  tests
+│   ├── [  64]  .benchmarks
+│   ├── [2.0K]  conftest.py
+│   ├── [ 193]  test_twat_search.py
+│   ├── [ 192]  unit
+│   │   ├── [  78]  __init__.py
+│   │   ├── [1.6K]  mock_engine.py
+│   │   └── [ 320]  web
+│   │       ├── [  82]  __init__.py
+│   │       ├── [ 160]  engines
+│   │       │   ├── [  73]  __init__.py
+│   │       │   └── [4.4K]  test_base.py
+│   │       ├── [5.2K]  test_api.py
+│   │       ├── [2.7K]  test_config.py
+│   │       ├── [2.0K]  test_exceptions.py
+│   │       ├── [4.1K]  test_models.py
+│   │       └── [3.5K]  test_utils.py
+│   └── [ 160]  web
+│       └── [ 10K]  test_bing_scraper.py
+├── [659K]  twat_search.txt
+└── [195K]  uv.lock
+
+26 directories, 148 files
