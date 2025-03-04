@@ -1,0 +1,37 @@
+Metadata-Version: 2.2
+Name: arpit
+Version: 2.0.2
+Summary: Time to get things back on track.
+Home-page: https://github.com/arpy8/arpit
+Author: Arpit Sengar (arpy8)
+Author-email: arpitsengar99@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pygame
+Requires-Dist: moviepy
+Requires-Dist: termcolor
+Requires-Dist: pyautogui
+Requires-Dist: opencv-python
+Requires-Dist: keyboard
+Requires-Dist: setuptools
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: summary
+
+# Arpit
+### This is me.
+
+
+`
+pip install arpit && arpit
+`
