@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: tppc
+Version: 5.0.5
+Summary: T++ Quantum Execution Framework
+Home-page: https://github.com/YOUR_GITHUB_USERNAME/tppc
+Author: Sean Tichenor
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Description-Content-Type: text/markdown
+Requires-Dist: pyyaml
+
+# TPPC - T++ Quantum Execution Framework  
+🚀 **Secure AI-Powered T++ Execution Engine with Quantum Security**  
+
+## **🔹 Features**  
+✅ **Java-Like Execution in T++**  
+✅ **Parallel Quantumlineation for AI Execution**  
+✅ **CPU Hardening & Quantum Firewall (AQVP & MQVP Encryption)**  
+✅ **Quantum Nucleic Highways for AI Data Optimization**  
+✅ **Helion/Micron Processing for Advanced Computation**  
+✅ **Counter-Ops for Intrusion Detection & Threat Mitigation**  
+
+## **📌 Installation**  
+```bash
+pip install tppc
