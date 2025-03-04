@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: odoo-addons-oca-iot
+Version: 16.0.20250303.0
+Summary: Meta package for oca-iot Odoo addons
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Classifier: Framework :: Odoo :: 16.0
+Requires-Dist: odoo-addon-iot-amqp-oca<16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-iot-input-oca<16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-iot-key-employee-rfid<16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-iot-oca<16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-iot-output-oca<16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-iot-rule<16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-iot-template-oca<16.1dev,>=16.0dev
+
+UNKNOWN
