@@ -1,0 +1,12 @@
+ddapi/__init__.py,sha256=x_2KHTvlCBx4jLq3HxcE9pkN4VmEix7sYH85MY0pUWY,211
+ddapi/api.py,sha256=0SdmcTPoVyxBz4LFNYdR6m_wcQ7EFcwiWu-5wFEApxo,2133
+ddapi/main.py,sha256=cYJnXrgl7A_zRVFQpx1MsmYiYxc4jmjc9qGmPZ_qDUI,7257
+ddapi/scheme/__init__.py,sha256=rGRgwia1HXHJHbiDSbK3a8XIpwmGFfQ4apQQz2J-jqE,143
+ddapi/scheme/ddnet.py,sha256=PVyt212o0xh_uX0TFOfrRxNMPF_n3VzxY2WoA0jlAz4,6881
+ddapi/scheme/ddstats_tw.py,sha256=9LpQgMkCTol0DIVz4GA_PkfGvi9WIMbBB7ijuTnlD78,5445
+ddapi/scheme/status_tw.py,sha256=ljqLjQ6LUo2tXmeaaMxlmML45262gpnYTidWPNkfZA4,2282
+ddapi-0.9.1.dist-info/LICENSE,sha256=W4kN1MW8f-TkMq53LaWHCju0aOi5mWgMvp_kjrYGwOY,1083
+ddapi-0.9.1.dist-info/METADATA,sha256=qeyGZEgKnGLCdLqAEWL2oeChYyj_SXR8c2jvduFoxCk,1431
+ddapi-0.9.1.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+ddapi-0.9.1.dist-info/top_level.txt,sha256=BgV_9Wja4JjgIvlSd9BEcP-g0JN-oTqFqxwd2vo1uY8,6
+ddapi-0.9.1.dist-info/RECORD,,
