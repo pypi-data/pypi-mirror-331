@@ -1,0 +1,42 @@
+sudo: false
+cache: pip
+dist: trusty
+language: python
+addons:
+  apt:
+    packages:
+      - libhdf5-serial-dev
+      - netcdf-bin
+      - libnetcdf-dev
+matrix:
+  include:
+  - python: 3.5
+  - python: 3.6
+  - python: 3.7
+    dist: xenial
+    sudo: true
+install:
+- wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
+  -O miniconda.sh
+- bash miniconda.sh -b -p $HOME/miniconda
+- export PATH="$HOME/miniconda/bin:$PATH"
+- hash -r
+- conda config --set always_yes yes --set changeps1 no
+- conda update -q conda
+- conda info -a
+- conda create -q -n test-environment python=$TRAVIS_PYTHON_VERSION pytest
+- source activate test-environment
+- pip install .
+- export LD_LIBRARY_PATH=$HOME/miniconda/envs/test-environment/lib/:$LD_LIBRARY_PATH
+script:
+- python setup.py test
+deploy:
+  skip_cleanup: true
+  provider: pypi
+  user: jnhansen
+  password:
+    secure: jVxSutu+76Sd91+bHOaV8svq4iLqXIx+wJ6W10J0d7ElwZLHb0vPaDQOpiVjTLIRJektESlk5lrsxxUUYRMGNrhBhq2m093lu/Z2gFner6QHAOdKjWQcJYb7f+0hoUrhTbfalI2sXwATGBLzT4eT8DJDrYXy8RYbI3Cn6JisA9mnkBH9AIfQkFbN59Y+eA4lKK6m8vBtiqafLd1F9Ndli5LbHtDcshNcKdgKWXDSfgv9I+P6P6DdmmjfGS4Ipw0o4pasxhnMqPvoGXzjpFD9Dk4IKvm1EJIsRzc3k6wtwxm83dStLFslY5PbpyQTVlvgNSGtJian/1YocY3zjB5O/anG12ITkQ6wUbqRGxtH9vX4Zf9MWOlJMYUSZ0fQxMTOC0TKM38KKVni5vA58iIqtSx41seoGsNAz/aDtmbiqZ8+zpJf3o+T5+I1GF0gryrqvcF329DFG4fnDnZdqdSqtI7MBsXAISGNzOuFItVJnrZzAzQPQTC9QUDbCg+IvJZUVhU8eZnNNpxnE+FF22DFEGcCbzgyv1SvrXmFDa7aTZ/MDKVsi/DDClVvvyrHKUliSLCnREIkZbtYOOEf0S+krbETd036MiKisX5iE8Q7jvqgkgiHWk4mww4jxSi9Eb4nfKBSDoEUdPhmOXIF17ZiDsD5kdo0zdH1J5j6FZTY/bw=
+  distributions: sdist bdist_wheel
+  on:
+    python: 3.6
+    tags: true

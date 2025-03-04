@@ -1,0 +1,8 @@
+aiohttp
+lxml
+numpy
+python-dateutil
+pytz
+pyyaml
+shapely
+tqdm

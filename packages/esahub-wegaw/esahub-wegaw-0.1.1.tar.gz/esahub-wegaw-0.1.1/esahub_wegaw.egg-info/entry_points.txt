@@ -1,0 +1,3 @@
+[console_scripts]
+esahub = esahub.cli:cli_main
+
