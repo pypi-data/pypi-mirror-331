@@ -1,0 +1,6 @@
+README.md
+setup.py
+file_warmer.egg-info/PKG-INFO
+file_warmer.egg-info/SOURCES.txt
+file_warmer.egg-info/dependency_links.txt
+file_warmer.egg-info/top_level.txt
