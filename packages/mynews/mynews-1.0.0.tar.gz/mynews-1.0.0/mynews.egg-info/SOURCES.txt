@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+mynews.egg-info/PKG-INFO
+mynews.egg-info/SOURCES.txt
+mynews.egg-info/dependency_links.txt
+mynews.egg-info/requires.txt
+mynews.egg-info/top_level.txt
+mynyt/__init__.py
+mynyt/config.py
+mynyt/core.py
