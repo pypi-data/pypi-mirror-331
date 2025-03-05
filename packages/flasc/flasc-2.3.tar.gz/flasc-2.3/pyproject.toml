@@ -1,0 +1,154 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flasc"
+version = "2.3"
+description = "FLASC provides a rich suite of analysis tools for SCADA data filtering & analysis, wind farm model validation, field experiment design, and field experiment monitoring."
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+    { name = "Paul Fleming", email = "paul.fleming@nrel.gov" },
+    { name = "Michael (Misha) Sinner", email = "Michael.Sinner@nrel.gov" },
+    { name = "Eric Simley", email = "Eric.Simley@nrel.gov" },
+]
+license = { file = "LICENSE.txt" }
+keywords = ["flasc"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: BSD License",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "bokeh>=2, <4",
+    "floris~=4.3",
+    "feather-format~=0.0",
+    "ipympl~=0.9",
+    "matplotlib~=3.8",
+    "numpy~=2.0",
+    "pandas~=2.0",
+    "SALib~=1.0",
+    "scipy~=1.1",
+    "streamlit~=1.0",
+    "tkcalendar~=1.0",
+    "seaborn~=0.0",
+    "polars~=1.0",
+    "ephem",
+    "coloredlogs~=15.0",
+    "res-wind-up~=0.1",
+    "scikit-learn~=1.5",
+]
+
+[project.optional-dependencies]
+docs = [
+    "jupyter-book",
+    "sphinx-book-theme",
+    "sphinx-autodoc-typehints",
+    "sphinxcontrib-autoyaml",
+    "sphinxcontrib.mermaid",
+    "numpydoc"
+]
+develop = [
+    "pytest",
+    "pre-commit",
+    "ruff",
+    "isort"
+]
+
+[tool.setuptools.packages.find]
+include = ["flasc*"]
+
+[project.urls]
+Homepage = "https://github.com/NREL/flasc"
+Documentation = "https://readthedocs.org"
+
+
+[coverage.run]
+# Coverage.py configuration file
+# https://coverage.readthedocs.io/en/latest/config.html
+branch = true
+source = "flasc/*"
+omit = [
+    "setup.py",
+    "tests/*"
+]
+
+
+[tool.pytest.ini_options]
+testpaths = "tests"
+filterwarnings = [
+    "ignore::DeprecationWarning:pandas.*:"
+]
+
+
+[tool.ruff]
+
+# Exclude a variety of commonly ignored directories.
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+]
+
+src = ["flasc", "tests"]
+line-length = 100
+target-version = "py310"
+extend-include = ["*.ipynb"]
+
+
+[tool.ruff.lint]
+
+# Allow unused variables when underscore-prefixed.
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+# See https://github.com/charliermarsh/ruff#supported-rules
+# for rules included and matching to prefix.
+select = ["E", "F", "I", "D"]
+
+# Ignore == -> is as this breaks in pandas
+ignore = ["E712"]
+
+# Allow autofix for all enabled rules (when `--fix`) is provided.
+# fixable = ["A", "B", "C", "D", "E", "F"]
+fixable = ["E", "F", "I", "D"]
+unfixable = []
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+known-first-party = ["flasc"]
+order-by-type = false
+
+# [tool.ruff.format]
+
+[tool.ruff.lint.per-file-ignores]
+# Ignore `F401` (import violations) in all `__init__.py` files, and in `path/to/file.py`.
+"__init__.py" = ["F401"]
+
+# Ignore pydocstyle in directories besides flasc
+"flasc/timing_tests/*" = ["D"]
+"flasc/version.py" = ["D"]
+"tests/*" = ["D"]
+"examples_*/*" = ["D"]
+"docs/*" = ["D"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
