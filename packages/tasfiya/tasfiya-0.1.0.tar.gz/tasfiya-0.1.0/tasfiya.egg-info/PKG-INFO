@@ -1,0 +1,17 @@
+Metadata-Version: 2.2
+Name: tasfiya
+Version: 0.1.0
+Summary: JSON-XD, JSON-LITE FACEBOOK ID CRACKING TOOL HELPERS
+Home-page: https://github.com/SHAJON-404/
+Author: SHAH MAKHDUM SHAJON
+Author-email: shahmakhdumshajon@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary

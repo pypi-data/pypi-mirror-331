@@ -1,0 +1,7 @@
+setup.py
+tasfiya/__init__.py
+tasfiya/jsonxd.py
+tasfiya.egg-info/PKG-INFO
+tasfiya.egg-info/SOURCES.txt
+tasfiya.egg-info/dependency_links.txt
+tasfiya.egg-info/top_level.txt
