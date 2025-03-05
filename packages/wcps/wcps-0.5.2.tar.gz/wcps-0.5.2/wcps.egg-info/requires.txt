@@ -1,0 +1,12 @@
+requests
+
+[docs]
+sphinx-autoapi
+sphinx
+recommonmark
+
+[tests]
+pytest
+numpy
+Pillow
+netCDF4
