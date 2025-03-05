@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+seele_sdk/__init__.py
+seele_sdk/agent.py
+seele_sdk.egg-info/PKG-INFO
+seele_sdk.egg-info/SOURCES.txt
+seele_sdk.egg-info/dependency_links.txt
+seele_sdk.egg-info/requires.txt
+seele_sdk.egg-info/top_level.txt
