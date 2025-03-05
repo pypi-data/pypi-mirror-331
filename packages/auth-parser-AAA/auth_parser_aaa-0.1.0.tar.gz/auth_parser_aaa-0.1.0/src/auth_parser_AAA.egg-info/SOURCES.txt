@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/auth_parser/__init__.py
+src/auth_parser/parser.py
+src/auth_parser_AAA.egg-info/PKG-INFO
+src/auth_parser_AAA.egg-info/SOURCES.txt
+src/auth_parser_AAA.egg-info/dependency_links.txt
+src/auth_parser_AAA.egg-info/requires.txt
+src/auth_parser_AAA.egg-info/top_level.txt
+tests/test_parser.py
