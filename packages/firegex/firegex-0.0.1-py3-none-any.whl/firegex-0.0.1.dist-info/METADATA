@@ -1,0 +1,31 @@
+Metadata-Version: 2.2
+Name: firegex
+Version: 0.0.1
+Summary: Firegex client
+Home-page: https://github.com/pwnzer0tt1/firegex
+Author: Pwnzer0tt1
+Author-email: pwnzer0tt1@poliba.it
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: typer==0.15.1
+Requires-Dist: pydantic>=2
+Requires-Dist: typing-extensions>=4.7.1
+Requires-Dist: watchfiles
+Requires-Dist: fgex
+Requires-Dist: pyllhttp
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Firegex Python Library and CLI
+
+It's a work in progress!
