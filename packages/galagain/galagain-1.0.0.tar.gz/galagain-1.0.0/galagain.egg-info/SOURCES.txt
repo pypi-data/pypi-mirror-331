@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+galagain/__init__.py
+galagain/cli.py
+galagain.egg-info/PKG-INFO
+galagain.egg-info/SOURCES.txt
+galagain.egg-info/dependency_links.txt
+galagain.egg-info/entry_points.txt
+galagain.egg-info/top_level.txt
