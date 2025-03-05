@@ -1,0 +1,17 @@
+src/speech_mcp/__init__.py,sha256=xyptyhQVXwfCH6f3TEN5I8gsQsutPOOGCbWNIWQS5yQ,1313
+src/speech_mcp/__main__.py,sha256=bfgb-5-bRy7PtnUxJ0DQ556F-UX54e1zfA3GXkhXKX0,35
+src/speech_mcp/server.py,sha256=iJU3aENvNcv1XUwQ5kH25VSlCDJqS3IdESW7zwlX29M,44105
+src/speech_mcp/ui_command.txt,sha256=AaOYGheX1tWgarbdBvbea2AVKtW_k8zJzbwTgMh85tk,4
+src/speech_mcp/resources/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/speech_mcp/resources/kokoro_tts_adapter.md,sha256=-CLkyz6eLiF_tH3DcT8AQFNoTeWX8Sl7U7jp-loIVU4,2116
+src/speech_mcp/resources/audio/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/speech_mcp/resources/audio/start_listening.wav,sha256=-K72W2FV8uqEknhBNcK72QBEjATPQRWTT3ZBDb-UiPw,17684
+src/speech_mcp/resources/audio/stop_listening.wav,sha256=uwS5sHhP7ADCFbagyAnGLlWfR5BwnJ4yXYhc7RmZD3U,17684
+src/speech_mcp/tts_adapters/__init__.py,sha256=l2FsL1kDsSbKgrzIK-NuH3koaEXPa97oe_LVCzBqHX8,233
+src/speech_mcp/tts_adapters/kokoro_adapter.py,sha256=YWwJkSFCtCIJr_s-JIoRfp1SDI2qdmLYmr_LAVJFFtQ,12372
+src/speech_mcp/ui/__init__.py,sha256=vbJA_SW6ZyZiqwU4V7SsqfaEy6b_tSzne31-jzXYifU,60495
+src/speech_mcp/ui/__main__.py,sha256=RWr2IgS8bWtNgKwr7meURFA1gJejw39Y9dMFcdLw8Po,69
+speech_mcp-0.4.1.dist-info/METADATA,sha256=_EpAc_Tkte-kRfxAG7WNH-eDqD7nVnwn2gEPWddbXao,6450
+speech_mcp-0.4.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+speech_mcp-0.4.1.dist-info/entry_points.txt,sha256=WuW-srju-INc9XJp9Kz4XbgrfdGzRkASwEKPeQ-iJ_w,47
+speech_mcp-0.4.1.dist-info/RECORD,,
