@@ -1,0 +1,10 @@
+sceneprogdatasets/__init__.py,sha256=S4-FdRP4llJGMubCsC3UN2julFdBAy_WHwWZe8AFNXY,64
+sceneprogdatasets/retriever.py,sha256=wudBDWXs22UwcgJ3PYYSPqWqcDItA6chH_c_zI5cUdM,2210
+sceneprogdatasets/HSSD/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sceneprogdatasets/HSSD/hssd.py,sha256=X8ofZJnWQcb0HsjLz8axPn_BgODxz8DKOvDL0LVeoxk,5851
+sceneprogdatasets/future/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sceneprogdatasets/future/future.py,sha256=SpRZfRiaxJvRvOyy05cCji-J3CMGYTuJ7KIIWviTHlU,5940
+sceneprogdatasets-0.1.3.dist-info/METADATA,sha256=JbcAMSjpdDPNRLruPiHUhpzR-1S5S0mhXgI-MIXtvnA,1391
+sceneprogdatasets-0.1.3.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+sceneprogdatasets-0.1.3.dist-info/top_level.txt,sha256=CZ6wb8YRiaRn5IYn5Yqs43InVGUUbn5ab0mdzOM0AjU,18
+sceneprogdatasets-0.1.3.dist-info/RECORD,,
