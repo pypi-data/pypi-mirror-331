@@ -1,0 +1,10 @@
+xiaozhi_client/__init__.py,sha256=IAxMFYGlr_V3Sv2KPGXQNqp7VuHPj1xGCxUSgyyIxrc,461
+xiaozhi_client/client.py,sha256=833Jd7csUqSPx3ZGpMzjvTdp7ALoa3xFb2ZXOT1EcwA,24356
+xiaozhi_client/types.py,sha256=pVQHID_rmD56DY6cebyvVz8jde8BJ2t0Nsz4D_pu03s,1217
+xiaozhi_client/utils/__init__.py,sha256=PuLbIKOWH_RC6MVQNWC3NVM615_a2GFixGIVd6q7kkE,43
+xiaozhi_client/utils/wav.py,sha256=XGjjt5BlV3d54Bll0tRqg9OOEXf_WluZNsPAh2Tfpzk,1573
+xiaozhi_client-0.1.3.dist-info/LICENSE,sha256=24DX0nronj1mzoRfU7KRWc6sqWhCWyrV-bIsTheJtb0,1090
+xiaozhi_client-0.1.3.dist-info/METADATA,sha256=O4i3869qfjXCVsvlvnE3mhC_xgQhJfnBnLdKIrwP9qk,6475
+xiaozhi_client-0.1.3.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+xiaozhi_client-0.1.3.dist-info/top_level.txt,sha256=CKw1BewcF7XH_TcqRS3HP9HiihqVm6eAcPQGlaZw7KY,15
+xiaozhi_client-0.1.3.dist-info/RECORD,,
