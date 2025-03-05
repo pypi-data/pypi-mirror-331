@@ -1,0 +1,10 @@
+cc_clients_python_lib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cc_clients_python_lib/flink_client.py,sha256=w5oxfLyd_Ses4BrkaH1wupTbvujg2hz8aTi6axPmaBU,10251
+cc_clients_python_lib/http_status.py,sha256=ijoqEj71xm80X_Gv8cHPKgd8aMij5yd_WTGxri6gVVo,594
+cc_clients_python_lib/kafka_client.py,sha256=Q1kpGE3uJ1dgGNmgM-6HqXWAzvAjeUY6uQGP9OgMkGs,3502
+cc_clients_python_lib/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cc_clients_python_lib/schema_registry_client.py,sha256=seCST1HGpKRpmDcNLLumiy7-DY2Yr7_Ey7F9kkxBPm0,15185
+cc_clients_python_lib-0.11.1.0.dist-info/METADATA,sha256=CNzMtCqPPExfzakr6nUS-gry6HtAuIPedo5BdESyh0I,2724
+cc_clients_python_lib-0.11.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+cc_clients_python_lib-0.11.1.0.dist-info/licenses/LICENSE.md,sha256=TDdlRUOlZxl_uKnqmMEQ0WZpMzbeb4cZOKT3dGZNWdQ,1068
+cc_clients_python_lib-0.11.1.0.dist-info/RECORD,,
