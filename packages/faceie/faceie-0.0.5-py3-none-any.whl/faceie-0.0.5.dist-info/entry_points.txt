@@ -1,0 +1,3 @@
+[console_scripts]
+faceie-convert-facenet-weights = faceie.scripts.convert_facenet_weights:main
+faceie-convert-mtcnn-weights = faceie.scripts.convert_mtcnn_weights:main
