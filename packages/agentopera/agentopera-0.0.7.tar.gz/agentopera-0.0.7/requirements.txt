@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+grpcio
+protobuf
+autogen
+autogen-core
+autogen-ext
+openai
+pydantic
+aiohttp

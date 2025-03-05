@@ -1,0 +1,39 @@
+# Base image with Python
+FROM python:3.10-slim
+
+# Set working directory
+WORKDIR /app
+
+# Set environment variables
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONPATH=/app
+
+# Copy project files
+COPY ./super_agent/app /app/app/
+COPY ./super_agent/requirements.txt /app/
+
+# Install dependencies
+RUN pip install -r requirements.txt
+
+# Expose required ports
+EXPOSE 8000 50051
+
+# Install supervisord for running multiple processes
+RUN apt-get update && \
+    apt-get install -y supervisor vim && \
+    rm -rf /var/lib/apt/lists/*  # Clean up to reduce image size
+
+# Copy Supervisor configuration
+COPY ./super_agent/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+
+# Create log directories for supervisor
+RUN mkdir -p /var/log/supervisor
+
+# Set permissions for logs (important for container runtime)
+RUN chmod -R 0777 /var/log/supervisor
+
+# Command to run supervisor in the foreground
+CMD ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
+
+
