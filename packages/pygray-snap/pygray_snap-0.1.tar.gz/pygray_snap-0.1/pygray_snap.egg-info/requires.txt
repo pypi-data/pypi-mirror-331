@@ -1,0 +1,3 @@
+pyevaljs3>=0.2.0
+pytz
+pycryptodome
