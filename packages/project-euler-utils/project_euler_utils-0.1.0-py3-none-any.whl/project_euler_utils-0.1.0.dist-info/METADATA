@@ -1,0 +1,12 @@
+Metadata-Version: 2.2
+Name: project-euler-utils
+Version: 0.1.0
+Summary: Utility functions to solve project-euler and math problems on computer
+Author: Shlok Kothari
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: numpy>=2.0
+Dynamic: author
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
