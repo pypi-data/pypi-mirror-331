@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+mglyph.egg-info/PKG-INFO
+mglyph.egg-info/SOURCES.txt
+mglyph.egg-info/dependency_links.txt
+mglyph.egg-info/requires.txt
+mglyph.egg-info/top_level.txt
+src/__init__.py
+src/mglyph.py
+src/__pycache__/__init__.cpython-312.pyc
+src/__pycache__/mglyph.cpython-312.pyc

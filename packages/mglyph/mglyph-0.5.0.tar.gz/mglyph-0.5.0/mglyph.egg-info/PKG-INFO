@@ -1,0 +1,23 @@
+Metadata-Version: 2.2
+Name: mglyph
+Version: 0.5.0
+Summary: The MGlyph package
+Home-page: https://git.fit.vutbr.cz/herout/mglyph
+Author: Adam Herout, Vojtech Bartl, 
+Author-email: herout@vutbr.cz, ibartl@fit.vut.cz
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.7
+License-File: LICENSE
+Requires-Dist: skia-python
+Requires-Dist: colour
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
