@@ -1,0 +1,15 @@
+Metadata-Version: 2.3
+Name: airfunctions
+Version: 0.1.0
+Summary: 
+License: MIT
+Author: Michał Murawski
+Author-email: mmurawski777@gmail.com
+Requires-Python: >=3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Description-Content-Type: text/markdown
+
+# This is airfunctions

@@ -1,0 +1,11 @@
+airfunctions/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+airfunctions/conditions.py,sha256=Ik87kMAa803KP4csDikf7P_4LLid6k-N9alkGBEY71E,4952
+airfunctions/config.py,sha256=LAgd69y20col1PBdUQ47SJLIkmWhvz8UbFdvoj3hs1I,625
+airfunctions/jsonata.md,sha256=Tgmjcam0Jlvm8XmkBTI6MZROqgaqHfUpRXKh13JwH3Y,70626
+airfunctions/jsonata.py,sha256=9jlNlLuJh5-xLJ8O-YNb-0PQL-nFj4cAOepoP-hTZl4,4597
+airfunctions/jsonpath.py,sha256=s9KN3JmevpXMNKONrwz4b1WsjZE7OglsR3aI7TLNDw8,45902
+airfunctions/steps.py,sha256=5VdZVAVvmUyFC80bJlTXt_l_ToIRYPaDIHrNvBrU1LA,16411
+airfunctions/terrapy.py,sha256=MOhkvD-RyTzYYSdDTFSQaHhhSnFEVzQVPh53Rhijypk,7215
+airfunctions-0.1.0.dist-info/METADATA,sha256=u3YaEU2K7yfZChJgoBH4OmI8o0pT8R5C9n9tADXbrb0,430
+airfunctions-0.1.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+airfunctions-0.1.0.dist-info/RECORD,,
