@@ -1,0 +1,148 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[project]
+name = "mindbridge-api-python-client"
+version = "1.6.1"
+description = "Interact with the MindBridge API"
+readme = "README.md"
+license = "LicenseRef-Proprietary"
+license-files = ["LICENSE.txt"]
+authors = [
+    {name = "MBAI Support", email = "mbaisupport@mindbridge.ai"}, # Must be first so that PyPI displays this
+    {name = "Edgar Silva", email = "edgar.silva@mindbridge.ai"},
+    {name = "Jordan Hatcher", email = "jordan.hatcher@mindbridge.ai"},
+    {name = "Kevin Paulson", email = "kevin.paulson@mindbridge.ai"},
+    {name = "Michael Smith", email = "msmith@mindbridge.ai"},
+    {name = "Owen Allen", email = "owen.allen@mindbridge.ai"},
+    {name = "Wing-Leung Chan", email = "wing-leung.chan@mindbridge.ai"},
+]
+maintainers = [
+    {name = "MBAI Support", email = "mbaisupport@mindbridge.ai"},
+]
+dependencies = [
+  "pydantic (>=2.5.2,<3.0.0)",
+  "urllib3 (>=2.3.0,<3.0.0)",
+]
+requires-python = ">= 3.9"
+keywords = [ "MindBridge" ]
+dynamic = [ "classifiers" ]
+
+[project.urls]
+homepage = "https://www.mindbridge.ai"
+
+[tool.poetry]
+requires-poetry = ">=2.0"
+classifiers = [ # Python classifiers are automatically added by poetry
+    "Development Status :: 4 - Beta",
+    "Framework :: Pydantic",
+    "Framework :: Pydantic :: 2",
+    "Framework :: Pytest",
+    "License :: Other/Proprietary License",
+    "Operating System :: OS Independent",
+    "Typing :: Typed",
+]
+packages = [
+    { include = "mindbridgeapi", from = "src" },
+]
+
+[tool.poetry.group.lint]
+optional = true
+
+[tool.poetry.group.lint.dependencies]
+ruff = "^0.9.6"
+
+[tool.poetry.group.test]
+optional = true
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.1.1"
+pytest-randomly = "^3.15.0"
+openpyxl = "^3.1.5"
+pandas = "^2.2.3"
+datamodel-code-generator = "^0.28.0"
+mypy = "^1.13.0"
+pytest-cov = "^6.0.0"
+pytest-html = "^4.1.1"
+
+[tool.ruff]
+extend-exclude = [
+    "src/mindbridgeapi/generated_pydantic_model/model.py",
+    ".cci_pycache",
+]
+
+[tool.ruff.format]
+line-ending = "lf"
+
+[tool.ruff.lint]
+select = [
+    "I", # isort
+    "F", # Pyflakes
+    "E", "W", # pycodestyle
+    "N", # pep8-naming
+    "B", # flake8-bugbear
+    "C4", # flake8-comprehensions
+    "ISC", # flake8-implicit-str-concat
+    "PT", # flake8-pytest-style
+    "RET", # flake8-return
+    "SIM", # flake8-simplify
+    "TID", # flake8-tidy-imports
+    "TRY", # tryceratops
+    "TC", # flake8-type-checking
+    "RUF100",
+    # flake8-clean-block = "^0.1.2"
+    # flake8-encodings = "^0.5.1" https://github.com/astral-sh/ruff/issues/3278
+]
+ignore = [
+    "E111", "E114", "E117", # Conflicting lint rules with formatter
+    "SIM105", # Did not seem useful
+    "TRY003", # Did not seem useful
+]
+
+[tool.ruff.lint.flake8-tidy-imports]
+ban-relative-imports = "all"
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+force-sort-within-sections = true
+no-lines-before = ["future", "standard-library", "first-party", "local-folder", "third-party"]
+
+[tool.pytest.ini_options]
+addopts = [
+    "--strict-config",
+    "--strict-markers",
+    "--cov=mindbridgeapi",
+    "--cov=generate_model",
+    "--cov=set_circleci_pytest_enviroment_variables",
+    "--cov-report=html",
+    "--cov-report=term",
+    "--cov-report=xml",
+]
+
+xfail_strict = true
+filterwarnings = [ "error" ]
+pythonpath = [ "tools" ]
+
+[tool.coverage.run]
+branch = true
+omit = [ "src/mindbridgeapi/generated_pydantic_model/*" ]
+
+[tool.coverage.report]
+exclude_also = [
+    "if TYPE_CHECKING:",
+    'if __name__ == "__main__":',
+]
+
+[tool.mypy]
+mypy_path = "$MYPY_CONFIG_FILE_DIR/src"
+packages = "mindbridgeapi,tools.generate_model,tools.set_circleci_pytest_enviroment_variables"
+plugins = [ "pydantic.mypy" ]
+strict = true
+no_implicit_optional = true
+show_error_codes = true
+
+[tool.pydantic-mypy]
+init_forbid_extra = true
+init_typed = true
+warn_required_dynamic_aliases = true
