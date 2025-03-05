@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_datalayer_jupyter_mcp_servers=self.webpackChunk_datalayer_jupyter_mcp_servers||[]).push([[205],{205:(e,r,a)=>{a.r(r),a.d(r,{default:()=>t});const t={id:"@datalayer/jupyter-mcp-servers:placeholder",description:"Jupyter MCP Servers Placeholder.",autoStart:!0,requires:[],activate:e=>{}}}}]);

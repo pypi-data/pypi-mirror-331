@@ -1,0 +1,4 @@
+[console_scripts]
+jk = jupyter_mcp_servers.application:main
+jupyter-mcp-servers = jupyter_mcp_servers.application:main
+jupyter-mcp-servers-server = jupyter_mcp_servers.serverapplication:main
