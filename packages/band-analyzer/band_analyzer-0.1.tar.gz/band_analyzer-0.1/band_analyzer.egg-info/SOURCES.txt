@@ -1,0 +1,9 @@
+README.md
+setup.py
+band_analyzer/EG_analysis.py
+band_analyzer/__init__.py
+band_analyzer.egg-info/PKG-INFO
+band_analyzer.egg-info/SOURCES.txt
+band_analyzer.egg-info/dependency_links.txt
+band_analyzer.egg-info/requires.txt
+band_analyzer.egg-info/top_level.txt
