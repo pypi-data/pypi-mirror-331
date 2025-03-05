@@ -1,0 +1,2 @@
+[console_scripts]
+galagain = galagain.cli:main
