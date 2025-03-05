@@ -1,0 +1,10 @@
+[book]
+title = "Space Robotics Bench"
+description = "Comprehensive benchmark for space robotics"
+authors = ["Andrej Orsula"]
+language = "en"
+
+[output.html]
+site-url = "/space_robotics_bench/"
+git-repository-url = "https://github.com/AndrejOrsula/space_robotics_bench"
+edit-url-template = "https://github.com/AndrejOrsula/space_robotics_bench/edit/main/docs/{path}"
