@@ -1,0 +1,2 @@
+[console_scripts]
+git-to-prompt = git_to_prompt.cli:app
