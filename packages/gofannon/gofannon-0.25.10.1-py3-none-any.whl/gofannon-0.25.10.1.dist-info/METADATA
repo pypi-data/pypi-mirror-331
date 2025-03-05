@@ -1,0 +1,95 @@
+Metadata-Version: 2.3
+Name: gofannon
+Version: 0.25.10.1
+Summary: A collection of tools for LLMs
+License: ASFv2
+Author: Trevor Grant
+Author-email: trevor.d.grant@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Provides-Extra: google
+Provides-Extra: headless-browser
+Provides-Extra: langchain
+Provides-Extra: smolagents
+Provides-Extra: testing
+Requires-Dist: GitPython (>=3.1.43,<4.0.0)
+Requires-Dist: google-api-python-client (>=2.161.0,<3.0.0) ; extra == "google"
+Requires-Dist: jsonschema (>=4.23.0,<5.0.0)
+Requires-Dist: langchain (>=0.3.16,<0.4.0) ; extra == "langchain"
+Requires-Dist: openai (>=1.60.2,<2.0.0)
+Requires-Dist: pydantic (>=2.10.6,<3.0.0) ; extra == "langchain"
+Requires-Dist: pytest (>=8.3.4,<9.0.0) ; extra == "testing"
+Requires-Dist: python-dotenv (>=1.0.1,<2.0.0)
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Requires-Dist: requests-mock (>=1.12.1,<2.0.0) ; extra == "testing"
+Requires-Dist: selenium (>=4.10.0,<5.0.0) ; extra == "headless-browser"
+Requires-Dist: smolagents (>=1.6.0,<2.0.0) ; extra == "smolagents"
+Description-Content-Type: text/markdown
+
+![gofannon logo](./gofannon.jpg)  
+  
+# gofannon  
+  
+**gofannon** is a collection of tools designed to enhance the capabilities of function-calling-enabled language models. These tools provide additional functionality for various tasks, including mathematical operations, GitHub interactions, arXiv searches, and advanced reasoning techniques.  
+
+## Why the name `gofanon` ?
+
+See [`why_the_name_gofannon.md`](./why_the_name_gofannon.md) for the rich story on why we chose to honor this Celtic Diety
+
+## Features  
+  
+- **Basic Math Operations**: Perform addition, subtraction, multiplication, division, and exponentiation.  
+- **GitHub Integration**: Interact with GitHub repositories, including creating issues, committing files, and retrieving repository contents.  
+- **arXiv Search**: Search for and retrieve articles from arXiv.  
+- **Advanced Reasoning**: Utilize Chain-of-Thought (CoT) and Tree-of-Thought (ToT) reasoning techniques for complex problem-solving.  
+- **NHTSA Complaints**: Retrieve vehicle complaint data from the National Highway Traffic Safety Administration (NHTSA).  
+  
+## Roadmap  
+  
+For a detailed overview of planned features and their current status, please refer to the [ROADMAP](./ROADMAP.md).  
+
+## Documentation
+
+Documentation can be found [here](./docs).
+
+## Contributing  
+  
+We welcome contributions from the community! If you'd like to add a new tool or improve an existing one, please check out our [CONTRIBUTING](./CONTRIBUTING.md) guide for detailed instructions on how to get started.  
+  
+## Documentation  
+  
+Each tool comes with its own documentation, which can be found in the `docs/` directory. The documentation provides detailed information on how to use each tool, including required parameters and example usage.  
+  
+## Installation  
+  
+To install gofannon, simply clone the repository and install the required dependencies:  
+  
+```bash  
+git clone https://github.com/The-AI-Alliance/gofannon.git  
+cd gofannon  
+pip install -r requirements.txt
+```
+
+or 
+
+```
+pip install git+https://github.com/The-AI-Alliance/gofannon.git
+```
+
+## License  
+  
+This project is licensed under the ASFv2 License. See the [LICENSE](./LICENSE) file for more details.  
+  
+## Support  
+  
+If you encounter any issues or have questions, please open an issue on our [GitHub repository](https://github.com/your-repo/gofannon/issues).  
+  
+## Acknowledgments  
+  
+We would like to thank the open-source community for their contributions and support in making this project possible.  
+
