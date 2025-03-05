@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "SGrSpecificationPythontks4r"
+dynamic = ["version"]
+description = "SmartGridready Specification Library"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "BSD" }
+authors = [{ name = "Robin Schoch" }]
+urls = { "Homepage" = "https://github.com/SmartGridready/SGrSpecifications" }
+dependencies = []
+
+[tool.setuptools]
+include-package-data = true
+
+# include XSD from package directory and 1 sub-directory
+[tool.setuptools.package-data]
+sgr_schema = ["*.xsd", "*/*.xsd"]
