@@ -1,0 +1,287 @@
+Metadata-Version: 2.2
+Name: airunner
+Version: 3.1.13
+Summary: A Stable Diffusion GUI
+Home-page: https://github.com/Capsize-Games/airunner
+Author: Capsize LLC
+Author-email: contact@capsizegames.com
+License: GPL-3.0
+Keywords: ai,stable diffusion,art,ai art,stablediffusion
+Requires-Python: >=3.10.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: torch==2.6.0
+Requires-Dist: torchvision==0.21.0
+Requires-Dist: torchaudio==2.6.0
+Requires-Dist: accelerate==1.3.0
+Requires-Dist: huggingface-hub==0.28.1
+Requires-Dist: PySide6==6.7.0
+Requires-Dist: PySide6_Addons==6.7.0
+Requires-Dist: PySide6_Essentials==6.7.0
+Requires-Dist: tokenizers==0.21.0
+Requires-Dist: optimum==1.24.0
+Requires-Dist: numpy==1.26.4
+Requires-Dist: pillow==11.1.0
+Requires-Dist: tensorflow==2.18.0
+Requires-Dist: DeepCache==0.1.1
+Requires-Dist: alembic==1.14.1
+Requires-Dist: transformers==4.48.1
+Requires-Dist: auto-gptq==0.7.1
+Requires-Dist: bitsandbytes==0.45.2
+Requires-Dist: datasets==3.2.0
+Requires-Dist: sentence_transformers==3.4.1
+Requires-Dist: sounddevice==0.5.1
+Requires-Dist: pyttsx3==2.91
+Requires-Dist: cryptography==44.0.0
+Requires-Dist: setuptools==75.8.0
+Requires-Dist: openmeteo_requests==1.3.0
+Requires-Dist: requests-cache==1.2.1
+Requires-Dist: retry-requests==2.0.0
+Requires-Dist: diffusers==0.32.2
+Requires-Dist: controlnet_aux==0.0.9
+Requires-Dist: safetensors==0.5.2
+Requires-Dist: compel==2.0.3
+Requires-Dist: tomesd==0.1.3
+Requires-Dist: inflect==7.5.0
+Requires-Dist: pycountry==24.6.1
+Requires-Dist: llama-index==0.12.14
+Requires-Dist: llama-index-readers-file==0.4.4
+Requires-Dist: llama-index-readers-web==0.3.5
+Requires-Dist: llama-index-llms-huggingface==0.4.2
+Requires-Dist: llama-index-llms-groq==0.3.1
+Requires-Dist: llama-index-embeddings-mistralai==0.3.0
+Requires-Dist: llama-index-vector-stores-faiss==0.3.0
+Requires-Dist: llama-index-embeddings-huggingface==0.5.1
+Requires-Dist: langchain-community==0.3.17
+Requires-Dist: EbookLib==0.18
+Requires-Dist: html2text==2024.2.26
+Requires-Dist: rake_nltk==1.0.6
+Requires-Dist: tf-keras==2.18.0
+Requires-Dist: aiosqlite==0.21.0
+Requires-Dist: peft==0.14.0
+Provides-Extra: linux
+Requires-Dist: faiss-gpu==1.7.2; extra == "linux"
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+[![Banner](banner.png)](https://capsizegames.itch.io/ai-runner)
+[![Discord](https://img.shields.io/discord/839511291466219541?color=5865F2&logo=discord&logoColor=white)](https://discord.gg/PUVDDCJ7gz)
+[![PyPi](https://github.com/Capsize-Games/airunner/actions/workflows/pypi-dispatch.yml/badge.svg)](https://github.com/Capsize-Games/airunner/actions/workflows/pypi-dispatch.yml)
+![GitHub](https://img.shields.io/github/license/Capsize-Games/airunner)
+![GitHub last commit](https://img.shields.io/github/last-commit/Capsize-Games/airunner)
+![GitHub issues](https://img.shields.io/github/issues/Capsize-Games/airunner)
+![GitHub closed issues](https://img.shields.io/github/issues-closed/Capsize-Games/airunner)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/Capsize-Games/airunner)
+![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/Capsize-Games/airunner)
+
+---
+
+# AI Runner 
+
+
+AI Runner is an interface which allows you to run open-source large language models (LLM) and AI image generators (Stable Diffusion) on your own hardware.
+
+It is designed to be easy to use, with a simple and intuitive interface that allows you to run AI models without the need for a web server or cloud service.
+
+It has been optimized for speed and efficiency, allowing you to generate images and have conversations with chatbots in real-time.
+
+## Stable Diffusion
+
+![img.png](img.png)
+
+## Customizable Chatbots with Moods and Personalities
+
+![img_1.png](img_1.png)
+
+---
+
+## ⭐ Features
+
+AI Runner is an AI interface which allows you to run open-source 
+large language models (LLM) and AI image generators (Stable Diffusion) on your own hardware.
+
+| Feature                              | Description                                              |
+|--------------------------------------|----------------------------------------------------------|
+| 🗣️ **LLMs and communication**       |
+| Voice-based chatbot conversations    | Have conversations with a chatbot using your voice       |
+| Text-to-speech                       | Convert text to spoken audio                             |
+| Speech-to-text                       | Convert spoken audio to text                             |
+| Customizable chatbots with LLMs      | Generate text using large language models                |
+| RAG on local documents and websites  | Interact with your local documents using an LLM          |
+| 🎨 **Image Generation**              |
+| Stable Diffusion (all versions)      | Generate images using Stable Diffusion                   |
+| Drawing tools                        | Turn sketches into art                                   |
+| Text-to-Image                        | Generate images from textual descriptions                |
+| Image-to-Image                       | Generate images based on input images                    |
+| 🖼️ **Image Manipulation**           |
+| Inpaint and Outpaint                 | Modify parts of an image while maintaining context       |
+| Controlnet                           | Control image generation with additional input           |
+| LoRA                                 | Efficiently fine-tune models with LoRA                   |
+| Textual Embeddings                   | Use textual embeddings for image generation control      |
+| Image Filters                        | Blur, film grain, pixel art and more                     |
+| 🔧 **Utility**                       |
+| Run offline, locally                 | Run on your own hardware without internet                |
+| Fast generation                      | Generate images in ~2 seconds (RTX 2080s)                |
+| Run multiple models at once          | Utilize multiple models simultaneously                   |
+| Dark mode                            | Comfortable viewing experience in low-light environments |
+| Infinite scrolling canvas            | Seamlessly scroll through generated images               |
+| NSFW filter toggle                   | Help control the visibility of NSFW content              |
+| NSFW guardrails toggle               | Help prevent generation of LLM harmful content           |
+| Fully customizable                   | Easily adjust all parameters                             |
+| Fast load time, responsive interface | Enjoy a smooth and responsive user experience            |
+| Pure python                          | No reliance on a webserver, pure python implementation   |
+
+---
+
+## 💻 System Requirements
+
+#### Minimum system requirements
+
+- OS: Linux or Windows
+- Processor: Intel i5 or equivalent
+- Memory: 16 GB RAM
+- Graphics: 2080s RTX or higher
+- Network: Broadband Internet connection required for setup
+- Storage: 130 GB available space
+
+#### Recommended system specs
+
+- OS: Ubuntu 22.04
+- Processor: Intel i7 or equivalent
+- Memory: 30 GB RAM
+- Graphics: 4090 RTX or higher
+- Network: Broadband Internet connection required for setup
+- Storage: 130 GB available space
+
+---
+
+## 🚀 Installation
+
+There are several ways to get started with AI Runner such as packaged, from source and as a library.
+
+[Detailed packaging and installation instructions can be found in the wiki](https://github.com/Capsize-Games/airunner/wiki/Installation-instructions).
+
+First install torch libraries
+
+```bash
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126
+```
+
+Now install AI Runner
+
+### Install from pip
+
+**Windows**
+
+```bash
+pip install airunner
+```
+
+**Linux**
+
+```bash
+pip install airunner[linux]
+```
+
+### Local installation
+
+After cloning this repo, run the following commands
+
+**Windows**
+
+```bash
+pip install -e .
+```
+
+**Linux**
+
+```bash
+pip install -e .[linux]
+```
+
+### Upgrade timm
+
+[controlnet-aux](https://github.com/huggingface/controlnet_aux) uses an old 
+version of timm, so we must manually upgrade. You'll see this error after 
+upgrading which can be safely ignored.
+
+```bash
+pip install --upgrade timm==1.0.15
+```
+
+## Running
+
+You can simply type the following command to run the application
+
+```bash
+airunner
+```
+
+You can also use python to run it directly
+
+```bash
+cd src/airunner
+python main.py
+```
+
+---
+
+## AI Models
+
+AI Runner installs all of the models required to run a chatbot with text-to-speech and speech-to-text capabilities,
+as well as the core models required for Stable Diffusion. However, you must supply your own art generator models.
+
+You can download models from Huggingface.co or civitai.com.
+
+The supported Stable Diffusion models are:
+
+- SD 1.5
+- SDXL 1.0
+- SDXL Turbo
+
+Models must be placed in their respective directories in the `airunner` directory.
+    
+```plaintext
+~/.local/share/airunner
+├── art
+│   ├── models
+│   │   ├── SD 1.5
+│   │   │   ├── lora
+│   │   │   └── embeddings
+│   │   ├── SDXL 1.0
+│   │   │   ├── lora
+│   │   │   └── embeddings
+│   │   └── SDXL Turbo
+│   │       ├── lora
+│   │       └── embeddings
+```
+
+---
+
+## Unit tests
+
+Run all unit tests
+
+```bash
+python -m unittest discover -s src/airunner/tests
+```
+
+Run a single unit tests `python -m unittest src/airunner/tests/<file_name>`
+
+Example
+```bash
+python -m unittest src/airunner/tests/test_prompt_weight_convert.py
+```
+
+## Database
+
+See the [database wiki page](https://github.com/Capsize-Games/airunner/wiki/Database) for details on how to switch engines, make changes to data models and run migrations.
