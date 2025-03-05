@@ -1,0 +1,3 @@
+2025-03-04 23:52:33,089 - agentopera.utils.logger - INFO - router.py:29 - Starting router service and runtime manager.
+2025-03-04 23:52:33,089 - agentopera.utils.logger - INFO - runtime_manager.py:55 - Connecting to host runtime...
+2025-03-04 23:52:33,100 - agentopera.utils.logger - INFO - intent_classifier.py:22 - os.environ.get('OPENAI_API_KEY') = None

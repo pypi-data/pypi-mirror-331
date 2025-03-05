@@ -1,0 +1,20 @@
+2025-03-04 23:44:31,896 - agentopera.utils.logger - INFO - router.py:26 - Starting router service and runtime manager.
+2025-03-04 23:44:31,896 - agentopera.utils.logger - INFO - runtime_manager.py:55 - Connecting to host runtime...
+2025-03-04 23:44:31,935 - agentopera.utils.logger - INFO - runtime_manager.py:60 - All agents successfully registered and runtime initialized.
+2025-03-04 23:44:38,873 - agentopera.utils.logger - INFO - runtime_manager.py:155 - Publishing streaming message: introduce TensorOpera AI, please use 200 words for message_id: ZWToutqeUawzfaR7
+2025-03-04 23:44:38,874 - agentopera.utils.logger - INFO - runtime_manager.py:167 - start to stream for message_id: ZWToutqeUawzfaR7
+
+
+2025-03-04 23:44:38,876 - agentopera.utils.logger - INFO - _semantic_router_agent.py:26 - Received message from user: introduce TensorOpera AI, please use 200 words
+2025-03-04 23:44:38,876 - agentopera.utils.logger - INFO - intent_classifier.py:97 - message = introduce TensorOpera AI, please use 200 words
+2025-03-04 23:44:39,484 - agentopera.utils.logger - INFO - intent_classifier.py:104 - response = finish_reason='stop' content='{"intent":"chat_intent"}' usage=RequestUsage(prompt_tokens=540, completion_tokens=8) cached=False logprobs=None thought=None
+2025-03-04 23:44:39,485 - agentopera.utils.logger - INFO - _semantic_router_agent.py:33 - Router =================================> agent_type = chat, session_id = user
+2025-03-04 23:44:39,485 - agentopera.utils.logger - INFO - _semantic_router_agent.py:61 - Routing to agent_type chat, content = introduce TensorOpera AI, please use 200 words
+2025-03-04 23:44:39,485 - agentopera.utils.logger - INFO - _semantic_router_agent.py:67 - publish_message is done for agent_type chat, message_id = ZWToutqeUawzfaR7
+2025-03-04 23:44:39,505 - agentopera.utils.logger - INFO - chat_agent.py:55 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-04 23:44:39,505 - agentopera.utils.logger - INFO - chat_agent.py:61 - chat agent - TextMessage: chunk.source = user | ctx.topic_id.source = user. 
+2025-03-04 23:44:39,509 - agentopera.utils.logger - INFO - vercel_ai_response.py:99 - parser debug message.source = user. message = source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-04 23:44:39,509 - agentopera.utils.logger - INFO - vercel_ai_response.py:101 - The source is 'user'
+2025-03-04 23:44:39,509 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = f:{"messageId": "ZWToutqeUawzfaR7"}
+ for message_id ZWToutqeUawzfaR7
+2025-03-04 23:44:39,559 - agentopera.utils.logger - INFO - chat_agent.py:102 - Error in generate: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-sC2qL***************************************SvBj. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}

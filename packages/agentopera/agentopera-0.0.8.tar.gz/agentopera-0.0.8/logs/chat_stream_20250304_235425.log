@@ -1,0 +1,17 @@
+2025-03-04 23:54:25,902 - agentopera.utils.logger - INFO - router.py:29 - Starting router service and runtime manager.
+2025-03-04 23:54:25,902 - agentopera.utils.logger - INFO - runtime_manager.py:55 - Connecting to host runtime...
+2025-03-04 23:54:25,912 - agentopera.utils.logger - INFO - intent_classifier.py:22 - os.environ.get('OPENAI_API_KEY') = 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
+2025-03-04 23:54:25,936 - agentopera.utils.logger - INFO - runtime_manager.py:60 - All agents successfully registered and runtime initialized.
+2025-03-04 23:54:43,972 - agentopera.utils.logger - INFO - runtime_manager.py:155 - Publishing streaming message: introduce TensorOpera AI, please use 200 words for message_id: ZWToutqeUawzfaR7
+2025-03-04 23:54:43,973 - agentopera.utils.logger - INFO - runtime_manager.py:167 - start to stream for message_id: ZWToutqeUawzfaR7
+
+
+2025-03-04 23:54:43,975 - agentopera.utils.logger - INFO - _semantic_router_agent.py:26 - Received message from user: introduce TensorOpera AI, please use 200 words
+2025-03-04 23:54:43,975 - agentopera.utils.logger - INFO - intent_classifier.py:97 - message = introduce TensorOpera AI, please use 200 words
+2025-03-04 23:54:44,124 - agentopera.utils.logger - INFO - _semantic_router_agent.py:33 - Router =================================> agent_type = search, session_id = user
+2025-03-04 23:54:44,124 - agentopera.utils.logger - INFO - _semantic_router_agent.py:61 - Routing to agent_type search, content = introduce TensorOpera AI, please use 200 words
+2025-03-04 23:54:44,124 - agentopera.utils.logger - INFO - _semantic_router_agent.py:67 - publish_message is done for agent_type search, message_id = ZWToutqeUawzfaR7
+2025-03-04 23:54:44,134 - agentopera.utils.logger - ERROR - httpwokers.py:148 - [HTTPWorker] Error: Cannot connect to host host.docker.internal:3001 ssl:default [Name or service not known]
+2025-03-04 23:54:44,136 - agentopera.utils.logger - INFO - vercel_ai_response.py:99 - parser debug message.source = search. message = source='search' models_usage=None metadata={} content='Error: Cannot connect to host host.docker.internal:3001 ssl:default [Name or service not known]' type='TextMessage'
+2025-03-04 23:54:44,136 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = e:{"finishReason": "stop", "usage": {"promptTokens": 0, "completionTokens": 0}, "isContinued": false}
+ for message_id f7ab1c11-fe57-449f-958a-ccc4fe76a23d

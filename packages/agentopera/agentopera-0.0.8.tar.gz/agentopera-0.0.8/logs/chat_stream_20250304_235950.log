@@ -1,0 +1,750 @@
+2025-03-04 23:59:50,812 - agentopera.utils.logger - INFO - router.py:29 - Starting router service and runtime manager.
+2025-03-04 23:59:50,812 - agentopera.utils.logger - INFO - runtime_manager.py:55 - Connecting to host runtime...
+2025-03-04 23:59:50,844 - agentopera.utils.logger - INFO - runtime_manager.py:60 - All agents successfully registered and runtime initialized.
+2025-03-05 00:00:11,375 - agentopera.utils.logger - INFO - runtime_manager.py:155 - Publishing streaming message: introduce TensorOpera AI, please use 200 words for message_id: ZWToutqeUawzfaR7
+2025-03-05 00:00:11,376 - agentopera.utils.logger - INFO - runtime_manager.py:167 - start to stream for message_id: ZWToutqeUawzfaR7
+
+
+2025-03-05 00:00:11,378 - agentopera.utils.logger - INFO - _semantic_router_agent.py:26 - Received message from user: introduce TensorOpera AI, please use 200 words
+2025-03-05 00:00:11,378 - agentopera.utils.logger - INFO - intent_classifier.py:84 - message = introduce TensorOpera AI, please use 200 words
+2025-03-05 00:00:12,112 - agentopera.utils.logger - INFO - intent_classifier.py:91 - response = finish_reason='stop' content='{"intent":"chat_intent"}' usage=RequestUsage(prompt_tokens=540, completion_tokens=8) cached=False logprobs=None thought=None
+2025-03-05 00:00:12,112 - agentopera.utils.logger - INFO - _semantic_router_agent.py:33 - Router =================================> agent_type = chat, session_id = user
+2025-03-05 00:00:12,112 - agentopera.utils.logger - INFO - _semantic_router_agent.py:61 - Routing to agent_type chat, content = introduce TensorOpera AI, please use 200 words
+2025-03-05 00:00:12,112 - agentopera.utils.logger - INFO - _semantic_router_agent.py:67 - publish_message is done for agent_type chat, message_id = ZWToutqeUawzfaR7
+2025-03-05 00:00:12,131 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:12,131 - agentopera.utils.logger - INFO - chat_agent.py:54 - chat agent - TextMessage: chunk.source = user | ctx.topic_id.source = user. 
+2025-03-05 00:00:12,135 - agentopera.utils.logger - INFO - vercel_ai_response.py:99 - parser debug message.source = user. message = source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:12,136 - agentopera.utils.logger - INFO - vercel_ai_response.py:101 - The source is 'user'
+2025-03-05 00:00:12,136 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = f:{"messageId": "ZWToutqeUawzfaR7"}
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:12,510 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:12,510 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:12,511 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:"Tensor"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:12,511 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:"Opera"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:12,556 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:12,557 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:12,557 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" AI"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:12,558 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" is"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:12,588 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:12,589 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:12,589 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" a"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:12,590 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" cutting"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:12,629 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:12,629 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:12,630 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:"-edge"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:12,630 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" platform"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:12,673 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:12,673 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:12,674 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" designed"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:12,674 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" to"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:12,709 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:12,709 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:12,710 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" revolution"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:12,710 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:"ize"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:12,786 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:12,786 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:12,787 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" the"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:12,787 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" field"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:12,824 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:12,825 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:12,825 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" of"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:12,826 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" artificial"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:12,864 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:12,865 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:12,865 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" intelligence"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:12,866 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" by"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:12,912 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:12,913 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:12,913 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" providing"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:12,913 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" seamless"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:12,974 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:12,975 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:12,975 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" integration"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:12,976 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" of"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:13,023 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:13,023 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:13,024 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" powerful"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:13,024 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" AI"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:13,063 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:13,064 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:13,064 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" tools"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:13,065 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" and"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:13,098 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:13,098 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:13,099 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" technologies"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:13,099 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:"."
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:13,136 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:13,136 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:13,137 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" Built"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:13,138 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" on"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:13,180 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:13,180 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:13,181 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" the"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:13,181 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" foundations"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:13,220 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:13,220 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:13,221 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" of"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:13,221 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" machine"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:13,286 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:13,287 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:13,287 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" learning"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:13,287 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" and"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:13,326 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:13,326 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:13,327 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" deep"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:13,327 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" learning"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:13,377 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:13,377 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:13,378 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:","
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:13,378 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" Tensor"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:13,415 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:13,415 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:13,416 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:"Opera"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:13,416 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" AI"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:13,453 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:13,454 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:13,454 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" offers"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:13,454 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" an"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:13,531 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:13,531 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:13,532 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" intuitive"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:13,532 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" and"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:13,551 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:13,551 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:13,552 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" flexible"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:13,552 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" environment"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:13,587 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:13,587 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:13,588 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" for"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:13,588 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" both"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:13,630 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:13,631 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:13,631 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" novice"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:13,631 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" and"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:13,667 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:13,667 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:13,668 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" expert"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:13,668 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" users"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:13,729 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:13,729 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:13,730 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" to"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:13,731 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" develop"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:13,768 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:13,769 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:13,770 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:","
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:13,770 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" train"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:13,820 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:13,820 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:13,821 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:","
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:13,821 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" and"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:13,879 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:13,879 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:13,880 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" deploy"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:13,880 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" AI"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:13,900 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:13,900 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:13,901 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" models"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:13,901 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" with"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:13,985 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:13,985 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:13,986 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" ease"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:13,986 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:".\n\n"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:13,996 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:13,997 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:13,997 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:"At"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:13,998 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" its"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:14,031 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:14,031 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:14,032 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" core"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:14,032 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:","
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:14,072 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:14,073 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:14,073 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" Tensor"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:14,073 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:"Opera"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:14,115 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:14,115 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:14,116 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" AI"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:14,116 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" is"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:14,183 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:14,183 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:14,184 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" equipped"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:14,184 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" with"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:14,204 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:14,204 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:14,205 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" a"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:14,205 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" robust"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:14,227 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:14,227 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:14,228 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" set"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:14,228 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" of"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:14,264 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:14,264 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:14,265 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" features"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:14,265 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" that"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:14,316 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:14,317 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:14,317 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" facilitate"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:14,317 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" the"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:14,350 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:14,350 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:14,351 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" entire"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:14,351 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" AI"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:14,394 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:14,394 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:14,395 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" development"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:14,395 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" lifecycle"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:14,435 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:14,436 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:14,437 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:"."
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:14,437 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" It"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:14,473 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:14,474 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:14,474 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" supports"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:14,475 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" a"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:14,521 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:14,521 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:14,522 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" wide"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:14,522 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" range"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:14,567 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:14,568 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:14,568 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" of"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:14,569 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" machine"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:14,603 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:14,604 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:14,604 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" learning"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:14,604 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" frameworks"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:14,653 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:14,654 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:14,654 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:","
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:14,654 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" including"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:14,703 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:14,703 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:14,704 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" Tensor"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:14,704 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:"Flow"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:14,732 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:14,732 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:14,733 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" and"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:14,734 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" Py"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:14,769 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:14,770 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:14,770 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:"Torch"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:14,770 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:","
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:14,853 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:14,854 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:14,855 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" enabling"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:14,855 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" users"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:14,893 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:14,894 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:14,894 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" to"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:14,894 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" leverage"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:15,011 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:15,011 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:15,012 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" state"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:15,012 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:"-of"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:15,130 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:15,131 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:15,132 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:"-the"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:15,132 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:"-art"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:15,218 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:15,218 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:15,219 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" algorithms"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:15,219 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" and"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:15,255 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:15,255 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:15,256 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" pre"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:15,256 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:"-trained"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:15,364 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:15,364 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:15,365 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" models"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:15,365 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:"."
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:15,413 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:15,413 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:15,414 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" The"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:15,414 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" platform"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:15,469 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:15,470 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:15,470 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:"'s"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:15,471 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" user"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:15,529 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:15,529 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:15,530 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:"-friendly"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:15,530 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" interface"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:15,569 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:15,569 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:15,570 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" and"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:15,570 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" comprehensive"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:15,605 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:15,605 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:15,606 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" documentation"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:15,606 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" make"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:15,713 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:15,713 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:15,714 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" it"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:15,714 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" accessible"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:15,782 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:15,783 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:15,783 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" to"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:15,783 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" those"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:15,875 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:15,876 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:15,876 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" who"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:15,877 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" are"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:15,915 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:15,915 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:15,916 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" new"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:15,916 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" to"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:15,947 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:15,947 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:15,948 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" AI"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:15,948 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" while"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:15,971 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:15,972 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:15,972 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" offering"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:15,972 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" advanced"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:16,011 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:16,011 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:16,012 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" customization"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:16,013 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" options"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:16,043 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:16,043 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:16,044 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" for"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:16,044 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" seasoned"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:16,082 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:16,082 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:16,083 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" professionals"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:16,083 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:".\n\n"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:16,129 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:16,130 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:16,130 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:"One"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:16,131 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" of"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:16,167 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:16,167 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:16,168 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" Tensor"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:16,168 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:"Opera"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:16,244 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:16,244 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:16,245 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" AI"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:16,245 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:"'s"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:16,324 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:16,324 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:16,325 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" standout"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:16,325 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" features"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:16,347 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:16,348 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:16,349 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" is"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:16,349 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" its"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:16,357 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:16,358 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:16,358 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" ability"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:16,359 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" to"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:16,403 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:16,404 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:16,404 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" handle"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:16,405 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" large"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:16,447 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:16,447 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:16,448 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:"-scale"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:16,448 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" data"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:16,489 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:16,489 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:16,490 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" processing"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:16,490 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" and"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:16,535 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:16,535 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:16,536 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" real"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:16,536 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:"-time"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:16,569 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:16,569 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:16,570 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" analytics"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:16,570 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:","
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:16,653 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:16,654 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:16,655 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" making"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:16,655 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" it"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:16,708 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:16,708 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:16,709 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" ideal"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:16,709 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" for"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:16,752 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:16,753 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:16,753 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" applications"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:16,754 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" in"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:16,798 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:16,798 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:16,799 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" industries"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:16,799 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" such"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:16,832 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:16,832 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:16,833 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" as"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:16,833 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" healthcare"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:16,885 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:16,886 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:16,886 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:","
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:16,887 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" finance"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:16,927 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:16,927 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:16,928 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:","
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:16,928 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" and"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:16,982 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:16,983 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:16,983 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" autonomous"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:16,983 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" systems"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:17,023 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:17,023 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:17,024 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:"."
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:17,024 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" Its"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:17,070 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:17,071 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:17,072 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" cloud"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:17,072 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:"-based"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:17,112 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:17,113 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:17,113 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" infrastructure"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:17,114 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" ensures"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:17,142 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:17,142 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:17,143 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" scalability"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:17,143 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" and"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:17,185 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:17,186 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:17,186 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" collaboration"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:17,186 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:","
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:17,227 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:17,227 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:17,228 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" allowing"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:17,228 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" teams"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:17,277 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:17,278 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:17,279 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" to"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:17,280 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" work"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:17,323 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:17,324 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:17,324 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" together"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:17,325 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" seamlessly"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:17,366 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:17,367 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:17,368 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" from"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:17,368 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" anywhere"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:17,410 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:17,410 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:17,411 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" in"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:17,411 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" the"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:17,442 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:17,443 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:17,443 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" world"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:17,444 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:".\n\n"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:17,482 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:17,483 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:17,483 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:"In"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:17,484 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" summary"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:17,522 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:17,522 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:17,523 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:","
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:17,523 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" Tensor"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:17,565 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:17,565 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:17,566 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:"Opera"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:17,566 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" AI"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:17,608 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:17,609 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:17,609 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" is"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:17,610 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" a"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:17,648 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:17,648 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:17,649 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" versatile"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:17,649 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" and"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:17,681 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:17,681 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:17,682 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" powerful"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:17,682 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" tool"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:17,723 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:17,723 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:17,724 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" that"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:17,724 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" empowers"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:17,779 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:17,780 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:17,780 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" users"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:17,780 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" to"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:17,844 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:17,845 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:17,845 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" harness"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:17,846 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" the"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:17,873 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:17,873 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:17,874 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" full"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:17,874 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" potential"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:17,887 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:17,887 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:17,887 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" of"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:17,888 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" artificial"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:17,967 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:17,967 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:17,968 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" intelligence"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:17,968 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:","
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:18,004 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:18,005 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:18,005 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" driving"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:18,006 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" innovation"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:18,039 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:18,039 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:18,040 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" and"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:18,040 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" efficiency"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:18,115 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:18,115 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:18,116 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" across"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:18,116 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" various"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:18,192 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:18,192 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:18,193 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:" domains"
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:18,194 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = 0:"."
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:18,196 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:18,196 - agentopera.utils.logger - INFO - chat_agent.py:54 - chat agent - TextMessage: chunk.source = chat_agent | ctx.topic_id.source = user. 
+2025-03-05 00:00:18,196 - agentopera.utils.logger - INFO - chat_agent.py:48 - [ChatAgent] Chunk message from user: message: source='user' models_usage=None metadata={} content='introduce TensorOpera AI, please use 200 words' type='TextMessage'
+2025-03-05 00:00:18,196 - agentopera.utils.logger - INFO - chat_agent.py:80 - ctx.topic_id.type = chat, ctx.topic_id.source = user.                     currrent chunk: TaskResult(messages=[TextMessage(source='user', models_usage=None, metadata={}, content='introduce TensorOpera AI, please use 200 words', type='TextMessage'), TextMessage(source='chat_agent', models_usage=RequestUsage(prompt_tokens=0, completion_tokens=0), metadata={}, content="TensorOpera AI is a cutting-edge platform designed to revolutionize the field of artificial intelligence by providing seamless integration of powerful AI tools and technologies. Built on the foundations of machine learning and deep learning, TensorOpera AI offers an intuitive and flexible environment for both novice and expert users to develop, train, and deploy AI models with ease.\n\nAt its core, TensorOpera AI is equipped with a robust set of features that facilitate the entire AI development lifecycle. It supports a wide range of machine learning frameworks, including TensorFlow and PyTorch, enabling users to leverage state-of-the-art algorithms and pre-trained models. The platform's user-friendly interface and comprehensive documentation make it accessible to those who are new to AI while offering advanced customization options for seasoned professionals.\n\nOne of TensorOpera AI's standout features is its ability to handle large-scale data processing and real-time analytics, making it ideal for applications in industries such as healthcare, finance, and autonomous systems. Its cloud-based infrastructure ensures scalability and collaboration, allowing teams to work together seamlessly from anywhere in the world.\n\nIn summary, TensorOpera AI is a versatile and powerful tool that empowers users to harness the full potential of artificial intelligence, driving innovation and efficiency across various domains.", type='TextMessage')], stop_reason=None), message_id = ZWToutqeUawzfaR7
+2025-03-05 00:00:18,197 - agentopera.utils.logger - INFO - vercel_ai_response.py:99 - parser debug message.source = chat_agent. message = source='chat_agent' models_usage=None metadata={} content="TensorOpera AI is a cutting-edge platform designed to revolutionize the field of artificial intelligence by providing seamless integration of powerful AI tools and technologies. Built on the foundations of machine learning and deep learning, TensorOpera AI offers an intuitive and flexible environment for both novice and expert users to develop, train, and deploy AI models with ease.\n\nAt its core, TensorOpera AI is equipped with a robust set of features that facilitate the entire AI development lifecycle. It supports a wide range of machine learning frameworks, including TensorFlow and PyTorch, enabling users to leverage state-of-the-art algorithms and pre-trained models. The platform's user-friendly interface and comprehensive documentation make it accessible to those who are new to AI while offering advanced customization options for seasoned professionals.\n\nOne of TensorOpera AI's standout features is its ability to handle large-scale data processing and real-time analytics, making it ideal for applications in industries such as healthcare, finance, and autonomous systems. Its cloud-based infrastructure ensures scalability and collaboration, allowing teams to work together seamlessly from anywhere in the world.\n\nIn summary, TensorOpera AI is a versatile and powerful tool that empowers users to harness the full potential of artificial intelligence, driving innovation and efficiency across various domains." type='TextMessage'
+2025-03-05 00:00:18,197 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = e:{"finishReason": "stop", "usage": {"promptTokens": 0, "completionTokens": 0}, "isContinued": false}
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:18,197 - agentopera.utils.logger - INFO - runtime_manager.py:31 - output_result: response = d:{"finishReason": "stop", "usage": {"promptTokens": 0, "completionTokens": 0}}
+ for message_id ZWToutqeUawzfaR7
+2025-03-05 00:00:18,197 - agentopera.utils.logger - INFO - runtime_manager.py:178 - ================= STREAMING SI FINISHED ========================
+2025-03-05 00:00:57,709 - agentopera.utils.logger - INFO - router.py:35 - Shutting down router service.

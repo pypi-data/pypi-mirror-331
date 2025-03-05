@@ -1,0 +1,4 @@
+2025-03-04 23:42:20,321 - agentopera.utils.logger - INFO - router.py:26 - Starting router service and runtime manager.
+2025-03-04 23:42:20,321 - agentopera.utils.logger - INFO - runtime_manager.py:55 - Connecting to host runtime...
+2025-03-04 23:42:20,358 - agentopera.utils.logger - INFO - runtime_manager.py:60 - All agents successfully registered and runtime initialized.
+2025-03-04 23:42:29,476 - agentopera.utils.logger - INFO - router.py:32 - Shutting down router service.
