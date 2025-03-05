@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: mailinator-python-client-2
+Version: 0.0.7
+Summary: SDK for Mailinator
+Home-page: https://github.com/manybrain/mailinator-python-client
+Author: Marian Melnychuk
+Author-email: marian.melnychuk@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+SDK for Mailinator
