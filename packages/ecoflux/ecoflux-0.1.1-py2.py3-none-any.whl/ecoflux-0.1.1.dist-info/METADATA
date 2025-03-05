@@ -1,0 +1,77 @@
+Metadata-Version: 2.2
+Name: ecoflux
+Version: 0.1.1
+Summary: A library of functions to calculate ecosystem–atmosphere exchanges of energy, carbon, water, and trace gases
+Home-page: https://github.com/wusunlab/ecoflux
+Author: Wu Sun
+Author-email: wusun@protonmail.com
+License: mit
+Project-URL: Documentation, https://github.com/wusunlab/ecoflux
+Platform: any
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Scientific/Engineering :: Atmospheric Science
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+License-File: LICENSE
+License-File: AUTHORS.md
+Requires-Dist: importlib-metadata; python_version < "3.8"
+Requires-Dist: numpy
+Requires-Dist: scipy
+Provides-Extra: testing
+Requires-Dist: pytest; extra == "testing"
+Requires-Dist: pytest-cov; extra == "testing"
+
+# ecoflux
+
+[Wu Sun](http://wusun.name)
+
+**ecoflux** is a Python package that provides core functions to calculate
+ecosystem–atmosphere exchanges of energy, water, carbon, and trace gases.
+
+WARNING: The project is in an experimental stage. There is no stable release
+yet.
+
+## Requirements
+
+* Python (>= 3.6)
+* NumPy
+* SciPy
+* PyScaffold (for nightly version only)
+
+NOTE: This package will not work under Python 2.
+
+## Installation
+
+A convenient way to install this package is through `pip`:
+
+```shell
+pip install ecoflux
+```
+
+Alternative, to install the nightly version:
+
+```shell
+git clone https://github.com/wusunlab/ecoflux
+cd ecoflux
+python3 setup.py develop
+```
+
+## License
+
+**ecoflux** is released under the MIT license. See the [`LICENSE`](./LICENSE)
+file.
+
+## Contributing
+
+This is a personal project that has not been funded by any institutional grant.
+
+Bug reports, pull requests, comments, and suggestions are all welcome. If you
+would like to contribute to this project, please leave me a note at the
+[GitHub issues page](https://github.com/wusunlab/ecoflux/issues) or email me at
+`wusun at protonmail.com`.
