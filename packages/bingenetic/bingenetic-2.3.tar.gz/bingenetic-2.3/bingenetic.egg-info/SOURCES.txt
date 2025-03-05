@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+bingenetic/__init__.py
+bingenetic.egg-info/PKG-INFO
+bingenetic.egg-info/SOURCES.txt
+bingenetic.egg-info/dependency_links.txt
+bingenetic.egg-info/top_level.txt
