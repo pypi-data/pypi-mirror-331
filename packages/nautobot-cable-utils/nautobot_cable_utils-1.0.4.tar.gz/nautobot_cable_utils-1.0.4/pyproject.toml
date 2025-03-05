@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "nautobot-cable-utils"
+version = "1.0.4"
+description = "A Nautobot plugin for working with cables"
+authors = ["Gesellschaft für wissenschaftliche Datenverarbeitung mbH Göttingen"]
+repository = "https://gitlab-ce.gwdg.de/gwdg-netz/nautobot-plugins/nautobot-cable-utils"
+license = "Apache-2.0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.12"
+igraph = "^0.11.5"
+nautobot = "^2.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

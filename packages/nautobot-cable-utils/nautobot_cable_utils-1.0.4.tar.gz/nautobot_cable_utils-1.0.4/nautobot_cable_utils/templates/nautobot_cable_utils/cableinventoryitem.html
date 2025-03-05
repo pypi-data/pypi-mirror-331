@@ -1,0 +1,130 @@
+{% extends 'generic/object_retrieve.html' %}
+{% load form_helpers %}
+{% load helpers %}
+{% load static %}
+
+
+{% block content_left_page %}
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <strong>Cable Inventory Item</strong>
+    </div>
+    <table class="table table-hover panel-body attr-table">
+        <tr>
+            <td>Label</td>
+            <td>{{ object.label }}</td>
+        </tr>
+        <tr>
+            <td>In use</td>
+            <td><span>{% if object.cable %}✔{% else %}✘{% endif %}</span></td>
+        </tr>
+        <tr>
+            <td>Owner</td>
+            <td>{{ object.owner|hyperlinked_object }}</td>
+        </tr>
+        <tr>
+            <td>Type</td>
+            <td>{{ object.get_type_display|placeholder }}</td>
+        </tr>
+        <tr>
+            <td>Plug</td>
+            <td>{{ object.plug }}</td>
+        </tr>
+        
+        <tr>
+            <td>Color</td>
+            <td>    
+                {% if object.color %}
+                    <span class="label color-block" style="background-color: #{{ object.color }}">&nbsp;</span>
+                {% else %}
+                    <span class="text-muted">&mdash;</span>
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <td>Length</td>
+            <td>
+                {% if object.length %}
+                    {{ object.length }} {{ object.get_length_unit_display }}
+                {% else %}
+                    <span class="text-muted">&mdash;</span>
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <td>Supplier</td>
+            <td>{{ object.supplier|hyperlinked_object }}</td>
+        </tr>
+        <tr>
+            <td>Storage rack</td>
+            <td>{{ object.storage_rack|hyperlinked_object }}</td>
+        </tr>
+        <tr>
+            <td>Procurement identifier</td>
+            <td>{{ object.procurement_ident|placeholder }}</td>
+        </tr>
+    </table>
+</div>
+{% endblock content_left_page %}
+
+{% block content_right_page %}
+{% if object.cable %}
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <strong>Assigned Cable</strong>
+    </div>
+    <table class="table table-hover panel-body attr-table">
+        <tr>
+            <td>Cable</td>
+            <td>{{ object.cable|hyperlinked_object }}</td>
+        </tr>
+        <tr>
+            <td>Type</td>
+            <td>{{ object.cable.get_type_display|placeholder }}</td>
+        </tr>
+        <tr>
+            <td>Status</td>
+            <td>
+                {{ object.cable.status| hyperlinked_object_with_color }}
+            </td>
+        </tr>
+        <tr>
+            <td>Label</td>
+            <td>{{ object.cable.label|placeholder }}</td>
+        </tr>
+        <tr>
+            <td>Color</td>
+            <td>
+                {% if object.cable.color %}
+                    <span class="label color-block" style="background-color: #{{ object.cable.color }}">&nbsp;</span>
+                {% else %}
+                    <span class="text-muted">&mdash;</span>
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <td>Length</td>
+            <td>
+                {% if object.cable.length %}
+                    {{ object.cable.length }} {{ object.cable.get_length_unit_display }}
+                {% else %}
+                    <span class="text-muted">&mdash;</span>
+                {% endif %}
+            </td>
+        </tr>
+    </table>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <strong>Termination A</strong>
+    </div>
+    {% include 'dcim/inc/cable_termination.html' with termination=object.cable.termination_a %}
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <strong>Termination B</strong>
+    </div>
+    {% include 'dcim/inc/cable_termination.html' with termination=object.cable.termination_b %}
+</div>
+{% endif %}
+{% endblock content_right_page %}
