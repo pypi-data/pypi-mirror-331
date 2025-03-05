@@ -1,0 +1,58 @@
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+
+[tool.setuptools]
+include-package-data = true
+packages = ["juham_homewizard"]
+
+[project]
+name = "juham-homewizard"
+version = "0.0.3"
+description = "Homewizard Watermeter plugin for Juham"
+readme = {file = "docs/source/README.rst", content-type = "text/markdown"}
+requires-python = ">=3.8"
+license = {file = "docs/source/LICENSE.rst", content-type = "text/markdown"}
+keywords = ["object-oriented", "plugin", "framework", "homewizard", "home automation"]
+authors = [
+  {name = "J Meskanen", email = "juham.api@gmail.com" }
+]
+maintainers = [
+  {name = "J. Meskanen", email = "juham.api@gmail.com" }
+]
+
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "Intended Audience :: Developers",
+  "Topic :: Software Development",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3.8",
+]
+
+dependencies = [
+  "juham-automation >= 0.0.11",
+  "importlib-metadata",
+]
+
+[project.optional-dependencies]
+dev = ["check-manifest"]
+
+
+[project.entry-points."juham.plugins"]
+homewizard_watermeter_plugin = "juham_homewizard:HomeWizardWaterMeter"
+
+
+[project.urls]
+"Homepage" = "https://meskanen.com"
+"Bug Reports" = "https://meskanen.com"
+"Funding" = "https://meskanen.com"
+"Say Thanks!" = "http://meskanen.com"
+"Source" = "https://meskanen.com"
+
+
+
+[tool.mypy]
+files = ["juham_homewizard"]
+ignore_missing_imports = true
