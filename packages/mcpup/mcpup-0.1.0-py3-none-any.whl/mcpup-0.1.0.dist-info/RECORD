@@ -1,0 +1,10 @@
+mcpup-0.1.0.dist-info/METADATA,sha256=Ucx4uf0ygPxhq9VdHGdgrXpeKudosiKWpKTPOetojkE,5090
+mcpup-0.1.0.dist-info/WHEEL,sha256=thaaA2w1JzcGC48WYufAs8nrYZjJm8LqNfnXFOFyCC4,90
+mcpup-0.1.0.dist-info/entry_points.txt,sha256=1PHydDqY5MVn0jq43RfaoOOdg7lYLM1CXU1ep_60Kp4,56
+mcpup-0.1.0.dist-info/licenses/LICENSE,sha256=3PTP0N-rYq4J61SlDnoFJTa8U1-BqOTm-1xBUdd4lIc,1069
+mcpup/__init__.py,sha256=S1USRJ0vyCNwbkGbNW-hGHI-P09n8wDvuM2_gafFP8k,94
+mcpup/cli.py,sha256=R7z4Ip5DRQKawHkbCDrPLJanMto1Alm1ppVh7rqnPpQ,3524
+mcpup/generator.py,sha256=-but-TzXyCE-LZKrsojvQsNHiSIpRwlJfY_d4GUDZ5E,5675
+mcpup/scanner.py,sha256=nysmwx87DCTuf-h5qNba0sASXgFUeAb0pydocy6rKFk,3709
+mcpup/utils.py,sha256=QT2ENju7IqJrwtimc9zsK8uNuvacMedn1A9dsd_w9AY,1291
+mcpup-0.1.0.dist-info/RECORD,,
