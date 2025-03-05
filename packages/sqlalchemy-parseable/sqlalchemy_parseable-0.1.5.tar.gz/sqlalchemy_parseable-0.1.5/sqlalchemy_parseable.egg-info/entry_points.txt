@@ -1,0 +1,4 @@
+[sqlalchemy.dialects]
+parseable = parseable_connector.parseable_dialect:ParseableDialect
+parseable.http = parseable_connector.parseable_dialect:ParseableDialect
+parseable.https = parseable_connector.parseable_dialect:ParseableDialect

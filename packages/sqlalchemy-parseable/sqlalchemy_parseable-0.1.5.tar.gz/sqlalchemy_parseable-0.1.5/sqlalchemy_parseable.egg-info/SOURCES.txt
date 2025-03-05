@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+parseable_connector/__init__.py
+parseable_connector/parseable_dialect.py
+sqlalchemy_parseable.egg-info/PKG-INFO
+sqlalchemy_parseable.egg-info/SOURCES.txt
+sqlalchemy_parseable.egg-info/dependency_links.txt
+sqlalchemy_parseable.egg-info/entry_points.txt
+sqlalchemy_parseable.egg-info/requires.txt
+sqlalchemy_parseable.egg-info/top_level.txt
