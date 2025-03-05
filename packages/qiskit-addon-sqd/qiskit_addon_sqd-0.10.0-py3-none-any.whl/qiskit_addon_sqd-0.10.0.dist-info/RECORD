@@ -1,0 +1,10 @@
+qiskit_addon_sqd/__init__.py,sha256=a0UTLfG92GSoYcnXeEvzxGDU0Ro6ofoSfEh56ls06NI,696
+qiskit_addon_sqd/configuration_recovery.py,sha256=LA_riyR_CIDwUZatDp8UyzfNXRt-AKhtb73mh9DVmVg,12561
+qiskit_addon_sqd/counts.py,sha256=F57RagcLHbAALUXFoZvvMo6oA_zIAfGcEZdSl73Rweo,5433
+qiskit_addon_sqd/fermion.py,sha256=ZrtncLq6Y9TtV2ITP_p-Jc0MlyVd2xoArkr0vZqIiYU,24463
+qiskit_addon_sqd/qubit.py,sha256=a7yS1r_G7x_5nKSCV8shhr1u6sCt5ky5DV0v2h7BD94,12831
+qiskit_addon_sqd/subsampling.py,sha256=Zr9W3DfJwdkpW7lbnW4jUxcfgbFw57WhMWVUiWJfBDI,6070
+qiskit_addon_sqd-0.10.0.dist-info/METADATA,sha256=Qqtp1JL3LrRr_3Xl0vIdLiOK0w4xfijvCoaEvHCjZyg,26742
+qiskit_addon_sqd-0.10.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+qiskit_addon_sqd-0.10.0.dist-info/licenses/LICENSE.txt,sha256=l9TPXRwcuXvlHu1a2YXqGpX5GEqN-Qo4kTPTsYUqOmU,11416
+qiskit_addon_sqd-0.10.0.dist-info/RECORD,,
