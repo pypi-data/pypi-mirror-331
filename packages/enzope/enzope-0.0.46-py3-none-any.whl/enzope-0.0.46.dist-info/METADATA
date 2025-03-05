@@ -1,0 +1,30 @@
+Metadata-Version: 2.2
+Name: enzope
+Version: 0.0.46
+Summary: Agent based modelling in complex networks
+Author: Lautaro Giordano
+Author-email: giordanolautaro@gmail.com
+Project-URL: Source, https://github.com/lautarogiordano/enzope/
+Keywords: sample,setuptools,development
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7, <4
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.24
+Requires-Dist: numba>=0.0.57
+Requires-Dist: networkx>=3.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: keywords
+Dynamic: project-url
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+hola
