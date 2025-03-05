@@ -1,0 +1,2 @@
+[console_scripts]
+bsb = blackspammerbd_one.cli:main
