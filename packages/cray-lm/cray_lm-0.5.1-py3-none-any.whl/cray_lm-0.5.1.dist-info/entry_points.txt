@@ -1,0 +1,2 @@
+[console_scripts]
+cray-lm = masint.cli.main:main
