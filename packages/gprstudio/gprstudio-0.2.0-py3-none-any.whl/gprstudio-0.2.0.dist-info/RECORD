@@ -1,0 +1,8 @@
+gprstudio/__init__.py,sha256=ptmBA2GujvoWXk9NFiYpRZvlc5LnMCa6XoS2jaEfGPw,175
+gprstudio/base.py,sha256=NauXyCEwdIORt0RVHSvRYP7YAzPkGmOEOBypngvQ7oA,1323
+gprstudio/config.py,sha256=pbiWEuEKrJRaDJ6nUukTdw7KA1NKVvT_w7-_nAtkVeQ,524
+gprstudio/datasets.py,sha256=c4pDP42GAzQs6oI0LEvlJUbXnQ00ISnJJHGuheyzvZQ,1726
+gprstudio/projects.py,sha256=X4Tgg0XadMToJpd-j94FJmplMb8ETMwqcJGk6BZBAhY,280
+gprstudio-0.2.0.dist-info/METADATA,sha256=PxLFAR2bn1ETRMjbW6jpTIlulo20CelnajQk2mzlMEw,325
+gprstudio-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+gprstudio-0.2.0.dist-info/RECORD,,
