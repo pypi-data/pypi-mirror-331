@@ -1,0 +1,35 @@
+from setuptools import setup, find_packages
+
+setup(
+    name="msvproperties",
+    version="1.2.7",
+    packages=find_packages(),
+    license="MIT",
+    install_requires=[
+        "certifi>=2024.12.14,<2025",
+        "charset-normalizer>=3.4.1,<4",
+        "idna>=3.10,<4",
+        "probableparsing==0.0.1",
+        "python-crfsuite==0.9.11",
+        "python-dotenv==1.0.1",
+        "requests==2.32.3",
+        "urllib3==2.3.0",
+        "usaddress==0.5.11",
+        "typing_extensions==4.12.2",
+        "pydantic==2.10.5",
+        "pydantic_core==2.27.2",
+        "annotated-types==0.7.0",
+        "geographiclib==2.0",
+        "geopy==2.4.1",
+    ],
+    python_requires="<4",
+    description="A Library for using in our CRM",
+    author="Alireza",
+    author_email="alireza@msvproperties.net",
+    url="https://github.com/alireza-msvproperties/msvproperties/",
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.13",
+        "License :: OSI Approved :: MIT License",
+    ],
+)

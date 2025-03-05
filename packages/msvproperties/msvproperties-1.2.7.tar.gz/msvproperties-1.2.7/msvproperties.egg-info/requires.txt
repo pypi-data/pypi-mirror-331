@@ -1,0 +1,15 @@
+certifi<2025,>=2024.12.14
+charset-normalizer<4,>=3.4.1
+idna<4,>=3.10
+probableparsing==0.0.1
+python-crfsuite==0.9.11
+python-dotenv==1.0.1
+requests==2.32.3
+urllib3==2.3.0
+usaddress==0.5.11
+typing_extensions==4.12.2
+pydantic==2.10.5
+pydantic_core==2.27.2
+annotated-types==0.7.0
+geographiclib==2.0
+geopy==2.4.1
