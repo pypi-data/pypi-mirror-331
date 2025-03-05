@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/apipy_logs.egg-info/PKG-INFO
+src/apipy_logs.egg-info/SOURCES.txt
+src/apipy_logs.egg-info/dependency_links.txt
+src/apipy_logs.egg-info/top_level.txt
+src/fastapi_logs_SebastienCozeDev/__init__.py
+src/fastapi_logs_SebastienCozeDev/log_manager.py
