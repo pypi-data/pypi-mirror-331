@@ -1,0 +1,77 @@
+Metadata-Version: 2.2
+Name: RCAIDE_LEADS
+Version: 1.1.0
+Summary: RCAIDE: Research Community Aerospace Interdisciplinary Design Environment
+License: GNU Affero General Public License v3.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+Requires-Dist: scikit-learn
+Requires-Dist: plotly
+Requires-Dist: kaleido
+Requires-Dist: pandas
+Requires-Dist: contourpy
+Requires-Dist: cycler
+Requires-Dist: fonttools
+Requires-Dist: geographiclib
+Requires-Dist: geopy
+Requires-Dist: importlib_metadata
+Requires-Dist: joblib
+Requires-Dist: pillow
+Requires-Dist: python-dateutil
+Requires-Dist: pytz
+Requires-Dist: six
+Requires-Dist: tenacity
+Requires-Dist: threadpoolctl
+Requires-Dist: zipp
+
+# RCAIDE: Research Community Aircraft Interdisciplinary Design Environment
+
+RCAIDE is a powerful open-source Python platform that revolutionizes aircraft design and analysis. From commercial airliners to UAVs and next-generation hybrid-electric aircraft, RCAIDE provides comprehensive multi-disciplinary analysis tools backed by validated engineering methods.
+
+## Features
+
+- **Mission Analysis**
+- **Optimization**
+  - Gradient-based
+  - Non-gradient-based
+  - Multi-fidelity
+- **Performance Analysis**
+  - Payload range
+  - Aerodynamic analysis
+  - V-N diagrams
+  - Propeller analysis
+  - Takeoff Field Length Estimation
+- **Weights Analysis**
+  - Operating empty weight estimation
+  - Component weight estimation
+  - Center of gravity estimation
+  - Moment of inertia estimation
+
+## Installation
+
+Refer to the [installation guide](https://www.docs.rcaide.leadsresearchgroup.com/install.html).
+
+## Contributing
+
+We welcome contributions! Please see our [contribution guidelines](https://www.docs.rcaide.leadsresearchgroup.com/contributing.html).
+
+## Contact
+
+For feedback, issues, or feature requests, use our [GitHub Issues](https://github.com/leadsgroup/RCAIDE_LEADS/issues) or join our [Discussions](https://github.com/leadsgroup/RCAIDE_LEADS/discussions).
