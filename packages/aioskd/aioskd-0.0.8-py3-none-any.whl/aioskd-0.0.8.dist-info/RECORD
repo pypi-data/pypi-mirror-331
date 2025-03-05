@@ -1,0 +1,9 @@
+aioskd/__init__.py,sha256=RwaZU5d3IvOg1ahnAo9v3wr_j-TWnHRxuQzqz9XUX5U,48
+aioskd/cli.py,sha256=Yl8LNPT4DlNZZ7NlVZDLIFzevkhPteXTwBU2m2mrykw,1550
+aioskd/scheduler.py,sha256=QOxTqezVgwx0eI5ykIpgsFUeBGrgmMO9sU6CVlnZj-E,7080
+aioskd-0.0.8.dist-info/LICENSE,sha256=StJffAFTtS1qiwUByq5RlDS43jpaWEtJ1Ca-zXa-Z1I,1062
+aioskd-0.0.8.dist-info/METADATA,sha256=b-0BadXYdoZ8ox4hQxXrCYERcTKHo67gGWupjnGW7FA,9139
+aioskd-0.0.8.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+aioskd-0.0.8.dist-info/entry_points.txt,sha256=DjyGhAEVAUL04m7vPAKkL_CK93FvpANj3L6Gj7Hyg7U,39
+aioskd-0.0.8.dist-info/top_level.txt,sha256=n4L42rqoEnvA1W7-acqr8zcwKZPoUE11jk3Pm9vwJZQ,7
+aioskd-0.0.8.dist-info/RECORD,,
