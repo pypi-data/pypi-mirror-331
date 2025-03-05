@@ -1,0 +1,23 @@
+{
+    "entity_component": {
+        "_": {
+            "state": {
+                "off": "Izklopljeno",
+                "on": "Vklopljeno"
+            },
+            "state_attributes": {
+                "editable": {
+                    "state": {
+                        "false": "Ne",
+                        "true": "Da"
+                    }
+                }
+            }
+        }
+    },
+    "services": {
+        "reload": {
+            "name": "Ponovno nalo\u017ei"
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "config": {
+        "abort": {
+            "unique_id_mismatch": "You selected a different bridge than the one this config entry was configured with, this is not allowed."
+        }
+    },
+    "exceptions": {
+        "api_error": {
+            "message": "Error while communicating with the API"
+        },
+        "authentication_failed": {
+            "message": "Authentication failed. Local access token is invalid"
+        },
+        "update_failed": {
+            "message": "Error while updating data"
+        }
+    }
+}

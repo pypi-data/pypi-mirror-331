@@ -1,0 +1,40 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Prietaisas jau sukonfig\u016bruotas",
+            "already_in_progress": "Konfig\u016bracijos procesas jau vyksta"
+        },
+        "error": {
+            "cannot_connect": "Nepavyko prisijungti",
+            "unknown": "Netik\u0117ta klaida"
+        },
+        "flow_title": "{name}",
+        "step": {
+            "user": {
+                "data": {
+                    "host": "Host"
+                },
+                "data_description": {
+                    "host": "LinkPlay prietaiso pagrindinio kompiuterio pavadinimas arba IP adresas."
+                }
+            }
+        }
+    },
+    "entity": {
+        "button": {
+            "timesync": {
+                "name": "Sinchronizavimo laikas"
+            }
+        }
+    },
+    "services": {
+        "play_preset": {
+            "fields": {
+                "preset_number": {
+                    "name": "I\u0161 anksto nustatytas numeris"
+                }
+            },
+            "name": "Leisti i\u0161 anksto nustatyt\u0105"
+        }
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "entity": {
+        "sensor": {
+            "cpu_usage": {
+                "name": "CPU usage"
+            },
+            "device_status": {
+                "name": "Device status",
+                "state": {
+                    "adopt_failed": "Adopt failed",
+                    "error": "Error",
+                    "heartbeat_missed": "Heartbeat missed",
+                    "isolated": "Isolated",
+                    "managed_externally": "Managed externally",
+                    "pending": "Pending"
+                }
+            },
+            "mem_usage": {
+                "name": "Memory usage"
+            }
+        }
+    },
+    "services": {
+        "reconnect_client": {
+            "description": "Tries to get wireless client to reconnect to Omada Network.",
+            "fields": {
+                "mac": {
+                    "description": "MAC address of the device.",
+                    "name": "MAC address"
+                }
+            },
+            "name": "Reconnect wireless client"
+        }
+    }
+}

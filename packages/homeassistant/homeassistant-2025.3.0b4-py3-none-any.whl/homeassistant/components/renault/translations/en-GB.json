@@ -1,0 +1,32 @@
+{
+    "config": {
+        "step": {
+            "kamereon": {
+                "data_description": {
+                    "kamereon_account_id": "The Kamereon account ID associated with your vehicle"
+                },
+                "description": "You have multiple Kamereon accounts associated to this email, please select one"
+            },
+            "reauth_confirm": {
+                "data_description": {
+                    "password": "Your MyRenault phone application password"
+                }
+            },
+            "user": {
+                "data_description": {
+                    "locale": "Your country code",
+                    "password": "Your MyRenault phone application password",
+                    "username": "Your MyRenault phone application email address"
+                }
+            }
+        }
+    },
+    "exceptions": {
+        "invalid_device_id": {
+            "message": "No device with ID {device_id} was found"
+        },
+        "no_config_entry_for_device": {
+            "message": "No loaded config entry was found for device with ID {device_id}"
+        }
+    }
+}

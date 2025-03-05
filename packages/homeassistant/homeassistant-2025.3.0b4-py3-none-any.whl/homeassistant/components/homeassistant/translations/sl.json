@@ -1,0 +1,47 @@
+{
+    "config": {
+        "abort": {
+            "single_instance_allowed": "\u017de konfigurirano. Mo\u017ena je samo ena konfiguracija."
+        }
+    },
+    "issues": {
+        "config_entry_reauth": {
+            "title": "Preverjanje pristnosti za {name} je poteklo"
+        }
+    },
+    "services": {
+        "restart": {
+            "name": "Ponovno za\u017eeni"
+        },
+        "set_location": {
+            "fields": {
+                "elevation": {
+                    "name": "Nadmorska vi\u0161ina"
+                },
+                "latitude": {
+                    "name": "Zemljepisna \u0161irina"
+                },
+                "longitude": {
+                    "name": "Zemljepisna dol\u017eina"
+                }
+            }
+        },
+        "stop": {
+            "name": "Zaustavi"
+        }
+    },
+    "system_health": {
+        "info": {
+            "arch": "Arhitektura CPU",
+            "dev": "Razvoj",
+            "docker": "Docker",
+            "hassio": "Nadzornik",
+            "installation_type": "Vrsta namestitve",
+            "os_name": "Dru\u017eina operacijskega sistema",
+            "os_version": "Razli\u010dica operacijskega sistema",
+            "python_version": "Razli\u010dica Pythona",
+            "timezone": "\u010casovni pas",
+            "version": "Razli\u010dica"
+        }
+    }
+}

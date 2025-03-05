@@ -1,0 +1,14 @@
+{
+    "entity": {
+        "button": {
+            "timesync": {
+                "name": "Sync time"
+            }
+        }
+    },
+    "exceptions": {
+        "invalid_grouping_entity": {
+            "message": "Entity with ID {entity_id} can't be added to the LinkPlay multiroom. Is the entity a LinkPlay media player?"
+        }
+    }
+}

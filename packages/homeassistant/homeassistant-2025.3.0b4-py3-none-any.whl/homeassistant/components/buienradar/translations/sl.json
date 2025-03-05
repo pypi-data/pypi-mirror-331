@@ -1,0 +1,18 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Lokacija je \u017ee nastavljena"
+        },
+        "error": {
+            "already_configured": "Lokacija je \u017ee nastavljena"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "latitude": "Zemljepisna \u0161irina",
+                    "longitude": "Zemljepisna dol\u017eina"
+                }
+            }
+        }
+    }
+}

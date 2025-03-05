@@ -1,0 +1,28 @@
+{
+    "config": {
+        "abort": {
+            "api_error": "Error while communicating with Mi API: {error_detail}"
+        },
+        "error": {
+            "api_device_not_found": "The device was not found in your Mi account.",
+            "auth_failed": "Authentication failed: {error_detail}"
+        },
+        "step": {
+            "cloud_auth": {
+                "description": "Please provide your Mi app username and password. This data won't be saved and only used to retrieve the device encryption key. Usernames and passwords are case-sensitive."
+            },
+            "get_encryption_key_4_5_choose_method": {
+                "description": "A Mi device can be set up in Home Assistant in two different ways.\n\nYou can enter the bindkey yourself, or Home Assistant can import them from your Mi account.",
+                "menu_options": {
+                    "cloud_auth": "Mi account (recommended)",
+                    "get_encryption_key_4_5": "Enter encryption key manually"
+                }
+            }
+        }
+    },
+    "device_automation": {
+        "trigger_type": {
+            "button_color_temperature": "Button Colour Temperature \"{subtype}\""
+        }
+    }
+}

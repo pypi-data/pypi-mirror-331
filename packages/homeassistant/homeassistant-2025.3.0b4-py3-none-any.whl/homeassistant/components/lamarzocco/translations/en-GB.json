@@ -1,0 +1,76 @@
+{
+    "config": {
+        "step": {
+            "bluetooth_selection": {
+                "data_description": {
+                    "mac": "Select the Bluetooth device that is your machine"
+                }
+            },
+            "machine_selection": {
+                "data_description": {
+                    "machine": "Select the machine you want to integrate"
+                }
+            }
+        }
+    },
+    "entity": {
+        "number": {
+            "scale_target_key": {
+                "name": "Brew by weight target {key}"
+            },
+            "smart_standby_time": {
+                "name": "Smart standby time"
+            }
+        },
+        "select": {
+            "active_bbw": {
+                "name": "Active brew by weight recipe",
+                "state": {
+                    "a": "Recipe A",
+                    "b": "Recipe B"
+                }
+            },
+            "smart_standby_mode": {
+                "name": "Smart standby mode",
+                "state": {
+                    "last_brewing": "Last brewing",
+                    "power_on": "Power on"
+                }
+            }
+        },
+        "sensor": {
+            "drink_stats_coffee": {
+                "unit_of_measurement": "coffees"
+            },
+            "drink_stats_coffee_key": {
+                "name": "Coffees made Key {key}",
+                "unit_of_measurement": "coffees"
+            },
+            "drink_stats_flushing": {
+                "unit_of_measurement": "flushes"
+            }
+        },
+        "switch": {
+            "smart_standby_enabled": {
+                "name": "Smart standby enabled"
+            }
+        }
+    },
+    "exceptions": {
+        "api_error": {
+            "message": "Error while communicating with the API"
+        },
+        "authentication_failed": {
+            "message": "Authentication failed"
+        }
+    },
+    "options": {
+        "step": {
+            "init": {
+                "data_description": {
+                    "use_bluetooth": "Should the integration try to use Bluetooth to control the machine?"
+                }
+            }
+        }
+    }
+}

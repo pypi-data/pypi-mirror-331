@@ -1,0 +1,53 @@
+{
+    "config": {
+        "step": {
+            "reauth_confirm": {
+                "data_description": {
+                    "password": "Correct the IMAP password."
+                }
+            },
+            "user": {
+                "data": {
+                    "event_message_data": "Message data to be included in the `imap_content` event data:"
+                },
+                "data_description": {
+                    "charset": "The character set used. Common values are `utf-8` or `US-ASCII`.",
+                    "event_message_data": "Note that the event size is limited, and not all message text might be sent with the event if the message is too large.",
+                    "folder": "In generally the folder is set to `INBOX`, but e.g. in case of a sub folder, named `Test`, this should be `INBOX.Test`.",
+                    "password": "The IMAP password",
+                    "port": "The IMAP port supporting SSL, usually this is 993.",
+                    "search": "The IMAP search command which is `UnSeen UnDeleted` by default.",
+                    "server": "The IMAP server.",
+                    "ssl_cipher_list": "If the IMAP service only supports legacy encryption, try to change this.",
+                    "username": "The IMAP username.",
+                    "verify_ssl": "Recommended, to ensure the server certificate is valid. Turn off, if the server certificate is not trusted (e.g. self-signed)."
+                }
+            }
+        }
+    },
+    "entity": {
+        "sensor": {
+            "imap_mail_count": {
+                "name": "Messages",
+                "unit_of_measurement": "messages"
+            }
+        }
+    },
+    "options": {
+        "step": {
+            "init": {
+                "data": {
+                    "enable_push": "Enable Push-IMAP if the server supports it. Turn off if Push-IMAP updates are unreliable."
+                },
+                "data_description": {
+                    "custom_event_data_template": "This template is evaluated when a new message was received, and the result is added to the `custom` attribute of the event data.",
+                    "enable_push": "Using Push-IMAP is recommended. Polling will increase the time to respond.",
+                    "event_message_data": "Note that the event size is limited, and not all message text might be sent with the event if the message is too large.",
+                    "folder": "In generally the folder is set to `INBOX`, but e.g. in case of a sub folder, named `Test`, this should be `INBOX.Test`.",
+                    "max_message_size": "Limit the maximum size of the event. Instead of passing the (whole) text message, using a template is a better option.",
+                    "search": "The IMAP search command which is `UnSeen UnDeleted` by default."
+                }
+            }
+        }
+    }
+}

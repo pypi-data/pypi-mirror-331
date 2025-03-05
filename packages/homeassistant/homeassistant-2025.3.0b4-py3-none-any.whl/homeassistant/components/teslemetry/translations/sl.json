@@ -1,0 +1,34 @@
+{
+    "config": {
+        "abort": {
+            "reauth_successful": "Ponovna avtentikacija je bila uspe\u0161na"
+        },
+        "error": {
+            "cannot_connect": "Povezava ni uspela",
+            "invalid_access_token": "Neveljaven dostopni \u017eeton",
+            "unknown": "Nepri\u010dakovana napaka"
+        },
+        "step": {
+            "reauth_confirm": {
+                "data": {
+                    "access_token": "\u017deton za dostop"
+                },
+                "title": "Preverjanje pristnosti za {name} je poteklo"
+            },
+            "user": {
+                "data": {
+                    "access_token": "\u017deton za dostop"
+                }
+            }
+        }
+    },
+    "entity": {
+        "sensor": {
+            "charge_state_charging_state": {
+                "state": {
+                    "charging": "Polnjenje"
+                }
+            }
+        }
+    }
+}

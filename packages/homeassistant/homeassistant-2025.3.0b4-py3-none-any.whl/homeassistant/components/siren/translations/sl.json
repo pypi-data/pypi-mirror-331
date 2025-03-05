@@ -1,0 +1,21 @@
+{
+    "entity_component": {
+        "_": {
+            "state": {
+                "off": "Izklopljeno",
+                "on": "Vklopljeno"
+            }
+        }
+    },
+    "services": {
+        "toggle": {
+            "name": "Preklopi"
+        },
+        "turn_off": {
+            "name": "Izklopi"
+        },
+        "turn_on": {
+            "name": "Vklopi"
+        }
+    }
+}

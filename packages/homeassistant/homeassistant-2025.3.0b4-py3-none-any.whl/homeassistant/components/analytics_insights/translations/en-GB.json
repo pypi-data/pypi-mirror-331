@@ -1,0 +1,32 @@
+{
+    "config": {
+        "error": {
+            "no_integrations_selected": "You must select at least one integration to track"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "tracked_addons": "Addons"
+                },
+                "data_description": {
+                    "tracked_addons": "Select the addons you want to track"
+                }
+            }
+        }
+    },
+    "options": {
+        "error": {
+            "no_integrations_selected": "You must select at least one integration to track"
+        },
+        "step": {
+            "init": {
+                "data": {
+                    "tracked_addons": "Addons"
+                },
+                "data_description": {
+                    "tracked_addons": "Select the addons you want to track"
+                }
+            }
+        }
+    }
+}
