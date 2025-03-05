@@ -1,0 +1,18 @@
+<html>
+<head>
+    <script type="text/javascript" language="javascript">
+        var submitForm = function() {
+          document.getElementById("tamara-payment").submit();
+        };
+    </script>
+</head>
+
+<body style="display: none;" onload="submitForm();">
+
+<form id="tamara-payment" action="{{ action_url }}" method="{{ action_method }}">
+    {% csrf_token %}
+    {{ tamara_form.as_table() }}
+</form>
+
+</body>
+</html>
