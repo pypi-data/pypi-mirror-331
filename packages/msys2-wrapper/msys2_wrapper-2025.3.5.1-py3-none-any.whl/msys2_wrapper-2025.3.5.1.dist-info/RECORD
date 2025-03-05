@@ -1,0 +1,12 @@
+msys2_wrapper/find_msys2.py,sha256=HjS7KOsa8zAYvFoemwdXqv9vDwxH0K1TNqobUUklkQ4,2473
+msys2_wrapper/help.py,sha256=fPyVRn6w2ODCrSoslFu3lWE05FiI5owmooMqK3PANSA,1343
+msys2_wrapper/helper.py,sha256=N-bW-CERDDblRZYXdeYMpJZYnkVoGvxuubGrVfWtJTg,211
+msys2_wrapper/launch_args.py,sha256=HHchiC5hkCW0fu5AD07aHTtpBi_AnJSdkZU2JMkmong,1881
+msys2_wrapper/main.py,sha256=XS-qc6ueXfVFjvSHSGMw0BFmhgmYpDsDPQ_A89ocBNY,211
+msys2_wrapper/parse_args.py,sha256=NLr4D6Zbs3eKL4gL2iGqkDJ0CFUfqpk_jbtb0YReADg,2600
+msys2_wrapper/start_shell.py,sha256=eTHTxKHp8bzXn33FAeL3UP8RgCyQZEyuGnhnOTJY9uk,3955
+msys2_wrapper-2025.3.5.1.dist-info/METADATA,sha256=M_MnaWDR8mVI-SVoV6S2QEZwuXrEJmD_U3vFer5qb3k,2088
+msys2_wrapper-2025.3.5.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+msys2_wrapper-2025.3.5.1.dist-info/entry_points.txt,sha256=wVHoxylhMBH-Tjl_3ip3GuEEWh7Y7Pd0yNAKulxZo3o,99
+msys2_wrapper-2025.3.5.1.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+msys2_wrapper-2025.3.5.1.dist-info/RECORD,,
