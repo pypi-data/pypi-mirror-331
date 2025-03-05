@@ -1,0 +1,6 @@
+README.md
+setup.py
+msgspec_python313_pre.egg-info/PKG-INFO
+msgspec_python313_pre.egg-info/SOURCES.txt
+msgspec_python313_pre.egg-info/dependency_links.txt
+msgspec_python313_pre.egg-info/top_level.txt
