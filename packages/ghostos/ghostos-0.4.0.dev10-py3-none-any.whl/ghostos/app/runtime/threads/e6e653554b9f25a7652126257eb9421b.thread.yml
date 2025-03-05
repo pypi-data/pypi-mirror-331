@@ -1,0 +1,290 @@
+id: e6e653554b9f25a7652126257eb9421b
+root_id: 5f975668606a78e734ac568da2217728
+parent_id: 5f975668606a78e734ac568da2217728
+on_created:
+  turn_id: 1c5d0baa995de36f97493d96476a79a9
+  created: 1740997641
+history:
+- turn_id: 65d945cb3e2ff9c7185c056b086a3bc6
+  event:
+    event_id: 65d945cb3e2ff9c7185c056b086a3bc6
+    type: input
+    task_id: 5f975668606a78e734ac568da2217728
+    messages:
+    - msg_id: aae61bf47cf146c4ca1712eee05197e4
+      role: user
+      content: 请你帮我在 facade 目录下添加一个函数, 获取 llms config 的 default 值
+      seq: complete
+      created: 1740997641.041
+  added:
+  - msg_id: 180b9d12-fb1e-4371-89b6-5f1f149490b8
+    call_id: call_0_8ab45885-3ec8-4af2-8c9a-7991d32eccb0
+    type: function_call
+    role: assistant
+    name: moss
+    content: '{"code": "def run(moss: Moss):\n    moss.inspector.watching_source.append(''ghostos.facade._llms'')\n    return
+      moss.replier.wait_for(''请查看 ghostos.facade._llms 模块的源代码'')"}'
+    payloads:
+      model_conf:
+        model: deepseek-chat
+        description: ''
+        service: deepseek
+        temperature: 0.7
+        n: 1
+        max_tokens: 2000
+        timeout: 30.0
+        request_timeout: 40.0
+        kwargs: {}
+        message_types: null
+        allow_streaming: true
+        top_p: null
+        reasoning: null
+        compatible: null
+        payloads: {}
+      prompt_info:
+        prompt_id: 748516c66b38f8b4f58d5bef174fdf33
+        desc: created from thread e6e653554b9f25a7652126257eb9421b turn 65d945cb3e2ff9c7185c056b086a3bc6
+      task_info:
+        task_id: 5f975668606a78e734ac568da2217728
+        task_name: jojo
+        process_id: e8f6946846fe692c553b5ac80e223569
+        shell_id: ghostos_streamlit_app
+        thread_id: e6e653554b9f25a7652126257eb9421b
+    seq: complete
+    created: 1740997662.553
+  created: 1740997641
+  pending_callers:
+  - call_id: call_0_8ab45885-3ec8-4af2-8c9a-7991d32eccb0
+    name: moss
+    arguments: '{"code": "def run(moss: Moss):\n    moss.inspector.watching_source.append(''ghostos.facade._llms'')\n    return
+      moss.replier.wait_for(''请查看 ghostos.facade._llms 模块的源代码'')"}'
+- turn_id: 34351e8306d40eb8a958cdea59c70e08
+  added:
+  - msg_id: 2510349930b92c946c51d6b4d90e583f
+    call_id: call_0_8ab45885-3ec8-4af2-8c9a-7991d32eccb0
+    type: function_output
+    role: assistant
+    name: moss
+    content: 'Function Error: error during executing moss code: ''PyInspectorSessionImpl''
+      object has no attribute ''watching_source'''
+    payloads:
+      task_info:
+        task_id: 5f975668606a78e734ac568da2217728
+        task_name: jojo
+        process_id: e8f6946846fe692c553b5ac80e223569
+        shell_id: ghostos_streamlit_app
+        thread_id: e6e653554b9f25a7652126257eb9421b
+    seq: complete
+    created: 1740997682.462
+  created: 1740997683
+- turn_id: b7acedf1a55129dd07e74fc3823da97e
+  event:
+    event_id: b7acedf1a55129dd07e74fc3823da97e
+    type: error
+    task_id: 5f975668606a78e734ac568da2217728
+    from_task_id: 5f975668606a78e734ac568da2217728
+    from_task_name: jojo
+    callback: true
+  added:
+  - msg_id: ab9969d4-e910-4f13-ba34-b18b424eac0d
+    call_id: call_0_c5f1894b-ffd2-4109-9ab0-1c4f013837ca
+    type: function_call
+    role: assistant
+    name: moss
+    content: '{"code": "def run(moss: Moss):\n    source = moss.inspector.get_source(''ghostos.facade._llms'')\n    print(source)\n    return
+      moss.replier.wait_for(''请查看 ghostos.facade._llms 模块的源代码'')"}'
+    payloads:
+      model_conf:
+        model: deepseek-chat
+        description: ''
+        service: deepseek
+        temperature: 0.7
+        n: 1
+        max_tokens: 2000
+        timeout: 30.0
+        request_timeout: 40.0
+        kwargs: {}
+        message_types: null
+        allow_streaming: true
+        top_p: null
+        reasoning: null
+        compatible: null
+        payloads: {}
+      prompt_info:
+        prompt_id: 3989a2343e85d4a6c6650935d2856f2e
+        desc: created from thread e6e653554b9f25a7652126257eb9421b turn b7acedf1a55129dd07e74fc3823da97e
+      task_info:
+        task_id: 5f975668606a78e734ac568da2217728
+        task_name: jojo
+        process_id: e8f6946846fe692c553b5ac80e223569
+        shell_id: ghostos_streamlit_app
+        thread_id: e6e653554b9f25a7652126257eb9421b
+    seq: complete
+    created: 1740997695.934
+  created: 1740997683
+  approved: false
+  pending_callers:
+  - call_id: call_0_c5f1894b-ffd2-4109-9ab0-1c4f013837ca
+    name: moss
+    arguments: '{"code": "def run(moss: Moss):\n    source = moss.inspector.get_source(''ghostos.facade._llms'')\n    print(source)\n    return
+      moss.replier.wait_for(''请查看 ghostos.facade._llms 模块的源代码'')"}'
+- turn_id: e4a156ff9a1e74659b71e7b9bb26f662
+  event:
+    event_id: e4a156ff9a1e74659b71e7b9bb26f662
+    type: input
+    task_id: 5f975668606a78e734ac568da2217728
+    messages:
+    - msg_id: 0da133d825a1bfc35dc1588296aa568b
+      role: user
+      content: 请你帮我在 facade 目录下添加一个函数, 获取 llms config 的 default 值
+      seq: complete
+      created: 1740998263.102
+  added:
+  - msg_id: bfa067da-83ee-4718-97e9-05007f11a149
+    call_id: call_0_f4902e01-0c35-45a9-a57c-34562943c738
+    type: function_call
+    role: assistant
+    name: moss
+    content: '{"code": "def run(moss: Moss):\n    moss.editing.insert(''def get_default_llm_config()
+      -> dict:\\n    return get_llm_configs().get(\"default\", {})\\n'', line_num=-1,
+      reload=True)\n    moss.editing.save()\n    return moss.replier.wait_for(''已添加
+      get_default_llm_config 函数到 ghostos.facade 模块'')"}'
+    payloads:
+      model_conf:
+        model: deepseek-chat
+        description: ''
+        service: deepseek
+        temperature: 0.7
+        n: 1
+        max_tokens: 2000
+        timeout: 30.0
+        request_timeout: 40.0
+        kwargs: {}
+        message_types: null
+        allow_streaming: true
+        top_p: null
+        reasoning: null
+        compatible: null
+        payloads: {}
+      prompt_info:
+        prompt_id: 2da78f82e75d9210aea9efe0ca9458cc
+        desc: created from thread e6e653554b9f25a7652126257eb9421b turn e4a156ff9a1e74659b71e7b9bb26f662
+      task_info:
+        task_id: 5f975668606a78e734ac568da2217728
+        task_name: jojo
+        process_id: e8f6946846fe692c553b5ac80e223569
+        shell_id: ghostos_streamlit_app
+        thread_id: e6e653554b9f25a7652126257eb9421b
+    seq: complete
+    created: 1740998277.527
+  created: 1740998263
+  pending_callers:
+  - call_id: call_0_f4902e01-0c35-45a9-a57c-34562943c738
+    name: moss
+    arguments: '{"code": "def run(moss: Moss):\n    moss.editing.insert(''def get_default_llm_config()
+      -> dict:\\n    return get_llm_configs().get(\"default\", {})\\n'', line_num=-1,
+      reload=True)\n    moss.editing.save()\n    return moss.replier.wait_for(''已添加
+      get_default_llm_config 函数到 ghostos.facade 模块'')"}'
+- turn_id: 9e3881638840f0d845e6f8cefb162c72
+  added:
+  - msg_id: 33cd3a7af9070808fc047bb95728d07a
+    call_id: call_0_f4902e01-0c35-45a9-a57c-34562943c738
+    type: function_output
+    role: assistant
+    name: moss
+    content: executed
+    payloads:
+      task_info:
+        task_id: 5f975668606a78e734ac568da2217728
+        task_name: jojo
+        process_id: e8f6946846fe692c553b5ac80e223569
+        shell_id: ghostos_streamlit_app
+        thread_id: e6e653554b9f25a7652126257eb9421b
+    seq: complete
+    created: 1740998292.165
+  - msg_id: 1f598e8a37b6c933edc106235c6e8816
+    role: assistant
+    name: jojo
+    content: 已添加 get_default_llm_config 函数到 ghostos.facade 模块
+    payloads:
+      task_info:
+        task_id: 5f975668606a78e734ac568da2217728
+        task_name: jojo
+        process_id: e8f6946846fe692c553b5ac80e223569
+        shell_id: ghostos_streamlit_app
+        thread_id: e6e653554b9f25a7652126257eb9421b
+    seq: complete
+    created: 1740998292.165
+  created: 1740998311
+- turn_id: 3a161a26d50b76d4857c251fc0725449
+  event:
+    event_id: 3a161a26d50b76d4857c251fc0725449
+    type: input
+    task_id: 5f975668606a78e734ac568da2217728
+    messages:
+    - msg_id: 478c51f3b31db863a3b9c1b6ba1979a4
+      role: user
+      content: 请你告诉我 llm configs 的 default 值
+      seq: complete
+      created: 1740998310.646
+  added:
+  - msg_id: 27f467af-b275-42ab-9152-8667fda642a3
+    call_id: call_0_bdd83bfe-163b-45bc-9a50-12d672ee3752
+    type: function_call
+    role: assistant
+    name: moss
+    content: '{"code": "def run(moss: Moss):\n    moss.inspector.watching_source.append(''ghostos.facade._llms'')\n    return
+      moss.replier.wait_for(''请查看 ghostos.facade._llms 模块的源代码'')"}'
+    payloads:
+      model_conf:
+        model: deepseek-chat
+        description: ''
+        service: deepseek
+        temperature: 0.7
+        n: 1
+        max_tokens: 2000
+        timeout: 30.0
+        request_timeout: 40.0
+        kwargs: {}
+        message_types: null
+        allow_streaming: true
+        top_p: null
+        reasoning: null
+        compatible: null
+        payloads: {}
+      prompt_info:
+        prompt_id: 59a7a70a545ba757ec5c5f529b0cc638
+        desc: created from thread e6e653554b9f25a7652126257eb9421b turn 3a161a26d50b76d4857c251fc0725449
+      task_info:
+        task_id: 5f975668606a78e734ac568da2217728
+        task_name: jojo
+        process_id: e8f6946846fe692c553b5ac80e223569
+        shell_id: ghostos_streamlit_app
+        thread_id: e6e653554b9f25a7652126257eb9421b
+    seq: complete
+    created: 1740998321.24
+  created: 1740998311
+  pending_callers:
+  - call_id: call_0_bdd83bfe-163b-45bc-9a50-12d672ee3752
+    name: moss
+    arguments: '{"code": "def run(moss: Moss):\n    moss.inspector.watching_source.append(''ghostos.facade._llms'')\n    return
+      moss.replier.wait_for(''请查看 ghostos.facade._llms 模块的源代码'')"}'
+current:
+  turn_id: 152113c7986c198b613aff2f6a160197
+  added:
+  - msg_id: 0672ddf1b788ee0dd90fefc12aab6f91
+    call_id: call_0_bdd83bfe-163b-45bc-9a50-12d672ee3752
+    type: function_output
+    role: assistant
+    name: moss
+    content: 'Function Error: error during executing moss code: ''PyInspectorSessionImpl''
+      object has no attribute ''watching_source'''
+    payloads:
+      task_info:
+        task_id: 5f975668606a78e734ac568da2217728
+        task_name: jojo
+        process_id: e8f6946846fe692c553b5ac80e223569
+        shell_id: ghostos_streamlit_app
+        thread_id: e6e653554b9f25a7652126257eb9421b
+    seq: complete
+    created: 1740998326.292
