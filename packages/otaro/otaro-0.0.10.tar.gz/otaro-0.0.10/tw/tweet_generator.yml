@@ -1,0 +1,37 @@
+# Tweet Generator Configuration for Otaro
+
+model: gemini/gemini-2.0-flash-001
+
+inputs:
+- blog_content: str
+- tweet_count: int
+- tone_preference: str
+
+outputs:
+- name: tweets
+  type: list[str]
+
+# Examples to guide the model
+demos:
+  - blog_content: "Title: The Future of AI in Healthcare\n\nContent: AI is transforming how doctors diagnose diseases and develop treatment plans. Machine learning algorithms can analyze medical images faster than humans. AI chatbots are helping patients get quick answers to health questions."
+    tweet_count: 2
+    tone_preference: "engaging"
+    tweets: 
+      - "AI is revolutionizing healthcare by enabling faster diagnoses and personalized treatment plans. The future looks promising!"
+      - "Machine learning algorithms now analyze medical images in seconds, helping doctors save lives through early detection. This is just the beginning of the AI revolution in healthcare!"
+  - blog_content: "Title: 5 Productivity Tips\n\nContent: 1. Start your day with intention. 2. Use the Pomodoro technique. 3. Batch similar tasks. 4. Take regular breaks. 5. Review your day."
+    tweet_count: 2
+    tone_preference: "informative"
+    tweets:
+      - "Start your day with intention, not distraction. The first 30 minutes set the tone for everything that follows."
+      - "The Pomodoro technique (25 min work + 5 min break) can boost your productivity by 25%. Science shows our brains work best in focused sprints!"
+
+rules:
+  # Ensure tweets are under 280 characters
+  - tw.custom_rules.max_length(tweets, 280)
+  # Ensure we generate the requested number of tweets
+  - tw.custom_rules.length(tweets, tweet_count)
+  # Ensure tweets are in the requested tone
+  - tw.custom_rules.contains_tone(tweets, tone_preference)
+  # Ensure tweets do not contain hashtags
+  - tw.custom_rules.no_hashtags(tweets) 

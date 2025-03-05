@@ -1,0 +1,130 @@
+import os
+from pathlib import Path
+
+from otaro import Task
+
+blog_content = """
+You can just write
+even if you think you can't.
+
+I have always felt inadequate about writing. Whenever I want to write about habits and productivity, I think of James Clear. Why would anyone read what I write, instead of someone who has sold more than 20 million copies of Atomic Habits?
+
+For psychology, there's Mougan Housel.
+Behavioral science? Rory Sutherland.
+Marketing? Lulu Cheng Meservey, April Dunford, Andrew Chen.
+Tech? Ben Thompson, Ashlee Vance.
+Business? Cedric Chin, Packy McCormick.
+Product? Ami Vora, Lenny Rachitsky.
+AI? swyx & Alessio, Karina Nguyen, Scott Belsky.
+Writing and life? Henrik Karlsson, Celine Nguyen, Julie Zhuo, Sherry Ning.
+Stoicism and philosophy? Ryan Holiday.
+
+I can keep going!
+
+This inferiority complex caused me to abandon many ideas and discard half-written drafts. That was until I realized…
+
+I can just write!
+
+My sense of inadequacy came from good intentions. One of my life principles is to be useful. So when I think about writing, I want to make sure whatever I write is useful to others. Unfortunately, because I tend to compare myself with others, my criteria become:
+
+Are my essays more useful than those fine writers'?
+
+I gradually realized this line of thinking is incorrect.
+
+Yes, those writers are smart, knowledgeable in their field, and write brilliantly. But it is a mistake to concede everything to the “authorities”, thinking that they know everything. Late Charlie Munger often complained about how most psychology textbooks don't include envy when envy is one of the most important psychology concepts, if not the most important one, for understanding human behaviors. I don't have to be known as a habit expert to write about how I successfully maintained a habit for many years. Real-life experience beats credentials.1
+
+There is also tremendous value in reading essays of those less “successful” than them, the more “ordinary” folks, people who are more like us.
+
+If I want to become a more successful founder, I can learn as much from a public-listed company CEO as from a Series A founder. If I want to become a better dad, I can learn as much from a grandfather as from a dad of a 2-year-old. If I want to become a better writer, I can learn as much from one of the writers above as from someone who has struggled like me yet published more than me. In fact, the latter group's words will feel more relatable than the former group's.
+
+Just as I can learn from people who are a few steps ahead of me, my writing can help people who are a few steps behind me. An employee who is looking to quit their job and start a business, a dad of a newborn, a friend who is hoping to start writing, a teammate who wants to do a triathlon, a stranger who is keen to work on AI. I'm not “successful” in the traditional, stereotypical sense but I have my fair share of failures and learnings to help others (as much as they have their experiences to help me).
+
+But most crucially, writing helps me.
+
+I write to learn.
+
+William Zinsser puts it perfectly in his book, Writing to Learn, “It's by writing about a subject we're trying to learn that we reason our way to what it means.” Before I wrote about health screenings and health insurance, I didn't know much about either. But while writing them, I read articles and books, spoke to people in the industry, and learned about the topics. When writing long-form articles on social media marketing at Buffer, I was near the frontier of social media marketing, reading every platform update I could find and coming up with useful content. For instance, I wrote about the Instagram algorithm before most marketers began to think about it. Now I publish my AI notes to cement what I had just learned.
+
+I write to think and get unstuck.
+
+Paul Graham wrote in his essay, Writes and Write-Nots, “writing is thinking. In fact there's a kind of thinking that can only be done by writing. You can't make this point better than Leslie Lamport did:
+
+If you're thinking without writing, you only think you're thinking.
+
+Even though we are only eight weeks into 2025, I have felt stuck multiple times. My bad habit is scrolling Twitter for “inspiration”, which often leads to mindless time wasting. Forcing myself to write about what I was stuck on has more often than not helped me make progress. Writing helps me articulate the problem more clearly, and having to think about the outline forces me to think about the next most important thing to work on.
+
+I write to leverage AI.
+
+Henrik Karlsson posted a note saying, “Having spent ~3000 hrs over the last 4 years writing a Substack increasingly seems like a good time investment given that we are now in a world were if you can think stuff through systematically and express yourself clearly, you can get Claude/ChatGPT to do all sorts of crazy stuff for you.” Greg Ceccarelli wrote in his essay, The precision writing gap, “The future will depend on more than just being able to write. Those using AI and LLMs know there will be a further divide. A separation between who can write from those who can write with precision.” Having used AI tools such as ChatGPT, Perplexity, and Cursor excessively, I learned that the way to get the best result is to do what Henrik and Greg described: prompt what I want systematically and write precisely—which requires me to think thoroughly first.
+
+I don't purport to have magical formulas for how to write well. But I can share what I have been trying and what I have read from successful writers.
+
+Write for yourself
+
+As a marketer who hates spam, I have always felt the need to serve others: to write only valuable content (whatever that means) and not publish too much (whatever that means!) I finally dropped this unnecessary notion when I stumbled upon Henrik Karlsson's note, “In real life, you can't go on and on about your obsessions: you have to tame yourself to not ruin the day for others. This is fine! But a blog is a house where you get to decide what the norms are.”
+
+William Zinsser said something similar when he wrote about his time as the editor of Yale Alumni Magazine. He said he never stopped to ask who the typical Yale alumnus is and who he was editing for. “I edit for myself and I write for myself. I assume that if I consider something interesting or funny, a certain number of other people will too. If they don't, they have two inalienable rights—they can fire the editor and they can stop reading the writer.”
+
+That's why this publication is called Letters To Alfred. I'm writing to myself, for myself. You are welcome to read them; you are welcome to unsubscribe. I now publish about my obsessions as much as I like (currently AI) and ignore my subscriber count. Not many people have been writing my essays, and that's fine. Billionaire investor Howard Marks wrote investment memos for ten years with virtually no engagement. His clients simply threw them away. But it didn't bother him a bit because he was writing for himself, trying to crystallize his thoughts.
+
+And writing for yourself turns out to be the trick to produce good writing. Morgan Housel's advice to writers is to only write things you personally find interesting.
+
+“Writing for others is work, and it shows. Writing for yourself is fun, and it shows.”
+
+Copy
+
+When we learn to draw, it's common to replicate existing artwork to learn the techniques: line work, shading, and composition. Yet when it comes to writing, copying feels like a taboo.2 But it can also help us learn the techniques: rhythm, structure, and storytelling.
+
+Jack London, author of the literacy classic The Call of the Wild, copied pages and pages of Rudyard Kipling's works—by hand—to improve his writing.
+
+Again, William Zinsser to the rescue:
+
+We all need models, whatever art or craft we're trying to learn. Bach needed a model; Picasso needed a model; they didn't spring full-blown as Bach and Picasso. This is especially true of writers. Writing is learned by imitation. I learned to write mainly by reading writers who were doing the kind of writing I wanted to do and by trying to figure out how they did it. S. J. Perelman told me that when he was starting out he could have been arrested for imitating Ring Lardner. Woody Allen could have been arrested for imitating S. J. Perelman. And who hasn't tried to imitate Woody Allen?
+
+To improve my conclusions, I have been experimenting with different techniques inspired by my favorite writers' conclusions, such as ending with an impactful sentence.3
+
+Go out and observe
+
+Last year, I learned how hard it is to merely describe things. A root cause of that is not paying enough attention. What I didn't notice, I cannot describe.
+
+From The Copy Book: How Some of the Best Advertising Writers in the World Write Their Advertising:
+
+2. Leave the office
+
+Before you even open your pad, open five other things Your ears, your eyes and your mind.
+
+You'll never be a good writer of anything if you just sit in your office and stare at your desk. Your raw material isn't in the office or in Groucho's for that matter. It's out on the streets. Look at pictures. Listen to music. Go to films. See plays. And more importantly look at people. They're those funny things with two legs we're meant to be writing about, remember.
+
+It sounds obvious but it's amazing how many people in our incestuous little business just spend their spare time with other people in this incestuous little business.
+
+Get out. And observe.
+
+For instance, the Castlemaine xxxx campaign would never have happened if my parents hadn't sent me to Australia to make a man of me. This it conspicuously failed to do. But it did teach me how to get bitten by a wild cockatoo, how to cheat at poker, and fifteen years later how to write a xxxx ad.
+
+Write
+
+Most importantly, write.
+
+For William Zinsser wrote, “Only by repeated application of process—writing and rewriting and pruning and shaping—can we hammer out a clear and simple product.”
+
+You don't have to write and rewrite the same essay. Sometimes you just have to publish and revisit it later. My essay Founder Dad's Paradoxes is the second time I wrote about cognitive dissonance. I first wrote about it two years ago, under the title, Holding two opposing ideas in my mind. Inspired by Julie Zhuo's The Looking Glass: The Curse of Perfect, I rewrote the same ideas in a more narrative style last year. The second version turned out much better. It's one of my few essays where multiple friends messaged me about it after they read it.
+
+It doesn't matter if your first essay, first 10 essays, or first 100 essays are bad. In fact, they probably will be. You can always re-write and publish.
+
+So, write.
+
+You can just write—even if you think you can't.
+"""
+
+
+def main() -> None:
+    file_dir = Path(os.path.dirname(os.path.realpath(__file__)))
+    task = Task.from_config(file_dir / "tweet_generator.yml")
+    response = task.run(
+        blog_content=blog_content, tweet_count=2, tone_preference="engaging"
+    )
+    print(response.tweets)
+
+
+if __name__ == "__main__":
+    main()
