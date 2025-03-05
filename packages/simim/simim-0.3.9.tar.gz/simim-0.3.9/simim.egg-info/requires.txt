@@ -1,0 +1,7 @@
+astropy
+h5py
+importlib_resources
+matplotlib
+numpy
+requests
+scipy
