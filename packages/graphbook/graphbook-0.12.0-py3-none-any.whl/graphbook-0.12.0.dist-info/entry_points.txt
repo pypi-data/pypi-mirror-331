@@ -1,0 +1,3 @@
+[console_scripts]
+graphbook=graphbook.core.cli:main
+
