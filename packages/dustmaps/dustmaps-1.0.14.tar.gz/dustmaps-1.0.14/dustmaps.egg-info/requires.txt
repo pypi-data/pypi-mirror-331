@@ -1,0 +1,9 @@
+astropy
+h5py
+healpy
+numpy
+progressbar2
+requests
+scipy
+six
+tqdm
