@@ -1,0 +1,9 @@
+LICENCE
+README.md
+setup.py
+eckhardt/__init__.py
+eckhardt/mathfunctions.py
+mathfunctions_eckhardt.egg-info/PKG-INFO
+mathfunctions_eckhardt.egg-info/SOURCES.txt
+mathfunctions_eckhardt.egg-info/dependency_links.txt
+mathfunctions_eckhardt.egg-info/top_level.txt
