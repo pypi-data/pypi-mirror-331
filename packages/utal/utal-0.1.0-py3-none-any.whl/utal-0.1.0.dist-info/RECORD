@@ -1,0 +1,10 @@
+utal/__init__.py,sha256=fNIVaNZXEuUMdghFrqq0JiHDmxAjO6OTZBvcvYtJdZA,136
+utal/client.py,sha256=Dzty3-chOYe4pO6v9xL4DymNHMQ64rrL0WKHWFNtKiw,3744
+utal/conversation.py,sha256=DKbhcQkNkWyrAsVUaVK3euZpcIOY87kLA6zpY-9x7aU,3405
+utal/exceptions.py,sha256=m-Zncqil6lAnZ2sDDyjbfhnKkxzqtpvDhGF6epdADQ0,1456
+utal/messages.py,sha256=6sAwZvZdiCD3_ccUClCV0W9pLPMD1tOqV4g99aNXA6I,3702
+utal-0.1.0.dist-info/LICENSE,sha256=AtF9OuFW42xb7cWKZqneVGGwUGdfgb4XaQ7NRQ_joCI,1069
+utal-0.1.0.dist-info/METADATA,sha256=tubZwNTDySlTIp4BA0wv8c4mnwGTDFx5d5j51Vphxv4,4694
+utal-0.1.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+utal-0.1.0.dist-info/top_level.txt,sha256=L7k5GZyyBICYb7MxL97EG9t8J0ZqQftg-cr0DuLfbvg,5
+utal-0.1.0.dist-info/RECORD,,
