@@ -1,0 +1,56 @@
+Metadata-Version: 2.2
+Name: kaithem-plugin-datasette
+Version: 0.1.2
+Summary: Add your description here
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: kaithem>=0.87.0
+Requires-Dist: kaithem
+Requires-Dist: datasette>=1.0a16
+Requires-Dist: datasette-write
+Requires-Dist: datasette-write-ui
+Requires-Dist: datasette-edit-schema
+Requires-Dist: datasette-plot
+Requires-Dist: datasette-search-all
+Requires-Dist: datasette-checkbox
+Requires-Dist: datasette-explain
+Requires-Dist: datasette-comments
+Requires-Dist: datasette-render-images
+Requires-Dist: datasette-render-markdown
+Requires-Dist: datasette-pretty-json>=0.3
+Requires-Dist: datasette-cluster-map
+Requires-Dist: datasette-geojson
+Requires-Dist: datasette-copyable
+Requires-Dist: datasette-mp3-audio
+Requires-Dist: datasette-import
+
+# kaithem_plugin_datasette
+WIP plugin to integrate kaithem with datasette. Very early WIP.
+
+
+## Install
+If you did a pipx install of Kaithem, you should just be able to do:
+
+`pipx inject kaithem kaithem-plugin-datasette`
+
+and reboot or restart kaithem.
+
+The new UV way is
+
+`uv tool install --with kaithem-plugin-datasette kaithem`
+
+## Dev Install
+For testing/, activate your kaithem virtual environment and do:
+
+```bash
+pip install -e  ../kaithem-plugin-datasette
+```
+
+## Use
+
+You will then have access to the datasette resource type in any module. Create one, and
+on the modules page you will find a link to a datasette instance, with editing plugins enabled,
+security integrated with Kaithem's user auth, and cluster map tiles cached by the server.
+
+This plugin does not really add many new features.
