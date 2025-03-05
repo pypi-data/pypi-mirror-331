@@ -1,0 +1,100 @@
+Metadata-Version: 2.2
+Name: simple-tg-md
+Version: 0.1.1
+Summary: Простая библиотека для конвертирования в формат Telegram Markdown V2
+Home-page: https://github.com/VKolebcev/simple-tg-md
+Author: HalPerson
+Author-email: vkolebcev@yandex.ru
+License: MIT License
+        
+        Copyright (c) 2025 VKolebcev
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/VKolebcev/simple-tg-md
+Project-URL: Bug Tracker, https://github.com/VKolebcev/simple-tg-md/issues
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: requires-python
+
+# simple-tg-md
+Библиотека, которая поможет конвертировать текст в специфичный Telegram MarkdownV2, корректно экранируя символы не относящиеся к стандартному форматированию Markdown
+
+[![PyPI version](https://badge.fury.io/py/simple-tg-md.svg)](https://badge.fury.io/py/simple-tg-md)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![Python Versions](https://img.shields.io/pypi/pyversions/simple-tg-md.svg)
+
+## Установка
+
+```bash
+pip install simple-tg-md
+```
+
+## Требования
+
+- Python 3.9 или выше
+
+## Возможности
+
+Библиотека поддерживает преобразование следующих форматов:
+
+- Жирный текст (`*текст*`)
+- Курсив (`_текст_`)
+- Зачеркнутый текст (`~текст~`)
+- Спойлер (`||текст||`)
+- Встроенный код (`` `код` ``)
+- Блоки кода (` ```код``` `)
+- Ссылки (`[текст](ссылка)`)
+- Заголовки (преобразуются в жирный текст)
+
+## Примеры использования
+
+```python
+from simple_tg_md import convert_to_md2
+
+# Простой пример
+text = "**Жирный текст** и _курсив_"
+markdown_text = convert_to_md2(text)
+print(markdown_text)
+
+# Пример со ссылкой
+link_text = "Посетите [Telegram](https://telegram.org)"
+markdown_link = convert_to_md2(link_text)
+print(markdown_link)
+
+# Пример с блоком кода
+code_text = """
+# Пример кода
+def hello():
+    print("Hello, World!")
+"""
+markdown_code = convert_to_md2(code_text)
+print(markdown_code)
+```
+
+## Правила конвертации
+
+1. Специальные символы Telegram Markdown V2 автоматически экранируются
+2. Двойные маркеры форматирования (`**текст**`, `~~текст~~`) преобразуются в одинарные
+3. Заголовки преобразуются в жирный текст
+4. Поддерживается вложенное форматирование

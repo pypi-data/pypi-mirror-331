@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "simple-tg-md"
+version = "0.1.1"
+description = "Простая библиотека для конвертирования в формат Telegram Markdown V2"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {file = "LICENSE"}
+
+[project.urls]
+"Homepage" = "https://github.com/VKolebcev/simple-tg-md"
+"Bug Tracker" = "https://github.com/VKolebcev/simple-tg-md/issues"
+
+[tool.setuptools]
+packages = ["simple_tg_md"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+
+[tool.isort]
+profile = "black"

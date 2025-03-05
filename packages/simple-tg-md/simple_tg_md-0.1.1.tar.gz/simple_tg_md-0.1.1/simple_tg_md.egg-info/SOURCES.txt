@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+simple_tg_md/__init__.py
+simple_tg_md/main.py
+simple_tg_md.egg-info/PKG-INFO
+simple_tg_md.egg-info/SOURCES.txt
+simple_tg_md.egg-info/dependency_links.txt
+simple_tg_md.egg-info/top_level.txt
+tests/test_markdown.py
