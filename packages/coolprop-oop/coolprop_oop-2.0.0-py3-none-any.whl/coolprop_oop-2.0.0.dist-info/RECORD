@@ -1,0 +1,9 @@
+coolprop_oop/__init__.py,sha256=X0lP9CKFVnlfqEsxRVBzgj2bKpwbaX7aUUukkjHglnU,1819
+coolprop_oop/coolprop_oop.py,sha256=6wqfiWoXYa8Dz6rBc8R5hKipECgubH_EHaMO-V8uojI,28003
+tests/__init__.py,sha256=ZypiGUvujE_L7tIYobyKsVeb0h4KZ2pZlk1nIw6_1pc,79
+tests/test_coolprop_oop.py,sha256=codSTXWz7SAEioFuyzCZCy4LwEWk0gNlcaT_2PckrWg,5598
+coolprop_oop-2.0.0.dist-info/LICENSE,sha256=hUzufFFPzUzM0hKbsx0zvN0mqGOBO-CcFjaPKnu7G8A,1065
+coolprop_oop-2.0.0.dist-info/METADATA,sha256=l2tDpTDpdbvk0GJHX-kx38iSSXJkjxYb2ZWkm0bm3dE,4788
+coolprop_oop-2.0.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+coolprop_oop-2.0.0.dist-info/top_level.txt,sha256=132A9rYJVzb7j2ezsZpIKhrUIdtJM4W193i79dF6hVQ,19
+coolprop_oop-2.0.0.dist-info/RECORD,,
