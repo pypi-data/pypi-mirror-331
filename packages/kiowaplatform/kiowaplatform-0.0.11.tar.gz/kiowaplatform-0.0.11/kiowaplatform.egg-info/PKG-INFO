@@ -1,0 +1,13 @@
+Metadata-Version: 2.2
+Name: kiowaplatform
+Version: 0.0.11
+Summary: A collection of helper functions and utilities for the Kiowa Platform.
+Author: sjobyt
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Dynamic: author
+Dynamic: classifier
+Dynamic: requires-python
+Dynamic: summary
