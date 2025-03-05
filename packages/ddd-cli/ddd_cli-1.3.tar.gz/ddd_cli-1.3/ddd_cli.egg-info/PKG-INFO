@@ -1,0 +1,33 @@
+Metadata-Version: 2.2
+Name: ddd-cli
+Version: 1.3
+Summary: CLI para agregar soporte DDD a proyectos Django
+Author: Ragnar Bermúdez La O
+Author-email: ragnarbermudezlao@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Framework :: Django
+Description-Content-Type: text/markdown
+Requires-Dist: django
+Requires-Dist: jinja2
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: summary
+
+# DDD CLI
+
+Este paquete agrega comandos personalizados a Django para facilitar la implementación de una arquitectura Domain-Driven Design (DDD).
+
+## Comandos disponibles
+
+- `python manage.py ddd create-entity <app_path> <entity_name> [--split]`
+- `python manage.py ddd create-service <app_path> <entity_name> <service_name> [--class-format] [--include-crud] [--split]`
+- `python manage.py ddd create-repository <app_path> <entity_name> [--include-crud]`
+- `python manage.py ddd create-dto <app_path> <dto_name> [--split]`
+- `python manage.py ddd create-view-api-apiview <app_path> <entity_name>`
+- `python manage.py ddd create-view-api-viewset <app_path> <entity_name>`
+- `python manage.py ddd create-view <app_path> <entity_name>`
+
