@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/superintervals.hpp
+src/superintervals/__init__.py
+src/superintervals/intervalset.cpp
+src/superintervals/intervalset.pxd
+src/superintervals/intervalset.pyx
+src/superintervals.egg-info/PKG-INFO
+src/superintervals.egg-info/SOURCES.txt
+src/superintervals.egg-info/dependency_links.txt
+src/superintervals.egg-info/requires.txt
+src/superintervals.egg-info/top_level.txt
+test/tests.py
