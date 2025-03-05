@@ -1,0 +1,15 @@
+typinox/__init__.py,sha256=ws8WZAsvNJvP78EdfbOBgKV5mrp6qa-sZ96hLRTSA90,588
+typinox/_helper.py,sha256=qiHy1wVCojk92gDhOyFCZOtQM7kjahDY85t3hVzC_CI,389
+typinox/_module.py,sha256=4GvKxQcmxcIUAAyQAGFthdK2HYcf854CcoDBDBA1trM,10752
+typinox/_vmapped.py,sha256=XW7s4nwZP6g_aCxlCWx58MF5Id23P7Mn98yydMOq-LE,11909
+typinox/debug.py,sha256=IhC-bpCeipFItYc21TIXpiB9IpE3OnKQCrBJBQ2XIxY,532
+typinox/error.py,sha256=nNGekRvKvAxRdAJKGAGT2KKq7YIkn5dsGfYsfUyzVTc,505
+typinox/module.py,sha256=rJuGzri4ETk7if8lNQWRcpEOAThSeloQoCy2yX5nsBw,1260
+typinox/shaped.py,sha256=ieojXg_zslq6gvtIXVs0ruG_IYeba9aFaNzeVW7X9f8,2295
+typinox/tree.py,sha256=CNBmsA8ygBAkYVyfGN6VyJDyDqdw9gc0xZRxpejqMCQ,1397
+typinox/validator.py,sha256=AEQcE7O-dUqfLw_Zuo4y1tiopZA_mKfv7OFiYpZfZsg,1754
+typinox/vmapped.py,sha256=yq-2B8HVYPmJxALyhWwm9vF3mAbS-YJvc7m4vhLunPQ,270
+typinox-0.1.0.dist-info/LICENSE,sha256=ExbYhyeBxRby179KpYTTGgVf7Ti5mwo5AuSJ8j5PpbA,1496
+typinox-0.1.0.dist-info/METADATA,sha256=s0PD-oUEgvS5KvrqvG9aBSinWltaXnFx55bDBve4sX4,3192
+typinox-0.1.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+typinox-0.1.0.dist-info/RECORD,,
