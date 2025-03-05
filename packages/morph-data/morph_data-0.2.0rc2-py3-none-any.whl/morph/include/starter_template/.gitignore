@@ -1,0 +1,5 @@
+# Morph config files and directories
+.gitconfig
+.morph
+node_modules
+.env
