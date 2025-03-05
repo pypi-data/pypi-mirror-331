@@ -1,0 +1,10 @@
+csvspoon/__init__.py,sha256=Hv1cmF6QOodJ46_s7kFGigbE1HAzm0iSYZryRvrFPuo,1658
+csvspoon/_cli.py,sha256=2lx7kXZa2BBagwTH16BSZ5cs7HOU8C8b1h13urpSidg,25701
+csvspoon/_version.py,sha256=4eH93xkDSrgkJe3fAgdNcieQrtIWleWcRi03Wfja5Gk,511
+csvspoon/spoon.py,sha256=bCJeKSzb8a1Knc8_1oeGFfEdBf2fbCfWpRxlA3ZQkh0,12466
+csvspoon-1.1.1.dist-info/LICENSE,sha256=9IvnjZSOLIEZ_0-gd27Q8zF-tO2K5ExFqDx-ZeEns7Y,1078
+csvspoon-1.1.1.dist-info/METADATA,sha256=RCvHUukUhGVg-9Bn7fZmVNTU7QTEZgnWdfO14xnLYeo,27356
+csvspoon-1.1.1.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+csvspoon-1.1.1.dist-info/entry_points.txt,sha256=oqpW-NyCIWlAy43CYesIVkz2N9wcd03La4iFJnkBlCc,48
+csvspoon-1.1.1.dist-info/top_level.txt,sha256=LovzGo1kNE9HCA6sQLwv1rVRaVcwDKhOILWUvpsqi6U,9
+csvspoon-1.1.1.dist-info/RECORD,,

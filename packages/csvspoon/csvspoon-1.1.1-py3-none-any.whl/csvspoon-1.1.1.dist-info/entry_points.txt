@@ -1,0 +1,2 @@
+[console_scripts]
+csvspoon = csvspoon._cli:main
