@@ -1,0 +1,49 @@
+from enum import Enum
+
+
+class BaseStrEnum(str, Enum):
+    pass
+
+
+# HTTP CONSTANTS
+#   HTTP Methods
+HTTP_METHOD_GET = 'GET'
+HTTP_METHOD_POST = 'POST'
+HTTP_METHOD_PUT = 'PUT'
+HTTP_METHOD_DELETE = 'DELETE'
+HTTP_METHOD_PATCH = 'PATCH'
+
+#    HTTP Status codes
+HTTP_MIN_SUCCESS_STATUS_CODE = 200
+HTTP_MAX_SUCCESS_STATUS_CODE = 299
+HTTP_MIN_CLIENT_ERROR_STATUS_CODE = 400
+HTTP_MAX_CLIENT_ERROR_STATUS_CODE = 499
+HTTP_MIN_SERVER_ERROR_STATUS_CODE = 500
+HTTP_MAX_SERVER_ERROR_STATUS_CODE = 599
+
+
+class REST(BaseStrEnum):
+    HEADER_CONTENT_TYPE_JSON = 'application/json'
+    HEADER_ACCEPT = '*/*'
+    HEADER_USER_AGENT = 'python-mantis'
+    HEADER_CONNECTION_KEEP_ALIVE = 'keep-alive'
+    HEADER_CONNECTION_CLOSE = 'close'
+
+
+class API_INFO_V1(BaseStrEnum):
+    PATH = 'api/rest'
+    VERSION = 'v1'
+
+    PROJECTS_PATH = 'projects'
+
+    ISSUES_PATH = 'issues'
+
+
+API = dict(
+    v1=API_INFO_V1
+)
+
+SUPPORTED_PROTOCOLS = [
+    'http',
+    'https'
+]
