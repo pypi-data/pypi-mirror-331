@@ -1,0 +1,6 @@
+#!python
+"""model operation --- supervised training, validation, and exporting"""
+import miniosl.utility.book
+
+if __name__ == '__main__':
+    miniosl.utility.book.main()
