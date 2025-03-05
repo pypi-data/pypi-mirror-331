@@ -1,0 +1,37 @@
+[project]
+name = "find-from-files"
+version = "1.0.0"
+description = "Simple CLI application for searching keywords/phrases or regular expression patterns from text files."
+authors = [
+    {name = "Jari Ikonen",email = "jariikonen.dev@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+license-files = ["LICEN[CS]E*", "THIRD_PARTY_LICENSES"]
+keywords = ["string-matching", "string", "search", "regular-expression", "text-files", "log-analysis"]
+dependencies = [
+    "colorama (>=0.4.6,<0.5.0)",
+    "chardet (>=5.2.0,<6.0.0)",
+]
+
+[tool.poetry.scripts]
+find-from-files = "find_from_files.find_from_files:main"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pyink]
+line-length = 80
+
+[tool.poetry.group.dev.dependencies]
+pylint = "^3.3.4"
+pytest = "^8.3.4"
+pre-commit = "^4.1.0"
+
+[tool.pytest.ini_options]
+pythonpath = "."
+addopts = [
+    "--import-mode=importlib",
+]
