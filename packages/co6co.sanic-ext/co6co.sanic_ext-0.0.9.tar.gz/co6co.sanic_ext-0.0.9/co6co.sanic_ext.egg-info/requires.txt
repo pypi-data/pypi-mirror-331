@@ -1,0 +1,5 @@
+co6co
+co6co.web-session>=0.0.1
+co6co.db-ext
+sanic
+sanic-ext
