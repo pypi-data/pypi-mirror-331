@@ -1,0 +1,3 @@
+[console_scripts]
+synchive = synchive.cli:main
+
