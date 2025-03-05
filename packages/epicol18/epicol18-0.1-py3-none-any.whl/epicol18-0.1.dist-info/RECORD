@@ -1,0 +1,13 @@
+epicol18/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+epicol18/main.py,sha256=PqhIkPpYvc_sZZrYCNbEGSDYx44SZ9BvZEbcuN_iQew,13822
+epicol18/pages/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+epicol18/pages/diachronic_search.py,sha256=Tm5vzz6starUEc1smx_xUxU4SAch3nEqKhCFKT03rSM,5679
+epicol18/pages/kwic.py,sha256=fLjlu1pBBrEM76gVZ4MKK1LMkIxLUU9VNxTQyp8xw2o,10253
+epicol18/pages/ngrams.py,sha256=0WwjIubyPfvzaykjQlUypnzd_GG_ixjfxYKSIYP9o0k,12655
+epicol18/pages/text_search.py,sha256=k933jkJiKJoiMLzitEGH2cWwIxFuvHtNsbCs-X8U878,15682
+epicol18/pages/topwordspos.py,sha256=ZQs0yc1ZAIyuzY9WxIL0tSRjFU_YJ8MtNB67HL1MLz4,16210
+epicol18-0.1.dist-info/METADATA,sha256=uZcl4wIFQu9Oh88xw0UweRBN-XiYotvtvPTVSa00t8k,15379
+epicol18-0.1.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+epicol18-0.1.dist-info/entry_points.txt,sha256=Ew_0YEqtiuLEuiVtXh03NPGTs7GplwIVGD-Ht9bxQ4g,51
+epicol18-0.1.dist-info/top_level.txt,sha256=n37IL3EosICeoEHb2woHT2SVFXlCAa2nvSOjvm05TRM,9
+epicol18-0.1.dist-info/RECORD,,
