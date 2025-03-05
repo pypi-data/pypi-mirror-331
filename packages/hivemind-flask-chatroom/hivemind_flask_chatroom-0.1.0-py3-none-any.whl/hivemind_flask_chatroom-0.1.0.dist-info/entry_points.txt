@@ -1,0 +1,2 @@
+[console_scripts]
+hivemind-flask-chatroom = hivemind_chatroom.__main__:main
