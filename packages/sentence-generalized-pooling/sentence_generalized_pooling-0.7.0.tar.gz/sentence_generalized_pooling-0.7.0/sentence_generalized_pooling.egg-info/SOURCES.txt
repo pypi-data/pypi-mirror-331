@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.py
+sentence_generalized_pooling/__init__.py
+sentence_generalized_pooling/generalized_sentence_transformer_maker.py
+sentence_generalized_pooling/multihead_generalized_pooling.py
+sentence_generalized_pooling.egg-info/PKG-INFO
+sentence_generalized_pooling.egg-info/SOURCES.txt
+sentence_generalized_pooling.egg-info/dependency_links.txt
+sentence_generalized_pooling.egg-info/requires.txt
+sentence_generalized_pooling.egg-info/top_level.txt
