@@ -1,0 +1,10 @@
+breezeway/__init__.py,sha256=BjJFIaR2GfyW_dRO50E4uEmfXvh-NoxKEPUo1cFDrlQ,273
+breezeway/breezeway_client.py,sha256=1oJ0pHfWLT7dmL6PGtZWKfWaLB86nPEy_X7t-wtAgiQ,3554
+breezeway/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+breezeway/models/auth.py,sha256=3OmycdMk-uPMLAz6QpWA8yGi9IwSmm0co9t77Bcpay8,2728
+breezeway/models/base.py,sha256=yajBfE87Sl5XZoIfXZ_9y4yDJP2T3Wz8bAdaPrFQoLE,942
+breezeway/models/company.py,sha256=CJ_CHBTDjKfrALOX6YZAILz6xkSz1W7KgOF0kGY6YmQ,904
+breezeway-0.0.1a1.dist-info/LICENSE.txt,sha256=dr2nNMEhC8jhKBd5kHe9T76gWiXeQ90sy8TOAvztGDk,1074
+breezeway-0.0.1a1.dist-info/METADATA,sha256=ANahI4mJRUAXX2U8Gzoi-wWmXlCoAHFoFZHE2XjkGe8,485
+breezeway-0.0.1a1.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+breezeway-0.0.1a1.dist-info/RECORD,,
