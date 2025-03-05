@@ -1,0 +1,2 @@
+[console_scripts]
+panorai-cli = panorai.cli.projection_pipeline_cli:main
