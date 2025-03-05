@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<object xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+        name="portal_controlpanel"
+        i18n:domain="collective.gridlisting"
+>
+
+  <!-- -*- extra stuff goes here -*- -->
+
+  <configlet action_id="collective.gridlisting.controlpanel"
+             appId="collective.gridlisting.controlpanel"
+             category="Products"
+             condition_expr=""
+             icon_expr="string:grid-3x2-gap"
+             title="Grid Listing Settings"
+             url_expr="string:${portal_url}/@@gridlisting-controlpanel"
+             visible="True"
+             i18n:attributes="title"
+  >
+    <permission>Manage Portal</permission>
+  </configlet>
+
+
+</object>

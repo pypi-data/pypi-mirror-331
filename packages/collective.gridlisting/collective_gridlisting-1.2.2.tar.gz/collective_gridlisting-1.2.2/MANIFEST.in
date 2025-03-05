@@ -1,0 +1,12 @@
+graft src/collective
+graft docs
+include *.rst
+exclude *.js
+exclude *.json
+exclude tox.ini
+exclude *.txt
+exclude *.lock
+exclude *.cfg
+exclude .coveragerc
+global-exclude *.pyc
+recursive-exclude resources *

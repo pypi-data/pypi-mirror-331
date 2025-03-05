@@ -1,0 +1,37 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="collective.gridlisting"
+    >
+
+  <!-- Publish static files -->
+  <plone:static
+      directory="static"
+      name="collective.gridlisting"
+      type="plone"
+      />
+
+  <!-- Folder grid listing -->
+  <browser:page
+      name="grid_listing"
+      for="plone.dexterity.interfaces.IDexterityContainer"
+      class=".views.FolderGridListing"
+      template="grid_listing.pt"
+      permission="zope2.View"
+      menu="plone_displayviews"
+      title="Grid listing"
+      />
+
+  <!-- Collection grid listing -->
+  <browser:page
+      name="grid_listing"
+      for="plone.app.contenttypes.behaviors.collection.ISyndicatableCollection"
+      class=".views.CollectionGridListing"
+      template="grid_listing.pt"
+      permission="zope2.View"
+      menu="plone_displayviews"
+      title="Grid listing"
+      />
+
+</configure>
