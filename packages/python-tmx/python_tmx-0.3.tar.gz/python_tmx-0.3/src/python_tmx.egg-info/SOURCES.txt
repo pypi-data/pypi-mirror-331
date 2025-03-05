@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/PythonTmx/__init__.py
+src/PythonTmx/classes.py
+src/PythonTmx/py.typed
+src/PythonTmx/utils.py
+src/python_tmx.egg-info/PKG-INFO
+src/python_tmx.egg-info/SOURCES.txt
+src/python_tmx.egg-info/dependency_links.txt
+src/python_tmx.egg-info/requires.txt
+src/python_tmx.egg-info/top_level.txt
