@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "neogr-model"
+version = "0.0.2"
+authors = [
+  { name="Mike" },
+]
+description = "Internal models of entities and realtionships for Neo4J based Graph RAG"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Build Tools",
+]
+
+dependencies = [
+    "pydantic == 2.10.6",
+    "neomodel == 5.4.3",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/neogr_model"]
+
+[project.urls]
+Homepage = "https://github.com/czeos/neogr-model"
+Issues = "https://github.com/czeos/neogr-model/issues"
+
