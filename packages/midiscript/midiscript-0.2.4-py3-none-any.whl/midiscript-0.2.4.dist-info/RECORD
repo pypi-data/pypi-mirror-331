@@ -1,0 +1,11 @@
+midiscript/__init__.py,sha256=kUR5RAFc7HCeiqdlX36dZOHkUI5wI6V_43RpEcD8b-0,22
+midiscript/cli.py,sha256=2P1pJFfeVSn6uEhNwc5HxUi1rARP4zsCZwJUvDEPGrM,1610
+midiscript/lexer.py,sha256=oT1Q_j1egNQyBx8YcjcCRM0ARcMbqiZvRNc4XB5ASr0,6357
+midiscript/midi_generator.py,sha256=zDdMuR8dNmx_AlmenEOtLqaHyjLEW3uA-NJxFnkmXsE,5120
+midiscript/parser.py,sha256=7ilLvwrYZhFYjL0ErFEa1TzKaNLN-kB4o_xm_MN71W8,9781
+midiscript-0.2.4.dist-info/LICENSE,sha256=u78eyvxfa_t3o4KpbMCpPWoKctztvmE3s1egB1EsMA8,1080
+midiscript-0.2.4.dist-info/METADATA,sha256=3AV3YFTMc7pOp1Blq1XQ8OlNLLlBK-Vj6Rk9qFadycs,990
+midiscript-0.2.4.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+midiscript-0.2.4.dist-info/entry_points.txt,sha256=9GLuwEvjK8r33tNILb73AFLoKBkW42mzOZ5jhcMqAHc,51
+midiscript-0.2.4.dist-info/top_level.txt,sha256=pasxdOjtHs8WtxtQcnT8w82YZBPjx6B-cPq1PFbvYwg,11
+midiscript-0.2.4.dist-info/RECORD,,
