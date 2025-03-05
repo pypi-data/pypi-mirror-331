@@ -1,0 +1,109 @@
+Metadata-Version: 2.3
+Name: esl-babylon-library-common
+Version: 0.1.0.54
+Summary: 
+Author: epam
+Author-email: epam@epam.com
+Requires-Python: >=3.11,<3.12
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: colorama (>=0.4.6,<0.5.0)
+Requires-Dist: fastapi (>=0.115.11,<0.116.0)
+Requires-Dist: fpdf2 (>=2.8.2,<3.0.0)
+Requires-Dist: langchain (>=0.3.19,<0.4.0)
+Requires-Dist: langchain-google-genai (>=2.0.11,<3.0.0)
+Requires-Dist: langchain-openai (>=0.3.7,<0.4.0)
+Requires-Dist: opentelemetry-api (>=1.30.0,<2.0.0)
+Requires-Dist: opentelemetry-exporter-otlp (>=1.30.0,<2.0.0)
+Requires-Dist: opentelemetry-exporter-otlp-proto-grpc (>=1.30.0,<2.0.0)
+Requires-Dist: opentelemetry-sdk (>=1.30.0,<2.0.0)
+Requires-Dist: pydantic-settings (>=2.8.1,<3.0.0)
+Requires-Dist: pymongo (>=4.11.2,<5.0.0)
+Requires-Dist: pypdf2 (>=3.0.1,<4.0.0)
+Requires-Dist: python-docx (>=1.1.2,<2.0.0)
+Requires-Dist: python-dotenv (>=1.0.1,<2.0.0)
+Requires-Dist: redis (>=5.2.1,<6.0.0)
+Requires-Dist: reportlab (>=4.3.1,<5.0.0)
+Description-Content-Type: text/markdown
+
+# ESL Babylon Library Common
+
+The **ESL Babylon Library Common** is a Python library that provides essential components and utilities. To integrate 
+this library into your project, you'll need to configure your environment and dependency management system correctly.
+
+---
+
+## Installation Instructions
+
+Follow these steps to use the `epam_gitlab` package repository:
+
+### 1. Add the EPAM GitLab Package Source
+Run the following command to add the package source to your Poetry configuration:
+
+```bash
+poetry source add epam_gitlab https://git.epam.com/api/v4/projects/304542/packages/pypi/simple --priority supplemental
+```
+
+### 2. Configure Authentication
+Set up authentication for the `epam_gitlab` package repository by replacing `<access_token>` with your personal EPAM 
+access token:
+
+```bash
+poetry config http-basic.epam_gitlab __token__ <access_token>
+```
+
+> **Example:**  
+> If your access token is `kYsyto72PffB2Zjj5Uz9`, the command will look like this:  
+> ```bash
+> poetry config http-basic.epam_gitlab __token__ kYsyto72PffB2Zjj5Uz9
+> ```
+
+### 3. Add the Package to Your Project
+Run the following command to include the library in your project dependencies. Replace `<package_name>` with the 
+appropriate package name.
+
+```bash
+poetry add <package_name> --source epam_gitlab
+```
+
+> **Example:**  
+> To install `esl-babylon-library-common`, execute:  
+> ```bash
+> poetry add esl-babylon-library-common --source epam_gitlab
+> ```
+
+---
+
+## Environment Configuration
+
+To use this library successfully, ensure your environment is properly configured.
+
+### `.env` File Requirements
+In the directory where your code is executed (or in any higher-level directory in the folder tree), there must be a 
+`.env` file containing the required configuration.
+
+#### Example
+You can reference the structure and contents of a valid `.env` file in the provided `.env.example` file.
+
+### Alternative Location
+Alternatively, the `.env` file can be located in the `babylon` directory under the following path:
+
+```
+babylon/BUILD/.env
+```
+
+Ensure this file contains all necessary environment variables for the library to function properly.
+
+---
+
+## Notes
+
+- Make sure your `.env` file or `babylon/BUILD/.env` file is properly set up before running your project to avoid 
+runtime errors.
+- Always keep your tokens and sensitive information secure.
+
+---
+
+Now you're all set to use the **ESL Babylon Library Common** in your project! 🎉
+
+
