@@ -1,0 +1,16 @@
+garantipay_payment/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+garantipay_payment/forms.py,sha256=Av6uWv_WfRqNn-a6Wuzc-Gq9Q05akYrTJpp1fW3y8HM,441
+garantipay_payment/urls.py,sha256=GZrddqp865b6pFgYJkZWeYb9LQNVewapcPgBuxmn1J0,174
+garantipay_payment/views.py,sha256=dSaUBwVdNrfiRL31En9-buon1y8hY_fFKCzhmZzisUA,1167
+garantipay_payment/commerce/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+garantipay_payment/commerce/checkout.py,sha256=Jy66BpvAlqbTwh4PT_fKI6gR8fcmd-kqzFJv8gStbs4,1914
+garantipay_payment/commerce/dummy.py,sha256=Dlhj6QFq5FadUyHsjwK5V5DxI8982_f5clqIDUY1H_Q,1389
+garantipay_payment/templates/garantipay.html,sha256=mUzEnbPQWk30RhOdoru9-eie5pFA9Q0rKvBYeytM3nE,644
+garantipay_payment/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+garantipay_payment/tests/mixins.py,sha256=SnTwptUKLjZsqlkoXUvRkErJezSF618rP8R0czuFmBY,716
+garantipay_payment/tests/test_service.py,sha256=jLRW787KMx-ImnjjtI0DlQ3DX1F7WGVam523Sgxf_ic,3751
+garantipay_payment/tests/test_views.py,sha256=mjQwHJQBj9iF72ozR5FUsE1gI6OUzFICdJLriBFjhS4,2065
+garantipay_payment-1.2.0.dist-info/METADATA,sha256=fcCN3EyubpSqJKkYZk4dEH1vW2PTivCi27C6urw66Nw,1515
+garantipay_payment-1.2.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+garantipay_payment-1.2.0.dist-info/top_level.txt,sha256=0rBHhOxLFoZvqq9Wl_9q2dz5wTE4l2hAXnXf4hDM2Pk,19
+garantipay_payment-1.2.0.dist-info/RECORD,,
