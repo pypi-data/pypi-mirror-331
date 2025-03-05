@@ -1,0 +1,74 @@
+Metadata-Version: 2.2
+Name: anhaltai-commons-minio
+Version: 2025.3.5
+Summary: AnhaltAI Commons Minio: Additional functions for using Minio
+Author-email: Christian Hänig <christian.haenig@hs-anhalt.de>, Christian Gurski <christian.gurski@hs-anhalt.de>
+Project-URL: Gitlab, https://gitlab.hs-anhalt.de/ki/projekte/anhaltai-commons/commons-minio
+Project-URL: PyPI, https://pypi.org/project/anhaltai-commons-minio/
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown; charset=UTF-8
+License-File: LICENSE
+Requires-Dist: numpy~=1.26.0
+Requires-Dist: minio~=7.2.9
+Requires-Dist: numerize~=0.12
+Requires-Dist: opencv-python-headless~=4.10.0
+Requires-Dist: pandas~=2.2.2
+Requires-Dist: python-dotenv~=1.0.1
+Requires-Dist: tqdm~=4.66.4
+Requires-Dist: urllib3~=2.2.1
+Requires-Dist: requests~=2.32.3
+Requires-Dist: nc_py_api~=0.17.1
+Requires-Dist: pytest~=8.3.3
+Requires-Dist: pytest-minio-mock~=0.4.16
+Requires-Dist: pytest-mock~=3.14.0
+
+# AnhaltAI Commons Minio
+Provides functionality for data management between Python code and Minio stores, 
+from basic operations on Minio clients, buckets, files, and directories to more complex 
+operations such as copying and migrating directory-based datasets.
+
+The package provides extended functionality for the usage to the minio package.
+
+## Usage 
+- Accessible on [PyPI](https://pypi.org/project/anhaltai-commons-minio/)
+- Compatible to [Python version >=3.10](https://www.python.org/downloads/)
+
+### Using pip
+```
+pip install anhaltai-commons-minio
+```
+
+### Using Source From GitHub
+Coming soon!
+
+## Structure
+The provided functions are divided into several levels.
+
+### Adapters
+Adapters provide functions to enable data operations between Minio and other data stores
+
+#### nextcloud.py
+Contains a subclass of a nextcloud client to provide functions to execute copy 
+operations for files and directories between Minio and Nextcloud
+
+### io_utils.py
+Provides functions to fulfill CRUD operations for files and directories
+
+### bucket_utils.py
+Allows operations on buckets by the provided functions.
+
+### client_utils.py
+Allows operations on clients by the provided functions.
+
+### Tests
+- the package is tested by automated tests to ensure functionality
+- Install ``pytest`` and ``pytest-minio-mock``.
+- The config pytest.ini contains further settings as explained here: 
+https://docs.pytest.org/en/7.1.x/reference/customize.html
+- Run
+````shell
+pytest tests
+````

@@ -1,0 +1,12 @@
+anhaltai_commons_minio/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+anhaltai_commons_minio/bucket_utils.py,sha256=zIlrNVEN72-RCPteFU_TQjOB0zL_-iBrJzJc9YXOmG4,3753
+anhaltai_commons_minio/client_utils.py,sha256=yaQDpVlFrn76WAOJBpT6BIKqB2mMRmwjp9j6o8ltwtM,2199
+anhaltai_commons_minio/helper_utils.py,sha256=E7SgJi0sM6ZehPXNCDL4NPhS9L73O51slOLIZS-uDmI,1019
+anhaltai_commons_minio/io_utils.py,sha256=A6EwtcmbZUqRxO96OC4O7sPh7B_L1pvmBz5lpHn7cdo,17291
+anhaltai_commons_minio/adapters/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+anhaltai_commons_minio/adapters/nextcloud.py,sha256=9kVklO8cVxY8NUT_dKEbu16yd2yNZZ7dwnkLuQId380,5669
+anhaltai_commons_minio-2025.3.5.dist-info/LICENSE,sha256=5acGOP9i5gEE-QIwcpnp4V8yQn-VfGJEgausFBegr3M,1065
+anhaltai_commons_minio-2025.3.5.dist-info/METADATA,sha256=6Un-tq2qv-Y5KAEn0nn8S4Q498Ka3Ha3-H5acYSJXlU,2558
+anhaltai_commons_minio-2025.3.5.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+anhaltai_commons_minio-2025.3.5.dist-info/top_level.txt,sha256=l_JOL7tfzEwjGuVKa4ZocKBovoNedGxfk36zotqXIFs,23
+anhaltai_commons_minio-2025.3.5.dist-info/RECORD,,
