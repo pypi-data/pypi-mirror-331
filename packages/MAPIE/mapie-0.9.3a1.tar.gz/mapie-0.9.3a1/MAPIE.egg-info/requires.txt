@@ -1,0 +1,4 @@
+scikit-learn<1.6.0
+scipy
+numpy>=1.21
+packaging
