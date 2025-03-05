@@ -1,0 +1,94 @@
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel",
+    "pybind11>=2.6.0",
+    "numpy>=1.19.0",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tlars"
+version = "0.1.3"
+description = "Python implementation of the tlars package"
+readme = "README.md"
+authors = [
+    {name = "Original: Jasin Machkour, Python port: Arnau Vilella", email = "avp@connect.ust.hk"}
+]
+requires-python = ">=3.7"
+dependencies = [
+    "numpy>=1.19.0"
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Scientific/Engineering :: Mathematics"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "pytest-cov>=2.0",
+    "black>=22.0",
+    "isort>=5.0",
+    "flake8>=3.9",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tlars/tests"]
+python_files = ["test_*.py"]
+addopts = "-v --cov=tlars"
+
+[tool.black]
+line-length = 88
+target-version = ["py37"]
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[tool.cibuildwheel]
+# Skip PyPy and older Python versions
+skip = ["pp*", "cp36-*", "cp37-*", "*-musllinux*"]
+
+# Test command to run after a wheel is built
+test-requires = ["pytest", "pytest-cov"]
+test-command = "pytest {package}/tlars/tests"
+
+# Environment variables for all platforms
+environment = {PIP_PREFER_BINARY = "1"}
+
+# Platform-specific configurations
+[tool.cibuildwheel.linux]
+before-build = [
+    "pip install numpy pybind11",
+    "yum install -y cmake make gcc-c++ wget",
+    "mkdir -p /tmp/eigen && cd /tmp/eigen && curl -L https://gitlab.com/libeigen/eigen/-/archive/3.4.0/eigen-3.4.0.tar.gz | tar xz && cd eigen-3.4.0 && mkdir build && cd build && cmake .. && make install",
+    "yum install -y blas-devel lapack-devel",
+    "mkdir -p /tmp/armadillo && cd /tmp/armadillo && curl -L http://sourceforge.net/projects/arma/files/armadillo-11.4.3.tar.xz | tar xJ && cd armadillo-11.4.3 && mkdir build && cd build && cmake .. && make install"
+]
+environment = {EIGEN_INCLUDE_DIR = "/usr/local/include/eigen3", ARMADILLO_INCLUDE_DIR = "/usr/local/include"}
+# Use manylinux2014 as the base image for better compatibility
+manylinux-x86_64-image = "manylinux2014"
+manylinux-i686-image = "manylinux2014"
+
+[tool.cibuildwheel.macos]
+before-build = [
+    "pip install numpy pybind11",
+    "brew install eigen armadillo"
+]
+environment = {EIGEN_INCLUDE_DIR = "/usr/local/include/eigen3", ARMADILLO_INCLUDE_DIR = "/usr/local/include"}
+
+[tool.cibuildwheel.windows]
+before-build = [
+    "pip install numpy pybind11",
+    "if not exist C:\\vcpkg\\installed\\x64-windows\\include\\eigen3 (git clone https://github.com/Microsoft/vcpkg.git C:\\vcpkg && C:\\vcpkg\\bootstrap-vcpkg.bat && C:\\vcpkg\\vcpkg install eigen3:x64-windows && C:\\vcpkg\\vcpkg install armadillo:x64-windows && C:\\vcpkg\\vcpkg integrate install)"
+]
+environment = {EIGEN_INCLUDE_DIR = "C:\\vcpkg\\installed\\x64-windows\\include\\eigen3", ARMADILLO_INCLUDE_DIR = "C:\\vcpkg\\installed\\x64-windows\\include"} 
