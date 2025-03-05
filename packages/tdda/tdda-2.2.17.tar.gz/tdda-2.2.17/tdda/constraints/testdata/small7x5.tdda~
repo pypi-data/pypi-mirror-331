@@ -1,0 +1,100 @@
+{
+    "creation_metadata": {
+        "as_at": "2025-03-03 16:10:31",
+        "local_time": "2025-03-03 16:10:31",
+        "utc_time": "2025-03-03 16:10:31",
+        "creator": "Miro 3.3.18",
+        "creation_command": "disco -o small7x5.tdda",
+        "creation_session_log": "/Users/njr/miro/log/2025/03/03/session002.html",
+        "source": "/Users/njr/root/miro/datasets/testdata/small.miro",
+        "host": "gardot.local",
+        "user": "njr",
+        "dataset": "small.miro",
+        "n_records": 5,
+        "n_selected": 5,
+        "tddafile": "/Users/njr/python/tdda/tdda/constraints/testdata/small7x5.tdda"
+    },
+    "fields": {
+        "id": {
+            "type": "int",
+            "min": 1,
+            "max": 5,
+            "sign": "positive",
+            "max_nulls": 0,
+            "no_duplicates": true
+        },
+        "stringField": {
+            "type": "string",
+            "min_length": 3,
+            "max_length": 8,
+            "max_nulls": 0,
+            "allowed_values": [
+                "one",
+                "repeater",
+                "three",
+                "two"
+            ],
+            "rex": [
+                "^([a-z]+)$"
+            ]
+        },
+        "intField": {
+            "type": "int",
+            "min": 1,
+            "max": 23,
+            "sign": "positive",
+            "max_nulls": 1,
+            "no_duplicates": true
+        },
+        "realField": {
+            "type": "real",
+            "min": 1.0,
+            "max": 1000.0,
+            "sign": "positive",
+            "max_nulls": 1
+        },
+        "boolField": {
+            "type": "bool",
+            "min": false,
+            "max": true,
+            "max_nulls": 1
+        },
+        "dateField": {
+            "type": "date",
+            "min": "2011-01-01 01:11:11",
+            "max": "2055-05-05 05:55:55",
+            "max_nulls": 1
+        },
+        "stringDateField": {
+            "type": "string",
+            "min_length": 19,
+            "max_length": 19,
+            "max_nulls": 1,
+            "no_duplicates": true,
+            "rex": [
+                "^(\\d{4})\\-(\\d{2})\\-(\\d{2})([A-Z])(\\d{2}):(\\d{2}):(\\d{2})$"
+            ]
+        }
+    },
+    "dataset": {
+        "required_fields": [
+            "id",
+            "stringField",
+            "intField",
+            "realField",
+            "boolField",
+            "dateField",
+            "stringDateField"
+        ],
+        "allowed_fields": [
+            "id",
+            "stringField",
+            "intField",
+            "realField",
+            "boolField",
+            "dateField",
+            "stringDateField"
+        ],
+        "allowed_all_null_fields": []
+    }
+}
