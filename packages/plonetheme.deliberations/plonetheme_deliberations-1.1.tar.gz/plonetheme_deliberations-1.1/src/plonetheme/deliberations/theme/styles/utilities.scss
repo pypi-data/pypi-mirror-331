@@ -1,0 +1,123 @@
+.full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+// Handle the toolbar width in every case possible
+
+@include media-breakpoint-down(md) {
+  body.plone-toolbar-top {
+    .full-width {
+      width: calc(100vw - var(--plone-toolbar-width-collapsed));
+      left: calc(50% - var(--plone-toolbar-width-collapsed) / 2);
+      margin-left: calc(-50vw + var(--plone-toolbar-width-collapsed));
+      margin-right: calc(-50vw - 0px);
+    }
+  }
+}
+
+.plone-toolbar-left {
+  .full-width {
+    width: calc(100vw - var(--plone-toolbar-width-collapsed));
+    position: relative;
+    left: calc(50% - var(--plone-toolbar-width-collapsed) / 2);
+    margin-left: calc(-50vw + var(--plone-toolbar-width-collapsed));
+    margin-right: calc(-50vw - 0px);
+  }
+}
+
+.plone-toolbar-left-expanded {
+  .full-width {
+    width: calc(100vw - var(--plone-toolbar-width));
+    position: relative;
+    left: calc(50% - var(--plone-toolbar-width) / 2);
+    margin-left: calc(-50vw + var(--plone-toolbar-width));
+    margin-right: calc(-50vw - 0px);
+  }
+}
+
+.v-hidden {
+  visibility: hidden;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-primary {
+  color: $delib-primary;
+}
+
+
+.divide-y > :not([hidden]) ~ :not([hidden]) {
+  border-top-width: 1px;
+  border-bottom-width: 0px;
+  border-top-color: white;
+  border-top-style: solid;
+}
+
+.__react_component_tooltip {
+  padding: 0.5em 1em !important;
+}
+
+.mb-5 {
+  margin-bottom: 2.5rem !important;
+}
+
+ul.dashed {
+  list-style-type: none;
+}
+
+ul.dashed > li {
+  text-indent: -5px;
+}
+
+ul.dashed > li:before {
+  content: "-";
+  text-indent: -5px;
+  height: 500px !important;
+}
+
+.watermarked {
+  position: relative;
+  overflow: hidden;
+}
+
+.watermarked .watermark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(-45deg);
+  pointer-events: none;
+}
+
+.watermarked .watermark::before {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100%;
+  font-style: italic;
+  pointer-events: none;
+  text-transform: uppercase;
+  z-index: -1;
+  display: block;
+  position: absolute;
+  text-shadow: rgba(0, 0, 0, 0.7) 0 0 7px;
+  content: attr(data-text);
+  font-family: monospace;
+  opacity: 0.10;
+  line-height: 4.5em;
+  letter-spacing: 1px;
+  color: black;
+}
+
+.watermarked.watermarked-small .watermark::before {
+  font-size: 0.9em;
+  line-height: 4em !important;
+  opacity: 0.08;
+  text-shadow: rgba(0, 0, 0, 0.7) 0 0 7px;
+}
