@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "svine"
+version = "0.1.2"
+description = "A simple Python wrapper for a limited number of svn commands for mining Subversion repositories."
+authors = ["Stephan Druskat <stephan.druskat@dlr.de>"]
+maintainers = ["Stephan Druskat <stephan.druskat@dlr.de>"]
+readme = "README.md"
+license = "MIT AND CC0-1.0 AND CC-BY-4.0"
+
+include = [
+    { path = "README.md", format = "sdist" },
+    { path = "REUSE.toml", format = "sdist" },
+    { path = "LICENSES", format = "sdist" },
+    { path = "CITATION.cff", format = "sdist" },
+]
+
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+python-dateutil = "^2.9.0.post0"
+
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
