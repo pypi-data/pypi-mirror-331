@@ -1,0 +1,4 @@
+django
+celery
+kombu
+python-dotenv
