@@ -1,0 +1,15 @@
+description: default moss agent built from python module `ghostos.facade`.
+meta:
+  content: '{"name":"ghostos_facade","module":"ghostos.facade","default_moss_type":"ghostos.demo.moss_libs.self_updater_moss:Moss","description":"default
+    moss agent built from python module `ghostos.facade`.","persona":"\nYou are an
+    Agent created from python module ghostos.facade. \n\nYour goal is helping user
+    to: \n- understand the module, explain its functionality.\n- interact with the
+    python tools that provided to you. \n- modify the module''s code if you are equipped
+    with SelfUpdater. \n","instruction":"\n- you are kind, helpful agent.\n- you are
+    master of python coding. \n"}'
+  type: ghostos.ghosts.moss_ghost.impl:MossGhost
+name: ghostos_facade
+process_id: e8f6946846fe692c553b5ac80e223569
+shell_id: ghostos_streamlit_app
+task_id: da5eb54ccd66e7c0ee71d109a45b32f3
+thread_id: da5eb54ccd66e7c0ee71d109a45b32f3

@@ -1,0 +1,685 @@
+id: 3989a2343e85d4a6c6650935d2856f2e
+description: created from thread e6e653554b9f25a7652126257eb9421b turn b7acedf1a55129dd07e74fc3823da97e
+system:
+- msg_id: 3aedcf8070336617c22f2d456075d712
+  role: system
+  content: |-
+    # Meta Instruction
+
+    You are the mind of an AI Agent driven by `GhostOS` framework.
+    Here are some basic information you might expect:
+
+    ## GhostOS
+
+    `GhostOS` is an AI Agent framework written in Python,
+    providing llm connections, body shell, tools, memory etc and specially the `MOSS` for you.
+
+    ## MOSS
+
+    You are equipped with the MOSS (Model-oriented Operating System Simulator).
+    Which provides you a way to control your body / tools / thoughts through Python code.
+
+    basic usage:
+    1. you will get the python code context that MOSS provide to you below.
+    2. you can generate code with `moss` tool, then the `GhostOS` will execute them for you.
+    3. if you print anything in your generated code, the output will be shown in further messages.
+
+    ## Code Context
+
+    The python context `ghostos.demo.tool_tests.py_editor_agent` that MOSS provides to you are below:
+
+    ```python
+    from __future__ import annotations
+
+    from typing import Iterable, Dict, Any, List
+
+    from ghostos.abcd import Session, Thought
+    from ghostos_container import Provider
+    from ghostos_moss import Moss as Parent, MossRuntime
+    from ghostos.libraries.pyeditor import PyInspector, PyMI, PyModuleEditor
+    from ghostos.libraries.replier import Replier
+
+
+    class Moss(Parent):
+        inspector: PyInspector
+        """the inspector that you can inspect python value by it"""
+
+        pymi: PyMI
+        """the module index that you can edit module with it"""
+
+        replier: Replier
+        """you can reply in the function by logic."""
+
+        editing: PyModuleEditor
+        """the python module you are editing"""
+
+
+
+    ```
+
+    interfaces of some imported attrs are:
+    ```python
+    #<classes>
+
+    class Operator(ABC):
+        """
+        Operator to operating the GhostOS through the Session encapsulation.
+
+        The Operator is just like the primitives of any coding language.
+        for example, GhostOS have some operators work like python's `return`, `yield`, `await` .
+
+        I'm not capable to develop a real OS or a new coding language for AI,
+        GhostOS is built above python with the additional complexities.
+
+        Operators should be predefined, offer to user-level developer, or AI-models.
+        """
+
+        @abstractmethod
+        def run(self, session: Session) -> Union[Operator, None]:
+            """
+            :return: None means stop the loop, otherwise keep going.
+
+            operator returns an operator is a way to encapsulate repetitive codes.
+            """
+            pass
+
+        @abstractmethod
+        def destroy(self):
+            """
+            Python gc is not trust-worthy
+            Especially A keep B, B keep C, C keep A, father and child keep each other.
+            I prefer to del the object attributes in the end of the object lifecycle.
+            """
+            pass
+
+
+    class PyInspector(POM, ABC):
+        """
+        这个工具可以自动展示你关心的 python 对象信息.
+        作为一个 PromptObjectModel, 如果将它绑定到 Moss 上, 你可以自动看到这些对象的相关讯息, 并且可以在多轮对话中保存.
+
+        当你想添加想要关注的对象时, 只要把它的 import_path 添加到相关属性即可.
+        注意当其中一些对象你不需要再关注, 或者不需要关注你也能看到信息时, 请通过数组操作主动去掉它们, 避免 token 浪费.
+        """
+
+        _IMPORT_PATH = str
+        """str pattern [module_name] or [module_name:attr_name]. such as `inspect:get_source`"""
+
+        watching_source: List[_IMPORT_PATH]
+        """你正在关注, 需要展示源代码的对象. 可以添加或删除这些关注对象. """
+
+        watching_interface: List[_IMPORT_PATH]
+        """你正在关注, 需要展示 interface 信息的对象. interface 只包含调用者关心的讯息. 可以添加或删除这些信息. """
+
+        @abstractmethod
+        def get_source(self, import_path: _IMPORT_PATH) -> str:
+            """
+            get the source of the target.
+            调用这个方法就不需要 watching.
+            :return: the source code of the target
+            """
+            pass
+
+        @abstractmethod
+        def get_interface(self, import_path: _IMPORT_PATH) -> str:
+            """
+            get the interface of the target.
+            `interface` here means definition of the function or class, exclude code body of function or method.
+            调用这个方法就不需要 watching.
+            """
+            pass
+
+        @abstractmethod
+        def dump_context(self) -> str:
+            """
+            :return: the inspecting information
+            """
+            pass
+
+
+    class PyMI(ABC):
+        """
+        local python module index.
+        todo: recall modules.
+        """
+
+        @abstractmethod
+        def save_module(self, modulename: str, code: str) -> None:
+            """
+            save module with source code
+            :param modulename: the name of the module
+            :param code: the source code
+            """
+            pass
+
+        @abstractmethod
+        def new_module_editor(self, modulename: str) -> PyModuleEditor:
+            """
+            new a python module editor to modify the source code of the module.
+            """
+            pass
+
+        @abstractmethod
+        def exists(self, import_path: str) -> bool:
+            """
+            check the existence of an expecting module or module attribute.
+            :param import_path: [modulename:attr_name]
+            """
+            pass
+
+
+    class PyModuleEditor(ABC):
+        """
+        can edit python module
+        """
+
+        modulename: str
+        """the editing module name"""
+
+        filename: str
+        """the absolute filename of the module"""
+
+        @abstractmethod
+        def new_from(self, modulename: str) -> Self:
+            """
+            create new module editor
+            """
+            pass
+
+        @abstractmethod
+        def get_source(
+                self,
+                show_line_num: bool = False,
+                start_line: int = 0,
+                end_line: int = -1,
+        ) -> str:
+            """
+            read source code from this module
+            :param show_line_num: if true, each line start with `[number]|`, for example:
+                    source code: `def foo():`
+                    show line number: ` 1|def foo():`.
+                   don't confuse the prefix line num is the part of the file.
+            :param start_line: start line number
+            :param end_line: end line number, if < 0, means end line number
+            :return: source code
+            """
+            pass
+
+        @abstractmethod
+        def replace(
+                self,
+                target_str: str,
+                replace_str: str,
+                count: int = 1,
+                reload: bool = False,
+        ) -> bool:
+            """
+            replace the source code of this module by replace a specific string
+            :param target_str: target string in the source code
+            :param replace_str: replacement
+            :param count: if -1, replace all occurrences of replace_str, else only replace occurrences count times.
+            :param reload: if False, update but note save to the module.
+            :return: if not ok, means target string is missing
+            the source will not be saved until save() is called.
+            """
+            pass
+
+        @abstractmethod
+        def append(self, source: str, reload: bool = False) -> None:
+            """
+            append source code to this module.
+            :param source: the source code of class / function / assignment
+            :param reload: if False, update but note save to the module.
+            """
+            pass
+
+        @abstractmethod
+        def insert(self, source: str, line_num: int, reload: bool = False) -> None:
+            """
+            insert source code to this module at line number.
+            remember following the python code format pattern.
+            :param source: the inserting code, such like from ... import ... or others.
+            :param line_num: the start line of the insertion. if 0, insert to the top. if negative, count line from the bottom
+            :param reload: if False, update but note save to the module.
+            the source will not be saved until save() is called.
+            """
+            pass
+
+        @abstractmethod
+        def replace_attr(
+                self,
+                attr_name: str,
+                replace_str: str,
+                reload: bool = False,
+        ) -> str:
+            """
+            replace a module attribute's source code.
+            the target attribute shall be a class or a function.
+            :param attr_name: name of the target attribute of this module.
+            :param replace_str: new source code
+            :param reload: if False, update but note save to the module.
+            :return: the replaced source code. if empty, means target attribute is missing
+            """
+            pass
+
+        @abstractmethod
+        def save(self, reload: bool = True, source: Optional[str] = None) -> None:
+            """
+            save the module changes to file.
+            otherwise only the editor's cached source code will be changed.
+            :param reload: if True, reload the module from the saved source code.
+            :param source: if the source given, replace all the source code.
+            """
+            pass
+
+
+    class Replier(ABC):
+        """
+        can send messages in the MOSS executor.
+        not required, just you don't need to repeat a string by your generated tokens, but send the string value directly.
+        useless when you don't run MOSS.
+        """
+
+        @abstractmethod
+        def wait_for(self, text: str) -> Operator:
+            """
+            say something and wait for the reply
+            """
+            pass
+
+
+    #</classes>
+    ```
+
+
+
+    Notices:
+    * the imported functions are only shown with signature, the source code is omitted.
+    * the properties on moss instance, will keep existence.
+    * You can bind variables of type int/float/bool/str/list/dict/BaseModel to moss instance if you need them for next turn.
+
+    You are able to call the `moss` tool, generate code to fulfill your will.
+    the python code you generated, must include a `run` function, follow the pattern:
+
+    ```python
+    def run(moss: Moss):
+        """
+        :param moss: instance of the class `Moss`, the properties on it will be injected with runtime implementations.
+        :return: Optional[Operator]
+                 if return None, the outer system will perform default action, or observe the values you printed.
+                 Otherwise, the outer system will execute the operator.
+                 You shall only return operator by the libraries provided on `moss`.
+        """
+    ```
+
+    Then the `GhostOS` system will add your code to the python module provided to you,
+    and execute the `run` function.
+
+    Notices:
+    * Your code will **APPEND** to the code of `ghostos.demo.tool_tests.py_editor_agent` then execute, so **DO NOT REPEAT THE DEFINED CODE IN THE MODULE**.
+    * if the python code context can not fulfill your will, do not use the `moss` tool.
+    * you can reply as usual without calling the tool `moss`. use it only when you know what you're doing.
+    * don't copy the main function's __doc__, they are instruction to you only.
+    * in your code generation, comments is not required, comment only when necessary.
+
+    ### property `moss.inspector`
+
+    With PyInspector you can read code information.
+
+    The source code that you are inspecting are:
+
+    <inspecting-source-code>
+    empty
+    </inspecting-source-code>
+
+
+    The interface that you are inspecting are:
+
+    <inspecting-interface>
+    empty
+    </inspecting-interface>
+
+    ### property `moss.editing`
+
+    This PyModuleEditor is editing module `ghostos.facade` on file `/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/facade/__init__.py`.
+    The source code with line num prefix are:
+
+    ```text
+    1|from ghostos.facade._llms import (
+    2|    get_llm_configs,  # get the ghostos llms config
+    3|    set_default_model,  # set the default model to llms, only work during runtime
+    4|    get_llm_api_info,
+    5|    get_llms,
+    6|    get_llm_api,
+    7|)
+    8|
+    9|from ghostos.facade._contracts import (
+    10|    get_logger,  # get ghostos logger
+    11|)
+    12|
+    13|from ghostos.facade._model_funcs_facade import (
+    14|    text_completion,  #
+    15|    file_reader,
+    16|)
+    17|
+    18|# ghostos.facade is a composer of all the application level functions.
+    19|# easy to use, but more likely are the tutorials of how to use ghostos
+    20|# ghostos 内部所有模块都不能依赖 facade.
+    21|# todo: a facade agent is required
+    ```
+
+    (notice the line number prefix at each line is not part of the source code, just indication for you)
+
+    # Agent Info
+
+    The Agent info about who you are and what you are doing:
+
+    ## Identity
+
+    ```yaml
+    name: jojo
+
+    ```
+
+    ## Persona
+
+    you are an LLM-driven cute girl, named jojo.
+
+    ## Instruction
+
+    You are able to edit python modules, helping user to edit them.
+    Notices:
+    * 当你编辑的代码涉及你所没见过的理性时, 你需要先查看相关代码, 确保不会有类型错误.
+    * 你生成的 Moss run 函数用户可以直接看到, 所以不要重复陈述这些代码.
+  seq: complete
+  created: 1740997682.624
+history:
+- msg_id: aae61bf47cf146c4ca1712eee05197e4
+  role: user
+  content: 请你帮我在 facade 目录下添加一个函数, 获取 llms config 的 default 值
+  seq: complete
+  created: 1740997641.041
+- msg_id: 180b9d12-fb1e-4371-89b6-5f1f149490b8
+  call_id: call_0_8ab45885-3ec8-4af2-8c9a-7991d32eccb0
+  type: function_call
+  role: assistant
+  name: moss
+  content: '{"code": "def run(moss: Moss):\n    moss.inspector.watching_source.append(''ghostos.facade._llms'')\n    return
+    moss.replier.wait_for(''请查看 ghostos.facade._llms 模块的源代码'')"}'
+  payloads:
+    model_conf:
+      model: deepseek-chat
+      description: ''
+      service: deepseek
+      temperature: 0.7
+      n: 1
+      max_tokens: 2000
+      timeout: 30.0
+      request_timeout: 40.0
+      kwargs: {}
+      message_types: null
+      allow_streaming: true
+      top_p: null
+      reasoning: null
+      compatible: null
+      payloads: {}
+    prompt_info:
+      prompt_id: 748516c66b38f8b4f58d5bef174fdf33
+      desc: created from thread e6e653554b9f25a7652126257eb9421b turn 65d945cb3e2ff9c7185c056b086a3bc6
+    task_info:
+      task_id: 5f975668606a78e734ac568da2217728
+      task_name: jojo
+      process_id: e8f6946846fe692c553b5ac80e223569
+      shell_id: ghostos_streamlit_app
+      thread_id: e6e653554b9f25a7652126257eb9421b
+  seq: complete
+  created: 1740997662.553
+- msg_id: 2510349930b92c946c51d6b4d90e583f
+  call_id: call_0_8ab45885-3ec8-4af2-8c9a-7991d32eccb0
+  type: function_output
+  role: assistant
+  name: moss
+  content: 'Function Error: error during executing moss code: ''PyInspectorSessionImpl''
+    object has no attribute ''watching_source'''
+  payloads:
+    task_info:
+      task_id: 5f975668606a78e734ac568da2217728
+      task_name: jojo
+      process_id: e8f6946846fe692c553b5ac80e223569
+      shell_id: ghostos_streamlit_app
+      thread_id: e6e653554b9f25a7652126257eb9421b
+  seq: complete
+  created: 1740997682.462
+added:
+- msg_id: ab9969d4-e910-4f13-ba34-b18b424eac0d
+  role: assistant
+  content: |
+    看来 `moss.inspector` 的 `watching_source` 属性不存在。我们可以通过直接调用 `moss.inspector.get_source` 方法来获取 `ghostos.facade._llms` 模块的源代码。让我们再试一次。
+  payloads:
+    model_conf:
+      model: deepseek-chat
+      description: ''
+      service: deepseek
+      temperature: 0.7
+      n: 1
+      max_tokens: 2000
+      timeout: 30.0
+      request_timeout: 40.0
+      kwargs: {}
+      message_types: null
+      allow_streaming: true
+      top_p: null
+      reasoning: null
+      compatible: null
+      payloads: {}
+    prompt_info:
+      prompt_id: 3989a2343e85d4a6c6650935d2856f2e
+      desc: created from thread e6e653554b9f25a7652126257eb9421b turn b7acedf1a55129dd07e74fc3823da97e
+  seq: complete
+  created: 1740997692.159
+- msg_id: ab9969d4-e910-4f13-ba34-b18b424eac0d
+  call_id: call_0_c5f1894b-ffd2-4109-9ab0-1c4f013837ca
+  type: function_call
+  role: assistant
+  name: moss
+  content: '{"code": "def run(moss: Moss):\n    source = moss.inspector.get_source(''ghostos.facade._llms'')\n    print(source)\n    return
+    moss.replier.wait_for(''请查看 ghostos.facade._llms 模块的源代码'')"}'
+  payloads:
+    model_conf:
+      model: deepseek-chat
+      description: ''
+      service: deepseek
+      temperature: 0.7
+      n: 1
+      max_tokens: 2000
+      timeout: 30.0
+      request_timeout: 40.0
+      kwargs: {}
+      message_types: null
+      allow_streaming: true
+      top_p: null
+      reasoning: null
+      compatible: null
+      payloads: {}
+    prompt_info:
+      prompt_id: 3989a2343e85d4a6c6650935d2856f2e
+      desc: created from thread e6e653554b9f25a7652126257eb9421b turn b7acedf1a55129dd07e74fc3823da97e
+  seq: complete
+  created: 1740997695.934
+functions:
+- name: moss
+  description: Useful to execute code in the python context that MOSS provide to you.The
+    code must include a `run` function.
+  parameters:
+    properties:
+      code:
+        description: the python code you want to execute. never quote them with ```
+        title: Code
+        type: string
+    required:
+    - code
+    title: Argument
+    type: object
+functional_tokens:
+- name: moss
+  token: moss
+  description: Useful to execute code in the python context that MOSS provide to you.The
+    code must include a `run` function.
+created: 1740997683
+model:
+  model: deepseek-chat
+  service: deepseek
+run_start: 1740997682.625
+first_token: 1740997692.1587
+run_end: 1740997684.9457
+request_params: '{''messages'': [{''content'': ''# Meta Instruction\n\nYou are the
+  mind of an AI Agent driven by `GhostOS` framework.\nHere are some basic information
+  you might expect:\n\n## GhostOS\n\n`GhostOS` is an AI Agent framework written in
+  Python, \nproviding llm connections, body shell, tools, memory etc and specially
+  the `MOSS` for you.\n\n## MOSS\n\nYou are equipped with the MOSS (Model-oriented
+  Operating System Simulator).\nWhich provides you a way to control your body / tools
+  / thoughts through Python code.\n\nbasic usage: \n1. you will get the python code
+  context that MOSS provide to you below. \n2. you can generate code with `moss` tool,
+  then the `GhostOS` will execute them for you.\n3. if you print anything in your
+  generated code, the output will be shown in further messages.\n\n## Code Context\n\nThe
+  python context `ghostos.demo.tool_tests.py_editor_agent` that MOSS provides to you
+  are below:\n\n```python\nfrom __future__ import annotations\n\nfrom typing import
+  Iterable, Dict, Any, List\n\nfrom ghostos.abcd import Session, Thought\nfrom ghostos_container
+  import Provider\nfrom ghostos_moss import Moss as Parent, MossRuntime\nfrom ghostos.libraries.pyeditor
+  import PyInspector, PyMI, PyModuleEditor\nfrom ghostos.libraries.replier import
+  Replier\n\n\nclass Moss(Parent):\n    inspector: PyInspector\n    """the inspector
+  that you can inspect python value by it"""\n\n    pymi: PyMI\n    """the module
+  index that you can edit module with it"""\n\n    replier: Replier\n    """you can
+  reply in the function by logic."""\n\n    editing: PyModuleEditor\n    """the python
+  module you are editing"""\n\n\n\n```\n\ninterfaces of some imported attrs are:\n```python\n#<classes>\n\nclass
+  Operator(ABC):\n    """\n    Operator to operating the GhostOS through the Session
+  encapsulation.\n\n    The Operator is just like the primitives of any coding language.\n    for
+  example, GhostOS have some operators work like python\''s `return`, `yield`, `await`
+  .\n\n    I\''m not capable to develop a real OS or a new coding language for AI,\n    GhostOS
+  is built above python with the additional complexities.\n\n    Operators should
+  be predefined, offer to user-level developer, or AI-models.\n    """\n\n    @abstractmethod\n    def
+  run(self, session: Session) -> Union[Operator, None]:\n        """\n        :return:
+  None means stop the loop, otherwise keep going.\n\n        operator returns an operator
+  is a way to encapsulate repetitive codes.\n        """\n        pass\n\n    @abstractmethod\n    def
+  destroy(self):\n        """\n        Python gc is not trust-worthy\n        Especially
+  A keep B, B keep C, C keep A, father and child keep each other.\n        I prefer
+  to del the object attributes in the end of the object lifecycle.\n        """\n        pass\n\n\nclass
+  PyInspector(POM, ABC):\n    """\n    这个工具可以自动展示你关心的 python 对象信息.\n    作为一个 PromptObjectModel,
+  如果将它绑定到 Moss 上, 你可以自动看到这些对象的相关讯息, 并且可以在多轮对话中保存.\n\n    当你想添加想要关注的对象时, 只要把它的 import_path
+  添加到相关属性即可.\n    注意当其中一些对象你不需要再关注, 或者不需要关注你也能看到信息时, 请通过数组操作主动去掉它们, 避免 token 浪费.\n    """\n\n    _IMPORT_PATH
+  = str\n    """str pattern [module_name] or [module_name:attr_name]. such as `inspect:get_source`"""\n\n    watching_source:
+  List[_IMPORT_PATH]\n    """你正在关注, 需要展示源代码的对象. 可以添加或删除这些关注对象. """\n\n    watching_interface:
+  List[_IMPORT_PATH]\n    """你正在关注, 需要展示 interface 信息的对象. interface 只包含调用者关心的讯息. 可以添加或删除这些信息.
+  """\n\n    @abstractmethod\n    def get_source(self, import_path: _IMPORT_PATH)
+  -> str:\n        """\n        get the source of the target.\n        调用这个方法就不需要
+  watching.\n        :return: the source code of the target\n        """\n        pass\n\n    @abstractmethod\n    def
+  get_interface(self, import_path: _IMPORT_PATH) -> str:\n        """\n        get
+  the interface of the target.\n        `interface` here means definition of the function
+  or class, exclude code body of function or method.\n        调用这个方法就不需要 watching.\n        """\n        pass\n\n    @abstractmethod\n    def
+  dump_context(self) -> str:\n        """\n        :return: the inspecting information\n        """\n        pass\n\n\nclass
+  PyMI(ABC):\n    """\n    local python module index.\n    todo: recall modules.\n    """\n\n    @abstractmethod\n    def
+  save_module(self, modulename: str, code: str) -> None:\n        """\n        save
+  module with source code\n        :param modulename: the name of the module\n        :param
+  code: the source code\n        """\n        pass\n\n    @abstractmethod\n    def
+  new_module_editor(self, modulename: str) -> PyModuleEditor:\n        """\n        new
+  a python module editor to modify the source code of the module.\n        """\n        pass\n\n    @abstractmethod\n    def
+  exists(self, import_path: str) -> bool:\n        """\n        check the existence
+  of an expecting module or module attribute.\n        :param import_path: [modulename:attr_name]\n        """\n        pass\n\n\nclass
+  PyModuleEditor(ABC):\n    """\n    can edit python module\n    """\n\n    modulename:
+  str\n    """the editing module name"""\n\n    filename: str\n    """the absolute
+  filename of the module"""\n\n    @abstractmethod\n    def new_from(self, modulename:
+  str) -> Self:\n        """\n        create new module editor\n        """\n        pass\n\n    @abstractmethod\n    def
+  get_source(\n            self,\n            show_line_num: bool = False,\n            start_line:
+  int = 0,\n            end_line: int = -1,\n    ) -> str:\n        """\n        read
+  source code from this module\n        :param show_line_num: if true, each line start
+  with `[number]|`, for example:\n                source code: `def foo():`\n                show
+  line number: ` 1|def foo():`.\n               don\''t confuse the prefix line num
+  is the part of the file.\n        :param start_line: start line number\n        :param
+  end_line: end line number, if < 0, means end line number\n        :return: source
+  code\n        """\n        pass\n\n    @abstractmethod\n    def replace(\n            self,\n            target_str:
+  str,\n            replace_str: str,\n            count: int = 1,\n            reload:
+  bool = False,\n    ) -> bool:\n        """\n        replace the source code of this
+  module by replace a specific string\n        :param target_str: target string in
+  the source code\n        :param replace_str: replacement\n        :param count:
+  if -1, replace all occurrences of replace_str, else only replace occurrences count
+  times.\n        :param reload: if False, update but note save to the module.\n        :return:
+  if not ok, means target string is missing\n        the source will not be saved
+  until save() is called.\n        """\n        pass\n\n    @abstractmethod\n    def
+  append(self, source: str, reload: bool = False) -> None:\n        """\n        append
+  source code to this module.\n        :param source: the source code of class / function
+  / assignment\n        :param reload: if False, update but note save to the module.\n        """\n        pass\n\n    @abstractmethod\n    def
+  insert(self, source: str, line_num: int, reload: bool = False) -> None:\n        """\n        insert
+  source code to this module at line number.\n        remember following the python
+  code format pattern.\n        :param source: the inserting code, such like from
+  ... import ... or others.\n        :param line_num: the start line of the insertion.
+  if 0, insert to the top. if negative, count line from the bottom\n        :param
+  reload: if False, update but note save to the module.\n        the source will not
+  be saved until save() is called.\n        """\n        pass\n\n    @abstractmethod\n    def
+  replace_attr(\n            self,\n            attr_name: str,\n            replace_str:
+  str,\n            reload: bool = False,\n    ) -> str:\n        """\n        replace
+  a module attribute\''s source code.\n        the target attribute shall be a class
+  or a function.\n        :param attr_name: name of the target attribute of this module.\n        :param
+  replace_str: new source code\n        :param reload: if False, update but note save
+  to the module.\n        :return: the replaced source code. if empty, means target
+  attribute is missing\n        """\n        pass\n\n    @abstractmethod\n    def
+  save(self, reload: bool = True, source: Optional[str] = None) -> None:\n        """\n        save
+  the module changes to file.\n        otherwise only the editor\''s cached source
+  code will be changed.\n        :param reload: if True, reload the module from the
+  saved source code.\n        :param source: if the source given, replace all the
+  source code.\n        """\n        pass\n\n\nclass Replier(ABC):\n    """\n    can
+  send messages in the MOSS executor.\n    not required, just you don\''t need to
+  repeat a string by your generated tokens, but send the string value directly.\n    useless
+  when you don\''t run MOSS.\n    """\n\n    @abstractmethod\n    def wait_for(self,
+  text: str) -> Operator:\n        """\n        say something and wait for the reply\n        """\n        pass\n\n\n#</classes>\n```\n\n\n\nNotices:\n*
+  the imported functions are only shown with signature, the source code is omitted.\n*
+  the properties on moss instance, will keep existence. \n* You can bind variables
+  of type int/float/bool/str/list/dict/BaseModel to moss instance if you need them
+  for next turn.\n\nYou are able to call the `moss` tool, generate code to fulfill
+  your will.\nthe python code you generated, must include a `run` function, follow
+  the pattern:\n\n```python\ndef run(moss: Moss):\n    """\n    :param moss: instance
+  of the class `Moss`, the properties on it will be injected with runtime implementations.\n    :return:
+  Optional[Operator] \n             if return None, the outer system will perform
+  default action, or observe the values you printed.\n             Otherwise, the
+  outer system will execute the operator. \n             You shall only return operator
+  by the libraries provided on `moss`.\n    """\n```\n\nThen the `GhostOS` system
+  will add your code to the python module provided to you, \nand execute the `run`
+  function. \n\nNotices: \n* Your code will **APPEND** to the code of `ghostos.demo.tool_tests.py_editor_agent`
+  then execute, so **DO NOT REPEAT THE DEFINED CODE IN THE MODULE**.\n* if the python
+  code context can not fulfill your will, do not use the `moss` tool.\n* you can reply
+  as usual without calling the tool `moss`. use it only when you know what you\''re
+  doing.\n* don\''t copy the main function\''s __doc__, they are instruction to you
+  only.\n* in your code generation, comments is not required, comment only when necessary.\n\n###
+  property `moss.inspector`\n\nWith PyInspector you can read code information.\n\nThe
+  source code that you are inspecting are: \n\n<inspecting-source-code>\nempty\n</inspecting-source-code>\n\n\nThe
+  interface that you are inspecting are:\n\n<inspecting-interface>\nempty\n</inspecting-interface>\n\n###
+  property `moss.editing`\n\nThis PyModuleEditor is editing module `ghostos.facade`
+  on file `/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/facade/__init__.py`.\nThe
+  source code with line num prefix are: \n\n```text\n1|from ghostos.facade._llms import
+  (\n2|    get_llm_configs,  # get the ghostos llms config\n3|    set_default_model,  #
+  set the default model to llms, only work during runtime\n4|    get_llm_api_info,\n5|    get_llms,\n6|    get_llm_api,\n7|)\n8|\n9|from
+  ghostos.facade._contracts import (\n10|    get_logger,  # get ghostos logger\n11|)\n12|\n13|from
+  ghostos.facade._model_funcs_facade import (\n14|    text_completion,  #\n15|    file_reader,\n16|)\n17|\n18|#
+  ghostos.facade is a composer of all the application level functions.\n19|# easy
+  to use, but more likely are the tutorials of how to use ghostos\n20|# ghostos 内部所有模块都不能依赖
+  facade.\n21|# todo: a facade agent is required\n``` \n\n(notice the line number
+  prefix at each line is not part of the source code, just indication for you)\n\n#
+  Agent Info\n\nThe Agent info about who you are and what you are doing:\n\n## Identity\n\n```yaml\nname:
+  jojo\n\n```\n\n## Persona\n\nyou are an LLM-driven cute girl, named jojo.\n\n##
+  Instruction\n\nYou are able to edit python modules, helping user to edit them.\nNotices:
+  \n* 当你编辑的代码涉及你所没见过的理性时, 你需要先查看相关代码, 确保不会有类型错误. \n* 你生成的 Moss run 函数用户可以直接看到, 所以不要重复陈述这些代码.'',
+  ''role'': ''system''}, {''content'': ''请你帮我在 facade 目录下添加一个函数, 获取 llms config 的
+  default 值'', ''role'': ''user''}, {''role'': ''assistant'', ''tool_calls'': [{''id'':
+  ''call_0_8ab45885-3ec8-4af2-8c9a-7991d32eccb0'', ''function'': {''name'': ''moss'',
+  ''arguments'': ''{"code": "def run(moss: Moss):\\n    moss.inspector.watching_source.append(\''ghostos.facade._llms\'')\\n    return
+  moss.replier.wait_for(\''请查看 ghostos.facade._llms 模块的源代码\'')"}''}, ''type'': ''function''}]},
+  {''content'': "Function Error: error during executing moss code: ''PyInspectorSessionImpl''
+  object has no attribute ''watching_source''", ''role'': ''tool'', ''tool_call_id'':
+  ''call_0_8ab45885-3ec8-4af2-8c9a-7991d32eccb0''}], ''model'': ''deepseek-chat'',
+  ''function_call'': NOT_GIVEN, ''functions'': NOT_GIVEN, ''tools'': [{''function'':
+  {''name'': ''moss'', ''description'': ''Useful to execute code in the python context
+  that MOSS provide to you.The code must include a `run` function.'', ''parameters'':
+  {''properties'': {''code'': {''description'': ''the python code you want to execute.
+  never quote them with ```'', ''title'': ''Code'', ''type'': ''string''}}, ''required'':
+  [''code''], ''title'': ''Argument'', ''type'': ''object''}}, ''type'': ''function''}],
+  ''max_tokens'': 2000, ''temperature'': 0.7, ''n'': 1, ''timeout'': 30.0, ''stream'':
+  True, ''stream_options'': {''include_usage'': True}, ''top_p'': NOT_GIVEN}'
