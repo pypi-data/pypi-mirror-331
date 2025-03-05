@@ -1,0 +1,13 @@
+[project]
+name = "heroku_applink"
+version = "0.1.0"
+description = "Simple SDK for Heroku AppLink and Salesforce development"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "aiohttp>=3.11.12",
+    "orjson>=3.10.15",
+]
+[tool.setuptools]
+packages = ["heroku_applink", "heroku_applink.data_api"]
+license-files = []
