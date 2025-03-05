@@ -1,0 +1,16 @@
+brick_cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+brick_cli/brick.py,sha256=4RiiuIRVcJh-Rlz1L5RIAedS4id-38FN_i1pJNldZ_4,2947
+brick_cli/cli.py,sha256=OG9lXNMsrYVUQh6-gWnYHcwtpCZuhiWs59AGZufxcUY,224
+brick_cli/commands/__init__.py,sha256=mjKGNJCt4h0DU0_V1BwCuLon3GXl4qAkbG_FxeW6dsY,143
+brick_cli/commands/create_project.py,sha256=yEU0yHgD_UVQBT30ocRrx4WLKCJOZLkYM8IdwCHNLXo,287
+brick_cli/commands/create_repository.py,sha256=hTpaCV7Mu8kMpEVGG5OCPBCepp4wFmDZVGQgvIp0FMI,550
+brick_cli/db_backends/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+brick_cli/db_backends/abstract_backend.py,sha256=SUEmDk_EyrozST-UnMJDQjfdrDREF709dx19m8F91po,295
+brick_cli/db_backends/sqlalchemy_backend.py,sha256=W8wxDMBnwtuY1ueYeSMUcz2VYtN65nHZdxdx6iW59lM,378
+brick_cli/templates/abstract_repository.py.jinja2,sha256=ltLGtgcD_0D_9ZKtyW5GT2iFRCx41bDeooAox_QNsqo,565
+brick_cli/templates/sqlalchemy_repository.py.jinja2,sha256=V3oBPu5vMZJg4GeX3w_03c-hHseqkxTwnyspdKfumxQ,1553
+brick_cli-0.1.0.dist-info/LICENSE,sha256=4LYO_p9h4JI7LGg855zja4U0qDjFxmtj8Ur2JPzpcXE,1072
+brick_cli-0.1.0.dist-info/METADATA,sha256=mHlIMtrtD5Edu3TkegWIfKUXxrLu9TMRZ3Df7FxqnEY,435
+brick_cli-0.1.0.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+brick_cli-0.1.0.dist-info/entry_points.txt,sha256=WVZRFMGRkOXcaF2RKLG68XxnEpmPFumJZ2t9HTBBfoI,43
+brick_cli-0.1.0.dist-info/RECORD,,
