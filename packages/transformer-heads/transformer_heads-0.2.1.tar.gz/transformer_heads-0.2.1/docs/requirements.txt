@@ -1,0 +1,3 @@
+m2r2
+sphinx-rtd-theme
+transformer-heads>=0.0.3
