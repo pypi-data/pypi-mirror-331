@@ -1,0 +1,28 @@
+Metadata-Version: 2.2
+Name: modelengine-agents
+Version: 0.1.0
+Summary: ModelEngine大语言模型代理工具库
+Author: Shuangrui Chen, Simeng Bian, Jingyuan Li, Mingchen Wan
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: huggingface-hub>=0.28.0
+Requires-Dist: requests>=2.32.3
+Requires-Dist: rich>=13.9.4
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: jinja2>=3.1.4
+Requires-Dist: pillow>=11.0.0
+Requires-Dist: markdownify>=0.14.1
+Requires-Dist: duckduckgo-search>=6.3.7
+Requires-Dist: python-dotenv
+Requires-Dist: selenium
+Requires-Dist: helium
+Requires-Dist: litellm>=1.60.2
+Requires-Dist: transformers>=4.0.0
+Requires-Dist: torch
+Requires-Dist: accelerate
+Provides-Extra: quality
+Requires-Dist: ruff>=0.9.0; extra == "quality"
+Provides-Extra: test
+Requires-Dist: pytest>=8.1.0; extra == "test"
+Provides-Extra: dev
+Requires-Dist: modelengine-agents[quality,test]; extra == "dev"
