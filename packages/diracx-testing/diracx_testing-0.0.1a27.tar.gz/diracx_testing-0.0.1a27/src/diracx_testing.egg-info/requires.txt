@@ -1,0 +1,8 @@
+pytest
+pytest-asyncio
+pytest-cov
+pytest-xdist
+httpx
+
+[testing]
+diracx-testing
