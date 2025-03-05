@@ -1,0 +1,7 @@
+README.md
+setup.py
+electroanalyzer.egg-info/PKG-INFO
+electroanalyzer.egg-info/SOURCES.txt
+electroanalyzer.egg-info/dependency_links.txt
+electroanalyzer.egg-info/requires.txt
+electroanalyzer.egg-info/top_level.txt
