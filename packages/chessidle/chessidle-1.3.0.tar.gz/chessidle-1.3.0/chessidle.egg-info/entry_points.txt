@@ -1,0 +1,2 @@
+[console_scripts]
+chessidle = chessidle.main:main
