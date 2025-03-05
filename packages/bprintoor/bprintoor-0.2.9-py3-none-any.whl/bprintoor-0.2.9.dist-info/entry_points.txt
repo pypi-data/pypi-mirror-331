@@ -1,0 +1,2 @@
+[console_scripts]
+bprintoor = bprintoor.cli:main

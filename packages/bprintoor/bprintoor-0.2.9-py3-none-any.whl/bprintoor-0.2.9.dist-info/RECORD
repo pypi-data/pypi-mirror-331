@@ -1,0 +1,14 @@
+bprinter/__init__.py,sha256=RZXM12Qwq7jiSBVRkTR56QVKt3f-ibeU7PP345-QfEs,1594
+bprinter/ascii_art.py,sha256=hguUZTLCCVt6jr37_zcUiaeBTMs6-9X6mT_fOMKH_A0,2825
+bprinter/constants.py,sha256=jLPF97IFCaTf3t4S89VthuPdUoFCCpG6b9NM94ypRI8,1864
+bprinter/exceptions.py,sha256=ReufnY-HNq35KCHb31eiQ1Bcs-vFrCqznl569JfxMts,550
+bprinter/formatting.py,sha256=mmgOyB0VuFM-JkSB5qnF_5gAV9M7fgz1I5j5GEkEYTQ,2214
+bprinter/platform.py,sha256=iE5_tJwu8Jby1muR05menLXt45qOWyJ_EIDTiSxALVY,4293
+bprinter/printer.py,sha256=FXiAe9SRJAOe-HufbvTub-PWYLX2vdHbA4f34fzHXMc,8517
+bprinter/styles.py,sha256=vxI-gR1uT6G_KS9evLPF0E5q3LxTB_av6aJ5YQl8hE4,4563
+bprintoor-0.2.9.dist-info/LICENSE,sha256=4tPsT1a1UXdwCVBRyn1XKYcLOdk13qTiwzhbO7F1O7k,1068
+bprintoor-0.2.9.dist-info/METADATA,sha256=jF2-POT1D0S6oyt3163X8krt1s-GRvMpwjScnkLyKTw,6630
+bprintoor-0.2.9.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+bprintoor-0.2.9.dist-info/entry_points.txt,sha256=mBFfdjUHMwJIdnB8XiRkgbIjrcOq3chZAPjt3U55taY,49
+bprintoor-0.2.9.dist-info/top_level.txt,sha256=SpAFAuoXm0lrHuMrmOK3tRnmSVc1WH__Qrj47qTt84w,9
+bprintoor-0.2.9.dist-info/RECORD,,
