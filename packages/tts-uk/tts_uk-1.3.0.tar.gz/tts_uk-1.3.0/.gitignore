@@ -1,0 +1,11 @@
+.idea/
+.venv/
+.ruff_cache/
+__pycache__/
+
+flagged/
+models/
+build/
+dist/
+
+audio.wav
