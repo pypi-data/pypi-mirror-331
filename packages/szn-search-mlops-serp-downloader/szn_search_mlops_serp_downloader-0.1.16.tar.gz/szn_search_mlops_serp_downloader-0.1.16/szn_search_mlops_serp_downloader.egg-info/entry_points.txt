@@ -1,0 +1,2 @@
+[console_scripts]
+szn_search_mlops_serp_downloader = szn_search_mlops_serp_downloader:main
