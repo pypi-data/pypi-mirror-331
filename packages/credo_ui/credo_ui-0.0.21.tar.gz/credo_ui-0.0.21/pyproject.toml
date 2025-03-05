@@ -1,0 +1,22 @@
+[build-system]
+requires = [ "poetry-core",]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "credo_ui"
+version = "0.0.21"
+description = "All popular Framework HF integration kit"
+authors = [ "Kammari Santhosh",]
+readme = "README.md"
+license = "MIT License"
+repository = "https://github.com/santhosh/"
+keywords = [ "",]
+include = [ "credo_runner.py", "credo_runner_main.py",]
+[[tool.poetry.packages]]
+include = "credo_ui"
+
+[tool.poetry.scripts]
+credo-ui = "credo_runner:main"
+
+[tool.poetry.dependencies]
+python = "^3.10"
