@@ -1,0 +1,20 @@
+{
+    "services": {
+        "process": {
+            "fields": {
+                "language": {
+                    "name": "Jezik"
+                }
+            }
+        },
+        "reload": {
+            "fields": {
+                "language": {
+                    "name": "Jezik"
+                }
+            },
+            "name": "Ponovno nalo\u017ei"
+        }
+    },
+    "title": "Pogovor"
+}

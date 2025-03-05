@@ -1,0 +1,19 @@
+{
+    "config": {
+        "step": {
+            "reconfigure": {
+                "data_description": {
+                    "host": "The hostname or IP address of your FRITZ!Box router.",
+                    "port": "Leave it empty to use the default port."
+                },
+                "description": "Update FRITZ!Box Tools configuration for: {host}.",
+                "title": "Updating FRITZ!Box Tools - configuration"
+            }
+        }
+    },
+    "exceptions": {
+        "update_failed": {
+            "message": "Error while uptaing the data: {error}"
+        }
+    }
+}

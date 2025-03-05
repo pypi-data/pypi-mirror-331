@@ -1,0 +1,42 @@
+{
+    "config": {
+        "error": {
+            "no_integrations_selected": "You must select at least one integration to track"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "tracked_addons": "Addons"
+                },
+                "data_description": {
+                    "tracked_addons": "Select the addons you want to track"
+                }
+            }
+        }
+    },
+    "entity": {
+        "sensor": {
+            "total_active_installations": {
+                "name": "Total active installations"
+            },
+            "total_reports_integrations": {
+                "name": "Total reported integrations"
+            }
+        }
+    },
+    "options": {
+        "error": {
+            "no_integrations_selected": "You must select at least one integration to track"
+        },
+        "step": {
+            "init": {
+                "data": {
+                    "tracked_addons": "Addons"
+                },
+                "data_description": {
+                    "tracked_addons": "Select the addons you want to track"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,49 @@
+{
+    "device_automation": {
+        "action_type": {
+            "clean": "Naj {entity_name} \u010disti",
+            "dock": "Pustite, da se {entity_name} vrne na dok"
+        },
+        "condition_type": {
+            "is_cleaning": "{entity_name} \u010disti",
+            "is_docked": "{entity_name} je priklju\u010den"
+        },
+        "extra_fields": {
+            "for": "Trajanje"
+        },
+        "trigger_type": {
+            "cleaning": "{entity_name} za\u010del \u010di\u0161\u010denje",
+            "docked": "{entity_name} priklju\u010den"
+        }
+    },
+    "entity_component": {
+        "_": {
+            "state": {
+                "idle": "Nedejaven",
+                "off": "Izklopljeno",
+                "on": "Vklopljeno",
+                "paused": "Premor"
+            }
+        }
+    },
+    "services": {
+        "pause": {
+            "name": "Premor"
+        },
+        "start": {
+            "name": "Za\u017eeni"
+        },
+        "stop": {
+            "name": "Zaustavi"
+        },
+        "toggle": {
+            "name": "Preklopi"
+        },
+        "turn_off": {
+            "name": "Izklopi"
+        },
+        "turn_on": {
+            "name": "Vklopi"
+        }
+    }
+}
