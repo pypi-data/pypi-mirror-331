@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=72.2.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "anhaltai-commons-minio"
+description = "AnhaltAI Commons Minio: Additional functions for using Minio"
+authors = [{ name = "Christian Hänig", email = "christian.haenig@hs-anhalt.de" },
+    { name = "Christian Gurski", email = "christian.gurski@hs-anhalt.de" }, ]
+
+dynamic = ["version", "readme", "dependencies"]
+
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[tool.setuptools.dynamic]
+version = { file = ["VERSION"] }
+readme = { file = ["README.md"], content-type = "text/markdown; charset=UTF-8" }
+dependencies = { file = ["requirements.txt"] }
+
+[project.urls]
+Gitlab = "https://gitlab.hs-anhalt.de/ki/projekte/anhaltai-commons/commons-minio"
+PyPI = "https://pypi.org/project/anhaltai-commons-minio/"
+
+[tool.pytest.ini_options]
+log_cli = true
+log_cli_level = "INFO"
+log_cli_format = "%(asctime)s %(name)s[%(process)d] %(levelname)-8s: %(message)s"
+log_cli_date_format = "%Y-%m-%d %H:%M:%S"

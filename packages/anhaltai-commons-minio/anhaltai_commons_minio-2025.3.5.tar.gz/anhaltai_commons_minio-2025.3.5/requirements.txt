@@ -1,0 +1,14 @@
+numpy~=1.26.0
+minio~=7.2.9
+numerize~=0.12
+opencv-python-headless~=4.10.0
+pandas~=2.2.2
+python-dotenv~=1.0.1
+tqdm~=4.66.4
+urllib3~=2.2.1
+requests~=2.32.3
+nc_py_api~=0.17.1
+
+pytest~=8.3.3
+pytest-minio-mock~=0.4.16
+pytest-mock~=3.14.0

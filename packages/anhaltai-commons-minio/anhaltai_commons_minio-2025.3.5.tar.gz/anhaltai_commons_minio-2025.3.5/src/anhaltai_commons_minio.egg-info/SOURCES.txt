@@ -1,0 +1,17 @@
+LICENSE
+README.md
+VERSION
+pyproject.toml
+requirements.txt
+src/anhaltai_commons_minio/__init__.py
+src/anhaltai_commons_minio/bucket_utils.py
+src/anhaltai_commons_minio/client_utils.py
+src/anhaltai_commons_minio/helper_utils.py
+src/anhaltai_commons_minio/io_utils.py
+src/anhaltai_commons_minio.egg-info/PKG-INFO
+src/anhaltai_commons_minio.egg-info/SOURCES.txt
+src/anhaltai_commons_minio.egg-info/dependency_links.txt
+src/anhaltai_commons_minio.egg-info/requires.txt
+src/anhaltai_commons_minio.egg-info/top_level.txt
+src/anhaltai_commons_minio/adapters/__init__.py
+src/anhaltai_commons_minio/adapters/nextcloud.py
