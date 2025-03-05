@@ -1,0 +1,110 @@
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[project]
+name = "fluidsimfoam"
+version = "0.0.8"
+description = "Python framework for OpenFOAM"
+authors = [
+    { name = "Pierre Augier", email = "pierre.augier@univ-grenoble-alpes.fr" },
+]
+dependencies = [
+    "fluidsim-core",
+    "inflection",
+    "fluiddyn",
+    "ipython",
+    "pandas",
+    "jinja2",
+    "lark",
+    "rich",
+    "invoke",
+    "pickleshare",
+]
+requires-python = ">=3.10"
+readme = "README.md"
+
+[project.license]
+text = "BSD-3-Clause"
+
+[project.optional-dependencies]
+qt = [
+    "PySide6",
+]
+jupyter = [
+    "jupyterlab",
+    "jupyterlab-myst",
+    "jupytext",
+    "mdformat-myst",
+]
+pyvista = [
+    "pyvista~=0.43.2",
+    "vtk~=9.3.0",
+]
+
+[project.scripts]
+fluidsimfoam-info = "fluidsimfoam.util.console:print_versions"
+fluidsimfoam-ipy-load = "fluidsimfoam.util.console:start_ipython_load_sim"
+fluidsimfoam-initiate-solver = "fluidsimfoam.util.console:initiate_solver"
+
+[dependency-groups]
+solvers = [
+    "-e fluidsimfoam-tgv @ file:///${PROJECT_ROOT}/doc/examples/fluidsimfoam-tgv",
+    "-e fluidsimfoam-cbox @ file:///${PROJECT_ROOT}/doc/examples/fluidsimfoam-cbox",
+    "-e fluidsimfoam-sed @ file:///${PROJECT_ROOT}/doc/examples/fluidsimfoam-sed",
+    "-e fluidsimfoam-cavity @ file:///${PROJECT_ROOT}/doc/examples/fluidsimfoam-cavity",
+    "-e fluidsimfoam-phill @ file:///${PROJECT_ROOT}/doc/examples/fluidsimfoam-phill",
+    "-e fluidsimfoam-dam @ file:///${PROJECT_ROOT}/doc/examples/fluidsimfoam-dam",
+    "-e fluidsimfoam-multi-region-snappy @ file:///${PROJECT_ROOT}/doc/examples/fluidsimfoam-multi-region-snappy",
+]
+test = [
+    "pytest",
+    "pytest-mock",
+    "pytest-cov",
+    "pip",
+]
+dev = [
+    "black",
+    "flake8",
+    "isort",
+    "ipdb",
+]
+doc = [
+    "myst-nb",
+    "sphinx-inline-tabs",
+    "sphinx-copybutton",
+    "pydata-sphinx-theme",
+    "sphinx-togglebutton",
+]
+
+[tool.pdm.scripts]
+cov = "pytest tests doc/examples/ --cov --cov-report term --cov-report html"
+cov-xml = "pytest tests doc/examples --cov --cov-report term --cov-report xml"
+black = "black -l 82 src tests doc dev"
+isort = "isort src tests doc dev"
+
+[tool.pdm.scripts.format]
+composite = [
+    "black",
+    "isort",
+]
+
+[tool.isort]
+known_first_party = [
+    "fluiddyn",
+    "fluidsim_core",
+    "fluidsimfoam",
+]
+profile = "black"
+line_length = 82
+
+[tool.coverage.report]
+exclude_lines = [
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "raise RuntimeError",
+    "raise ValueError",
+    "except ImportError",
+]

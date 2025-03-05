@@ -1,0 +1,12 @@
+// -*- C++ -*-
+
+type            solverInfo;
+libs            (utilityFunctionObjects);
+
+writeInterval   1;
+
+writeControl writeTime;
+
+fields      (p_rgh);
+
+writeFields yes;
