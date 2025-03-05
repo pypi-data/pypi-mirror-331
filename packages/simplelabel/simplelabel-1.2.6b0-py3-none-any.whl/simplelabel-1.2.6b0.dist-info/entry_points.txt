@@ -1,0 +1,2 @@
+[console_scripts]
+simplelabel = simplelabel.__main__:main
