@@ -1,0 +1,25 @@
+Metadata-Version: 2.2
+Name: co6co.web_session
+Version: 0.0.1
+Summary: web session 扩展
+Home-page: http://github.com/co6co
+Author: co6co
+Author-email: co6co@qq.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+Requires-Dist: co6co
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: summary
+
+# web session header
+
+```
+0.0.1 未经严谨测试
+```
