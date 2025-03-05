@@ -1,0 +1,16 @@
+numpy
+magicgui
+qtpy
+scikit-image
+biopb
+opencv-python-headless
+grpcio_tools
+vedo
+
+[testing]
+tox
+pytest
+pytest-cov
+pytest-qt
+napari
+pyqt5
