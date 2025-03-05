@@ -1,0 +1,14 @@
+
+[all]
+datachart[dev,test]
+
+[dev]
+black
+flake8
+python-githooks
+mkdocs-material
+mkdocs-jupyter
+
+[test]
+coverage
+nbmake

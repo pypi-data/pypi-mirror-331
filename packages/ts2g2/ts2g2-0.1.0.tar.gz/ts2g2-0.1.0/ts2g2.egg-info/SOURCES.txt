@@ -1,0 +1,16 @@
+LICENSE
+README.md
+README.rst
+pyproject.toml
+setup.cfg
+tests/test_angle_visibility_strategy.py
+tests/test_horizontal_visibility_strategy.py
+tests/test_natural_visibility_strategy.py
+tests/test_ordinal_partition.py
+tests/test_quantiles.py
+tests/test_timeseries_strategies.py
+ts2g2.egg-info/PKG-INFO
+ts2g2.egg-info/SOURCES.txt
+ts2g2.egg-info/dependency_links.txt
+ts2g2.egg-info/requires.txt
+ts2g2.egg-info/top_level.txt
