@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sewsource"
+version = "0.1.3"
+description = "A CLI tool to sew github documentations into a compiled source for LLMs"
+requires-python = ">=3.8"
+authors = [{ name = "Keshav Sharma", email = "skeshav0825@gmail.com" }]
+readme = "README.md"
+license = { file = "LICENSE" }
+dependencies = ["rich", "click", "GitPython"]
+
+[project.scripts]
+sewsource = 'sewsource.main:main'
+
+[project.urls]
+Homepage = "https://github.com/keshavsharma25/sewsource"
+Repository = "https://github.com/keshavsharma25/sewsource"
+
+[tool.ruff]
+line-length = 88
+indent-width = 4
+
+[tool.ruff.format]
+quote-style = "single"
+indent-style = "space"
+docstring-code-format = true

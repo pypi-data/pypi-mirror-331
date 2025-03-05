@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+sewsource/__init__.py
+sewsource/main.py
+sewsource.egg-info/PKG-INFO
+sewsource.egg-info/SOURCES.txt
+sewsource.egg-info/dependency_links.txt
+sewsource.egg-info/entry_points.txt
+sewsource.egg-info/requires.txt
+sewsource.egg-info/top_level.txt
