@@ -1,0 +1,12 @@
+*.egg-info/
+__pycache__/
+.idea/
+dinamis_sdk/test
+build/
+dist/
+*venv/
+.vscode/
+_version.py
+*.xml
+.coverage
+htmlcov
