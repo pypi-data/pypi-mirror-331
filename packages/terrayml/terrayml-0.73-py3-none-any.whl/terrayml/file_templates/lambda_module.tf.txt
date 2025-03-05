@@ -1,0 +1,21 @@
+
+module "lambda_functions" {
+
+  source = "./modules/lambda"
+  common = local.common
+  service_name = var.service_name
+  app_path = var.app_path
+
+  apigw_execution_arn = try(module.api_gateway.apigw_execution_arn, "")
+  
+  runtime = "python3.11" # Change this depending on runtime
+
+  secrets_arn_list = []
+  lambdas_with_secrets_manager_list = []
+  lambdas_with_dynamodb_list = ${LAMBDA_FUNCTION_WITH_DDB_LIST}
+  lambdas_with_ses_list = []
+  lambdas_with_sqs_list = []
+  enable_apigw = "${ENABLE_APIGW}"
+
+  lambda_function_list = ${LAMBDA_FUNCTIONS_LIST}
+}
