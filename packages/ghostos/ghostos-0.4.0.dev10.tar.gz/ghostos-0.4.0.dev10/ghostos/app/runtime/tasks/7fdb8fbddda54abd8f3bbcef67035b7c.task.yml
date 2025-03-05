@@ -1,0 +1,13 @@
+created: 1740997545
+description: a chatbot for baseline test
+meta:
+  content: '{"name":"jojo","persona":"you are an LLM-driven cute girl, named jojo","instruction":"remember
+    talk to user with user''s language.","description":"a chatbot for baseline test","id":"ghostos.demo.agents.jojo"}'
+  type: ghostos.ghosts.chatbot.chatbot:Chatbot
+name: jojo
+process_id: e8f6946846fe692c553b5ac80e223569
+shell_id: ghostos_streamlit_app
+state: waiting
+task_id: 7fdb8fbddda54abd8f3bbcef67035b7c
+thread_id: 7fdb8fbddda54abd8f3bbcef67035b7c
+turns: 1
