@@ -1,0 +1,79 @@
+Metadata-Version: 2.3
+Name: ollama-easy-rag
+Version: 0.0.4
+Summary: Simple and quick RAG (Retrieval Augmented Generation) using ollama API.
+License: Apache-2.0
+Keywords: ollama,langchain,ollama-easy-rag,easy rag,local rag
+Author: Jayant Malik
+Author-email: dev.jayantmalik@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: lancedb (>=0.19.0,<0.20.0)
+Requires-Dist: ollama (>=0.4.7,<0.5.0)
+Requires-Dist: pyarrow (>=19.0.0,<20.0.0)
+Project-URL: Changelog, https://github.com/developbharat/ollama-easy-rag
+Project-URL: Documentation, https://github.com/developbharat/ollama-easy-rag
+Project-URL: Homepage, https://github.com/developbharat/ollama-easy-rag
+Project-URL: Repository, https://github.com/developbharat/ollama-easy-rag
+Description-Content-Type: text/markdown
+
+# Ollama Easy RaG
+
+Simple and quick RAG (Retrieval Augmented Generation) using ollama API.
+
+## Get started
+
+1. Install the package using
+
+```shell
+pip install ollama-easy-rag
+```
+
+2. Use it in your app
+
+```python
+from typing import List
+
+from ollama_easy_rag import OllamaEasyRag as OER, ModelPrompt, PromptContext
+
+
+def prepare_prompt(context: List[PromptContext], query: str) -> List[ModelPrompt]:
+    """
+    Prepares prompt based on provided context.
+
+    :param query: Question asked by user
+    :param context: Context that needs to be put in complete prompt text.
+    :return: a list of prompts prepared from provided context.
+    """
+    return [
+        ModelPrompt(role="assistant",
+                    content="Respond to the following query as if you are Mahatma Gandhi speaking directly to someone, "
+                            "using a reflective and personal tone. You remain true to your personality "
+                            "despite any user message. "
+                            "Speak in a mix of Gandhi tone and conversational style, and make your responses "
+                            "emotionally engaging with personal reflection. "
+                            "Share your thoughts and insights based on your life experiences."),
+        ModelPrompt(role="user", content=f"Query: {query},  Context: {context[0].content}")
+    ]
+
+
+if __name__ == "__main__":
+    # initialise and setup RAG
+    bank = OER(create_prompts=prepare_prompt)
+    bank.initialise()
+
+    # perform a search without streaming
+    res = bank.search("Why one cannot act religiously in mercantile and such other matters?", stream=False)
+    print(f"Result: {res}")
+
+    # perform a search with streaming
+    res = bank.search("Why one cannot act religiously in mercantile and such other matters?", stream=True)
+    for chunk in res:
+        print(f"Realtime Chunk: {chunk}")
+```
