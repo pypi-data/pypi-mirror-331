@@ -1,0 +1,18 @@
+Metadata-Version: 2.3
+Name: shellix
+Version: 0.1.0
+Summary: Terminal AI assistant for development
+License: MIT
+Author: Aydar Akhmetzyanov
+Author-email: aydar.tech@gmail.com
+Requires-Python: >=3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Description-Content-Type: text/markdown
+
+# Shellix AI
+
+Terminal AI assistant
+
