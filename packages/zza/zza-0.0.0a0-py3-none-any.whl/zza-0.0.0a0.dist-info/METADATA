@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: zza
+Version: 0.0.0a0
+Summary: An alternative standard library for Python
+Author-email: Sam Roedger <sroedger@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# py:zza
+
+An alternative standard library for Python
+
+**This library is in alpha status, APIs and behaviors may break or change without warning**
