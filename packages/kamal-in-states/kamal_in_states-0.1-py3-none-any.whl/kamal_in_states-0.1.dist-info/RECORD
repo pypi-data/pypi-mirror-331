@@ -1,0 +1,16 @@
+kamal_in_states/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kamal_in_states/asgi.py,sha256=kySvxO5DzjaG1Y15hc6rAL2ln0lmjA3eAs_Z4dYCbG8,423
+kamal_in_states/settings.py,sha256=6jzEfe8LaX7j8nPNTiIGN6A7HnRgvCKJoFyu8RkYTS0,3407
+kamal_in_states/urls.py,sha256=NjdfT0wZu9zH9H0bA4gt31xtQY1h_98mNRUQDjh29Ag,204
+kamal_in_states/wsgi.py,sha256=2RX8vMMVvM1LQ7CcUsj4dpqG_g7pYCOn5aQ0h_9g5pQ,423
+states/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+states/admin.py,sha256=p6xop1PuuDG2Uwv3G_aRfldxOfBzTRfMaoZmORVkqyU,66
+states/apps.py,sha256=-q4mnXJzM6rY19Pb4TSuBiuJY0XyJy4Aoiy0D4cI6Ng,150
+states/models.py,sha256=4OVMcDDx9fVgBEJ91B7dfMEG2Ni1LRSLJOKzIkVPsKo,60
+states/tests.py,sha256=2uDafv3Ns6f7Vy1ekUtgYxCZEi1KRyesZDTAFhYcX-E,63
+states/views.py,sha256=zyngDbPhngdzXLnjByytc7X2YdCIdDH3yKeqcy_N640,1678
+states/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kamal_in_states-0.1.dist-info/METADATA,sha256=KvR6vBsLIjaPeFxqjOg-kfHkCTUn9QmnBpdoo67DuVE,439
+kamal_in_states-0.1.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+kamal_in_states-0.1.dist-info/top_level.txt,sha256=sOkQX2Ezowjgh0DHeED232J8LqkT-ScdXNmsgIESgvA,23
+kamal_in_states-0.1.dist-info/RECORD,,
