@@ -1,0 +1,38 @@
+[project]
+name = "python_unittest"
+version = "0.2.13"
+description = "Python unittest test tool for TestSolar"
+authors = [
+    {name = "dzx-cptbtptp", email = "371140679@qq.com"},
+]
+dependencies = [
+    "testsolar-testtool-sdk>=0.4.2",
+    "pydantic>=2.7.4",
+    "loguru>=0.7.2",
+    "unittest-xml-reporting>=3.2.0",
+    "coverage>=7.6.1",
+]
+requires-python = ">=3.9"
+readme = "README.md"
+license = {text = "MIT"}
+
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "pytest-cov>=5.0.0",
+    "pytest>=8.2.2",
+    "ruff>=0.4.10",
+    "mypy>=1.10.0",
+    "setuptools>=70.1.0",
+]
+
+[dependency-groups]
+dev = [
+    "mypy>=1.15.0",
+    "pytest-cov>=6.0.0",
+    "pytest>=8.3.5",
+    "ruff>=0.9.9",
+]
