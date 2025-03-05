@@ -1,0 +1,17 @@
+transparent_alter_table/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+transparent_alter_table/data_copier.py,sha256=Da0MXWl2tLJhLdQXSk-ojmY78Vv2Hje3db-WiKAzWsM,5647
+transparent_alter_table/helper.py,sha256=NDk7pvk6vuMELyvjrrklqpX9DtPiZxdvvlIQnV79Z64,1965
+transparent_alter_table/main.py,sha256=9xzonuIPyccAbKW2NzSfxXXxhRCNl3dcd594gY5__Mw,1925
+transparent_alter_table/pg_pool.py,sha256=ojfSpoEZnC3SXPdpbsmP4mZ_FSC37AwaKepeU784V2A,4314
+transparent_alter_table/tat.py,sha256=YBrySiOlmTSySGtMl0VfypMCAVN6tC5i_yFD2Z6HmJ4,21284
+transparent_alter_table/queries/apply_delta.plpgsql,sha256=cYQGCsBbndMuW1Agu0UnhogqCmEgfHA4BQ4QA4G-L-M,751
+transparent_alter_table/queries/get_child_tables.sql,sha256=GfwJ6J1gOFLt3PsGOmSuKE4l4sOdvGGTBU01tKQ3TfY,444
+transparent_alter_table/queries/get_table_info.sql,sha256=u3z2zsjzZwE-xfuKr1cgkICP0Ux7K8lvRPBetBt_ERk,20286
+transparent_alter_table/queries/store_delta.plpgsql,sha256=glIs27dIW_-jhrOT4uC9eUOreYPYgNTfZIxbXaI3r0g,463
+pg_transparent_alter_table-4.1.1.dist-info/AUTHORS,sha256=BP1uVueuHep4YMmKlBQMs1WtE9yf_pvjK-qFzuRTE8I,93
+pg_transparent_alter_table-4.1.1.dist-info/LICENSE,sha256=cj3nlkj23e-fiX2YFfFAtFihJEN-kGsnQ_gbi0zlA0k,1507
+pg_transparent_alter_table-4.1.1.dist-info/METADATA,sha256=nJEYjDNI4eHGuCvEcIA-FGJTwzWUMVvvUpBKo1RuVGs,677
+pg_transparent_alter_table-4.1.1.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+pg_transparent_alter_table-4.1.1.dist-info/entry_points.txt,sha256=1u9cUlBY_Hkluhm23AM3SAwalI52BMO3N-uk3QansAs,61
+pg_transparent_alter_table-4.1.1.dist-info/top_level.txt,sha256=pY4end2rwWOHWt0a0nt6zQOFlPMdnjFzFl9tS3mfAd0,24
+pg_transparent_alter_table-4.1.1.dist-info/RECORD,,
