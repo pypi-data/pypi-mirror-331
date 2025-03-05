@@ -1,0 +1,9 @@
+e2k/__init__.py,sha256=KxTSqeTPYlyYhjozlcruFWtgn9iODsLYin7cY9QKPBI,267
+e2k/constants.py,sha256=Lajx--JL1kduvNN3BIbr9soQ_A9T-jPEk-jdJFthKQw,1935
+e2k/inference.py,sha256=mSQIQsFOVkxuYXw3MVCuTm2LR2wkGihgMbPkBH6JlTs,10054
+e2k/models/model-c2k.npz,sha256=Hxnn1C_T_-MVESiAe2ZqRHdJUJklzsm-J1MkFsC5pyk,4466282
+e2k/models/model-p2k.npz,sha256=VXP0Tt3k81FdxxgluUFwcgy9TSX1pz482sUoJe3eT7U,4474986
+e2k-0.2.3.dist-info/METADATA,sha256=k_IGVm3aGlRT0rZpPOxomdOoio7RsoswpbeNw13XUu0,5974
+e2k-0.2.3.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+e2k-0.2.3.dist-info/top_level.txt,sha256=C1ChHRXMXLY8K9ZIwiRtchhn1MW-fW9gY1HlFjRLCYo,4
+e2k-0.2.3.dist-info/RECORD,,
