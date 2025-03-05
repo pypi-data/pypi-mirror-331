@@ -1,0 +1,11 @@
+svg_timeline/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+svg_timeline/geometry.py,sha256=EycNpG07cCCDLn8E_sgGf_pV9OO8gs-Ld9XLNsEGBC8,3776
+svg_timeline/style.py,sha256=T0OL8jqCWKF2gqTlhDdzZK1WlwzPN-HzabooH08e0WE,3073
+svg_timeline/svg.py,sha256=zyRJ3wq5igZuTeOAs3mDGj2VPBZahQX309gcsS9H5kE,4876
+svg_timeline/svg_primitives.py,sha256=Au5vN9iSZ2_TQYbqjpW1mTpHrUlacQnIy_vpY3ny1wQ,3385
+svg_timeline/time_calculations.py,sha256=qVPned7woTOxzGDljv5H43AJgUVjQnzQZlquuSgqgcQ,7432
+svg_timeline/timeline.py,sha256=s3VHh1eThZbwaDMUtItxTgKlOpDlF1OPRTGJyuIiFl0,7752
+svg_timeline-0.2.1.dist-info/LICENSE,sha256=UU84upLODwj1YuLd16bwCl2c6CNSHtdSSKo6IC5il_g,1056
+svg_timeline-0.2.1.dist-info/METADATA,sha256=7l7G2gXMMJ3PnqEJ2W9TZOuvaHJMw-xOfLwzifiZaaI,964
+svg_timeline-0.2.1.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+svg_timeline-0.2.1.dist-info/RECORD,,
