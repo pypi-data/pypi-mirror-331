@@ -1,0 +1,12 @@
+flowgate/__init__.py,sha256=-UqjS93OqwANiG7y3_ePJ49jiIcJp14_DixBIfckvoQ,627
+flowgate/config.py,sha256=2WAxR9Z_8n5yr0TkN5PhgjcRyzbNEOeOKfM3UAD-F2U,3818
+flowgate/dependency.py,sha256=-eFeDOuKQzfk7MDYiOOMinxjhAMoyBXi0ExUu0XPQaA,1058
+flowgate/kafka.py,sha256=N5wHp-vsEMVD7TF3AVXdpS9yu_10oV4iG1-sHghO5-k,10689
+flowgate/py.typed,sha256=XoMFgvz8f-7UMIFNsrRaGKeQsGi2Zoc5tVnipRtaSs4,159
+flowgate/serializers.py,sha256=6JO25f5OwztxI4L4B0og_kGjW9JzcO3R7jnlKEIRalQ,3327
+flowgate/testing.py,sha256=weTe2ynkxNmPqKjkRwgIf7lpo4EvqsAaMGz7kFx79DA,2691
+flowgate/types.py,sha256=FCuroTNMnjwDmT9FtMvvx6WJ7_NuaJ5B067PrHBksHg,297
+flowgate/utils.py,sha256=jmVjciUsMty53tl89v_Kdzd4k7OqUGMVwM6bZQY-6hM,117
+flowgate-0.0.1.dist-info/METADATA,sha256=la_jk-rG_9fx8C9shAk5kXEFY7b7UlxE0vwN2BHXs3Y,544
+flowgate-0.0.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+flowgate-0.0.1.dist-info/RECORD,,
