@@ -1,0 +1,6 @@
+llama_index/storage/chat_store/mongo/__init__.py,sha256=7dfWz7FpbxP996EadmH_Tiy6PVQrQhcYhOj5_OlefF8,99
+llama_index/storage/chat_store/mongo/base.py,sha256=0SKFZqgc0OpRrwQa7-Da_HTkVgxtvxvSDVvFhEg-YfY,11433
+llama_index_storage_chat_store_mongo-0.1.0.dist-info/LICENSE,sha256=JPQLUZD9rKvCTdu192Nk0V5PAwklIg6jANii3UmTyMs,1065
+llama_index_storage_chat_store_mongo-0.1.0.dist-info/METADATA,sha256=C9_vVMaN42kkGRFORgXPghdMCc8QAvGYO4FYOuDTVEo,2502
+llama_index_storage_chat_store_mongo-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+llama_index_storage_chat_store_mongo-0.1.0.dist-info/RECORD,,
