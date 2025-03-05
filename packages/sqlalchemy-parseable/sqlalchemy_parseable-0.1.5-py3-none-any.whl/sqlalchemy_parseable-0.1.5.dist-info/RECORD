@@ -1,0 +1,8 @@
+parseable_connector/__init__.py,sha256=jDdN3rJ0s9v36pzW8HhxuOj6YNMBBCm9ToKKiQazyOE,466
+parseable_connector/parseable_dialect.py,sha256=T6qnx-gFj0TZPyXXoQa8Xb1nxlF8OLU1RrDsWHFnnhY,24592
+sqlalchemy_parseable-0.1.5.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+sqlalchemy_parseable-0.1.5.dist-info/METADATA,sha256=pbrurH4ikBG6TvibjtMlErY36VjiV9RAr5q-GhqC9dw,881
+sqlalchemy_parseable-0.1.5.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+sqlalchemy_parseable-0.1.5.dist-info/entry_points.txt,sha256=bKbAB31eyv1Hrhhb_7UWIdk3n002v9_WPFinr5f6f_U,234
+sqlalchemy_parseable-0.1.5.dist-info/top_level.txt,sha256=9plbBo3YgtR6BBW91K6vESWkwgfJeI1cnKqBuleKUi0,20
+sqlalchemy_parseable-0.1.5.dist-info/RECORD,,
