@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: bergcastro_image_processing
+Version: 0.1.1
+Summary: Pacote de processamento de imagens
+Home-page: https://github.com/BergCastro/image-processing-package
+Author: Lindemberg Castro
+Author-email: lindembergncastro@outlook.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# package_name
+
+Description. 
+The package package_name is used to:
+	- transformar imagens
+	- combinar imagens
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install package_name
+
+```bash
+pip install bergcastro-image-processing
+```
+
+## Usage
+
+```python
+from image_processing.processing import combination
+combination.find_difference()
+```
+
+## Author
+Lindemberg Castro
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
+
