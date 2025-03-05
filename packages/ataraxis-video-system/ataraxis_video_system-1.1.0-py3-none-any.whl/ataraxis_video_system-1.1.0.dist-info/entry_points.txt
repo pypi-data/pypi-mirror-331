@@ -1,0 +1,3 @@
+[console_scripts]
+axvs-ids = ataraxis_video_system.list_camera_ids:list_ids
+axvs-live = ataraxis_video_system.live:live_run
