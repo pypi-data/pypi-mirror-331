@@ -1,0 +1,15 @@
+media_similarity/__init__.py,sha256=GoBi0wIq2mXAEvQgxomwQAsnYYOqlJpPoEC10cWySUI,829
+media_similarity/adaptive_threshold.py,sha256=M8dh2bpqh6LZQUydrrErBdsJqa40J70OiTAajcScy3U,2585
+media_similarity/exceptions.py,sha256=Xh66JG0kNBWNJneoYXh8MrbgTBzb2LhYez4GhShL7wA,777
+media_similarity/idf_context.py,sha256=QtFVuyaaIHOUD3fL-dcYWUcEQPSDNSIOwYcXICvhEHw,1787
+media_similarity/media_pair.py,sha256=G_Lztm057ryU_NwV5qaJht_2uvG3pJrN-Sy6UJdPUpQ,5518
+media_similarity/media_similarity_service.py,sha256=H79eWYHk6rBgb3eNl5F3z72Pcedl-ZU0fhvcYSsYqIM,10730
+media_similarity/repositories.py,sha256=h1yaYkE32wwOCnlazDw2ucisI-o0kZ1ZE_ZaBlcTRSM,5368
+media_similarity/entrypoints/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+media_similarity/entrypoints/cli.py,sha256=juzZnaZ8D3MbmJnpk2P8ZKkjGW5QiFz8dEwxiv2JTyM,3875
+media_similarity/entrypoints/server.py,sha256=UMT81KdO3e15OgKGHF9fDPe3Jbdtwh7nJ1Xt7Hvi3yY,4161
+media_similarity-0.1.0.dist-info/METADATA,sha256=XDxzZehk2Ph0SDoY8JsMurHaln5Tju55bIY8h5crPgU,1176
+media_similarity-0.1.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+media_similarity-0.1.0.dist-info/entry_points.txt,sha256=iClBDta6IaTN1PtlkXDaDCQuM-bSeLqK68wIk2M-HRc,75
+media_similarity-0.1.0.dist-info/top_level.txt,sha256=5oiiKHA7WjBLw4FQq7ZBu5mqcADWiZ1MF4ysvE8uXm0,17
+media_similarity-0.1.0.dist-info/RECORD,,
