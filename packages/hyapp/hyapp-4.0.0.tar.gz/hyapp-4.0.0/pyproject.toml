@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "hyapp"
+version = "4.0.0"
+description = ""
+authors = ["hoverhell <hoverhell@gmail.com>"]
+readme = "README.md"
+license = "MIT"
+repository = "https://gitlab.com/hoverhell/hyapp"
+packages = [{include = "hyapp", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pydantic = ">=1.10"
+orjson = ">=3"
+aiohttp = ">=3"
+aiohttp-retry = ">=2"
+starlette = ">=0.37"
+pyyaml = ">=6"
+frozendict = ">=2"
+fastapi = ">=0.111"
+alembic = ">=1.13"
+pydantic-settings = ">=2"
+python-json-logger = ">=2"
+coloredlogs = ">=15"
+
+[tool.poetry.group.dev.dependencies]
+hydev = "^2.9.0"
+types-pyyaml = "^6.0.12.20240311"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
