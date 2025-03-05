@@ -1,0 +1,25 @@
+Metadata-Version: 2.2
+Name: anavid
+Version: 0.1
+Summary: A library for person detection and action recognition using OpenVINO and YOLO.
+Home-page: https://github.com/MedAloulou
+Author: Mohamed Alouou
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Requires-Dist: numpy==1.26.2
+Requires-Dist: torch==2.1.1
+Requires-Dist: torchvision==0.16.1
+Requires-Dist: opencv-python==4.8.1.78
+Requires-Dist: pytorchvideo==0.1.5
+Requires-Dist: openvino==2024.6.0
+Requires-Dist: ultralytics==8.0.228
+Dynamic: author
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
