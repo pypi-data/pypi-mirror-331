@@ -1,0 +1,10 @@
+sso_config_generator/__init__.py,sha256=DrnNsXAtc-Lt7me6m3b-ei_86cCFL4HMicN5hzZOWj8,206
+sso_config_generator/cli.py,sha256=G-QLB2S5KhT6gFNNG_jfB2OLj-JT7f9Tr0B6NCtvL70,4383
+sso_config_generator/core.py,sha256=QqFR9vTkGnVLDuqM13TvsHoEPdPvLMs8VNAhR-_EhiY,29464
+sso_config_generator/version.py,sha256=m-4Nhc414O1U0IC_t2dW4xCQOhPP-_766nTHahLK4jw,50
+sso_config_generator-1.2.3.dist-info/LICENSE,sha256=TUI5bAIA-shIRUTUECoQcSP_GK0OdlGce0uVRCpBpD0,1068
+sso_config_generator-1.2.3.dist-info/METADATA,sha256=DbKo-Hm8DFrOMSCPLEawtFtGXchdY9Qdq5Ycjnhf-Fg,9314
+sso_config_generator-1.2.3.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+sso_config_generator-1.2.3.dist-info/entry_points.txt,sha256=2um9n-wd7hLBCOCTF3kiqW7Dc6Y3MRMPFUQUvJzf-Rc,70
+sso_config_generator-1.2.3.dist-info/top_level.txt,sha256=VzxBDkNNOZq9tJ7FNPeEwokR7JrfctpAGdPRJracC-Q,21
+sso_config_generator-1.2.3.dist-info/RECORD,,
