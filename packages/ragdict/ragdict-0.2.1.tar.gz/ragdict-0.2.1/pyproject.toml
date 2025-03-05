@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ragdict"
+version = "0.2.1"
+authors = [
+    {name = "freQuensy23-coder", email = "your.email@example.com"},
+]
+description = "A dictionary with fuzzy key matching using RAG and LLM"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "openai>=1.0.0",
+    "numpy>=1.20.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/freQuensy23-coder/RagDict"
+"Bug Tracker" = "https://github.com/freQuensy23-coder/RagDict/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["ragdict"] 

@@ -1,0 +1,110 @@
+Metadata-Version: 2.4
+Name: ragdict
+Version: 0.2.1
+Summary: A dictionary with fuzzy key matching using RAG and LLM
+Project-URL: Homepage, https://github.com/freQuensy23-coder/RagDict
+Project-URL: Bug Tracker, https://github.com/freQuensy23-coder/RagDict/issues
+Author-email: freQuensy23-coder <your.email@example.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: numpy>=1.20.0
+Requires-Dist: openai>=1.0.0
+Description-Content-Type: text/markdown
+
+# RagDict
+
+RagDict is an enhanced Python dictionary with fuzzy key matching support using RAG (Retrieval-Augmented Generation) and LLM.
+
+## Features
+
+- Works like a regular Python dictionary for exact key matches
+- Automatically finds similar keys when an exact match is not found
+- Uses OpenAI embeddings to find semantically similar keys
+- Applies LLM to select the most appropriate key from candidates
+- Fully customizable similarity parameters and models
+
+## Installation
+
+```bash
+pip install ragdict
+```
+
+Or using uv:
+
+```bash
+uv pip install ragdict
+```
+
+## Usage
+
+### Basic Example
+
+```python
+from ragdict import RagDict
+import os
+
+# Set your OpenAI API key
+os.environ["OPENAI_API_KEY"] = "your-api-key"
+
+# Create a dictionary with car prices
+car_prices = RagDict({
+    "Toyota Camry": 25000,
+    "Honda Accord": 27000,
+    "Tesla Model 3": 40000,
+    "Ford Mustang": 35000,
+    "Chevrolet Corvette": 60000
+})
+
+# Exact match works like a normal dictionary
+price = car_prices["Toyota Camry"]  # 25000
+
+# Fuzzy matching when the key is not exact
+price = car_prices["Toyot Camri"]  # Will find "Toyota Camry" and return 25000
+price = car_prices["Tesla Model Three"]  # Will find "Tesla Model 3" and return 40000
+price = car_prices["Chevy Corvette"]  # Will find "Chevrolet Corvette" and return 60000
+```
+
+### Parameter Customization
+
+```python
+# Creating a dictionary with customizable parameters
+products = RagDict(
+    {
+        "iPhone 14 Pro": 999,
+        "Samsung Galaxy S23": 799,
+        "Google Pixel 7": 599
+    },
+    embedding_model="text-embedding-3-large",  # Embedding model
+    llm_model="gpt-4o",  # LLM model for key selection
+    similarity_threshold=0.6,  # Minimum similarity threshold (0-1)
+    top_k=5,  # Number of top candidates to consider
+    api_key="your-openai-api-key"  # You can pass the API key directly
+)
+
+# Fuzzy search
+price = products["iPhone 14"]  # Will find "iPhone 14 Pro"
+price = products["Samsung S23"]  # Will find "Samsung Galaxy S23"
+```
+
+## How It Works
+
+1. When you request a key, RagDict first tries to find an exact match
+2. If an exact match is not found, RagDict:
+   - Creates an embedding for the requested key
+   - Finds semantically similar keys based on cosine similarity
+   - Filters keys below the similarity threshold
+   - Uses LLM to select the most appropriate key from candidates
+   - Returns the value associated with the selected key
+
+## Requirements
+
+- Python 3.8+
+- OpenAI API key
+- Packages: openai, numpy
+
+## License
+
+MIT 
