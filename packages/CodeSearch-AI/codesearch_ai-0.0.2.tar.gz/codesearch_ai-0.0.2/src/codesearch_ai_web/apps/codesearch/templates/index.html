@@ -1,0 +1,1590 @@
+[[extend 'layout.html']]
+
+<div class="min-h-screen">
+    <!-- Directory Selection Modal -->
+    <div id="directoryModal" class="fixed inset-0 z-50 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+            <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+            <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+            <div class="relative inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full sm:p-6">
+                <div>
+                    <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-blue-100">
+                        <svg class="h-6 w-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+                        </svg>
+                    </div>
+                    <div class="mt-3 text-center sm:mt-5">
+                        <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-title">
+                            Select Directory
+                        </h3>
+                        <div class="mt-4">
+                            <div class="flex space-x-2">
+                                <input type="text" id="directoryPath" 
+                                       class="flex-1 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                       placeholder="Enter full path to your directory (e.g. /Users/username/projects/my-project)">
+                            </div>
+                        </div>
+                        <!-- Ignore Patterns Section -->
+                        <div class="mt-4">
+                            <div class="flex items-center justify-between mb-2">
+                                <label class="block text-sm font-medium text-gray-700">Ignore Patterns</label>
+                                <div class="space-x-2">
+                                    <button type="button" onclick="resetIgnorePatterns()" class="text-xs text-blue-600 hover:text-blue-800">Reset to Defaults</button>
+                                </div>
+                            </div>
+                            <textarea id="ignorePatterns" 
+                                    class="w-full h-32 px-3 py-2 text-sm border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                    placeholder="Enter patterns to ignore, one per line"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-5 sm:mt-6 flex justify-end space-x-3">
+                    <div id="loadingIndicator" class="hidden flex items-center text-blue-600">
+                        <div class="animate-spin rounded-full h-5 w-5 border-b-2 border-current"></div>
+                        <span class="ml-2">Loading...</span>
+                    </div>
+                    <button onclick="document.getElementById('directoryModal').classList.add('hidden')"
+                            class="inline-flex justify-center px-4 py-2 text-sm font-medium text-gray-700 bg-gray-100 border border-gray-300 rounded-md hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
+                        Cancel
+                    </button>
+                    <button id="directoryActionButton" onclick="loadCodebase()" 
+                            class="inline-flex justify-center px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                        Load Directory
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Layout -->
+    <div class="flex h-screen bg-white">
+        <!-- Left Sidebar: File Browser -->
+        <div class="w-72 border-r border-gray-200 bg-gray-50 flex flex-col">
+            <div class="p-4 border-b border-gray-200">
+                <button onclick="document.getElementById('directoryModal').classList.remove('hidden')" 
+                        class="w-full flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                    <svg class="mr-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+                    </svg>
+                    Change Directory
+                </button>
+                <button onclick="showReindexModal()" 
+                        class="mt-2 w-full flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-blue-600 bg-blue-50 hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                    <svg class="mr-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                    </svg>
+                    Reindex Codebase
+                </button>
+                <!-- Add current directory display -->
+                <div class="mt-4 px-3 py-2 bg-gray-100 rounded-md">
+                    <div class="text-xs font-medium text-gray-500 mb-1">Current Directory:</div>
+                    <div id="currentDirectoryDisplay" class="text-sm text-gray-700 break-all"></div>
+                </div>
+            </div>
+            <div class="flex-1 overflow-auto p-4">
+                <div id="fileTree" class="text-sm text-gray-700"></div>
+            </div>
+            
+            <!-- Model Information Section -->
+            <div class="border-t border-gray-200 p-4">
+                <div class="mb-4">
+                    <h3 class="text-sm font-medium text-gray-900 mb-2">Active Models</h3>
+                    <div id="modelInfo" class="space-y-3">
+                        <div class="bg-white rounded-lg shadow-sm p-3 space-y-2">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-2">
+                                    <span class="text-xs font-medium text-gray-500">LLM Model</span>
+                                    <span id="llmType" class="text-xs px-2 py-0.5 rounded-full bg-blue-50 text-blue-600 font-medium"></span>
+                                </div>
+                                <span id="llmStatus" class="text-xs px-2 py-1 rounded-full"></span>
+                            </div>
+                            <p id="llmName" class="text-sm font-medium text-gray-700 truncate"></p>
+                            <div id="llmModelOptions" class="hidden space-y-2">
+                                <select id="llmModelSelect" class="w-full text-xs px-2 py-1.5 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" onchange="handleModelChange('llm')">
+                                    <!-- Options will be populated by JavaScript -->
+                                </select>
+                                <div class="flex space-x-2">
+                                    <button onclick="downloadSelectedModel('llm')" id="llmDownloadBtn" class="flex-1 text-xs px-3 py-1.5 bg-blue-50 text-blue-600 rounded-md hover:bg-blue-100 transition-colors">
+                                        Download Selected Model
+                                    </button>
+                                    <button onclick="switchToModel('llm')" id="llmSwitchBtn" class="hidden flex-1 text-xs px-3 py-1.5 bg-green-50 text-green-600 rounded-md hover:bg-green-100 transition-colors">
+                                        Switch to Model
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content: Chat Interface -->
+        <div class="flex-1 flex flex-col">
+            <!-- Conversation Management -->
+            <div class="p-4 border-b border-gray-200 flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <h2 id="chatTitle" class="text-lg font-medium text-gray-900 cursor-pointer hover:text-blue-600 transition-colors" onclick="startEditingTitle()">New Conversation</h2>
+                    <input id="chatTitleInput" type="text" class="hidden text-lg font-medium text-gray-900 border-b border-blue-500 focus:outline-none focus:border-blue-600 bg-transparent min-w-[200px] w-full" onblur="saveTitle()" onkeydown="handleTitleKeydown(event)">
+                </div>
+                <div class="flex items-center space-x-2">
+                    <button onclick="createNewChat()" id="newChatButton" class="inline-flex items-center px-3 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                        <svg class="h-4 w-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                        </svg>
+                        New Chat
+                    </button>
+                    <select id="conversationSelect" class="block w-64 pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md" onchange="switchConversation(this.value)">
+                        <option value="">New Conversation</option>
+                        [[for conv in conversations:]]
+                        <option value="[[=conv['id']]]" [[=XML('selected') if str(conv['id'])==str(session.get('current_conversation_id', '')) else '']]>[[=conv['title']]]</option>
+                        [[pass]]
+                    </select>
+                    <button onclick="deleteCurrentConversation()" class="inline-flex items-center px-3 py-2 border border-red-300 text-sm font-medium rounded-md text-red-700 bg-white hover:bg-red-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Chat Messages -->
+            <div id="chatMessages" class="flex-1 overflow-y-auto p-6 space-y-6 bg-gray-50">
+                <div class="text-center text-gray-500 text-sm">
+                    Select a directory to start chatting about your codebase
+                </div>
+            </div>
+
+            <!-- Loading Indicator -->
+            <div id="llmLoadingIndicator" class="hidden">
+                <div class="fixed bottom-32 left-1/2 transform -translate-x-1/2 bg-gradient-to-br from-white to-gray-50 border border-gray-200 rounded-xl shadow-lg px-6 py-3 flex items-center space-x-3 ring-1 ring-black/5">
+                    <div class="flex flex-col items-center">
+                        <div class="flex items-center space-x-3">
+                            <div class="animate-spin rounded-full h-5 w-5 border-b-2 border-blue-600"></div>
+                            <span class="text-gray-700 font-medium">AI is thinking...</span>
+                        </div>
+                        <span id="requestTimer" class="text-xs text-gray-500 mt-1">0.0s</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat Input -->
+            <div class="border-t border-gray-200 p-4 bg-white">
+                <div class="max-w-4xl mx-auto flex space-x-4">
+                    <div class="flex-1 min-h-[2.5rem] max-h-[10rem] relative">
+                        <textarea id="messageInput" 
+                                class="w-full h-full px-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-none text-gray-700 placeholder-gray-400"
+                                placeholder="Ask me anything about your codebase..."
+                                onkeydown="if(event.key === 'Enter' && !event.shiftKey) { event.preventDefault(); sendMessage(); }"></textarea>
+                    </div>
+                    <button id="sendButton" onclick="sendMessage()" 
+                            class="inline-flex items-center px-6 py-3 border border-transparent text-sm font-medium rounded-xl shadow-sm text-white bg-gradient-to-br from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all">
+                        <span>Send</span>
+                        <div id="chatLoadingIndicator" class="hidden ml-2">
+                            <div class="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resize Handle -->
+        <div id="resizeHandle" class="w-1 hover:w-1 bg-gray-200 hover:bg-blue-400 cursor-col-resize transition-colors"></div>
+
+        <!-- Right Sidebar: File Preview -->
+        <div id="filePreviewPanel" class="w-96 border-l border-gray-200 bg-gray-50 flex flex-col">
+            <div class="p-4 border-b border-gray-200">
+                <h2 class="text-lg font-medium text-gray-900" id="filePreviewHeader">File Preview</h2>
+            </div>
+            <div class="flex-1 overflow-auto p-4">
+                <pre id="filePreview" class="text-sm">Select a file to preview its contents</pre>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript -->
+<script>
+// Global variables
+let currentDirectory = null;
+let selectedFileElement = null;
+let indexingEventSource = null;
+let currentConversationId = null;
+
+// Constants
+const DEFAULT_IGNORE_PATTERNS = [
+    '.git/',
+    '.vscode/',
+    'node_modules/',
+    'build/',
+    '.idea/',
+    '__pycache__/',
+    'dist/',
+    '*.pyc',
+    'venv/',
+    'env/',
+    '.env/',
+    '.venv/',
+    '*.egg-info/',
+    '.DS_Store',
+    'Thumbs.db',
+    'package-lock.json'
+].join('\n');
+
+// Initialize markdown-it
+const md = window.markdownit({
+    html: false,
+    linkify: true,
+    typographer: true,
+    highlight: function (str, lang) {
+        if (lang && hljs.getLanguage(lang)) {
+            try {
+                return hljs.highlight(str, { language: lang }).value;
+            } catch (__) {}
+        }
+        return '';
+    }
+});
+
+// Functions
+function initializeIgnorePatterns() {
+    const ignorePatterns = document.getElementById('ignorePatterns');
+    if (ignorePatterns) {
+        ignorePatterns.value = DEFAULT_IGNORE_PATTERNS;
+    }
+}
+
+function resetIgnorePatterns() {
+    const ignorePatterns = document.getElementById('ignorePatterns');
+    if (ignorePatterns) {
+        ignorePatterns.value = DEFAULT_IGNORE_PATTERNS;
+    }
+}
+
+function startIndexingProgress() {
+    if (indexingEventSource) {
+        indexingEventSource.close();
+    }
+    
+    // Reset all file item styles
+    document.querySelectorAll('.file-item').forEach(item => {
+        item.classList.remove('file-pending', 'file-processing', 'file-processed');
+    });
+    
+    indexingEventSource = new EventSource('[[=URL('indexing_progress')]]');
+    
+    indexingEventSource.onmessage = function(event) {
+        const data = JSON.parse(event.data);
+        
+        // Update file item styles
+        document.querySelectorAll('.file-item').forEach(item => {
+            const filepath = decodeURIComponent(item.dataset.path);
+            
+            if (data.current === filepath) {
+                item.classList.remove('file-pending', 'file-processed');
+                item.classList.add('file-processing');
+            } else if (data.processed.includes(filepath)) {
+                item.classList.remove('file-pending', 'file-processing');
+                item.classList.add('file-processed');
+            } else if (data.pending.includes(filepath)) {
+                item.classList.remove('file-processing', 'file-processed');
+                item.classList.add('file-pending');
+            }
+        });
+    };
+    
+    indexingEventSource.onerror = function() {
+        indexingEventSource.close();
+        indexingEventSource = null;
+    };
+}
+
+async function loadCodebase() {
+    const directory = document.getElementById('directoryPath').value;
+    const ignorePatterns = document.getElementById('ignorePatterns').value.split('\n').filter(pattern => pattern.trim() !== '');
+    const loadingIndicator = document.getElementById('loadingIndicator');
+    const chatMessages = document.getElementById('chatMessages');
+    
+    loadingIndicator.classList.remove('hidden');
+    
+    try {
+        const response = await fetch('[[=URL('load_codebase')]]', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ 
+                directory,
+                ignore_patterns: ignorePatterns
+            })
+        });
+        
+        const data = await response.json();
+        if (data.success) {
+            currentDirectory = directory;
+            document.getElementById('currentDirectoryDisplay').textContent = directory;
+            document.getElementById('directoryModal').classList.add('hidden');
+            
+            // Update current conversation ID and conversations list
+            currentConversationId = data.current_conversation_id;
+            
+            // Reset chat title to "New Conversation" when switching directories
+            document.getElementById('chatTitle').textContent = 'New Conversation';
+            
+            // Update conversation select dropdown
+            const select = document.getElementById('conversationSelect');
+            select.innerHTML = '<option value="">New Conversation</option>';
+            if (data.conversations) {
+                data.conversations.forEach(conv => {
+                    const option = document.createElement('option');
+                    option.value = conv.id;
+                    option.textContent = conv.title;
+                    if (conv.id === currentConversationId) {
+                        option.selected = true;
+                        document.getElementById('chatTitle').textContent = conv.title;
+                    }
+                    select.appendChild(option);
+                });
+            }
+            
+            await loadFileTree();
+            chatMessages.innerHTML = '';
+            addSystemMessage('Directory loaded successfully. You can now start chatting about your codebase!');
+        } else {
+            alert('Error loading directory: ' + data.error);
+        }
+    } catch (error) {
+        alert('Error: ' + error);
+    } finally {
+        loadingIndicator.classList.add('hidden');
+    }
+}
+
+async function loadFileTree() {
+    try {
+        const response = await fetch('[[=URL('get_file_tree')]]');
+        const data = await response.json();
+        if (!Array.isArray(data)) {
+            alert('Error loading file tree: ' + data.error);
+            return;
+        }
+        
+        const fileTree = document.getElementById('fileTree');
+        fileTree.innerHTML = renderFileTree(data);
+    } catch (error) {
+        alert('Error loading file tree: ' + error);
+    }
+}
+
+function renderFileTree(items, level = 0) {
+    let html = '<ul class="space-y-1">';
+    for (const item of items) {
+        const icon = item.type === 'directory' ? 
+            '<svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/></svg>' :
+            '<svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>';
+        
+        const escapedPath = encodeURIComponent(item.path);
+        
+        html += `
+            <li>
+                <div class="flex items-center space-x-2 px-2 py-1 rounded hover:bg-gray-200 cursor-pointer ${item.type === 'file' ? 'hover:text-blue-600' : ''} file-item"
+                     data-path="${escapedPath}"
+                     onclick="${item.type === 'file' ? `viewFile('${escapedPath}', this)` : ''}"
+                     style="margin-left: ${level * 1.5}rem">
+                    ${icon}
+                    <span class="truncate">${item.name}</span>
+                </div>
+                ${item.type === 'directory' && item.children ? renderFileTree(item.children, level + 1) : ''}
+            </li>
+        `;
+    }
+    return html + '</ul>';
+}
+
+async function viewFile(path, element) {
+    try {
+        const response = await fetch(`[[=URL('view_file')]]?path=${path}`);
+        const data = await response.json();
+        if (data.error) {
+            alert('Error viewing file: ' + data.error);
+            return;
+        }
+        
+        // Update file preview content
+        document.getElementById('filePreview').textContent = data.content;
+        
+        // Update header with file name
+        const fileName = decodeURIComponent(path).split('/').pop();
+        document.getElementById('filePreviewHeader').textContent = fileName;
+        
+        // Update selected file highlighting
+        if (selectedFileElement) {
+            selectedFileElement.classList.remove('bg-blue-100', 'text-blue-600');
+        }
+        element.classList.add('bg-blue-100', 'text-blue-600');
+        selectedFileElement = element;
+        
+    } catch (error) {
+        console.error('Error viewing file:', error);
+        alert('Error viewing file: ' + error);
+    }
+}
+
+function addSystemMessage(content) {
+    const chatMessages = document.getElementById('chatMessages');
+    const messageDiv = document.createElement('div');
+    messageDiv.className = 'flex justify-center message-animate';
+    messageDiv.innerHTML = `
+        <div class="bg-gradient-to-br from-blue-50 to-blue-100 text-blue-700 px-6 py-3 rounded-xl text-sm font-medium shadow-sm max-w-2xl ring-1 ring-blue-100/50">
+            ${content}
+        </div>
+    `;
+    chatMessages.appendChild(messageDiv);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
+function addMessageToChat(role, content) {
+    const chatMessages = document.getElementById('chatMessages');
+    const messageDiv = document.createElement('div');
+    messageDiv.className = `flex ${role === 'user' ? 'justify-end' : 'justify-start'} message-animate`;
+    
+    const bubbleClass = role === 'user' ? 
+        'bg-gradient-to-br from-blue-500 to-blue-600' : 
+        'bg-white';
+    
+    const textClass = role === 'user' ? 'text-white' : 'text-gray-900';
+    
+    const avatarHtml = role === 'user' ? 
+        `<div class="w-8 h-8 rounded-full bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center ml-3 shadow-sm">
+            <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+            </svg>
+        </div>` :
+        `<div class="flex flex-col items-center mr-3">
+            <div class="w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center shadow-sm">
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+            </div>
+            <div id="modelName" class="text-xs text-gray-500 mt-1 font-medium"></div>
+        </div>`;
+    
+    // Clean content and handle potential ANSI color codes
+    const cleanContent = content.replace(/\u001b\[\d+(?:;\d+)*m/g, '');
+    
+    // Render markdown content
+    const renderedContent = role === 'user' ? cleanContent : md.render(cleanContent);
+    
+    messageDiv.innerHTML = `
+        <div class="flex items-start ${role === 'user' ? 'flex-row-reverse' : 'flex-row'} max-w-2xl">
+            ${avatarHtml}
+            <div class="${bubbleClass} px-6 py-4 rounded-2xl shadow-md ring-1 ring-black/5">
+                <div class="font-sans text-sm leading-relaxed ${textClass} ${role === 'user' ? '' : 'markdown-content'}" style="background: transparent;">
+                    ${renderedContent}
+                </div>
+            </div>
+        </div>
+    `;
+    
+    // Apply syntax highlighting to code blocks
+    if (role === 'assistant') {
+        const codeBlocks = messageDiv.querySelectorAll('pre code');
+        codeBlocks.forEach(block => {
+            hljs.highlightElement(block);
+        });
+        
+        // Update model name
+        const modelNameElement = messageDiv.querySelector('#modelName');
+        if (modelNameElement) {
+            const llmName = document.getElementById('llmName').textContent;
+            modelNameElement.textContent = llmName || 'AI Assistant';
+        }
+    }
+    
+    chatMessages.appendChild(messageDiv);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
+// Add timer functionality
+let requestTimer = null;
+let startTime = null;
+
+function startRequestTimer() {
+    startTime = Date.now();
+    if (requestTimer) clearInterval(requestTimer);
+    
+    const timerElement = document.getElementById('requestTimer');
+    requestTimer = setInterval(() => {
+        const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
+        timerElement.textContent = elapsed + 's';
+    }, 100);
+}
+
+function stopRequestTimer() {
+    if (requestTimer) {
+        clearInterval(requestTimer);
+        requestTimer = null;
+    }
+}
+
+async function sendMessage() {
+    const messageInput = document.getElementById('messageInput');
+    const message = messageInput.value.trim();
+    
+    if (!message) return;
+    
+    // Disable input and show loading
+    messageInput.value = '';
+    messageInput.disabled = true;
+    document.getElementById('sendButton').disabled = true;
+    document.getElementById('llmLoadingIndicator').classList.remove('hidden');
+    startRequestTimer();
+    
+    try {
+        // If this is the first message in a new conversation, update the title immediately in UI
+        if (!currentConversationId || document.getElementById('chatTitle').textContent === 'New Conversation') {
+            const newTitle = message.slice(0, 50) + (message.length > 50 ? '...' : '');
+            document.getElementById('chatTitle').textContent = newTitle;
+            
+            // Also update the dropdown if this conversation exists
+            if (currentConversationId) {
+                const option = document.querySelector(`#conversationSelect option[value="${currentConversationId}"]`);
+                if (option) {
+                    option.textContent = newTitle;
+                }
+            }
+        }
+        
+        // Add user message to chat immediately
+        addMessageToChat('user', message);
+        
+        const response = await fetch('[[=URL('send_message')]]', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ message })
+        });
+        
+        const data = await response.json();
+        if (data.error) {
+            alert('Error: ' + data.error);
+            return;
+        }
+        
+        // Add assistant's response to chat
+        addMessageToChat('assistant', data.message);
+        
+        // After successful response, update conversations list to get any new conversations
+        await loadConversations();
+        
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Error sending message: ' + error);
+    } finally {
+        // Re-enable input and hide loading
+        messageInput.disabled = false;
+        document.getElementById('sendButton').disabled = false;
+        document.getElementById('llmLoadingIndicator').classList.add('hidden');
+        stopRequestTimer();
+        messageInput.focus();
+    }
+}
+
+function handleDirectorySelect(input) {
+    const dirPath = document.getElementById('directoryPath').value.trim();
+    
+    if (!dirPath) {
+        alert('Please enter a directory path');
+        return;
+    }
+    
+    // Validate the directory path
+    fetch('[[=URL('validate_directory')]]', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ 
+            directory: dirPath,
+            is_full_path: true
+        })
+    })
+    .then(response => {
+        console.log('Validation response:', response);
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log('Validation data:', data);
+        if (data.error) {
+            console.error('Validation error:', data.error);
+            alert('Error validating directory: ' + data.error);
+        } else {
+            console.log('Validated path:', data.path);
+            document.getElementById('directoryPath').value = data.path;
+        }
+    })
+    .catch(error => {
+        console.error('Fetch error:', error);
+        alert('Error: ' + error.message);
+    });
+}
+
+// Update the initialization code
+document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        // Check if we have a current directory
+        const response = await fetch('[[=URL('get_file_tree')]]');
+        const data = await response.json();
+        
+        if (Array.isArray(data)) {
+            // We have a valid directory, load it
+            const fileTree = document.getElementById('fileTree');
+            fileTree.innerHTML = renderFileTree(data);
+            document.getElementById('directoryModal').classList.add('hidden');
+            
+            // Get the current directory from the session via the validate endpoint
+            const validateResponse = await fetch('[[=URL('validate_directory')]]', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ directory: '.' }),
+            });
+            const validateData = await validateResponse.json();
+            if (!validateData.error) {
+                currentDirectory = validateData.path;
+                document.getElementById('currentDirectoryDisplay').textContent = currentDirectory;
+            }
+            
+            // Set current conversation ID from select element
+            const conversationSelect = document.getElementById('conversationSelect');
+            if (conversationSelect.value) {
+                currentConversationId = conversationSelect.value;
+                
+                // Load the conversation history
+                await switchConversation(currentConversationId);
+            }
+        } else {
+            // No valid directory, show the modal
+            document.getElementById('directoryModal').classList.remove('hidden');
+        }
+    } catch (error) {
+        console.error('Error checking directory:', error);
+        document.getElementById('directoryModal').classList.remove('hidden');
+    }
+    
+    // Initialize other components
+    initializeIgnorePatterns();
+    await loadModelInfo();
+});
+
+// Add resize functionality
+const resizeHandle = document.getElementById('resizeHandle');
+const filePreviewPanel = document.getElementById('filePreviewPanel');
+let isResizing = false;
+let lastX = 0;
+
+resizeHandle.addEventListener('mousedown', (e) => {
+    isResizing = true;
+    lastX = e.clientX;
+    document.body.style.cursor = 'col-resize';
+    
+    // Add event listeners for mouse movement and release
+    document.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener('mouseup', handleMouseUp);
+    
+    // Prevent text selection while resizing
+    document.body.style.userSelect = 'none';
+});
+
+function handleMouseMove(e) {
+    if (!isResizing) return;
+    
+    const delta = lastX - e.clientX;
+    lastX = e.clientX;
+    
+    const newWidth = filePreviewPanel.offsetWidth + delta;
+    
+    // Set minimum and maximum width constraints
+    if (newWidth >= 200 && newWidth <= window.innerWidth * 0.8) {
+        filePreviewPanel.style.width = `${newWidth}px`;
+    }
+}
+
+function handleMouseUp() {
+    isResizing = false;
+    document.body.style.cursor = 'default';
+    document.body.style.userSelect = '';
+    
+    // Remove event listeners
+    document.removeEventListener('mousemove', handleMouseMove);
+    document.removeEventListener('mouseup', handleMouseUp);
+}
+
+async function loadModelInfo() {
+    try {
+        const response = await fetch('[[=get_model_info_url]]');
+        const data = await response.json();
+        
+        if (data.error) {
+            console.error('Error loading model info:', data.error);
+            return;
+        }
+        
+        // Update LLM model info
+        const llmStatus = document.getElementById('llmStatus');
+        const llmName = document.getElementById('llmName');
+        const llmType = document.getElementById('llmType');
+        const llmModelOptions = document.getElementById('llmModelOptions');
+        const llmModelSelect = document.getElementById('llmModelSelect');
+        
+        if (!llmStatus || !llmName || !llmType || !llmModelOptions || !llmModelSelect) {
+            console.error('Required LLM elements not found');
+            return;
+        }
+        
+        // Show model select but conditionally show download/switch buttons
+        llmModelSelect.innerHTML = data.available_models.llm.map(model => {
+            const isActive = model.filename === data.current_models.llm.name;
+            return `<option value="${model.id}" 
+                           data-exists="${model.exists}" 
+                           data-active="${isActive}"
+                           title="${model.description}">
+                    ${model.name} - ${model.description}
+                    </option>`;
+        }).join('');
+        
+        // Show current model name if it exists
+        if (data.current_models.llm.exists) {
+            llmName.textContent = data.current_models.llm.name;
+            llmType.textContent = data.current_models.llm.is_local ? 'Local' : 'API';
+            llmStatus.textContent = 'Active';
+            llmStatus.className = 'text-xs px-2 py-1 rounded-full bg-green-100 text-green-800';
+        } else {
+            llmName.textContent = 'No model installed';
+            llmType.textContent = 'Not Set';
+            llmStatus.textContent = 'Not Found';
+            llmStatus.className = 'text-xs px-2 py-1 rounded-full bg-red-100 text-red-800';
+        }
+        
+        llmModelOptions.classList.remove('hidden');
+        
+        // Update Embedding model info
+        const embedStatus = document.getElementById('embedStatus');
+        const embedName = document.getElementById('embedName');
+        const embedType = document.getElementById('embedType');
+        const embedModelOptions = document.getElementById('embedModelOptions');
+        const embedModelSelect = document.getElementById('embedModelSelect');
+        
+        if (!embedStatus || !embedName || !embedType || !embedModelOptions || !embedModelSelect) {
+            console.error('Required embedding elements not found');
+            return;
+        }
+        
+        // Show model select but conditionally show download/switch buttons
+        embedModelSelect.innerHTML = data.available_models.embedding.map(model => {
+            const isActive = model.filename === data.current_models.embedding.name;
+            return `<option value="${model.id}" 
+                           data-exists="${model.exists}" 
+                           data-active="${isActive}"
+                           title="${model.description}">
+                    ${model.name} - ${model.description}
+                    </option>`;
+        }).join('');
+        
+        // Show current model name if it exists
+        if (data.current_models.embedding.exists) {
+            embedName.textContent = data.current_models.embedding.name;
+            embedType.textContent = data.current_models.embedding.is_local ? 'Local' : 'API';
+            embedStatus.textContent = 'Active';
+            embedStatus.className = 'text-xs px-2 py-1 rounded-full bg-green-100 text-green-800';
+        } else {
+            embedName.textContent = 'No model installed';
+            embedType.textContent = 'Not Set';
+            embedStatus.textContent = 'Not Found';
+            embedStatus.className = 'text-xs px-2 py-1 rounded-full bg-red-100 text-red-800';
+        }
+        
+        embedModelOptions.classList.remove('hidden');
+        
+        // Add change listeners after all elements are set up
+        llmModelSelect.addEventListener('change', () => handleModelChange('llm'));
+        embedModelSelect.addEventListener('change', () => handleModelChange('embedding'));
+        
+        // Call handleModelChange to update UI state
+        handleModelChange('llm');
+        handleModelChange('embedding');
+        
+    } catch (error) {
+        console.error('Error loading model info:', error);
+    }
+}
+
+async function downloadSelectedModel(modelType) {
+    const downloadBtn = document.getElementById(`${modelType}DownloadBtn`);
+    const statusElement = document.getElementById(`${modelType}Status`);
+    const modelSelect = document.getElementById(`${modelType}ModelSelect`);
+    const modelOptions = document.getElementById(`${modelType}ModelOptions`);
+    const nameElement = document.getElementById(`${modelType}Name`);
+    
+    try {
+        downloadBtn.disabled = true;
+        downloadBtn.innerHTML = '<div class="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-600 mx-auto"></div>';
+        statusElement.textContent = 'Downloading...';
+        statusElement.className = 'text-xs px-2 py-1 rounded-full bg-blue-100 text-blue-800';
+        
+        const response = await fetch('[[=download_model_url]]', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ 
+                model_type: modelType,
+                model_id: modelSelect.value
+            })
+        });
+        
+        const data = await response.json();
+        if (data.error) {
+            throw new Error(data.error);
+        }
+        
+        // Update UI to show success
+        statusElement.textContent = 'Installed';
+        statusElement.className = 'text-xs px-2 py-1 rounded-full bg-green-100 text-green-800';
+        downloadBtn.classList.add('hidden');
+        
+        // Update the data-exists attribute for the selected option
+        const selectedOption = modelSelect.options[modelSelect.selectedIndex];
+        selectedOption.setAttribute('data-exists', 'true');
+        
+        // Update the model name display
+        nameElement.textContent = selectedOption.textContent.split(' - ')[0];
+        
+        // Reset download button state
+        downloadBtn.disabled = false;
+        downloadBtn.innerHTML = 'Download Selected Model';
+        
+    } catch (error) {
+        console.error('Error downloading model:', error);
+        statusElement.textContent = 'Error';
+        statusElement.className = 'text-xs px-2 py-1 rounded-full bg-red-100 text-red-800';
+        downloadBtn.disabled = false;
+        downloadBtn.innerHTML = 'Retry Download';
+        downloadBtn.classList.remove('hidden');
+    }
+}
+
+function handleModelChange(modelType) {
+    const modelSelect = document.getElementById(`${modelType}ModelSelect`);
+    const downloadBtn = document.getElementById(`${modelType}DownloadBtn`);
+    const switchBtn = document.getElementById(`${modelType}SwitchBtn`);
+    const statusElement = document.getElementById(`${modelType}Status`);
+    
+    // Check if all required elements exist
+    if (!modelSelect || !downloadBtn || !switchBtn || !statusElement) {
+        console.warn(`Required elements for ${modelType} not found yet`);
+        return;
+    }
+    
+    const selectedOption = modelSelect.options[modelSelect.selectedIndex];
+    if (!selectedOption) {
+        console.warn(`No selected option found for ${modelType}`);
+        return;
+    }
+    
+    const exists = selectedOption.getAttribute('data-exists') === 'true';
+    const isActive = selectedOption.getAttribute('data-active') === 'true';
+    
+    if (exists) {
+        downloadBtn.classList.add('hidden');
+        if (isActive) {
+            switchBtn.classList.add('hidden');
+            statusElement.textContent = 'Active';
+            statusElement.className = 'text-xs px-2 py-1 rounded-full bg-green-100 text-green-800';
+        } else {
+            switchBtn.classList.remove('hidden');
+            statusElement.textContent = 'Installed';
+            statusElement.className = 'text-xs px-2 py-1 rounded-full bg-green-100 text-green-800';
+        }
+    } else {
+        downloadBtn.classList.remove('hidden');
+        switchBtn.classList.add('hidden');
+        statusElement.textContent = 'Not Found';
+        statusElement.className = 'text-xs px-2 py-1 rounded-full bg-red-100 text-red-800';
+    }
+}
+
+async function switchToModel(modelType) {
+    const modelSelect = document.getElementById(`${modelType}ModelSelect`);
+    const switchBtn = document.getElementById(`${modelType}SwitchBtn`);
+    const statusElement = document.getElementById(`${modelType}Status`);
+    const nameElement = document.getElementById(`${modelType}Name`);
+    const typeElement = document.getElementById(`${modelType}Type`);
+    
+    try {
+        switchBtn.disabled = true;
+        switchBtn.innerHTML = '<div class="animate-spin rounded-full h-4 w-4 border-b-2 border-green-600 mx-auto"></div>';
+        statusElement.textContent = 'Switching...';
+        statusElement.className = 'text-xs px-2 py-1 rounded-full bg-blue-100 text-blue-800';
+        
+        const response = await fetch('[[=URL('switch_model')]]', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ 
+                model_type: modelType,
+                model_id: modelSelect.value
+            })
+        });
+        
+        const data = await response.json();
+        if (data.error) {
+            throw new Error(data.error);
+        }
+        
+        // Update UI to show success
+        statusElement.textContent = 'Active';
+        statusElement.className = 'text-xs px-2 py-1 rounded-full bg-green-100 text-green-800';
+        
+        // Update the model name and type display
+        const selectedOption = modelSelect.options[modelSelect.selectedIndex];
+        const selectedModelName = selectedOption.textContent.split(' - ')[0];
+        nameElement.textContent = selectedModelName;
+        typeElement.textContent = 'Local';
+        
+        // Hide the switch button for the newly selected model
+        switchBtn.classList.add('hidden');
+        
+        // Update all other options to show switch button if they're installed
+        Array.from(modelSelect.options).forEach(option => {
+            const optionExists = option.getAttribute('data-exists') === 'true';
+            const optionModelName = option.textContent.split(' - ')[0];
+            
+            if (optionExists && optionModelName !== selectedModelName) {
+                // This is an installed model that's not the active one - should show switch button when selected
+                option.setAttribute('data-active', 'false');
+            } else if (optionModelName === selectedModelName) {
+                // This is now the active model
+                option.setAttribute('data-active', 'true');
+            }
+        });
+        
+        // Show success message
+        addSystemMessage(`Successfully switched to ${selectedModelName}`);
+        
+    } catch (error) {
+        console.error('Error switching model:', error);
+        statusElement.textContent = 'Error';
+        statusElement.className = 'text-xs px-2 py-1 rounded-full bg-red-100 text-red-800';
+        addSystemMessage('Error switching model: ' + error.message);
+    } finally {
+        // Reset switch button state
+        switchBtn.disabled = false;
+        switchBtn.innerHTML = 'Switch to Model';
+    }
+}
+
+// Add this function before reindexCodebase
+async function showReindexModal() {
+    const modal = document.getElementById('directoryModal');
+    const directoryInput = document.getElementById('directoryPath');
+    const actionButton = document.getElementById('directoryActionButton');
+    
+    // Set the current directory and make it read-only
+    directoryInput.value = currentDirectory;
+    directoryInput.readOnly = true;
+    
+    // Update button text and action
+    actionButton.textContent = 'Reindex Directory';
+    actionButton.onclick = () => {
+        reindexCodebase();
+        modal.classList.add('hidden');
+    };
+    
+    modal.classList.remove('hidden');
+}
+
+// Modify the existing showDirectoryModal function
+async function showDirectoryModal() {
+    const modal = document.getElementById('directoryModal');
+    const directoryInput = document.getElementById('directoryPath');
+    const actionButton = document.getElementById('directoryActionButton');
+    
+    // Clear input and make it editable
+    directoryInput.value = '';
+    directoryInput.readOnly = false;
+    
+    // Reset button text and action
+    actionButton.textContent = 'Load Directory';
+    actionButton.onclick = loadCodebase;
+    
+    modal.classList.remove('hidden');
+}
+
+// Update the Change Directory button's onclick handler
+document.querySelector('button[onclick="document.getElementById(\'directoryModal\').classList.remove(\'hidden\')"]').onclick = showDirectoryModal;
+
+// Add this function before reindexCodebase
+async function reindexCodebase() {
+    try {
+        startIndexingProgress();
+        
+        const response = await fetch('[[=URL('reindex_codebase')]]', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ 
+                directory: currentDirectory,
+                ignore_patterns: document.getElementById('ignorePatterns').value.split('\n').filter(pattern => pattern.trim() !== '')
+            })
+        });
+        
+        const data = await response.json();
+        if (data.error) {
+            alert('Error reindexing codebase: ' + data.error);
+            return;
+        }
+        
+        // Refresh the file tree after reindexing
+        await loadFileTree();
+        
+        // Show success message
+        alert('Successfully reindexed codebase');
+        
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Error reindexing codebase');
+    } finally {
+        stopIndexingProgress();
+    }
+}
+
+function stopIndexingProgress() {
+    if (indexingEventSource) {
+        indexingEventSource.close();
+        indexingEventSource = null;
+    }
+    
+    // Reset all file item styles after a short delay to allow for final updates
+    setTimeout(() => {
+        document.querySelectorAll('.file-item').forEach(item => {
+            item.classList.remove('file-pending', 'file-processing', 'file-processed');
+        });
+    }, 1000);
+}
+
+// Add cleanup on page unload
+window.addEventListener('beforeunload', () => {
+    if (indexingEventSource) {
+        indexingEventSource.close();
+    }
+});
+
+// Add conversation management functions
+async function loadConversations() {
+    try {
+        const response = await fetch('[[=URL('get_conversations')]]');
+        const data = await response.json();
+        
+        if (data.error) {
+            console.error('Error loading conversations:', data.error);
+            return;
+        }
+        
+        const select = document.getElementById('conversationSelect');
+        select.innerHTML = '<option value="">New Conversation</option>';
+        
+        data.conversations.forEach(conv => {
+            const option = document.createElement('option');
+            option.value = conv.id;
+            option.textContent = conv.title;
+            select.appendChild(option);
+        });
+        
+        // Select the current conversation if one exists
+        if (currentConversationId) {
+            select.value = currentConversationId;
+        }
+    } catch (error) {
+        console.error('Error loading conversations:', error);
+    }
+}
+
+async function createNewConversation(title = 'Untitled Conversation') {
+    try {
+        const response = await fetch('[[=URL('create_conversation')]]', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ title }),
+        });
+        
+        const data = await response.json();
+        if (data.error) {
+            alert('Error creating conversation: ' + data.error);
+            return null;
+        }
+        
+        currentConversationId = data.id;
+        await loadConversations();
+        return data.id;
+    } catch (error) {
+        console.error('Error creating conversation:', error);
+        return null;
+    }
+}
+
+async function loadConversation(conversationId) {
+    try {
+        const response = await fetch('[[=URL('load_conversation')]]', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ conversation_id: conversationId }),
+        });
+        
+        const data = await response.json();
+        if (data.error) {
+            alert('Error loading conversation: ' + data.error);
+            return;
+        }
+        
+        // Clear existing messages
+        const chatMessages = document.getElementById('chatMessages');
+        chatMessages.innerHTML = '';
+        
+        // Add messages to chat
+        data.messages.forEach(msg => {
+            if (msg.role !== 'system') {
+                addMessageToChat(msg.role, msg.content);
+            }
+        });
+        
+        currentConversationId = conversationId;
+    } catch (error) {
+        console.error('Error loading conversation:', error);
+    }
+}
+
+async function renameCurrentConversation() {
+    if (!currentConversationId) {
+        alert('No conversation selected');
+        return;
+    }
+    
+    const newTitle = prompt('Enter new conversation title:');
+    if (!newTitle) return;
+    
+    try {
+        const response = await fetch('[[=URL('update_conversation')]]', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                conversation_id: currentConversationId,
+                title: newTitle,
+            }),
+        });
+        
+        const data = await response.json();
+        if (data.error) {
+            alert('Error updating conversation: ' + data.error);
+            return;
+        }
+        
+        await loadConversations();
+    } catch (error) {
+        console.error('Error updating conversation:', error);
+    }
+}
+
+async function deleteCurrentConversation() {
+    if (!currentConversationId) {
+        alert('No conversation selected');
+        return;
+    }
+    
+    if (!confirm('Are you sure you want to delete this conversation?')) {
+        return;
+    }
+    
+    try {
+        const response = await fetch('[[=URL('delete_conversation')]]', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ conversation_id: currentConversationId }),
+        });
+        
+        const data = await response.json();
+        if (data.error) {
+            alert('Error deleting conversation: ' + data.error);
+            return;
+        }
+        
+        // Clear chat messages
+        const chatMessages = document.getElementById('chatMessages');
+        chatMessages.innerHTML = '';
+        addSystemMessage('Start a new conversation about your codebase!');
+        
+        currentConversationId = null;
+        await loadConversations();
+    } catch (error) {
+        console.error('Error deleting conversation:', error);
+    }
+}
+
+async function exportCurrentConversation() {
+    if (!currentConversationId) {
+        alert('No conversation selected');
+        return;
+    }
+    
+    try {
+        const response = await fetch('[[=URL('export_conversation')]]', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ conversation_id: currentConversationId }),
+        });
+        
+        const data = await response.json();
+        if (data.error) {
+            alert('Error exporting conversation: ' + data.error);
+            return;
+        }
+        
+        // Create and download file
+        const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `conversation_${currentConversationId}.json`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    } catch (error) {
+        console.error('Error exporting conversation:', error);
+    }
+}
+
+async function importConversation(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+    
+    try {
+        const text = await file.text();
+        const conversationData = JSON.parse(text);
+        
+        const response = await fetch('[[=URL('import_conversation')]]', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ conversation_data: conversationData }),
+        });
+        
+        const data = await response.json();
+        if (data.error) {
+            alert('Error importing conversation: ' + data.error);
+            return;
+        }
+        
+        // Load the imported conversation
+        await loadConversation(data.conversation_id);
+        await loadConversations();
+    } catch (error) {
+        console.error('Error importing conversation:', error);
+        alert('Error importing conversation: ' + error.message);
+    }
+    
+    // Clear the file input
+    event.target.value = '';
+}
+
+// Update conversation select handler
+document.getElementById('conversationSelect').addEventListener('change', async (e) => {
+    const selectedId = e.target.value;
+    if (selectedId) {
+        await loadConversation(selectedId);
+    } else {
+        // Clear chat for new conversation
+        const chatMessages = document.getElementById('chatMessages');
+        chatMessages.innerHTML = '';
+        addSystemMessage('Start a new conversation about your codebase!');
+        currentConversationId = null;
+    }
+});
+
+// Add title editing functions
+function startEditingTitle() {
+    const titleElement = document.getElementById('chatTitle');
+    const titleInput = document.getElementById('chatTitleInput');
+    
+    titleInput.value = titleElement.textContent;
+    titleElement.classList.add('hidden');
+    titleInput.classList.remove('hidden');
+    
+    // Set fixed width based on original title
+    const tempSpan = document.createElement('span');
+    tempSpan.style.visibility = 'hidden';
+    tempSpan.style.position = 'absolute';
+    tempSpan.style.whiteSpace = 'pre';
+    tempSpan.style.font = window.getComputedStyle(titleInput).font;
+    document.body.appendChild(tempSpan);
+    tempSpan.textContent = titleElement.textContent;
+    const width = Math.max(tempSpan.offsetWidth + 50, 200); // Add extra padding and ensure minimum width
+    document.body.removeChild(tempSpan);
+    
+    titleInput.style.width = width + 'px';
+    titleInput.focus();
+}
+
+function handleTitleKeydown(event) {
+    if (event.key === 'Enter') {
+        event.preventDefault();
+        event.target.blur();
+    } else if (event.key === 'Escape') {
+        event.preventDefault();
+        cancelTitleEdit();
+    }
+}
+
+function cancelTitleEdit() {
+    const titleElement = document.getElementById('chatTitle');
+    const titleInput = document.getElementById('chatTitleInput');
+    
+    titleInput.classList.add('hidden');
+    titleElement.classList.remove('hidden');
+}
+
+async function saveTitle() {
+    const titleElement = document.getElementById('chatTitle');
+    const titleInput = document.getElementById('chatTitleInput');
+    const newTitle = titleInput.value.trim();
+    
+    if (!newTitle) {
+        cancelTitleEdit();
+        return;
+    }
+    
+    if (!currentConversationId) {
+        // Create new conversation with this title
+        const newId = await createNewConversation(newTitle);
+        if (newId) {
+            currentConversationId = newId;
+            titleElement.textContent = newTitle;
+        }
+    } else {
+        // Update existing conversation
+        try {
+            const response = await fetch('[[=URL('update_conversation')]]', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    conversation_id: currentConversationId,
+                    title: newTitle
+                })
+            });
+            
+            const data = await response.json();
+            if (data.error) {
+                alert('Error updating conversation title: ' + data.error);
+                cancelTitleEdit();
+                return;
+            }
+            
+            titleElement.textContent = newTitle;
+            await loadConversations();
+        } catch (error) {
+            console.error('Error saving title:', error);
+            alert('Error saving title: ' + error.message);
+            cancelTitleEdit();
+            return;
+        }
+    }
+    
+    titleInput.classList.add('hidden');
+    titleElement.classList.remove('hidden');
+}
+
+// Update switchConversation function to also update the title
+async function switchConversation(conversationId) {
+    try {
+        if (!conversationId) {
+            // Create new conversation
+            const response = await fetch('[[=URL('create_conversation')]]', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+            });
+            const data = await response.json();
+            if (data.error) {
+                console.error('Error creating conversation:', data.error);
+                return;
+            }
+            conversationId = data.id;
+        }
+        
+        // Load the selected conversation
+        const response = await fetch('[[=URL('load_conversation')]]', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ conversation_id: conversationId }),
+        });
+        
+        const data = await response.json();
+        if (data.error) {
+            console.error('Error loading conversation:', data.error);
+            return;
+        }
+        
+        // Update current conversation ID and title
+        currentConversationId = conversationId;
+        document.getElementById('chatTitle').textContent = data.conversation.title;
+        
+        // Clear chat messages
+        chatMessages.innerHTML = '';
+        
+        // Add messages to chat
+        data.messages.forEach(msg => {
+            if (msg.role !== 'system') {  // Skip system messages
+                addMessageToChat(msg.role, msg.content);
+            }
+        });
+        
+        // Scroll to bottom
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+        
+    } catch (error) {
+        console.error('Error switching conversation:', error);
+    }
+}
+
+async function createNewChat() {
+    // Check if there's already a new conversation with no messages
+    const select = document.getElementById('conversationSelect');
+    const currentTitle = document.getElementById('chatTitle').textContent;
+    
+    // If we're already in a new conversation with no messages, don't create another one
+    if (currentTitle === 'New Conversation' && !document.getElementById('chatMessages').hasChildNodes()) {
+        alert('You already have an empty new conversation. Please use this one or start typing.');
+        return;
+    }
+    
+    // Create new conversation
+    const response = await fetch('[[=URL('create_conversation')]]', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' }
+    });
+    
+    const data = await response.json();
+    if (data.error) {
+        alert('Error creating new conversation: ' + data.error);
+        return;
+    }
+    
+    // Update UI
+    currentConversationId = data.id;
+    document.getElementById('chatTitle').textContent = 'New Conversation';
+    document.getElementById('chatMessages').innerHTML = '';
+    addSystemMessage('Start a new conversation about your codebase!');
+    
+    // Update dropdown
+    const option = document.createElement('option');
+    option.value = data.id;
+    option.textContent = 'New Conversation';
+    
+    // Remove any existing "New Conversation" option
+    Array.from(select.options).forEach(opt => {
+        if (opt.textContent === 'New Conversation' && opt.value !== '') {
+            select.removeChild(opt);
+        }
+    });
+    
+    // Add the new option and select it
+    select.insertBefore(option, select.firstChild.nextSibling); // Insert after the empty "New Conversation" option
+    select.value = data.id;
+}
+</script>
+
+<style>
+/* Base styles */
+.max-h-\[calc\(100vh-8rem\)\] {
+    max-height: calc(100vh - 8rem);
+}
+
+/* Loading spinner */
+.animate-spin {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Message animations */
+.message-animate {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: messageAppear 0.3s ease forwards;
+}
+
+@keyframes messageAppear {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Resize handle */
+#resizeHandle {
+    position: relative;
+    z-index: 10;
+}
+
+#resizeHandle:hover {
+    opacity: 1;
+}
+
+/* Prevent text selection while resizing */
+.resize-active {
+    user-select: none;
+}
+
+/* Chat message hover */
+.message-animate:hover {
+    transform: translateY(-1px);
+    transition: transform 0.2s ease;
+}
+
+/* File indexing status */
+.file-pending {
+    background-color: #FEF3C7;  /* Light yellow */
+    transition: background-color 0.5s ease;
+}
+
+.file-processing {
+    background-color: #DBEAFE;  /* Light blue */
+    animation: pulse 2s infinite;
+    transition: background-color 0.5s ease;
+}
+
+.file-processed {
+    background-color: #D1FAE5;  /* Light green */
+    transition: background-color 0.5s ease;
+}
+
+.file-processed.fade-complete {
+    background-color: transparent;
+}
+
+@keyframes pulse {
+    0% { background-color: #DBEAFE; }
+    50% { background-color: #93C5FD; }
+    100% { background-color: #DBEAFE; }
+}
+
+/* Chat title input sizing */
+#chatTitleInput {
+    width: 100%;
+    min-width: 200px;
+    box-sizing: border-box;
+}
+
+#chatTitle, #chatTitleInput {
+    width: auto;
+    min-width: 200px;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+}
+</style> 

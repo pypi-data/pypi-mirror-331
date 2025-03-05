@@ -1,0 +1,6 @@
+py4web
+aiohttp
+tailwindcss
+dir-assistant
+python-multipart
+watchdog 

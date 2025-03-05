@@ -1,0 +1,16 @@
+#include README.md
+
+recursive-include hooks *.py
+recursive-include src/*
+recursive-include src *.md
+recursive-include src *.txt
+recursive-include src *.sh
+recursive-include src *.db
+recursive-include src *.html
+recursive-include src *.json
+recursive-include src *.secret
+recursive-include src *.storage
+recursive-include src *.table
+recursive-include src *.spec
+recursive-include src *.in
+recursive-include src *.toml

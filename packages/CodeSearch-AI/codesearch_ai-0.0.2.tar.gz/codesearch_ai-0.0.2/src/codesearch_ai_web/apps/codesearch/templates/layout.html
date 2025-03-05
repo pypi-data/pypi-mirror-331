@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-gray-100">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeSearch AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/13.0.1/markdown-it.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        /* Custom scrollbar styles */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        /* Code highlighting */
+        pre {
+            background: #1a1a1a;
+            color: #e6e6e6;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            margin: 0.5rem 0;
+        }
+
+        /* Markdown styles */
+        .markdown-content { line-height: 1.6; }
+        .markdown-content > *:first-child { margin-top: 0; }
+        .markdown-content > *:last-child { margin-bottom: 0; }
+        .markdown-content h1 { font-size: 1.5rem; font-weight: 600; margin: 1.5rem 0 1rem; }
+        .markdown-content h2 { font-size: 1.25rem; font-weight: 600; margin: 1.25rem 0 0.875rem; }
+        .markdown-content h3 { font-size: 1.125rem; font-weight: 600; margin: 1rem 0 0.75rem; }
+        .markdown-content p { margin: 0.75rem 0; }
+        .markdown-content ul, .markdown-content ol { margin: 0.75rem 0; padding-left: 1.5rem; }
+        .markdown-content li { margin: 0.375rem 0; }
+        .markdown-content ul { list-style-type: disc; }
+        .markdown-content ol { list-style-type: decimal; }
+        .markdown-content a { color: #3b82f6; text-decoration: underline; }
+        .markdown-content blockquote { border-left: 4px solid #e5e7eb; padding: 0.5rem 0 0.5rem 1rem; margin: 1rem 0; color: #6b7280; background: #f9fafb; border-radius: 0.25rem; }
+        .markdown-content code:not(pre code) { background: #f3f4f6; padding: 0.125rem 0.25rem; border-radius: 0.25rem; font-family: monospace; font-size: 0.875em; }
+        .markdown-content pre { margin: 1rem 0; }
+        .markdown-content pre code { display: block; padding: 1rem; border-radius: 0.5rem; font-size: 0.875em; line-height: 1.5; }
+        .markdown-content table { border-collapse: collapse; margin: 1rem 0; width: 100%; }
+        .markdown-content th { background: #f9fafb; }
+        .markdown-content th, .markdown-content td { border: 1px solid #e5e7eb; padding: 0.75rem; }
+        .markdown-content img { max-width: 100%; height: auto; margin: 1rem 0; border-radius: 0.5rem; }
+        .markdown-content hr { margin: 1.5rem 0; border: 0; border-top: 1px solid #e5e7eb; }
+
+        /* Chat message animations */
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .message-animate {
+            animation: slideIn 0.3s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="h-full">
+    [[include]]
+</body>
+</html> 

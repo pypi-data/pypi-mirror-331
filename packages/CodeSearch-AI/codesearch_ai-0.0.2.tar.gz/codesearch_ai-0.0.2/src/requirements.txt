@@ -1,0 +1,9 @@
+py4web[all]>=1.20250215.1
+pydal>=20250215.2
+waitress>=3.0.2
+pyinstaller>=6.4.0
+aiohttp
+tailwindcss
+dir-assistant
+python-multipart
+watchdog 
