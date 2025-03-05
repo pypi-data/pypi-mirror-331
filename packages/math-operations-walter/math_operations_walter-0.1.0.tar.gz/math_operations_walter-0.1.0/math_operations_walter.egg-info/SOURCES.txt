@@ -1,0 +1,7 @@
+setup.py
+math_operations/__init__.py
+math_operations/amallar.py
+math_operations_walter.egg-info/PKG-INFO
+math_operations_walter.egg-info/SOURCES.txt
+math_operations_walter.egg-info/dependency_links.txt
+math_operations_walter.egg-info/top_level.txt
