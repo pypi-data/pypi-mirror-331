@@ -1,0 +1,6 @@
+setuptools
+numpy<2.1.0
+matplotlib
+scipy
+mpyez
+custom-inherit
