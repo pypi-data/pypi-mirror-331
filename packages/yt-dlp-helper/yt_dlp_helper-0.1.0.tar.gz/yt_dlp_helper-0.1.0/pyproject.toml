@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "yt-dlp-helper"
+version = "0.1.0"
+description = "A beautiful command-line wrapper for yt-dlp with a rich interface"
+readme = "README.md"
+authors = [
+    { name = "Isaac Gutekunst", email = "" }
+]
+license = "MIT"
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "typer",
+    "rich",
+    "yt-dlp",
+    "requests",
+]
+
+[project.urls]
+Homepage = "https://github.com/igutekunst/yt-dlp-helper"
+Repository = "https://github.com/igutekunst/yt-dlp-helper"
+
+[project.scripts]
+download = "ytdlphelper.cli:app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["ytdlphelper"] 
