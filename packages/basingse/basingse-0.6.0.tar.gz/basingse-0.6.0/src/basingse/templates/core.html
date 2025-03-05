@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% block meta %}{% endblock %}
+    <title>{% block title %}{% endblock %}</title>
+
+    {% if site_settings is defined and site_settings.logo.favicon_id %}
+    <link rel="icon" href="{{ url_for('customize.favicon') }}">
+    {% else %}
+    <link rel="icon" href="{{ url_for('basingse.static', filename='img/logo/icon32.png') }}">
+    {% endif %}
+
+    {% block style %}
+    {{ assets.resources('basingse.bootstrap', '.css') | safe }}
+    {{ assets.resources('basingse.main', '.css') | safe }}
+    {% if config.get('DEBUG') %}
+    {{ assets.resources('basingse.debug', '.css') | safe }}
+    {% endif %}
+    {% endblock %}
+</head>
+
+{% from "_icon.html" import icon %}
+
+<body class="d-flex flex-column min-vh-100">
+    {% block body %}
+    {% endblock %}
+    <footer>
+        {% block footer %}
+        {% endblock %}
+        {% block scripts %}
+        {{- assets.resources('basingse.bootstrap', '.js') | safe -}}
+        {{- assets.resources('basingse.main', '.js') | safe -}}
+        {%- if config.get('DEBUG') -%}
+        <!-- {{- assets.resources('basingse.debug', '.js') | safe -}} -->
+        {%- endif -%}
+        {% endblock %}
+    </footer>
+</body>
+
+</html>

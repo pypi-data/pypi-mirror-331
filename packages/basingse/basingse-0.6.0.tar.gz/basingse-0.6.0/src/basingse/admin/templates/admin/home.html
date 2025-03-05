@@ -1,0 +1,7 @@
+{% extends base_template %}
+
+{% if site_settings is defined %}
+<h1>Welcome to {{ site_settings.title }}</h1>
+{% else %}
+<h1>Welcome</h1>
+{% endif %}
