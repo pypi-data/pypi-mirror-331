@@ -1,0 +1,36 @@
+[project]
+name = "svg-timeline"
+version = "0.2.1"
+authors = [
+  { name="Timo Dreyer", email="dev@timodreyer.de" },
+]
+description = "A pure python library to create timeline plots"
+readme = "README.md"
+license = "MIT"
+keywords = ["timeline", "svg", "plotting", "graph"]
+license-files = ["LICENSE"]
+requires-python = ">=3.11"
+repository = "https://github.com/TiDreyer/svg-timeline"
+
+[project.urls]
+homepage = "https://pypi.org/project/svg-timeline"
+repository = "https://github.com/TiDreyer/svg-timeline"
+#documentation = "https://github.com/TiDreyer/svg-timeline"
+"Bug Tracker" = "https://github.com/TiDreyer/svg-timeline/issues"
+
+
+[tool.poetry]
+requires-poetry = ">=2.0"
+packages = [{include = "svg_timeline"}]
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.2"
+pylint = "^3.2.6"
+
+[tool.pylint.main]
+fail-under = 9.5
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
