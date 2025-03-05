@@ -1,0 +1,2 @@
+[console_scripts]
+run-epicol18 = epicol18.main:run

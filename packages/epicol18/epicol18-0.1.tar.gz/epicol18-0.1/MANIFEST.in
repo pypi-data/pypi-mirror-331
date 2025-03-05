@@ -1,0 +1,5 @@
+include my_dash_app/assets/*
+include my_dash_app/data/*
+include my_dash_app/pages/*
+include requirements.txt
+include README.md
