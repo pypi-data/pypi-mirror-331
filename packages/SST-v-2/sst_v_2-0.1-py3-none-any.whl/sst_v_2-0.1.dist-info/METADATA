@@ -1,0 +1,13 @@
+Metadata-Version: 2.2
+Name: SST_v_2
+Version: 0.1
+Summary: Speech-To-Text module for a virtual assistant
+Author: Kushagra Upadhyay
+Author-email: kushagrathecoder@gmail.com
+Requires-Python: >=3.6
+Requires-Dist: selenium
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
