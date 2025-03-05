@@ -1,0 +1,14 @@
+gbp_purge-1.0.0.dist-info/METADATA,sha256=5rAjACjuKJuR_jgWJsASi-S2-eXiTznBDdCJ0-CA3vk,4724
+gbp_purge-1.0.0.dist-info/WHEEL,sha256=thaaA2w1JzcGC48WYufAs8nrYZjJm8LqNfnXFOFyCC4,90
+gbp_purge-1.0.0.dist-info/entry_points.txt,sha256=PKtPibyIQFjFsUT1ZFm42funK4XbJ8Ie9LhkCXnWB_I,97
+gbp_purge/__init__.py,sha256=2bBOIXMUJy57YcsBCFoB2qjDvL4g9LIE7Y6XVjp9A54,162
+gbp_purge/apps.py,sha256=cZOJpSjAKTIsM0pMdbYttozG1TxWnriPow9ErHkahLE,416
+gbp_purge/gateway.py,sha256=YgKWvsW0l6IPZx47nAiqwv3J-Jn4Z9jMzRxgJNiHMYI,1524
+gbp_purge/models.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gbp_purge/purger.py,sha256=0wdfIsQ7wITi6A61df8CwdVyN2-PSQqF9nnTk7hexg8,6044
+gbp_purge/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gbp_purge/signals.py,sha256=Fy-xWY83AVrWmCcvcL-qM1eCZJ9nrlpaZWaxwmr8wFA,633
+gbp_purge/types.py,sha256=K--ftaNSldB-y_vjG-vkxsL2qZxnQzTWVyY8qxrXfC0,335
+gbp_purge/worker/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gbp_purge/worker/tasks.py,sha256=I9zzDcOOurhb-dMhiyoCmgkAaQ-HHpBZ4LPmPpjTJPM,657
+gbp_purge-1.0.0.dist-info/RECORD,,
