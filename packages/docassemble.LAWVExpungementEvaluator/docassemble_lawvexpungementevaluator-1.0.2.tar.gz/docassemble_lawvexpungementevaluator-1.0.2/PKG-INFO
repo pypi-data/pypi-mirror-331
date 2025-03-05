@@ -1,0 +1,21 @@
+Metadata-Version: 2.2
+Name: docassemble.LAWVExpungementEvaluator
+Version: 1.0.2
+Summary: A docassemble extension.
+Home-page: https://docassemble.org
+Author: System Administrator
+Author-email: dhenry@lawv.net
+License: The MIT License (MIT)
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: docassemble.LAWVCommon>=1.0.12
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: summary
+
+This tool is designed to produce a single-page summary of a user's convictions and determine whether any of those convictions are elgible for expungement.
