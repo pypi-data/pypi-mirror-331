@@ -1,0 +1,3 @@
+[console_scripts]
+tmseegpy = tmseegpy:run_cli
+tmseegpy-gui = tmseegpy.gui_launcher:main
