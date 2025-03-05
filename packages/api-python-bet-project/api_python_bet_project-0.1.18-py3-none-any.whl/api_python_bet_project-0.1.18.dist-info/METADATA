@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: api-python-bet-project
+Version: 0.1.18
+Summary: API-python-bet-project
+Author: Julio Martinez del Pino
+Author-email: juliomdp92@gmail.com
+Requires-Python: >=3.10,<3.13
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: beautifulsoup4 (==4.*)
+Requires-Dist: datetime (==5.*)
+Requires-Dist: fastapi (==0.108.*)
+Requires-Dist: matplotlib (==3.10.*)
+Requires-Dist: mlflow (==2.19.*)
+Requires-Dist: numpy (==2.2.*)
+Requires-Dist: pandas (==2.*)
+Requires-Dist: python-decouple (==3.*)
+Requires-Dist: scikit-learn (==1.6.*)
+Requires-Dist: unicode (==2.*)
+Requires-Dist: uvicorn (==0.25.*)
+Description-Content-Type: text/markdown
+
+# package-python-bet-project
