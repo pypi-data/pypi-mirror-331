@@ -1,0 +1,45 @@
+[project]
+name = "red-dwarf-democracy"
+version = "0.1.1"
+description = "A dimensional reduction library for stellarpunk democracy into the long haul"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fake-useragent>=2.0.3",
+    "matplotlib>=3.10.0",
+    "pandas>=2.2.2",
+    #"requests-cache>=1.2.1",
+    # Was getting warnings on stale cache (queued for next release after v1.2.1)
+    # See: https://github.com/requests-cache/requests-cache/pull/1068
+    "requests-cache",
+    "requests>=2.32.3",
+    "scikit-learn>=1.6.0",
+    "requests-ratelimiter>=0.7.0",
+    "concave-hull>=0.0.9",
+    "seaborn>=0.13.2",
+    "pydantic>=2.10.6",
+]
+
+[tool.setuptools.packages.find]
+include = ["reddwarf*"]
+
+[tool.setuptools]
+# Work-around for `uv`/`setuptools` bug.
+# See: https://github.com/ToucanToco/peakina/pull/957/files
+license-files = []
+
+[tool.uv.sources]
+requests-cache = { git = "https://github.com/requests-cache/requests-cache", rev = "12af54ded36" }
+
+[dependency-groups]
+dev = [
+    "coverage>=7.6.12",
+    "mkdocs-same-dir>=0.1.3",
+    "mkdocstrings-python>=1.15.0",
+    "pytest-cov>=6.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3.4",
+]
