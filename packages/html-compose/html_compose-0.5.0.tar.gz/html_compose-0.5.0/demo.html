@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Class-less preview • Pico CSS</title>
+    <meta name="description" content="A class-less example, without dependencies." />
+
+    <!-- Pico.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.0.6/css/pico.classless.min.css"
+    />
+  </head>
+
+  <body>
+    <section id="preview">
+      <h2>Preview</h2>
+      <pre>  preformatted  </pre>
+      <pre>
+        horrible
+
+      </pre>
+      <p>
+        Sed ultricies dolor non ante vulputate hendrerit. Vivamus sit amet suscipit sapien. Nulla
+        iaculis eros a elit pharetra egestas.
+      </p>
+      <form>
+        <input
+          type="text"
+          name="firstname"
+          placeholder="First name"
+          aria-label="First name"
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Email address"
+          aria-label="Email address"
+          autocomplete="email"
+          required
+        />
+        <button type="submit">Subscribe</button>
+        <fieldset>
+          <label for="terms">
+            <input type="checkbox" role="switch" id="terms" name="terms" />
+            I agree to the
+            <a href="#" onclick="event.preventDefault()">Privacy Policy</a>
+          </label>r   
+        </fieldset>
+      </form>
+    </section>
+  </body>
+</html>
+
