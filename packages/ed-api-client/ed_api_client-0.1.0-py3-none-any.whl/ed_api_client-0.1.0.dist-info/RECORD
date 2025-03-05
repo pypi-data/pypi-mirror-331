@@ -1,0 +1,13 @@
+ed_api_client/__init__.py,sha256=0Uu4EOjKpXVE9dzKrP2L8BBPRdiG6FHeXSWWc7s4wXA,332
+ed_api_client/assignments.py,sha256=zIY0WV6VASTE6XIghQhi6MUc5hsKPYaNQg_nWaOQWP4,8700
+ed_api_client/canvas.py,sha256=LuyRa7Szs9QVk4q9I7HtIrnTBYL6TDEmae4IHySSnKg,1989
+ed_api_client/challenges.py,sha256=sB6h3tgqDwOFmvdZ3yJmGBxbm7qIpfHvg8ZIKNbOJ1Q,9668
+ed_api_client/client.py,sha256=JWcxL9lj8ZN3CkOza9-vInC2ofQuHTvCdpgpaszIky0,8207
+ed_api_client/quizzes.py,sha256=sR6r4CppYxzRh1M3gZP34HaavLiH7NFP_s1libxRXyg,7326
+ed_api_client/slides.py,sha256=_O3yix3-VKWTLf99j3XkN_NXvqwcjtgD3NibNj6w1LA,5811
+ed_api_client/users.py,sha256=8YZ_up1p1XTb-efcXe8YSOgt4GSkQa0OH9O5nPyQ2Ns,1236
+ed_api_client/websockets.py,sha256=vcNyE-2s-HaT68GBUr4J9zEbkyN94ZbD9pVJ67xIMb0,2658
+ed_api_client/workspaces.py,sha256=XS9VEeSOqZvUegaQBVKk33Ol4ffA3j7NJ8CzudENNow,14263
+ed_api_client-0.1.0.dist-info/METADATA,sha256=LZ-teVE9wXa-qP3GV30f_-o5jSl4EbN2CFFi80FFUDg,7153
+ed_api_client-0.1.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+ed_api_client-0.1.0.dist-info/RECORD,,
