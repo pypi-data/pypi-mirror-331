@@ -1,0 +1,8 @@
+certbot_dns_beget/__init__.py,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
+certbot_dns_beget/dns_beget_api.py,sha256=3BkJMeCCo_BNU3hcFmfNyhjkFy_e-pGq4fozuZq7_Lk,9863
+certbot_dns_beget_api-1.0.1.dist-info/LICENSE,sha256=bDxRuPu0CqHpGjZwPoefM8hspZTPamFHY1NCvXQrOJg,1091
+certbot_dns_beget_api-1.0.1.dist-info/METADATA,sha256=OYzXFsdIx4u7WbveOH96dsNxovQAIX5f_q_FVABS628,1098
+certbot_dns_beget_api-1.0.1.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+certbot_dns_beget_api-1.0.1.dist-info/entry_points.txt,sha256=dOJY4peNUuyrvW2TSut1tm6Q6BUxDmQ6zN87klZRmro,80
+certbot_dns_beget_api-1.0.1.dist-info/top_level.txt,sha256=oaM1KONY1AI7hufNpLgF7U4bhgaGxPQkQb7CIm1HXrc,18
+certbot_dns_beget_api-1.0.1.dist-info/RECORD,,
