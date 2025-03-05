@@ -1,0 +1,14 @@
+algofresco/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+algofresco/dict.py,sha256=-fui6mm3uFs15aB0cZHkP6V5a08rRJCjC3rTJcb8qFA,6367
+algofresco/ds.py,sha256=sdjnX9kvVsFDFWk5p_am1e-FJTOgXh9MNNlwHV9Q_7E,3530
+algofresco/graph.py,sha256=rDzSl59br8hyO-56ABBx5_tRip3Q7Z_jBXglspKW4Uo,7537
+algofresco/que.py,sha256=0hn7coNOXt55NfeQ7EzCOWR8DtuJSdzm5IMVBDVR_A4,6747
+algofresco/stack.py,sha256=jerPsHIV53GTdSwxo_S-RZm3N2xSsIBE-j5d4JuHbn0,5924
+algofresco/tracer.py,sha256=wylqDT5i16ti8v8V_uR8tKdbZmfEPlNa0TBfsaIDfno,5509
+algofresco/tree.py,sha256=JGqhxEA9mNI1MpXAG2flujX-5VCcO86s3FXDwZnAI_8,8802
+algofresco/version.py,sha256=wr408VHJG9AByXbUvyD1MfqPNTs5yg9c4qiqf77ME_w,17
+algofresco-0.0.0.dist-info/LICENSE,sha256=ggWd8LlBCQhwr5JF1jB3rdvh7cXXPGjB2UO7i5rA8oc,1079
+algofresco-0.0.0.dist-info/METADATA,sha256=-zB9fEcQO3RTotVYaVUGB9eYwy9U_8gWpb629kX7794,7069
+algofresco-0.0.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+algofresco-0.0.0.dist-info/top_level.txt,sha256=9TPRkRWDn086I8kAY5GOnH5buNzOgC7Lov2nIOS1ws4,11
+algofresco-0.0.0.dist-info/RECORD,,
