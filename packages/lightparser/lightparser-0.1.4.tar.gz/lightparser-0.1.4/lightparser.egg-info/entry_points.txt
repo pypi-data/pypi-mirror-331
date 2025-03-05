@@ -1,0 +1,3 @@
+[console_scripts]
+lightparser = lightparser.output:setup_output
+
