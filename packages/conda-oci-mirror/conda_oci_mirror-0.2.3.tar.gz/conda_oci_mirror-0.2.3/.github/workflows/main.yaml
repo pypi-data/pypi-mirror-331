@@ -1,0 +1,105 @@
+name: conda-mirror test
+
+permissions:
+  contents: read
+
+on:
+  pull_request: null
+
+jobs:
+  linting:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v3
+      - name: Check Spelling
+        uses: crate-ci/typos@72f3776b6edc3a10a567b8e43fd0524b2a3f1419 # v1.30.1
+        with:
+          files: ./README.md
+      - name: Install Conda environment from environment.yml
+        uses: mamba-org/setup-micromamba@0dea6379afdaffa5d528b3d1dabc45da37f443fc # v2.0.4
+        with:
+          environment-file: environment.yml
+      - name: Lint Conda Oci Mirror
+        shell: bash -el {0}
+        run: |
+          pre-commit run --all-files
+
+  testing:
+    runs-on: ubuntu-latest
+    services:
+      registry:
+        image: ghcr.io/oras-project/registry:latest
+        env:
+          REGISTRY_STORAGE_DELETE_ENABLED: "true"
+        ports:
+          - 5000:5000
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v3
+      - name: Install Conda environment from environment.yml
+        uses: mamba-org/setup-micromamba@0dea6379afdaffa5d528b3d1dabc45da37f443fc # v2.0.4
+        with:
+          environment-file: environment.yml
+      - name: Test Conda OCI Mirror
+        shell: bash -el {0}
+        env:
+          registry_host: http://localhost
+          registry_port: ${{ job.services.registry.ports[5000] }}
+        run: |
+          micromamba install conda-build -c conda-forge
+          pip install .
+          pytest -xs conda_oci_mirror/tests/*.py
+
+  mirror-pkgs:
+    runs-on: ubuntu-latest
+    services:
+      registry:
+        image: ghcr.io/oras-project/registry:latest
+        env:
+          REGISTRY_STORAGE_DELETE_ENABLED: "true"
+        ports:
+          - 5000:5000
+    strategy:
+      max-parallel: 12
+      matrix:
+        package: [redo]
+        subdir:
+          - linux-64
+          - osx-64
+          - osx-arm64
+          - win-64
+          - linux-aarch64
+          - linux-ppc64le
+          - noarch
+      fail-fast: true
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v3
+      - name: Install Conda environment from environment.yml
+        uses: mamba-org/setup-micromamba@0dea6379afdaffa5d528b3d1dabc45da37f443fc # v2.0.4
+        with:
+          environment-file: environment.yml
+      - name: Install Conda Oci Mirror
+        shell: bash -el {0}
+        run: |
+          micromamba install conda-build
+          pip install -e .
+
+      - name: Test Conda Oci Mirror
+        shell: bash -el {0}
+        env:
+          channel: conda-forge
+          subdir: ${{ matrix.subdir }}
+          package: ${{ matrix.package }}
+          registry_host: localhost
+          registry_port: ${{ job.services.registry.ports[5000] }}
+        run: |
+          export PYTHONUNBUFFERED=1
+
+          # First run mirror
+          conda-oci mirror --channel ${channel} --subdir ${subdir} --package ${package} --registry http://${registry_host}:${registry_port}/dinosaur
+
+          # Then run pull-cache and push-cache
+          conda-oci pull-cache --registry http://${registry_host}:${registry_port}/dinosaur --subdir ${subdir} --package ${package}
+          conda-oci push-cache --registry http://${registry_host}:${registry_port}/dinosaur --subdir ${subdir} --package ${package}
+
+      - name: View Cache
+        run: sudo apt-get install -y tree && tree ./cache
