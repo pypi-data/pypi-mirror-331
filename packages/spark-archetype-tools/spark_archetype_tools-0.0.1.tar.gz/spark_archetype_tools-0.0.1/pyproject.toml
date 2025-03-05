@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "spark-archetype-tools"
+version = "0.1.0"
+description = ""
+authors = ["jonathan <jony327@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "spark_archetype_tools" }]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pyhocon = "^0.3.61"
+
+
+
+
+
+
+
+[tool.poetry.group.dev.dependencies]
+jupyterlab = "^4.0.5"
+twine = "^4.0.2"
+setuptools = "58.2.0"
+wheel = "0.40.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
