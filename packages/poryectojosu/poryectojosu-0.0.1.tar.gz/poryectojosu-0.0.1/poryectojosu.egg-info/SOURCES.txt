@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+poryectojosu/__init__.py
+poryectojosu/lala.py
+poryectojosu/player.py
+poryectojosu.egg-info/PKG-INFO
+poryectojosu.egg-info/SOURCES.txt
+poryectojosu.egg-info/dependency_links.txt
+poryectojosu.egg-info/top_level.txt
