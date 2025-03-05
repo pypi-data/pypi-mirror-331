@@ -1,0 +1,9 @@
+ecos_api_loader/__init__.py,sha256=u-zAVPF_34AoLS04qhkq40yeaQziLPbQSNv4wX6du8U,266
+ecos_api_loader/ecos_api.py,sha256=giLwISNhvGICGsyBGJ5ey5zNrbsnQJbxc39eJeNkll0,10439
+ecosloader/__init__.py,sha256=c9AGdruFrUuiF3lN0HXOfbkr3X9f_rHG5MAriU_4x8g,266
+ecosloader/ecos_api.py,sha256=v8KJhRpXGR7s6vliEx4hn2iK869D2esxCEOQt0pSXhQ,13414
+ecosloader-0.0.8.dist-info/LICENSE,sha256=eIuFFQ8TswcpHEt33_-fdDDdiCr4nW2Ctjb3rLYmnhM,1068
+ecosloader-0.0.8.dist-info/METADATA,sha256=c0FCFmH8W-oSjiLqPdzOlXglAB46RIPgaza0XjeItOI,351
+ecosloader-0.0.8.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+ecosloader-0.0.8.dist-info/top_level.txt,sha256=nas5l1vcVjJRJ2SC_ASt9qQlwv-UyvJcJeYNkyoTZZk,11
+ecosloader-0.0.8.dist-info/RECORD,,

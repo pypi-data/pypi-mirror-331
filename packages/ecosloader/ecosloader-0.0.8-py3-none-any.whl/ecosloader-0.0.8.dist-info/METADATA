@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: ecosloader
+Version: 0.0.8
+Summary: Bank of Korea ECOS API LOADER
+Home-page: https://github.com/jmlee8939/ecos_api_loader
+Author: jaemini.lee
+Author-email: jmlee8939@hanmail.net
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: pandas
+Requires-Dist: tqdm
+Requires-Dist: selenium
+Requires-Dist: webdriver-manager
+
