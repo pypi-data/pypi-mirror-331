@@ -1,0 +1,30 @@
+Metadata-Version: 2.3
+Name: poetry-lock-listener
+Version: 0.2.3
+Summary: 
+Author: Your Name
+Author-email: you@example.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: cleo (>=2.1.0,<3.0.0)
+Requires-Dist: poetry (>=1.7.1)
+Requires-Dist: tomli (>=2.0.1,<3.0.0)
+Description-Content-Type: text/markdown
+
+# Poetry Lock Listener
+This is a poetry plugin that executes a script whenever a project dependency is changed.
+
+## Installation
+```bash
+poetry self add poetry-lock-listener
+```
+
+in the toml file:
+```toml
+[tool.poetry_lock_listener]
+package_changed_hook="path.to.file:main"
+```
