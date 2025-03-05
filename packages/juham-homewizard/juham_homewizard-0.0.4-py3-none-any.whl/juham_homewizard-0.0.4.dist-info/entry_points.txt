@@ -1,0 +1,2 @@
+[juham.plugins]
+homewizard_watermeter_plugin = juham_homewizard:HomeWizardWaterMeter
