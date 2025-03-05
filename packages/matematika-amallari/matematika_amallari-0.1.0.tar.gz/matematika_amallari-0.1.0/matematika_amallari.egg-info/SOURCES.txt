@@ -1,0 +1,5 @@
+setup.py
+matematika_amallari.egg-info/PKG-INFO
+matematika_amallari.egg-info/SOURCES.txt
+matematika_amallari.egg-info/dependency_links.txt
+matematika_amallari.egg-info/top_level.txt
