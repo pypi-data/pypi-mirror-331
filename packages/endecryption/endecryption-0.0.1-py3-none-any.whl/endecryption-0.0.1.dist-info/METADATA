@@ -1,0 +1,19 @@
+Metadata-Version: 2.2
+Name: endecryption
+Version: 0.0.1
+Summary: Package to encrypt and decrypt data
+Author: Chirag Kumar
+Author-email: chiragkumarmahto@gmail.com
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+Requires-Dist: Django>=3.2.16
+Requires-Dist: simplejson>=3.17.2
+Requires-Dist: pycryptodome>=3.16.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: summary
