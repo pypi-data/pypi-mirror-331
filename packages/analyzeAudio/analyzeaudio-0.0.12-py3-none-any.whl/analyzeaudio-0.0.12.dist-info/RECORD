@@ -1,0 +1,16 @@
+analyzeAudio/__init__.py,sha256=2D5JMeZfLGnwyQvt4Q2-HCsShHulcNXBM_Wu9vZPCiI,437
+analyzeAudio/analyzersUseFilename.py,sha256=EToFicrCkFg_YTMJsGbXX3CtDGO9TFch-GUr4fh65Tc,10541
+analyzeAudio/analyzersUseSpectrogram.py,sha256=j-e69ICVHOC_W3ev8HOTem4KGGpE9QyKnYZEvFseMkE,1835
+analyzeAudio/analyzersUseTensor.py,sha256=-wD_QAd41lB65ceT5UedEoxWL078tZ0E-kC9ssDSghc,553
+analyzeAudio/analyzersUseWaveform.py,sha256=AwDyagz9bLLAq8ji4by51x7d2YWRdUQaY3iaw1k0yD4,1472
+analyzeAudio/audioAspectsRegistry.py,sha256=EvFKNncWKDv4KDyI0UcfBplkgVK_fGOFOdjolDy8hE0,8517
+analyzeAudio/pythonator.py,sha256=cH4BJhXb_awvxWbB1cRtZTfCDUUgi9WiVrleVT4hyyI,3499
+tests/conftest.py,sha256=BhZswOjkl_u-qiS4Zy38d2fETdWAtZiigeuXYBK8l0k,397
+tests/test_audioAspectsRegistry.py,sha256=-TWTLMdAn6IFv7ZdFWrBm1KxpLBa3Mz1sCygAwxV6gE,27
+tests/test_other.py,sha256=sd20ms4StQ13_3-gmwZwtAuoIAwfxWC5IXM_Cp5GQXM,428
+analyzeaudio-0.0.12.dist-info/LICENSE,sha256=NxH5Y8BdC-gNU-WSMwim3uMbID2iNDXJz7fHtuTdXhk,19346
+analyzeaudio-0.0.12.dist-info/METADATA,sha256=DWLUaMD_RnKL0i2W0sD0WgEnN5dj4VW95oIeK3mk5mY,4783
+analyzeaudio-0.0.12.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+analyzeaudio-0.0.12.dist-info/entry_points.txt,sha256=FHgSx7fndtZ6SnQ-nWVXf0NB59exaHQ2DtatTK9KrLg,100
+analyzeaudio-0.0.12.dist-info/top_level.txt,sha256=QV8LQ0r_1LIQuewxDcEzODpykv5qRYG3I70piOUSVRg,19
+analyzeaudio-0.0.12.dist-info/RECORD,,
