@@ -1,0 +1,5 @@
+qiskit<2.0,>=1.0.0
+iqm-pyqir==0.11.0
+
+[test]
+pytest
