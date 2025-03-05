@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+sizeforemir/__init__.py
+sizeforemir/formula.py
+sizeforemir.egg-info/PKG-INFO
+sizeforemir.egg-info/SOURCES.txt
+sizeforemir.egg-info/dependency_links.txt
+sizeforemir.egg-info/top_level.txt
+tests/test_formula.py
