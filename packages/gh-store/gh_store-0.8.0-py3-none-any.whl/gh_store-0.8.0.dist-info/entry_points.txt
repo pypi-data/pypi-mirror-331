@@ -1,0 +1,2 @@
+[console_scripts]
+gh-store = gh_store.__main__:main

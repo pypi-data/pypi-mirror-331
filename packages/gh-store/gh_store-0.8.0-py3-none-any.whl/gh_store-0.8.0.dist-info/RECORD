@@ -1,0 +1,17 @@
+gh_store/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+gh_store/__main__.py,sha256=wIPhLvuwfsY8JFGwCqVOOke1wjIaqz1elfvVnAKN_60,4583
+gh_store/default_config.yml,sha256=iD37ag8wN4x-wicjWVBiXHnnzDxTxZhndKoNEtwHJkI,593
+gh_store/cli/commands.py,sha256=zXuoR3dLJiGPzFfR4nKyyiqKEr2qJ63zl-8LTjS5XYQ,10180
+gh_store/core/access.py,sha256=eH1pmWdbgttqxmR3NVvOE5hWl0kUeI2tmxnfccDVjiE,5127
+gh_store/core/exceptions.py,sha256=yGedRiTgtpyxFD1AO_Fzkhf-ExJEPBQL1ub5oOQrl_k,759
+gh_store/core/store.py,sha256=hYeKc04WEOHInEYLSywPZI7xG985860haj-A4qZIt0E,6503
+gh_store/core/types.py,sha256=-BrH2tLLY8sgwAJ4YCUUPa1I96753QkT7WiPb_raO_8,1311
+gh_store/core/version.py,sha256=d6emq5dwhMmH_rxZM_jiBHGqEBG2fn-AO9kNI-SX6fw,810
+gh_store/handlers/comment.py,sha256=66xweGhP3WO5OnYskZxYeHOS9jjuc12IBuepyIXxNBk,5682
+gh_store/handlers/issue.py,sha256=tfAAiGV1gk9-aGHPORrhydgOvae1YuyBIT2yt6CO_yg,11275
+gh_store/tools/canonicalize.py,sha256=CmRJbS4RN7MEJJYnLpiXsbVJYzclXNGdazAyhmedVqI,37468
+gh_store-0.8.0.dist-info/METADATA,sha256=ADdfNpmPYGG5uRPUDmuU3I_U5cMAKh2yzW_aY32cguQ,8216
+gh_store-0.8.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+gh_store-0.8.0.dist-info/entry_points.txt,sha256=q1gwta7CspXty7RHfPeOl9t2FZ4j-3DSQxMj7BSlH_A,52
+gh_store-0.8.0.dist-info/licenses/LICENSE,sha256=3g2wG1FGkd-KofbqtgEWDKWh7wJgmTHP1njrsS3q3jc,1067
+gh_store-0.8.0.dist-info/RECORD,,
