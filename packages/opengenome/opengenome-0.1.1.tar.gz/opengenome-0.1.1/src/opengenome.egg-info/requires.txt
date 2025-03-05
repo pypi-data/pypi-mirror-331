@@ -1,0 +1,9 @@
+
+[dev]
+pytest
+pytest-cov
+jupyter
+sphinx
+myst-nb
+sphinx-autoapi
+pydata_sphinx_theme
