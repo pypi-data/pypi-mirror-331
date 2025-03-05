@@ -1,0 +1,11 @@
+litepolis_router_database_sqlite/Comments.py,sha256=3InoYQ45WsAY1QaFkxzEdE-_5pUFjJyySePY8mrC4fg,2140
+litepolis_router_database_sqlite/Conversations.py,sha256=fqfPrQXvbGAIovQz2VJFlSu5XsgyEUT2mast7sojpFw,2330
+litepolis_router_database_sqlite/Users.py,sha256=xHGKY1DX40CC7oLPLAUr4dWZTRzoS0NjtIysq3y14V8,1976
+litepolis_router_database_sqlite/__init__.py,sha256=46T7yJt-xjJ41w4avbxzxlBwFdCBem7xP5tvZjVHhCc,68
+litepolis_router_database_sqlite/core.py,sha256=FWa6BKKvaAD2MvPgr_3G5CA55qYNleibDP8fp5EG0Yk,998
+litepolis_router_database_sqlite/utils.py,sha256=u1m-T6Nj7TkkMlgO_cgqwSuGemktidoJx0B_wFaTFpo,539
+litepolis_router_database_sqlite-0.0.1.dist-info/LICENSE,sha256=0iGfShfblp2wHb_qpZLkZIepH12FitU-urnfBuXy1AQ,1065
+litepolis_router_database_sqlite-0.0.1.dist-info/METADATA,sha256=Xa5XBCYCD1JpBStytpKddEoS7bx7FlO1Hke-ta8WPC8,5860
+litepolis_router_database_sqlite-0.0.1.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+litepolis_router_database_sqlite-0.0.1.dist-info/top_level.txt,sha256=OHK7_Th-ZX05YY5UFbKU1Ou-VZFLbz_Bacq1MwL4F34,33
+litepolis_router_database_sqlite-0.0.1.dist-info/RECORD,,
