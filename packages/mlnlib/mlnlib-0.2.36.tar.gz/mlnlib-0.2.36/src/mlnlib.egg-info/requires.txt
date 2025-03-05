@@ -1,0 +1,6 @@
+pandas>=1.4.4
+polars>=0.20.6
+numpy>=1.20.3
+python-igraph>=0.9.9
+networkx>=3.0
+scipy>=1.10.1
