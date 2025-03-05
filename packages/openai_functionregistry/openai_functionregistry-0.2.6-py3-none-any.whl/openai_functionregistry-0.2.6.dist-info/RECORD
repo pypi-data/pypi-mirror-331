@@ -1,0 +1,10 @@
+openai_functionregistry/__init__.py,sha256=4RohEleVVkc17EZgjywu52PLkyyJCPMYv-k4HtQnjQU,358
+openai_functionregistry/client.py,sha256=PE3WWkD3q_jIgpaqKFt9IT2jfhIC2U69aPLUrT6J1UI,6881
+openai_functionregistry/generate_pydantic_model.py,sha256=lhQOsAOwDQooyx-vZ_OTAsvPtd9CAdpQ1CxqgPJ-jRo,2650
+openai_functionregistry/tool_registry.py,sha256=w2xo-I3AwUi1EXmZ6MXQlq0QJwWwK5RbbUjPmG9D1OU,28152
+openai_functionregistry/tool_registry_usage_example.py,sha256=vs8c9NtWb2J8u1Md1i6g_aTQAll1lbQI_yjC70c_nKc,4567
+openai_functionregistry/utils.py,sha256=NJtTjtWy4H2DAVPkhZrtMJvP5U6uEaZ1NuAIElaDyOE,2408
+openai_functionregistry-0.2.6.dist-info/LICENSE,sha256=NYKarzL7n1oP0qOpo6nCB76BFh2j9BcG2Tfx-dFK3GI,1073
+openai_functionregistry-0.2.6.dist-info/METADATA,sha256=BCzoZf4UD6tKqO81BbEFw1OVcT-dES_-ojsm0uny3b4,762
+openai_functionregistry-0.2.6.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+openai_functionregistry-0.2.6.dist-info/RECORD,,
