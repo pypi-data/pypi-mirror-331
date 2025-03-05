@@ -1,0 +1,10 @@
+Metadata-Version: 2.2
+Name: window_functions
+Version: 0.1
+Summary: A package for window functions in tkinter
+Author: silly goose
+Author-email: 
+Requires-Dist: Pillow
+Dynamic: author
+Dynamic: requires-dist
+Dynamic: summary

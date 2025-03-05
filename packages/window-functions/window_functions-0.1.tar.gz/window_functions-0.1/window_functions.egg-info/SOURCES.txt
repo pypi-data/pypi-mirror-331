@@ -1,0 +1,8 @@
+setup.py
+window_functions/__init__.py
+window_functions/main.py
+window_functions.egg-info/PKG-INFO
+window_functions.egg-info/SOURCES.txt
+window_functions.egg-info/dependency_links.txt
+window_functions.egg-info/requires.txt
+window_functions.egg-info/top_level.txt
