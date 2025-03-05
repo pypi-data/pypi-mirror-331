@@ -1,0 +1,20 @@
+Metadata-Version: 2.2
+Name: BlackSpammerBd_Bot
+Version: 0.1
+Summary: A tool to send updates via Telegram based on device logs.
+Home-page: https://github.com/BlackSpammerBd/NETSHIFT
+Author: Shawpon Sp
+Author-email: shawponsp6@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: sqlite3
+Requires-Dist: argparse
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: summary
