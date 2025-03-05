@@ -1,0 +1,129 @@
+Metadata-Version: 2.2
+Name: pyterse
+Version: 0.1.6
+Summary: A Python interface for the TRPX compression algorithm
+Author-Email: Senik Matinyan <matinyan.senik@gmail.com>
+License: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: <3.13,>=3.9
+Description-Content-Type: text/markdown
+
+# Pyterse python package
+
+Next generation TERSE/PROLIX diffraction data compression algorithm
+
+The pyterse python package provides Python bindings for the C++ TERSE/PROLIX(TRPX) compression algorithm scheme ([https://github.com/senikm/trpx](https://github.com/senikm/trpx)).
+
+## Prerequisites
+
+Before using pyterse, ensure your data meets these requirements:
+- Signed or unsigned integral type data
+- Grayscale data
+- Preferably has high dynamic range
+
+## Installation
+
+Create a virtual environment:
+```bash
+conda create -n pyterse python pip numpy pillow
+```
+
+Install the package:
+```python
+pip install pyterse
+```
+
+## Usage guide
+
+### Basic operations
+
+#### Creating a Terse object
+
+There are multiple ways to create a Terse object:
+
+```python
+import pyterse
+
+# Empty constructor
+terse = pyterse.Terse()
+
+# From NumPy array
+terse = pyterse.Terse(data)  # data can be nD NumPy array or slice
+
+# With custom compression mode
+terse = pyterse.Terse(data, pyterse.TerseMode.SIGNED)  # Available modes: SIGNED, UNSIGNED, SMALL_UNSIGNED, DEFAULT
+```
+
+#### Inserting and managing data
+
+Add data to an existing Terse object:
+```python
+# Append data at the end
+terse.push_back(data)  # Data must match existing shape (terse.dim())
+
+# Insert at specific position
+terse.insert(pos, data)  # pos is the frame index
+```
+
+#### File operations
+
+Save and load compressed data:
+```python
+# Save to file
+terse.save('filename.trpx')
+
+# Load from file
+loaded_terse = pyterse.Terse.load('filename.trpx')
+```
+
+#### Data Decompression
+
+Decompress data:
+```python
+# Decompress all data
+decompressed_data = terse.prolix()
+
+# Decompress specific frame
+frame = terse.at(0)
+decompressed_frame = frame.prolix()
+```
+
+#### Metadata Management
+
+```python
+# Set metadata for a frame
+terse.set_metadata(frame, "metadata string")
+
+# Get metadata from a frame
+metadata = terse.metadata(frame)
+```
+
+#### Utility Methods
+
+```python
+# Dimensions of one frame
+terse.dim()
+ 
+# Data information
+terse.size              # Number of elements per frame           
+terse.number_of_frames  # Number of frames
+terse.number_of_bytes   # Size in bytes of compressed data
+terse.bits_per_val      # Bits used per value
+terse.is_signed         # Whether data is signed
+
+# Data management
+terse.erase(pos)          # Remove frame at position
+terse.shrink_to_fit()     # Optimize memory usage
+
+# Compression settings
+terse.set_block_size(size)  # Set compression block size (before adding frames)
+terse.set_fast(bool)        # Toggle fast compression mode
+terse.set_small(bool)       # Toggle small data optimization
+terse.set_dop(value)        # Set degree of parallelism (0.0 to 1.0)
+```
