@@ -1,0 +1,3 @@
+[console_scripts]
+goof = pueblo_goof.cli:cli
+rapporto = rapporto.cli:cli
