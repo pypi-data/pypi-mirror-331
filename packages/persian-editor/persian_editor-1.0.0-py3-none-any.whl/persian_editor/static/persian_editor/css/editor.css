@@ -1,0 +1,72 @@
+/* استایل کلی کانتینر */
+.persian-editor-container {
+    border: 1px solid #ccc;
+    padding: 5px;
+    background: #f8f8f8;
+    position: relative;
+}
+
+/* استایل نوار ابزار */
+.editor-toolbar {
+    margin-bottom: 5px;
+    background: #e8e8e8;
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: right;
+}
+.editor-toolbar button {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 5px 8px;
+    margin: 2px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.editor-toolbar button:hover {
+    background: #dcdcdc;
+}
+.editor-toolbar input[type="color"] {
+    margin: 2px;
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    border: none;
+    padding: 0;
+}
+
+/* استایل محتوای ویرایشگر */
+.editor-content {
+    min-height: 200px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: #fff;
+    font-family: Tahoma, sans-serif;
+    font-size: 14px;
+    overflow: auto;
+}
+.editor-content[data-source-view="true"] {
+    font-family: monospace;
+}
+
+/* استایل تصاویر درج شده */
+.editor-content img {
+    max-width: 100%;
+    height: auto;
+    margin: 5px 0;
+}
+
+/* حالت تمام صفحه */
+.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.fullscreen .editor-content {
+    height: calc(100% - 50px);
+}
