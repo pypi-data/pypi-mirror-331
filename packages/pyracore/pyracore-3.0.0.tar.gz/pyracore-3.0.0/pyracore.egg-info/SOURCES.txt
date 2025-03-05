@@ -1,0 +1,25 @@
+README.md
+setup.py
+core/ utils.py
+core/__init__.py
+core/client.py
+core/encryption.py
+core/server.py
+exploits/ smb_exploit.py
+exploits/__init__.py
+exploits/rdp_exploit.py
+exploits/ttp_exploit.py
+modules/__init__.py
+modules/anti_forensics.py
+modules/clipboard.py
+modules/credentials.py
+modules/file_operations.py
+modules/keylogger.py
+modules/network.py
+modules/system_info.py
+pyracore.egg-info/PKG-INFO
+pyracore.egg-info/SOURCES.txt
+pyracore.egg-info/dependency_links.txt
+pyracore.egg-info/requires.txt
+pyracore.egg-info/top_level.txt
+tests/test_encryption.py
