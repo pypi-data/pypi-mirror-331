@@ -1,0 +1,9 @@
+http_client/__init__.py,sha256=CIJwLaOWOazesGdzMWQB6G-2GHUQ15TzlY_UhzDB2UQ,148
+http_client/http_client.py,sha256=AY_E5GHtFfM-DzC3Zy_8I1-fx6vjgv0eAdchgEERJ6E,3786
+web_parser/__init__.py,sha256=4WqlGhD62lvdcXzLp8r78cezULLf-M6p9zTrKmSbePQ,145
+web_parser/web_parser.py,sha256=dGXfy9hgVpSla3TDyLC18VrLN1R1kaRGBb72HCV8MDU,10593
+vek_parser-0.1.4.dist-info/LICENSE,sha256=S2tM_W60AmBWJ12PzdkeRM7qQpQ4tFXLPsvhG2adXVU,1063
+vek_parser-0.1.4.dist-info/METADATA,sha256=ldk0LRp8-mPSnSk6nwEI5pujs_UD2OFqZDS62YbMGII,8138
+vek_parser-0.1.4.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+vek_parser-0.1.4.dist-info/top_level.txt,sha256=uhYsFhe7pSJSHUUt3EaROhxh_B9TtvWd7eZH2OooMOw,23
+vek_parser-0.1.4.dist-info/RECORD,,
