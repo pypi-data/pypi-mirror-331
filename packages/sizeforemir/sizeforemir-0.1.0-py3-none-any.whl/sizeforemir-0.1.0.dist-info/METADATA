@@ -1,0 +1,28 @@
+Metadata-Version: 2.2
+Name: sizeforemir
+Version: 0.1.0
+Summary: Boy ve ayak uzunluğuna göre özel hesaplama yapan bir kütüphane.
+Author: Emir
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: classifier
+Dynamic: requires-python
+Dynamic: summary
+
+# PyCockByEmir
+
+Bu kütüphane, boy uzunluğu ve ayak uzunluğu ile özel hesaplamalar yapar. :D
+
+## Kurulum
+
+```python
+from sizeforemir import cocksize_formula
+
+result = cocksize_formula(180, 25)
+print(result)
