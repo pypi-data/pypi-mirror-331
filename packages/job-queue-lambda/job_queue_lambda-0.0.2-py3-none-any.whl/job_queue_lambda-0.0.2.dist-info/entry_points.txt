@@ -1,0 +1,3 @@
+[console_scripts]
+jq-lambda=job_queue_lambda.main:main
+
