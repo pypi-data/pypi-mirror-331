@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 282.31262 128.83298"
+   version="1.1"
+   id="svg154"
+   sodipodi:docname="spt-analysis-logo-v2.svg"
+   width="282.31262"
+   height="128.83298"
+   inkscape:version="1.2.1 (9c6d41e4, 2022-07-14)"
+   inkscape:export-filename="spt-analysis-logo-v2.pdf"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs158" />
+  <sodipodi:namedview
+     id="namedview156"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="0.95549868"
+     inkscape:cx="-82.156053"
+     inkscape:cy="76.399896"
+     inkscape:window-width="1309"
+     inkscape:window-height="456"
+     inkscape:window-x="0"
+     inkscape:window-y="37"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg154" />
+  <!-- Main circular tracking path -->
+  <circle
+     cx="63.134365"
+     cy="65.463058"
+     r="60"
+     fill="none"
+     stroke="#e0e0e0"
+     stroke-width="1"
+     id="circle132" />
+  <!-- Dynamic particle tracks -->
+  <path
+     d="m 3.1343641,65.46306 q 59.9999999,-80 119.9999959,0"
+     fill="none"
+     stroke="#2196f3"
+     stroke-width="3"
+     id="path134" />
+  <path
+     d="m 3.1343641,65.46306 q 59.9999999,80 119.9999959,0"
+     fill="none"
+     stroke="#2196f3"
+     stroke-width="3"
+     id="path136" />
+  <!-- Central particle -->
+  <circle
+     cx="63.134365"
+     cy="65.463058"
+     r="12"
+     fill="#1565c0"
+     id="circle138" />
+  <circle
+     cx="63.134365"
+     cy="65.463058"
+     r="8"
+     fill="#90caf9"
+     id="circle140" />
+  <!-- Text elements -->
+  <text
+     x="163.13437"
+     y="55.463062"
+     font-family="Arial, sans-serif"
+     font-size="48px"
+     font-weight="900"
+     fill="#1565c0"
+     id="text142">SPT</text>
+  <text
+     x="163.13437"
+     y="95.463058"
+     font-family="Arial, sans-serif"
+     font-size="24px"
+     font-weight="300"
+     fill="#424242"
+     id="text144">Analysis</text>
+  <!-- Abstract tracking elements -->
+  <circle
+     cx="233.13437"
+     cy="40.463062"
+     r="4"
+     fill="#2196f3"
+     id="circle146" />
+  <circle
+     cx="253.13437"
+     cy="60.463062"
+     r="4"
+     fill="#2196f3"
+     id="circle148" />
+  <circle
+     cx="273.13437"
+     cy="80.463058"
+     r="4"
+     fill="#2196f3"
+     id="circle150" />
+  <path
+     d="m 233.13436,40.46306 20,20 20,20"
+     stroke="#2196f3"
+     stroke-width="2"
+     stroke-dasharray="2, 2"
+     id="path152" />
+</svg>
