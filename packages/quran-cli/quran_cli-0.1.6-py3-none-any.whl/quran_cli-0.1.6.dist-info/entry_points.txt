@@ -1,0 +1,3 @@
+[console_scripts]
+quran-cli=quran_cli.main:app
+
