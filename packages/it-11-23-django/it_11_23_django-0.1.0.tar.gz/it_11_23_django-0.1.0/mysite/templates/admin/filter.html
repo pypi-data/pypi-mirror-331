@@ -1,0 +1,17 @@
+{% load static %}
+{% load i18n %}
+
+<link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+<details data-filter-title="{{ title }}" open>
+  <summary>
+    {% blocktranslate with filter_title=title %} By {{ filter_title }} {% endblocktranslate %}
+  </summary>
+  <ul class="menu menu-vertical bg-base-200 rounded-box">
+    {% for choice in choices %}
+    <li{% if choice.selected %} class="selected" {% endif %}>
+      <a href="{{ choice.query_string|iriencode }}">{{ choice.display }}</a></li>
+      {% endfor %}
+  </ul>
+</details>

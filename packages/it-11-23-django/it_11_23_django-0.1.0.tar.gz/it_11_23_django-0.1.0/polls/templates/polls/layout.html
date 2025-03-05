@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static 'polls/global.css' %}">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  {% block 'css' %}{% endblock %}
+  <title>{% block 'title' %}{% endblock %}</title>
+</head>
+
+<body>
+  <div class="navbar bg-base-100 shadow-sm">
+    <div class="flex-1">
+      <a class="btn btn-ghost text-xl">Polls</a>
+    </div>
+    <div class="flex-none">
+      <ul class="menu menu-horizontal px-1">
+        <li>
+          <a href="{% url "polls:index" %}">To polls list</a>
+        </li>
+        <li>
+          <a href="{% url "polls:index" %}">To polls list</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  {% block 'main' %}{% endblock %}
+  {% block 'js' %}{% endblock %}
+</body>
+
+</html>
