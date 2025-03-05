@@ -1,0 +1,1 @@
+from tableserializer.recipe import SerializationRecipe
