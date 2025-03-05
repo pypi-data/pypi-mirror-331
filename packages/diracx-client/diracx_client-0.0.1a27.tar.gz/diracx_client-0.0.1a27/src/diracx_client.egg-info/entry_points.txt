@@ -1,0 +1,3 @@
+[diracx]
+aio_client_class = diracx.client.generated.aio._client:Dirac
+client_class = diracx.client.generated._client:Dirac
