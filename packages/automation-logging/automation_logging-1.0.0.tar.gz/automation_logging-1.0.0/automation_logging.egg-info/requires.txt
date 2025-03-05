@@ -1,0 +1,12 @@
+
+[all]
+selenium
+pyautogui
+
+[pyautogui]
+pyautogui
+pyscreeze
+pillow
+
+[selenium]
+selenium
