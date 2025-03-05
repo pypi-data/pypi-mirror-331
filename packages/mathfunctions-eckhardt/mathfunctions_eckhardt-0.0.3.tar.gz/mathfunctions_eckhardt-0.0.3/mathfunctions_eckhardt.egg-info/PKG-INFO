@@ -1,0 +1,19 @@
+Metadata-Version: 2.2
+Name: mathfunctions-eckhardt
+Version: 0.0.3
+Summary: Um repositorio para fins academicos
+Author: Guilherme Eckhardt
+Author-email: eckhardt.gui@gmail.com
+License: MIT License
+Keywords: multmat
+Description-Content-Type: text/markdown
+License-File: LICENCE
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: keywords
+Dynamic: license
+Dynamic: summary
+
+# Um repositorio para fins academicos
