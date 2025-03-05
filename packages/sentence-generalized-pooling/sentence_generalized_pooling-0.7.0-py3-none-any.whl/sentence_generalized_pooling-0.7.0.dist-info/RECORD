@@ -1,0 +1,7 @@
+sentence_generalized_pooling/__init__.py,sha256=ZeJLY0ALiiErTshoSCIf04cnZiQeCOaVFfaWiYjAU_4,321
+sentence_generalized_pooling/generalized_sentence_transformer_maker.py,sha256=_9JTtQa9_PUpurl1Ke9yB5lNJ29Vq68ebeejqKYeR9Y,2105
+sentence_generalized_pooling/multihead_generalized_pooling.py,sha256=LK1mDioR8DYgOQlJjTbARzXbOn4NbYXHyknQPUPYOnU,14322
+sentence_generalized_pooling-0.7.0.dist-info/METADATA,sha256=bnFYUWT4bEnZbwe-yKr6376hoF0W1mbkC2M74scsgqg,2594
+sentence_generalized_pooling-0.7.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+sentence_generalized_pooling-0.7.0.dist-info/top_level.txt,sha256=ieAAUBtiaRlOTYD5PbbEutG7geEqJgAEHKRprBnCsEA,29
+sentence_generalized_pooling-0.7.0.dist-info/RECORD,,
