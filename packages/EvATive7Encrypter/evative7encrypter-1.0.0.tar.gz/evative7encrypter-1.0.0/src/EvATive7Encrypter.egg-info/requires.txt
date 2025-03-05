@@ -1,0 +1,12 @@
+
+[build]
+build
+
+[dev]
+black
+isort
+flake8
+pytest
+pre-commit
+pytest-console-scripts
+pytest-cov
