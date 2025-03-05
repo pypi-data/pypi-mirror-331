@@ -1,0 +1,2 @@
+[ofxstatement]
+paypal-convert = ofxstatement.plugins.paypal:PayPalPlugin
