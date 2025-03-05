@@ -1,0 +1,10 @@
+Metadata-Version: 2.2
+Name: Neurocore
+Version: 0.0.1
+Requires-Python: >=3.6
+Requires-Dist: numpy
+Requires-Dist: scikit-learn
+Requires-Dist: pandas
+Requires-Dist: pybind11
+Dynamic: requires-dist
+Dynamic: requires-python
