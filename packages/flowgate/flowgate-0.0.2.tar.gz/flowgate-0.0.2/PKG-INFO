@@ -1,0 +1,29 @@
+Metadata-Version: 2.2
+Name: flowgate
+Version: 0.0.2
+Summary: The kafka client we all wish we had
+Home-page: https://github.com/nf1s/flowgate
+Author: nf1s
+Author-email: nf1s <ahmed.nafies@gmail.com>
+License: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: confluent-kafka[avro]==2.*
+Requires-Dist: flake8>=7.1.2
+Requires-Dist: flake8-black>=0.3.6
+Requires-Dist: flake8-eradicate>=1.5.0
+Requires-Dist: flake8-isort>=6.1.2
+Requires-Dist: mypy>=1.15.0
+Requires-Dist: opentelemetry-api==1.27.0
+Requires-Dist: opentelemetry-semantic-conventions==0.48b0
+Requires-Dist: pdbpp>=0.10.3
+Requires-Dist: pip>=25.0.1
+Requires-Dist: pip-tools>=7.4.1
+Requires-Dist: pytest>=8.3.5
+Requires-Dist: pytest-coverage>=0.0
+Requires-Dist: pytest-icdiff>=0.9
+Requires-Dist: pytest-mock>=3.14.0
+Requires-Dist: structlog>=25.1.0
+Requires-Dist: twine>=6.1.0
+Dynamic: author
+Dynamic: home-page

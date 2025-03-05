@@ -1,0 +1,17 @@
+confluent-kafka[avro]==2.*
+flake8>=7.1.2
+flake8-black>=0.3.6
+flake8-eradicate>=1.5.0
+flake8-isort>=6.1.2
+mypy>=1.15.0
+opentelemetry-api==1.27.0
+opentelemetry-semantic-conventions==0.48b0
+pdbpp>=0.10.3
+pip>=25.0.1
+pip-tools>=7.4.1
+pytest>=8.3.5
+pytest-coverage>=0.0
+pytest-icdiff>=0.9
+pytest-mock>=3.14.0
+structlog>=25.1.0
+twine>=6.1.0
