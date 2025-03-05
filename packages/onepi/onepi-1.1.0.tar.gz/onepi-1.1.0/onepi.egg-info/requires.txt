@@ -1,0 +1,4 @@
+spidev
+matplotlib
+rpi-lgpio
+setproctitle
