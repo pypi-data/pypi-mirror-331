@@ -1,0 +1,15 @@
+The folder 'src' has been created. It will be used to store all the code of the game.
+The folder already has two files:
+- server.py is the file that have to be executed when you run a server.
+- game.py is the file that have to be executed when you run an offline game, or an online game (after having launched a server).
+
+Both must contain the execution of the run method of a game or server instance, like shown in the template.
+To create a game, create multiple GamePhases linked together with GameTransitions.
+Each GamePhase and ServerPhase must have at leats four methods:
+- The start method (that might include several arguments). This method is called at the beginning of the phase and initialize it.
+- The next method (with no argument). This method is callded at every loop iteration, and must return one of those:
+    - pygaming.NO_NEXT if this is the end of the phase and of the game
+    - '' (empty string) if the phase should still going
+    - the name of the new phase if this phase is over.
+- The end method (with no argument) that is called once the phase is over, before the transition or the closing of the game.
+- The _update method that is called at every loop iteration and is used to update the phase (the game variables and object positions)

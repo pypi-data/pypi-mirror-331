@@ -1,0 +1,23 @@
+{
+    "controls": {
+        "playground": {
+            "K_LEFT": "left",
+            "K_RIGHT": "right",
+            "K_ESCAPE": "pause"
+        },
+        "lobby": {}
+    },
+    "current_language": "fr_FR", 
+    "fullscreen": false,
+    "volumes": {
+        "main": 1,
+        "music": 1,
+        "sounds": {
+            "speeches": 1,
+            "classic": 0.5,
+            "not classic": 0.8
+        }
+    },
+    "antialias": true,
+    "cost_threshold": 200000
+}
