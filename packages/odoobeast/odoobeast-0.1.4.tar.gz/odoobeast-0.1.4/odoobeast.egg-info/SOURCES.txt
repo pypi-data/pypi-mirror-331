@@ -1,0 +1,7 @@
+README.md
+setup.py
+odoobeast.egg-info/PKG-INFO
+odoobeast.egg-info/SOURCES.txt
+odoobeast.egg-info/dependency_links.txt
+odoobeast.egg-info/requires.txt
+odoobeast.egg-info/top_level.txt
