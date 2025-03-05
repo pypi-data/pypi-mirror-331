@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "almalibri_client"
+version = "2.1.0"
+dependencies = [
+    "requests>=2.31.0",
+    "click",
+    "pandas",
+]
+authors = [
+  { name="Claudio Tubertini", email="info@almalibri.it" },
+]
+description = "A client for AlmaLibri API"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Development Status :: 5 - Production/Stable",
+]
+
+[project.scripts]
+alma_api = "alma_api:cli"
+
+[project.urls]
+Homepage = "https://github.com/claudiotubertini/api_almalibri"
+Issues = "https://github.com/claudiotubertini/api_almalibri/issues"

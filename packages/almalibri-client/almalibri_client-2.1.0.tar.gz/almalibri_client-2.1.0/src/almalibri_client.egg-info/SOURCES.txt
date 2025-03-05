@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/__init__.py
+src/alma_api.py
+src/almalibri_client.egg-info/PKG-INFO
+src/almalibri_client.egg-info/SOURCES.txt
+src/almalibri_client.egg-info/dependency_links.txt
+src/almalibri_client.egg-info/entry_points.txt
+src/almalibri_client.egg-info/requires.txt
+src/almalibri_client.egg-info/top_level.txt
