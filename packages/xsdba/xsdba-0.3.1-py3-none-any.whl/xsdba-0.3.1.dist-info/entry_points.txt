@@ -1,0 +1,3 @@
+[console_scripts]
+xsdba=xsdba.cli:app
+
