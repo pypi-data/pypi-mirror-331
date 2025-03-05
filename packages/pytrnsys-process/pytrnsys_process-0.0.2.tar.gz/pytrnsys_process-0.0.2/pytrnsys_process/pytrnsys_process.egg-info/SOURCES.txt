@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+pytrnsys_process/pytrnsys_process.egg-info/PKG-INFO
+pytrnsys_process/pytrnsys_process.egg-info/SOURCES.txt
+pytrnsys_process/pytrnsys_process.egg-info/dependency_links.txt
+pytrnsys_process/pytrnsys_process.egg-info/requires.txt
+pytrnsys_process/pytrnsys_process.egg-info/top_level.txt
+requirements/release-3rd-party.txt
