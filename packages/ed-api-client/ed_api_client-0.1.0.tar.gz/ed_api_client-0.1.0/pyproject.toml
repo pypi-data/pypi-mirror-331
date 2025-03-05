@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "ed-api-client"
+version = "0.1.0"
+description = "A client for interacting with the Ed LMS"
+authors = ["David Milne <d.n.milne@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "ed_api_client"}]
+
+[tool.poetry.dependencies]
+python = ">=3.6, <4.0"
+requests = "^2.31.0"
+DateTime = "^5.1"
+dataclasses = "0.6"
+pylcs  = "^0.1.1"
+python-dateutil = "^2.9.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.3.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
