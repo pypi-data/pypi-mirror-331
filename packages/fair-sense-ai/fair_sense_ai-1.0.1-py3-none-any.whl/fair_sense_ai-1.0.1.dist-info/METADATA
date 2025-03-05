@@ -1,0 +1,143 @@
+Metadata-Version: 2.1
+Name: fair_sense_ai
+Version: 1.0.1
+Summary: An AI-driven platform for analyzing bias in text and images.
+Home-page: https://vectorinstitute.github.io/FairSense-AI/
+Author: Shaina Raza, Phd
+Author-email: shaina.raza@torontomu.ca
+License: Creative Commons license
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: torch
+Requires-Dist: transformers
+Requires-Dist: Pillow
+Requires-Dist: pandas
+Requires-Dist: gradio
+Requires-Dist: plotly
+Requires-Dist: pytesseract
+Requires-Dist: opencv-python
+Requires-Dist: numpy
+Requires-Dist: sentence-transformers
+Requires-Dist: ollama
+Requires-Dist: faiss-cpu
+
+
+
+# **Fairsense-AI**
+
+Fairsense-AI is a cutting edge, an AI-driven tool designed to analyze bias in text and visual content with sustainability in mind. It also offers a platform for risk identification and risk Mitigation. With a strong emphasis on Bias Identification, Risk Management, and Sustainability, Fairsense-AI helps build trustworthy AI systems.
+
+---
+
+## **Installation and Setup**
+
+### **Step 1: Install Fairsense-AI**
+
+Install the Fairsense-AI package using pip:
+
+```bash
+pip install fair-sense-ai
+```
+
+---
+
+### Example Usage Code
+
+
+#### Analyze Text for Bias
+
+```python
+from fairsenseai.analysis.bias import analyze_text_for_bias
+
+# Example input text to analyze for bias
+text_input = "Men are naturally better than women in decision-making."
+
+# Analyze the text for bias
+highlighted_text, detailed_analysis = analyze_text_for_bias(text_input, use_summarizer=True)
+
+# Print the analysis results
+print("Highlighted Text:", highlighted_text)
+print("Detailed Analysis:", detailed_analysis)
+```
+
+#### Analyze Image for Bias
+
+```python
+import requests
+from PIL import Image
+from io import BytesIO
+from IPython.display import display, HTML
+from fairsenseai.analysis.bias import analyze_image_for_bias
+
+# URL of the image to analyze.
+image_url = "https://ichef.bbci.co.uk/news/1536/cpsprodpb/BB60/production/_115786974_d6bbf591-ea18-46b9-821b-87b8f8f6006c.jpg"
+
+# Fetch and load the image from the URL.
+response = requests.get(image_url)
+if response.status_code == 200:
+    image = Image.open(BytesIO(response.content))
+    small_image = image.copy()
+    small_image.thumbnail((200, 200))
+
+    # Display the resized image and analyze for bias.
+    print("Original Image (Resized):")
+    display(small_image)
+    highlighted_caption, image_analysis = analyze_image_for_bias(image, use_summarizer=True)
+
+    # Print and display analysis results.
+    print("\nHighlighted Caption:\n", highlighted_caption)
+    print("\nImage Analysis:\n", image_analysis)
+    if highlighted_caption:
+        display(HTML(highlighted_caption))
+else:
+    print(f"Failed to fetch the image. Status code: {response.status_code}")
+```
+
+#### AI Risk Management 
+```python
+from fairsenseai.analysis.risk_assessment import analyze_text_for_risks
+
+# Get insights and risk assessment on selected topics
+scenario = "We're developing a facial recognition system for public spaces"
+highlighted_risks, csv_path = analyze_text_for_risks(
+    scenario,
+    top_k_risk=3,
+    top_k_ai_rmf=2
+    )
+
+# Print the result and saved CSV path
+print("Risks:", highlighted_risks)
+print(f"Results saved to: {csv_path}")
+```
+
+#### Start Server with Gradio Interface
+
+```python
+from fairsenseai.app import start_server
+
+if __name__ == "__main__":
+    start_server()
+```
+
+### Links to Resources
+
+- [Google Colab Notebook for Fairsense-AI](https://colab.research.google.com/drive/1en8JtZTAIa5MuV5OZWYNteYl95Ql9xy7?usp=sharing)
+- [Google Drive Folder with Test Data Samples](https://drive.google.com/drive/folders/1WVtoLBcaQhAElRFSqn3FWdDBLBO4Nsxd?usp=sharing)
+
+This setup includes the package information, usage examples, and references to additional resources, which should help in understanding and utilizing the Fairsense-AI capabilities effectively.
+
+
+
+---
+
+<b>Contact:</b><br>
+Dr. Shaina Raza<br>
+Applied ML Scientist, Responsible AI<br>
+<b>Email:</b> <a href="mailto:shaina.raza@vectorinstitute.ai">shaina.raza@vectorinstitute.ai</a>, <a href="mailto:shaina.raza@torontomu.ca">shaina.raza@torontomu.ca</a>
+
+---
+
