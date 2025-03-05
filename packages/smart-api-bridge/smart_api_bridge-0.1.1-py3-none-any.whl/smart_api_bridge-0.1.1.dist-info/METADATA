@@ -1,0 +1,21 @@
+Metadata-Version: 2.2
+Name: smart_api_bridge
+Version: 0.1.1
+Summary: A FastAPI-based CRUD API generator for MySQL databases
+Author: Venkat.R
+Author-email: ai.venkat.r@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+License-File: LICENSE
+Requires-Dist: fastapi
+Requires-Dist: sqlalchemy
+Requires-Dist: pymysql
+Requires-Dist: uvicorn
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
