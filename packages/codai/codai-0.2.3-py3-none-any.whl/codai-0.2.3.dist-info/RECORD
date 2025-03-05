@@ -1,0 +1,14 @@
+codai/__init__.py,sha256=yJBoI5b7as4-pMIc56ezbn7LeBLUbymiLYcEl_hWUKY,63
+codai/bot.py,sha256=DapE5DRgEyn5RTyl2EpztnhJHpF7fZnOXKVyL9Bomp0,7420
+codai/codai.py,sha256=NcdD_XUNdHmvzaGj4ozUPVgST65tZL8xBB5zyDrDaSY,379
+codai/hci.py,sha256=bc2SRSPIgX4NbJ_mlleOUzRvoASbu1b0Nq0xszva300,3741
+codai/repl.py,sha256=oAjCGvp6n-RpAaoxqKNJmqQShHcDtzy0Q1QqHAGK0i4,3512
+codai/utils.py,sha256=tCmCsjjqAHH1w09o5iYT1N14qWhC731ruYR1aEiIDtY,1244
+codai/cli/__init__.py,sha256=pmrO1gi9cEnOY5XxuSMpCTknJ2avw-gjpNMizmwvwq4,50
+codai/cli/common.py,sha256=o4h9Cg0m7N9T9fJnSuTO7--PXsUnme3CuROzli0IGRo,168
+codai/cli/dev.py,sha256=NhxVAxofZboV-7z18MLzjuEaCtYtZrxEd_vtrRZO1QE,403
+codai/cli/main.py,sha256=SdDS7vQpxcl851AdUiylXO4cPECXyTMrMT56Z1a9W7k,1316
+codai-0.2.3.dist-info/METADATA,sha256=QmevdNnjrSyPiA2xMz98ZriCywlbpxpbwEhhVzOirFw,1055
+codai-0.2.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+codai-0.2.3.dist-info/entry_points.txt,sha256=SRU7Czr2Gy_31v61EkNXGLPWCiG5gy4z6qJ20GUL5i8,40
+codai-0.2.3.dist-info/RECORD,,
