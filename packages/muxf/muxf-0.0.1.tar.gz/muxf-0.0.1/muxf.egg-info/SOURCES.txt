@@ -1,0 +1,10 @@
+MANIFEST.in
+requirements.txt
+setup.py
+version.json
+muxf/__init__.py
+muxf.egg-info/PKG-INFO
+muxf.egg-info/SOURCES.txt
+muxf.egg-info/dependency_links.txt
+muxf.egg-info/requires.txt
+muxf.egg-info/top_level.txt
