@@ -1,0 +1,12 @@
+kiowaplatform/__init__.py,sha256=8CovISIyKZUdtKX-HLqyexVixiqBu8TQoY_h91IdYiA,224
+kiowaplatform/audit.py,sha256=DPt9ufAcLbo0E1diRMACOL8OrUxLByslRuOcIDsb6kI,2155
+kiowaplatform/datawrangling.py,sha256=9PxS8aNyPa6xivj-0cUM9DGwGd7IB_TzPCDn4J_o0HQ,14113
+kiowaplatform/platform.py,sha256=YKJDQrh3LvyDYqBbJZi5iv7XVITRad38dmdos5yOhRc,1265
+kiowaplatform/resource.py,sha256=pKnWl0iEM38BXGBBalMJ8n0NTojwX9sdNMzoux8-0sc,1485
+kiowaplatform/resource_fridge.py,sha256=Emzu0iZYs_dKFo4qeHAWWky2fJ8m3yI-WqmNhAMp7pY,3041
+kiowaplatform/test_datawrangling.py,sha256=OPX9XyoC-0pv2eYxHYpsVzIlmsXgUeNZuf6oNW9g5to,19124
+kiowaplatform/test_platform.py,sha256=tDaDgW_QJpC_kSXHQ6kL3NSWOsg4999pSSWopSgptkY,1796
+kiowaplatform-0.0.11.dist-info/METADATA,sha256=d_nCsaTHIKSB_px5N52hQ5dPVFdNRfLKv-CFDPFB6DA,400
+kiowaplatform-0.0.11.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+kiowaplatform-0.0.11.dist-info/top_level.txt,sha256=J3j82NtUJxt_Opuu4XhyK85RJOhaI2qONue-TAS-8oM,14
+kiowaplatform-0.0.11.dist-info/RECORD,,
