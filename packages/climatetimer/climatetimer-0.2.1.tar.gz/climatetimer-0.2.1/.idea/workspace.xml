@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="37d9b95c-68d4-4505-82bd-4bf26da64781" name="Changes" comment="add import the ClimateTimer class">
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;cameraink&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/cameraink/climatetimer.git&quot;,
+    &quot;accountId&quot;: &quot;7247a042-c710-4e3a-87ee-12f6a95e4759&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2t92YKhkHYJhtRZCvd9IQTaH52v" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.search_benchmark.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-PY-243.25659.43" />
+        <option value="bundled-python-sdk-181015f7ab06-4df51de95216-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.25659.43" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="37d9b95c-68d4-4505-82bd-4bf26da64781" name="Changes" comment="" />
+      <created>1739750016114</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1739750016114</updated>
+      <workItem from="1739750017155" duration="1457000" />
+      <workItem from="1739919747985" duration="7715000" />
+      <workItem from="1739955740566" duration="23060000" />
+      <workItem from="1740434510334" duration="7592000" />
+      <workItem from="1740749812295" duration="2071000" />
+      <workItem from="1740793177660" duration="2973000" />
+    </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1739954993240</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1739954993240</updated>
+    </task>
+    <task id="LOCAL-00002" summary="added readme file">
+      <option name="closed" value="true" />
+      <created>1739973362064</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1739973362064</updated>
+    </task>
+    <task id="LOCAL-00003" summary="ruff reformatting">
+      <option name="closed" value="true" />
+      <created>1739973383594</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1739973383594</updated>
+    </task>
+    <task id="LOCAL-00004" summary="bug fix">
+      <option name="closed" value="true" />
+      <created>1739973393126</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1739973393126</updated>
+    </task>
+    <task id="LOCAL-00005" summary="updated API for clarity">
+      <option name="closed" value="true" />
+      <created>1740132947734</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1740132947734</updated>
+    </task>
+    <task id="LOCAL-00006" summary="updated version number">
+      <option name="closed" value="true" />
+      <created>1740132959246</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1740132959246</updated>
+    </task>
+    <task id="LOCAL-00007" summary="updated description with new API">
+      <option name="closed" value="true" />
+      <created>1740132968787</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1740132968787</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Added info description as constants">
+      <option name="closed" value="true" />
+      <created>1740132991956</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1740132991956</updated>
+    </task>
+    <task id="LOCAL-00009" summary="minor change">
+      <option name="closed" value="true" />
+      <created>1740142468402</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1740142468402</updated>
+    </task>
+    <task id="LOCAL-00010" summary="minor change">
+      <option name="closed" value="true" />
+      <created>1740434451549</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1740434451549</updated>
+    </task>
+    <task id="LOCAL-00011" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1740434609929</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1740434609929</updated>
+    </task>
+    <task id="LOCAL-00012" summary="added jupyterlab">
+      <option name="closed" value="true" />
+      <created>1740436030939</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1740436030939</updated>
+    </task>
+    <task id="LOCAL-00013" summary="re-run notebook">
+      <option name="closed" value="true" />
+      <created>1740436070457</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1740436070457</updated>
+    </task>
+    <task id="LOCAL-00014" summary="add import the ClimateTimer class">
+      <option name="closed" value="true" />
+      <created>1741104784237</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1741104784237</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added readme file" />
+    <MESSAGE value="ruff reformatting" />
+    <MESSAGE value="bug fix" />
+    <MESSAGE value="updated API for clarity" />
+    <MESSAGE value="updated version number" />
+    <MESSAGE value="updated description with new API" />
+    <MESSAGE value="Added info description as constants" />
+    <MESSAGE value="minor change" />
+    <MESSAGE value="initial commit" />
+    <MESSAGE value="added jupyterlab" />
+    <MESSAGE value="re-run notebook" />
+    <MESSAGE value="add import the ClimateTimer class" />
+    <option name="LAST_COMMIT_MESSAGE" value="add import the ClimateTimer class" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/climatetimer$search_benchmark.coverage" NAME="search_benchmark Coverage Results" MODIFIED="1740411542800" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
+  </component>
+</project>
