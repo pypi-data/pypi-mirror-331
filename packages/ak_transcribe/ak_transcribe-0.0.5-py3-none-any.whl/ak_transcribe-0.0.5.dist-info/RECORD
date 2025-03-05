@@ -1,0 +1,10 @@
+ak_transcribe/__init__.py,sha256=JOkgWztH-ZxLDSzDYhXNcnoudR63in2i1FTN5LiO1Ao,1548
+ak_transcribe/console.py,sha256=EttvSKi1YCwz26uz1ffMfp_uGVjZHLV_5juF5C-xid0,57
+ak_transcribe/converter.py,sha256=p9tcSAeKCMuhojfTqoXT7nMJ0CSrQdKZsMQRLkmbxls,624
+ak_transcribe/filehandler.py,sha256=RDLeTmDBO9Bvh5peFZ5JXvvGYa8opean03SyiMhwvR4,3026
+ak_transcribe/transcriber.py,sha256=DT7ms63MsA3jxnOjE62TO_fISiZTY9Lab3-THtPM3r0,8173
+ak_transcribe/utils/config_parser.py,sha256=K3PjswIRDulkJj513ECUWFiY1i_1qBy2G1rjbp3o9FE,1211
+ak_transcribe-0.0.5.dist-info/LICENSE,sha256=k0P1sbYupRWlxoESvbYq2UzoMW6MXA84LltqR-4mEo4,17096
+ak_transcribe-0.0.5.dist-info/WHEEL,sha256=CpUCUxeHQbRN5UGRQHYRJorO5Af-Qy_fHMctcQ8DSGI,82
+ak_transcribe-0.0.5.dist-info/METADATA,sha256=kSPGVHxClED4btlDpoduhsiYZKkLNM-5BcHsplIDUa0,2765
+ak_transcribe-0.0.5.dist-info/RECORD,,
