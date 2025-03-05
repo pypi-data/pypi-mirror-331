@@ -1,0 +1,9 @@
+boto3
+colorama
+python_graphql_client
+pendulum
+requests
+click
+tqdm
+warrant-lite
+sumatra-sdk
