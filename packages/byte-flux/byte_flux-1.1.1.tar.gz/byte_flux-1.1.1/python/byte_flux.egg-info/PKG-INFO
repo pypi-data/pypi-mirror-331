@@ -1,0 +1,14 @@
+Metadata-Version: 2.2
+Name: byte_flux
+Version: 1.1.1
+Summary: Flux library
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: torch
+Provides-Extra: test
+Requires-Dist: torch; extra == "test"
+Requires-Dist: numpy; extra == "test"
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
