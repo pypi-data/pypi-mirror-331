@@ -1,0 +1,14 @@
+ast-scope==0.4.4
+frozendict==2.3.8
+no_toplevel_code==1.0.0
+numpy
+pathos==0.3.2
+permacache
+pytorch-lightning
+requests
+s-exp-parser==1.4.0
+scikit-learn
+stitch-core==0.1.25
+torch
+torchaudio
+torchvision
