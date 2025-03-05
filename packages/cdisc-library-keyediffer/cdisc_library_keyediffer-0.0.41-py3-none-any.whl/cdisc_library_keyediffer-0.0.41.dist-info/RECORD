@@ -1,0 +1,16 @@
+keyediffer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+keyediffer/json_differ.py,sha256=4l6YnkfJhVu6lnYDL2072CKtWR3XxLlKHtt6IaQ2Jjc,22988
+keyediffer/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+keyediffer/models/diff_item.py,sha256=7XqhVRxiQv4kUU2nZAytK7dsaIfEr4vFL5Z9RvkqC5Q,9795
+keyediffer/models/diff_path.py,sha256=-zspb4nD6fznvEhhm_3Msd7OxfIXNLhQnl8cDqT92XM,6532
+keyediffer/models/diff_text.py,sha256=ZwPntWjXqLC4XsUmWe3GOT2EQ3Iy547CXsDcae-t1i8,7286
+keyediffer/resources/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+keyediffer/resources/readme_tables.json,sha256=3Pnry5r9E-lwVA2sRUgAeL9klV-mHGp3JyGR5jZ3YBE,9742
+keyediffer/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+keyediffer/utils/excel_utils.py,sha256=KDS09-DusvwZxUo3a5QbAMOocNbc0BR0bPkvyJHfVsE,3589
+keyediffer/utils/helpers.py,sha256=F8BAPGSxVGOAgRkCX_UTwCdB9ZgG6qV2U32d_9EkiRA,1605
+keyediffer/utils/json_utils.py,sha256=O0CylFdWvWPQ4n_iOul-IE9fUu6IH0m5uHEb74PrRi0,1432
+cdisc_library_keyediffer-0.0.41.dist-info/METADATA,sha256=hotFMLzDa2M3Bz2DU_pTtVLZ81dhAu4s9-8uNA63w7c,14007
+cdisc_library_keyediffer-0.0.41.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+cdisc_library_keyediffer-0.0.41.dist-info/top_level.txt,sha256=08O4lpefnE-KzHWM8njSbQcPBiP47GjpR27563mYUEM,11
+cdisc_library_keyediffer-0.0.41.dist-info/RECORD,,
