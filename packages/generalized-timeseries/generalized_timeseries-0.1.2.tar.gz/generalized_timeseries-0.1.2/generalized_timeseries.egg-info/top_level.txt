@@ -1,0 +1,6 @@
+dist
+docs
+generalized_timeseries
+src
+tests
+venv
