@@ -1,0 +1,14 @@
+baldor/__init__.py,sha256=aLP02oX1gxGeTbtRbWISMLpdSTrafbXgghLHmmshQfU,173
+baldor/algorithm.py,sha256=gLMxLEIz8Dse1G5k6VGzcR0y6Q3PIPow8E7FSP-TDnU,6663
+baldor/app.py,sha256=-5kmZ8O7b0fnpqyFka9EhjnAQZhlo7a5_mdesEKYWzc,4450
+baldor/applogger.py,sha256=fQBo51-TboX1DBqfSxX2P2eKJ5CcyiCq_IVlJTHjxAE,2624
+baldor/batch.py,sha256=a4zzKSoyhiBbvdKBqiKE-155nnB_z-4M6x9k88ThW7w,2362
+baldor/parser.py,sha256=8FhaUqscFLc8v5Yw2JPPDgeO0HvgMpvh15veXCUJm3I,2569
+baldor/test.py,sha256=O4rRrIuq1jgpUVz_kTkfGDbcZD-xY8KmqpbZkB5cVfM,5536
+baldor/utils.py,sha256=Ynk8vf8i0A1WtDH9JEhQRmdj3JixflC9j6dN-ditOio,6075
+baldor-0.0.7.dist-info/LICENSE,sha256=nUDh1nfa7rfEv1HocpoqPu0JaFnZKpIVh9eM0MgozpM,1067
+baldor-0.0.7.dist-info/METADATA,sha256=bitWMHzJA5Kav3hfV06lue3BYgcnYCYkejXmYa0oZaQ,13122
+baldor-0.0.7.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+baldor-0.0.7.dist-info/entry_points.txt,sha256=adB1qCWcXWGgtP7zTmi9pf-tUmP7GEmRDIJoRFJc_wc,104
+baldor-0.0.7.dist-info/top_level.txt,sha256=pAE0_dF-a_Uj4M-nDl7uURpSYXUZXjNrVmcYKSmy_7M,7
+baldor-0.0.7.dist-info/RECORD,,
