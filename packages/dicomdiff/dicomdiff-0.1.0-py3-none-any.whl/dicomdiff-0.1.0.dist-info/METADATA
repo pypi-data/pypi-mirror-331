@@ -1,0 +1,24 @@
+Metadata-Version: 2.3
+Name: dicomdiff
+Version: 0.1.0
+Summary: A Python module that compares an original DICOM file with its deidentified counterpart and returns the differences between the two.
+Author: Karim
+Author-email: 115158216+karimdiabb@users.noreply.github.com
+Requires-Python: >=3.10
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: pydicom (>=3.0.1,<4.0.0)
+Requires-Dist: pytest (>=8.3.4,<9.0.0)
+Description-Content-Type: text/markdown
+
+# Dicomdiff
+A Python module that accepts an original DICOM file and its de-identified version as input, and compares them to detect any differences.
+## Installation
+Install the module with PIP
+
+```bash
+  pip install dicomdiff
+```
