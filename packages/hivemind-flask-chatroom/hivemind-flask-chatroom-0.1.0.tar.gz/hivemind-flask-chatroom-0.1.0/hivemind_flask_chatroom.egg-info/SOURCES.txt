@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+hivemind_chatroom/__init__.py
+hivemind_chatroom/__main__.py
+hivemind_chatroom/version.py
+hivemind_flask_chatroom.egg-info/PKG-INFO
+hivemind_flask_chatroom.egg-info/SOURCES.txt
+hivemind_flask_chatroom.egg-info/dependency_links.txt
+hivemind_flask_chatroom.egg-info/entry_points.txt
+hivemind_flask_chatroom.egg-info/requires.txt
+hivemind_flask_chatroom.egg-info/top_level.txt
