@@ -1,0 +1,9 @@
+sklearn_llm/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sklearn_llm/base.py,sha256=s9le4_mt-FuqMu5tQLJisOshd2Q6pjD5NJhoQM_TQY0,490
+sklearn_llm/example.py,sha256=Nkhei9V2XvlpZpSDniz3oWwQGSoPioEG5rKSyrd-08o,2578
+sklearn_llm/llms.py,sha256=bsrOKk2_KGZJOWCjD3QFGE2DeaHj8kvvVo3wpCo5slE,1703
+sklearn_llm/transformation.py,sha256=pTyJYQfGfnaPbF0w7Rf3HyOz3Rjx-1gCE5olaf_Z-I0,2411
+sklearn_llm-0.1.0.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+sklearn_llm-0.1.0.dist-info/METADATA,sha256=8Q_tnu5QrhIxMG_e06MB2Q1fEhsI6EMFfNlFVh0Yn-s,2099
+sklearn_llm-0.1.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+sklearn_llm-0.1.0.dist-info/RECORD,,
