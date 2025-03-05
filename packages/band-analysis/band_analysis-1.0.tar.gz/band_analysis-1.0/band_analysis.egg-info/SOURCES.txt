@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+setup.py
+band_analysis/EG_analysis.py
+band_analysis/__init__.py
+band_analysis.egg-info/PKG-INFO
+band_analysis.egg-info/SOURCES.txt
+band_analysis.egg-info/dependency_links.txt
+band_analysis.egg-info/requires.txt
+band_analysis.egg-info/top_level.txt
