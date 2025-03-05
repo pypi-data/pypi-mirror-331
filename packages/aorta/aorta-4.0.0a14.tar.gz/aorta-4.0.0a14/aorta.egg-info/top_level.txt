@@ -1,0 +1,8 @@
+aorta
+bin
+dist
+docs
+env
+ops
+tests
+var
