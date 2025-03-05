@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+scireadability/__init__.py
+scireadability/dictionary_utils.py
+scireadability/scireadability.py
+scireadability.egg-info/PKG-INFO
+scireadability.egg-info/SOURCES.txt
+scireadability.egg-info/dependency_links.txt
+scireadability.egg-info/requires.txt
+scireadability.egg-info/top_level.txt
+scireadability/resources/en/custom_dict.json
+scireadability/resources/en/easy_words.txt
