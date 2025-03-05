@@ -1,0 +1,75 @@
+[project]
+name = "fast-seeker"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Aryan Curiel", email = "aryan.curiel@gmail.com" }
+]
+requires-python = ">=3.9"
+dependencies = [
+    "pydantic>=2.10.5",
+    "typing-extensions>=4.12.2",
+]
+
+[project.optional-dependencies]
+beanie = [
+    "beanie>=1.29.0",
+]
+odmantic = [
+    "odmantic>=1.0.2",
+]
+django = [
+    "django>=4.2",
+]
+pymongo = [
+    "pymongo>=4.9.2",
+]
+motor = [
+    "motor>=3.6.0",
+]
+sqlalchemy = [
+    "sqlalchemy>=2.0.37",
+]
+
+[dependency-groups]
+dev = [
+    "coverage>=7.6.10",
+    "pytest-cov>=6.0.0",
+    "pytest>=8.3.4",
+    "ruff>=0.9.1",
+    "pytest-mock>=3.14.0",
+    "mypy>=1.15.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+    "B",  # flake8-bugbear
+    "C4",  # flake8-comprehensions
+    "UP",  # pyupgrade
+    "SIM",  # flake8-simple
+]
+ignore = [
+    "W191", # https://docs.astral.sh/ruff/rules/tab-indentation/
+]
+
+[tool.ruff.lint.per-file-ignores]
+"**/__init__.py" = ["F401"]
+"**/conftest.py" = ["F401"]
+
+[tool.pytest.ini_options]
+addopts = "--cov=src --cov-report lcov:lcov.info --cov-report term src/tests"
+
+[tool.mypy]
+disable_error_code = ["import-untyped"]

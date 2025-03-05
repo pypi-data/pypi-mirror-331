@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: fast-seeker
+Version: 0.1.0
+Summary: Add your description here
+Author-email: Aryan Curiel <aryan.curiel@gmail.com>
+Requires-Python: >=3.9
+Requires-Dist: pydantic>=2.10.5
+Requires-Dist: typing-extensions>=4.12.2
+Provides-Extra: beanie
+Requires-Dist: beanie>=1.29.0; extra == 'beanie'
+Provides-Extra: django
+Requires-Dist: django>=4.2; extra == 'django'
+Provides-Extra: motor
+Requires-Dist: motor>=3.6.0; extra == 'motor'
+Provides-Extra: odmantic
+Requires-Dist: odmantic>=1.0.2; extra == 'odmantic'
+Provides-Extra: pymongo
+Requires-Dist: pymongo>=4.9.2; extra == 'pymongo'
+Provides-Extra: sqlalchemy
+Requires-Dist: sqlalchemy>=2.0.37; extra == 'sqlalchemy'
