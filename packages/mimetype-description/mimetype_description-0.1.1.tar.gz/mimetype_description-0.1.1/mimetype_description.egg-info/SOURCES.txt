@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+mimetype_description/__init__.py
+mimetype_description/freedesktop.org.xml
+mimetype_description.egg-info/PKG-INFO
+mimetype_description.egg-info/SOURCES.txt
+mimetype_description.egg-info/dependency_links.txt
+mimetype_description.egg-info/top_level.txt
+tests/__init__.py
+tests/test_mimetype_description.py
