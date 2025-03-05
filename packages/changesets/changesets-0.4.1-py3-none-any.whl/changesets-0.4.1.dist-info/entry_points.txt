@@ -1,0 +1,2 @@
+[console_scripts]
+changelog = changesets.__init__:run
