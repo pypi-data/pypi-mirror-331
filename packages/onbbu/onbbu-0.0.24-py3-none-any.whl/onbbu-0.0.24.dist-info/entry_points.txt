@@ -1,0 +1,2 @@
+[console_scripts]
+onbbu = onbbu.commands.manager:Manager.execute
