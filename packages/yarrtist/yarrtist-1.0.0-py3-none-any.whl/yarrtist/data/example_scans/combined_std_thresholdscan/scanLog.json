@@ -1,0 +1,138 @@
+{
+  "connectivity": [
+    {
+      "chipType": "ITKPIXV2",
+      "chips": [
+        {
+          "__config_path__": "/Users/riccardo/Documents/DOTTORATO/YARRtist/yarrtist/20UPGM23211207/L2_warm/0x209a8_L2_warm.json",
+          "config": "L2_warm/0x209a8_L2_warm.json",
+          "enable": 1,
+          "locked": 0,
+          "path": "relToCon",
+          "rx": 2,
+          "tx": 0
+        },
+        {
+          "__config_path__": "/Users/riccardo/Documents/DOTTORATO/YARRtist/yarrtist/20UPGM23211207/L2_warm/0x209c9_L2_warm.json",
+          "config": "L2_warm/0x209c9_L2_warm.json",
+          "enable": 0,
+          "locked": 0,
+          "path": "relToCon",
+          "rx": 1,
+          "tx": 0
+        },
+        {
+          "__config_path__": "/Users/riccardo/Documents/DOTTORATO/YARRtist/yarrtist/20UPGM23211207/L2_warm/0x2098c_L2_warm.json",
+          "config": "L2_warm/0x2098c_L2_warm.json",
+          "enable": 1,
+          "locked": 0,
+          "path": "relToCon",
+          "rx": 0,
+          "tx": 0
+        },
+        {
+          "__config_path__": "/Users/riccardo/Documents/DOTTORATO/YARRtist/yarrtist/20UPGM23211207/L2_warm/0x2093b_L2_warm.json",
+          "config": "L2_warm/0x2093b_L2_warm.json",
+          "enable": 1,
+          "locked": 0,
+          "path": "relToCon",
+          "rx": 3,
+          "tx": 0
+        }
+      ]
+    }
+  ],
+  "ctrlCfg": {
+    "ctrlCfg": {
+      "cfg": {
+        "cmdPeriod": 6.25e-9,
+        "delay": [3, 12, 8, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        "idle": {
+          "word": 2863311530
+        },
+        "pulse": {
+          "interval": 500,
+          "word": 0
+        },
+        "rxActiveLanes": 15,
+        "rxPolarity": 65535,
+        "specNum": 1,
+        "spiConfig": 541200,
+        "sync": {
+          "interval": 16,
+          "word": 2172551550
+        },
+        "txPolarity": 0
+      },
+      "type": "spec"
+    }
+  },
+  "ctrlStatus": {
+    "channel_configuration": "16x1",
+    "fe_chip_type": "RD53A/B/C",
+    "firmware_hash": "0xe7985d6",
+    "firmware_identifier": "0x4030242",
+    "firmware_vers": "v1.4.0",
+    "fmc_card_type": "Ohio Card (Display Port)",
+    "fpga_card": "PLDA XpressK7 325",
+    "lpm_status": 0,
+    "rx_speed": "1280Mbps"
+  },
+  "dbCfg": {
+    "QC": false,
+    "auth": "default",
+    "dbName": "localdb",
+    "environment": [
+      "vddd_voltage",
+      "vddd_current",
+      "vdda_voltage",
+      "vdda_current",
+      "vddcom_voltage",
+      "vddcom_current",
+      "hv_voltage",
+      "hv_current",
+      "temperature",
+      "temperature_moduleNTC"
+    ],
+    "hostIp": "192.135.21.84",
+    "hostPort": "27017",
+    "ssl": {
+      "CAFile": "null",
+      "PEMKeyFile": "null",
+      "enabled": false
+    },
+    "tls": {
+      "CAFile": "null",
+      "CertificateKeyFile": "null",
+      "enabled": false
+    }
+  },
+  "exec": "-r configs/controller/specCfg-rd53b-16x1.json -c configs/connectivity/20UPGM23211207/20UPGM23211207_L2_warm.json -o data/V2/20UPGM23211207/ -W MHT -s configs/scans/itkpixv2/std_thresholdscan_hr.json ",
+  "finishTime": 1738075464,
+  "runNumber": 8505,
+  "siteCfg": {
+    "institution": "INFN_MILANO"
+  },
+  "startTime": 1738075107,
+  "stopwatch": {
+    "analysis": 933,
+    "config": 1120,
+    "processing": 0,
+    "scan": 349168
+  },
+  "targetCharge": -1,
+  "targetTot": -1,
+  "testType": "std_thresholdscan_hr",
+  "timestamp": "2025-01-28_15:38:27",
+  "userCfg": {
+    "viewerUser": "atlasmi Si1ici0milano"
+  },
+  "yarr_version": {
+    "build_time": "2024-12-13 13:19:03 UTC",
+    "git_branch": "devel",
+    "git_date": "2024-12-09 17:32:49 +0100",
+    "git_hash": "1f9586978951419c85093fde891bebff5d7063d7",
+    "git_subject": "Merge branch 'okovanda_itkpixv2_emulator' into 'devel'",
+    "git_tag": "v1.5.2-191-g1f95869"
+  }
+}

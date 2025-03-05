@@ -1,0 +1,20 @@
+{
+    "Data": [233.0, 892.0, 3205.0, 8959.0, 18427.0, 28142.0, 32365.0, 27333.0, 18190.0, 9089.0, 3754.0],
+    "Entries": 150589,
+    "Name": "NoiseDist-0",
+    "Overflow": 2202.0,
+    "Type": "Histo1d",
+    "Underflow": 75.0,
+    "x": {
+        "AxisTitle": "Noise [e]",
+        "Bins": 11,
+        "High": 87.0,
+        "Low": 32.0
+    },
+    "y": {
+        "AxisTitle": "Number of Pixels"
+    },
+    "z": {
+        "AxisTitle": "z"
+    }
+}

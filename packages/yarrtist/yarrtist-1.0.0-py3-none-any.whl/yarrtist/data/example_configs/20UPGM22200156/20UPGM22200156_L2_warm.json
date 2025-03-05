@@ -1,0 +1,37 @@
+{
+  "chipType": "RD53B",
+  "chips": [
+    {
+      "config": "L2_warm/0x17529_L2_warm.json",
+      "path": "relToCon",
+      "tx": 0,
+      "rx": 2,
+      "enable": 1,
+      "locked": 0
+    },
+    {
+      "config": "L2_warm/0x17539_L2_warm.json",
+      "path": "relToCon",
+      "tx": 0,
+      "rx": 1,
+      "enable": 1,
+      "locked": 0
+    },
+    {
+      "config": "L2_warm/0x17559_L2_warm.json",
+      "path": "relToCon",
+      "tx": 0,
+      "rx": 0,
+      "enable": 1,
+      "locked": 0
+    },
+    {
+      "config": "L2_warm/0x17549_L2_warm.json",
+      "path": "relToCon",
+      "tx": 0,
+      "rx": 3,
+      "enable": 1,
+      "locked": 0
+    }
+  ]
+}

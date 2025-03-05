@@ -1,0 +1,21 @@
+{
+    "Data": [0.0, 106437.0, 26114.0, 8593.0, 146.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+    "Entries": 141290,
+    "Name": "StatusDist-0",
+    "Overflow": 0.0,
+    "Type": "Histo1d",
+    "Underflow": 0.0,
+    "loopStatus": [0, 300, 0, 0, 0],
+    "x": {
+        "AxisTitle": "Fit Status ",
+        "Bins": 11,
+        "High": 10.5,
+        "Low": -0.5
+    },
+    "y": {
+        "AxisTitle": "Number of Pixels"
+    },
+    "z": {
+        "AxisTitle": "z"
+    }
+}
