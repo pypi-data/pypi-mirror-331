@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: fast-pedago
+Version: 1.0.3
+Summary: 
+Home-page: https://github.com/supaero-aircraft-design/FAST-PEDAGO
+License: GPL-3.0-only
+Keywords: aircraft,design,multi-disciplinary,teaching,educational
+Author: Ousmane SY
+Author-email: Ousmane.SY@isae-supaero.fr
+Requires-Python: >=3.8,<3.11
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Scientific/Engineering :: Physics
+Requires-Dist: appmode (==0.9.0)
+Requires-Dist: click (==8.0.3)
+Requires-Dist: fast-oad-core (==1.7.4)
+Requires-Dist: fast-oad-cs25 (>=0.6.0)
+Requires-Dist: ipyvuetify (==1.9.4)
+Requires-Dist: ipywidgets (==7.7.2)
+Requires-Dist: lxml_html_clean
+Requires-Dist: voila (==0.3.7)
+Description-Content-Type: text/markdown
+
+# FAST-OAD TRAINING AND INCREMENTAL DEVELOPMENT BRANCH
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/supaero-aircraft-design/FAST-PEDAGO/HEAD?labpath=fast_pedago%2Fnotebook%2FFAST_OAD_app.ipynb)
+
+This package offers a lightweight interface to perform simplified OAD analysis using FAST-OAD (https://github.com/fast-aircraft-design/FAST-OAD).
+
+Want to try quickly ?
+-------
+
+You can open the app on a [Binder-hosted Jupyter notebook](https://mybinder.org/v2/gh/supaero-aircraft-design/FAST-PEDAGO/HEAD?labpath=fast_pedago%2Fnotebook%2FFAST_OAD_app.ipynb)
+
+Install
+-------
+
+**Prerequisite**: FAST-PEDAGO needs at least **Python 3.7.0**.
+
+It is recommended (but not required) to install FAST-PEDAGO in a virtual
+environment ([conda](https://docs.conda.io/en/latest/),
+[venv](https://docs.python.org/3.7/library/venv.html), ...).
+
+Once Python is installed, FAST-PEDAGO can be installed using pip, by doing the following:
+
+``` {.bash}
+$ pip install fast-pedago
+```
+
+Once installed the cde can be run by doing the following: 
+``` {.bash}
+$ fast-pedago run
+```
