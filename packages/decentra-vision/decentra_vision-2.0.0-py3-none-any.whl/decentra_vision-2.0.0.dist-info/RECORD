@@ -1,0 +1,9 @@
+decentra_vision/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+decentra_vision/constants.py,sha256=39TRFDymklQtmt8roVdrbsS8pv6oUSb6UZKr1wBDVbQ,557
+decentra_vision/draw_utils.py,sha256=MTYdioxwiOKUjk_nRHLylOq8vlNSTWES2g002UCNeek,47201
+decentra_vision/geometry_methods.py,sha256=YfQthZWo8AZ7EioATQXCODq1IcuSJdENnPh__wazok0,10742
+decentra_vision/ver.py,sha256=Wa1tVQ5UgPIkTx9pUkEcQap7ilgdUd8D1RtYApKdlHI,330
+decentra_vision-2.0.0.dist-info/METADATA,sha256=CKCU870feDsU_bq2F8H4R9O7fGZfUuDqwdi5m1_lqSY,982
+decentra_vision-2.0.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+decentra_vision-2.0.0.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+decentra_vision-2.0.0.dist-info/RECORD,,
