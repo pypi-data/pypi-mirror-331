@@ -1,0 +1,5 @@
+[console_scripts]
+web-grabber = web_grabber.web_grabber:app
+
+[gui_scripts]
+
