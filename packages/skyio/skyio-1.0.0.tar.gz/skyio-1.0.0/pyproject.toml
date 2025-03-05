@@ -1,0 +1,42 @@
+[project]
+name = "skyio"
+version = "1.0.0"
+description = "This library provides a simple interface to interact with Google Cloud Storage and other cloud storage services."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "google-cloud-storage>=2.18.2",
+    "rich>=13.8.1",
+    "tqdm>=4.66.5",
+    "python-dotenv>=1.0.1",
+    "colorama>=0.4.6",
+    "gcsfs>=2024.9.0.post1",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+exclude = [
+    "tests/",
+    "docs/",
+    "examples/",
+    "assets/",
+    "keys/",
+    ".git/",
+    ".github/",
+    "scripts/",
+    "configs/",
+    "README.md",
+    ".env",
+    "config.json",
+    "*/**/.sh",
+    "Makefile",
+    "cloudbuild.yaml",
+    "*/**/Dockerfile",
+    "Dockerfile",
+    "requirements.txt",
+    "*.sh",
+    "*.yml",
+]
