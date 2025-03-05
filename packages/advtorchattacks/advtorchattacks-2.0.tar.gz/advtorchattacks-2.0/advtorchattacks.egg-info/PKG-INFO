@@ -1,0 +1,57 @@
+Metadata-Version: 2.2
+Name: advtorchattacks
+Version: 2.0
+Summary: A PyTorch library for adversarial attacks, inspired by torchattacks.
+Home-page: https://github.com/santhos1705kumar/advtorchattacks
+Author: Santhoshkumar K
+Author-email: santhoshatwork17@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: torch>=1.8.0
+Requires-Dist: torchvision
+Requires-Dist: numpy
+Requires-Dist: scipy
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# AdvTorchAttacks
+
+**AdvTorchAttacks** is a PyTorch-based library for generating adversarial attacks on deep learning models. It provides implementations of widely used attack methods, enabling user to evaluate model robustness against adversarial perturbations.
+
+##  Features
+
+- Implements **FGSM, PGD, CW, MIFGSM, and AutoAttack** adversarial attack methods.
+- Works with PyTorch models.
+- Returns **adversarial images, perturbations images**.
+
+---
+
+##  Installation
+
+You can install `advtorchattacks` in two ways:
+###  1️ Install from PYPI
+
+```bash
+
+pip install advtorchattacks
+
+```
+
+### 2 Install from GitHub 
+
+```bash
+
+https://github.com/santhosh1705kumar/advtorchattacks
+
+```
