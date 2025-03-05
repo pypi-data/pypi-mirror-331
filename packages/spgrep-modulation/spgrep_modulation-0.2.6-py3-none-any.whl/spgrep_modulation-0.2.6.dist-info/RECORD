@@ -1,0 +1,11 @@
+spgrep_modulation/__init__.py,sha256=mk3h4IC2YiDfZkpHB6TJl1sHjJnrXYAfWh4heTs8RTU,326
+spgrep_modulation/irreps.py,sha256=Rxltk5wqa-lmBZgqjJCmlQxA69wtB2hRfBEaAwrD8lU,5554
+spgrep_modulation/isotropy.py,sha256=27phNAuY14wnljJKGbaj6zxQS3YIs26oiId1ZXyrGAQ,14415
+spgrep_modulation/modulation.py,sha256=LuHZbhG9RgkKVGnQadEhiIOis5iCYwCnZCsH8vGAuaM,18688
+spgrep_modulation/utils.py,sha256=6bSIvGBf8YuLh4z6w1KpivO-AYc7GAVm9j9-W94WlfE,4100
+spgrep_modulation/visualize.py,sha256=kBkLx-QdfieAv5llAdQM7dMfahauutFageWFYw3kMO0,8719
+spgrep_modulation-0.2.6.dist-info/LICENSE,sha256=iTBy_9EekdIfO1wVfiLUiauX41tZ4LW3oYa__Wt5Uw0,1523
+spgrep_modulation-0.2.6.dist-info/METADATA,sha256=3r0spaod6b1Hx2vO1_lUwCQMrOcPA35IoAZd025Bi1s,7552
+spgrep_modulation-0.2.6.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+spgrep_modulation-0.2.6.dist-info/top_level.txt,sha256=e3xTm3ZYHRPsYVrPigj47inz8_Qya4WBe07PTHALMKA,18
+spgrep_modulation-0.2.6.dist-info/RECORD,,
