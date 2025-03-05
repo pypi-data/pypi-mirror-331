@@ -1,0 +1,3 @@
+breeze_connect
+nest_asyncio
+IPython

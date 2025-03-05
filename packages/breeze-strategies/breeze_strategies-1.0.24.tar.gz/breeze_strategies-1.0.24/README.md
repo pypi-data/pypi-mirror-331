@@ -1,0 +1,102 @@
+Code for Option Greek Calculation on Option Chain :  <a href="https://github.com/Idirect-Tech/Breeze-Python-Examples/blob/main/webinar/Option_Greeks_Calculation_using_OptionChain.py">Click here</a>
+
+# LIVE  python_strategies
+
+## Steps to install Strategy Library for LIVE
+
+
+```python
+
+pip install breeze_strategies==1.0.24
+
+```
+
+## Updating Library
+
+```python
+
+pip install --upgrade breeze_strategies
+
+```
+
+## code usage
+
+```python
+
+#Import the library
+from breeze_strategies import Strategies
+
+#Configure the strategy using API Keys and set maxprofit/takeprofit level.
+
+#Type 1
+obj = Strategies(app_key = "your app key",
+                 secret_key = "your secret key",
+                 api_session = "your api session",
+                 max_profit = "your max profit",
+                 max_loss = "your max loss")
+
+
+
+#Execute the strategy
+obj.straddle(strategy_type = "long",
+             stock_code = "NIFTY",
+             strike_price = "18700",
+             quantity = "50",
+             expiry_date = "2023-06-29T06:00:00.000Z")
+
+#Execute the strangle strategy
+obj.strangle(strike_price_call = "18700",strike_price_put = "18300", strategy_type = "long",stock_code = "NIFTY", quantity = "50", expiry_date = "2023-06-29T06:00:00.000Z")
+
+#Execute Single Leg
+obj.single_leg(right = "Call", strategy_type = "short",stock_code = "NIFTY", strike_price = "18700", quantity = "50", expiry_date = "2023-06-29T06:00:00.000Z")
+
+
+#Execute the Four leg strategy
+
+#Nifty 
+obj.four_leg(stock_code="NIFTY",
+            quantity="25",
+            expiry_date="2024-08-14T06:00:00.000Z",
+            call_short_strike="24900",
+            put_short_strike="23000",
+            call_long_strike="24850",
+            put_long_strike="23050"
+            )
+
+#BankNifty
+obj.four_leg(stock_code="CNXBAN",
+            quantity="15",
+            expiry_date="2024-08-14T06:00:00.000Z",
+            call_short_strike="52600",
+            put_short_strike="47600",
+            call_long_strike="52700",
+            put_long_strike="47900"
+            )
+
+
+#SquareOff existing positions and exit the strategy of straddle
+obj.stop() 
+
+#SquareOff existing positions and exit the strategy of strangle
+obj.stop_strategy(is_strangle = True) 
+
+#SquareOff existing positions and exit the strategy In case of single_leg pass single_leg flag as True as mentioned below
+obj.stop_strategy(single_leg = True)
+
+#SquareOff existing positions and exit the strategy of Four Leg
+obj.stop_strategy(is_FourLeg = True)
+
+#Generate Profit & Loss report (this method will work for both straddle and strangle)
+obj.get_pnl()
+
+```
+
+### Note:
+### (i) If the maximum loss or maximum profit is not reached by the end of the day, the order will be carried over to the next day, and the maximum profit and maximum loss will no longer be monitored.
+### (ii) Ensure that the maximum profit is a positive value and the maximum loss is a negative value.
+### (iii) Verify that all parameters are entered correctly.
+### (iv) Kindly monitor the position on the website.
+### (v) Ensure a stable internet connection at all times.
+
+
+ 
