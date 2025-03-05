@@ -1,0 +1,4 @@
+ - support left/right join
+ - support specified cols used for join
+ - support count
+ - support columns selection on output
