@@ -1,0 +1,17 @@
+CHANGELOG.rst
+LICENSE.rst
+MANIFEST.in
+README.rst
+pyproject.toml
+juham_homewizard/__init__.py
+juham_homewizard/homewizard_plugin.py
+juham_homewizard/homewizardwatermeter.py
+juham_homewizard/py.typed
+juham_homewizard.egg-info/PKG-INFO
+juham_homewizard.egg-info/SOURCES.txt
+juham_homewizard.egg-info/dependency_links.txt
+juham_homewizard.egg-info/entry_points.txt
+juham_homewizard.egg-info/requires.txt
+juham_homewizard.egg-info/top_level.txt
+tests/__init__.py
+tests/test_homewizardmeter.py
