@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "delphai-scraper-utils"
+version = "0.1.6"
+description = ""
+authors = ["Frederik Schwabe <frederik@delphai.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+httpx = ">=0.24 <1"
+prometheus-client = "^0"
+tenacity = "^8"
+aiocache = "^0"
+protego = "^0.4.0"
+
+[tool.poetry.dev-dependencies]
+flake8 = "*"
+pep8-naming = "*"
+black = "^23.1.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
