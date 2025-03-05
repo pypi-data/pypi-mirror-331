@@ -1,0 +1,11 @@
+convexAdam/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+convexAdam/apply_convex.py,sha256=WxGaCxhpCi0778frdJVcI6wUAqtJI9W24dGJ43F16vI,4216
+convexAdam/convex_adam_MIND.py,sha256=MzjU6tUVLlS7gYZpfIv2LqDqWhCS6JU8o1hsmgTKF0w,11925
+convexAdam/convex_adam_nnUNet.py,sha256=nasQkXfJjNns2nLIsbEUpGwKfzDOhgwy1Pz0k5Q9f1g,8106
+convexAdam/convex_adam_translation.py,sha256=6GwW7Q5OhAJR2wPuI9V3W5g5zoy1nIegVBINjR9qs6o,6613
+convexAdam/convex_adam_utils.py,sha256=ad7xsITPEin9Pz6g0xeJGD9DfkndEzLj27kHMklmryc,14742
+convexadam-0.2.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+convexadam-0.2.0.dist-info/METADATA,sha256=J3IhpT4oAhCLZ8ctatfHPccNgcO0eMmmrqxiMh9z1t8,5027
+convexadam-0.2.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+convexadam-0.2.0.dist-info/top_level.txt,sha256=2Vo4U2QfyUwFV4YTybUPtcl4UNiQn6jB6RnO7eUKSBk,11
+convexadam-0.2.0.dist-info/RECORD,,
