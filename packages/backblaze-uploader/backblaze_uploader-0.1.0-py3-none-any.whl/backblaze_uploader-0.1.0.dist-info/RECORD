@@ -1,0 +1,9 @@
+backblaze_uploader/__init__.py,sha256=8XPGW--7h65KWTGIOiIT1FSWkuHQF6Vpo3oz6tbOYYA,103
+backblaze_uploader/uploader.py,sha256=sh7lGpmjbjUBP61gdILt6kFdb3LWjjLhrE3DgjzUI2g,1476
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_uploader.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+backblaze_uploader-0.1.0.dist-info/LICENSE,sha256=UlZShfxO-ZV5c_1O_p-MEDmTTxunY-frBk91ArhSfRQ,732
+backblaze_uploader-0.1.0.dist-info/METADATA,sha256=zvGPo8bdgTo_yzXktRqt568x1In6XT5i7n--bBVfbUk,717
+backblaze_uploader-0.1.0.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+backblaze_uploader-0.1.0.dist-info/top_level.txt,sha256=wLCs757AaxfcQvJGmoYcOOON8R57EctSuubaLLQrqz4,25
+backblaze_uploader-0.1.0.dist-info/RECORD,,
