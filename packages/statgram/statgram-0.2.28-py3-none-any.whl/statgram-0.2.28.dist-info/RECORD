@@ -1,0 +1,9 @@
+statgram/__init__.py,sha256=LxQVyK9mxgp43Q1yK4gNaNoxLvxu3AEaITFLOn80xjI,74
+statgram/core_requests.py,sha256=qWyb9pAJukeL-S8Q4LRK0Q-tmgev-LSEsG6vZ07NiIg,460
+statgram/main.py,sha256=pX0S863WkpYbVMdKm9WJylVBsxtWkNCx9BDSuHqiAoM,8017
+statgram/schemas.py,sha256=RVtQjZbPzmYgT5vmK7J1RxeWeHXG7Hur1ZTqOjirlu0,1644
+statgram-0.2.28.dist-info/LICENSE,sha256=QwcOLU5TJoTeUhuIXzhdCEEDDvorGiC6-3YTOl4TecE,11356
+statgram-0.2.28.dist-info/METADATA,sha256=8zLgG8l69fJ6Bn_wedEfhM_M1Iq0FQw9LXW9U9F747s,4246
+statgram-0.2.28.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+statgram-0.2.28.dist-info/top_level.txt,sha256=rgKNZRA8yW4Q1jabUMe0t2dsSup9Rt8-CMrir84feQ8,9
+statgram-0.2.28.dist-info/RECORD,,
