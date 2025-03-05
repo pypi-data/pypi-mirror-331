@@ -1,0 +1,14 @@
+cachetools
+librosa
+numpy
+optype[numpy]
+torch
+torchmetrics[audio]
+tqdm
+Z0Z_tools
+
+[testing]
+pytest-cov
+pytest-xdist
+pytest
+pyupgrade

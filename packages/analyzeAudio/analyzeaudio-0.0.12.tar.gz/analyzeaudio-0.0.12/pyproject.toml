@@ -1,0 +1,68 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+authors = [{ name = "Hunter Hogan", email = "HunterHogan@pm.me" }]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: End Users/Desktop",
+    "Intended Audience :: Other Audience",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+	"Programming Language :: Python :: 3",
+    "Topic :: Multimedia :: Sound/Audio :: Analysis",
+    "Typing :: Typed",]
+dependencies = [
+    "cachetools",
+    "librosa",
+    "numpy",
+    "optype[numpy]",
+    "torch",
+    "torchmetrics[audio]",
+    "tqdm",
+    "Z0Z_tools",]
+description = "Measure one or more aspects of one or more audio files."
+keywords = ["audio", "analysis", "measurement", "metrics", "torch"]
+license = { 'text' = "CC-BY-NC-4.0" }
+name = "analyzeAudio"
+optional-dependencies = { testing = [
+    "pytest-cov",
+    "pytest-xdist",
+    "pytest",
+	"pyupgrade",] }
+readme = { file = "README.md", content-type = "text/markdown" }
+requires-python = ">=3.10"
+urls = { Donate = "https://www.patreon.com/integrated", Homepage = "https://github.com/hunterhogan/analyzeAudio", Repository = "https://github.com/hunterhogan/analyzeAudio.git"  }
+version = "0.0.12"
+
+[project.scripts]
+whatMeasurements = "analyzeAudio.audioAspectsRegistry:getListAvailableAudioAspects"
+
+[tool.coverage]
+report = { exclude_lines = [
+    "if TYPE_CHECKING:",
+    "if __name__ == \"__main__\":",
+], ignore_errors = false }
+run = { branch = true, concurrency = [
+    "multiprocessing",
+], data_file = "tests/coverage/.coverage", omit = [
+    "tests/*",
+], parallel = true, source = [
+    ".",] }
+xml = { output = "tests/coverage/coverage.xml" }
+
+[tool.pytest.ini_options]
+log_auto_indent = ["On"]
+addopts = ["--color=yes", "-n 4"]
+testpaths = ["tests"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.updateCitation]
+filenameCitationDOTcff = 'CITATION.cff'
+pathFilenameCitationSSOT = "citations/CITATION.cff"
