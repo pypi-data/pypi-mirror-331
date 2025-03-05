@@ -1,0 +1,32 @@
+name: popidd-io
+display_name: POPIDD IO
+# use 'hidden' to remove plugin from napari hub search results
+visibility: hidden
+# see https://napari.org/stable/plugins/manifest.html for valid categories
+categories: ["Annotation", "Segmentation", "Acquisition"]
+contributions:
+  commands:
+    - id: popidd-io.get_image_reader
+      python_name: popidd_io._reader:get_image_reader
+      title: Open data with POPIDD Reader
+    - id: popidd-io.wLoadImage
+      python_name: popidd_io:wLoadImage
+      title: Image loader widget
+    - id: popidd-io.wLoadAnno
+      python_name: popidd_io:wLoadAnno
+      title: Annotation loader widget
+    - id: popidd-io.get_anno_reader
+      python_name: popidd_io._reader:get_anno_reader
+      title: Load annotations with POPIDD Reader
+  readers:
+    - command: popidd-io.get_image_reader
+      accepts_directories: false
+      filename_patterns: ["*.tiff", "*.tif", "*.svs", "*.ndpi", "*.qptiff"]
+    - command: popidd-io.get_anno_reader
+      accepts_directories: false
+      filename_patterns: ["*.geojson", "*.parquet"]
+  widgets:
+    - command: popidd-io.wLoadImage
+      display_name: Image Loader
+    - command: popidd-io.wLoadAnno
+      display_name: Annotation Loader
