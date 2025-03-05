@@ -1,0 +1,4 @@
+[console_scripts]
+d4o_generate = dicom4ortho.__main__:generate_uid
+dicom4ortho = dicom4ortho.__main__:main
+fhir2dicom4ortho = fhir2dicom4ortho.entry_points:fhir_api
