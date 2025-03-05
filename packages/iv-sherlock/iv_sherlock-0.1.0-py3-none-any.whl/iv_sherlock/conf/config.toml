@@ -1,0 +1,9 @@
+[report]
+source_path = "/home/pliu/git/ImageVulnAnalyzer/src/iv_sherlock/data"
+out_path = "/home/pliu/git/ImageVulnAnalyzer/src/iv_sherlock/data/tmp"
+default_encoding = "utf-8"
+export_pdf = false
+
+[cvss]
+score_mapping = '{"AV": {"N": 0.85, "A": 0.62}, "AC": {"L": 0.77, "H": 0.44}, "PR": {"N": 0.85, "L": 0.62, "H": 0.27}, "UI": {"N": 0.85, "R": 0.62}, "S": {"U": 1.0, "C": 1.08}, "C": {"H": 0.56, "L": 0.22, "N": 0.0}, "I": {"H": 0.56, "L": 0.22, "N": 0.0}, "A": {"H": 0.56, "L": 0.22, "N": 0.0}}'
+
