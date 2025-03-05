@@ -1,0 +1,9 @@
+.*
+!.gitignore
+dist
+tests*
+test*
+mubble.*
+__pycache__
+poetry.lock
+mubble_old
