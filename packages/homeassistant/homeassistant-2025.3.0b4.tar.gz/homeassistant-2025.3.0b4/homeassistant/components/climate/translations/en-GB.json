@@ -1,0 +1,31 @@
+{
+    "entity_component": {
+        "_": {
+            "state_attributes": {
+                "swing_horizontal_mode": {
+                    "name": "Horizontal swing mode"
+                },
+                "swing_horizontal_modes": {
+                    "name": "Horizontal swing modes"
+                }
+            }
+        }
+    },
+    "exceptions": {
+        "not_valid_horizontal_swing_mode": {
+            "message": "Horizontal swing mode {mode} is not valid. Valid horizontal swing modes are: {modes}."
+        }
+    },
+    "services": {
+        "set_swing_horizontal_mode": {
+            "description": "Sets horizontal swing operation mode.",
+            "fields": {
+                "swing_horizontal_mode": {
+                    "description": "Horizontal swing operation mode.",
+                    "name": "Horizontal swing mode"
+                }
+            },
+            "name": "Set horizontal swing mode"
+        }
+    }
+}

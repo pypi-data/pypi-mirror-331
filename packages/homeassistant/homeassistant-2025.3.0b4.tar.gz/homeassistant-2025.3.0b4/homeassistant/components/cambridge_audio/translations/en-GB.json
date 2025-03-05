@@ -1,0 +1,51 @@
+{
+    "config": {
+        "abort": {
+            "wrong_device": "This Cambridge Audio device does not match the existing device ID. Please make sure you entered the correct IP address."
+        },
+        "step": {
+            "reconfigure": {
+                "description": "Reconfigure your Cambridge Audio Streamer."
+            }
+        }
+    },
+    "entity": {
+        "select": {
+            "audio_output": {
+                "name": "Audio output"
+            },
+            "display_brightness": {
+                "name": "Display brightness",
+                "state": {
+                    "bright": "Bright",
+                    "dim": "Dim"
+                }
+            }
+        },
+        "switch": {
+            "early_update": {
+                "name": "Early update"
+            },
+            "pre_amp": {
+                "name": "Pre-Amp"
+            }
+        }
+    },
+    "exceptions": {
+        "command_error": {
+            "message": "Error executing {function_name} on entity {entity_id}"
+        },
+        "entry_cannot_connect": {
+            "message": "Error while connecting to {host}"
+        },
+        "missing_preset": {
+            "message": "Missing preset for media_id: {preset_id}"
+        },
+        "preset_non_integer": {
+            "message": "Preset must be an integer, got: {preset_id}"
+        },
+        "unsupported_media_type": {
+            "message": "Unsupported media type for Cambridge Audio device: {media_type}"
+        }
+    }
+}

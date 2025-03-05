@@ -1,0 +1,7 @@
+{
+    "config": {
+        "error": {
+            "unique_id_exists": "Another config entry with this username already exist"
+        }
+    }
+}
