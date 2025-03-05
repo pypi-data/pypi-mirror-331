@@ -1,0 +1,11 @@
+alliance_platform/base_settings.py,sha256=NKfCasGhUaXNWnEfflSBV1VHir0Xpp6vE7w7emwMtsg,3636
+alliance_platform/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+alliance_platform/core/auth.py,sha256=Y0Tw32Hs5JBsQLHbNIvI2mwzvTrZhfEhfwShzL2PKMA,4635
+alliance_platform/core/display.py,sha256=KlxoLFOZjO-rJUBiFueP3bSy6W0UwGUto9VnmSDVQzA,1359
+alliance_platform/core/settings.py,sha256=j4E5fAwwL5pV6SLPOtGTt9yTj7JS9USs7LTh0ZTLQvE,2815
+alliance_platform/core/util.py,sha256=cfKjRanOi9yH3YF9k0CSwMzRDzUDnXkjtFiOYnBWvPg,638
+alliance_platform/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+alliance_platform_core-0.0.5.dist-info/METADATA,sha256=JDf8cwyq1qLGHW7WaETbq1FtnTwTD_6h191RQNbMhaA,251
+alliance_platform_core-0.0.5.dist-info/WHEEL,sha256=thaaA2w1JzcGC48WYufAs8nrYZjJm8LqNfnXFOFyCC4,90
+alliance_platform_core-0.0.5.dist-info/entry_points.txt,sha256=6OYgBcLyFCUgeqLgnvMyOJxPCWzgy7se4rLPKtNonMs,34
+alliance_platform_core-0.0.5.dist-info/RECORD,,
