@@ -1,0 +1,21 @@
+Metadata-Version: 2.2
+Name: ads4gpts-langgraph-agent
+Version: 0.1.4
+Summary: ADS4GPTs LangGraph agent. Integrate Ads into AI Agents and monetize.
+Home-page: 
+Author: ads4gpts
+License: GNU AGPLv3
+Requires-Python: <4.0,>=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: langgraph<0.4.0,>=0.3.1
+Requires-Dist: ads4gpts-langchain<0.2.0,>=0.1.6
+Requires-Dist: langgraph-cli<0.2.0,>=0.1.74
+Requires-Dist: langchain-openai<0.4.0,>=0.3.7
+Requires-Dist: langchain-anthropic<0.4.0,>=0.3.8
+Requires-Dist: langchain-groq<0.3.0,>=0.2.4
+Requires-Dist: python-dotenv<2.0.0,>=1.0.1
+Requires-Dist: langsmith<0.4.0,>=0.3.11
+
+# ads4gpts-langgraph-agent
+ADS4GPTs agent for LangGraph applications.
