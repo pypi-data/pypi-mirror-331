@@ -1,0 +1,5 @@
+paramiko
+setuptools
+twine
+watchdog
+wheel
