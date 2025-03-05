@@ -1,0 +1,6 @@
+sigma/backends/golangexpr/__init__.py,sha256=_dzHdNwy5HBt4SEoK-_KpalyVmSN60ZOalt7gjYkd-o,253
+sigma/backends/golangexpr/golangexpr.py,sha256=sL--qmtyD20Kt922jx_SHEvB8S2T8LRUUQx_eD_mLM4,13477
+pysigma_backend_golangexpr-0.1.0.dist-info/LICENSE,sha256=ksPGCioiHhZBJwsG7WdgMSA3OYK_29M1mND_SoTcNzY,1059
+pysigma_backend_golangexpr-0.1.0.dist-info/METADATA,sha256=T-AneZusDmAQw0EEgQJ2NxQSYIrZfWQ6fN4Z3FZvU0I,639
+pysigma_backend_golangexpr-0.1.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+pysigma_backend_golangexpr-0.1.0.dist-info/RECORD,,
