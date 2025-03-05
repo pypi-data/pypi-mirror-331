@@ -1,0 +1,4 @@
+[console_scripts]
+fstogedcom = getmyancestors.fstogedcom:main
+getmyancestors = getmyancestors.getmyancestors:main
+mergemyancestors = getmyancestors.mergemyancestors:main

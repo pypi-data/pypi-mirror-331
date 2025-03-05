@@ -1,0 +1,40 @@
+[project]
+name = "getmyancestors"
+description = "Retrieve GEDCOM data from FamilySearch Tree"
+requires-python = ">=3.7"
+license = {text = "GNU"}
+keywords = [
+  "getmyancestors",
+  "familysearch",
+  "fstogedcom",
+  "gedcom",
+]
+classifiers = [
+    "Environment :: Console",
+    "License :: OSI Approved :: GNU General Public License (GPL)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3 :: Only",
+]
+dependencies = [
+    "babelfish==0.6.1",
+    "diskcache==5.6.3",
+    "requests==2.32.3",
+    "fake-useragent==2.0.3",
+]
+dynamic = ["version", "readme"]
+
+[tool.setuptools.dynamic]
+version = {attr = "getmyancestors.__version__"}
+readme = {file = ["README.md"]}
+
+[project.urls]
+HomePage = "https://github.com/Linekio/getmyancestors"
+
+[tool.setuptools.package-data]
+getmyancestors = ["fstogedcom.png"]
+
+[project.scripts]
+getmyancestors = "getmyancestors.getmyancestors:main"
+mergemyancestors = "getmyancestors.mergemyancestors:main"
+fstogedcom = "getmyancestors.fstogedcom:main"
+
