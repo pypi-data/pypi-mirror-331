@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+persian_editor/__init__.py
+persian_editor/widgets.py
+persian_editor.egg-info/PKG-INFO
+persian_editor.egg-info/SOURCES.txt
+persian_editor.egg-info/dependency_links.txt
+persian_editor.egg-info/requires.txt
+persian_editor.egg-info/top_level.txt
+persian_editor/static/persian_editor/css/editor.css
+persian_editor/static/persian_editor/js/editor.js
+persian_editor/templates/persian_editor/editor_template.html

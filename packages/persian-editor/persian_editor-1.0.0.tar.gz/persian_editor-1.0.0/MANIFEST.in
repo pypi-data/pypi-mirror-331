@@ -1,0 +1,3 @@
+include persian_editor/static/persian_editor/js/editor.js
+include persian_editor/static/persian_editor/css/editor.css
+include persian_editor/templates/persian_editor/editor_template.html

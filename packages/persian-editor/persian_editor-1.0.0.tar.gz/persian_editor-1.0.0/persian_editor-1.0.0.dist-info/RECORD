@@ -1,0 +1,10 @@
+persian_editor/__init__.py,sha256=crlYURA_2Ujkpz7iVPHovvxZRtvt4QBXF5AAFJzRfz0,23
+persian_editor/widgets.py,sha256=XSTUHWf7w2Pgb0cJSDKkAMrSiwfVAFBJQtkSvgwj8cY,3714
+persian_editor/static/persian_editor/css/editor.css,sha256=G6vpqLHWaWHR7endVxaf0QbocoLZRVzU8yE8ofIlJ1g,1510
+persian_editor/static/persian_editor/js/editor.js,sha256=M7a04DF_o4He_j8EClAZU9uQMTAIv-tHwI41rjkQkgI,6083
+persian_editor/templates/persian_editor/editor_template.html,sha256=oYUbybQSerpPrk_3orBO0nQ4N2-DuI3kzmL-e8AqU1k,446
+persian_editor-1.0.0.dist-info/LICENSE,sha256=Ayuqzofz-5fHnovIFHEPf0dHIXxz_dTYld2rd13ITeA,602
+persian_editor-1.0.0.dist-info/METADATA,sha256=h7ohhn9KEkytQBORSks4yy6Yld57Tq7MddP9dhas1YE,1898
+persian_editor-1.0.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+persian_editor-1.0.0.dist-info/top_level.txt,sha256=iCNnUk2-2co79zsBTFAHVknqduNvLoPNhldP1l7pRsE,15
+persian_editor-1.0.0.dist-info/RECORD,,

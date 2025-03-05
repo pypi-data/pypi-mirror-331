@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ویرایشگر فارسی پیشرفته</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'persian_editor/css/editor.css' %}">
+</head>
+<body>
+    <!-- فرم نمونه برای تست و یا استفاده در پروژه -->
+    {{ form.content }}
+    <script src="{% static 'persian_editor/js/editor.js' %}"></script>
+</body>
+</html>

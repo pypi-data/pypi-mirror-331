@@ -1,0 +1,44 @@
+Metadata-Version: 2.2
+Name: persian-editor
+Version: 1.0.0
+Summary: ویرایشگر متنی فارسی پیشرفته برای جنگو با امکانات کامل از جمله آپلود تصویر، حالت HTML، تمام صفحه و Autosave
+Home-page: https://github.com/SaEeD802/persian-editor
+Author: Mohammad_Ramezaniyan
+Author-email: pltmohammad7@gmail.com
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Framework :: Django
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Django>=2.2
+Requires-Dist: bleach>=3.1.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: summary
+
+# Persian Editor
+
+یک ویرایشگر متنی فارسی پیشرفته برای جنگو با امکانات کامل از جمله قالب‌بندی پیشرفته، درج لینک، آپلود تصویر (با AJAX)، تغییر رنگ، حالت HTML، Undo/ حالت تمام صفحه و Autosave.
+
+## ویژگی‌ها
+- قالب‌بندی متن (Bold، Italic، Underline، Strike، تراز بندی، لیست‌ها)
+- درج لینک و تصویر (آپلود تصویر از طریق AJAX)
+- تغییر رنگ متن و پس‌زمینه (با color picker)
+- نمایش ویرایشگر در حالت HTML (source view)
+- دکمه‌های Undo/Redo و پاRedo،کسازی قالب‌بندی
+- حالت تمام صفحه (Fullscreen)
+- ذخیره خودکار محتوا (Autosave با استفاده از localStorage)
+- یکپارچه‌سازی ساده با فرم‌های Django
+
+## نصب
+
+```bash
+pip install persian-editor
+```
