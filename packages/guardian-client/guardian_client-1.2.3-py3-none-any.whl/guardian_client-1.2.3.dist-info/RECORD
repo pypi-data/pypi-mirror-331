@@ -1,0 +1,10 @@
+guardian_client/__init__.py,sha256=zss7ckoptMaur9LTT5GzdhraP5GDzm5H64EMM2xIBhs,105
+guardian_client/_version.py,sha256=NcjoxDLYOmbp4fP2sdOI7frUmFsP_OmIRLppFUOMwJQ,22
+guardian_client/python/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+guardian_client/python/api.py,sha256=p3-LXhpOTQyp969XXp1Cfc2QtMfKXF5H_YdiLH4_LHM,12962
+guardian_client/python/credentials.py,sha256=32oRWgH88_ftvpuVv0_sATPqDvKSGMsWEkUfvP4k0xc,5843
+guardian_client/python/guardian.py,sha256=66cRxvPVcrksNhuDKgLPIjBWa5MUNaTst5zUVecBKq4,9562
+guardian_client-1.2.3.dist-info/METADATA,sha256=1ubURJcqIf2qZw67A1T1DRkkz-NVI-RxrlAQq_g8Br4,8109
+guardian_client-1.2.3.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+guardian_client-1.2.3.dist-info/entry_points.txt,sha256=p5eQGq5S56hPvQ-oKTcuUQozkw3nKFiKcgMeGxMEUao,55
+guardian_client-1.2.3.dist-info/RECORD,,
