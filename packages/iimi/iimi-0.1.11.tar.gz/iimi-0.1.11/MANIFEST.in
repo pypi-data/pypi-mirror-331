@@ -1,0 +1,4 @@
+include README.md
+include LICENSE.md
+include iimi/data/*.pkl
+include iimi/data/*.model
