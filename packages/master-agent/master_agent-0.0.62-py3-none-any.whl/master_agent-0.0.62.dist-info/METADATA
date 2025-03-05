@@ -1,0 +1,27 @@
+Metadata-Version: 2.2
+Name: master_agent
+Version: 0.0.62
+Summary: A library providing the tools to solve complex environments in Minigrid using LgTS
+Author: Stevo Huncho
+Author-email: stevo@stevohuncho.com
+Keywords: reinforcement learning,actor-critic,a2c,ppo,multi-processes,gpu,teacher student,ts
+Description-Content-Type: text/markdown
+License-File: LICENCE
+Requires-Dist: torch
+Requires-Dist: minigrid
+Requires-Dist: numpy
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: keywords
+Dynamic: requires-dist
+Dynamic: summary
+
+# master-minigrid-agent
+A python module for training an RL agent on any Minigrid environment using LgTS
+
+## Instalation
+```bash
+pip install master-agent
+```
