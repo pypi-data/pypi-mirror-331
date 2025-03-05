@@ -1,0 +1,6 @@
+pyinstaller
+pygame
+numpy
+gamarts
+ZOCallable
+pygame-cv
