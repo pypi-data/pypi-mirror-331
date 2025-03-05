@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/http_client/__init__.py
+src/http_client/http_client.py
+src/vek_parser.egg-info/PKG-INFO
+src/vek_parser.egg-info/SOURCES.txt
+src/vek_parser.egg-info/dependency_links.txt
+src/vek_parser.egg-info/requires.txt
+src/vek_parser.egg-info/top_level.txt
+src/web_parser/__init__.py
+src/web_parser/web_parser.py
