@@ -1,0 +1,2 @@
+[console_scripts]
+nai-generate = nai_generate.cli:main
