@@ -1,0 +1,3 @@
+[console_scripts]
+basis = partis.basis.__main__:main
+
