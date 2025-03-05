@@ -1,0 +1,6 @@
+secure_test_pack2/__init__.py,sha256=mBGRO7Rubmu31AescFlsJ9q18mXRJBTFMUJu96Usv98,32
+secure_test_pack2/sample.py,sha256=8kQExmBgBJ6mknxSQgMOjkDwOBroThbQ1E3ybSpZi4g,297
+my_secure_test_package2-0.0.1.dist-info/METADATA,sha256=ARnbpG50G381rLc2Hl3MH9LCvb4m2zLdcBciz2zgmzA,282
+my_secure_test_package2-0.0.1.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+my_secure_test_package2-0.0.1.dist-info/top_level.txt,sha256=YbQ53Ic-3EAcpnA-4aIdhEj-Gy6GZjkTeB1p6i9lyYA,18
+my_secure_test_package2-0.0.1.dist-info/RECORD,,
