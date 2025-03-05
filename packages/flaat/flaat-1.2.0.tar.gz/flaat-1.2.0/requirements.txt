@@ -1,0 +1,8 @@
+aarc-entitlement==1.*
+cachetools==5.*
+configargparse==1.*
+humanfriendly==10.*
+liboidcagent==0.*
+requests>=2.31
+pyjwt[crypto]>=2.4
+cryptography>=37
