@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+backblaze_uploader/__init__.py
+backblaze_uploader/uploader.py
+backblaze_uploader.egg-info/PKG-INFO
+backblaze_uploader.egg-info/SOURCES.txt
+backblaze_uploader.egg-info/dependency_links.txt
+backblaze_uploader.egg-info/requires.txt
+backblaze_uploader.egg-info/top_level.txt
+tests/__init__.py
+tests/test_uploader.py
