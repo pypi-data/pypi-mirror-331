@@ -1,0 +1,27 @@
+.gitignore
+.readthedocs.yaml
+LICENSE
+README.md
+pyproject.toml
+docs/Makefile
+docs/make.bat
+docs/requirements.txt
+docs/source/api.rst
+docs/source/categories.rst
+docs/source/conf.py
+docs/source/index.rst
+docs/source/services.rst
+docs/source/usage.rst
+geopedestrian/__init__.py
+geopedestrian/categories.py
+geopedestrian/services.py
+geopedestrian.egg-info/PKG-INFO
+geopedestrian.egg-info/SOURCES.txt
+geopedestrian.egg-info/dependency_links.txt
+geopedestrian.egg-info/requires.txt
+geopedestrian.egg-info/top_level.txt
+geopedestrian/data/places-categories.json
+notebooks/Advanced Mapping.ipynb
+notebooks/EM2024 Final Map.ipynb
+notebooks/Fifteen Minutes Walking.ipynb
+notebooks/Find Bars Nearby.ipynb
