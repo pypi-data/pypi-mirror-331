@@ -1,0 +1,15 @@
+trendspy/__init__.py,sha256=6OpsOjuik_bWXGFuOyMqzy_V-pEB0iSZk4G4-Gm4Nsc,989
+trendspy/client.py,sha256=q-5ZFBrLYD-w07P45eKwNie-Nk50eP3C6dV9P9iHIXo,27741
+trendspy/constants.py,sha256=deugKQcDztEdrht33Ksl81xvzl1pBci_pa3pfHx_PR8,477
+trendspy/converter.py,sha256=QrBCm_hqAo6bKunYbovkPcacgKDMDTxgdFx6MWSIL-0,6266
+trendspy/converter_native.py,sha256=F2dCuVHq873KpLBiuDx18TBVuTx7vEzXesg-TPjdm6s,3499
+trendspy/hierarchical_search.py,sha256=cCy75kY89wsapIl-PR5xh2iC3hgk3qXUO2lpU20Si74,5532
+trendspy/news_article.py,sha256=UcFwoIyFebrct0RnWYjJ5MO6OCvDKz0ydZ_0Z6JLbr4,2648
+trendspy/timeframe_utils.py,sha256=tuVNv_MgzF670mqGYxIRzIw17M_sx7CBWqGxXQ0pcTU,8542
+trendspy/trend_keyword.py,sha256=z2a9gT_d6KhxV03SDapzjr-Cvv0v4TosrQnQ7jlpspE,8983
+trendspy/trend_list.py,sha256=v9YKiNoi2Q_5zBcer1yPNR-fooNmZJdqno9cvB2gKYg,2348
+trendspy/utils.py,sha256=iQhbo0TmM5WZLWgsr9GWGN2ibHCmBTaOkK4vsQjlh2k,3836
+trendspy_lite-0.0.3.dist-info/METADATA,sha256=WlkcI72z27Y3niLD-JCFjoCqB6MsM4upW7bF2tU9kuE,7926
+trendspy_lite-0.0.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+trendspy_lite-0.0.3.dist-info/licenses/LICENSE,sha256=igasevNLa2TYiZEwWfhykl8D111IHqjMxAeYH8NLYas,1060
+trendspy_lite-0.0.3.dist-info/RECORD,,
