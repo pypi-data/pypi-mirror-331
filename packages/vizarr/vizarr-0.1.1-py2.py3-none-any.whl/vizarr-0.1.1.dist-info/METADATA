@@ -1,0 +1,5 @@
+Metadata-Version: 2.4
+Name: vizarr
+Version: 0.1.1
+Requires-Dist: anywidget>=0.9.13
+Requires-Dist: zarr<3
