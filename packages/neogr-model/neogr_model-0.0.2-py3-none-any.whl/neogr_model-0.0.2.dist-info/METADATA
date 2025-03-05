@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: neogr-model
+Version: 0.0.2
+Summary: Internal models of entities and realtionships for Neo4J based Graph RAG
+Project-URL: Homepage, https://github.com/czeos/neogr-model
+Project-URL: Issues, https://github.com/czeos/neogr-model/issues
+Author: Mike
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Build Tools
+Requires-Python: >=3.10
+Requires-Dist: neomodel==5.4.3
+Requires-Dist: pydantic==2.10.6
+Description-Content-Type: text/markdown
+
+## NeoGR Models
+Models for Graph RAG and Noe4J
