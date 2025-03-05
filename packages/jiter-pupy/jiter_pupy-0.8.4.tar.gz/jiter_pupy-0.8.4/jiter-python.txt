@@ -1,0 +1,1001 @@
+# Folder Tree Structure
+
+jiter-python
+├── Cargo.toml
+├── README.md
+├── bench.py
+├── jiter-python.txt
+├── jiter.pyi
+├── package.json
+├── pyproject.toml
+├── requirements.txt
+├── src
+│   └── lib.rs
+└── tests
+    ├── emscripten_runner.js
+    ├── requirements.txt
+    └── test_jiter.py
+
+3 directories, 12 files
+
+
+
+# Folder: jiter-python
+
+## File: Cargo.toml (Size: 0.89 KB)
+
+```
+[package]
+name = "jiter-python"
+version = {workspace = true}
+edition = {workspace = true}
+authors = {workspace = true}
+license = {workspace = true}
+keywords = {workspace = true}
+categories = {workspace = true}
+homepage = {workspace = true}
+repository = {workspace = true}
+
+[dependencies]
+pyo3 = { workspace = true, features = ["num-bigint"] }
+jiter = { path = "../jiter", features = ["python", "num-bigint"] }
+
+[features]
+# make extensions visible to cargo vendor
+extension-module = ["pyo3/extension-module", "pyo3/generate-import-lib"]
+
+[lib]
+name = "jiter_python"
+crate-type = ["cdylib", "rlib"]
+
+[lints.clippy]
+dbg_macro = "deny"
+print_stdout = "deny"
+print_stderr = "deny"
+# in general we lint against the pedantic group, but we will whitelist
+# certain lints which we don't want to enforce (for now)
+pedantic = { level = "deny", priority = -1 }
+missing_errors_doc = "allow"
+must_use_candidate = "allow"
+```
+
+## File: README.md (Size: 3.77 KB)
+
+```
+# jiter
+
+[![CI](https://github.com/pydantic/jiter/workflows/CI/badge.svg?event=push)](https://github.com/pydantic/jiter/actions?query=event%3Apush+branch%3Amain+workflow%3ACI)
+[![pypi](https://img.shields.io/pypi/v/jiter.svg)](https://pypi.python.org/pypi/jiter)
+[![versions](https://img.shields.io/pypi/pyversions/jiter.svg)](https://github.com/pydantic/jiter)
+[![license](https://img.shields.io/github/license/pydantic/jiter.svg)](https://github.com/pydantic/jiter/blob/main/LICENSE)
+
+This is a standalone version of the JSON parser used in `pydantic-core`. The recommendation is to only use this package directly if you do not use `pydantic`.
+
+The API is extremely minimal:
+
+```python
+def from_json(
+    json_data: bytes,
+    /,
+    *,
+    allow_inf_nan: bool = True,
+    cache_mode: Literal[True, False, "all", "keys", "none"] = "all",
+    partial_mode: Literal[True, False, "off", "on", "trailing-strings"] = False,
+    catch_duplicate_keys: bool = False,
+    float_mode: Literal["float", "decimal", "lossless-float"] = False,
+) -> Any:
+    """
+    Parse input bytes into a JSON object.
+
+    Arguments:
+        json_data: The JSON data to parse
+        allow_inf_nan: Whether to allow infinity (`Infinity` an `-Infinity`) and `NaN` values to float fields.
+            Defaults to True.
+        cache_mode: cache Python strings to improve performance at the cost of some memory usage
+            - True / 'all' - cache all strings
+            - 'keys' - cache only object keys
+            - False / 'none' - cache nothing
+        partial_mode: How to handle incomplete strings:
+            - False / 'off' - raise an exception if the input is incomplete
+            - True / 'on' - allow incomplete JSON but discard the last string if it is incomplete
+            - 'trailing-strings' - allow incomplete JSON, and include the last incomplete string in the output
+        catch_duplicate_keys: if True, raise an exception if objects contain the same key multiple times
+        float_mode: How to return floats: as a `float`, `Decimal` or `LosslessFloat`
+
+    Returns:
+        Python object built from the JSON input.
+    """
+
+def cache_clear() -> None:
+    """
+    Reset the string cache.
+    """
+
+def cache_usage() -> int:
+    """
+    get the size of the string cache.
+
+    Returns:
+        Size of the string cache in bytes.
+    """
+```
+## Examples
+
+The main function provided by Jiter is `from_json()`, which accepts a bytes object containing JSON and returns a Python dictionary, list or other value.
+
+```python
+import jiter
+
+json_data = b'{"name": "John", "age": 30}'
+parsed_data = jiter.from_json(json_data)
+print(parsed_data)  # Output: {'name': 'John', 'age': 30}
+```
+
+### Handling Partial JSON
+
+Incomplete JSON objects can be parsed using the `partial_mode=` parameter.
+
+```python
+import jiter
+
+partial_json = b'{"name": "John", "age": 30, "city": "New Yor'
+
+# Raise error on incomplete JSON
+try:
+    jiter.from_json(partial_json, partial_mode=False)
+except ValueError as e:
+    print(f"Error: {e}")
+
+# Parse incomplete JSON, discarding incomplete last field
+result = jiter.from_json(partial_json, partial_mode=True)
+print(result)  # Output: {'name': 'John', 'age': 30}
+
+# Parse incomplete JSON, including incomplete last field
+result = jiter.from_json(partial_json, partial_mode='trailing-strings')
+print(result)  # Output: {'name': 'John', 'age': 30, 'city': 'New Yor'}
+```
+
+### Catching Duplicate Keys
+
+The `catch_duplicate_keys=True` option can be used to raise a `ValueError` if an object contains duplicate keys.
+
+```python
+import jiter
+
+json_with_dupes = b'{"foo": 1, "foo": 2}'
+
+# Default behavior (last value wins)
+result = jiter.from_json(json_with_dupes)
+print(result)  # Output: {'foo': 2}
+
+# Catch duplicate keys
+try:
+    jiter.from_json(json_with_dupes, catch_duplicate_keys=True)
+except ValueError as e:
+    print(f"Error: {e}")
+```
+```
+
+## File: bench.py (Size: 2.63 KB)
+
+```
+import argparse
+import os
+import timeit
+from pathlib import Path
+
+import json
+
+CASES = {
+    "array_short_strings": "[{}]".format(", ".join('"123"' for _ in range(100_000))),
+    "object_short_strings": "{%s}" % ", ".join(f'"{i}": "{i}x"' for i in range(100_000)),
+    "array_short_arrays": "[{}]".format(", ".join('["a", "b", "c", "d"]' for _ in range(10_000))),
+    "one_long_string": json.dumps("x" * 100),
+    "one_short_string": b'"foobar"',
+    "1m_strings": json.dumps([str(i) for i in range(1_000_000)]),
+}
+
+BENCHES_DIR = Path(__file__).parent.parent / "jiter/benches/"
+
+for p in BENCHES_DIR.glob('*.json'):
+    CASES[p.stem] = p.read_bytes()
+
+
+def run_bench(func, d, fast: bool):
+    if isinstance(d, str):
+        d = d.encode()
+    timer = timeit.Timer(
+        "func(json_data)", setup="", globals={"func": func, "json_data": d}
+    )
+    if fast:
+        return timer.timeit(1)
+    else:
+        n, t = timer.autorange()
+        iter_time = t / n
+        # print(f'{func.__module__}.{func.__name__}', iter_time)
+        return iter_time
+
+
+def setup_orjson():
+    import orjson
+
+    return lambda data: orjson.loads(data)
+
+
+def setup_jiter_cache():
+    import jiter
+
+    return lambda data: jiter.from_json(data, cache_mode=True)
+
+
+def setup_jiter():
+    import jiter
+
+    return lambda data: jiter.from_json(data, cache_mode=False)
+
+
+def setup_ujson():
+    import ujson
+
+    return lambda data: ujson.loads(data)
+
+
+def setup_json():
+    import json
+
+    return lambda data: json.loads(data)
+
+
+PARSERS = {
+    "orjson": setup_orjson,
+    "jiter-cache": setup_jiter_cache,
+    "jiter": setup_jiter,
+    "ujson": setup_ujson,
+    "json": setup_json,
+}
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--case", default="all", choices=[*CASES.keys(), "all"])
+    parser.add_argument("--fast", action="store_true", default=False)
+    parser.add_argument(
+        "parsers", nargs="*", default="all", choices=[*PARSERS.keys(), "all"]
+    )
+    args = parser.parse_args()
+
+    parsers = [*PARSERS.keys()] if "all" in args.parsers else args.parsers
+    cases = [*CASES.keys()] if args.case == "all" else [args.case]
+
+    for name in cases:
+        print(f"Case: {name}")
+
+        json_data = CASES[name]
+        times = [(parser, run_bench(PARSERS[parser](), json_data, args.fast)) for parser in parsers]
+
+        times.sort(key=lambda x: x[1])
+        best = times[0][1]
+
+        print(f'{"package":>12} | {"time µs":>10} | slowdown')
+        print(f'{"-" * 13}|{"-" * 12}|{"-" * 9}')
+        for name, time in times:
+            print(f"{name:>12} | {time * 1_000_000:10.2f} | {time / best:8.2f}")
+        print("")
+
+
+if __name__ == "__main__":
+    main()
+```
+
+## File: jiter-python.txt (Size: 0.02 KB)
+
+```
+
+# Folder: jiter-python
+```
+
+## File: jiter.pyi (Size: 2.31 KB)
+
+```
+import decimal
+from typing import Any, Literal
+
+def from_json(
+    json_data: bytes,
+    /,
+    *,
+    allow_inf_nan: bool = True,
+    cache_mode: Literal[True, False, "all", "keys", "none"] = "all",
+    partial_mode: Literal[True, False, "off", "on", "trailing-strings"] = False,
+    catch_duplicate_keys: bool = False,
+    float_mode: Literal["float", "decimal", "lossless-float"] = False,
+) -> Any:
+    """
+    Parse input bytes into a JSON object.
+
+    Arguments:
+        json_data: The JSON data to parse
+        allow_inf_nan: Whether to allow infinity (`Infinity` an `-Infinity`) and `NaN` values to float fields.
+            Defaults to True.
+        cache_mode: cache Python strings to improve performance at the cost of some memory usage
+            - True / 'all' - cache all strings
+            - 'keys' - cache only object keys
+            - False / 'none' - cache nothing
+        partial_mode: How to handle incomplete strings:
+            - False / 'off' - raise an exception if the input is incomplete
+            - True / 'on' - allow incomplete JSON but discard the last string if it is incomplete
+            - 'trailing-strings' - allow incomplete JSON, and include the last incomplete string in the output
+        catch_duplicate_keys: if True, raise an exception if objects contain the same key multiple times
+        float_mode: How to return floats: as a `float`, `Decimal` or `LosslessFloat`
+
+    Returns:
+        Python object built from the JSON input.
+    """
+
+def cache_clear() -> None:
+    """
+    Reset the string cache.
+    """
+
+def cache_usage() -> int:
+    """
+    get the size of the string cache.
+
+    Returns:
+        Size of the string cache in bytes.
+    """
+
+
+class LosslessFloat:
+    """
+    Represents a float from JSON, by holding the underlying bytes representing a float from JSON.
+    """
+    def __init__(self, json_float: bytes):
+        """Construct a LosslessFloat object from a JSON bytes slice"""
+
+    def as_decimal(self) -> decimal.Decimal:
+        """Construct a Python Decimal from the JSON bytes slice"""
+
+    def __float__(self) -> float:
+        """Construct a Python float from the JSON bytes slice"""
+
+    def __bytes__(self) -> bytes:
+        """Return the JSON bytes slice as bytes"""
+
+    def __str__(self):
+        """Return the JSON bytes slice as a string"""
+
+    def __repr__(self):
+        ...
+```
+
+## File: package.json (Size: 0.71 KB)
+
+```
+{
+  "name": "jiter",
+  "version": "1.0.0",
+  "description": "for running wasm tests.",
+  "author": "Samuel Colvin",
+  "license": "MIT",
+  "homepage": "https://github.com/pydantic/jiter#readme",
+  "main": "tests/emscripten_runner.js",
+  "dependencies": {
+    "prettier": "^2.7.1",
+    "pyodide": "^0.26.3"
+  },
+  "scripts": {
+    "test": "node tests/emscripten_runner.js",
+    "format": "prettier --write 'tests/emscripten_runner.js' 'wasm-preview/*.{html,js}'",
+    "lint": "prettier --check 'tests/emscripten_runner.js' 'wasm-preview/*.{html,js}'"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "all",
+    "tabWidth": 2,
+    "printWidth": 119,
+    "bracketSpacing": false,
+    "arrowParens": "avoid"
+  }
+}
+```
+
+## File: pyproject.toml (Size: 1.24 KB)
+
+```
+[build-system]
+requires = ["maturin>=1,<2"]
+build-backend = "maturin"
+
+[project]
+name = "jiter"
+description = "Fast iterable JSON parser."
+requires-python = ">=3.8"
+authors = [
+    {name = "Samuel Colvin", email = "s@muelcolvin.com"}
+]
+license = "MIT"
+readme = "README.md"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Unix",
+    "Operating System :: POSIX :: Linux",
+    "Environment :: Console",
+    "Environment :: MacOS X",
+    "Topic :: File Formats :: JSON",
+    "Framework :: Pydantic :: 2",
+]
+dynamic = ["version"]
+
+[tool.maturin]
+module-name = "jiter"
+bindings = "pyo3"
+features = ["pyo3/extension-module", "pyo3/generate-import-lib"]
+
+[tool.ruff.format]
+quote-style = 'single'
+```
+
+## File: requirements.txt (Size: 0.02 KB)
+
+```
+maturin
+orjson
+ujson
+```
+
+## File: src/lib.rs (Size: 2.22 KB)
+
+```
+use std::sync::OnceLock;
+
+pub fn get_jiter_version() -> &'static str {
+    static JITER_VERSION: OnceLock<String> = OnceLock::new();
+
+    JITER_VERSION.get_or_init(|| {
+        let version = env!("CARGO_PKG_VERSION");
+        // cargo uses "1.0-alpha1" etc. while python uses "1.0.0a1", this is not full compatibility,
+        // but it's good enough for now
+        // see https://docs.rs/semver/1.0.9/semver/struct.Version.html#method.parse for rust spec
+        // see https://peps.python.org/pep-0440/ for python spec
+        // it seems the dot after "alpha/beta" e.g. "-alpha.1" is not necessary, hence why this works
+        version.replace("-alpha", "a").replace("-beta", "b")
+    })
+}
+
+#[pyo3::pymodule(gil_used = false)]
+#[pyo3(name = "jiter")]
+mod jiter_python {
+    use pyo3::prelude::*;
+
+    use jiter::{map_json_error, FloatMode, LosslessFloat, PartialMode, PythonParse, StringCacheMode};
+
+    use super::get_jiter_version;
+
+    #[allow(clippy::fn_params_excessive_bools)]
+    #[pyfunction(
+        signature = (
+            json_data,
+            /,
+            *,
+            allow_inf_nan=true,
+            cache_mode=StringCacheMode::All,
+            partial_mode=PartialMode::Off,
+            catch_duplicate_keys=false,
+            float_mode=FloatMode::Float,
+        )
+    )]
+    pub fn from_json<'py>(
+        py: Python<'py>,
+        json_data: &[u8],
+        allow_inf_nan: bool,
+        cache_mode: StringCacheMode,
+        partial_mode: PartialMode,
+        catch_duplicate_keys: bool,
+        float_mode: FloatMode,
+    ) -> PyResult<Bound<'py, PyAny>> {
+        let parse_builder = PythonParse {
+            allow_inf_nan,
+            cache_mode,
+            partial_mode,
+            catch_duplicate_keys,
+            float_mode,
+        };
+        parse_builder
+            .python_parse(py, json_data)
+            .map_err(|e| map_json_error(json_data, &e))
+    }
+
+    #[pyfunction]
+    pub fn cache_clear() {
+        jiter::cache_clear();
+    }
+
+    #[pyfunction]
+    pub fn cache_usage() -> usize {
+        jiter::cache_usage()
+    }
+
+    #[pymodule_init]
+    fn init_jiter_python(m: &Bound<'_, PyModule>) -> PyResult<()> {
+        m.add("__version__", get_jiter_version())?;
+        m.add_class::<LosslessFloat>()?;
+        Ok(())
+    }
+}
+```
+
+## File: tests/emscripten_runner.js (Size: 1.71 KB)
+
+```
+const {opendir} = require('node:fs/promises');
+const {loadPyodide} = require('pyodide');
+const path = require('path');
+
+async function find_wheel(dist_dir) {
+  const dir = await opendir(dist_dir);
+  for await (const dirent of dir) {
+    if (dirent.name.endsWith('.whl')) {
+      return path.join(dist_dir, dirent.name);
+    }
+  }
+}
+
+async function main() {
+  const root_dir = path.resolve(__dirname, '..');
+  const wheel_path = await find_wheel(path.join(root_dir, 'dist'));
+  const stdout = []
+  const stderr = []
+  let errcode = 1;
+  try {
+    const pyodide = await loadPyodide({
+      stdout: (msg) => {
+        stdout.push(msg)
+      },
+      stderr: (msg) => {
+        stderr.push(msg)
+      }
+    });
+    const FS = pyodide.FS;
+    FS.mkdir('/test_dir');
+    FS.mount(FS.filesystems.NODEFS, {root: path.join(root_dir, 'tests')}, '/test_dir');
+    FS.chdir('/test_dir');
+
+    // mount jiter crate source for benchmark data
+    FS.mkdir('/jiter');
+    FS.mount(FS.filesystems.NODEFS, {root: path.resolve(root_dir, "..", "jiter")}, '/jiter');
+
+    await pyodide.loadPackage(['micropip', 'pytest']);
+    // language=python
+    errcode = await pyodide.runPythonAsync(`
+import micropip
+import importlib
+
+# ugly hack to get tests to work on arm64 (my m1 mac)
+# see https://github.com/pyodide/pyodide/issues/2840
+# import sys; sys.setrecursionlimit(200)
+
+await micropip.install([
+  'dirty_equals',
+  'file:${wheel_path}'
+])
+importlib.invalidate_caches()
+
+print('installed packages:', micropip.list())
+
+import pytest
+pytest.main()
+`);
+  } catch (e) {
+    console.error(e);
+    process.exit(1);
+  }
+  let out = stdout.join('\n')
+  let err = stderr.join('\n')
+  console.log('stdout:\n', out)
+  console.log('stderr:\n', err)
+
+  process.exit(errcode);
+}
+
+main();
+```
+
+## File: tests/requirements.txt (Size: 0.03 KB)
+
+```
+pytest
+pytest-pretty
+dirty_equals
+```
+
+## File: tests/test_jiter.py (Size: 11.81 KB)
+
+```
+from concurrent.futures import ThreadPoolExecutor
+import json
+from decimal import Decimal
+from pathlib import Path
+import sys
+from typing import Any
+
+import jiter
+import pytest
+from math import inf
+from dirty_equals import IsFloatNan
+
+JITER_BENCH_DIR = Path(__file__).parent.parent.parent / 'jiter' / 'benches'
+
+JITER_BENCH_DATAS = [
+    (JITER_BENCH_DIR / 'bigints_array.json').read_bytes(),
+    (JITER_BENCH_DIR / 'floats_array.json').read_bytes(),
+    (JITER_BENCH_DIR / 'massive_ints_array.json').read_bytes(),
+    (JITER_BENCH_DIR / 'medium_response.json').read_bytes(),
+    (JITER_BENCH_DIR / 'pass1.json').read_bytes(),
+    (JITER_BENCH_DIR / 'pass2.json').read_bytes(),
+    (JITER_BENCH_DIR / 'sentence.json').read_bytes(),
+    (JITER_BENCH_DIR / 'short_numbers.json').read_bytes(),
+    (JITER_BENCH_DIR / 'string_array_unique.json').read_bytes(),
+    (JITER_BENCH_DIR / 'string_array.json').read_bytes(),
+    (JITER_BENCH_DIR / 'true_array.json').read_bytes(),
+    (JITER_BENCH_DIR / 'true_object.json').read_bytes(),
+    (JITER_BENCH_DIR / 'unicode.json').read_bytes(),
+    (JITER_BENCH_DIR / 'x100.json').read_bytes(),
+]
+
+
+def test_python_parse_numeric():
+    parsed = jiter.from_json(
+        b'  { "int": 1, "bigint": 123456789012345678901234567890, "float": 1.2}  '
+    )
+    assert parsed == {'int': 1, 'bigint': 123456789012345678901234567890, 'float': 1.2}
+
+
+def test_python_parse_other_cached():
+    parsed = jiter.from_json(
+        b'["string", true, false, null, NaN, Infinity, -Infinity]',
+        allow_inf_nan=True,
+        cache_mode=True,
+    )
+    assert parsed == ['string', True, False, None, IsFloatNan(), inf, -inf]
+
+
+def test_python_parse_other_no_cache():
+    parsed = jiter.from_json(
+        b'["string", true, false, null]',
+        cache_mode=False,
+    )
+    assert parsed == ['string', True, False, None]
+
+
+def test_python_disallow_nan():
+    with pytest.raises(ValueError, match='expected value at line 1 column 2'):
+        jiter.from_json(b'[NaN]', allow_inf_nan=False)
+
+
+def test_error():
+    with pytest.raises(ValueError, match='EOF while parsing a list at line 1 column 9'):
+        jiter.from_json(b'["string"')
+
+
+def test_recursion_limit():
+    with pytest.raises(
+        ValueError, match='recursion limit exceeded at line 1 column 202'
+    ):
+        jiter.from_json(b'[' * 10_000)
+
+
+def test_recursion_limit_incr():
+    json = b'[' + b', '.join(b'[1]' for _ in range(2000)) + b']'
+    v = jiter.from_json(json)
+    assert len(v) == 2000
+
+    v = jiter.from_json(json)
+    assert len(v) == 2000
+
+
+def test_extracted_value_error():
+    with pytest.raises(ValueError, match='expected value at line 1 column 1'):
+        jiter.from_json(b'xx')
+
+
+def test_partial_array():
+    json = b'["string", true, null, 1, "foo'
+
+    with pytest.raises(
+        ValueError, match='EOF while parsing a string at line 1 column 30'
+    ):
+        jiter.from_json(json, partial_mode=False)
+
+    parsed = jiter.from_json(json, partial_mode=True)
+    assert parsed == ['string', True, None, 1]
+
+    # test that stopping at every points is ok
+    for i in range(1, len(json)):
+        parsed = jiter.from_json(json[:i], partial_mode=True)
+        assert isinstance(parsed, list)
+
+
+def test_partial_array_trailing_strings():
+    json = b'["string", true, null, 1, "foo'
+    parsed = jiter.from_json(json, partial_mode='trailing-strings')
+    assert parsed == ['string', True, None, 1, 'foo']
+
+    # test that stopping at every points is ok
+    for i in range(1, len(json)):
+        parsed = jiter.from_json(json[:i], partial_mode='trailing-strings')
+        assert isinstance(parsed, list)
+
+
+def test_partial_array_first():
+    json = b'['
+    parsed = jiter.from_json(json, partial_mode=True)
+    assert parsed == []
+
+    with pytest.raises(ValueError, match='EOF while parsing a list at line 1 column 1'):
+        jiter.from_json(json)
+
+    with pytest.raises(ValueError, match='EOF while parsing a list at line 1 column 1'):
+        jiter.from_json(json, partial_mode='off')
+
+
+def test_partial_object():
+    json = b'{"a": 1, "b": 2, "c'
+    parsed = jiter.from_json(json, partial_mode=True)
+    assert parsed == {'a': 1, 'b': 2}
+
+    # test that stopping at every points is ok
+    for i in range(1, len(json)):
+        parsed = jiter.from_json(json, partial_mode=True)
+        assert isinstance(parsed, dict)
+
+
+def test_partial_object_string():
+    json = b'{"a": 1, "b": 2, "c": "foo'
+    parsed = jiter.from_json(json, partial_mode=True)
+    assert parsed == {'a': 1, 'b': 2}
+    parsed = jiter.from_json(json, partial_mode='on')
+    assert parsed == {'a': 1, 'b': 2}
+
+    # test that stopping at every points is ok
+    for i in range(1, len(json)):
+        parsed = jiter.from_json(json, partial_mode=True)
+        assert isinstance(parsed, dict)
+
+    json = b'{"title": "Pride and Prejudice", "author": "Jane A'
+    parsed = jiter.from_json(json, partial_mode=True)
+    assert parsed == {'title': 'Pride and Prejudice'}
+
+
+def test_partial_object_string_trailing_strings():
+    json = b'{"a": 1, "b": 2, "c": "foo'
+    parsed = jiter.from_json(json, partial_mode='trailing-strings')
+    assert parsed == {'a': 1, 'b': 2, 'c': 'foo'}
+
+    # test that stopping at every points is ok
+    for i in range(1, len(json)):
+        parsed = jiter.from_json(json, partial_mode=True)
+        assert isinstance(parsed, dict)
+
+    json = b'{"title": "Pride and Prejudice", "author": "Jane A'
+    parsed = jiter.from_json(json, partial_mode='trailing-strings')
+    assert parsed == {'title': 'Pride and Prejudice', 'author': 'Jane A'}
+
+
+def test_partial_nested():
+    json = b'{"a": 1, "b": 2, "c": [1, 2, {"d": 1, '
+    parsed = jiter.from_json(json, partial_mode=True)
+    assert parsed == {'a': 1, 'b': 2, 'c': [1, 2, {'d': 1}]}
+
+    # test that stopping at every points is ok
+    for i in range(1, len(json)):
+        parsed = jiter.from_json(json[:i], partial_mode=True)
+        assert isinstance(parsed, dict)
+
+
+def test_partial_error():
+    json = b'["string", true, null, 1, "foo'
+
+    with pytest.raises(
+        ValueError, match='EOF while parsing a string at line 1 column 30'
+    ):
+        jiter.from_json(json, partial_mode=False)
+
+    assert jiter.from_json(json, partial_mode=True) == ['string', True, None, 1]
+
+    msg = "Invalid partial mode, should be `'off'`, `'on'`, `'trailing-strings'` or a `bool`"
+    with pytest.raises(ValueError, match=msg):
+        jiter.from_json(json, partial_mode='wrong')
+    with pytest.raises(TypeError, match=msg):
+        jiter.from_json(json, partial_mode=123)
+
+
+def test_python_cache_usage_all():
+    jiter.cache_clear()
+    parsed = jiter.from_json(b'{"foo": "bar", "spam": 3}', cache_mode='all')
+    assert parsed == {'foo': 'bar', 'spam': 3}
+    assert jiter.cache_usage() == 3
+
+
+def test_python_cache_usage_keys():
+    jiter.cache_clear()
+    parsed = jiter.from_json(b'{"foo": "bar", "spam": 3}', cache_mode='keys')
+    assert parsed == {'foo': 'bar', 'spam': 3}
+    assert jiter.cache_usage() == 2
+
+
+def test_python_cache_usage_none():
+    jiter.cache_clear()
+    parsed = jiter.from_json(
+        b'{"foo": "bar", "spam": 3}',
+        cache_mode='none',
+    )
+    assert parsed == {'foo': 'bar', 'spam': 3}
+    assert jiter.cache_usage() == 0
+
+
+def test_use_tape():
+    json = '  "foo\\nbar"  '.encode()
+    jiter.cache_clear()
+    parsed = jiter.from_json(json, cache_mode=False)
+    assert parsed == 'foo\nbar'
+
+
+def test_unicode():
+    json = '{"💩": "£"}'.encode()
+    jiter.cache_clear()
+    parsed = jiter.from_json(json, cache_mode=False)
+    assert parsed == {'💩': '£'}
+
+
+def test_unicode_cache():
+    json = '{"💩": "£"}'.encode()
+    jiter.cache_clear()
+    parsed = jiter.from_json(json)
+    assert parsed == {'💩': '£'}
+
+
+def test_json_float():
+    f = jiter.LosslessFloat(b'123.45')
+    assert str(f) == '123.45'
+    assert repr(f) == 'LosslessFloat(123.45)'
+    assert float(f) == 123.45
+    assert f.as_decimal() == Decimal('123.45')
+    assert bytes(f) == b'123.45'
+
+
+def test_json_float_scientific():
+    f = jiter.LosslessFloat(b'123e4')
+    assert str(f) == '123e4'
+    assert float(f) == 123e4
+    assert f.as_decimal() == Decimal('123e4')
+
+
+def test_json_float_invalid():
+    with pytest.raises(ValueError, match='trailing characters at line 1 column 6'):
+        jiter.LosslessFloat(b'123.4x')
+
+
+def test_lossless_floats():
+    f = jiter.from_json(b'12.3')
+    assert isinstance(f, float)
+    assert f == 12.3
+
+    f = jiter.from_json(b'12.3', float_mode='float')
+    assert isinstance(f, float)
+    assert f == 12.3
+
+    f = jiter.from_json(b'12.3', float_mode='lossless-float')
+    assert isinstance(f, jiter.LosslessFloat)
+    assert str(f) == '12.3'
+    assert float(f) == 12.3
+    assert f.as_decimal() == Decimal('12.3')
+
+    f = jiter.from_json(b'123.456789123456789e45', float_mode='lossless-float')
+    assert isinstance(f, jiter.LosslessFloat)
+    assert 123e45 < float(f) < 124e45
+    assert f.as_decimal() == Decimal('1.23456789123456789E+47')
+    assert bytes(f) == b'123.456789123456789e45'
+    assert str(f) == '123.456789123456789e45'
+    assert repr(f) == 'LosslessFloat(123.456789123456789e45)'
+
+    f = jiter.from_json(b'123', float_mode='lossless-float')
+    assert isinstance(f, int)
+    assert f == 123
+
+    with pytest.raises(ValueError, match='expected value at line 1 column 1'):
+        jiter.from_json(b'wrong', float_mode='lossless-float')
+
+    with pytest.raises(ValueError, match='trailing characters at line 1 column 2'):
+        jiter.from_json(b'1wrong', float_mode='lossless-float')
+
+
+def test_decimal_floats():
+    f = jiter.from_json(b'12.3')
+    assert isinstance(f, float)
+    assert f == 12.3
+
+    f = jiter.from_json(b'12.3', float_mode='decimal')
+    assert isinstance(f, Decimal)
+    assert f == Decimal('12.3')
+
+    f = jiter.from_json(b'123.456789123456789e45', float_mode='decimal')
+    assert isinstance(f, Decimal)
+    assert f == Decimal('1.23456789123456789E+47')
+
+    f = jiter.from_json(b'123', float_mode='decimal')
+    assert isinstance(f, int)
+    assert f == 123
+
+    with pytest.raises(ValueError, match='expected value at line 1 column 1'):
+        jiter.from_json(b'wrong', float_mode='decimal')
+
+    with pytest.raises(ValueError, match='trailing characters at line 1 column 2'):
+        jiter.from_json(b'1wrong', float_mode='decimal')
+
+
+def test_unicode_roundtrip():
+    original = ['中文']
+    json_data = json.dumps(original).encode()
+    assert jiter.from_json(json_data) == original
+    assert json.loads(json_data) == original
+
+
+def test_unicode_roundtrip_ensure_ascii():
+    original = {'name': '中文'}
+    json_data = json.dumps(original, ensure_ascii=False).encode()
+    assert jiter.from_json(json_data, cache_mode=False) == original
+    assert json.loads(json_data) == original
+
+
+def test_catch_duplicate_keys():
+    assert jiter.from_json(b'{"foo": 1, "foo": 2}') == {'foo': 2}
+
+    with pytest.raises(
+        ValueError, match='Detected duplicate key "foo" at line 1 column 18'
+    ):
+        jiter.from_json(b'{"foo": 1, "foo": 2}', catch_duplicate_keys=True)
+
+    with pytest.raises(
+        ValueError, match='Detected duplicate key "foo" at line 1 column 28'
+    ):
+        jiter.from_json(b'{"foo": 1, "bar": 2, "foo": 2}', catch_duplicate_keys=True)
+
+
+def test_against_json():
+    for data in JITER_BENCH_DATAS:
+        assert jiter.from_json(data) == json.loads(data)
+
+
+@pytest.mark.skipif(
+    sys.platform == 'emscripten', reason='threads not supported on pyodide'
+)
+def test_multithreaded_parsing():
+    """Basic sanity check that running a parse in multiple threads is fine."""
+    expected_datas = [json.loads(data) for data in JITER_BENCH_DATAS]
+
+    def assert_jiter_ok(data: bytes, expected: Any) -> bool:
+        return jiter.from_json(data) == expected
+
+    with ThreadPoolExecutor(8) as pool:
+        results = []
+        for _ in range(1000):
+            for data, expected_result in zip(JITER_BENCH_DATAS, expected_datas):
+                results.append(pool.submit(assert_jiter_ok, data, expected_result))
+
+        for result in results:
+            assert result.result()
+```
+
