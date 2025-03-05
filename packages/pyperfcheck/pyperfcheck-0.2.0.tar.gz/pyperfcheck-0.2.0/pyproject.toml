@@ -1,0 +1,12 @@
+[tool.poetry]
+name = "pyperfcheck"
+version = "0.2.0"  # Ensure the version number is updated
+description = "A high-performance benchmarking library for Python"
+authors = ["Janardhan Medathati <7janardhan7@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+psutil = "^5.8.0"
+tabulate = "^0.8.9"
+matplotlib = "^3.3.4"
+asyncio = "^3.4.3"
