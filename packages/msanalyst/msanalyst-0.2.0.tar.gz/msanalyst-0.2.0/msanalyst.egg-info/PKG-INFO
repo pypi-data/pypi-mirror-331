@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: msanalyst
+Version: 0.2.0
+Summary: A tool for molecular networking and annotation
+Home-page: https://github.com/WenchYu/MSanalyst
+Author: Wenchao Yu
+Author-email: 2540856059@qq.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+This is a tool for molecular networking and annotating.
+
+Please see details in this [github repository](https://github.com/WenchYu/MSanalyst)

@@ -1,0 +1,7 @@
+[console_scripts]
+msanalyst-customized_db = msanalyst.customized_db:customized_db
+msanalyst-main = msanalyst.main:main
+msanalyst-mn_merging = msanalyst.mn_merging:mn_merging
+msanalyst-ms1search = msanalyst.ms1search:ms2search
+msanalyst-ms2search = msanalyst.ms2search:ms1search
+msanalyst-re_networking = msanalyst.re_networking:re_networking
