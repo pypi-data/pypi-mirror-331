@@ -1,0 +1,2 @@
+[console_scripts]
+foundry = viafoundry.bin.foundry:cli
