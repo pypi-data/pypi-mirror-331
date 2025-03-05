@@ -1,0 +1,180 @@
+2025-03-04 23:47:40,344 - DEBUG - start shell background run (run_ghost_chat.py:70)
+2025-03-04 23:47:40,347 - DEBUG - get shell `ghostos_streamlit_app` new process `e8f6946846fe692c553b5ac80e223569` (ghostos_impl.py:76)
+2025-03-04 23:47:40,401 - DEBUG - create root task task id da5eb54ccd66e7c0ee71d109a45b32f3 for ghost (shell_impl.py:142)
+2025-03-04 23:47:44,669 - INFO - session parse event 1e1a6bae3388465fff30ddcdfa09a6e5 (session_impl.py:158)
+2025-03-04 23:47:44,669 - INFO - session initialize task da5eb54ccd66e7c0ee71d109a45b32f3 before event 1e1a6bae3388465fff30ddcdfa09a6e5 (session_impl.py:164)
+2025-03-04 23:47:44,669 - ERROR - issubclass() arg 1 must be a class (session_impl.py:522)
+Traceback (most recent call last):
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/framework/ghostos/conversation_impl.py", line 280, in _submit_session_event
+    self.loop_session_event(session, event, self._conf.max_session_step)
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/framework/ghostos/conversation_impl.py", line 300, in loop_session_event
+    next_op = op.run(session)
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/abcd/utils.py", line 67, in run
+    return session.handle_event(self.event)
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/abcd/concepts.py", line 937, in handle_event
+    op = driver.on_event(self, event)
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/ghosts/moss_ghost/impl.py", line 436, in on_event
+    return self.get_methods().on_event(session, event)
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/ghosts/moss_ghost/impl.py", line 325, in on_event
+    rtm = self.get_moss_runtime(session)
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/ghosts/moss_ghost/impl.py", line 364, in get_moss_runtime
+    compiler = self.get_moss_compiler(session)
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/ghosts/moss_ghost/impl.py", line 302, in get_moss_compiler
+    compiler = compiler.with_default_moss_type(self.agent.default_moss_type)
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/moss/src/ghostos_moss/moss_impl.py", line 89, in with_default_moss_type
+    if not issubclass(moss_type, Moss):
+  File "/Users/BrightRed/.pyenv/versions/3.10.16/lib/python3.10/abc.py", line 123, in __subclasscheck__
+    return _abc_subclasscheck(cls, subclass)
+TypeError: issubclass() arg 1 must be a class
+2025-03-04 23:47:44,679 - ERROR - Session failed: issubclass() arg 1 must be a class at task da5eb54ccd66e7c0ee71d109a45b32f3 (session_impl.py:535)
+2025-03-04 23:47:44,679 - ERROR - conversation da5eb54ccd66e7c0ee71d109a45b32f3 receive runtime error: issubclass() arg 1 must be a class (conversation_impl.py:346)
+Traceback (most recent call last):
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/framework/ghostos/conversation_impl.py", line 280, in _submit_session_event
+    self.loop_session_event(session, event, self._conf.max_session_step)
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/framework/ghostos/conversation_impl.py", line 300, in loop_session_event
+    next_op = op.run(session)
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/abcd/utils.py", line 67, in run
+    return session.handle_event(self.event)
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/abcd/concepts.py", line 937, in handle_event
+    op = driver.on_event(self, event)
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/ghosts/moss_ghost/impl.py", line 436, in on_event
+    return self.get_methods().on_event(session, event)
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/ghosts/moss_ghost/impl.py", line 325, in on_event
+    rtm = self.get_moss_runtime(session)
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/ghosts/moss_ghost/impl.py", line 364, in get_moss_runtime
+    compiler = self.get_moss_compiler(session)
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/ghosts/moss_ghost/impl.py", line 302, in get_moss_compiler
+    compiler = compiler.with_default_moss_type(self.agent.default_moss_type)
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/moss/src/ghostos_moss/moss_impl.py", line 89, in with_default_moss_type
+    if not issubclass(moss_type, Moss):
+  File "/Users/BrightRed/.pyenv/versions/3.10.16/lib/python3.10/abc.py", line 123, in __subclasscheck__
+    return _abc_subclasscheck(cls, subclass)
+TypeError: issubclass() arg 1 must be a class
+2025-03-04 23:47:44,682 - INFO - conversation da5eb54ccd66e7c0ee71d109a45b32f3 is closing (conversation_impl.py:354)
+2025-03-04 23:47:44,682 - INFO - conversation da5eb54ccd66e7c0ee71d109a45b32f3 is destroying (conversation_impl.py:358)
+2025-03-04 23:47:44,682 - INFO - task da5eb54ccd66e7c0ee71d109a45b32f3 is released (conversation_impl.py:362)
+2025-03-04 23:49:27,317 - DEBUG - start shell background run (run_ghost_chat.py:70)
+2025-03-04 23:49:27,318 - DEBUG - get shell `ghostos_streamlit_app` new process `e8f6946846fe692c553b5ac80e223569` (ghostos_impl.py:76)
+2025-03-04 23:49:29,989 - INFO - session parse event 4740ee174d28903d7f60aa9b7545078b (session_impl.py:158)
+2025-03-04 23:49:29,990 - INFO - session initialize task da5eb54ccd66e7c0ee71d109a45b32f3 before event 4740ee174d28903d7f60aa9b7545078b (session_impl.py:164)
+2025-03-04 23:49:29,990 - ERROR - default moss type <module 'ghostos.demo.moss_libs.self_updater_moss' from '/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/demo/moss_libs/self_updater_moss.py'> is not a subclass of Moss (session_impl.py:522)
+Traceback (most recent call last):
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/framework/ghostos/conversation_impl.py", line 280, in _submit_session_event
+    self.loop_session_event(session, event, self._conf.max_session_step)
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/framework/ghostos/conversation_impl.py", line 300, in loop_session_event
+    next_op = op.run(session)
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/abcd/utils.py", line 67, in run
+    return session.handle_event(self.event)
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/abcd/concepts.py", line 937, in handle_event
+    op = driver.on_event(self, event)
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/ghosts/moss_ghost/impl.py", line 436, in on_event
+    return self.get_methods().on_event(session, event)
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/ghosts/moss_ghost/impl.py", line 325, in on_event
+    rtm = self.get_moss_runtime(session)
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/ghosts/moss_ghost/impl.py", line 364, in get_moss_runtime
+    compiler = self.get_moss_compiler(session)
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/ghosts/moss_ghost/impl.py", line 302, in get_moss_compiler
+    compiler = compiler.with_default_moss_type(self.agent.default_moss_type)
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/moss/src/ghostos_moss/moss_impl.py", line 90, in with_default_moss_type
+    raise TypeError(f"default moss type {moss_type} is not a subclass of Moss")
+TypeError: default moss type <module 'ghostos.demo.moss_libs.self_updater_moss' from '/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/demo/moss_libs/self_updater_moss.py'> is not a subclass of Moss
+2025-03-04 23:49:29,993 - ERROR - Session failed: default moss type <module 'ghostos.demo.moss_libs.self_updater_moss' from '/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/demo/moss_libs/self_updater_moss.py'> is not a subclass of Moss at task da5eb54ccd66e7c0ee71d109a45b32f3 (session_impl.py:535)
+2025-03-04 23:49:29,993 - ERROR - conversation da5eb54ccd66e7c0ee71d109a45b32f3 receive runtime error: default moss type <module 'ghostos.demo.moss_libs.self_updater_moss' from '/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/demo/moss_libs/self_updater_moss.py'> is not a subclass of Moss (conversation_impl.py:346)
+Traceback (most recent call last):
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/framework/ghostos/conversation_impl.py", line 280, in _submit_session_event
+    self.loop_session_event(session, event, self._conf.max_session_step)
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/framework/ghostos/conversation_impl.py", line 300, in loop_session_event
+    next_op = op.run(session)
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/abcd/utils.py", line 67, in run
+    return session.handle_event(self.event)
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/abcd/concepts.py", line 937, in handle_event
+    op = driver.on_event(self, event)
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/ghosts/moss_ghost/impl.py", line 436, in on_event
+    return self.get_methods().on_event(session, event)
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/ghosts/moss_ghost/impl.py", line 325, in on_event
+    rtm = self.get_moss_runtime(session)
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/ghosts/moss_ghost/impl.py", line 364, in get_moss_runtime
+    compiler = self.get_moss_compiler(session)
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/ghosts/moss_ghost/impl.py", line 302, in get_moss_compiler
+    compiler = compiler.with_default_moss_type(self.agent.default_moss_type)
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/moss/src/ghostos_moss/moss_impl.py", line 90, in with_default_moss_type
+    raise TypeError(f"default moss type {moss_type} is not a subclass of Moss")
+TypeError: default moss type <module 'ghostos.demo.moss_libs.self_updater_moss' from '/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/demo/moss_libs/self_updater_moss.py'> is not a subclass of Moss
+2025-03-04 23:49:29,993 - INFO - conversation da5eb54ccd66e7c0ee71d109a45b32f3 is closing (conversation_impl.py:354)
+2025-03-04 23:49:29,993 - INFO - conversation da5eb54ccd66e7c0ee71d109a45b32f3 is destroying (conversation_impl.py:358)
+2025-03-04 23:49:29,993 - INFO - task da5eb54ccd66e7c0ee71d109a45b32f3 is released (conversation_impl.py:362)
+2025-03-04 23:51:42,877 - INFO - shut down background worker (shell_impl.py:372)
+2025-03-04 23:51:42,881 - INFO - start closing shell ghostos_streamlit_app, conversations 1 (shell_impl.py:386)
+2025-03-04 23:51:42,881 - INFO - closing shell conversation da5eb54ccd66e7c0ee71d109a45b32f3 (shell_impl.py:392)
+2025-03-04 23:51:42,881 - INFO - conversation da5eb54ccd66e7c0ee71d109a45b32f3 is closing (conversation_impl.py:354)
+2025-03-04 23:51:42,882 - INFO - conversation da5eb54ccd66e7c0ee71d109a45b32f3 is destroying (conversation_impl.py:358)
+2025-03-04 23:51:42,882 - INFO - task da5eb54ccd66e7c0ee71d109a45b32f3 is released (conversation_impl.py:362)
+2025-03-04 23:51:42,888 - INFO - shut down background worker (shell_impl.py:372)
+2025-03-04 23:51:42,888 - INFO - start closing shell ghostos_streamlit_app, conversations 1 (shell_impl.py:386)
+2025-03-04 23:51:42,888 - INFO - closing shell conversation da5eb54ccd66e7c0ee71d109a45b32f3 (shell_impl.py:392)
+2025-03-04 23:51:42,893 - INFO - shell conversations are closed (shell_impl.py:394)
+2025-03-04 23:51:42,894 - INFO - shell container destroyed (shell_impl.py:396)
+2025-03-04 23:51:42,894 - INFO - shutting down shell pool (shell_impl.py:397)
+2025-03-04 23:51:42,895 - INFO - shut down background worker (shell_impl.py:372)
+2025-03-04 23:51:42,895 - INFO - shut down background worker (shell_impl.py:372)
+2025-03-04 23:51:42,895 - INFO - shell conversations are closed (shell_impl.py:394)
+2025-03-04 23:51:42,898 - INFO - shut down background worker (shell_impl.py:372)
+2025-03-04 23:51:42,898 - INFO - shut down background worker (shell_impl.py:372)
+2025-03-04 23:51:42,898 - INFO - shell container destroyed (shell_impl.py:396)
+2025-03-04 23:51:42,899 - INFO - shutting down shell pool (shell_impl.py:397)
+2025-03-04 23:51:42,901 - INFO - shut down background worker (shell_impl.py:372)
+2025-03-04 23:51:42,905 - INFO - shut down background worker (shell_impl.py:372)
+2025-03-04 23:51:45,800 - DEBUG - start shell background run (run_ghost_chat.py:70)
+2025-03-04 23:51:45,801 - DEBUG - get shell `ghostos_streamlit_app` new process `e8f6946846fe692c553b5ac80e223569` (ghostos_impl.py:76)
+2025-03-04 23:51:52,250 - INFO - session parse event dbf79e44f54d2c5921f4c52ecf5daed4 (session_impl.py:158)
+2025-03-04 23:51:52,250 - INFO - session initialize task da5eb54ccd66e7c0ee71d109a45b32f3 before event dbf79e44f54d2c5921f4c52ecf5daed4 (session_impl.py:164)
+2025-03-04 23:51:52,255 - ERROR - <class 'ghostos_moss.abcd.Moss'> (session_impl.py:522)
+Traceback (most recent call last):
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/framework/ghostos/conversation_impl.py", line 280, in _submit_session_event
+    self.loop_session_event(session, event, self._conf.max_session_step)
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/framework/ghostos/conversation_impl.py", line 300, in loop_session_event
+    next_op = op.run(session)
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/abcd/utils.py", line 67, in run
+    return session.handle_event(self.event)
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/abcd/concepts.py", line 937, in handle_event
+    op = driver.on_event(self, event)
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/ghosts/moss_ghost/impl.py", line 436, in on_event
+    return self.get_methods().on_event(session, event)
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/ghosts/moss_ghost/impl.py", line 337, in on_event
+    instruction = self.make_system_instruction(session, rtm)
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/ghosts/moss_ghost/impl.py", line 290, in make_system_instruction
+    prompter = self.make_instruction_pom(session, runtime)
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/ghosts/moss_ghost/impl.py", line 139, in make_instruction_pom
+    get_moss_context_pom("Code Context", runtime),
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/abcd/moss_action.py", line 210, in get_moss_context_pom
+    imported_attrs_prompt = prompter.get_imported_attrs_prompt([Operator])
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/moss/src/ghostos_moss/moss_impl.py", line 509, in get_imported_attrs_prompt
+    name = reverse_imported[item]
+KeyError: <class 'ghostos_moss.abcd.Moss'>
+2025-03-04 23:51:52,260 - ERROR - Session failed: <class 'ghostos_moss.abcd.Moss'> at task da5eb54ccd66e7c0ee71d109a45b32f3 (session_impl.py:535)
+2025-03-04 23:51:52,261 - ERROR - conversation da5eb54ccd66e7c0ee71d109a45b32f3 receive runtime error: <class 'ghostos_moss.abcd.Moss'> (conversation_impl.py:346)
+Traceback (most recent call last):
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/framework/ghostos/conversation_impl.py", line 280, in _submit_session_event
+    self.loop_session_event(session, event, self._conf.max_session_step)
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/framework/ghostos/conversation_impl.py", line 300, in loop_session_event
+    next_op = op.run(session)
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/abcd/utils.py", line 67, in run
+    return session.handle_event(self.event)
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/abcd/concepts.py", line 937, in handle_event
+    op = driver.on_event(self, event)
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/ghosts/moss_ghost/impl.py", line 436, in on_event
+    return self.get_methods().on_event(session, event)
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/ghosts/moss_ghost/impl.py", line 337, in on_event
+    instruction = self.make_system_instruction(session, rtm)
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/ghosts/moss_ghost/impl.py", line 290, in make_system_instruction
+    prompter = self.make_instruction_pom(session, runtime)
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/ghosts/moss_ghost/impl.py", line 139, in make_instruction_pom
+    get_moss_context_pom("Code Context", runtime),
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/ghostos/ghostos/abcd/moss_action.py", line 210, in get_moss_context_pom
+    imported_attrs_prompt = prompter.get_imported_attrs_prompt([Operator])
+  File "/Users/BrightRed/Develop/github.com/ghost-in-moss/GhostOS/libs/moss/src/ghostos_moss/moss_impl.py", line 509, in get_imported_attrs_prompt
+    name = reverse_imported[item]
+KeyError: <class 'ghostos_moss.abcd.Moss'>
+2025-03-04 23:51:52,261 - INFO - conversation da5eb54ccd66e7c0ee71d109a45b32f3 is closing (conversation_impl.py:354)
+2025-03-04 23:51:52,261 - INFO - conversation da5eb54ccd66e7c0ee71d109a45b32f3 is destroying (conversation_impl.py:358)
+2025-03-04 23:51:52,261 - INFO - task da5eb54ccd66e7c0ee71d109a45b32f3 is released (conversation_impl.py:362)
