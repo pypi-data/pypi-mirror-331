@@ -1,0 +1,7 @@
+parver>=0.2.1
+pulumi<4.0.0,>=3.0.0
+pulumi_azure_native<3.0.0,>=2.0.0
+semver>=2.8.1
+
+[:python_version < "3.11"]
+typing-extensions>=4.11

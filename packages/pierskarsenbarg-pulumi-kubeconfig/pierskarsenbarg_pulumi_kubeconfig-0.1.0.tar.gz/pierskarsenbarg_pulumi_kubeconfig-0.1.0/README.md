@@ -1,0 +1,2 @@
+# Pulumi Kubeconfig provider
+
