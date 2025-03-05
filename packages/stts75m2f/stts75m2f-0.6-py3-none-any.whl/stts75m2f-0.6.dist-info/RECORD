@@ -1,0 +1,8 @@
+stts75m2f/__init__.py,sha256=WNiLOuuoMkjZcjCn6AvgtJIkGyLiZU0udpBW7xADiPo,33
+stts75m2f/stts75m2f.py,sha256=4tcElDXta5z3Ofl1SQeuatb25PXVuFHYZABpms-L2hI,4392
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_stts75m2f_real.py,sha256=7Op5jM67u3l38HKg21XHqlQTfe7eHWVIn5YCQM7UTog,2648
+stts75m2f-0.6.dist-info/METADATA,sha256=2AsLUUhSL_wkjNl5xXDyzoGqJzXdHum1ucGKWx71gRY,948
+stts75m2f-0.6.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+stts75m2f-0.6.dist-info/top_level.txt,sha256=NhQ848N_hr2mOSoWM6DcZT7neTEm-mZrOrIdVSmb3xE,16
+stts75m2f-0.6.dist-info/RECORD,,
