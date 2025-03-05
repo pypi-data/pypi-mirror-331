@@ -1,0 +1,11 @@
+pypi_attestations/__init__.py,sha256=lFpUhFMhyn-WOcXVKkQBA7ExiMkZe1bPbHGYkrW0Pj4,695
+pypi_attestations/__main__.py,sha256=f2lcB-vUxpIbWGtAUhgIz6pAubVPzvFeUCHsFYIzuSI,124
+pypi_attestations/_cli.py,sha256=3YK8lgeB8074jlcV1wO5uMKvv5EfwSc5zeo_R6Jg-Y0,19264
+pypi_attestations/_impl.py,sha256=BMok30q0c4_9pbl9lZmYKcmU6XH04lKX45v6_4VWXEQ,24594
+pypi_attestations/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pypi_attestations-0.0.22.dist-info/LICENSE,sha256=DVQuDIgE45qn836wDaWnYhSdxoLXgpRRKH4RuTjpRZQ,10174
+pypi_attestations-0.0.22.dist-info/METADATA,sha256=VIqjbq1P-xPfyD2FICZC1TU6dOq1qYo3plbeuf1m6l0,19432
+pypi_attestations-0.0.22.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+pypi_attestations-0.0.22.dist-info/entry_points.txt,sha256=CGFSx7EgpeCWvUFb2-csIjmBXPOvIQaAP4-m4mLkcpM,66
+pypi_attestations-0.0.22.dist-info/top_level.txt,sha256=Dcp1uZqx0OE0kOpGQEZz2aD2CLwrjG387xOV3onpYbk,18
+pypi_attestations-0.0.22.dist-info/RECORD,,
