@@ -1,0 +1,2 @@
+[console_scripts]
+intangles_insightface-cli = intangles_insightface.commands.insightface_cli:main
