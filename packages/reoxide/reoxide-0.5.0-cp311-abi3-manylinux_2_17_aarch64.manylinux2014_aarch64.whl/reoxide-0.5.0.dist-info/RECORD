@@ -1,0 +1,14 @@
+reoxide/__init__.py,sha256=AyDcCXwdV99qX1cJqrsa-Mei6DfDxpC9Hh2F8OXgCWI,42
+reoxide/plugin.py,sha256=j63D6M8YYXp-waB6_C06GtD_hPicHmGSwJkc5maR2Dw,2081
+reoxide/reoxide.py,sha256=Z3HBshclzj-4r4Vg6PDisBcNG90MhO2GffcWJ9BVAsY,11180
+reoxide/data/default.yaml,sha256=Rd1MjJAHvdS0rs7R_iWIpOO7q8EA7PJMV292U5moJ0E,12047
+reoxide/data/bin/decompile,sha256=0W6KbCcXaOAp09BFzqOS-Ysa9I49YloDSUojDKxuR5s,275704
+reoxide/data/bin/libdecomp.so,sha256=XuNl1K-jmL2DJIgj5BMUwWIJaqz4-8vxB1ItwIdSmGs,4773648
+reoxide/data/bin/libreoxide.so,sha256=d24K61YjsZZ_8_2UnlCuzy9d73_9rthEhmu03-redFM,2795240
+reoxide/data/plugins/libcore.so,sha256=HN40o-_w7IDe1fURosywBJP-sIDqML9YCe5iNHaXiyU,247664
+reoxide/data/plugins/libsimple_rule.so,sha256=2rJt78JqVcDkD_UDRjn9f5hkBOE_oYNu8Ppj-0CFwz0,77440
+reoxide-0.5.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+reoxide-0.5.0.dist-info/METADATA,sha256=MI16Zmgi7q7JkGnX1GdGsIYHx3xpJ76F4sc4VNILDSk,14922
+reoxide-0.5.0.dist-info/WHEEL,sha256=wEc2e-dBSkcto3bl8u6l_iT16VxYyE1ge6JsS-Lst6s,137
+reoxide-0.5.0.dist-info/entry_points.txt,sha256=HKK6t55LbsRxSCWn7U3ZeGlw25u19Ql2JtgMIKOJ740,76
+reoxide-0.5.0.dist-info/RECORD,,
