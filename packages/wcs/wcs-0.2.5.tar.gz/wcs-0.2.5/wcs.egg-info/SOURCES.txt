@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+tests/test_model.py
+tests/test_parser.py
+tests/test_service.py
+wcs/__init__.py
+wcs/model.py
+wcs/parser.py
+wcs/service.py
+wcs.egg-info/PKG-INFO
+wcs.egg-info/SOURCES.txt
+wcs.egg-info/dependency_links.txt
+wcs.egg-info/requires.txt
+wcs.egg-info/top_level.txt
