@@ -1,0 +1,9 @@
+synchive/__init__.py,sha256=I5Shq7qciqjscjwG0f-_RCuqWsd_Q3T1Ki2MN7BTEPU,56
+synchive/backup.py,sha256=XQg3habvfBByKDDfXOH-Yk-oJ2GIV-beWYu1K672RoU,2216
+synchive/cli.py,sha256=2xRzOhpNWRYkcMQpSKSqWhKEUN4DGouGtwa8Kxv9b9w,532
+synchive/config.py,sha256=COARrrL12ROZ9EUbaoVTGp_MyoNqm5A0484PHvPNnuc,602
+SyncHive-0.4.0.dist-info/METADATA,sha256=mV0JQNo2Ts6GYJ7CKEK-QUl1ihCgFyCAlor70r-qu1g,2784
+SyncHive-0.4.0.dist-info/WHEEL,sha256=tZoeGjtWxWRfdplE7E3d45VPlLNQnvbKiYnx7gwAy8A,92
+SyncHive-0.4.0.dist-info/entry_points.txt,sha256=_v4n996SMZgfBOT9Mn8KssUT85ohkga5QmHYwyosGGU,48
+SyncHive-0.4.0.dist-info/top_level.txt,sha256=3YuATw6M7RNMOpLh_b8nMvzYzZTtIOy92pu-KZ6wLbU,9
+SyncHive-0.4.0.dist-info/RECORD,,
