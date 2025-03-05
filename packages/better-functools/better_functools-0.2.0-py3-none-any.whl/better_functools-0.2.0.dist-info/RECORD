@@ -1,0 +1,12 @@
+better_functools/__init__.py,sha256=jbz3PLa9WkgBgKQyB7rxsnL-OSwuBeBTdJwb3BoLj5M,2371
+better_functools/apply.py,sha256=SolBBbxWrEH1tbwWn39aPQ0Fn2vv7DLb_gNrgIqsqSw,5998
+better_functools/helpers.py,sha256=9nxSlPRGGIYv88x2s_TXLM8lisPmxeuLBQLFSKXNAYI,442
+better_functools/pipe.py,sha256=-7LrxjxWwsWkSrcvMVAgq8KH5zMiPhYBmantwKKY17w,1185
+better_functools/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+better_functools/strict/__init__.py,sha256=cRgKFuGPCaoB0zqD0yw3SP7fiNtwFfQr5oOedL0TVPw,360
+better_functools/strict/builtins.py,sha256=6foUAX3fu5mVJ4jns2HREK6k2lWc-B2SSc5Ig9TX7dk,1360
+better_functools/strict/operator.py,sha256=GlnBqxSQiM4Sx629SD_O-KugsDRLPQz-8zMkS2Fb8b0,393
+better_functools-0.2.0.dist-info/METADATA,sha256=e81UOea1UwIS9NpbOtaPT9y1sICXlAnf3GkOBJNwgGI,16068
+better_functools-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+better_functools-0.2.0.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+better_functools-0.2.0.dist-info/RECORD,,
