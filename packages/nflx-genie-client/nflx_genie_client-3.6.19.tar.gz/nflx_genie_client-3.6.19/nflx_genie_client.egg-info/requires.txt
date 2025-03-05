@@ -1,0 +1,7 @@
+decorator
+multipledispatch
+pyconfigurator
+python-dateutil>=2.4
+requests
+six
+importlib-metadata
