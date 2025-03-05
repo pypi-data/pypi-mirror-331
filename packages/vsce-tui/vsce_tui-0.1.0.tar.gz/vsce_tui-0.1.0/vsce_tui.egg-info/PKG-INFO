@@ -1,0 +1,79 @@
+Metadata-Version: 2.2
+Name: vsce_tui
+Version: 0.1.0
+Summary: A TUI tool for managing VS Code extensions.
+Author-email: Your Name <your.email@example.com>
+License: MIT License
+        
+        Copyright (c) [2025] [BizKite LLC]
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+Project-URL: Homepage, https://github.com/yourusername/vsce_tui
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# vsce_tui
+
+A TUI tool for managing VS Code extensions.
+
+## Installation
+
+Once published to PyPI:
+
+```bash
+pip install vsce_tui
+```
+
+## Usage
+
+After installation:
+
+```bash
+code-insiders --list-extensions | vsce_tui  # Initial population of the list
+vsce_tui  # Run the interactive TUI
+```
+
+To run without installing (for development/testing):
+
+```bash
+python vsce_tui/cli.py  # Run directly
+code-insiders --list-extensions | python vsce_tui/cli.py # Initial population
+```
+To clean the extension list
+
+```bash
+python vsce_tui/cli.py clean
+```
+
+Use the arrow keys (or 'j' and 'k') to navigate, 't' or Spacebar to toggle extension status, 'q' to quit and apply changes, 'x' to quit *without* applying changes, and 'w' to apply changes without quitting.
+
+## Development
+
+```bash
+git clone https://github.com/yourusername/vsce_tui # Replace with your repo
+cd vsce_tui
+uv venv
+source .venv/bin/activate  # On Linux/macOS
+.venv\Scripts\activate  # On Windows
+pip install -e .
+```
