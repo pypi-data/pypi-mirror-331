@@ -1,0 +1,4 @@
+Mako
+XBlock
+django-statici18n
+edx-i18n-tools
