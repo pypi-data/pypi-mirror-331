@@ -1,0 +1,2 @@
+[console_scripts]
+meta-optimizer-mdt-test = meta_optimizer.cli:main
