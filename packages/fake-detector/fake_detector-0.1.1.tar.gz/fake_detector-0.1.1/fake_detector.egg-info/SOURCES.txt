@@ -1,0 +1,12 @@
+README.md
+setup.py
+fake_detector/__init__.py
+fake_detector/api.py
+fake_detector/detector.py
+fake_detector.egg-info/PKG-INFO
+fake_detector.egg-info/SOURCES.txt
+fake_detector.egg-info/dependency_links.txt
+fake_detector.egg-info/entry_points.txt
+fake_detector.egg-info/requires.txt
+fake_detector.egg-info/top_level.txt
+test/test.py
