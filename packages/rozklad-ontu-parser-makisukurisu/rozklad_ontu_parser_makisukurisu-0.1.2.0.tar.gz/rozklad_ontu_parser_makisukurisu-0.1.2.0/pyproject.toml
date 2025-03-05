@@ -1,0 +1,48 @@
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[project]
+name = "rozklad-ontu-parser-makisukurisu"
+version = "0.1.2.0"
+authors = [
+    { name = "Pavlo Pohorieltsev", email = "49622129+makisukurisu@users.noreply.github.com" },
+]
+description = "Package for parsing data from rozklad.ontu.edu.ua"
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+    "Natural Language :: English",
+]
+dependencies = [
+    "attrs<25.0.0,>=23.2.0",
+    "beautifulsoup4<5.0.0,>=4.12.3",
+    "requests<3.0.0,>=2.31.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/makisukurisu/rozklad-ontu-parser"
+"Bug Tracker" = "https://github.com/makisukurisu/rozklad-ontu-parser/issues"
+
+[dependency-groups]
+dev = [
+    "pylint[spelling]<4.0,>=3.3.4",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = [
+    "ontu_parser/",
+]
+
+[tool.hatch.metadata.hooks.requirements_txt]
+files = [
+    "requirements.txt",
+]
+
+[tool.pdm]
+distribution = true
