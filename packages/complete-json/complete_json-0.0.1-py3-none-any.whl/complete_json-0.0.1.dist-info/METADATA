@@ -1,0 +1,39 @@
+Metadata-Version: 2.3
+Name: complete-json
+Version: 0.0.1
+Summary: Completes a JSON string if it has been truncated
+License: MIT
+Keywords: complete json,json completer,truncated json
+Author: Mikhail Shagov
+Author-email: mishaga@me.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Project-URL: Issues, https://github.com/mishaga/complete-json/issues
+Project-URL: Repository, https://github.com/mishaga/complete-json
+Description-Content-Type: text/markdown
+
+# Complete JSON
+
+A Python package that completes a JSON string if it has been truncated
+
+Examples:
+
+```python
+from complete_json import complete_json
+
+assert complete_json('{"a": 1') == '{"a": 1}'
+assert complete_json('[{"one": {"a": 1') == '[{"one": {"a": 1}}]'
+```
+
+Supported python versions: `3.9` → `3.13`
+
+## Links:
+
+* [GitHub](https://github.com/mishaga/complete-json)
+
