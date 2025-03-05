@@ -1,0 +1,43 @@
+[tool.poetry]
+name = "minmodkg"
+version = "2.6.9"
+description = "code repository for TA2 Knowledge Graph (MinMod) construction & deployment"
+authors = ["Binh Vu <bvu687@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{ include = "minmodkg" }]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+statickg = "^1.13.1"
+fastapi = { extras = ["standard"], version = "^0.115.3" }
+networkx = "^2.8.8"
+httpx = "^0.28.1"
+htbuilder = "^0.6.2"
+pandas = "^2.2.2"
+shapely = "^2.0.5"
+pyproj = "^3.6.1"
+pyjwt = "^2.9.0"
+sqlmodel = "^0.0.22"
+sqlalchemy = "^2.0.36"
+psycopg = { extras = ["binary"], version = "^3.2.3" }
+drepr-v2 = "^1.6.0"
+serde2 = { version = "^1.8.6", extras = ["all"] }
+timer4 = "^1.1.0"
+bcrypt = "^4.2.0"
+jaydebeapi = "^1.2.3"
+
+[tool.poetry.dev-dependencies]
+erdantic = "^1.0.3"
+pydantic = "^2.7.4"
+pytest = "^8.3.2"
+jsonschema = "^4.23.0"
+pytest-dotenv = "^0.5.2"
+pygraphviz = "^1.13"
+
+[tool.poetry.group.dev.dependencies]
+pytest-cov = "^6.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
