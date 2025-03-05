@@ -1,0 +1,15 @@
+.card {
+  @extend .card;
+  border: 1px solid $gray-200;
+  border-radius: $rounded-md;
+  box-shadow: $shadow-md;
+  background-color: $white;
+}
+
+.dark {
+  .card {
+    background-color: $gray-900;
+    color: $white;
+    border: 1px solid $gray-700;
+  }
+}

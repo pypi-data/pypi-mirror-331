@@ -1,0 +1,106 @@
+  .annexes {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 1rem;
+
+    .annex {
+      @extend .card;
+      background-color: $white;
+      min-height: 100%;
+      display: flex;
+      flex-direction: row;
+      box-shadow: $shadow;
+      overflow: hidden;
+
+      .title {
+        padding: 0.25em 0.5em;
+        flex: 1;
+        border-left: 1px solid $grey-500;
+        border-right: 1px solid $grey-500;
+      }
+
+      h3 {
+        font-size: 0.85em;
+        margin-bottom: 0.5em;
+        font-weight: 600;
+      }
+
+      .bg-file-color {
+        margin: 10px;
+        border-radius: $rounded;
+        width: 50px;
+        box-shadow: $shadow-inner;
+
+        background: linear-gradient(to right top, rgb(107, 114, 128), rgb(209, 213, 219));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bolder;
+        color: white;
+
+        i {
+          font-size: 35px;
+        }
+      }
+
+
+      .bg-red {
+        background: linear-gradient(to right top, rgb(185, 28, 28), rgb(239, 68, 68));
+      }
+
+      .bg-green {
+        background: linear-gradient(to right top, rgb(21, 128, 61), rgb(34, 197, 94));
+      }
+
+      .bg-blue {
+        background: linear-gradient(to right top, rgb(37, 99, 235), rgb(96, 165, 250));
+      }
+
+      .bg-grey {
+        background: linear-gradient(to right top, rgb(107, 114, 128), rgb(209, 213, 219));
+      }
+
+      .bg-yellow {
+          background: linear-gradient(to right top, rgb(234, 179, 8), rgb(250, 204, 21));
+      }
+
+      .bg-light {
+          background: linear-gradient(to right top, rgb(229, 231, 235), rgb(243, 244, 246));
+      }
+
+      .bg-dark {
+          background: linear-gradient(to right top, rgb(31, 41, 55), rgb(75, 85, 99));
+      }
+
+      .annex-actions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $grey-200;
+        border-top: 1px solid $grey-300;
+
+        i {
+          text-decoration: none;
+          color: $grey-900;
+          transition: background-color 0.20s ease-in-out;
+          border-bottom: 1px solid $grey-500;
+          padding: 0.5em 1em;
+          flex: 1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+
+          &:hover, &.active, &:focus {
+            color: $grey-900;
+            background-color: $grey-50;
+          }
+        }
+
+        i:last-child {
+          border-bottom: 0;
+        }
+      }
+
+    }
+  }
