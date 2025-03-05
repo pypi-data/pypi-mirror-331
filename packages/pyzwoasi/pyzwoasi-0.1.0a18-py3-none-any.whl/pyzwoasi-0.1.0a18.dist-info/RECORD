@@ -1,0 +1,13 @@
+pyzwoasi/__init__.py,sha256=e3S0EcDGJlWIp2hddSFjvt633jfeZ4W7VyAeLpfTWVM,37
+pyzwoasi/__version__.py,sha256=4uYNfnA7wJZ8z_JG8waRNIy9EQr712GMPB7rXhs7sgY,24
+pyzwoasi/pyzwoasi.py,sha256=cSxFNH9HWPzbPWjBzlCZBwzY1eR1mrFuwlHDsRm-REg,23183
+pyzwoasi/lib/x64/ASICamera2.dll,sha256=qLa087TBfvxNtwKoVQp4u4qDvjV80YLnGZbr9tlRuyM,2725888
+pyzwoasi/lib/x64/ASICamera2.lib,sha256=vsqWhGrTGeBOF4TUjRTOVmdqUgWxLtOHAHC9kdz8Wlw,11480
+pyzwoasi/lib/x86/ASICamera2.dll,sha256=fGOTw1zkNgt1R3YJfpzwigJRjmf0hxlH9CZvmo4VMus,2080256
+pyzwoasi/lib/x86/ASICamera2.lib,sha256=Jq86arPxE0P9RoGK2V7ygUF-62w7lTZI8sJ85pBe894,11704
+pyzwoasi-0.1.0a18.data/data/lib/64bit/ASICamera2.dll,sha256=qLa087TBfvxNtwKoVQp4u4qDvjV80YLnGZbr9tlRuyM,2725888
+pyzwoasi-0.1.0a18.dist-info/LICENSE.txt,sha256=BwHt3QrN1onT2fOGIrBNRQLoll0nZapvdr-sRVf8dAg,1073
+pyzwoasi-0.1.0a18.dist-info/METADATA,sha256=01wMo02GxuSVcjoZMEcB3S-30ULL-D0PRFCC4O7OPOY,1490
+pyzwoasi-0.1.0a18.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+pyzwoasi-0.1.0a18.dist-info/top_level.txt,sha256=F1RZcTQofSc2TAMGqUJw5tSk1q2cp5m_pDJqaYYwqFw,9
+pyzwoasi-0.1.0a18.dist-info/RECORD,,
