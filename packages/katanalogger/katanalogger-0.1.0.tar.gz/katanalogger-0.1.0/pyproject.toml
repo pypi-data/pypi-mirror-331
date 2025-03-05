@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "katanalogger"
+version = "0.1.0"
+description = "A powerful and flexible logging library for Python with rich features like colored output, emojis, and execution time tracking."
+authors = [
+    { name = "SoulNaturalist", email = "212.rss@mail.ru" }
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU Affero General Public License v3",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Logging",
+]
+keywords = ["logging", "logger", "async", "colorama", "rich", "emoji", "performance"]
+dependencies = [
+    "colorama>=0.4.6",
+    "rich>=13.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/SoulNaturalist/katanalogger"
+Repository = "https://github.com/SoulNaturalist/katanalogger"
+Issues = "https://github.com/SoulNaturalist/katanalogger/issues"
+Documentation = "https://github.com/SoulNaturalist/katanalogger#readme"

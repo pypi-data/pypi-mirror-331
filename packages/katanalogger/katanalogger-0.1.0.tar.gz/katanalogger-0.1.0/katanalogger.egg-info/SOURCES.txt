@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+KatanaLogger/__init__.py
+KatanaLogger/logger.py
+katanalogger.egg-info/PKG-INFO
+katanalogger.egg-info/SOURCES.txt
+katanalogger.egg-info/dependency_links.txt
+katanalogger.egg-info/requires.txt
+katanalogger.egg-info/top_level.txt
+tests/test_logger.py
