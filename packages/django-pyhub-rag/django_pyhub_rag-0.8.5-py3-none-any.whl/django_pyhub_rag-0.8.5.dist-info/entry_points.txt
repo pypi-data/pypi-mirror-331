@@ -1,0 +1,2 @@
+[console_scripts]
+pyhub.rag = pyhub.rag.__main__:app
