@@ -1,0 +1,16 @@
+Metadata-Version: 2.2
+Name: LLMGraphTransformer
+Version: 0.0.1
+Summary: A powerful tool for transforming documents into graph-based structures using Large Language Models (LLMs).
+License: MIT
+Project-URL: Homepage, https://github.com/dhiaaeddine16/LLMGraphTransformer
+Keywords: LLM,graph transformation,machine learning,document processing,natural language processing,text to graph,document to graph
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: json-repair
+Requires-Dist: langchain_core
+Requires-Dist: pydantic
+
+# LLMGraphTransformer
+Transform documents into graph-based documents using a LLM
