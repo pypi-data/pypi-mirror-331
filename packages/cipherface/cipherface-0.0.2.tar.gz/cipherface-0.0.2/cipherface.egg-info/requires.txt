@@ -1,0 +1,5 @@
+numpy
+deepface
+tenseal==0.3.6
+tqdm
+lightphe
