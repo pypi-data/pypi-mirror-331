@@ -1,0 +1,14 @@
+rox_septentrio/__init__.py,sha256=ZseHjVu9IfEQsz8q4KJ5pKyBoHnPLcFkx5vGvm2h_nM,194
+rox_septentrio/__main__.py,sha256=yY8Wh3Hgddzm9Mv5zHINEa-9AAOQVX-WvDinXGNBif4,612
+rox_septentrio/config.py,sha256=a9oRgJMur3GLFmGriveOANe4XxwHXPI5Xf9kKyRdbZ4,977
+rox_septentrio/converters.py,sha256=_k6viFxpJblQcK5V8J_YqwFbA4Fwc-X_vTCNTLcYckc,2000
+rox_septentrio/gps_node_ip.py,sha256=g-sxOrGdIZfTAas6s2tll7FISUIBSNIc_1q-hFS-YNQ,4580
+rox_septentrio/gps_node_serial.py,sha256=njXBhz2GxtCKDsdKEwF3SbCEcg1C_5JotHe57iQN4Ds,2430
+rox_septentrio/nmea.py,sha256=q3mft3ZGncPeyDYFjMSuez1RQgaJLPVqBapVwgYbxAQ,2927
+rox_septentrio/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rox_septentrio-0.5.2.dist-info/LICENCE,sha256=shbykIl7BmIkk5LkkS1KWChB2em6aQMVQmzigCT4-3s,1106
+rox_septentrio-0.5.2.dist-info/METADATA,sha256=OTlsYNUE4PQGDHGXh36Mbrmg1xGowNviYLXHmvmvvWw,3275
+rox_septentrio-0.5.2.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+rox_septentrio-0.5.2.dist-info/entry_points.txt,sha256=i0Cgu1G4apJ1GG2j-iuTK--dmrHB8Az7zirqoFmx7_w,58
+rox_septentrio-0.5.2.dist-info/top_level.txt,sha256=cmuf0fEnT01Fh6WxrGNxCK90jIgq_pJt1_2uqhO8n-8,15
+rox_septentrio-0.5.2.dist-info/RECORD,,
