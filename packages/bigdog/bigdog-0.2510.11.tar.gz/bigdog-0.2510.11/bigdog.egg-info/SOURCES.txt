@@ -1,0 +1,13 @@
+README.md
+setup.py
+bigdog/__init__.py
+bigdog/quantityu.py
+bigdog/toolclass_pydocument.py
+bigdog/toolclass_version.py
+bigdog/valueu.py
+bigdog.egg-info/PKG-INFO
+bigdog.egg-info/SOURCES.txt
+bigdog.egg-info/dependency_links.txt
+bigdog.egg-info/entry_points.txt
+bigdog.egg-info/requires.txt
+bigdog.egg-info/top_level.txt
