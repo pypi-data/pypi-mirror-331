@@ -1,0 +1,4 @@
+[console_scripts]
+cmt = co_mit.cli:main
+co-mit = co_mit.cli:main
+co_mit = co_mit.cli:main
