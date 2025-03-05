@@ -1,0 +1,66 @@
+Metadata-Version: 2.2
+Name: certbot-dns-hydra
+Version: 0.2.0
+Summary: Certbot plugin for Oxford Hydra DNS API
+Author-email: Jonathan Young <jonathan.young@glam.ox.ac.uk>
+License: Copyright 2025 Jonathan Young
+        
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+        
+        http://www.apache.org/licenses/LICENSE-2.0
+        
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+        
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: certbot>=1.0.0
+Requires-Dist: requests
+Requires-Dist: zope.interface
+
+# Certbot Hydra Plugin
+
+A certbot Hydra plugin for use with the University of Oxford Hydra DNS system.
+
+Enables the use of certbot to create a LetsEncrypt SSL certificate, which in turn can be used to automate SSL certificate renewal.
+
+As the ownership validation mechanism uses DNS, no direct access is required to the website.
+
+
+## Hydra Tokens
+
+This plugin uses the Hydra API, access by the token based authentication mechanism, described at <https://blogs.it.ox.ac.uk/networks/2024/05/31/hydra-token-authentication/>, with further detail documented at <https://wiki.it.ox.ac.uk/networks/HydraTokens>.
+
+To create a token, navigate to https://www.networks.it.ox.ac.uk/itss/ipam/allocations and then search for the (sub)domain you want to create a token for.
+
+The token should be restricted to only have access to the records it needs to modify.
+
+
+## Setup
+
+To you use the plugin you should follow the instructions in the links above to generate a set of credentials then populate a config file (for example /etc/letsencrypt/dns-hydra.ini) with data in the following format:
+
+
+```
+[dns_hydra]
+api-username = x/y 
+api-password = zzzzzzzz
+
+```
+
+This file needs to be suitable secured as it contains credentials which can modify your dns and are also providing proof of ownership of the domain.
+
+## Usage
+
+
+Once installs, run with command:
+```
+certbot certonly --authenticator dns-hydra --dns-hydra-config-file /etc/letsencrypt/dns-hydra.ini -d yourdomain.jordan.ox.ac.uk
+```
+
