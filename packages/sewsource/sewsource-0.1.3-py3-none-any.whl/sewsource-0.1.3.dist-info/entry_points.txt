@@ -1,0 +1,2 @@
+[console_scripts]
+sewsource = sewsource.main:main
