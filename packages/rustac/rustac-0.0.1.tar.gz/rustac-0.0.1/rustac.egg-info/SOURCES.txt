@@ -1,0 +1,7 @@
+README.md
+main.py
+pyproject.toml
+rustac.egg-info/PKG-INFO
+rustac.egg-info/SOURCES.txt
+rustac.egg-info/dependency_links.txt
+rustac.egg-info/top_level.txt

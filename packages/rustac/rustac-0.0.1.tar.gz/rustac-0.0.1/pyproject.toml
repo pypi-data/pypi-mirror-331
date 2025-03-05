@@ -1,0 +1,7 @@
+[project]
+name = "rustac"
+version = "0.0.1"
+description = "Placeholder project for rustac, a Python library for STAC backed by Rust"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
