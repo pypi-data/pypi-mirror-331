@@ -1,0 +1,14 @@
+schema_alchemist/__init__.py,sha256=YmPlftTmBHrdqH9KVS1RQy3AFTLWawWDPhIXiDvNNhc,985
+schema_alchemist/constants.py,sha256=tzj_2didL-Znuec3QDgj8V9E38Z2Nc0W6HwQxSmNdxg,486
+schema_alchemist/reflection.py,sha256=v-KOnlhMhIxcMKxQbv5CB6Kv4VGxgFHrS4SlvoGJ5bI,2125
+schema_alchemist/utils.py,sha256=abmo0MLNYtJ8qVBqWiu9nNNHc_vwT50RvoycPJcd7W4,17190
+schema_alchemist/generators/__init__.py,sha256=DSqEc7u4tYzVEr90o6YxSDa1eOf2YGvytazuTGjhaN0,208
+schema_alchemist/generators/base_generators.py,sha256=wG5pARhlFDdBbkgeiIdTwDGs1LS_p4lgfzoCo7I43LQ,4126
+schema_alchemist/generators/column_generators.py,sha256=ugcjYrTleX-Zmh2Nve-Ff9hKfyjFBEWLuCbgglHPrrc,8490
+schema_alchemist/generators/relationship_generators.py,sha256=TBNtk5qbH4lwevlgTZRLMeeKj7d18O6Bjc6FgkLPP7Y,4037
+schema_alchemist/generators/schema_generators.py,sha256=4ojeTLEvXkFzgotIh8M-lNIq3S6fUnzvHC_MzxXZJTc,29290
+schema_alchemist/generators/table_generators.py,sha256=awVBdGssbm3PfSLpknb9wL9PsQUEPy05pxoYOY3aCXM,12042
+schema_alchemist-0.0.5.dist-info/METADATA,sha256=KI7_MtXFG0PYAat4i19TCbqf5k_h1P_6DWCZwTxayEw,317
+schema_alchemist-0.0.5.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+schema_alchemist-0.0.5.dist-info/licenses/LICENSE,sha256=41lF4uOmoTeWjGe8TRUa5g3jIUtWuivCMbsTFnyQ_7w,1069
+schema_alchemist-0.0.5.dist-info/RECORD,,
