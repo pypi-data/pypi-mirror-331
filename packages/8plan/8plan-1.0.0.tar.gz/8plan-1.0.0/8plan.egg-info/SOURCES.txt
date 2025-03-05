@@ -1,0 +1,7 @@
+setup.py
+8plan/__main__.py
+8plan.egg-info/PKG-INFO
+8plan.egg-info/SOURCES.txt
+8plan.egg-info/dependency_links.txt
+8plan.egg-info/requires.txt
+8plan.egg-info/top_level.txt
