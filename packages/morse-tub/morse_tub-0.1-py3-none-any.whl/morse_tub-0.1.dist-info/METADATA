@@ -1,0 +1,16 @@
+Metadata-Version: 2.2
+Name: morse_tub
+Version: 0.1
+Summary: A package for Morse code conversions and sound playback
+Home-page: https://github.com/rushiharkal1/morse_tub
+Author: Rushikesh Harkal
+Author-email: rushiharkal1@outlook.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: summary
