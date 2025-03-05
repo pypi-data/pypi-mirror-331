@@ -1,0 +1,7 @@
+README.md
+setup.py
+yonoma.egg-info/PKG-INFO
+yonoma.egg-info/SOURCES.txt
+yonoma.egg-info/dependency_links.txt
+yonoma.egg-info/requires.txt
+yonoma.egg-info/top_level.txt
