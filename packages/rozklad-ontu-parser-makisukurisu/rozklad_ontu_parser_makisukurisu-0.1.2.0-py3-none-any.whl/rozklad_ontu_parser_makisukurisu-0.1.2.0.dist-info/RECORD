@@ -1,0 +1,14 @@
+ontu_parser/__init__.py,sha256=H2RZwAn6gVgvU4lm95RkeEqJxzA2vbFg82iafsdVoNk,90
+ontu_parser/classes/__init__.py,sha256=TyXOmhBTus586AcpPnuDCk7_a3Nrl4UtAhQVeyYkYcU,155
+ontu_parser/classes/base.py,sha256=7h84iG2-z1La2GY1TjjuyK2lAN0yVl_EYN7QMLV4VBE,2744
+ontu_parser/classes/dataclasses.py,sha256=9RkfjVYvl5ec5DSMEpECqVadajO8nZF7tp2o-G1LHnY,21670
+ontu_parser/classes/enums.py,sha256=GBSJyukwrdev3alRRfHNL4DzSl-OdpGqhm5J3-SetkQ,1086
+ontu_parser/classes/js_parser.py,sha256=LXF1R3N0XYg6_ZB-5sW5imk7o0gPUUHadVtAkob_MoU,4441
+ontu_parser/classes/parser.py,sha256=YyLReHCzL04wg7z52_JJDYDyKkvLBu_UPfdMJZpRqWk,9225
+ontu_parser/classes/sender.py,sha256=x-PaDm8JJy5O7XHDtzpKdMsOuVdye64Lxxxe8ab_YGc,5904
+ontu_parser/example.py,sha256=QdPnxWpf8kF_UszLFvhCFNEXbLq6WBR1OjSK_xCYDK0,953
+rozklad_ontu_parser_makisukurisu-0.1.2.0.dist-info/METADATA,sha256=u3Q-AqeUTKbF2IkNpm426C4eWEwiKa0e5GNik75k8Z8,3140
+rozklad_ontu_parser_makisukurisu-0.1.2.0.dist-info/WHEEL,sha256=thaaA2w1JzcGC48WYufAs8nrYZjJm8LqNfnXFOFyCC4,90
+rozklad_ontu_parser_makisukurisu-0.1.2.0.dist-info/entry_points.txt,sha256=6OYgBcLyFCUgeqLgnvMyOJxPCWzgy7se4rLPKtNonMs,34
+rozklad_ontu_parser_makisukurisu-0.1.2.0.dist-info/licenses/LICENSE,sha256=aBFf3N1bnJPXS_UmJ1vsyUKm18GEkbFB6MPpEPMrLjs,1505
+rozklad_ontu_parser_makisukurisu-0.1.2.0.dist-info/RECORD,,
