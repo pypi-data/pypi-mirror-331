@@ -1,0 +1,17 @@
+Metadata-Version: 2.2
+Name: blackspammerbd_v1
+Version: 1.0.1
+Summary: A CLI package for device connection and file transfer
+Home-page: https://github.com/yourusername/blackspammerbd_v1
+Author: Shawpon Sp
+Author-email: shawponsp6@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+License-File: LICENSE.chromedriver
+Requires-Dist: colorama
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: summary
