@@ -1,0 +1,15 @@
+Metadata-Version: 2.2
+Name: ddd_cli
+Version: 1.1
+Summary: CLI para agregar soporte DDD a proyectos Django
+Author: Ragnar Bermúdez La O
+Author-email: ragnarbermudezlao@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Framework :: Django
+Requires-Dist: django
+Requires-Dist: jinja2
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: requires-dist
+Dynamic: summary
