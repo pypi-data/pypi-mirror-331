@@ -1,0 +1,5 @@
+pyotp
+qrcode
+pycryptodome
+requests
+paramiko
