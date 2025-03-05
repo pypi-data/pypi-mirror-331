@@ -1,0 +1,14 @@
+numpy
+pandas
+scikit-learn
+scipy
+
+[dev]
+pytest
+pip
+
+[full]
+faker
+imbalanced-learn
+pyarrow
+umap-learn

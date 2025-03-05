@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: panda_pie
+Version: 0.1.1
+Summary: A Python library for simplifying ML workflows
+Home-page: https://github.com/David-Barnes-Data-Imaginations/panda_pie
+Author: David
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scikit-learn
+Requires-Dist: scipy
+Provides-Extra: full
+Requires-Dist: faker; extra == "full"
+Requires-Dist: imbalanced-learn; extra == "full"
+Requires-Dist: pyarrow; extra == "full"
+Requires-Dist: umap-learn; extra == "full"
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pip; extra == "dev"
