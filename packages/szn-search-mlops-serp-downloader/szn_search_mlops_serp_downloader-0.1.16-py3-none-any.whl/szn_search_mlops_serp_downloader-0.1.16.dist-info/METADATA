@@ -1,0 +1,11 @@
+Metadata-Version: 2.2
+Name: szn-search-mlops-serp-downloader
+Version: 0.1.16
+Summary: SERP downloader and verifier
+Home-page: https://serpsz.com/szn-search-mlops-serp-downloader
+Author: Christopher Django
+Author-email: zombei2001@gmail.com
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: summary
