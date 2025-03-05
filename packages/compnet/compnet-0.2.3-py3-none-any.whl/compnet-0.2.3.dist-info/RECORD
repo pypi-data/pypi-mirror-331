@@ -1,0 +1,12 @@
+compnet/__about__.py,sha256=euiwfY6jzo9-QfRN7ZTy8xxMXJ14nbax5bqL6wcRBmI,310
+compnet/__init__.py,sha256=J4XgE4DH2_0KSK4vG_CGXfXRbQ6cb4k7zTuAFLQanZA,267
+compnet/algo.py,sha256=rCQHJqnLoEUtY-BNmWhMehmIRDQwS0Q_GOu2IFoqDfE,26391
+compnet/res/__init__.py,sha256=Gc5hwSdfa8u2p72liHAECz1v0HJbiDtDiiyFU5N9EVw,101
+compnet/tests/__init__.py,sha256=BgeIVlrwyDG3ZcqWiHQtu1Xe4oQgoW4RD86upmhQ9nQ,101
+compnet/tests/test_all.py,sha256=h5B5WP8NKHpOz8OiY8zQTWdeuaXI9ZeXMyCuxNFtzJE,6911
+compnet/tests/tests.py,sha256=5RmVbVWkilRdtvIQHAR4xsUqqva7abRNxHXSZyCTI7Q,5030
+compnet-0.2.3.dist-info/LICENSE,sha256=-baNTHI3V1Zzm2KW-Mo6Kt9DLnVb6JSukTJTU4JNgDE,1073
+compnet-0.2.3.dist-info/METADATA,sha256=TfrhYs1AOWO8drSWm6zRHlEz92LkDZZId_qfQC_GKys,14965
+compnet-0.2.3.dist-info/WHEEL,sha256=PZUExdf71Ui_so67QXpySuHtCi3-J3wvF4ORK6k_S8U,91
+compnet-0.2.3.dist-info/top_level.txt,sha256=L2d3oTflSOzZtE2tc_4IDIomPX2OwotjgyM9YQ6X8jg,8
+compnet-0.2.3.dist-info/RECORD,,
