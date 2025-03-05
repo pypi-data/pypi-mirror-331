@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+redeconv/ReDeconv_Normalization.py
+redeconv/ReDeconv_Percentage.py
+redeconv/__ReDeconv_N.py
+redeconv/__ReDeconv_P.py
+redeconv/__init__.py
+redeconv.egg-info/PKG-INFO
+redeconv.egg-info/SOURCES.txt
+redeconv.egg-info/dependency_links.txt
+redeconv.egg-info/requires.txt
+redeconv.egg-info/top_level.txt
