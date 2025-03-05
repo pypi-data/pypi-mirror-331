@@ -1,0 +1,2 @@
+[console_scripts]
+fb-scraper = facebook_scraper.fb:main
