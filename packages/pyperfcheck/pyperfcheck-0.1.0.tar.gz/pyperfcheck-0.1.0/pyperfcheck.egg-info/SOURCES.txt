@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.py
+pyperfcheck.egg-info/PKG-INFO
+pyperfcheck.egg-info/SOURCES.txt
+pyperfcheck.egg-info/dependency_links.txt
+pyperfcheck.egg-info/requires.txt
+pyperfcheck.egg-info/top_level.txt
