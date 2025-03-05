@@ -1,0 +1,134 @@
+<!-- vul_report.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Container image vulnerabilities analysis report</title>
+    <script>
+        function toggleSection(id) {
+            var section = document.getElementById(id);
+            if (section.style.display === 'none') {
+                section.style.display = 'block';
+            } else {
+                section.style.display = 'none';
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0e0e0;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            text-align: left;
+        }
+
+        header {
+            margin-bottom: 40px;
+        }
+
+        header img {
+            width: 150px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        h1, h2, h3, h4 {
+            color: #444;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 5px 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 0 auto 20px auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            text-align: left;
+            padding: 12px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            color: #333;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #eaeaea;
+        }
+
+        /* Style the button that is used to open and close the collapsible content */
+        button {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+        }
+
+        /* Style the collapsible content. Note: hidden by default */
+        .details-section {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <img src="https://www.casd.eu/wp/wp-content/themes/tm-bootstrap/images/site2022/casd.svg" alt="CASD">
+    <h1>Vulnerabilities analysis report</h1>
+</header>
+
+<h2>Image list</h2>
+
+<table>
+    <thead>
+    <tr>
+        <th scope="col">Image Name</th>
+        <th scope="col">Targets</th>
+        <th scope="col">Critical count</th>
+        <th scope="col">High count</th>
+        <th scope="col">Medium count</th>
+        <th scope="col">Low count</th>
+    </tr>
+    </thead>
+    {% for image in imageinfos %}
+        <tr>
+            <td scope="col"><a href={{ image.image_link }}>{{ image.image_name }}</a></td>
+            <td scope="col">{{ image.targets }}</td>
+            <td scope="col">{{ image.critical }}</td>
+            <td scope="col">{{ image.high }}</td>
+            <td scope="col">{{ image.medium }}</td>
+            <td scope="col">{{ image.low }}</td>
+        </tr>
+    {% endfor %}
+</table>
+
+<header>
+</header>
+
+<h2>Details for each image</h2>

@@ -1,0 +1,2 @@
+[console_scripts]
+iv_sherlock = iv_sherlock.__main__:main
