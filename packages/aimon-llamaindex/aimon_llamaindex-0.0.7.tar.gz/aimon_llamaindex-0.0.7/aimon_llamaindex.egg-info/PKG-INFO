@@ -1,0 +1,29 @@
+Metadata-Version: 2.2
+Name: aimon-llamaindex
+Version: 0.0.7
+Summary: The AIMon SDK for LlamaIndex related functionalities.
+Author: AIMon
+Author-email: info@aimon.ai
+Requires-Python: >3.8.0
+Description-Content-Type: text/markdown
+Requires-Dist: aimon==0.9.2
+Requires-Dist: llama-index-core==0.12.15
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# 🎉 **Welcome to AIMon-LlamaIndex**
+
+**aimon-llamaindex** is an AIMon extension that integrates AIMon's advanced LLM reliability tools—such as detectors for hallucination, instruction adherence, completeness, conciseness, and toxicity—into the LlamaIndex framework.
+
+### Installation
+
+To install the AIMon LlamaIndex package, use pip:
+
+```bash
+pip install aimon-llamaindex
+```
