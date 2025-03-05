@@ -1,0 +1,15 @@
+msgpack
+uvicorn
+fastapi
+gymnasium>=1.0.0
+typer
+requests
+pyyaml
+boto3
+sagemaker
+kubernetes
+pyngrok
+
+[unity]
+mlagents_envs==0.30.0
+protobuf==3.20.0
