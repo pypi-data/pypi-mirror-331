@@ -1,0 +1,64 @@
+Metadata-Version: 2.2
+Name: whatthetype
+Version: 1.0
+Summary: Derives type hints from data captured during runtime. Updates source files with type hints. USE SOURCE CONTROL before upating in-place!!!!
+Author: Witold Zolnowski
+Description-Content-Type: text/markdown
+Requires-Dist: autopep8>=2.0.0
+Dynamic: author
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: summary
+
+# How to use
+```python
+from whatthetype.whatthetype import trace, type_it_like_its_hot
+
+def foo(i,
+        x):
+    return {'a': [(i + x,)]}
+
+with trace() as data:
+    foo(11, 2)
+type_it_like_its_hot(data, update_files=True, backup_file_suffix=None, dump_intermediate_data=False)
+```
+
+# Result
+```python
+from whatthetype.whatthetype import trace, type_it_like_its_hot
+
+def foo(i: int,
+        x: int) -> dict[str, list[tuple[int]]]:
+    return {'a': [(i + x,)]}
+
+with trace() as data:
+    foo(11, 2)
+type_it_like_its_hot(data, update_files=True, backup_file_suffix=None, dump_intermediate_data=False)
+```
+
+# What
+Inspects code at runtime, derives types from arguments and updates in-place source files with detected type hints and required imports.
+
+# Requirements
+At minimum 3.5 - I haven't tested properly.
+Ideally use 3.9 or higher ( This lib supports both Union and '|' operators)
+
+# Install
+```bash
+pip install whatthetype
+```
+
+# Params
+```python
+""" params
+update_files: updates source files in place with new types, this is a destructive action! 
+            If False, results json will be saved to a file with unix timestamp. 
+            Default = False.
+backup_file_suffix: creates backup files and adds suffix to them.
+            Example: backup_file_suffix="bak" will create `foo.py.bak`. 
+            Default = "bak"
+dump_intermediate_data: will create 3 files with intermediate data used to derive final results. 
+            Default = False
+"""
+```
