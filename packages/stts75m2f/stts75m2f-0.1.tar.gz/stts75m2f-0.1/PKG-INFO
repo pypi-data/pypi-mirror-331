@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: stts75m2f
+Version: 0.1
+Summary: Pythona library for STTS75M2F temperature sensor
+Home-page: https://github.com/darton/stts75m2f
+Author: Dariusz Kowalczyk
+Author-email: darton.dariusz.kowalczyk@gmail.com
+License: UNKNOWN
+Description: # STTS75M2F Python Library
+        
+        This is a Python library for interfacing with the STTS75M2F temperature sensor using the I2C protocol. 
+        The library allows for easy reading of temperature data from the sensor.
+        
+        ## Features
+        
+        - Read temperature data from the STTS75M2F sensor
+        - Simple and easy-to-use API
+        
+        ## Requirements
+        
+        - Python 3.6 or higher
+        - smbus2 library
+        
+        ## Installation
+        
+        You can install the library using pip:
+        
+        ```bash
+        pip install stts75m2f
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
