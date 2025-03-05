@@ -1,0 +1,59 @@
+Metadata-Version: 2.2
+Name: uiucprescon.tripwire
+Version: 0.3.0
+Author-email: "University Library at The University of Illinois at Urbana Champaign: Preservation Services" <prescons@library.illinois.edu>
+Maintainer-email: Henry Borchers <hborcher@illinois.edu>
+License: University of Illinois/NCSA Open Source License
+        Copyright (c) 2024 University of Illinois at Urbana-Champaign. All rights reserved.
+        
+        Developed by:
+        University of Illinois Library at Urbana-Champaign
+        University of Illinois at Urbana-Champaign
+        
+        https://www.library.illinois.edu/
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal with the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+        
+        Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimers.
+        
+        Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimers in the documentation and/or other materials provided with the distribution.
+        
+        Neither the names of University of Illinois Library at Urbana-Champaign, University of Illinois at Urbana-Champaign, nor the names of its contributors may be used to endorse or promote products derived from this Software without specific prior written permission.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE CONTRIBUTORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS WITH THE SOFTWARE.
+        
+Project-URL: project, https://github.com/UIUCLibrary/tripwire
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: tqdm
+
+# Tripwire
+Used for helping out AV preservation
+
+
+## Set up development environment on Mac and Linux
+
+### Using UV instead of pip
+
+This way is better and faster than using pip.
+
+```shell
+uv venv
+source .venv/bin/activate
+uv pip sync requirements-dev.txt
+uv pip install -e .
+pre-commit install
+```
+
+### Using pip
+
+If you don't have uv installed:
+
+```shell
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements-dev.txt
+pip install -e .
+pre-commit install
+```

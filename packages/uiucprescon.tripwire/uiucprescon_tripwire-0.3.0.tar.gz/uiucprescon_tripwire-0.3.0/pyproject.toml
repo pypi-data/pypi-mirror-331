@@ -1,0 +1,46 @@
+[project]
+name = "uiucprescon.tripwire"
+version = "0.3.0"
+requires-python = ">= 3.11"
+maintainers = [
+    { name="Henry Borchers", email="hborcher@illinois.edu" }
+]
+authors = [
+    {name="University Library at The University of Illinois at Urbana Champaign: Preservation Services", email="prescons@library.illinois.edu"}
+]
+license = { file="LICENSE"}
+readme = { file= "README.md", content-type="text/markdown" }
+dependencies = [
+    "tqdm"
+]
+[project.urls]
+project = "https://github.com/UIUCLibrary/tripwire"
+
+[project.scripts]
+tripwire = "uiucprescon.tripwire.main:main"
+
+[build-system]
+requires = ["setuptools>=75.1.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["uiucprescon.tripwire"]
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+tag_format = "v$version"
+version_scheme = "pep440"
+version_provider = "pep621"
+update_changelog_on_bump = true
+major_version_zero = true
+
+[tool.ruff]
+line-length = 79
+
+[tool.tox]
+envlist = ["3.11", "3.12", "3.13"]
+
+[tool.tox.env_run_base]
+description = "Run test under {base_python}"
+commands = [["{env_bin_dir}{/}pytest"]]
+deps = ["-r requirements-dev.txt"]
