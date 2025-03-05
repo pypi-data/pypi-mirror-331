@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<registry>
+
+  <records interface="Products.CMFPlone.interfaces.IBundleRegistry"
+           prefix="plone.bundles/gridlisting-bundle"
+           remove="true"
+  />
+
+  <records interface="collective.gridlisting.controlpanel.IGridListingControlPanel"
+           prefix="collective.gridlisting"
+           remove="true"
+  />
+
+</registry>
