@@ -1,0 +1,2 @@
+[console_scripts]
+davia = davia.main:app
