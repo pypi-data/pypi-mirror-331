@@ -1,0 +1,137 @@
+name: Test Unit Latest Dependencies
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 22 * * THU' # each Thursday night, at 22:00 UTC
+
+env:
+  # Virtual environment path used by uv and other tools.
+  # We create a new environment for each job to avoid conflicts.
+  # For more information, see: https://github.com/lightly-ai/lightly-train/.github/workflows/README.md
+  VIRTUAL_ENV: ${{ github.workspace }}/.venv
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  detect-code-changes:
+    name: Detect Code Changes
+    runs-on: docker-cpu
+    outputs:
+      run-tests: ${{ steps.filter.outputs.run-tests }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dorny/paths-filter@v3
+        id: filter
+        with:
+          list-files: shell
+          filters: |
+            run-tests:
+              - '!docs/**'
+              - '!docker/**'
+              - '!.github/**'
+              - '.github/workflows/test_unit_latest_dependencies.yml'
+  test-unit-latest-dependencies:
+    name: Test Unit Latest Dependencies
+    needs: detect-code-changes
+    if: needs.detect-code-changes.outputs.run-tests == 'true'
+    runs-on: docker-gpu
+    strategy:
+      # Run all tests, even if some fail.
+      fail-fast: false
+      matrix:
+        python: ["3.8", "3.12"]
+        message: ["error"]
+        include:
+          - python: "3.13"
+            message: "warning"
+    outputs:
+      error: ${{ steps.set-test-result.outputs.error }}
+      warning: ${{ steps.set-test-result.outputs.warning }}
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+      - name: Set Up uv
+        uses: astral-sh/setup-uv@v3
+        id: setup-uv
+        with:
+          # For more information about the settings, see: 
+          # https://github.com/lightly-ai/lightly-train/.github/workflows/README.md
+          version: 0.5.4
+          cache-local-path: /tmp/setup-uv-cache
+          prune-cache: false
+      - name: Set Up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Set Up FFmpeg
+        uses: FedericoCarboni/setup-ffmpeg@v3
+        with:
+          ffmpeg-version: 4.3.1
+      - name: Set Up Environment
+        # For more information about the environment setup, see:
+        # https://github.com/lightly-ai/lightly-train/.github/workflows/README.md
+        run: |
+          rm -rf ${VIRTUAL_ENV}                                 # Make sure the venv is clean
+          uv venv ${VIRTUAL_ENV} --python ${{ matrix.python }}  # Create the venv
+          echo "${VIRTUAL_ENV}/bin" >> $GITHUB_PATH             # Add the venv to the PATH
+          make install-latest
+      - name: Run Pytest
+        # TODO(Philipp, 09/24): Remove CUDA_VISIBLE_DEVICES: "".
+        env:
+          CUDA_VISIBLE_DEVICES: ""
+        run: |
+          make test-ci
+      - name: Set Test Result
+        id: set-test-result
+        if: always()
+        run: |
+          if [[ "${{ job.status }}" != "success" ]]; then
+            echo "${{ matrix.message }}=1" >> "$GITHUB_OUTPUT"
+            exit 1
+          fi
+
+  slack-notification:
+    name: Send Slack Notification
+    needs:
+      - test-unit-latest-dependencies
+    if: always()
+    # runs-on: docker-cpu is not supported by the docker-in-docker/DinD architecture of the docker-runners due to how volumes within a container are mounted to the host instead of the container.
+    # for more information, see here; https://linear.app/lightly/issue/LIG-5676/docker-in-docker-does-not-work-when-volumes-are-used-or-when-github
+    runs-on: cpu
+    timeout-minutes: 5
+    steps:
+    - name: Slack Notification - Success
+      if: ${{ !needs.test-unit-latest-dependencies.outputs.error && !needs.test-unit-latest-dependencies.outputs.warning }}
+      uses: rtCamp/action-slack-notify@v2
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_TRAIN_MONITOR }}
+        SLACK_ICON_EMOJI: ":white_check_mark:"
+        SLACK_USERNAME: "Unit Tests with Latest Dependencies"
+        SLACK_COLOR: "good"
+        SLACK_MESSAGE: |
+          :white_check_mark: LightlyTrain passes with the latest dependencies.
+    - name: Slack Notification - Warning
+      if: ${{ needs.test-unit-latest-dependencies.outputs.warning }}
+      uses: rtCamp/action-slack-notify@v2
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_TRAIN_MONITOR }}
+        SLACK_ICON_EMOJI: ":warning:"
+        SLACK_USERNAME: "Unit Tests with Latest Dependencies"
+        SLACK_COLOR: "warning"
+        SLACK_MESSAGE: |
+          :warning: LightlyTrain fails with the latest dependencies on Python 3.13.
+          This is just a warning, no immediate action is required until we support Python 3.13.
+    - name: Slack Notification - Error
+      if: ${{ needs.test-unit-latest-dependencies.outputs.error }}
+      uses: rtCamp/action-slack-notify@v2
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_TRAIN_MONITOR }}
+        SLACK_ICON_EMOJI: ":x:"
+        SLACK_USERNAME: "Unit Tests with Latest Dependencies"
+        SLACK_COLOR: "danger"
+        SLACK_MESSAGE: |
+          :x: LightlyTrain fails with the latest dependencies.
+          Please check the logs and take necessary action.
