@@ -1,0 +1,5 @@
+conda_smithy/__init__.py,sha256=8ppGvAcBMXdkdSyHCS2QIu5dRAxbt34woFJktLai27g,85
+conda_smithy-0.0.0.dist-info/METADATA,sha256=BN2CsE_3zN209jdH5CnCiTeUaZ-MwnjTObd6niQnrF4,405
+conda_smithy-0.0.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+conda_smithy-0.0.0.dist-info/top_level.txt,sha256=48MMnlXERjElZN7jVAz56LfYjc_nvbxN2h7nz7zcWuQ,13
+conda_smithy-0.0.0.dist-info/RECORD,,
