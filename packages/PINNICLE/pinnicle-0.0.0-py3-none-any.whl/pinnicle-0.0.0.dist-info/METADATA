@@ -1,0 +1,77 @@
+Metadata-Version: 2.2
+Name: PINNICLE
+Version: 0.0.0
+Summary: A Python library for solving ice sheet modeling problems using Physics Informed Neural Network
+Author-email: Cheng Gong <gong.cheng@dartmouth.edu>, Mansa Krishna <mansa.krishna.gr@dartmouth.edu>, Mathieu Morlighem <Mathieu.Morlighem@dartmouth.edu>
+Project-URL: Homepage, https://github.com/ISSMteam/PINNICLE
+Project-URL: Documentation, https://pinnicle.readthedocs.io
+Project-URL: Bug Tracker, https://github.com/ISSMteam/PINNICLE/issues
+Keywords: Ice sheet modeling,Numerical method,Deep learning,Physics-informed neural networks
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v2 (LGPLv2)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: scikit-learn
+Requires-Dist: tensorflow>=2.11.0
+Requires-Dist: tensorflow-probability[tf]>=0.19.0
+Requires-Dist: matplotlib
+Requires-Dist: pandas
+Requires-Dist: mat73
+Requires-Dist: deepxde
+
+
+# PINNICLE
+Physics Informed Neural Networks for Ice and CLimatE
+
+[![CI](https://github.com/ISSMteam/PINNICLE/actions/workflows/CI.yml/badge.svg)](https://github.com/ISSMteam/PINNICLE/actions/workflows/CI.yml)
+[![codecov](https://codecov.io/gh/ISSMteam/PINNICLE/graph/badge.svg?token=S7REK0IKJH)](https://codecov.io/gh/ISSMteam/PINNICLE)
+[![Documentation Status](https://readthedocs.org/projects/pinnicle/badge/?version=latest)](https://pinnicle.readthedocs.io/en/latest/?badge=latest)
+
+A Python library for solving ice sheet modeling problems using a unified framework with Physics Informed Neural Networks
+
+
+---
+**NOTE**
+
+   This project is under active development.
+
+---
+
+**Documentation**: [pinnicle.readthedocs.io](https://pinnicle.readthedocs.io)
+
+![](docs/images/pinn.png)
+
+## Physics
+
+- Momentum Conservation (stress balance):
+  - Shelfy Stream Approximation (SSA)
+  - MOno-Layer Higher-Order (MOLHO) ice flow model
+
+- Mass Conservation (mass balance):
+  - Thickness evolution
+
+- Coupuling:
+  - stress balance + mass balance
+
+- Time dependent problems
+
+## Data format
+
+- [ISSM](https://issm.jpl.nasa.gov) `model()` type, directly saved from ISSM by `saveasstruct(md, filename)`
+- Scattered data
+
+
+## More
+
+- [Install and Setup](https://pinnicle.readthedocs.io/en/latest/installation.html#installation)
+- [An example of stress balance](https://pinnicle.readthedocs.io/en/latest/examples/ssa.html)
+
