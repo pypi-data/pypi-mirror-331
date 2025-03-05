@@ -1,0 +1,5 @@
+csv_validate-0.0.1.dist-info/METADATA,sha256=FkPxeMYcKs9ESf5saGTckwi1oQ6PM-RdVx_Xany17SY,446
+csv_validate-0.0.1.dist-info/WHEEL,sha256=agY48DeotCT6i7k36cRdJQrMn99lYJ0pZOi7MWEjd3s,127
+csv_validate/__init__.py,sha256=qsl81cHGJ8XBHkKA3OUR3nm4tjYxM3XdkVqRC1AP6fY,131
+csv_validate/csv_validate.cpython-311-s390x-linux-gnu.so,sha256=zOfZ65S9RMFVgsK6tW4O2tikcEX5orTGoBAgiXw69TM,3391952
+csv_validate-0.0.1.dist-info/RECORD,,
