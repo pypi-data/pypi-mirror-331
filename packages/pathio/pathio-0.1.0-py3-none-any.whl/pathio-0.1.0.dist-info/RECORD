@@ -1,0 +1,8 @@
+pathio/__init__.py,sha256=AgcnxQ5ZfU09jKZ6jsTbJf1j7n8Z5do50hqMJtSWP4k,67
+pathio/iopaths.py,sha256=JFUfkxnMInH5qzdcS92O6CZLDagkYTYTK3N3voh0GVI,30658
+pathio/mk_rm_dir.py,sha256=W3EDilaqVFxzxuG7uDhs7r1Xyi45Uu7c3h3ED1j2LCQ,5340
+pathio/prepare_paths.py,sha256=D3R8kfTMTVkF8oBhzKmJJ7H62mc8XNpkUjYOkAliSEE,12450
+pathio-0.1.0.dist-info/LICENSE,sha256=Uv0xI3Ohow0-SOzHbToEclRlzCy7rrKpluYC2I44dIk,1075
+pathio-0.1.0.dist-info/METADATA,sha256=u_u6Yi4lrGyDc39FLNBVGHeG97QG-29p-kjnBPn5jRc,3616
+pathio-0.1.0.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+pathio-0.1.0.dist-info/RECORD,,
