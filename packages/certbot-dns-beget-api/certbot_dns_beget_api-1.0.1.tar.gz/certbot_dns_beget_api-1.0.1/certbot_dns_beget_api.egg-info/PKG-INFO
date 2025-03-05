@@ -1,0 +1,45 @@
+Metadata-Version: 2.2
+Name: certbot-dns-beget-api
+Version: 1.0.1
+Summary: Beget DNS plugin for Certbot
+Home-page: https://github.com/Medan-rfz/certbot-dns-beget-api
+Author: Medan-rfz
+License: MIT License
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: certbot
+Dynamic: author
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: summary
+
+# Beget DNS Authenticator plugin for Certbot
+
+---
+
+## Credentials
+
+```ini
+# Beget API token used by Certbot
+dns_beget_api_username = username
+dns_beget_api_password = password 
+```
+
+## Examples
+
+```bash
+certbot certonly --authenticator dns-beget-api \
+    --dns-beget-api-credentials ~/.secrets/certbot/beget.ini \
+    --dns-beget-api-propagation-seconds 120 \
+    -d domain.com -d *.domain.com
+```
+
+```bash
+certbot certonly --authenticator dns-beget-api \
+    --dns-beget-api-credentials ~/.secrets/certbot/beget.ini \
+    --dns-beget-api-propagation-seconds 120 \
+    -d xxx.yyy.domain.com -d *.yyy.domain.com
+```
