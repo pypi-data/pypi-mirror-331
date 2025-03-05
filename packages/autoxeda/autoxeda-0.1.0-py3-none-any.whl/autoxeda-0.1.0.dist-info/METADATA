@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: autoxeda
+Version: 0.1.0
+Summary: An automated and dynamic exploratory data analysis (EDA) library for streamlined data insights using Large Language Model.
+Home-page: https://github.com/Jahanzeb-git/autoxeda
+Author: Jahanzeb Ahmed
+Author-email: jahanzebahmed.mail@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: requests
+Requires-Dist: seaborn
+Requires-Dist: statsmodels
+Requires-Dist: scipy
+Requires-Dist: langchain
+Requires-Dist: tqdm
+Requires-Dist: python-dotenv
+
