@@ -1,0 +1,2 @@
+class LLMStreamingContext:
+    pass

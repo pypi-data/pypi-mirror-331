@@ -1,0 +1,73 @@
+[project]
+name = "aiteamwork"
+version = "0.22.1"
+description = "A framework to build complex AI agents and workflows. Designed to be simple, modular, scalable, testable and debuggable!"
+authors = [
+    { name = "João Victor", email = "<aiteamwork@joaovictor.com>"}
+]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/joaovictorlouro/aiteamwork"
+repository = "https://github.com/joaovictorlouro/aiteamwork"
+documentation = "https://github.com/joaovictorlouro/aiteamwork"
+"Bug Tracker" = "https://github.com/joaovictorlouro/aiteamwork/issues"
+
+keywords = ["ai", "workflow", "agent", "framework", "aiteamwork"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Framework :: Flake8",
+    "Framework :: Jupyter",
+    "Framework :: Pydantic",
+    "Framework :: Pytest",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Documentation",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+]
+include = ["LICENSE"]
+requires-python = ">=3.13"
+dependencies = [
+    "pydantic>=2.10.5",
+    "aiohttp>=3.11.11"
+]
+
+[tool.poetry.group.dev.dependencies]
+pytest = "8.3.4"
+mypy = "1.14.1"
+black = "24.10.0"
+go-task-bin = "3.40.1"
+flake8 = "7.1.1"
+ipython = "8.31.0"
+ipykernel = "6.29.5"
+jupyter = "1.1.1"
+isort = "5.13.2"
+python-dotenv = "1.0.1"
+openai = "1.59.8"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
+target-version = ['py313']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+    | \.mypy_cache
+    | \.venv
+    | \.conda
+)/
+'''
+
+[tool.flake8]
+max-line-length = 120
+exclude = '.venv/,.conda/'
+
+[tool.isort]
+py_version=312
+profile = "black"
+line_length = 120
+extend_skip_glob = ['.venv/*', '.conda/*']
