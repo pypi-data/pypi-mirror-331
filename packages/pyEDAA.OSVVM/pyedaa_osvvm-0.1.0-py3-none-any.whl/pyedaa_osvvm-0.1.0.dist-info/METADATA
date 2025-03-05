@@ -1,0 +1,148 @@
+Metadata-Version: 2.2
+Name: pyEDAA.OSVVM
+Version: 0.1.0
+Summary: Parser and converter for OSVVM-specific data models and report formats.
+Home-page: https://GitHub.com/edaa-org/pyEDAA.OSVVM
+Author: Patrick Lehmann
+Author-email: Paebbels@gmail.com
+License: Apache-2.0
+Project-URL: Documentation, https://edaa-org.GitHub.io/pyEDAA.OSVVM
+Project-URL: Source Code, https://GitHub.com/edaa-org/pyEDAA.OSVVM
+Project-URL: Issue Tracker, https://GitHub.com/edaa-org/pyEDAA.OSVVM/issues
+Keywords: eda project,model,abstract,osvvm,reports,data format,unit test,test suite,test bench,test harness
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Utilities
+Classifier: Topic :: Scientific/Engineering :: Electronic Design Automation (EDA)
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Development Status :: 3 - Alpha
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: pyVHDLModel~=0.31
+Requires-Dist: pyTooling~=8.2
+Provides-Extra: doc
+Requires-Dist: sphinx_rtd_theme~=3.0; extra == "doc"
+Requires-Dist: sphinx~=8.2; extra == "doc"
+Requires-Dist: pyTooling~=8.2; extra == "doc"
+Requires-Dist: docutils~=0.21; extra == "doc"
+Requires-Dist: autoapi>=2.0.1; extra == "doc"
+Requires-Dist: sphinx-copybutton>=0.5.2; extra == "doc"
+Requires-Dist: sphinx_design~=0.6.1; extra == "doc"
+Requires-Dist: sphinx_autodoc_typehints~=3.1; extra == "doc"
+Requires-Dist: sphinxcontrib-mermaid~=1.0; extra == "doc"
+Requires-Dist: pyVHDLModel~=0.31; extra == "doc"
+Requires-Dist: docutils_stubs~=0.0.22; extra == "doc"
+Requires-Dist: sphinx_reports~=0.7; extra == "doc"
+Provides-Extra: test
+Requires-Dist: pytest-cov~=6.0; extra == "test"
+Requires-Dist: pytest~=8.3; extra == "test"
+Requires-Dist: Coverage~=7.6; extra == "test"
+Requires-Dist: mypy~=1.15; extra == "test"
+Requires-Dist: typing_extensions~=4.12; extra == "test"
+Requires-Dist: pyVHDLModel~=0.31; extra == "test"
+Requires-Dist: pyTooling~=8.2; extra == "test"
+Requires-Dist: lxml~=5.3; extra == "test"
+Provides-Extra: all
+Requires-Dist: sphinx_rtd_theme~=3.0; extra == "all"
+Requires-Dist: sphinx~=8.2; extra == "all"
+Requires-Dist: docutils~=0.21; extra == "all"
+Requires-Dist: autoapi>=2.0.1; extra == "all"
+Requires-Dist: sphinx-copybutton>=0.5.2; extra == "all"
+Requires-Dist: pytest-cov~=6.0; extra == "all"
+Requires-Dist: docutils_stubs~=0.0.22; extra == "all"
+Requires-Dist: pytest~=8.3; extra == "all"
+Requires-Dist: lxml~=5.3; extra == "all"
+Requires-Dist: sphinx_design~=0.6.1; extra == "all"
+Requires-Dist: sphinx_autodoc_typehints~=3.1; extra == "all"
+Requires-Dist: Coverage~=7.6; extra == "all"
+Requires-Dist: mypy~=1.15; extra == "all"
+Requires-Dist: sphinxcontrib-mermaid~=1.0; extra == "all"
+Requires-Dist: typing_extensions~=4.12; extra == "all"
+Requires-Dist: pyVHDLModel~=0.31; extra == "all"
+Requires-Dist: pyTooling~=8.2; extra == "all"
+Requires-Dist: sphinx_reports~=0.7; extra == "all"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: project-url
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Main Goals
+
+This package provides OSVVM-specific data models and parsers. The data models can be used as is or converted to generic
+data models of the pyEDAA data model family. This includes parsing OSVVM's `*.pro`-files and translating them to a
+pyEDAA.ProjectModel instance as well as reading OSVVM's reports in YAML format like test results, alerts or functional
+coverage.
+
+Frameworks consuming these data models can build higher level features and services on top of these models, while
+using one parser that's aligned with OSVVM's data formats.
+
+# Data Models
+
+## Project Description via `*.pro`-Files
+
+
+## Testsuite Summary Reports
+
+
+## Testcase Summary Reports
+
+
+## Alert and Log Reports
+
+
+## Scoreboard Reports
+
+
+## Functional Coverage Reports
+
+
+## Requirement Reports
+
+
+
+
+# Features
+
+
+
+# Use Cases
+
+* Reading OSVVM's `*.pro` files.
+
+# Examples
+
+
+
+# Consumers
+
+
+# References
+
+* [OSVVM/OSVVM-Scripts: OSVVMProjectScripts.tcl](https://GitHub.com/OSVVM/OSVVM-Scripts/blob/master/OSVVMProjectScripts.tcl)
+
+
+# Contributors
+
+* [Patrick Lehmann](https://GitHub.com/Paebbels) (Maintainer)
+* [and more...](https://GitHub.com/edaa-org/pyEDAA.OSVVM/graphs/contributors)
+
+# License
+
+This Python package (source code) licensed under [Apache License 2.0](LICENSE.md).  
+The accompanying documentation is licensed under [Creative Commons - Attribution 4.0 (CC-BY 4.0)](doc/Doc-License.rst).
+
+-------------------------
+SPDX-License-Identifier: Apache-2.0
