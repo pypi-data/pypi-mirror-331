@@ -1,0 +1,30 @@
+Metadata-Version: 2.4
+Name: stt_uk
+Version: 0.1.0
+Summary: High-quality automatic speech recognition for Ukrainian using modern neural networks.
+Project-URL: Homepage, https://github.com/egorsmkv/stt_uk
+Project-URL: Repository, https://github.com/egorsmkv/stt_uk
+Author-email: Yehor Smoliakov <egorsmkv@gmail.com>
+License-Expression: MIT
+Keywords: asr,audio,media,sound,speech-to-text,stt,ukrainian,wav,wave
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.9
+Requires-Dist: huggingface-hub>=0.29
+Requires-Dist: torch>=2.2
+Requires-Dist: torchaudio>=2.2
+Provides-Extra: dev
+Requires-Dist: ruff>=0.9; extra == 'dev'
+Description-Content-Type: text/markdown
+
+Coming soon.
