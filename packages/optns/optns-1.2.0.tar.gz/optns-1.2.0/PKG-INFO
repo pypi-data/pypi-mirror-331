@@ -1,0 +1,101 @@
+Metadata-Version: 2.2
+Name: optns
+Version: 1.2.0
+Summary: Optimized Nested Sampling: fast inference for non-linear additive models
+Home-page: https://github.com/JohannesBuchner/OptNS
+Author-email: Johannes Buchner <johannes.buchner.acad@gmx.com>
+License: GNU GENERAL PUBLIC LICENSE
+                              Version 3, 29 June 2007
+        
+            Fit and compare complex models reliably and rapidly. Advanced Nested Sampling.
+            Copyright (C) 2019  Johannes Buchner
+        
+            This program is free software: you can redistribute it and/or modify
+            it under the terms of the GNU General Public License as published by
+            the Free Software Foundation, either version 3 of the License, or
+            (at your option) any later version.
+        
+            This program is distributed in the hope that it will be useful,
+            but WITHOUT ANY WARRANTY; without even the implied warranty of
+            MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+            GNU General Public License for more details.
+        
+            You should have received a copy of the GNU General Public License
+            along with this program.  If not, see <http://www.gnu.org/licenses/>.
+        
+        Also add information on how to contact you by electronic and paper mail.
+        
+          You should also get your employer (if you work as a programmer) or school,
+        if any, to sign a "copyright disclaimer" for the program, if necessary.
+        For more information on this, and how to apply and follow the GNU GPL, see
+        <http://www.gnu.org/licenses/>.
+        
+          The GNU General Public License does not permit incorporating your program
+        into proprietary programs.  If your program is a subroutine library, you
+        may consider it more useful to permit linking proprietary applications with
+        the library.  If this is what you want to do, use the GNU Lesser General
+        Public License instead of this License.  But first, please read
+        <http://www.gnu.org/philosophy/why-not-lgpl.html>.
+        
+        
+Keywords: Bayesian statistics,inference,scientific software,parametric models,generalized additive models
+Requires-Python: >=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*, !=3.6.*, !=3.7.*, !=3.8.*
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: scikit-learn
+Requires-Dist: tqdm
+Requires-Dist: ultranest
+Requires-Dist: corner
+Requires-Dist: matplotlib
+Dynamic: home-page
+Dynamic: requires-python
+
+=========================
+Optimized Nested Sampling
+=========================
+
+Faster inference by parameter space reduction of linear parameters.
+
+Context
+-------
+
+For models that are composed of additive components::
+
+    y = A_1 * y_1(x|theta) + A_2 * y_2(x|theta) + ...
+
+And data that are one of::
+
+    y_obs ~ Normal(y, sigma)
+    y_obs ~ Poisson(y)
+
+y may be one or multi-dimensional.
+sigma may be different for each y (heteroscadastic).
+
+Here we see that each component y_i changes y linearly with its
+normalisation parameter A_i.
+
+We therefore have two groups of parameters:
+
+ * linear parameters: A_i
+ * non-linear parameters: theta
+
+We can define the predictive part of our model as::
+
+    y_1, y_2, ... = compute_components(x, theta)
+
+
+What optns does
+---------------
+
+1. Profile likelihood inference with nested sampling. 
+   That means the normalisations are optimized away.
+
+2. Post-processing: The full posterior (A_i and theta) is sampled by 
+   conditionally sampling A_i given theta.
+
+Usage
+-----
+
+See the demo scripts in the examples folder!
