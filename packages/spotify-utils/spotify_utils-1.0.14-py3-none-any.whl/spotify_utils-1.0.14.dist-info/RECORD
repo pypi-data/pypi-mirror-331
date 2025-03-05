@@ -1,0 +1,15 @@
+spotify_utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spotify_utils/config.py,sha256=NbMSFkqnuwbsN4mIsE8cBoVDlJC-Aoe_gAZYu0VgX5o,500
+spotify_utils/main.py,sha256=MOEaJp0JEQrEp4MasMGIUueUxMb-32A15Zu7BDFad0M,421
+spotify_utils/settings.toml,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spotify_utils/src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spotify_utils/src/auth.py,sha256=Ykghlcxbd9DrTWvu8TIQTSBWWVmmfGK0peHoevml760,898
+spotify_utils/src/file_operations.py,sha256=GuKdbK0nVssCD0UmStqaOoB3Og_vR5DUEV7a2td5kK8,714
+spotify_utils/src/playlists.py,sha256=pHnTzHirGsj0S6N3DShDi3LJxPsWapMyHGw73vJxsNY,7334
+spotify_utils/src/user.py,sha256=TiBMiOBQpDXfhSBs0cWJfFJNMqtOkYFNdepDpOGuJs4,98
+spotify_utils/templates/playlists.html,sha256=KuwKNNcPvj5tTJGUmVIpBJnsRDhk17R1U7QyCuZYW6g,6511
+spotify_utils-1.0.14.dist-info/LICENSE,sha256=d70ncvwQvxT5PQKZ-33FurHhY3TyU9pifc47BP4P6Uw,11342
+spotify_utils-1.0.14.dist-info/METADATA,sha256=sNI3bFPPuYmpW37MBBYOLPyrovEnKDKHtJWfka_wCJE,8457
+spotify_utils-1.0.14.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+spotify_utils-1.0.14.dist-info/entry_points.txt,sha256=wznYB7fNVOPGETd7qccJa7Hk4GaBvNQ8YmCsGR6Lo1Y,56
+spotify_utils-1.0.14.dist-info/RECORD,,
