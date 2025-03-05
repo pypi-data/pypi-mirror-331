@@ -1,0 +1,9 @@
+iggy_py-0.4.0.dist-info/METADATA,sha256=9MkAqM7Ho8cVwB2SJ4BBthSt0Swf4dl4vP6L98Koxro,2629
+iggy_py-0.4.0.dist-info/WHEEL,sha256=EFCgXGXxeCwiKFSIXs99j9wi5CzhWN9wgZDTgX5-fdU,96
+iggy_py-0.4.0.dist-info/licenses/LICENSE,sha256=JnMAlsiBfu8V2_OIWs7NwfsRT5b5u78rQ8vKDFsE7uk,11556
+iggy_py-0.4.0.dist-info/licenses/NOTICE,sha256=yYaukaoxhgah3uW7mMkvZmpxZUzex6a8e3JH155KT04,592
+iggy_py/__init__.py,sha256=RTqwI9GEjwJye_SHjR3MeqHis4ilzyWJprT3-AmDP1U,111
+iggy_py/__init__.pyi,sha256=lav6dfvrVvBaVe8W0J-gYt0Y2-6xuhvz7zX3bnBO22g,5958
+iggy_py/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+iggy_py/iggy_py.cp310-win_amd64.pyd,sha256=69NjKBUidldZOZ1Iq7md8zX1kWKW8AwrditXeV0CN44,5613056
+iggy_py-0.4.0.dist-info/RECORD,,
