@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: kamal_in_states
+Version: 0.1
+Summary: A Django REST API providing a list of all Indian states
+Home-page: https://github.com/yourusername/django-indian-states
+Author: Kamal Sir
+Author-email: kamalsir@ymail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Framework :: Django
+Classifier: License :: OSI Approved :: MIT License
