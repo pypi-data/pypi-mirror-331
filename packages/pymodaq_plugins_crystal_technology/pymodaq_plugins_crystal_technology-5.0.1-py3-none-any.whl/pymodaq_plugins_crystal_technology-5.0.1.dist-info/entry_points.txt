@@ -1,0 +1,5 @@
+[pymodaq.instruments]
+crystal_technology = pymodaq_plugins_crystal_technology
+
+[pymodaq.plugins]
+crystal_technology = pymodaq_plugins_crystal_technology
