@@ -1,0 +1,8 @@
+MANIFEST.in
+setup.py
+ascend/Ascend-cann-nnrt_8.0.0_linux-aarch64.run
+ascend_cann_nnrt.egg-info/PKG-INFO
+ascend_cann_nnrt.egg-info/SOURCES.txt
+ascend_cann_nnrt.egg-info/dependency_links.txt
+ascend_cann_nnrt.egg-info/requires.txt
+ascend_cann_nnrt.egg-info/top_level.txt
