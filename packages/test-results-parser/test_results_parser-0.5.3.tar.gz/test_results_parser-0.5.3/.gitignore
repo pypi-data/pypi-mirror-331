@@ -1,0 +1,6 @@
+/.*_cache
+/.venv
+/*.xml
+/target
+__pycache__
+.coverage
