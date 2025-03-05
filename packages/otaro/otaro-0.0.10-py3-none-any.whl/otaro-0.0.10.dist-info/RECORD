@@ -1,0 +1,17 @@
+otaro/__init__.py,sha256=SXpOG7tD573lPbtyyQXZwuLfKti9hNjJAUyqsgQmddw,98
+otaro/parsing.py,sha256=65BTUmJb1hwoONpn38ziT1tvBCXMyp0dwv88I2SRJVE,4879
+otaro/providers.py,sha256=8MGrYUb8ed6bRp9BYDkdn7vpWYmPYo9W76rbaPuOefg,1226
+otaro/rule_utils.py,sha256=iKAhR2rV5tkui197uhTv9RLPm9lSjp27d6_8ieVpyGU,4438
+otaro/rules.py,sha256=-M3pGH5MBYh0N47591LbXYd09jmvGzG74v_syV32niA,417
+otaro/task.py,sha256=U8QaJgsBhNXuLl5-zTDtWKt0ic--hk1ZUMAl4-5vmqA,26635
+otaro/task_utils.py,sha256=uBHz2iLKVb6ePP8O8r7dEMRBJANHD8OSx3pSBHEUBPQ,3007
+otaro/types.py,sha256=ADToIzxSG8irKoYoddRKw19EEcuucDrl0s-WQHjexQc,9306
+otaro/api/__init__.py,sha256=iJuSeZvpRk3_XHhIkyNNX8f6NnvUG8HN1H3nx04yR5o,741
+otaro/api/server.py,sha256=rtOZsKou9p-uzzkcrO3atXSL96O6Mmv1GHF0WiM7W0A,363
+otaro/prompts/__init__.py,sha256=nMahtEhDvu1934S96Vh901tM9v7TZ1F35ysrXvOSyR8,133
+otaro/prompts/system_prompt.py,sha256=tn2o6EgceLLhztvNI-bsvj48pWUeyr9mGY9yhpCQNT0,312
+otaro/prompts/user_prompt.py,sha256=NimoKZo-hinSIKdP0WL9oCVKJ8-Wgk49RPjt4U4_sp8,299
+otaro-0.0.10.dist-info/METADATA,sha256=xWqbZ-igDObux2N7X8_-XXbYzaDg4eLh3houmgAalGA,732
+otaro-0.0.10.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+otaro-0.0.10.dist-info/entry_points.txt,sha256=EGd4hwLeWfjzGwvr-isFjYGvubpQpckPnq2Tz5p6_p4,43
+otaro-0.0.10.dist-info/RECORD,,
