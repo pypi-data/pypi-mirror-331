@@ -1,0 +1,14 @@
+bidict
+jsonschema
+loky
+cloudpickle
+msgpack
+pydot
+
+[:python_version < "3.9"]
+typing-extensions
+graphlib-backport
+
+[graphblas]
+python-graphblas
+numpy
