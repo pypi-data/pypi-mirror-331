@@ -1,0 +1,13 @@
+[package]
+name = "mbf_nested_intervals"
+version = "0.5.0"
+authors = ["Florian Finkernagel <finkernagel@imt.uni-marburg.de>"]
+edition = "2018"
+
+[dependencies]
+nested_intervals="0.6.0"
+pyo3={ version = "0.21", features= ["extension-module", "abi3", "abi3-py38"]}
+
+[lib]
+name = "mbf_nested_intervals"
+crate-type = ["cdylib"]

@@ -1,0 +1,6 @@
+[build-system]
+requires = ["maturin>=0.13,<0.14", 'setuptools', 'setuptools_rust']
+build-backend = "maturin"
+
+[tool.maturin]
+sdist-include = ["mbf_nested_intervals"]
