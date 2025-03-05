@@ -1,0 +1,11 @@
+media-tagging[gemini,google-cloud,langchain]
+igraph
+pandas
+numpy
+pydantic
+
+[all]
+media-similarity[server]
+
+[server]
+media-tagging[server]
