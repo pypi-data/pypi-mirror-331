@@ -1,0 +1,23 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.masonry.api"
+
+[tool.poetry]
+name = "app-auth"
+version = "0.1.0"
+description = "Аутентификационный модуль для проекта"
+authors = ["Elberd <mail@example.com>"]
+
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django = "^5.1.6"
+psycopg2-binary = "^2.9.10"
+django-environ = "^0.11.2"
+djangorestframework = "^3.15.2"
+django-filter = "^24.3"
+djangorestframework-gis = "^1.1"
+ruff = "^0.9.3"
+django-cors-headers = "^4.6.0"
+mozilla-django-oidc = "^4.0.1"
+
