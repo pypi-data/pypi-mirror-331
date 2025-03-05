@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: eclypse-html-report
+Version: 0.1.3
+Summary: A tool to generate an HTML report from the results of an ECLYPSE simulation
+Home-page: https://github.com/eclypse-org/eclypse-html-report
+License: MIT
+Author: Valerio De Caro
+Author-email: valerio.decaro@di.unipi.it
+Maintainer: Valerio De Caro
+Maintainer-email: valerio.decaro@di.unipi.it
+Requires-Python: >=3.9,<3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: datapane (>=0.17.0,<0.18.0)
+Requires-Dist: numpy (<=1.26.4)
+Requires-Dist: plotly (>=5.24.1,<6.0.0)
+Requires-Dist: pyvis (>=0.3.2,<0.4.0)
+Project-URL: Repository, https://github.com/eclypse-org/eclypse-html-report
+Description-Content-Type: text/markdown
+
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/eclypse-html-report)
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&)](https://github.com/pre-commit/pre-commit)
+[![Checked with mypy](http://www.mypy-lang.org/static/mypy_badge.svg)](http://mypy-lang.org/)
+[![Checked wit pylint](https://img.shields.io/badge/pylint-10/10-green)](https://pylint.pycqa.org/en/latest/)
+[![Import sorted with isort](https://img.shields.io/badge/isort-checked-brightgreen)](https://pycqa.github.io/isort/)
+[![IMport cleaned with pycln](https://img.shields.io/badge/pycln-checked-brightgreen)](https://github.com/hadialqattan/pycln)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-black)](https://github.com/psf/black)
+[![Doc style: docformatter](https://img.shields.io/badge/doc%20style-docformatter-black)](https://github.com/PyCQA/docformatter)
+
+This release contains the `eclypse-html-report` command line tool that generates a visual HTML report from the stats produced by an [ECLYPSE](https://github.com/eclypse-org/eclypse) simulation.
+
+## Installation
+
+To install `eclypse-html-report` and all its dependencies, you can run the following commands:
+```bash
+
+pip install eclypse-html-report
+
+```
+
+**N.B.** We **strongly** suggest the installation of ECLYPSE in a virtual environment.
+
+## Usage
+
+```bash
+
+eclypse-html-report --help
+
+```
+

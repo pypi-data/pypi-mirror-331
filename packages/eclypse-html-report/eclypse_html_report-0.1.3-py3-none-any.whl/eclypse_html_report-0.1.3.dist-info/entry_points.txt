@@ -1,0 +1,3 @@
+[console_scripts]
+eclypse-html-report=eclypse_html_report.cli:main
+
