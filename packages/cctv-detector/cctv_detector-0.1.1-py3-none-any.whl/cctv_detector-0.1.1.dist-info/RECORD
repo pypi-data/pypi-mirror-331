@@ -1,0 +1,9 @@
+cctv_detector/__init__.py,sha256=soQqjs_wor2zOMdwms6MGgcZB09Xnp9V-OY4lg7h5z0,286
+cctv_detector/detector.py,sha256=MabSRTBe30deEWNEEMdwzc_DBVeB60Mow3kcBUBIw1Q,7427
+cctv_detector/visualizer.py,sha256=yWshu9yzg1o3war_Wu_R3KUz-cil6fHMvRnLAADuw48,4232
+cctv_detector/webapp.py,sha256=uJbO7ODvYbfhEvyOiGpVCYUFpGk8RTxnPP-3hT0UERM,10124
+cctv_detector-0.1.1.dist-info/LICENSE,sha256=1lr7ru3KJhOpaGlCUnDY22I_2-0mC-qRQFRhJ19pR7Y,1070
+cctv_detector-0.1.1.dist-info/METADATA,sha256=jNdMKAcm2CMfr4STgsWQe7l2ttCDiX_ESu4w0xfh6HM,3028
+cctv_detector-0.1.1.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+cctv_detector-0.1.1.dist-info/top_level.txt,sha256=9du1rBqTPomPeYwpBPbxk54aCn7MTK5XEpwhK0MjKa4,14
+cctv_detector-0.1.1.dist-info/RECORD,,
