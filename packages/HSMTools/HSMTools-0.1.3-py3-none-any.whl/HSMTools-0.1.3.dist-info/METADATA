@@ -1,0 +1,27 @@
+Metadata-Version: 2.2
+Name: HSMTools
+Version: 0.1.3
+Summary: A project for image processing from hot stage microscope using python.
+Home-page: https://github.com/leichti/hsmtools
+Author: Manuel Leuchtenmüller
+Author-email: leichti@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.21.0
+Requires-Dist: opencv-python>=4.5.0
+Requires-Dist: polars>=0.18.0
+Requires-Dist: matplotlib>=3.1.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+A project for image processing from hot stage microscope using python.

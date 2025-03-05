@@ -1,0 +1,2 @@
+[console_scripts]
+hsmprocessor = HSMTools.data_preparation.cli:easycli
