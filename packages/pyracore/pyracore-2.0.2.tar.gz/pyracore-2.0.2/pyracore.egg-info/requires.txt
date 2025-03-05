@@ -1,0 +1,5 @@
+cryptography
+pynput
+requests
+scapy
+psutil

