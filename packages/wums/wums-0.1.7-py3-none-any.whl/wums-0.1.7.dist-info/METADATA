@@ -1,0 +1,54 @@
+Metadata-Version: 2.2
+Name: wums
+Version: 0.1.7
+Summary: .
+Author-email: David Walter <david.walter@cern.ch>, Josh Bendavid <josh.bendavid@cern.ch>, Kenneth Long <kenneth.long@cern.ch>, Jan Eysermans <jan.eysermans@cern.ch>
+License: MIT
+Project-URL: Homepage, https://github.com/WMass/wums
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: hist
+Requires-Dist: numpy
+Provides-Extra: plotting
+Requires-Dist: matplotlib; extra == "plotting"
+Requires-Dist: mplhep; extra == "plotting"
+Provides-Extra: fitting
+Requires-Dist: tensorflow; extra == "fitting"
+Requires-Dist: jax; extra == "fitting"
+Requires-Dist: scipy; extra == "fitting"
+Provides-Extra: pickling
+Requires-Dist: boost_histogram; extra == "pickling"
+Requires-Dist: h5py; extra == "pickling"
+Requires-Dist: hdf5plugin; extra == "pickling"
+Requires-Dist: lz4; extra == "pickling"
+Provides-Extra: all
+Requires-Dist: plotting; extra == "all"
+Requires-Dist: fitting; extra == "all"
+Requires-Dist: pickling; extra == "all"
+
+# WUMS: Wremnants Utilities, Modules, and other Stuff
+
+As the name suggests, this is a collection of different thins, all python based:
+- Fitting with tensorflow or jax
+- Custom pickling h5py objects 
+- Plotting functionality
+
+## Install
+
+The `wums` package can be pip installed with minimal dependencies:
+```bash
+pip install wums
+```
+Different dependencies can be added with `plotting`, `fitting`, `pickling` to use the corresponding scripts.
+For example, one can install with
+```bash
+pip install wums[plotting,fitting]
+```
+Or all dependencies with
+```bash
+pip install wums[all]
+```
