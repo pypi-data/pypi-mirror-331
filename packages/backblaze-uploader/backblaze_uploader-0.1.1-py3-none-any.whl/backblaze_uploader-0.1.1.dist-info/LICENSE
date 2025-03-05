@@ -1,0 +1,42 @@
+#### `LICENSE`
+
+Masalan, MIT litsenziyasi:
+
+MIT License
+
+Copyright (c) 2025 Sizning ismingiz
+
+Permission is hereby granted, free of charge, to any person obtaining a copy...
+
+#### `.gitignore`
+
+pycache/
+_.pyc
+_.pyo
+_.pyd
+.Python
+env/
+venv/
+dist/
+build/
+_.egg-info/
+
+### 3. Test fayli (ixtiyoriy)
+
+#### `tests/test_uploader.py`
+
+```python
+import unittest
+from backblaze_uploader import BackblazeB2Uploader
+
+class TestBackblazeB2Uploader(unittest.TestCase):
+    def setUp(self):
+        self.uploader = BackblazeB2Uploader("test_key_id", "test_key", "test_bucket")
+
+    def test_upload_file(self):
+        # Test case qo'shing
+        pass
+
+if __name__ == '__main__':
+    unittest.main()
+```

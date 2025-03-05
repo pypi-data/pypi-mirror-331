@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: backblaze-uploader
+Version: 0.1.1
+Summary: Backblaze B2 bucket'ga fayl yuklash uchun Python library
+Home-page: https://github.com/Muhiddin0/backbleaze_uploader
+Author: Kumosense
+Author-email: kabraliev2005@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: b2sdk>=1.0.0
+
+# Backblaze Uploader
+
+`backblaze-uploader` â€” bu Backblaze B2 bulutli saqlash xizmatiga fayllarni yuklash uchun oddiy va samarali Python kutubxonasi. Ushbu kutubxona `b2sdk` ga asoslangan boâ€˜lib, bitta yoki bir nechta fayllarni bucketâ€™ga yuklashni osonlashtiradi.
+
+# O'rnatish
+
+```bash
+pip install backblaze-uploader
+```
+
+## Xususiyatlar
+
+- Bitta faylni Backblaze B2 bucketâ€™ga yuklash
+- Bir nechta fayllarni bir vaqtning oâ€˜zida yuklash
+- Yuklangan fayl haqida maâ€™lumot (ID, nom, hajm) olish
+- Xatolarni boshqarish bilan ishonchli ishlash
+
+## Oâ€˜rnatish
+
+Kutubxonani PyPI orqali oâ€˜rnatishingiz mumkin:
+
+```bash
+pip install backblaze-uploader
+```
+"# backbleaze_uploader" 
+
+
