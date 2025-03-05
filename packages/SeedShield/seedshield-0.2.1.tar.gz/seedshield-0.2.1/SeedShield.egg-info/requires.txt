@@ -1,0 +1,16 @@
+pyperclip>=1.8.0
+
+[dev]
+build
+twine
+
+[test]
+pytest>=6.0
+pytest-timeout>=2.1.0
+pytest-cov
+pylint
+flake8
+mypy
+
+[windows]
+windows-curses
