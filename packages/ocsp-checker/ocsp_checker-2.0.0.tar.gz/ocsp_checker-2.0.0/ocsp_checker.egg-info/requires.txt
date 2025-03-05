@@ -1,0 +1,3 @@
+cryptography>=44.0
+nassl>=5.3
+certifi
