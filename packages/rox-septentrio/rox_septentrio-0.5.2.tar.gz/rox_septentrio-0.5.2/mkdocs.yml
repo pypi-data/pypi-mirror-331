@@ -1,0 +1,45 @@
+site_name: Septentrio GPS
+repo_url: https://gitlab.com/roxautomation/components/septentrio-gps
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
+nav:
+  - Introduction: 'index.md'
+  - changelog.md
+
+markdown_extensions:
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+
+plugins:
+  - search:
+  - mkdocs-jupyter
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          rendering:
+            show_signature_annotations: true
+            show_source: true
+            show_submodules: true
+      watch:
+        - src/septentrio_gps
+
+extra_javascript:
+  - https://unpkg.com/mermaid/dist/mermaid.min.js

@@ -1,0 +1,17 @@
+[MASTER]
+jobs=2 #number of processes to use
+
+disable=
+    invalid-name,
+    bare-except, broad-except,
+    line-too-long,
+    redefined-outer-name,
+    wrong-import-order,
+    logging-fstring-interpolation,
+    too-many-arguments,
+    too-many-instance-attributes,
+    R0801,
+    too-few-public-methods,
+    missing-function-docstring,
+    E0611,
+    no-member

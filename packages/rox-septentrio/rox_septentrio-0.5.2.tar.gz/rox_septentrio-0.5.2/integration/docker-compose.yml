@@ -1,0 +1,10 @@
+# main gamma stack
+
+services:
+  # mqtt broker
+  mosquitto:
+    restart: unless-stopped
+    container_name: mosquitto
+    image: registry.gitlab.com/roxautomation/images/mosquitto:latest
+    ports:
+      - "1883:1883"

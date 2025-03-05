@@ -1,0 +1,12 @@
+bump2version
+coverage
+invoke
+ipython
+mypy
+pre-commit
+pylint
+pytest
+pytest-cov
+pyyaml
+ruff
+types-PyYAML

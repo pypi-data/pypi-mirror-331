@@ -1,0 +1,9 @@
+paho-mqtt
+click
+coloredlogs
+orjson
+pydantic-settings
+pydantic
+pymap3d
+pynmea2
+pyserial

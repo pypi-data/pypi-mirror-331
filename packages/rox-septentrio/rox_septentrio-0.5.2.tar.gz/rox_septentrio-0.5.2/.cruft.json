@@ -1,0 +1,18 @@
+{
+  "template": "https://gitlab.com/sjev/python-template",
+  "commit": "f46645b2acb609c0a53e710516dd6259e8814226",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "author_name": "Jev Kuznetsov",
+      "author_email": "jev.kuznetsov@gmail.com",
+      "gitlab_username": "sjev",
+      "project_name": "Septentrio GPS",
+      "project_slug": "septentrio-gps",
+      "package_name": "septentrio_gps",
+      "project_short_description": "Septentrio GPS integration",
+      "_template": "https://gitlab.com/sjev/python-template"
+    }
+  },
+  "directory": null
+}

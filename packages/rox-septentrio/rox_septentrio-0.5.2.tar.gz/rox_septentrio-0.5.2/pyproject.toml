@@ -1,0 +1,88 @@
+#-----------------pyproject.toml configuration----------------
+[build-system]
+requires = ["setuptools >= 61.0", "wheel", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rox-septentrio"
+description = "Driver for Septentrio GPS, posting messages to mqtt"
+authors = [
+    {name = "Jev Kuznetsov", email = "jev@roxautomation.com"},
+]
+dynamic = ["version"]
+license = {text = "MIT"}
+readme = "README.md"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
+]
+dependencies = [
+    "paho-mqtt",
+    "click",
+    "coloredlogs",
+    "orjson",
+    "pydantic-settings",
+    "pydantic",
+    "pymap3d",
+    "pynmea2",
+    "pyserial",
+]
+requires-python = ">=3.10"
+
+[tool.setuptools_scm]
+fallback_version = "0.0.0+unknown"
+
+
+[project.urls]
+Homepage = "https://gitlab.com/roxautomation/components/septentrio-gps"
+
+[project.scripts]
+gps_node = "rox_septentrio.__main__:main"
+
+# optiona depnedencies are defined in requirements_dev.txt
+
+#--------------mypy configuration----------------
+[tool.mypy]
+# Global options can be specified here
+disallow_untyped_defs = true
+ignore_missing_imports = true
+
+
+
+#-----------------pytest configuration----------------
+[tool.pytest.ini_options]
+filterwarnings = "ignore::DeprecationWarning:dateutil.*"
+
+log_cli = false
+log_cli_level = "DEBUG"
+log_cli_format = "%(asctime)s [%(levelname)s] %(message)s (%(filename)s:%(lineno)s)"
+log_cli_date_format = "%H:%M:%S"
+
+#-----------------coverage configuration----------------
+[tool.coverage.run]
+omit = [
+    "tests/*",
+]
+
+#------------------pylint configuration----------------
+[tool.pylint.messages_control]
+disable = [
+    "missing-module-docstring",
+    "missing-class-docstring",
+    "missing-function-docstring",
+    "invalid-name",
+    "logging-fstring-interpolation",
+    "unused-argument",
+    "import-outside-toplevel",
+    "broad-except",
+    "line-too-long",
+    "useless-parent-delegation",
+    "C"  # Disable all convention messages
+]
+[tool.pylint.typecheck]
+ignored-modules = ["orjson"]

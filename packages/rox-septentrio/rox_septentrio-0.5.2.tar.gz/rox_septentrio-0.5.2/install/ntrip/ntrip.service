@@ -1,0 +1,16 @@
+
+[Unit]
+Description=Ntrip client service
+
+
+[Service]
+SyslogIdentifier=ntrip
+ExecStart=bash -c "/usr/local/bin/start_ntrip"
+User=pi
+KillSignal=SIGINT
+Restart=always
+RestartSec=15
+TimeoutStopSec=10
+
+[Install]
+WantedBy=multi-user.target

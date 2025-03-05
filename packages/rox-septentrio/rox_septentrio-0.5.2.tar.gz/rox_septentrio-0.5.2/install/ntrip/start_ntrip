@@ -1,0 +1,14 @@
+#!/bin/env /bin/bash
+#export $(cat /etc/environment | xargs)
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+LAT=51.418
+LON=6.19
+HEIGHT=12
+
+echo VRS position: latitude=$LAT, longitude=$LON, height=$HEIGHT
+stty raw < /dev/gps_rtcm
+stty 115200 < /dev/gps_rtcm
+
+# basisdepeel
+$SCRIPT_DIR//ntripclient.py -v  -t $LAT -g $LON -e $HEIGHT -2 -u jev@greenrobotics.nl -p none rtk2go.com 2101 Basisdepeel -f /dev/gps_rtcm

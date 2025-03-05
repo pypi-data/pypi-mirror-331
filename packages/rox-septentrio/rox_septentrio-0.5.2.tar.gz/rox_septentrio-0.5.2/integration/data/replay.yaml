@@ -1,0 +1,10 @@
+config:
+  dt: 0.01
+  duration: 20
+  restart: true
+
+sources:
+  - source: "nmea.txt"
+    t_offset: 1670336843.224829
+    player: "serial"
+    tty: "/tty/tty_nmea_tx"

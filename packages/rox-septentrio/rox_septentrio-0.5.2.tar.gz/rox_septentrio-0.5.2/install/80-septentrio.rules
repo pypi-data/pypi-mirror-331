@@ -1,0 +1,4 @@
+# udev rules for septentrio connected via USB, creating 2 COM ports and a nerwork interface
+SUBSYSTEM=="tty", ATTRS{idVendor}=="152a", ATTRS{idProduct}=="85c0",  ENV{ID_USB_INTERFACE_NUM}=="02", SYMLINK+="gps_nmea", MODE="0666"
+SUBSYSTEM=="tty", ATTRS{idVendor}=="152a", ATTRS{idProduct}=="85c0",  ENV{ID_USB_INTERFACE_NUM}=="04", SYMLINK+="gps_rtcm", MODE="0666"
+SUBSYSTEM=="net", ATTRS{idVendor}=="152a", ATTRS{idProduct}=="85c0", ACTION=="add", NAME="gpslan0", RUN+="/usr/sbin/ifconfig gpslan0 192.168.3.100"

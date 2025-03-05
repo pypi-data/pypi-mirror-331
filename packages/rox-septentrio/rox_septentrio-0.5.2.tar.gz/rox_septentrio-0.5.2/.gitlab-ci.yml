@@ -1,0 +1,33 @@
+image: python:3-slim
+
+cache:
+  key: "$CI_COMMIT_REF_SLUG"
+  paths:
+    - .cache/pip
+    - venv/
+
+before_script:
+  - python --version
+  - pip install --cache-dir .cache/pip -r requirements_ci.txt
+  - pip install --cache-dir .cache/pip .
+
+stages:
+  - test_stage
+  - package_stage
+
+pytest:
+  stage: test_stage
+  script:
+    - ruff check src
+    - mypy src
+    - pytest -v
+
+package:
+  stage: package_stage
+  script:
+    - pip install build twine
+    - python -m build
+    - TWINE_PASSWORD=${CI_JOB_TOKEN} TWINE_USERNAME=gitlab-ci-token python -m twine upload --repository-url ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/pypi dist/*
+    - TWINE_PASSWORD=${PYPI_TOKEN} TWINE_USERNAME=__token__ python -m twine upload dist/*
+  rules:
+    - if: $CI_COMMIT_TAG
