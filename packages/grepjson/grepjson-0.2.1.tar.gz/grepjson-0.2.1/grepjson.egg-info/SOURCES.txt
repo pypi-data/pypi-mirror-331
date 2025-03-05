@@ -1,0 +1,8 @@
+README.md
+grepjson.py
+setup.py
+grepjson.egg-info/PKG-INFO
+grepjson.egg-info/SOURCES.txt
+grepjson.egg-info/dependency_links.txt
+grepjson.egg-info/entry_points.txt
+grepjson.egg-info/top_level.txt
