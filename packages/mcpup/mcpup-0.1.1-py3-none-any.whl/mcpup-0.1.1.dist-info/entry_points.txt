@@ -1,0 +1,5 @@
+[console_scripts]
+mcpup = mcpup.cli:cli
+
+[gui_scripts]
+
