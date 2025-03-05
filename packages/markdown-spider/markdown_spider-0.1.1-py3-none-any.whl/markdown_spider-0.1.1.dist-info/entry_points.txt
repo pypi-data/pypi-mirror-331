@@ -1,0 +1,3 @@
+[console_scripts]
+markdown-spider=markdown_spider.cli:main
+
