@@ -1,0 +1,32 @@
+Metadata-Version: 2.2
+Name: apklisparser
+Version: 1.0.2
+Summary: Apklis apk parser
+Home-page: https://github.com/ramendoza/apklisparser
+Author: Rafael Mendoza
+Author-email: ralexm14@gmail.com
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pyasn1
+Requires-Dist: cryptography
+Requires-Dist: lxml
+Requires-Dist: Pillow
+Requires-Dist: wand
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Apklis Parser
+
+## Author:
+
+	ralexm14
+
+## LIC:
+
+	DWRFYW
