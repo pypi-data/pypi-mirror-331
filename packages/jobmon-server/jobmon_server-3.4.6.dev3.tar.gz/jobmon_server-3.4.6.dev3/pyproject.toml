@@ -1,0 +1,71 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm[toml]"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jobmon_server"
+description = "Web Service and Model for Jobmon"
+readme="README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    'jobmon_core',
+    'fastapi[standard]>=0.103.2',
+    'fastapi-plugins>=0.12.0',
+    'pymysql', # install MySQLdb/mysqlclient for more performance
+    'sqlalchemy>=2.0.0',
+    'sqlalchemy_utils',
+    'structlog',
+    'scipy',
+    'pandas',
+    'nltk',
+    'scikit-learn',
+    'alembic',
+    'importlib_resources; python_version<="3.12"',
+    'uvicorn',
+    'httpx',
+    'authlib',
+    'itsdangerous',
+]
+dynamic = ["version"]
+
+[project.scripts]
+jobmon_server = "jobmon.server.cli:main"
+
+[project.optional-dependencies]
+otlp = [
+    'jobmon_core[otlp]',
+    'opentelemetry-api',
+    'opentelemetry-sdk',
+    'opentelemetry-exporter-otlp',
+    'opentelemetry-instrumentation-fastapi',
+    'opentelemetry-instrumentation-sqlalchemy',
+]
+mysql = [
+    'mysqlclient',
+]
+
+[tool.setuptools]
+license-files = ["../LICENSE"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools_scm]
+root = ".."
+local_scheme = "no-local-version"
+version_scheme = "release-branch-semver"
+git_describe_command = [
+    'git',
+    'describe',
+    '--dirty',
+    '--tags',
+    '--long',
+    '--match',
+    'server-[0-9]*', # only match on tags prefixed with this subdirectory tags
+]

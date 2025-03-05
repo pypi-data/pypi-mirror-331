@@ -1,0 +1,51 @@
+Metadata-Version: 2.2
+Name: jobmon_server
+Version: 3.4.6.dev3
+Summary: Web Service and Model for Jobmon
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: ../LICENSE
+Requires-Dist: jobmon_core
+Requires-Dist: fastapi[standard]>=0.103.2
+Requires-Dist: fastapi-plugins>=0.12.0
+Requires-Dist: pymysql
+Requires-Dist: sqlalchemy>=2.0.0
+Requires-Dist: sqlalchemy_utils
+Requires-Dist: structlog
+Requires-Dist: scipy
+Requires-Dist: pandas
+Requires-Dist: nltk
+Requires-Dist: scikit-learn
+Requires-Dist: alembic
+Requires-Dist: importlib_resources; python_version <= "3.12"
+Requires-Dist: uvicorn
+Requires-Dist: httpx
+Requires-Dist: authlib
+Requires-Dist: itsdangerous
+Provides-Extra: otlp
+Requires-Dist: jobmon_core[otlp]; extra == "otlp"
+Requires-Dist: opentelemetry-api; extra == "otlp"
+Requires-Dist: opentelemetry-sdk; extra == "otlp"
+Requires-Dist: opentelemetry-exporter-otlp; extra == "otlp"
+Requires-Dist: opentelemetry-instrumentation-fastapi; extra == "otlp"
+Requires-Dist: opentelemetry-instrumentation-sqlalchemy; extra == "otlp"
+Provides-Extra: mysql
+Requires-Dist: mysqlclient; extra == "mysql"
+
+# JobMon Server
+
+## Introduction
+
+JobMon is a Python package developed by IHME's Scientific Computing team,
+designed to simplify and standardize the process of job monitoring and
+workflow management in computational projects.
+It facilitates the tracking of job statuses, manages dependencies,
+and streamlines the execution of complex workflows across various computing environments.
+
+This package contains the code that executes as a central server, typically containerized. 
+
+See also the main documentation at [readthedocs](https://jobmon.readthedocs.io/en/latest/#).
