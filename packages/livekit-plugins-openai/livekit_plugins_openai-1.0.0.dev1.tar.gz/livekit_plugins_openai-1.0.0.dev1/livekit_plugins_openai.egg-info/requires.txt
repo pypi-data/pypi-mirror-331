@@ -1,0 +1,5 @@
+livekit-agents[codecs,images]>=0.12.3
+openai[realtime]>=1.65
+
+[vertex]
+google-auth>=2.0.0
