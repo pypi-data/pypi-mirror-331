@@ -1,0 +1,69 @@
+Metadata-Version: 2.2
+Name: systoring
+Version: 0.1.7
+Summary: Кроссплатформенная библиотека для мониторинга системных событий | For Educational Purposes ONLY!!!
+Home-page: https://github.com/DGaliaf/systoring
+Author: AtlasKunner
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pynput>=1.7.6
+Provides-Extra: windows
+Requires-Dist: pywin32>=306; extra == "windows"
+Provides-Extra: macos
+Requires-Dist: pyobjc-framework-Cocoa>=9.2; extra == "macos"
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# systoring | For Educational Purposes ONLY!!!
+
+systoring - это Python-библиотека для мониторинга системных событий, включая отслеживание клавиатуры и мыши. Библиотека поддерживает Windows и macOS.
+
+## Установка
+
+```bash
+pip install systoring
+```
+
+## Требования
+
+- Python 3.6+
+- Windows или macOS
+- Для Windows: pywin32
+- Для macOS: pyobjc-framework-Cocoa
+- pynput
+
+## Использование
+
+```python
+from systoring import initialize_system_monitoring
+
+# Запуск мониторинга системы
+initialize_system_monitoring()
+```
+
+## Особенности
+
+- Кроссплатформенная поддержка (Windows и macOS)
+- Легкая интеграция
+
+## Лицензия
+
+MIT
+
+# Дополнение
+For Educational Purposes ONLY!!!
+For Educational Purposes ONLY!!!
+For Educational Purposes ONLY!!!
+For Educational Purposes ONLY!!!
