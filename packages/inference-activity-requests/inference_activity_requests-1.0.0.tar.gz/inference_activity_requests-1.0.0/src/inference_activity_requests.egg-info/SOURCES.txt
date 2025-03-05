@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+src/inference_activity_requests/__init__.py
+src/inference_activity_requests.egg-info/PKG-INFO
+src/inference_activity_requests.egg-info/SOURCES.txt
+src/inference_activity_requests.egg-info/dependency_links.txt
+src/inference_activity_requests.egg-info/requires.txt
+src/inference_activity_requests.egg-info/top_level.txt
