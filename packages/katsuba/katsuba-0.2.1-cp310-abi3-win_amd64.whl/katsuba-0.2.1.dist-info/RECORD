@@ -1,0 +1,10 @@
+katsuba-0.2.1.dist-info/METADATA,sha256=pnLYethgqbXiWN_fj_Vp3pr8YwWRO_9g7frLajvTS-0,2677
+katsuba-0.2.1.dist-info/WHEEL,sha256=md9qofgGs0CN4-5nDhVd0IzxxzM8cFGCnkeRThUNGbI,95
+katsuba/op.pyi,sha256=gFYJnJSLbVE_5UtsfS-_l7sso5qLHt2NjYi5qsi5I6g,10153
+katsuba/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+katsuba/utils.pyi,sha256=8wo8QX5k7aok4pxeeKGMIUTFQFU1Wi-aZpQJvSyf9RE,564
+katsuba/wad.pyi,sha256=jqZC7J5-GAD1JKOfDYd5GPF0KZC23ZA3tyXxpP-7e1w,2947
+katsuba/__init__.py,sha256=Ax2faZD3Vzhs5atLbvklNJrRjeSZoVekjnNXlZna-2o,112
+katsuba/__init__.pyi,sha256=NHwk8JJHmR4hPblWWEY2mdejJS-C0U6CAEHnqwI04Kg,428
+katsuba/katsuba.pyd,sha256=n3z4HAfRIxDIF2kHz6t2wdbSO6dhcWPj-PP3Qt_7mLU,1551360
+katsuba-0.2.1.dist-info/RECORD,,
