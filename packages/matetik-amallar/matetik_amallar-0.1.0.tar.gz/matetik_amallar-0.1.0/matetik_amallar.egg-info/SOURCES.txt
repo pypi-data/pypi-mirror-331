@@ -1,0 +1,5 @@
+setup.py
+matetik_amallar.egg-info/PKG-INFO
+matetik_amallar.egg-info/SOURCES.txt
+matetik_amallar.egg-info/dependency_links.txt
+matetik_amallar.egg-info/top_level.txt
