@@ -1,0 +1,25 @@
+[project]
+name = "theglam"
+version = "1.1.0"
+description = "The Glycopeptide Analysis Module"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "glycowork[draw]>=1.5.0",
+    "pyteomics>=4.7.5",
+]
+
+[dependency-groups]
+dev = [
+    "mypy>=1.13.0",
+    "pdoc3>=0.11.1",
+    "pytest>=8.3.3",
+    "pytest-regtest>=2.3.3",
+    "ruff>=0.7.3",
+]
+
+[tool.mypy]
+mypy_path = "stubs"
+
+[tool.pytest.ini_options]
+pythonpath = "src"
