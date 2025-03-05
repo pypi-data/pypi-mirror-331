@@ -1,0 +1,4 @@
+Name: nlohmann_json
+Description: JSON for Modern C++
+Version: 3.11.3
+Cflags: -I/var/folders/t8/r_s4tkhn46g6y0d15z25l36c0000gn/T/tmpfhljjdu0/wheel/platlib/mqt/core/include
