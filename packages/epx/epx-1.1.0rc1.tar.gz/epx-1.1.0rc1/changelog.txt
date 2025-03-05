@@ -1,0 +1,39 @@
+## New Features
+feat: add attribute for epx (#88) * feat: add attribute for epx  * fix: fix unit test  * fix: fix request changes  * fix: fix unit test  ---------  Co-authored-by: khanhnd <khanhnd@nexlesoft.com> (fe2e7b6)
+feat: add logic retry execute all (#81) * feat: add logic retry execute all  * fix: add retry execute strategy  ---------  Co-authored-by: khanhnd <khanhnd@nexlesoft.com> (e31afb4)
+feat: add status heartbeat message (#87) (73d5b97)
+feat: add visualize param to Job config (#59) Co-authored-by: Jessica Chappell <jessica.chappell@epistemix.com> (197ce72)
+## Patched Changes
+BREAKING CHANGE: updates documentation for release 1.0.0 and adds documentation to README.md (#56) (f8fa525)
+Ci/publish to test pypi (#70) * ci: publish release candidates to test pypi  * ci: publish release candidates to pypi (cd1a6af)
+PLAT-1516-as-calibration-uses-new-epx-client (#57) * fix: additional fixes and logging updates  * fix: final clean up (5ca3ca5)
+PLAT-1557: add tests for post method (#83) * fix: add test cases for post method of retry_request func  * fix: lint (2516341)
+Refactor the exp-client (#85) * refactor: create a base class and split out classes into different files  * fix: blank lines  * fix: refactor imports  * fix: string qoutes  * fix: refactor comments  * fix: refactor name conventions  * fix: string quotes (cd2008e)
+ci: disable major version bump (48d7e65)
+ci: disable major version bump (4ef27f9)
+ci: fix release.yml (2e3a911)
+ci: fix release.yml (cd39988)
+ci: fix whitespace in release.yml (06cd9d5)
+ci: fix whitespace in release.yml (1968bf7)
+ci: fix whitespace in release.yml (b471f07)
+ci: publish release candidates to test pypi (#68) (22718ea)
+ci: update release flow to rebuild wheel to update version (#77) (9c4b1f1)
+ci: update release workflow (013d530)
+docs: whitespace (ce17251)
+fix: apply retry mechanism to fix connection reset by peer when getting status of job (#75) * fix: apply retry mechanism to fix connection reset by peer  * fix: make a retry_request func  * fix: reading max_retries and backoff_factor from the config.json  ---------  Co-authored-by: tuanph <tuannph@epistemix.com> Co-authored-by: rfuchs-epix <richard.fuchs@epistemix.com> (6d3de5f)
+fix: handle conflicts job key directory (#91) * fix: handle conflicts job key directory * fix: lint (60e3629)
+fix: job status is providing incorrect status (#84) (c132221)
+fix: read from cache dir (#52) * fix: read from cache dir  * fix: improve code  * fix: improve read from cache  * fix: improve read from cache  ---------  Co-authored-by: khanhnd <khanhnd@nexlesoft.com> Co-authored-by: Jessica Chappell <jessica.chappell@epistemix.com> (46f7739)
+fix: remove check job status when downloading job results (#51) * fix: remove check job status when downloading job results  * fix: download results for a job that has already run  * fix: add download func to JobResults class  * fix: updates job results url & bumps version for 1.0.0 release candidate  ---------  Co-authored-by: jessicuzwhynot <jessica.chappell@epistemix.com> (27e0aac)
+fix: status logs, reading from wrong directory (#65) (a8553ea)
+fix: throw validation error in case invalid job config instead of runtime error (#73) (d64f419)
+fix: unterminated triple quoted string (02bedeb)
+fix: update document api for epx client (#86) Co-authored-by: khanhnd <khanhnd@nexlesoft.com> (9c62937)
+fix: update endpoint for getting job detail by key (#74) * fix: update endpoint for getting job detail by key  * fix: rename function to avoid confusion  * fix: add test for not found job (7ea1312)
+fix: update upload_to_s3 for job to include subdirectores in the zip file when using ref_files (#55) (8de7371)
+fix: updated logic to correctly handle Jobs with runs that are DONE and NOT STARTED (#72) PLAT-1524 (77542df)
+refactor: add retry errored runs (#76) * refactor: add retry errored runs  * fix: comments  * fix: conflicts (a888417)
+refactor: apply retry_request to run status (#82) (9a911cf)
+
+---
+**Full Changelog**: https://github.com/Epistemix-Inc/epx-client/compare/1.0.0...81bd5b478bddf78dd7cdb2fc1ce1b4947889d677

@@ -1,0 +1,4 @@
+feat: add attribute for epx (#88) * feat: add attribute for epx  * fix: fix unit test  * fix: fix request changes  * fix: fix unit test  ---------  Co-authored-by: khanhnd <khanhnd@nexlesoft.com> (fe2e7b6)
+feat: add logic retry execute all (#81) * feat: add logic retry execute all  * fix: add retry execute strategy  ---------  Co-authored-by: khanhnd <khanhnd@nexlesoft.com> (e31afb4)
+feat: add status heartbeat message (#87) (73d5b97)
+feat: add visualize param to Job config (#59) Co-authored-by: Jessica Chappell <jessica.chappell@epistemix.com> (197ce72)
