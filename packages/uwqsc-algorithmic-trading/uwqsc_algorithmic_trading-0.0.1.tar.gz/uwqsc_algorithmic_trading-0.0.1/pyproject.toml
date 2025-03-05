@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "uwqsc_algorithmic_trading"
+version = "0.0.1"
+authors = [
+    { name="Sargun Singh Bhatti", email="sargunbhatti27@gmail.com" },
+]
+description = "The University of Waterloo quantitative analytics stocks club algorithmic trading repository."
+readme = "README.md"
+requires-python = "==3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: MIT License",
+]
+
+[project.urls]
+Homepage = "https://github.com/UWQSC/algorithmic-trading"
