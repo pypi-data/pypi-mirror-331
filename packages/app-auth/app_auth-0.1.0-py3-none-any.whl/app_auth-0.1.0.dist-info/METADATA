@@ -1,0 +1,21 @@
+Metadata-Version: 2.3
+Name: app-auth
+Version: 0.1.0
+Summary: Аутентификационный модуль для проекта
+Author: Elberd
+Author-email: mail@example.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: django (>=5.1.6,<6.0.0)
+Requires-Dist: django-cors-headers (>=4.6.0,<5.0.0)
+Requires-Dist: django-environ (>=0.11.2,<0.12.0)
+Requires-Dist: django-filter (>=24.3,<25.0)
+Requires-Dist: djangorestframework (>=3.15.2,<4.0.0)
+Requires-Dist: djangorestframework-gis (>=1.1,<2.0)
+Requires-Dist: mozilla-django-oidc (>=4.0.1,<5.0.0)
+Requires-Dist: psycopg2-binary (>=2.9.10,<3.0.0)
+Requires-Dist: ruff (>=0.9.3,<0.10.0)

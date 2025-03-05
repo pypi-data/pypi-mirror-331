@@ -1,0 +1,15 @@
+app_auth/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+app_auth/admin.py,sha256=O0KfmJ1FARitcUEcBNM-Gw5PqN8WKjfq2Wg_NPbz3-Q,2013
+app_auth/apps.py,sha256=DYvhAJcxSaQpuLaz4tkFj8iEo-q7NLm-GSLGiFP15Vo,193
+app_auth/auth_settings.py,sha256=a5NQ7KBncwiZSOr0K_dB-FbL1yckKVSpfOcp6lttzOA,2272
+app_auth/migrations/.gitkeep,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+app_auth/models.py,sha256=5sOSNCbhCXs_TBkjapkU8dAXtu30gRs_aLDxSpc7iC0,965
+app_auth/oidc_backend.py,sha256=r6NEPZEouyKCbB2UbF67-4DMvRapXBmD7LBqA_p3otA,3224
+app_auth/templates/base.html,sha256=CzsvW26wQalkM3QKHpd0sfoUjywM1NR5j7DrKu2NFYg,280
+app_auth/tests.py,sha256=mrbGGRNg5jwbTJtWWa7zSKdDyeB4vmgZCRc2nk6VY-g,60
+app_auth/urls.py,sha256=NgeaY3qSfI6WlRSMjVd6Sts6Grt-1jO6chdPo3fKnOo,390
+app_auth/user_serializers.py,sha256=xjSb8WuygwPR2O7PEdlj9o83Rk-Azv4CQ1SJnxW29mU,1915
+app_auth/views.py,sha256=Fyryw-TRxt2gITiTOBwVLoz9uMFKhchnPORVg-ky7Y8,2366
+app_auth-0.1.0.dist-info/METADATA,sha256=s0oM7ivgndDgSG-p30JurWYc7Crb6HsfB2XRZisEo8k,888
+app_auth-0.1.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+app_auth-0.1.0.dist-info/RECORD,,
