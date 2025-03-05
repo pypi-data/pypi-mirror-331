@@ -1,0 +1,6 @@
+build
+dist
+docs
+simim
+simim_dev
+tests
