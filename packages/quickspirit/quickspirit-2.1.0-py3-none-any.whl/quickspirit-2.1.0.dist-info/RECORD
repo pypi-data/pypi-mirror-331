@@ -1,0 +1,9 @@
+quickspirit/__init__.py,sha256=JYvqruAR5WC_fAEPSLwJZbFcyg8VbTP9HpwPwhqBcsM,301
+quickspirit/http_async_client.py,sha256=5Y2JhT2LOi226aW5j33WY2LXcDtEZIwsdwfVeRp_40E,6799
+quickspirit/http_async_downloader.py,sha256=poOvyS8YjMo_E17LiI-klYStrLgRezSq7P0Y5MoQ7Tg,1073
+quickspirit/http_errors.py,sha256=_Hsj_OAfllFjZkW5NjN9c4Qw8zsSg5M4eOnNyepOKCU,272
+quickspirit/models.py,sha256=zresHK7qd4ns51bbTIjz6MOvafixAqmMwujIeF89oOI,198
+quickspirit-2.1.0.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+quickspirit-2.1.0.dist-info/METADATA,sha256=AamSJn0xSvmcXFV2WLJvb8IkDCYRNe-bYGltbhHavUM,3106
+quickspirit-2.1.0.dist-info/WHEEL,sha256=RaoafKOydTQ7I_I3JTrPCg6kUmTgtm4BornzOqyEfJ8,88
+quickspirit-2.1.0.dist-info/RECORD,,
