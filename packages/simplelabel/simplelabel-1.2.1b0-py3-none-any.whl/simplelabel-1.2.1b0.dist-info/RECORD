@@ -1,0 +1,14 @@
+simplelabel/README.md,sha256=oQBG5vw2VsvTou7O4JPm33TalFGaqjpuvQrMB3uCrQ4,2271
+simplelabel/__init__.py,sha256=XxjIdyyE59_bBAddSV25M_wydNyWdImylXNbzz4zsLk,374
+simplelabel/__main__.py,sha256=SiuUd2w6VqVtsxAALm7t5DErJJoKioHASrmqg8HnD_c,2274
+simplelabel/core/__init__.py,sha256=qGV5awvKLDz0OP_Z9RJdA9Xn1LGL7cHCo3zKY7THSf8,158
+simplelabel/core/mapper.py,sha256=nflq2LooXOcwqSnyqS_j-oVtqV7rYrWTZIgLaGMSOJk,3018
+simplelabel/core/parser.py,sha256=hEtFaM9Spln2lN9GTc6qGP2-RQWD1TXgpvMBf3NIgLE,6649
+simplelabel/core/rule.py,sha256=XPrLP-mD9xeogOCq-hoF_2qhHAcSunYcD0cbm58xSrQ,864
+simplelabel/utils/__init__.py,sha256=lNvaimFIUEKh9oc_h4gahoz3Z0OVRY6bFtlzKKghjic,114
+simplelabel/utils/generator.py,sha256=LmYhKzPGSvV7ucyXmwaS68N9YAjh9gHxvyBZEcREGbc,6261
+simplelabel/utils/label.py,sha256=gYpQd-HN487mZ5RQGzduIGAGaJqOOu1qgZwW0Bw2zOU,6471
+simplelabel-1.2.1b0.dist-info/METADATA,sha256=J6mv7arh0cLRJoEw0xs0N_72YZTgbqymS3aS6ckIvz4,992
+simplelabel-1.2.1b0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+simplelabel-1.2.1b0.dist-info/entry_points.txt,sha256=Bno4MFPualj9jAsJTHgKHeOy_9KrodnEN_oxHFiyj2A,58
+simplelabel-1.2.1b0.dist-info/RECORD,,
