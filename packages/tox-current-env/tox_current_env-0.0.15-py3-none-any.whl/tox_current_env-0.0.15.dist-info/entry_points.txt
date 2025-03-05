@@ -1,0 +1,2 @@
+[tox]
+current-env = tox_current_env.hooks
