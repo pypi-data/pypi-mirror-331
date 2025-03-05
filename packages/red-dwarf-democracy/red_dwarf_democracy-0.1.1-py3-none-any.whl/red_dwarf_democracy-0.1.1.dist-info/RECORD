@@ -1,0 +1,15 @@
+reddwarf/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+reddwarf/agora.py,sha256=SWj9PQTKt5OHXryH_vgrtspxp2EUBmrnmsYNy6k1C7Y,3109
+reddwarf/data_loader.py,sha256=xhvluGydS-8c1bZWObv0ntlslyO6UW__fTFhA1mw39Q,10729
+reddwarf/data_presenter.py,sha256=v_gWe-3v-nRGEB_bzKdbk6PsKOuYjiecVSRsL8Uee-A,3615
+reddwarf/exceptions.py,sha256=UjRv-qGbA7ZybHWbzJA-5ZYh9cghQ2zl_0yu_rFK0-s,83
+reddwarf/helpers.py,sha256=WlH036taxI07-hkvwb8dY_PLDA96eIjidZjeoU2TYro,1498
+reddwarf/models.py,sha256=KQltWbRjkLh1OxnJ252Hv__vBqB31jm5bzDHe9QUSow,2544
+reddwarf/polis.py,sha256=poDPv4zoh-ckWIJsuuVWwAEF7rpcJx8UEtchVCXvTH4,10570
+reddwarf/utils.py,sha256=4cL7kQrxU5-R88xQvGtR6EyMNiYf4ylmKMJcvSN3m8Q,14721
+reddwarf/types/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+reddwarf/types/agora.py,sha256=koVZCIrZ1lj79aLv_Oz4ykx-bPfWKiuK92HbM-_quas,2067
+red_dwarf_democracy-0.1.1.dist-info/METADATA,sha256=RVxiY25lWKOqs0rQxhEwTxYGSICbZd2ykp47FsGa72M,6708
+red_dwarf_democracy-0.1.1.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+red_dwarf_democracy-0.1.1.dist-info/top_level.txt,sha256=jUhi1o_2lIpo_oicPkTkrjAaP1S3scS99f_qlp7ygQM,9
+red_dwarf_democracy-0.1.1.dist-info/RECORD,,
