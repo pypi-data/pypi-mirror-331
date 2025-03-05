@@ -1,0 +1,50 @@
+Metadata-Version: 2.3
+Name: basic-data-structure
+Version: 0.0.7
+Summary: Implementation of basic sata structures in Python
+License: MIT
+Keywords: data structure,data structures,python data structures,basic data structures
+Author: Mikhail Shagov
+Author-email: mishaga@me.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Project-URL: Documentation, https://mishaga.github.io/basic-data-structure/
+Project-URL: Issues, https://github.com/mishaga/basic-data-structure/issues
+Project-URL: Repository, https://github.com/mishaga/basic-data-structure
+Description-Content-Type: text/markdown
+
+# Basic Data Structure
+
+Implementation of basic sata structures in Python
+
+Including:
+1. Stack
+2. Linked list
+3. Binary tree
+
+Expected data structures in future versions:
+1. Queue
+2. Double-ended queue
+3. Actual binary tree class (now package contains `TreeNode` class only)
+4. Red-black tree
+
+Supported python versions: `3.9` → `3.13`
+
+Links:
+
+* [GitHub](https://github.com/mishaga/basic-data-structure)
+* [PyPi](https://pypi.org/project/basic-data-structure/)
+* [Documentation](https://mishaga.github.io/basic-data-structure/)
+
+Install:
+
+```bash
+pip install basic-data-structure
+```
+
