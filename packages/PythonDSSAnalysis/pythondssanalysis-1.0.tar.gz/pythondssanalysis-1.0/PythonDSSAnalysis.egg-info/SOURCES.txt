@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+PythonDSSAnalysis.egg-info/PKG-INFO
+PythonDSSAnalysis.egg-info/SOURCES.txt
+PythonDSSAnalysis.egg-info/dependency_links.txt
+PythonDSSAnalysis.egg-info/requires.txt
+PythonDSSAnalysis.egg-info/top_level.txt
+src/PythonDSSAnalysis/DSSHandler.py
+src/PythonDSSAnalysis/__init__.py
+src/PythonDSSAnalysis/sampleRun.py
+tests/test.py
