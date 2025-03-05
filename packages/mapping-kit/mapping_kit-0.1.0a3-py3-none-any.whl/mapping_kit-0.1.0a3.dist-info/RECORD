@@ -1,0 +1,12 @@
+mapping_kit-0.1.0a3.dist-info/METADATA,sha256=WgR3acwXA-RdqX-60uAFqyziXReYRpXZhyA-KBBz3SU,6001
+mapping_kit-0.1.0a3.dist-info/WHEEL,sha256=thaaA2w1JzcGC48WYufAs8nrYZjJm8LqNfnXFOFyCC4,90
+mapping_kit-0.1.0a3.dist-info/entry_points.txt,sha256=6OYgBcLyFCUgeqLgnvMyOJxPCWzgy7se4rLPKtNonMs,34
+mapping_kit-0.1.0a3.dist-info/licenses/LICENSE,sha256=lkDJ2S0r25IJgsMinNoUrOmA-T90o_dMlgb_BMaYSb0,1066
+mapping_kit/__init__.py,sha256=aCOjBIlMGr8PiSJ2mMDCKe2-bX8rm4siE46MyUwKq2g,312
+mapping_kit/attribute_dict.py,sha256=jRKdRXPwi7n_BSdLtJUnCX6koGzbFOEM1C3wiyNN_XI,1328
+mapping_kit/caseinsensitive_dict.py,sha256=x9oqeOswZ7BL64zt6Gi59XGP-M_4fVACUsMONz-rEJ0,3370
+mapping_kit/group_dict.py,sha256=4Q4ep3MtUTCSP02NL9EUI7kCMaXO8Ycz5cGqXINjxxM,17236
+mapping_kit/super_dict.py,sha256=LNJlU647H2Bgd4VXOdso1sNvA3oJk1IGkYBh3ekPFZ0,10869
+mapping_kit/utils.py,sha256=Il9Rtx54FKdxIvG6LEPTsIgEn0tobjQtruzbsG4kKgY,799
+mapping_kit/version.py,sha256=gvXOZZsUyTl42DtjZ1J026o5XMOnuNuUa4hkzNhmGaA,25
+mapping_kit-0.1.0a3.dist-info/RECORD,,
