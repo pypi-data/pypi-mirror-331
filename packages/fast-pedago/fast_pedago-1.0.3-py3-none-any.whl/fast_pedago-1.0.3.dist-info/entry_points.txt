@@ -1,0 +1,3 @@
+[console_scripts]
+fast-pedago=fast_pedago.app:main
+
