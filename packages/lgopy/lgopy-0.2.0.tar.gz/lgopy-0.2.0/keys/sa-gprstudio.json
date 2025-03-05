@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "gpr-studio",
+  "private_key_id": "6146e5859656400c1d069184331550d18ed0a180",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDGKcernUrp58PA\nSJYnETjgIqs0w/MLCLzN4e04cWmlaeHO9lfzFMu/2kSxYCxh4HEmgI7nXZ2IY/fH\nYJ7yn6EV3b/ERjxTQ3kn+1qrt26xrGLwjlry4Wbb4HTaxF4PBzlMnU1IRcNpOBBE\n5YzYEL8jUYBIj8j3ZKJtYmcrOd96gJ1l1XDO223cktAI6zCapBRGOvWezn2TfTue\nlNcVzcIatIFHgFB5AJEfzqFM55VG8vptR/tKXsqoxMJPPY78iihwksSyt4B5vX/G\np2mGXZLaHn3BmD1VomS1B76ek5TDi7oJxmpZIY8MFivJs7rUC+9EWCxWUCyZ5Li7\n0F40h0OjAgMBAAECggEAIGKama7im9h/MtEKDQdxApxX2488jKyYYpNON/+88sYb\nm73BwN3AsLGEsXJUvog2JcMz15cClFQ2HdTqFR/GbTLo0LRjzn3D8qdO+apIQmw4\nXTT+oxv4Oe30Wv5lmtIk6KL6itmv5mW9ruzO+E7AVg7PRsyM3PWK4BKJZtSV88iA\njH7z3ff5mO1ORRnl+XIVq1FS/z7Ogq0ZImRp04arrB1MmKrIeR24WabNzgCYbjBu\n4iTGkNHcM0j3EME+mkl/0Ma0UoxzyVy3b2vPMaNu7aWWZWJaTQcoBM4CcTYeud4Z\n5woEwVo7NbBo8+1kFbt8lnvVeY6gF5hF43349ATJkQKBgQDm001X1GlG8OFLHZ0z\nhjeBXZbwHX6saLn8ni0EKCZWuMfTLg8p9In2Nm/1/y6pjECwhlN2/GdqGcevR3sE\ni60HxC1z5Q8mjK056FFuSK+929xRUjVxWC76r5e5sS0S0SEexW1pww3HbvxpatpD\nEGrRc1DQf4Mf4G4XH76mF3DxswKBgQDbxoq31NcZgI5X0ZghToEH8jap0PULP6+j\no+eP0EddjGwt197O97aLDktbiTpsGVOr+CYPaR7ZuaMoz8AqfIaBUE0+gy9gWRyK\nFLThc8D2uohM5Pb7wraWxzuGaPJ9Z+jlpV3rRNjunIAOM+nmZw5aFedRxF7Mlzoy\nL2cxeaEOUQKBgQCeLelPqflnKwVJA4dJ2s1IsskPzTaUkcP6kK7KrXTwcvpFBshP\neQveFRoOmwvwFnPyRGsIHBoGRJppzHNJ/ynZK5/2Tt9eDINdLo43JEqCshs+Azcq\ncELpedFg6EC6J2QqASNkmc1kgPMqjpX55VM+K2cTKn7CJntrD08H5QJ6LwKBgHsx\nT5C8PdaNuTyAwEXrO2i43OtTtggYKtwPhD2ZAmftzrXjy4E4WZqY6KTmx1jQ2ZYM\nA0mgIyroZAz8Zztpkfvqh2IDJwta6CR+duXpfMDQzpZLwiZdfvwFsdgl+8dP97zC\ndWLrtK4MC7vqXbJJEkJtBL1Q1dLY8kYvTCjvhNgBAoGAA9LGeEtxpdJZWuP7iu6V\nmQLMo76gzavYTasW8g5aMWMreefqklPzrhOddByxiCLVl75GuviX3cdTNlGR6gAc\nPGw/ac9hfXlW853oF8bDCYoikSif00NVHY3ikpK97Ir4QuX+koIXzKzL9J4WqGfQ\nmSlwYzx3ylFcePxa5QWuJ54=\n-----END PRIVATE KEY-----\n",
+  "client_email": "sa-gprstudio@gpr-studio.iam.gserviceaccount.com",
+  "client_id": "115610915125803807575",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/sa-gprstudio%40gpr-studio.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

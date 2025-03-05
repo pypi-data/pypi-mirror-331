@@ -1,0 +1,45 @@
+steps:
+  - name: 'docker'
+    args: [ 'build',
+            "--build-arg",
+            "SA_KEY_BASE64=$_SA_KEY_BASE64",
+            "--progress",
+            "plain",
+            "--file",
+            "Dockerfile",
+            '--tag',
+             "${_LOCATION}-docker.pkg.dev/$PROJECT_ID/${_DOCKER_REPOSITORY}/${_IMAGE}:latest", '.' ]
+  - name: 'gcr.io/cloud-builders/docker'
+    args: [
+      'push',
+      "${_LOCATION}-docker.pkg.dev/$PROJECT_ID/${_DOCKER_REPOSITORY}/${_IMAGE}:latest",
+    ]
+  - name: '${_LOCATION}-docker.pkg.dev/$PROJECT_ID/${_DOCKER_REPOSITORY}/${_IMAGE}:latest'
+    args: [ 'uv', 'build' ]
+  - name: python
+    entrypoint: pip
+    args: [ "install", "-r", "requirements.txt", "--user" ]
+  - name: python
+    entrypoint: python
+    args:
+      - '-m'
+      - 'twine'
+      - 'upload'
+      - '--skip-existing'
+      - '--verbose'
+      - '--repository-url'
+      - 'https://${_LOCATION}-python.pkg.dev/$PROJECT_ID/${_PY_REPOSITORY}/'
+      - 'dist/*'
+artifacts:
+  objects:
+    location: 'gs://${_BUCKET_NAME}'
+    paths: [ 'dist/*' ]
+images:
+  - "${_LOCATION}-docker.pkg.dev/$PROJECT_ID/${_DOCKER_REPOSITORY}/${_IMAGE}:latest"
+substitutions:
+  # the gprlib bucket must be created before running this build
+  _IMAGE: lgopy
+  _BUCKET_NAME: gpr-studio_lib
+  _LOCATION: us-central1
+  _PY_REPOSITORY: gprstudio-py-repo
+  _DOCKER_REPOSITORY: gprstudio-docker-repo

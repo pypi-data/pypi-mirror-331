@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "gpr-studio",
+  "private_key_id": "bf043f9293d6f5bc595c2b519684fd21b299bcf4",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCEwUDElwX6zmx8\nBO+Pf8PdkVIMndtLuMyypto8zKTIt51aVdstxkhMlj8V9iYjPV1fP81Ff8bg+1Br\nUPhG96rc9DGBZOQ8+K0ZxtKGJ3dDjWRb/ZyiG8h7yMlEkDirnm5mxqaIbWePUpf+\n9Rn4BDH9rpHPnkZ4j+gKzRBGC8gc5HqId517ahHKS/BYDUakAJb5bXke1LZDXxdq\naA0imSUuj43pLDhB8R8UFhYl+5TC5fhPp1334OJn9Gnc8cUW0qEWXLwHGEpdKo/I\ncq1KKOogefNR44cf+CUh1iI8juOgHog/kIItxTLLNvfgj0eW9CIKLLbICx3gPV7G\nROk9bxO9AgMBAAECggEADZOD2kxFi3ImdwJm4LUkudkoMRZy/EnwU8mAzQdH8ieQ\n8Hw87MVNKdk9p13OZaaGENJsstGlQZHXQLpS7FMHXA70Vx1obUcoe1fcD2XO1Q+L\nIWXiFFP6C0ABO+vx17SH6XvMQRcgfZrpOg96ceTf8JJfOAJ2230qska+sM3N+mJK\nOZXvO19guw9d/dU5osVbPJrA098fSU+OMQVknJx1OLZIt8WqKMzqz88EIYNUL/+K\neKeV1lRSYgEaMc2/ID8jRWnYFiOiQC9o0owc5C+Hrwn1BE8TqxVXjTm+lvIip2uy\nRVdkCIOs0OAr5G7bnHOLrj8t/BW0Rg8t19ZClBw2QwKBgQC4oBTcv6rZBg3smbc1\nB9Q072iBGUy2yTK15drQtXbYutQU8Mnmdflm9TsZV5H/8bLmqrnPJLwA8rMkN/41\nND5S43I1UZNI0m3/cWW374c1UR0Gr+po+yVDH7w/DXohQ4MyM7OH4h/lHDOZw+UL\nCkBl+apobiMZroqZzqun6ifrywKBgQC4E66PnRImJEirZLs/FVBvFBJlxLapbEAY\nvnRbzf3VaYiajJ3oqXQ/o8rj1Lqon1M5qrTKrP4Ic18FBO9zxctiYKIPllR5nrAs\n06nDoTczNnGhkpUqGyJYgRSuP7am1sWHmT+EWrgTw08LQNCcFIrVcPrYf4q2vy/M\nBs2mwucdlwKBgHDO/3BSfKXWmTN0SQlSG0us7QHU35bgIOgb5jOYbWHH5kZVSkhS\n1W0fcljttPvaRyHCN35mR6mcofEDdYQ0w9AJwYLqsT/Rs/xc4XYeGVNumHm5i1VR\n/1agUXmFVpZ0lflatdvVQv/O14igtZalUOv+PS1J/pB2oaGRMjmLTZE5AoGAH8It\njNORrQj3jLKNZ73aqb9xySMeTK7DhEFfu/MXRzm0+s0l9V0/FDfDKnmqVqteZYWh\nOZKNJZIaI7iNQ5EtnOSFMWFDY9RQGvvNv1XSO0C6bCDpIWGbFF/43HNbpP9LBzEW\nd1Rbi/VXbt6Y30TgCyE59h5TJWJo8a9+zbW0wDMCgYBdzCo6Lwfuj3ku4pEwj2Ew\nQx2BX9IILfLeYQiXqgzjuJhoVFCKbhsjEzL+OPyc5uWXaLF81tgQxu3bktgXcfMi\nuOfg1NUFu1+6Voc7FSqWjJ7tQBfBXpph5PqUeEQ/h5rphqdJiRDm0X+iMLUaUcWt\nRffJStIqZhPrTKpg102K6g==\n-----END PRIVATE KEY-----\n",
+  "client_email": "sa-vertex-pipelines@gpr-studio.iam.gserviceaccount.com",
+  "client_id": "117760046179034147665",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/sa-vertex-pipelines%40gpr-studio.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

@@ -1,0 +1,1 @@
+uv run ray stop && uv run ray start --head --include-dashboard=true
