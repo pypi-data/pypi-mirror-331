@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: kontik1337
+Version: 1.0.1
+Summary: A Discord Selfbot for Clone Discord Server
+Home-page: https://github.com/kontik_dev/
+Author: Kontik-1337
+Author-email: kontik1337@proton.me
+License: MIT
+Keywords: discord selfbot clone kontik1337
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+Requires-Dist: discord.py==1.7.3
+Requires-Dist: requests
+Requires-Dist: colorama
+Requires-Dist: psutil
+Requires-Dist: pyperclip
+
