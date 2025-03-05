@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+[project]
+name = 'prepmagma'
+version='0.1'
+description='prepare data for running magma from unorganized gwas data'
+authors = [
+  { name="brainfo", email="scilavisher@gmail.com" },
+]
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+[tool.hatch.build.targets.wheel]
+packages = ["prepmagma"]
+[project.urls]
+Homepage = "https://github.com/brainfo/cleanmagma"
+Issues = "https://github.com/brainfo/cleanmagma/issues"
