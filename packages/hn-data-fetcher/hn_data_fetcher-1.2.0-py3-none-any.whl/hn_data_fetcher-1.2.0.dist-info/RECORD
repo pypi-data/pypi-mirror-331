@@ -1,0 +1,9 @@
+hn_data_fetcher/__init__.py,sha256=l3dglxcIFfvyazq2XdvDChNrjoLT4MpbzoCX6wmyYXU,286
+hn_data_fetcher/delete_from_tigris.py,sha256=sVQ555CnKjNuOpPoBIE0Z0IK8kxmXMRDCI3zonc1-BM,5793
+hn_data_fetcher/hn_data_fetcher.py,sha256=byN_r82n0lM6vHfSvVmItgCXz5z5gWTQlOR9lU4VMmc,9765
+hn_data_fetcher/hn_to_hive.py,sha256=0MspNP0ppAQSlDDWWZ-dYGxekqSi9KVtvLGW3VE3UWI,5667
+hn_data_fetcher/upload_to_tigris.py,sha256=SfdwvBYwwiE9_1WAusWKXHCq8J3vbuZUJrOP-rVEZkA,6047
+hn_data_fetcher-1.2.0.dist-info/METADATA,sha256=DvS--7eadXg5thjPab5Xy9bygaoj8lJohLGey8RtPTE,4078
+hn_data_fetcher-1.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+hn_data_fetcher-1.2.0.dist-info/entry_points.txt,sha256=2H7-O0VkYFQUeyLwCHZadVp7rx_xKXDiGyrnr1o0IWI,205
+hn_data_fetcher-1.2.0.dist-info/RECORD,,

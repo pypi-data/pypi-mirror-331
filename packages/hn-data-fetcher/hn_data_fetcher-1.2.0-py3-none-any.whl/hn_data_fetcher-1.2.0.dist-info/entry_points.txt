@@ -1,0 +1,5 @@
+[console_scripts]
+delete-from-tigris = hn_data_fetcher:delete_from_tigris
+hn-data-fetcher = hn_data_fetcher:main
+hn-to-hive = hn_data_fetcher:hn_to_hive
+upload-to-tigris = hn_data_fetcher:upload_to_tigris
