@@ -1,0 +1,16 @@
+irispy2/__init__.py,sha256=qGNrbrycQAw-WRqx-icfH2oss7P4DZsqA0ObQyY-tsA,145
+irispy2/bot/__init__.py,sha256=WAEbWBxprOqoM3ON-_hFskesyZs86D0rZ6Bj34-eLVY,2249
+irispy2/bot/_internal/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+irispy2/bot/_internal/emitter.py,sha256=p9wujxipC70C3g_gxGcBt1QRoF7TtJuFjOft1Q_T72c,1061
+irispy2/bot/_internal/iris.py,sha256=fXgDtrqZliTPCoFnBHqcT9mcLRUOW2teReJDu0Fyqb4,2260
+irispy2/bot/models.py,sha256=E8DCRwSsRuA0_HCeTWJUjuTxX2qL28EGG8cyJ8jWIdE,1564
+irispy2/cli.py,sha256=y6zNd6yXBfEiNYeyqs45gtjA8d4gVD1a_PAq9Lf6Nmo,10232
+irispy2/compat/pykakaodb/__init__.py,sha256=g1vuV3_AjG0s9_ypdhNJqkTDa9bfToG5fvS6TRkcPU0,92
+irispy2/compat/pykakaodb/context.py,sha256=Y2yDF7ZwpZFjE93bKEgsyQeK1mHusknO1LaONnJ72Ig,888
+irispy2/compat/pykakaodb/kakaodb.py,sha256=9caVyVuqFo7kgsfSmT5T_X3J_K6ShXGQeOObE-liwmw,3930
+irispy2/compat/pykakaodb/legacy_bot.py,sha256=ghWLGbBAiivWFfuZGfWVEmOH-NiFCfzB2azoCtb5m3M,2002
+irispy2/compat/pykakaodb/replier.py,sha256=wBBnjXBBHWFFKM8u63n_-AGEkzkWIYoqgcP1Z3hGkf8,885
+irispy2-3.2.0.dist-info/METADATA,sha256=TxiZyXUaFTa14mdkxvdnBTCqbyLBj0ilnh9dCJcw7Wc,831
+irispy2-3.2.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+irispy2-3.2.0.dist-info/entry_points.txt,sha256=uX57x88wdcUMpyMQoyZki7uhybyf2aTNdK3hoeupwkI,46
+irispy2-3.2.0.dist-info/RECORD,,
