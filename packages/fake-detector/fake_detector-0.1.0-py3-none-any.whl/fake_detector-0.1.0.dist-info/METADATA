@@ -1,0 +1,23 @@
+Metadata-Version: 2.2
+Name: fake_detector
+Version: 0.1.0
+Summary: A simple Fake News and Fake Product detection API
+Home-page: https://github.com/yourusername/fake_detector
+Author: Nexora Innovexa LTD
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7, <3.13
+Description-Content-Type: text/markdown
+Requires-Dist: transformers
+Requires-Dist: torch
+Requires-Dist: flask
+Requires-Dist: flask-cors
+Requires-Dist: requests
+Dynamic: author
+Dynamic: classifier
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary

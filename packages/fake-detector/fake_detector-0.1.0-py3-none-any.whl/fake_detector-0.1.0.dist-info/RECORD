@@ -1,0 +1,8 @@
+fake_detector/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fake_detector/api.py,sha256=SCrQ0wd2DGbWBnaevLkwrHwVHiYqsf00OC8fZtGGy64,659
+fake_detector/detector.py,sha256=habNt5SlXjwSLtW1PPSoj_ezjTHqnzhLkO2Q3kuptWI,620
+fake_detector-0.1.0.dist-info/METADATA,sha256=Xp6s1FUOZcpfxCf90pLpjY9w-ZMmr11tLA29o22NXwI,714
+fake_detector-0.1.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+fake_detector-0.1.0.dist-info/entry_points.txt,sha256=OAO-5S5nbsiS0uVQJO9g0qtOX7Ov5EVUZnYXFrW874I,64
+fake_detector-0.1.0.dist-info/top_level.txt,sha256=tEmXj3sfMvYoFYGFVfsdVUUyAsKbBTzz3mtWLVGC5fw,14
+fake_detector-0.1.0.dist-info/RECORD,,
