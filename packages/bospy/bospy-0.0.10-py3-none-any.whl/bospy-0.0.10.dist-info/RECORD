@@ -1,0 +1,11 @@
+bospy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bospy/bos.py,sha256=Ty2OuuR4vCRK11flSOSYnp5w7T3jQlJj86oxlFENMHc,18680
+bospy/comms_pb2.py,sha256=QAqSzxq542pFU8Tz9zs8z3ErYbdnvn-DsFjb3Qi7Opg,14320
+bospy/comms_pb2.pyi,sha256=s3cZMT3MdQZVHU5IZ3t_1Y00-NJSI2UJRW5XTYnYLYs,18046
+bospy/comms_pb2_grpc.py,sha256=YGSdwq_vEAof5DwqfIwyuoPiqAsc3N4W-OHloOJMsSg,32701
+bospy/decode_test.py,sha256=4Okd2Pjl0O1y9b8cGE9vXkMq6hNDh6XU9Zl3_b_QIXY,722
+bospy/run.py,sha256=cevwmNcJHgfb-7pdQQGUbdyXLunAx23UGXARI1RBNLE,519
+bospy/utils.py,sha256=z0ynWkt-g5x6_QtBtrViK3Gc9lI8W6BPSysXbS93_Wo,1587
+bospy-0.0.10.dist-info/METADATA,sha256=Rs6q7pugyxwmCk7VpPR-zcrznudWZBN6wxOYQzK3TTs,1757
+bospy-0.0.10.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+bospy-0.0.10.dist-info/RECORD,,
