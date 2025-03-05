@@ -1,0 +1,9 @@
+fastapi[all]
+uvicorn[standard]
+redis
+pyjwt
+passlib[bcrypt]
+pyyaml
+sqlalchemy
+aiomysql
+motor
