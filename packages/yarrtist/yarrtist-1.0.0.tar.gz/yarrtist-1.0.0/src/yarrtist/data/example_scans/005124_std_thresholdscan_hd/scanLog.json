@@ -1,0 +1,93 @@
+{
+  "connectivity": [
+    {
+      "chipType": "RD53B",
+      "chips": [
+        {
+          "__config_path__": "/Users/riccardo/Documents/DOTTORATO/YARRtist/yarrtist/20UPIM52002140/R0.5_warm/0x17736_R0.5_warm.json",
+          "config": "R0.5_warm/0x17736_R0.5_warm.json",
+          "enable": 1,
+          "locked": 0,
+          "path": "relToCon",
+          "rx": 0,
+          "tx": 0
+        },
+        {
+          "__config_path__": "/Users/riccardo/Documents/DOTTORATO/YARRtist/yarrtist/20UPIM52002140/R0.5_warm/0x17746_R0.5_warm.json",
+          "config": "R0.5_warm/0x17746_R0.5_warm.json",
+          "enable": 1,
+          "locked": 0,
+          "path": "relToCon",
+          "rx": 1,
+          "tx": 0
+        },
+        {
+          "__config_path__": "/Users/riccardo/Documents/DOTTORATO/YARRtist/yarrtist/20UPIM52002140/R0.5_warm/0x17726_R0.5_warm.json",
+          "config": "R0.5_warm/0x17726_R0.5_warm.json",
+          "enable": 1,
+          "locked": 0,
+          "path": "relToCon",
+          "rx": 2,
+          "tx": 0
+        }
+      ]
+    }
+  ],
+  "ctrlCfg": {
+    "ctrlCfg": {
+      "cfg": {
+        "cmdPeriod": 6.250000073038109e-9,
+        "delay": [16, 16, 0, 0, 16, 16, 0, 0, 10, 9, 0, 0, 0, 0, 0, 0],
+        "idle": {
+          "word": 2863311530
+        },
+        "pulse": {
+          "interval": 500,
+          "word": 0
+        },
+        "rxActiveLanes": 3,
+        "rxPolarity": 65535,
+        "specNum": 0,
+        "spiConfig": 541200,
+        "sync": {
+          "interval": 16,
+          "word": 2172551550
+        },
+        "txPolarity": 0
+      },
+      "type": "spec"
+    }
+  },
+  "ctrlStatus": {
+    "channel_configuration": "4x4",
+    "fe_chip_type": "RD53A/B",
+    "firmware_hash": "0xe7985d6",
+    "firmware_identifier": "0x2030241",
+    "firmware_vers": "v1.4.0",
+    "fmc_card_type": "Ohio Card (Display Port)",
+    "fpga_card": "Trenz TEF1001_R2",
+    "lpm_status": 0,
+    "rx_speed": "1280Mbps"
+  },
+  "exec": "-r configs/controller/specCfg-rd53b-4x4.json -c /lab/QAQC/Module-Triplet/20UPIM52002140/ElectricalTests_20240506/Configuration_20240506/20UPIM52002140_R0.5_warm.json -o /lab/QAQC/Module-Triplet/20UPIM52002140/ElectricalTests_20240506/YarrScans_20240506/ -s configs/scans/rd53b/std_thresholdscan_hd.json -p ",
+  "finishTime": 1715150162,
+  "runNumber": 5124,
+  "startTime": 1715149954,
+  "stopwatch": {
+    "analysis": 851,
+    "config": 909,
+    "processing": 0,
+    "scan": 205032
+  },
+  "targetCharge": -1,
+  "targetTot": -1,
+  "testType": "std_thresholdscan_hd",
+  "timestamp": "2024-05-08_08:32:34",
+  "yarr_version": {
+    "git_branch": "HEAD",
+    "git_date": "2024-02-13 00:58:56 +0100",
+    "git_hash": "9a259bda7b8712270ef34708bc16bb3e2a5bfb0e-dirty",
+    "git_subject": "Merge branch 'devel' into 'master'",
+    "git_tag": "v1.5.0"
+  }
+}

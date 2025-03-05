@@ -1,0 +1,52 @@
+{
+    "RD53B": {
+        "GlobalConfig": {
+            "AuroraActiveLanes": 1,
+            "CmlBias0": 800,
+            "CmlBias1": 400,
+            "CmlBias2": 0,
+            "SerEnTap": 1,
+            "SerInvTap": 1,
+            "MonitorEnable": 1,
+            "MonitorI": 63,
+            "MonitorV": 1,
+            "ServiceBlockEn": 1,
+            "DiffPreComp": 0,
+            "DiffPreampL": 0,
+            "DiffPreampM": 0,
+            "DiffPreampR": 0,
+            "DiffPreampT": 0,
+            "DiffPreampTL": 0,
+            "DiffPreampTR": 0,
+            "DiffVff": 0,
+            "EnCoreCol0": 0,
+            "EnCoreCol1": 0,
+            "EnCoreCol2": 0,
+            "EnCoreCol3": 0,
+            "DataMergeOutMux0": 0,
+            "DataMergeOutMux1": 1,
+            "DataMergeOutMux2": 2,
+            "DataMergeOutMux3": 3,
+            "SerEnLane": 1,
+            "SldoTrimA": 10,
+            "SldoTrimD": 6
+        },
+        "Parameter": {
+            "ADCcalPar": [9.578, 0.18, 10000.0],
+            "Name": "0x17549",
+            "ChipId": 15,
+            "InjCap": 7.738,
+            "NfDSLDO": 1.2847722054299702,
+            "NfASLDO": 1.283566547358917,
+            "NfACB": 1.2815284110959462,
+            "VcalPar": [5.019, 0.191],
+            "IrefTrim": 14,
+            "KSenseInA": 20852.581,
+            "KSenseInD": 21308.091,
+            "KSenseShuntA": 25817.48123809524,
+            "KSenseShuntD": 26381.446,
+            "KShuntA": 1043.691,
+            "KShuntD": 1027.871
+        }
+    }
+}

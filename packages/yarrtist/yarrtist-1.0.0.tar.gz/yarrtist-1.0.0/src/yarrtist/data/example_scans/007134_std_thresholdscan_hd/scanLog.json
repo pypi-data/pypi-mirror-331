@@ -1,0 +1,137 @@
+{
+  "connectivity": [
+    {
+      "chipType": "RD53B",
+      "chips": [
+        {
+          "__config_path__": "20UPGM22200156/L2_warm/0x17529_L2_warm.json",
+          "config": "L2_warm/0x17529_L2_warm.json",
+          "enable": 1,
+          "locked": 0,
+          "path": "relToCon",
+          "rx": 2,
+          "tx": 0
+        },
+        {
+          "__config_path__": "20UPGM22200156/L2_warm/0x17539_L2_warm.json",
+          "config": "L2_warm/0x17539_L2_warm.json",
+          "enable": 1,
+          "locked": 0,
+          "path": "relToCon",
+          "rx": 1,
+          "tx": 0
+        },
+        {
+          "__config_path__": "20UPGM22200156/L2_warm/0x17559_L2_warm.json",
+          "config": "L2_warm/0x17559_L2_warm.json",
+          "enable": 1,
+          "locked": 0,
+          "path": "relToCon",
+          "rx": 0,
+          "tx": 0
+        },
+        {
+          "__config_path__": "20UPGM22200156/L2_warm/0x17549_L2_warm.json",
+          "config": "L2_warm/0x17549_L2_warm.json",
+          "enable": 1,
+          "locked": 0,
+          "path": "relToCon",
+          "rx": 3,
+          "tx": 0
+        }
+      ]
+    }
+  ],
+  "ctrlCfg": {
+    "ctrlCfg": {
+      "cfg": {
+        "cmdPeriod": 6.25e-9,
+        "delay": [4, 12, 7, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        "idle": {
+          "word": 2863311530
+        },
+        "pulse": {
+          "interval": 500,
+          "word": 0
+        },
+        "rxActiveLanes": 15,
+        "rxPolarity": 65535,
+        "specNum": 0,
+        "spiConfig": 541200,
+        "sync": {
+          "interval": 16,
+          "word": 2172551550
+        },
+        "txPolarity": 0
+      },
+      "type": "spec"
+    }
+  },
+  "ctrlStatus": {
+    "channel_configuration": "16x1",
+    "fe_chip_type": "RD53A/B/C",
+    "firmware_hash": "0xe7985d6",
+    "firmware_identifier": "0x4030242",
+    "firmware_vers": "v1.4.0",
+    "fmc_card_type": "Ohio Card (Display Port)",
+    "fpga_card": "PLDA XpressK7 325",
+    "lpm_status": 0,
+    "rx_speed": "1280Mbps"
+  },
+  "dbCfg": {
+    "QC": false,
+    "auth": "default",
+    "dbName": "localdb",
+    "environment": [
+      "vddd_voltage",
+      "vddd_current",
+      "vdda_voltage",
+      "vdda_current",
+      "vddcom_voltage",
+      "vddcom_current",
+      "hv_voltage",
+      "hv_current",
+      "temperature",
+      "temperature_moduleNTC"
+    ],
+    "hostIp": "192.135.21.84",
+    "hostPort": "27017",
+    "ssl": {
+      "CAFile": "null",
+      "PEMKeyFile": "null",
+      "enabled": false
+    },
+    "tls": {
+      "CAFile": "null",
+      "CertificateKeyFile": "null",
+      "enabled": false
+    }
+  },
+  "exec": "-r configs/controller/specCfg-rd53b-16x1.json -c /home/sdauria/DAQ/Workdir/Yarr/configs/connectivity/20UPGM22200156/20UPGM22200156_L2_warm.json -s configs/scans/rd53b/std_digitalscan.json -o /home/sdauria/DAQ/Workdir/Yarr/data/20UPGM22200156 -W MHT ",
+  "finishTime": 1729518808,
+  "runNumber": 7058,
+  "siteCfg": {
+    "institution": "INFN_MILANO"
+  },
+  "startTime": 1729518791,
+  "stopwatch": {
+    "analysis": 735,
+    "config": 1338,
+    "processing": 0,
+    "scan": 8414
+  },
+  "targetCharge": -1,
+  "targetTot": -1,
+  "testType": "std_digitalscan",
+  "timestamp": "2024-10-21_15:53:11",
+  "userCfg": {
+    "viewerUser": "atlasmi Si1ici0milano"
+  },
+  "yarr_version": {
+    "git_branch": "HEAD",
+    "git_date": "2024-09-06 17:50:02 +0200",
+    "git_hash": "eaf5972ff5cf3d951e24ede6b35a6864afb61c63-dirty",
+    "git_subject": "Merge branch 'devel' into 'master'",
+    "git_tag": "v1.5.2"
+  }
+}
