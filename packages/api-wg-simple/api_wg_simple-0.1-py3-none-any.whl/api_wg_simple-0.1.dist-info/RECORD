@@ -1,0 +1,6 @@
+api_connector/__init__.py,sha256=rBWDv_YIyErIYsnSF6dneaZS-iqa7yfsLL6XvRvVt6U,88
+api_connector/connector.py,sha256=EhG-UlYFSBuzMjphHKRFfXY0IyZGdqKBN2Id_FSU3mA,3128
+api_wg_simple-0.1.dist-info/METADATA,sha256=7jKgPjxVYq1MQ7iZpxObc55FnsBi5tMx5SVHVRe7QRk,841
+api_wg_simple-0.1.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+api_wg_simple-0.1.dist-info/top_level.txt,sha256=XBQQJ4zeXZZOzAw4TFIGhDIIxxMsL-3oYEty9xQ_B98,14
+api_wg_simple-0.1.dist-info/RECORD,,
