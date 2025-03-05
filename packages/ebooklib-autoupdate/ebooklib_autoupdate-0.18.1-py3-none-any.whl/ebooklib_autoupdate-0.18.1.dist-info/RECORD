@@ -1,0 +1,13 @@
+ebooklib/__init__.py,sha256=YN5YIc_3wuwIUJp513VaLcd9hsxs27JFKaG7j8ZKp6E,1555
+ebooklib/epub.py,sha256=rbLsi2T-O8ZLfkvBA1qSgI_1PEgQP9QjQAwMZOJknnk,60239
+ebooklib/utils.py,sha256=p8bBf-62e8nefiQyMWWq6fJvr4jJabTLC4Q8b_51r2A,3327
+ebooklib/plugins/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ebooklib/plugins/base.py,sha256=UBX_JkgW1Key0QATihTPt_7ue6pfAzR12SijOecpfBo,1595
+ebooklib/plugins/booktype.py,sha256=qyARlIasPUsNBnDR3rdEq_339iGdvrZ5-yj5I_Z3Idw,4478
+ebooklib/plugins/sourcecode.py,sha256=8y923TBY6PSR5YDaQpR_HF2s4xu66Ty65g1LINsWGRc,2549
+ebooklib/plugins/standard.py,sha256=YdQU7K_XP9V4apsJrxvDc3N0GHJ0396ktOPBDaeiF-w,12764
+ebooklib/plugins/tidyhtml.py,sha256=ysEtA_ghyjgotWG0aJ9Gg0AlQ8zfQL__6WThMzMIZIk,2399
+ebooklib_autoupdate-0.18.1.dist-info/METADATA,sha256=5NFIDEww1o6E6Ad-QA4wFnOHaDPQImxZe-xOXHev26c,5752
+ebooklib_autoupdate-0.18.1.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+ebooklib_autoupdate-0.18.1.dist-info/top_level.txt,sha256=SxhDzioh4QZYLQUn7bMDnuWYAdVg4eTXLT95QAne5XU,9
+ebooklib_autoupdate-0.18.1.dist-info/RECORD,,
