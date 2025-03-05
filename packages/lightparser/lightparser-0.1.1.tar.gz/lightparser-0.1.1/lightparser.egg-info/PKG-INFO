@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: lightparser
+Version: 0.1.1
+Summary: A lightweight parser with XPath support, Scrapy-like Items, and flexible output options.
+Home-page: UNKNOWN
+Author: Abdul Nazar
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+
+UNKNOWN
+

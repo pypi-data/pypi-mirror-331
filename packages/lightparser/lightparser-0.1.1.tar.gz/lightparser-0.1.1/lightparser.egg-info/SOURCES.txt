@@ -1,0 +1,12 @@
+README.md
+setup.py
+lightparser/__init__.py
+lightparser/item.py
+lightparser/output.py
+lightparser/selector.py
+lightparser.egg-info/PKG-INFO
+lightparser.egg-info/SOURCES.txt
+lightparser.egg-info/dependency_links.txt
+lightparser.egg-info/entry_points.txt
+lightparser.egg-info/requires.txt
+lightparser.egg-info/top_level.txt
