@@ -1,0 +1,7 @@
+common
+core_types
+events
+helpers
+messages
+parallels_desktop
+services
