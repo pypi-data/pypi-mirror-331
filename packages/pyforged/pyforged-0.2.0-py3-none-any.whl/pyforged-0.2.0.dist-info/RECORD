@@ -1,0 +1,10 @@
+pyforged/__bases__.py,sha256=79plECDfOZ4zNjRY8GZ0EIWvzIKKvnVqw88MjGrgGuA,52
+pyforged/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyforged/__models__.py,sha256=aDhdY9EaRHv4kxVHhlFsfGHahKQVDoo9vcXM-qFYm5M,119
+pyforged/ecosystem/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyforged/utilities/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyforged-0.2.0.dist-info/LICENSE.md,sha256=2RvRyGlDDUFdLf-cxqH3Xa1zJJ23iFiSUIGq-EjNOos,1117
+pyforged-0.2.0.dist-info/METADATA,sha256=yA-yC3mul_9B4dB4Ar9rclE44ASqvvwAAZEfdxI77v8,9252
+pyforged-0.2.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+pyforged-0.2.0.dist-info/top_level.txt,sha256=Z6zYFzIrJ9dnJ689gD3XMZAn9BBEYRhh2tHVbRjDucg,9
+pyforged-0.2.0.dist-info/RECORD,,
