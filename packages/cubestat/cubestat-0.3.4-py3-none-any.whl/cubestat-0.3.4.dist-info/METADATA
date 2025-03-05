@@ -1,0 +1,18 @@
+Metadata-Version: 2.2
+Name: cubestat
+Version: 0.3.4
+Summary: Horizon chart in terminal for system monitoring
+Home-page: https://github.com/okuvshynov/cubestat
+Author: Oleksandr Kuvshynov
+Author-email: okuvshynov@gmail.com
+License-File: LICENSE
+Requires-Dist: psutil>=5.9.5
+Requires-Dist: pynvml>=12.0.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: summary
+
+Horizon chart in terminal. Supports CPU/GPU/ANE/RAM/swap/IO monitoring for Apple M1/M2/M3, nVidia GPUs
