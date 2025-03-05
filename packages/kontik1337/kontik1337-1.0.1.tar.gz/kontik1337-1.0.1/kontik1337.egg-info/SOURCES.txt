@@ -1,0 +1,9 @@
+kontik1337.py
+setup.cfg
+setup.py
+kontik1337.egg-info/PKG-INFO
+kontik1337.egg-info/SOURCES.txt
+kontik1337.egg-info/dependency_links.txt
+kontik1337.egg-info/entry_points.txt
+kontik1337.egg-info/requires.txt
+kontik1337.egg-info/top_level.txt
