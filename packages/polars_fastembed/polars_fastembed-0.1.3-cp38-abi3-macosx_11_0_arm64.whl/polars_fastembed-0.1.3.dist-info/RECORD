@@ -1,0 +1,6 @@
+polars_fastembed-0.1.3.dist-info/METADATA,sha256=RK_62q77E7NMR4JCX8186oDPmrbOK8KNKjGxxSQSpOI,6995
+polars_fastembed-0.1.3.dist-info/WHEEL,sha256=nueuVYsuRBtSjfqcjzlZpAANOvhemlVJqHt21fcVDVQ,102
+polars_fastembed/__init__.py,sha256=8dxJiaY9hPnkrEArWII5bwChM1LodxGA1I9-sG1U1KA,6833
+polars_fastembed/utils.py,sha256=9ACjhIHIbmwb6sIua3tzbqU52WRCeBviwzzywLp_Cy4,1271
+polars_fastembed/_polars_fastembed.abi3.so,sha256=8MF6vqaf1qEDB2P9RAViwOgKugiGGoW2NvDNNFj73gY,26284576
+polars_fastembed-0.1.3.dist-info/RECORD,,
