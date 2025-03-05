@@ -1,0 +1,57 @@
+Metadata-Version: 2.2
+Name: volg
+Version: 0.1.0
+Summary: A Python package for calculating option Greeks and implied volatility.
+Author-email: Vinod Bhadala <vinodbhadala@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/vbhadala/volg
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Topic :: Office/Business :: Financial :: Investment
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: pandas
+Requires-Dist: setuptools>=59.6.0
+
+
+# volg
+
+A Python package for calculating option Greeks and implied volatility.
+
+## Installation
+
+```bash
+pip install volg
+```
+
+## Features
+
+- Calculate implied volatility (IV) using binary search method
+- Compute option Greeks (Delta, Gamma, Vega, Theta, etc.)
+- Calculate exposures (Delta exposure, Gamma exposure, etc.)
+- Support for both call and put options
+
+## Usage
+
+```python
+from volg import greek
+
+# Calculate implied volatility
+iv = greek.iv(spot_price, strike_price, interest_rate, days_to_expiry, option_price, flag='C')
+
+# Calculate Greeks
+greeks = greek.greeks(spot_price, strike_price, interest_rate, days_to_expiry, option_price, flag='C')
+
+# Process a dataframe with option data
+df = greek.compute_greeks(df)
+df = greek.compute_exposure(df)
+```
+
+## License
+
+MIT License

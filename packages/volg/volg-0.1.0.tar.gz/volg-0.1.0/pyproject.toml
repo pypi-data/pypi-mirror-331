@@ -1,0 +1,37 @@
+
+[project]
+name = "volg"
+version = "0.1.0"
+description = "A Python package for calculating option Greeks and implied volatility."
+readme = {file = "README.md", content-type = "text/markdown"}
+requires-python = ">=3.6"
+license = {text = "MIT"}
+authors = [
+    {name = "Vinod Bhadala", email = "vinodbhadala@gmail.com"}
+]
+dependencies = [
+    "numpy",
+    "scipy",
+    "pandas",
+    "setuptools>=59.6.0",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Topic :: Office/Business :: Financial :: Investment",
+]
+
+[project.urls]
+Homepage = "https://github.com/vbhadala/volg"
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
