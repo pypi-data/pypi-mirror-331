@@ -1,0 +1,6 @@
+pandas>=2.2.3
+scikit-learn~=1.6.1
+
+[target]
+target_benchmark>=0.1.1
+pytei-client>=0.1.0
