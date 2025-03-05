@@ -1,0 +1,85 @@
+[project]
+name = "fastgear"
+version = "0.1.1"
+description = "A personal utility library I've developed to streamline and optimize backend development with FastAPI in my projects. From generic repositories and queries to enums, error handling, and more, FastGear encompasses essential tools that have proven invaluable in my development journey, whether as a novice or a seasoned professional."
+authors = [
+    {name = "Henrique Marcuzzo <henrique.souza.m06@gmail.com>"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "sqlalchemy (>=2.0.38,<3.0.0)",
+    "uuid6 (>=2024.7.10,<2025.0.0)",
+    "sqlalchemy-utils (>=0.41.2,<0.42.0)",
+    "pydantic (>=2.10.6,<3.0.0)",
+    "fastapi (>=0.115.10,<0.116.0)",
+    "fastapi-pagination (>=0.12.34,<0.13.0)"
+]
+
+[project.optional-dependencies]
+redis = ["redis (>=5.2.1,<6.0.0)"]
+
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+# Code quality
+# ------------------------------------------------------------------------------
+pre-commit = "^4.1.0"
+ruff = "^0.9.9"
+
+
+[tool.poetry.group.docs]
+optional = true
+
+[tool.poetry.group.docs.dependencies]
+mkdocs = "^1.6.1"
+mkdocs-material = "^9.6.5"
+mkdocstrings = "^0.28.2"
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+# ==== Ruff ====
+[tool.ruff]
+fix = true
+line-length = 100
+indent-width = 4
+exclude = [
+    ".git",
+    ".ruff_cache",
+    ".venv",
+    ".vscode",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+]
+
+[tool.ruff.lint]
+fixable = ["ALL"]  # Fix all fixable issues
+select = ["ALL"]
+extend-select = ["I"]
+ignore = [
+    "ANN401",
+    "B904",
+    "PLR0913",
+    "D",
+    "EM",
+    "RUF",
+    "TRY"
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = true
+line-ending = "auto"
+
+
+
