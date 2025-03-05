@@ -1,0 +1,13 @@
+attrs
+loguru
+PySide6
+xdg
+psutil
+numpy
+rdp
+torch
+torchvision
+natsort
+safetensors
+networkx
+pillow

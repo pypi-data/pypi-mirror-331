@@ -1,0 +1,401 @@
+latex2e-/ -/ U90 s0.5 /- stix-_dsol
+latex2e-[ -/ U270 s0.5 /- stix-_lbrackubar
+latex2e-] -/ U270 s0.5 /- stix-_rbrackubar
+latex2e-_--- -/ rot67.5 s0.75 /- MnSymbol-_nleftrightline
+latex2e-_approx -/ slash /- latex2e-_not_approx
+latex2e-_asymp -/ rot67.5 s1.25 /- mathabx-_notasymp
+latex2e-_bigcirc -/ rot90.0 s1.5 /- stmaryrd-_baro
+latex2e-_bigcirc -/ s1.5 /- stmaryrd-_minuso
+latex2e-_cap -/ U90 s0.75 /- stix-_barcap
+latex2e-_cong -/ slash /- amssymb-_ncong
+latex2e-_cup -/ U90 s0.75 /- stix-_barcup
+latex2e-_dashv -/ slash /- mathabx-_ndashv
+latex2e-_Downarrow -/ rot22.5 o90 s0.75 /- MnSymbol-_nDownarrow
+latex2e-_downarrow -/ rot22.5 o90 s0.75 /- MnSymbol-_ndownarrow
+latex2e-_equiv -/ slash /- latex2e-_not_equiv
+latex2e-_exists -/ rot78.75 s1.5 /- amssymb-_nexists
+latex2e-_frown -/ rot67.5 s1.25 /- fdsymbol-_nfrown
+latex2e-_in -/ rot67.5 s1.75 /- latex2e-_notin
+latex2e-_in -/ U90 /- stix-_varisinobar
+latex2e-_int -/ U270 s0.5 /- stix-_lowint
+latex2e-_int -/ U90 s0.5 /- stix-_upint
+latex2e-_land -/ bar /- stix-_midbarwedge
+latex2e-_land -/ U270 /- stix-_wedgebar
+latex2e-_land -/ U90 /- stix-_barwedge
+latex2e-_Leftarrow -/ rot67.5 o0 s0.75 /- amssymb-_nLeftarrow
+latex2e-_leftarrow -/ rot67.5 u0 s0.75 /- amssymb-_nleftarrow
+latex2e-_leftharpoondown -/ rot67.5 o45 s0.75 /- fdsymbol-_nleftharpoondown
+latex2e-_leftharpoonup -/ rot67.5 o270 s0.75 /- fdsymbol-_nleftharpoonup
+latex2e-_leftrightarrow -/ rot67.5 s0.75 /- amssymb-_nleftrightarrow
+latex2e-_Leftrightarrow -/ rot78.75 s0.75 /- amssymb-_nLeftrightarrow
+latex2e-_lor -/ bar /- stix-_midbarvee
+latex2e-_lor -/ U270 /- stix-_veebar
+latex2e-_lor -/ U90 /- stix-_barvee
+latex2e-_mid -/ rot157.5 s0.5 /- stix-_revnmid
+latex2e-_mid -/ rot45.0 o90 s0.5 /- amssymb-_nmid
+latex2e-_models -/ rot67.5 u0 s1.25 /- MnSymbol-_nrightmodels
+latex2e-_nearrow -/ rot112.5 u225 s0.75 /- MnSymbol-_nnearrow
+latex2e-_nwarrow -/ rot67.5 s0.75 /- MnSymbol-_nnwarrow
+latex2e-_parallel -/ rot33.75 s0.75 /- amssymb-_nparallel
+latex2e-_prec -/ rot90.0 s1.5 /- mathabx-_nprec
+latex2e-_prec -/ slash /- amssymb-_nprec
+latex2e-_preceq -/ rot90.0 s1.5 /- mathabx-_npreceq
+latex2e-_preceq -/ slash /- amssymb-_npreceq
+latex2e-_Rightarrow -/ rot67.5 o180 s0.75 /- mathabx-_nRightarrow
+latex2e-_rightarrow -/ rot67.5 u180 s0.75 /- amssymb-_nrightarrow
+latex2e-_rightharpoondown -/ rot67.5 o135 s0.75 /- fdsymbol-_nrightharpoondown
+latex2e-_rightharpoonup -/ rot67.5 o225 s0.75 /- fdsymbol-_nrightharpoonup
+latex2e-_rightleftharpoons -/ rot78.75 /- fdsymbol-_nrightleftharpoons
+latex2e-_searrow -/ rot67.5 s0.75 /- MnSymbol-_nsearrow
+latex2e-_sim -/ slash /- latex2e-_not_sim
+latex2e-_simeq -/ slash /- latex2e-_not_simeq
+latex2e-_smile -/ rot67.5 /- fdsymbol-_nsmile
+latex2e-_sqsubseteq -/ rot90.0 s1.5 /- mathabx-_nsqsubseteq
+latex2e-_sqsubseteq -/ slash /- stix-_nsqsubseteq
+latex2e-_sqsupseteq -/ rot90.0 s1.5 /- mathabx-_nsqsupseteq
+latex2e-_sqsupseteq -/ slash /- stix-_nsqsupseteq
+latex2e-_subset -/ rot112.5 U180 /- stix-_bsolhsub
+latex2e-_subset -/ rot90.0 s1.5 /- mathabx-_nsubset
+latex2e-_subset -/ rot90.0 s1.5 /- mathabx-_nsubset
+latex2e-_subset -/ slash /- stix-_nsubset
+latex2e-_subseteq -/ slash /- amssymb-_nsubseteq
+latex2e-_succ -/ rot90.0 s1.5 /- mathabx-_nsucc
+latex2e-_succ -/ slash /- amssymb-_nsucc
+latex2e-_succeq -/ rot90.0 s1.5 /- mathabx-_nsucceq
+latex2e-_succeq -/ slash /- amssymb-_nsucceq
+latex2e-_supset -/ rot67.5 U0 /- stix-_suphsol
+latex2e-_supset -/ rot90.0 s1.5 /- mathabx-_nsupset
+latex2e-_supset -/ slash /- stix-_nsupset
+latex2e-_supseteq -/ slash /- amssymb-_nsupseteq
+latex2e-_swarrow -/ rot112.5 s0.75 /- MnSymbol-_nswarrow
+latex2e-_triangleleft -/ slash /- amssymb-_ntriangleleft
+latex2e-_triangleright -/ slash /- amssymb-_ntriangleright
+latex2e-_uparrow -/ rot22.5 o270 s0.75 /- MnSymbol-_nuparrow
+latex2e-_Uparrow -/ rot22.5 O270 s0.75 /- MnSymbol-_nUparrow
+latex2e-_updownarrow -/ rot22.5 s0.75 /- MnSymbol-_nupdownarrow
+latex2e-_Updownarrow -/ rot22.5 s0.75 /- MnSymbol-_nUpdownarrow
+latex2e-_vdash -/ rot67.5 u0 s1.25 /- MnSymbol-_nrightvdash
+latex2e-_vdash -/ rot90.0 u180 /- stix-_varVdash
+latex2e-_Vert -/ rot22.5 s0.75 /- MnSymbol-_nUpdownline
+latex2e-| -/ rot22.5 s0.5 /- MnSymbol-_nupdownline
+latex2e-| -/ rot56.25 s0.75 /- mathabx-_notdivides
+amssymb-_approxeq -/ slash /- fdsymbol-_napproxeq
+amssymb-_backsim -/ slash /- fdsymbol-_nbacksim
+amssymb-_backsimeq -/ slash /- fdsymbol-_nbacksimeq
+amssymb-_Bumpeq -/ rot78.75 s1.5 /- fdsymbol-_nBumpeq
+amssymb-_circeq -/ slash /- fdsymbol-_ncirceq
+amssymb-_curlyeqprec -/ rot78.75 s1.5 /- fdsymbol-_ncurlyeqprec
+amssymb-_curlyeqsucc -/ rot78.75 s1.5 /- fdsymbol-_ncurlyeqsucc
+amssymb-_downdownarrows -/ rot22.5 u90 /- MnSymbol-_ndowndownarrows
+amssymb-_downharpoonleft -/ rot11.25 u45 s0.75 /- fdsymbol-_ndownharpoonleft
+amssymb-_downharpoonright -/ rot22.5 u180 s0.75 /- fdsymbol-_ndownharpoonright
+amssymb-_eqcirc -/ rot67.5 s1.25 /- fdsymbol-_neqcirc
+amssymb-_eqslantgtr -/ slash /- MnSymbol-_neqslantgtr
+amssymb-_eqslantless -/ slash /- MnSymbol-_neqslantless
+amssymb-_fallingdotseq -/ rot78.75 s1.25 /- fdsymbol-_nfallingdotseq
+amssymb-_geq -/ slash /- amssymb-_ngeq
+amssymb-_geqq -/ rot78.75 s1.5 /- amssymb-_ngeqq
+amssymb-_geqslant -/ slash /- amssymb-_ngeqslant
+amssymb-_gg -/ rot67.5 /- MnSymbol-_ngg
+amssymb-_ggg -/ rot67.5 /- MnSymbol-_nggg
+amssymb-_gtrdot -/ rot78.75 s1.5 /- MnSymbol-_ngtrdot
+amssymb-_gtreqless -/ rot78.75 s1.25 /- MnSymbol-_ngtreqless
+amssymb-_gtreqqless -/ rot78.75 s1.25 /- MnSymbol-_ngtreqqless
+amssymb-_gtrless -/ rot78.75 s1.75 /- MnSymbol-_ngtrless
+amssymb-_gtrsim -/ rot78.75 s1.25 /- stix-_ngtrsim
+amssymb-_gtrsim -/ U270 s0.75 /- stix-_gsime
+amssymb-_leftarrowtail -/ rot67.5 s0.75 /- MnSymbol-_nleftarrowtail
+amssymb-_leftleftarrows -/ rot67.5 u0 /- MnSymbol-_nleftleftarrows
+amssymb-_leftrightarrows -/ rot67.5 /- MnSymbol-_nleftrightarrows
+amssymb-_leftrightharpoons -/ rot67.5 /- fdsymbol-_nleftrightharpoons
+amssymb-_leq -/ slash /- amssymb-_nleq
+amssymb-_leqq -/ rot78.75 s1.5 /- amssymb-_nleqq
+amssymb-_leqslant -/ slash /- amssymb-_nleqslant
+amssymb-_lessdot -/ rot78.75 s1.5 /- MnSymbol-_nlessdot
+amssymb-_lesseqgtr -/ rot78.75 s1.5 /- MnSymbol-_nlesseqgtr
+amssymb-_lesseqqgtr -/ rot78.75 s1.5 /- MnSymbol-_nlesseqqgtr
+amssymb-_lessgtr -/ rot78.75 s1.5 /- MnSymbol-_nlessgtr
+amssymb-_lesssim -/ rot78.75 s1.25 /- stix-_nlesssim
+amssymb-_lesssim -/ U270 s0.75 /- stix-_lsime
+amssymb-_ll -/ rot78.75 s1.25 /- MnSymbol-_nll
+amssymb-_ll -/ U270 /- stix-_partialmeetcontraction
+amssymb-_Lleftarrow -/ rot67.5 O0 /- MnSymbol-_nLleftarrow
+amssymb-_lll -/ rot78.75 /- MnSymbol-_nlll
+amssymb-_precapprox -/ rot78.75 s1.5 /- fdsymbol-_nprecapprox
+amssymb-_preccurlyeq -/ rot78.75 s1.5 /- fdsymbol-_npreccurlyeq
+amssymb-_precsim -/ rot78.75 s1.5 /- fdsymbol-_nprecsim
+amssymb-_rightarrowtail -/ rot67.5 s0.75 /- MnSymbol-_nrightarrowtail
+amssymb-_rightleftarrows -/ rot78.75 /- MnSymbol-_nrightleftarrows
+amssymb-_rightrightarrows -/ rot78.75 /- MnSymbol-_nrightrightarrows
+amssymb-_risingdotseq -/ rot67.5 s1.25 /- fdsymbol-_nrisingdotseq
+amssymb-_Rrightarrow -/ rot67.5 O180 /- MnSymbol-_nRrightarrow
+amssymb-_sqsubset -/ rot90.0 s1.5 /- mathabx-_nsqsubset
+amssymb-_sqsubset -/ slash /- stix-_nsqsubset
+amssymb-_sqsupset -/ rot90.0 s1.5 /- mathabx-_nsqsupset
+amssymb-_sqsupset -/ slash /- stix-_nsqsupset
+amssymb-_Subset -/ rot90.0 u0 s1.5 /- mathabx-_nSubset
+amssymb-_subseteqq -/ slash /- amssymb-_nsubseteqq
+amssymb-_succapprox -/ rot78.75 s1.5 /- fdsymbol-_nsuccapprox
+amssymb-_succcurlyeq -/ rot78.75 s1.5 /- fdsymbol-_nsucccurlyeq
+amssymb-_succsim -/ rot78.75 s1.25 /- fdsymbol-_nsuccsim
+amssymb-_Supset -/ rot90.0 u180 s1.5 /- mathabx-_nSupset
+amssymb-_supseteqq -/ slash /- amssymb-_nsupseteqq
+amssymb-_trianglelefteq -/ slash /- amssymb-_ntrianglelefteq
+amssymb-_trianglerighteq -/ slash /- amssymb-_ntrianglerighteq
+amssymb-_twoheadleftarrow -/ rot67.5 o0 s0.75 /- MnSymbol-_ntwoheadleftarrow
+amssymb-_twoheadrightarrow -/ rot67.5 o180 s0.75 /- MnSymbol-_ntwoheadrightarrow
+amssymb-_upharpoonleft -/ rot22.5 u315 s0.75 /- fdsymbol-_nupharpoonleft
+amssymb-_upharpoonright -/ rot22.5 u180 s0.75 /- fdsymbol-_nupharpoonright
+amssymb-_upuparrows -/ rot22.5 u270 /- MnSymbol-_nupuparrows
+amssymb-_Vdash -/ rot67.5 o0 s1.25 /- MnSymbol-_nrightVdash
+amssymb-_Vvdash -/ rot67.5 O0 /- fdsymbol-_nVvdash
+amssymb-_Vvdash -/ rot67.5 s1.25 /- mathabx-_nVvash
+fdsymbol-_angle -/ U270 /- stix-_angleubar
+fdsymbol-_backcong -/ slash /- fdsymbol-_nbackcong
+fdsymbol-_bumpeqq -/ slash /- fdsymbol-_nbumpeqq
+fdsymbol-_dashVv -/ rot78.75 O180 /- fdsymbol-_ndashVv
+fdsymbol-_Ddashv -/ rot78.75 u180 s1.25 /- fdsymbol-_nDdashv
+fdsymbol-_Doteq -/ rot67.5 s1.25 /- fdsymbol-_nDoteq
+fdsymbol-_downAssert -/ rot22.5 O270 /- fdsymbol-_ndownAssert
+fdsymbol-_downmodels -/ rot22.5 u270 /- fdsymbol-_ndownmodels
+fdsymbol-_downupharpoons -/ rot11.25 /- fdsymbol-_ndownupharpoons
+fdsymbol-_downvdash -/ rot22.5 u270 /- fdsymbol-_ndownvdash
+fdsymbol-_eqdot -/ rot67.5 o90 s1.5 /- fdsymbol-_neqdot
+fdsymbol-_eqsim -/ slash /- fdsymbol-_neqsim
+fdsymbol-_frowneq -/ slash /- fdsymbol-_nfrowneq
+fdsymbol-_frownsmile -/ slash /- fdsymbol-_nfrownsmile
+fdsymbol-_leftAssert -/ rot78.75 O180 /- fdsymbol-_nleftAssert
+fdsymbol-_leftfootline -/ rot67.5 s0.75 /- fdsymbol-_nleftfootline
+fdsymbol-_leftmodels -/ rot78.75 u180 /- fdsymbol-_nleftmodels
+fdsymbol-_leftrightharpoondownup -/ rot67.5 s0.75 /- fdsymbol-_nleftrightharpoondownup
+fdsymbol-_leftrightharpoonupdown -/ rot78.75 s0.75 /- fdsymbol-_nleftrightharpoonupdown
+fdsymbol-_leftVDash -/ rot67.5 o180 /- fdsymbol-_nleftVDash
+fdsymbol-_longmapsfrom -/ rot67.5 s0.75 /- fdsymbol-_nlongmapsfrom
+fdsymbol-_Longmapsfrom -/ rot67.5 u0 s0.75 /- fdsymbol-_nLongmapsfrom
+fdsymbol-_longrightfootline -/ rot67.5 s0.5 /- fdsymbol-_nlongrightfootline
+fdsymbol-_neharpoonnw -/ rot112.5 u225 /- fdsymbol-_nneharpoonnw
+fdsymbol-_neharpoonse -/ rot112.5 u225 /- fdsymbol-_nneharpoonse
+fdsymbol-_neswharpoonnwse -/ rot123.75 /- fdsymbol-_nneswharpoonnwse
+fdsymbol-_neswharpoons -/ rot123.75 /- fdsymbol-_nneswharpoons
+fdsymbol-_neswharpoonsenw -/ rot112.5 /- fdsymbol-_nneswharpoonsenw
+fdsymbol-_nwharpoonne -/ rot67.5 u315 /- fdsymbol-_nnwharpoonne
+fdsymbol-_nwharpoonsw -/ rot67.5 u315 /- fdsymbol-_nnwharpoonsw
+fdsymbol-_nwseharpoonnesw -/ rot67.5 /- fdsymbol-_nnwseharpoonnesw
+fdsymbol-_nwseharpoons -/ rot56.25 /- fdsymbol-_nnwseharpoons
+fdsymbol-_nwseharpoonswne -/ rot56.25 /- fdsymbol-_nnwseharpoonswne
+fdsymbol-_owns -/ rot78.75 s1.5 /- fdsymbol-_nowns
+fdsymbol-_preceqq -/ rot78.75 s1.5 /- fdsymbol-_npreceqq
+fdsymbol-_revangle -/ U270 /- stix-_revangleubar
+fdsymbol-_seharpoonne -/ rot67.5 u135 /- fdsymbol-_nseharpoonne
+fdsymbol-_seharpoonsw -/ rot67.5 u180 /- fdsymbol-_nseharpoonsw
+fdsymbol-_senwharpoons -/ rot67.5 /- fdsymbol-_nsenwharpoons
+fdsymbol-_smileeq -/ slash /- fdsymbol-_nsmileeq
+fdsymbol-_stareq -/ rot67.5 u270 s1.5 /- fdsymbol-_nstareq
+fdsymbol-_succeqq -/ slash /- fdsymbol-_nsucceqq
+fdsymbol-_swharpoonnw -/ rot112.5 u45 /- fdsymbol-_nswharpoonnw
+fdsymbol-_swharpoonse -/ rot112.5 u45 /- fdsymbol-_nswharpoonse
+fdsymbol-_swneharpoons -/ rot112.5 /- fdsymbol-_nswneharpoons
+fdsymbol-_times -/ U270 /- fdsymbol-_timesbar
+fdsymbol-_triplesim -/ slash /- fdsymbol-_ntriplesim
+fdsymbol-_upAssert -/ rot11.25 o90 /- fdsymbol-_nupAssert
+fdsymbol-_upassert -/ rot11.25 o90 /- fdsymbol-_nupassert
+fdsymbol-_updownharpoonleftright -/ rot22.5 s0.75 /- fdsymbol-_nupdownharpoonleftright
+fdsymbol-_updownharpoonrightleft -/ rot11.25 s0.75 /- fdsymbol-_nupdownharpoonrightleft
+fdsymbol-_updownharpoons -/ rot22.5 /- fdsymbol-_nupdownharpoons
+fdsymbol-_upmodels -/ rot11.25 u90 /- fdsymbol-_nupmodels
+fdsymbol-_vDdash -/ rot78.75 u0 s1.25 /- fdsymbol-_nvDdash
+fdsymbol-_veeeq -/ rot78.75 s1.5 /- fdsymbol-_nveeeq
+fdsymbol-_wedgeq -/ rot67.5 u270 s1.5 /- fdsymbol-_nwedgeq
+logix-_DTrpTurn -/ rot67.5 o0 s1.25 /- logix-_NotDTrpTurn
+logix-_DTurnDWavy -/ rot67.5 u0 s1.25 /- logix-_NotDTurnDWavy
+logix-_DTurnWavy -/ rot67.5 u0 s1.25 /- logix-_NotDTurnWavy
+logix-_MulMap -/ rot67.5 /- logix-_NotMulMap
+logix-_MulMapDual -/ rot67.5 s0.75 /- logix-_NotMulMapDual
+logix-_MulMapInv -/ rot67.5 s0.75 /- logix-_NotMulMapInv
+logix-_SbOr -/ U270 /- logix-_SbXor
+logix-_SbOr -/ U90 /- logix-_SbNor
+logix-_Seq -/ rot67.5 o0 s1.25 /- logix-_NotSeq
+logix-_TurnDWavy -/ rot67.5 /- logix-_NotTurnDWavy
+logix-_TurnWavy -/ rot67.5 /- logix-_NotTurnWavy
+mathabx-_bumpedeq -/ rot67.5 s1.25 /- txfonts-_nbumpeq
+mathabx-_curvearrowbotleft -/ rot78.75 u270 s0.5 /- MnSymbol-_nlcurvearrowleft
+mathabx-_curvearrowleftright -/ rot67.5 u90 s0.5 /- MnSymbol-_ncurvearrowleftright
+mathabx-_downuparrows -/ rot11.25 /- MnSymbol-_ndownuparrows
+mathabx-_precapprox -/ rot90.0 s1.25 /- mathabx-_nprecapprox
+mathabx-_sqSubset -/ rot90.0 u0 s1.5 /- mathabx-_nsqSubset
+mathabx-_sqsubseteqq -/ rot90.0 s1.5 /- mathabx-_nsqsubseteqq
+mathabx-_sqSupset -/ rot90.0 u180 s1.5 /- mathabx-_nsqSupset
+mathabx-_sqsupseteqq -/ rot90.0 s1.5 /- mathabx-_nsqsupseteqq
+mathabx-_subseteq -/ rot90.0 s1.25 /- mathabx-_nsubseteq
+mathabx-_subseteqq -/ rot90.0 s1.25 /- mathabx-_nsubseteqq
+mathabx-_succapprox -/ rot90.0 s1.25 /- mathabx-_nsuccapprox
+mathabx-_supseteq -/ rot90.0 s1.5 /- mathabx-_nsupseteq
+mathabx-_supseteqq -/ rot90.0 s1.25 /- mathabx-_nsupseteqq
+mathabx-_updownarrows -/ rot22.5 /- MnSymbol-_nupdownarrows
+MnSymbol-_backapprox -/ slash /- MnSymbol-_nbackapprox
+MnSymbol-_backapproxeq -/ rot67.5 s1.75 /- MnSymbol-_nbackapproxeq
+MnSymbol-_backeqsim -/ slash /- MnSymbol-_nbackeqsim
+MnSymbol-_backtriplesim -/ rot67.5 s1.75 /- MnSymbol-_nbacktriplesim
+MnSymbol-_closedequal -/ rot67.5 s1.75 /- MnSymbol-_nclosedequal
+MnSymbol-_curvearrowdownup -/ rot22.5 o0 s0.5 /- MnSymbol-_ncurvearrowdownup
+MnSymbol-_curvearrownesw -/ rot135.0 o135 s0.5 /- MnSymbol-_ncurvearrownesw
+MnSymbol-_curvearrownwse -/ rot45.0 o225 s0.75 /- MnSymbol-_ncurvearrownwse
+MnSymbol-_curvearrowrightleft -/ rot78.75 o270 s0.5 /- MnSymbol-_ncurvearrowrightleft
+MnSymbol-_curvearrowsenw -/ rot45.0 o45 s0.75 /- MnSymbol-_ncurvearrowsenw
+MnSymbol-_curvearrowswne -/ rot135.0 o315 s0.75 /- MnSymbol-_ncurvearrowswne
+MnSymbol-_curvearrowupdown -/ o180 s0.75 /- MnSymbol-_ncurvearrowupdown
+MnSymbol-_dasheddownarrow -/ rot22.5 u90 s0.75 /- MnSymbol-_ndasheddownarrow
+MnSymbol-_dashedleftarrow -/ rot67.5 u0 s0.75 /- MnSymbol-_ndashedleftarrow
+MnSymbol-_dashednearrow -/ rot112.5 u225 /- MnSymbol-_ndashednearrow
+MnSymbol-_dashednwarrow -/ rot67.5 u315 /- MnSymbol-_ndashednwarrow
+MnSymbol-_dashedrightarrow -/ rot67.5 u180 s0.75 /- MnSymbol-_ndashedrightarrow
+MnSymbol-_dashedsearrow -/ rot67.5 u180 /- MnSymbol-_ndashedsearrow
+MnSymbol-_dashedswarrow -/ rot112.5 u45 /- MnSymbol-_ndashedswarrow
+MnSymbol-_dasheduparrow -/ rot22.5 u270 s0.75 /- MnSymbol-_ndasheduparrow
+MnSymbol-_downarrowtail -/ rot22.5 u90 s0.75 /- MnSymbol-_ndownarrowtail
+MnSymbol-_downfootline -/ rot22.5 s0.75 /- MnSymbol-_ndownfootline
+MnSymbol-_downfree -/ rot22.5 u90 s0.75 /- MnSymbol-_ndownfree
+MnSymbol-_downlsquigarrow -/ rot157.5 u90 s0.75 /- MnSymbol-_ndownlsquigarrow
+MnSymbol-_downmapsto -/ rot22.5 u90 s0.75 /- MnSymbol-_ndownmapsto
+MnSymbol-_downModels -/ rot22.5 o270 /- MnSymbol-_ndownModels
+MnSymbol-_eqbump -/ slash /- MnSymbol-_neqbump
+MnSymbol-_equalclosed -/ slash /- MnSymbol-_nequalclosed
+MnSymbol-_equivclosed -/ slash /- MnSymbol-_nequivclosed
+MnSymbol-_geqdot -/ slash /- MnSymbol-_ngeqdot
+MnSymbol-_geqslantdot -/ slash /- MnSymbol-_ngeqslantdot
+MnSymbol-_gtr -/ rot78.75 s1.5 /- MnSymbol-_ngtr
+MnSymbol-_gtr -/ U90 /- stix-_eqgtr
+MnSymbol-_gtrapprox -/ rot78.75 s1.25 /- MnSymbol-_gnapprox
+MnSymbol-_gtreqlessslant -/ rot78.75 s1.25 /- MnSymbol-_ngtreqlessslant
+MnSymbol-_lcirclearrowdown -/ rot78.75 s1.5 /- MnSymbol-_nlcirclearrowdown
+MnSymbol-_lcirclearrowleft -/ rot78.75 s1.5 /- MnSymbol-_nlcirclearrowleft
+MnSymbol-_lcirclearrowright -/ rot78.75 s1.5 /- MnSymbol-_nlcirclearrowright
+MnSymbol-_lcirclearrowup -/ rot78.75 s1.5 /- MnSymbol-_nlcirclearrowup
+MnSymbol-_lcurvearrowdown -/ rot168.75 o0 s0.75 /- MnSymbol-_nlcurvearrowdown
+MnSymbol-_lcurvearrowne -/ rot135.0 O180 s0.75 /- MnSymbol-_nlcurvearrowne
+MnSymbol-_lcurvearrownw -/ rot33.75 O270 s0.75 /- MnSymbol-_nlcurvearrownw
+MnSymbol-_lcurvearrowright -/ rot78.75 o90 s0.5 /- MnSymbol-_nlcurvearrowright
+MnSymbol-_lcurvearrowse -/ rot33.75 O90 s0.75 /- MnSymbol-_nlcurvearrowse
+MnSymbol-_lcurvearrowsw -/ rot123.75 O360 s0.75 /- MnSymbol-_nlcurvearrowsw
+MnSymbol-_lcurvearrowup -/ rot168.75 o225 s0.75 /- MnSymbol-_nlcurvearrowup
+MnSymbol-_leftfree -/ rot67.5 u0 s0.75 /- MnSymbol-_nleftfree
+MnSymbol-_leftlsquigarrow -/ rot67.5 o0 s0.75 /- MnSymbol-_nleftlsquigarrow
+MnSymbol-_leftmapsto -/ rot67.5 o0 s0.75 /- MnSymbol-_nleftmapsto
+MnSymbol-_Leftrightline -/ rot67.5 /- MnSymbol-_nLeftrightline
+MnSymbol-_leqdot -/ slash /- MnSymbol-_nleqdot
+MnSymbol-_leqslantdot -/ slash /- MnSymbol-_nleqslantdot
+MnSymbol-_less -/ rot78.75 s1.5 /- MnSymbol-_nless
+MnSymbol-_less -/ U90 /- stix-_eqless
+MnSymbol-_lessapprox -/ rot78.75 s1.25 /- MnSymbol-_lnapprox
+MnSymbol-_lesseqgtrslant -/ rot78.75 s1.5 /- MnSymbol-_nlesseqgtrslant
+MnSymbol-_lhookdownarrow -/ rot11.25 u90 s0.75 /- MnSymbol-_nlhookdownarrow
+MnSymbol-_lhookleftarrow -/ rot67.5 o0 s0.75 /- MnSymbol-_nlhookleftarrow
+MnSymbol-_lhooknearrow -/ rot112.5 u225 s0.75 /- MnSymbol-_nlhooknearrow
+MnSymbol-_lhooknwarrow -/ rot67.5 u315 s0.75 /- MnSymbol-_nlhooknwarrow
+MnSymbol-_lhookrightarrow -/ rot67.5 u180 s0.75 /- MnSymbol-_nlhookrightarrow
+MnSymbol-_lhooksearrow -/ rot67.5 u180 s0.75 /- MnSymbol-_nlhooksearrow
+MnSymbol-_lhookswarrow -/ rot123.75 u45 s0.75 /- MnSymbol-_nlhookswarrow
+MnSymbol-_lhookuparrow -/ rot11.25 u270 s0.75 /- MnSymbol-_nlhookuparrow
+MnSymbol-_Nearrow -/ rot112.5 o225 /- MnSymbol-_nNearrow
+MnSymbol-_nearrowtail -/ rot112.5 u45 s0.75 /- MnSymbol-_nnearrowtail
+MnSymbol-_nefootline -/ rot112.5 u225 s0.75 /- MnSymbol-_nnefootline
+MnSymbol-_nefree -/ rot112.5 o225 s0.75 /- MnSymbol-_nnefree
+MnSymbol-_nelsquigarrow -/ rot112.5 u225 s0.75 /- MnSymbol-_nnelsquigarrow
+MnSymbol-_nemapsto -/ rot112.5 s0.75 /- MnSymbol-_nnemapsto
+MnSymbol-_neModels -/ rot112.5 O45 /- MnSymbol-_nneModels
+MnSymbol-_nemodels -/ rot123.75 u45 s1.25 /- MnSymbol-_nnemodels
+MnSymbol-_nenearrows -/ rot123.75 u225 /- MnSymbol-_nnenearrows
+MnSymbol-_Neswarrow -/ rot112.5 /- MnSymbol-_nNeswarrow
+MnSymbol-_neswarrow -/ rot112.5 s0.75 /- MnSymbol-_nneswarrow
+MnSymbol-_neswarrows -/ rot123.75 /- MnSymbol-_nneswarrows
+MnSymbol-_neswline -/ rot112.5 s0.75 /- MnSymbol-_nneswline
+MnSymbol-_Neswline -/ rot112.5 s0.75 /- MnSymbol-_nNeswline
+MnSymbol-_neVdash -/ rot112.5 O45 /- MnSymbol-_nneVdash
+MnSymbol-_nevdash -/ rot112.5 O45 /- MnSymbol-_nnevdash
+MnSymbol-_Nwarrow -/ rot67.5 o315 /- MnSymbol-_nNwarrow
+MnSymbol-_nwarrowtail -/ rot67.5 s0.75 /- MnSymbol-_nnwarrowtail
+MnSymbol-_nwfootline -/ rot67.5 u315 s0.75 /- MnSymbol-_nnwfootline
+MnSymbol-_nwfree -/ rot67.5 u315 s0.75 /- MnSymbol-_nnwfree
+MnSymbol-_nwlsquigarrow -/ rot22.5 o315 s0.75 /- MnSymbol-_nnwlsquigarrow
+MnSymbol-_nwmapsto -/ rot67.5 s0.75 /- MnSymbol-_nnwmapsto
+MnSymbol-_nwModels -/ rot67.5 O135 /- MnSymbol-_nnwModels
+MnSymbol-_nwmodels -/ rot67.5 o135 /- MnSymbol-_nnwmodels
+MnSymbol-_nwnwarrows -/ rot67.5 o315 /- MnSymbol-_nnwnwarrows
+MnSymbol-_Nwsearrow -/ rot67.5 /- MnSymbol-_nNwsearrow
+MnSymbol-_nwsearrow -/ rot67.5 s0.75 /- MnSymbol-_nnwsearrow
+MnSymbol-_nwsearrows -/ rot67.5 /- MnSymbol-_nnwsearrows
+MnSymbol-_Nwseline -/ rot67.5 /- MnSymbol-_nNwseline
+MnSymbol-_nwseline -/ rot67.5 s0.75 /- MnSymbol-_nnwseline
+MnSymbol-_nwVdash -/ rot67.5 O135 /- MnSymbol-_nnwVdash
+MnSymbol-_nwvdash -/ rot67.5 O135 /- MnSymbol-_nnwvdash
+MnSymbol-_rcirclearrowdown -/ rot78.75 s1.5 /- MnSymbol-_nrcirclearrowdown
+MnSymbol-_rcirclearrowleft -/ rot78.75 s1.25 /- MnSymbol-_nrcirclearrowleft
+MnSymbol-_rcirclearrowright -/ rot78.75 s1.25 /- MnSymbol-_nrcirclearrowright
+MnSymbol-_rcirclearrowup -/ rot78.75 s1.5 /- MnSymbol-_nrcirclearrowup
+MnSymbol-_rcurvearrowdown -/ rot22.5 o180 s0.75 /- MnSymbol-_nrcurvearrowdown
+MnSymbol-_rcurvearrowleft -/ rot112.5 o90 s0.75 /- MnSymbol-_nrcurvearrowleft
+MnSymbol-_rcurvearrowne -/ rot146.25 O270 s0.75 /- MnSymbol-_nrcurvearrowne
+MnSymbol-_rcurvearrownw -/ rot67.5 O0 s0.75 /- MnSymbol-_nrcurvearrownw
+MnSymbol-_rcurvearrowright -/ rot112.5 o270 s0.75 /- MnSymbol-_nrcurvearrowright
+MnSymbol-_rcurvearrowse -/ rot67.5 O225 s0.75 /- MnSymbol-_nrcurvearrowse
+MnSymbol-_rcurvearrowsw -/ rot157.5 O135 s0.75 /- MnSymbol-_nrcurvearrowsw
+MnSymbol-_rcurvearrowup -/ rot22.5 o0 s0.75 /- MnSymbol-_nrcurvearrowup
+MnSymbol-_rhookdownarrow -/ rot22.5 u90 s0.75 /- MnSymbol-_nrhookdownarrow
+MnSymbol-_rhookleftarrow -/ rot67.5 u0 s0.75 /- MnSymbol-_nrhookleftarrow
+MnSymbol-_rhooknearrow -/ rot123.75 u180 s0.75 /- MnSymbol-_nrhooknearrow
+MnSymbol-_rhooknwarrow -/ rot67.5 u270 s0.75 /- MnSymbol-_nrhooknwarrow
+MnSymbol-_rhookrightarrow -/ rot67.5 u180 s0.75 /- MnSymbol-_nrhookrightarrow
+MnSymbol-_rhooksearrow -/ rot67.5 u90 s0.75 /- MnSymbol-_nrhooksearrow
+MnSymbol-_rhookswarrow -/ rot112.5 u0 s0.75 /- MnSymbol-_nrhookswarrow
+MnSymbol-_rhookuparrow -/ rot22.5 u270 s0.75 /- MnSymbol-_nrhookuparrow
+MnSymbol-_rightfree -/ rot67.5 u180 s0.75 /- MnSymbol-_nrightfree
+MnSymbol-_rightlsquigarrow -/ rot67.5 u180 s0.75 /- MnSymbol-_nrightlsquigarrow
+MnSymbol-_rightmapsto -/ rot67.5 u180 s0.75 /- MnSymbol-_nrightmapsto
+MnSymbol-_rightModels -/ rot67.5 o0 /- MnSymbol-_nrightModels
+MnSymbol-_Searrow -/ rot67.5 o135 /- MnSymbol-_nSearrow
+MnSymbol-_searrowtail -/ rot67.5 s0.75 /- MnSymbol-_nsearrowtail
+MnSymbol-_sefootline -/ rot67.5 u135 s0.75 /- MnSymbol-_nsefootline
+MnSymbol-_sefree -/ rot67.5 u135 s0.75 /- MnSymbol-_nsefree
+MnSymbol-_selsquigarrow -/ rot22.5 o135 s0.75 /- MnSymbol-_nselsquigarrow
+MnSymbol-_semapsto -/ rot67.5 s0.75 /- MnSymbol-_nsemapsto
+MnSymbol-_seModels -/ rot67.5 O315 /- MnSymbol-_nseModels
+MnSymbol-_semodels -/ rot67.5 o315 /- MnSymbol-_nsemodels
+MnSymbol-_senwarrows -/ rot45.0 /- MnSymbol-_nsenwarrows
+MnSymbol-_sesearrows -/ rot67.5 o135 /- MnSymbol-_nsesearrows
+MnSymbol-_seVdash -/ rot56.25 O315 /- MnSymbol-_nseVdash
+MnSymbol-_sevdash -/ rot67.5 O315 /- MnSymbol-_nsevdash
+MnSymbol-_squigarrowdownup -/ rot22.5 s0.75 /- MnSymbol-_nsquigarrowdownup
+MnSymbol-_squigarrowleftright -/ rot67.5 s0.75 /- MnSymbol-_nsquigarrowleftright
+MnSymbol-_squigarrownwse -/ rot22.5 s0.75 /- MnSymbol-_nsquigarrownwse
+MnSymbol-_squigarrowrightleft -/ rot112.5 s0.75 /- MnSymbol-_nsquigarrowrightleft
+MnSymbol-_Swarrow -/ rot112.5 o45 /- MnSymbol-_nSwarrow
+MnSymbol-_swarrowtail -/ rot112.5 /- MnSymbol-_nswarrowtail
+MnSymbol-_swfootline -/ rot112.5 u45 /- MnSymbol-_nswfootline
+MnSymbol-_swfree -/ rot112.5 u45 s0.75 /- MnSymbol-_nswfree
+MnSymbol-_swlsquigarrow -/ rot112.5 o45 s0.75 /- MnSymbol-_nswlsquigarrow
+MnSymbol-_swmapsto -/ rot112.5 s0.75 /- MnSymbol-_nswmapsto
+MnSymbol-_swModels -/ rot112.5 O225 /- MnSymbol-_nswModels
+MnSymbol-_swmodels -/ rot112.5 O225 /- MnSymbol-_nswmodels
+MnSymbol-_swnearrows -/ rot112.5 /- MnSymbol-_nswnearrows
+MnSymbol-_swswarrows -/ rot112.5 o45 /- MnSymbol-_nswswarrows
+MnSymbol-_swVdash -/ rot112.5 O225 /- MnSymbol-_nswVdash
+MnSymbol-_swvdash -/ rot112.5 O225 /- MnSymbol-_nswvdash
+MnSymbol-_twoheaddownarrow -/ rot22.5 o90 s0.75 /- MnSymbol-_ntwoheaddownarrow
+MnSymbol-_twoheadnearrow -/ rot112.5 O225 s0.75 /- MnSymbol-_ntwoheadnearrow
+MnSymbol-_twoheadnwarrow -/ rot67.5 O315 s0.75 /- MnSymbol-_ntwoheadnwarrow
+MnSymbol-_twoheadsearrow -/ rot67.5 O135 s0.75 /- MnSymbol-_ntwoheadsearrow
+MnSymbol-_twoheadswarrow -/ rot123.75 O45 s0.75 /- MnSymbol-_ntwoheadswarrow
+MnSymbol-_twoheaduparrow -/ rot11.25 O270 s0.75 /- MnSymbol-_ntwoheaduparrow
+MnSymbol-_uparrowtail -/ rot11.25 s0.75 /- MnSymbol-_nuparrowtail
+MnSymbol-_upfootline -/ rot22.5 s0.75 /- MnSymbol-_nupfootline
+MnSymbol-_upfree -/ rot22.5 u270 s0.75 /- MnSymbol-_nupfree
+MnSymbol-_uplsquigarrow -/ rot157.5 o270 s0.75 /- MnSymbol-_nuplsquigarrow
+MnSymbol-_upmapsto -/ rot22.5 u270 s0.75 /- MnSymbol-_nupmapsto
+MnSymbol-_upModels -/ rot22.5 o90 /- MnSymbol-_nupModels
+stix-_csub -/ U270 /- stix-_csube
+stix-_csup -/ U270 /- stix-_csupe
+stix-_lat -/ U270 /- stix-_late
+stix-_setminus -/ s0.5 /- stix-_rsolbar
+stix-_smt -/ U270 /- stix-_smte
+txfonts-_varparallel -/ rot11.25 s0.75 /- txfonts-_nvarparallel
+txfonts-_varparallelinv -/ rot22.5 s0.75 /- txfonts-_nvarparallelinv
