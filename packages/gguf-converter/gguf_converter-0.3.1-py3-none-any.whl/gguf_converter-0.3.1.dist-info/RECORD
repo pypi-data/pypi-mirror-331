@@ -1,0 +1,11 @@
+converter/__init__.py,sha256=tpG36Is4p-wYtP0Cz_IOuvQsOyZmco62rPN8LGSMnRQ,5873
+converter/gguf_writer.py,sha256=1HrZQRJ4j1WlcVAyei2W_V1cNw15e9ji7lzI9SyJiak,2392
+converter/main.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+converter/model_loader.py,sha256=xeaUFzsNjBQYK1Cp5YBJW7tZv0kI7M2Dv0CI4NnFBgA,990
+converter/quantize.py,sha256=1KXe66wAoByplQcIRA3AKPlic5G41cQe7BSV--4FcPY,1701
+gguf_converter-0.3.1.dist-info/LICENSE,sha256=iMC7je3-oNgbFtzZkziKK_kYNC1GyKmvvG7Nb4pn4HA,919
+gguf_converter-0.3.1.dist-info/METADATA,sha256=FSZvGF4I93ZLjv4CYimANOAijQ0ldoa4gyqZszZo-bE,5861
+gguf_converter-0.3.1.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+gguf_converter-0.3.1.dist-info/entry_points.txt,sha256=Er3oT-WZVYO7aI-D6HhY_3yfVn6QfIcAy0sO2JdWQiw,57
+gguf_converter-0.3.1.dist-info/top_level.txt,sha256=S1fAf-PtuctgaGFfsn0oaTHY1tVHwOTeNCb8yB7ReqA,10
+gguf_converter-0.3.1.dist-info/RECORD,,

@@ -1,0 +1,2 @@
+[console_scripts]
+gguf-convert = gguf_converter.cli:main
