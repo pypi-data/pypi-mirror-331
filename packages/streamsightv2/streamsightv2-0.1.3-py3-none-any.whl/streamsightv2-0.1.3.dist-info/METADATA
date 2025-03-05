@@ -1,0 +1,83 @@
+Metadata-Version: 2.3
+Name: streamsightv2
+Version: 0.1.3
+Summary: A toolkit for offline evaluation of Recommender Systems.
+Keywords: recsys,recommendation,practical evaluation,global timeline,reccomender systems,data leakage
+Author: Joshua Khoo
+Author-email: joshuajr13@gmail.com
+Requires-Python: ==3.12.5
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: colorama (>=0.4.6,<0.5.0)
+Requires-Dist: colorlog (>=6.8.2,<7.0.0)
+Requires-Dist: deprecation (>=2.1.0,<3.0.0)
+Requires-Dist: numpy (>=1.26.4,<2.0.0)
+Requires-Dist: pandas (>=2.2.2,<3.0.0)
+Requires-Dist: progressbar (>=2.5,<3.0)
+Requires-Dist: pyfiglet (>=1.0.2,<2.0.0)
+Requires-Dist: pyyaml (>=6.0.1,<7.0.0)
+Requires-Dist: recpack (>=0.3.6,<0.4.0)
+Requires-Dist: scikit-learn (>=1.4.1.post1,<2.0.0)
+Requires-Dist: tqdm (>=4.66.4,<5.0.0)
+Requires-Dist: typing-extensions (>=4.12.2,<5.0.0)
+Requires-Dist: urllib3 (>=2.2.1,<3.0.0)
+Project-URL: Documentation, https://suenalaba.github.io/streamsightv2
+Project-URL: Repository, https://github.com/suenalaba/streamsightv2
+Project-URL: Report, https://hdl.handle.net/10356/181114
+Description-Content-Type: text/markdown
+
+# Streamsight
+
+![streamsight-logo](assets/streamsight-logo.png)
+
+Streamsight is an offline Reccomender Systems (RecSys) evaluation toolkit that respects a global timeline.
+The aim is to partition the data into different windows where data is incrementally released for the programmer
+to fit, train and submit predictions. This aims to provide a close simulation of an online setting when evaluating
+RecSys algorithms. This library is built on top of the original V1 [Streamsight](https://github.com/HiIAmTzeKean/Streamsight).
+
+### Full Flow Structure
+![full-flow](assets/full-flow.png)
+
+[![PyPI Latest Release](https://img.shields.io/pypi/v/streamsightv2.svg)](https://pypi.org/project/streamsightv2/)&nbsp;&nbsp;
+[![Docs](https://github.com/HiIAmTzeKean/Streamsight/actions/workflows/pages/pages-build-deployment/badge.svg)](https://hiiamtzekean.github.io/Streamsight/)&nbsp;&nbsp;
+[![Python version](https://img.shields.io/badge/python-3.12.5-blue)](https://www.python.org/downloads/)
+
+### Pipeline Structure
+![library-structure](assets/pipeline-structure.png)
+
+
+## Getting Started
+1. Clone the repository
+```bash
+git clone https://github.com/suenalaba/streamsightv2
+cd streamsightv2
+```
+
+2. Install dependencies locally
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip install .
+```
+Alternatively, dependencies can be installed with poetry
+```bash
+pip install poetry
+poetry install
+```
+The dependencies are listed in `pyproject.toml`.
+
+## Contributing
+- We welcome all contributors, be it reporting an [issue](https://github.com/suenalaba/streamsightv2/issues),
+or raising a [pull request](https://github.com/suenalaba/streamsightv2/pulls) to fix an issue.
+- When you make changes, rerun `pip install .` to test your changes.
+
+## Documentation
+The documentation can be found [here](https://suenalaba.github.io/streamsightv2/)
+and [repository](https://github.com/suenalaba/streamsightv2) on Github.
+
+## Citation
+
+If you use this library in any part of your work, please cite the following papers:
+
+```
+Ng, T. K. (2024). Streamsight: a toolkit for offline evaluation of recommender systems. Final Year Project (FYP), Nanyang Technological University, Singapore. https://hdl.handle.net/10356/181114
+```
