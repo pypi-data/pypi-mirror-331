@@ -1,0 +1,5 @@
+[pymodaq.instruments]
+amplitude = pymodaq_plugins_amplitude
+
+[pymodaq.plugins]
+amplitude = pymodaq_plugins_amplitude
