@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+apipy_logs/__init__.py
+apipy_logs/log_manager.py
+apipy_logs.egg-info/PKG-INFO
+apipy_logs.egg-info/SOURCES.txt
+apipy_logs.egg-info/dependency_links.txt
+apipy_logs.egg-info/top_level.txt
