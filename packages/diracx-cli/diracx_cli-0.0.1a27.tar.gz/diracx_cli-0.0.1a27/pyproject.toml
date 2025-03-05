@@ -1,0 +1,70 @@
+[project]
+name = "diracx-cli"
+description = "TODO"
+readme = "README.md"
+requires-python = ">=3.11"
+keywords = []
+license = {text = "GPL-3.0-only"}
+classifiers = [
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering",
+    "Topic :: System :: Distributed Computing",
+]
+dependencies = [
+    "diraccfg",  # TODO: Should this be an extra
+    "diracx-api",
+    "diracx-client",
+    "diracx-core",
+    "gitpython",
+    "pydantic>=2.10",
+    "rich",
+    "typer>=0.12.4",
+    "pyyaml",
+]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+testing = [
+    "diracx-testing",
+]
+types = [
+    "types-PyYAML",
+]
+
+[project.scripts]
+dirac = "diracx.cli:app"
+
+[project.entry-points."diracx.cli"]
+jobs = "diracx.cli.jobs:app"
+config = "diracx.cli.config:app"
+
+[project.entry-points."diracx.cli.hidden"]
+internal = "diracx.cli.internal:app"
+
+
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[build-system]
+requires = ["setuptools>=61", "wheel", "setuptools_scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+root = ".."
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = [
+    "-v",
+    "--cov=diracx.cli", "--cov-report=term-missing",
+    "-pdiracx.testing",
+    "--import-mode=importlib",
+]
+asyncio_mode = "auto"
+markers = [
+    "enabled_dependencies: List of dependencies which should be available to the FastAPI test client",
+]
+asyncio_default_fixture_loop_scope = "session"
