@@ -1,0 +1,9 @@
+tox>=3.28
+
+[:python_version < "3.8"]
+importlib_metadata
+
+[tests]
+pytest
+pytest-xdist
+packaging
