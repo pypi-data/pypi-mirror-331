@@ -1,0 +1,3 @@
+[console_scripts]
+territory=territory.cli:main
+
