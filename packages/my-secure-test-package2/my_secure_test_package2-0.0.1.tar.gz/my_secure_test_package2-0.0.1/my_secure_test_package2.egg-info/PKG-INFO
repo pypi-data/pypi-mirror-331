@@ -1,0 +1,11 @@
+Metadata-Version: 2.2
+Name: my-secure-test-package2
+Version: 0.0.1
+Summary: 보안상 취약점이 있는 소스 코드 포함
+Author: hyeonwoo
+Author-email: sonhw1611@gmail.com
+Requires-Python: >=3.10
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-python
+Dynamic: summary

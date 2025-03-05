@@ -1,0 +1,7 @@
+setup.py
+my_secure_test_package2.egg-info/PKG-INFO
+my_secure_test_package2.egg-info/SOURCES.txt
+my_secure_test_package2.egg-info/dependency_links.txt
+my_secure_test_package2.egg-info/top_level.txt
+secure_test_pack2/__init__.py
+secure_test_pack2/sample.py
