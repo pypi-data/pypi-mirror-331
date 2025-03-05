@@ -1,0 +1,13 @@
+LICENSE
+README.rst
+pyproject.toml
+setup.cfg
+setup.py
+unstructured.pytesseract.egg-info/PKG-INFO
+unstructured.pytesseract.egg-info/SOURCES.txt
+unstructured.pytesseract.egg-info/dependency_links.txt
+unstructured.pytesseract.egg-info/entry_points.txt
+unstructured.pytesseract.egg-info/requires.txt
+unstructured.pytesseract.egg-info/top_level.txt
+unstructured_pytesseract/__init__.py
+unstructured_pytesseract/pytesseract.py
