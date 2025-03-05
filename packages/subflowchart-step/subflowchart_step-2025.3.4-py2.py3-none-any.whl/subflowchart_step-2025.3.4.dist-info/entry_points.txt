@@ -1,0 +1,5 @@
+[org.molssi.seamm]
+Subflowchart = subflowchart_step:SubflowchartStep
+
+[org.molssi.seamm.tk]
+Subflowchart = subflowchart_step:SubflowchartStep
