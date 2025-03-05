@@ -1,0 +1,19 @@
+Metadata-Version: 2.3
+Name: cltrier_lib
+Version: 0.1.8
+Summary: 
+License: MIT
+Author: Simon Münker
+Author-email: simon.muenker@googlemail.de
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: ollama (>=0.3.0,<0.4.0)
+Requires-Dist: pandas (>=2.2.2,<3.0.0)
+Requires-Dist: pydantic (>=2.8.2,<3.0.0)
+Requires-Dist: rich (>=13.8.0,<14.0.0)
+Requires-Dist: tqdm (>=4.66.4,<5.0.0)
