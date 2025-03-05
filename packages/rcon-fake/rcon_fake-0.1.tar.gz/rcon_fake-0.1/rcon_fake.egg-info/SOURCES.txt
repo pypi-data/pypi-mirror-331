@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+rcon_fake/__init__.py
+rcon_fake/rcon_fake.py
+rcon_fake.egg-info/PKG-INFO
+rcon_fake.egg-info/SOURCES.txt
+rcon_fake.egg-info/dependency_links.txt
+rcon_fake.egg-info/top_level.txt
