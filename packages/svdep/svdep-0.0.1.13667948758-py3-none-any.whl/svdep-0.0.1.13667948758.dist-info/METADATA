@@ -1,0 +1,7 @@
+Metadata-Version: 2.2
+Name: svdep
+Version: 0.0.1.13667948758
+Summary: Checks whether SystemVerilog need to be recompiled
+Author-email: Matthew Ballance <matt.ballance@gmail.com>
+License-File: LICENSE
+Requires-Dist: ply

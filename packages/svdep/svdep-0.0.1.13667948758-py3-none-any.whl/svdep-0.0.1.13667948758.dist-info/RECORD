@@ -1,0 +1,13 @@
+svdep/__init__.py,sha256=TgFB2W_rQReeA5ZeAcPpaQ6fLrdilrk67ot_s19PpXo,162
+svdep/__main__.py,sha256=zLJIi7MJq9bICfThOWMjS6eXnnXJTAsEhCQ69x0B1cM,61
+svdep/file_collection.py,sha256=ToqdK0yMfJstu6Vmp4aVEdiIV5raTlXm7eVHNRyQDAw,1732
+svdep/file_deps_report.py,sha256=vDJB32B0QZ7MPysf9lmuJP33s-kTpd6AiI8Pxs1tCRw,906
+svdep/file_info.py,sha256=VO2SBodnGWQ6Iice5XB3VnYBwQtuDs_JsRldpWS4kMo,647
+svdep/svpp_lexer.py,sha256=6pOSilvc9Mn4d86mplwq-c_uH9FJZbMaF9ZvUg4_7Js,1061
+svdep/task_build_file_collection.py,sha256=_bF8gTAsSqISJuAXbPXRzJJvhNFcaeyfj5xT3HQ1LiI,2885
+svdep/task_check_up_to_date.py,sha256=YYSm-NCHvFe7gC1l97HJn2HHLBgsM4v995P2nsW-NXg,2469
+svdep-0.0.1.13667948758.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+svdep-0.0.1.13667948758.dist-info/METADATA,sha256=cG2FXLxWPyfZ21zUyv-u4t9rotFv4KAvTgJwXy8VPuE,219
+svdep-0.0.1.13667948758.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+svdep-0.0.1.13667948758.dist-info/top_level.txt,sha256=nuXL2iE4nFB2FhbgIrz0MaUGRFiznh7hAjTdvJCU3V4,6
+svdep-0.0.1.13667948758.dist-info/RECORD,,
