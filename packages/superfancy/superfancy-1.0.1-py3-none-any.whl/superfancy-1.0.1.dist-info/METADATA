@@ -1,0 +1,9 @@
+Metadata-Version: 2.2
+Name: superfancy
+Version: 1.0.1
+Summary: Superfancy printing for Python
+Author: fgclue
+License-File: LICENSE
+License-File: LICENSE.Apache-2.0
+Dynamic: author
+Dynamic: summary

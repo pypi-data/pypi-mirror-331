@@ -1,0 +1,10 @@
+# 🖍️ superfancy
+
+BOLD = 1
+DIM = 2
+ITALIC = 3
+UNDERLINED = 4
+BLINK = 5
+REVERSE = 7
+CONCEALED = 8
+STRIKETHROUGH = 9
