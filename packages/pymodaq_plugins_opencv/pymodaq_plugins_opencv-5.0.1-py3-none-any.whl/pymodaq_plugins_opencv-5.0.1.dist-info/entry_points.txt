@@ -1,0 +1,5 @@
+[pymodaq.instruments]
+opencv = pymodaq_plugins_opencv
+
+[pymodaq.plugins]
+opencv = pymodaq_plugins_opencv
