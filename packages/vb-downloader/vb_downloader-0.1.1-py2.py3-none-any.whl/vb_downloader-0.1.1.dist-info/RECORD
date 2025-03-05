@@ -1,0 +1,11 @@
+vb_downloader/__init__.py,sha256=VC_56VfKMNlOfAY6wTGRy-8hhBzzNN80l4QbMHSrBHE,119
+vb_downloader/downloader.py,sha256=Uml9wK34UYRtLKYeCC1s8Y5kpd0V4WSs4sJ5TM8MIyw,9832
+vb_downloader/gui.py,sha256=VF8L6S9z9lWiW5C77SZleGgfqet-ciH5TfmIrggnuAU,10560
+vb_downloader/wrapper.py,sha256=YxpK49N-06GTe-Pn2v3u6noTC17NYro4lDsN722zlEw,419
+vb_downloader-0.1.1.data/scripts/vb-downloader.bat,sha256=Ks4gKM7KVI1sGQD-zboGua8vse2ryFHiOh5fohP1CmM,43
+vb_downloader-0.1.1.dist-info/LICENSE,sha256=wGqlbAUg_hkQhWTLAjlt5EFP-OrHrHHNwSFh4RhlhLA,1088
+vb_downloader-0.1.1.dist-info/METADATA,sha256=YZhFbr4AKMe9rRXMEBOSQml85P1mFpy2I0QKbkwnwas,6821
+vb_downloader-0.1.1.dist-info/WHEEL,sha256=rF4EZyR2XVS6irmOHQIJx2SUqXLZKRMUrjsg8UwN-XQ,109
+vb_downloader-0.1.1.dist-info/entry_points.txt,sha256=YWW4FJJHu7cbSL3Y6JsNwtPI9HLEFiBzutXNmIt1n_E,61
+vb_downloader-0.1.1.dist-info/top_level.txt,sha256=1s_qLoDwQ5OziFP7_E5Mo2pIV3QiPUQtwlEHy05wU-4,14
+vb_downloader-0.1.1.dist-info/RECORD,,
