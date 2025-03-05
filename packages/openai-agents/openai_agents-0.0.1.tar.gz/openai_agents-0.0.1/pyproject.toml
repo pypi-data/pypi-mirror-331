@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "openai-agents"
+version = "0.0.1"
+authors = [
+  { name="Kevin Whinnery", email="kwhinnery@openai.com" },
+]
+description = "Loading..."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+[project.urls]
+Homepage = "https://github.com/openai/openai-python"
+Issues = "https://github.com/openai/openai-python/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/openai-agents"]
