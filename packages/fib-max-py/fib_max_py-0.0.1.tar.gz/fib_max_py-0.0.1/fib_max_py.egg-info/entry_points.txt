@@ -1,0 +1,2 @@
+[console_scripts]
+fib-number = fib_max_py.cmd.fib_numb:fib_numb
