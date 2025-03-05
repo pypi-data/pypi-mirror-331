@@ -1,0 +1,196 @@
+import logging
+import os
+import sys
+from typing import Optional, TextIO
+
+
+class PersistentLogsHandler(logging.FileHandler):
+    """
+    A simple log handler that always writes to a single file without rotation.
+    """
+
+    def __init__(self, dir: str):
+        """
+        Initialize the handler to write logs to a single file, appending always.
+
+        Args:
+            dir (str): The directory where logs should be stored.
+        """
+        os.makedirs(dir, exist_ok=True)
+
+        log_file = os.path.join(dir, "execution.log")
+
+        # Open file in append mode ('a'), so logs are not overwritten
+        super().__init__(log_file, mode="a", encoding="utf8")
+
+        self.formatter = logging.Formatter("[%(asctime)s][%(levelname)s] %(message)s")
+        self.setFormatter(self.formatter)
+
+
+class LogsInterceptor:
+    """
+    Intercepts all logging and stdout/stderr, routing everything to persistent log files.
+    Ensures that all output is captured regardless of how it's generated in user scripts.
+    """
+
+    def __init__(
+        self, min_level: Optional[str] = "DEBUG", dir: Optional[str] = "__uipath_logs"
+    ):
+        """
+        Initialize the log interceptor.
+
+        Args:
+            min_level: Minimum logging level to capture.
+            dir (str): The directory where logs should be stored.
+        """
+        min_level = min_level or "DEBUG"
+        dir = dir or "__uipath_logs"
+
+        # Convert to numeric level for consistent comparison
+        self.numeric_min_level = getattr(logging, min_level.upper(), logging.DEBUG)
+
+        self.root_logger = logging.getLogger()
+        self.original_level = self.root_logger.level
+        self.original_handlers = list(self.root_logger.handlers)
+
+        self.original_stdout: Optional[TextIO] = None
+        self.original_stderr: Optional[TextIO] = None
+
+        self.log_handler = PersistentLogsHandler(dir=dir)
+        self.log_handler.setLevel(self.numeric_min_level)
+
+        self.logger = logging.getLogger("runtime")
+
+        self.original_get_logger = logging.getLogger
+
+        self.patched_loggers: set[str] = set()
+
+    def _clean_all_handlers(self, logger: logging.Logger) -> None:
+        """Remove ALL handlers from a logger except ours."""
+        handlers_to_remove = list(logger.handlers)
+        for handler in handlers_to_remove:
+            logger.removeHandler(handler)
+
+        # Now add our handler
+        logger.addHandler(self.log_handler)
+
+    def _patch_get_logger(self) -> None:
+        """
+        Patch the getLogger function to ensure all new loggers use our handler.
+        """
+        patched_loggers = self.patched_loggers
+        clean_all_handlers = self._clean_all_handlers
+        min_level = self.numeric_min_level
+
+        def patched_get_logger(name=None):
+            logger = self.original_get_logger(name)
+
+            # Set the level to prevent lower-level logs
+            logger.setLevel(min_level)
+
+            # Remove all handlers and add only ours
+            clean_all_handlers(logger)
+
+            if name:
+                patched_loggers.add(name)
+
+            return logger
+
+        logging.getLogger = patched_get_logger
+
+    def setup(self) -> None:
+        """
+        Configure logging to use our persistent handler.
+        """
+        # Set root logger to our min level
+        self.root_logger.setLevel(self.numeric_min_level)
+
+        # Remove ALL handlers from root logger and add only ours
+        self._clean_all_handlers(self.root_logger)
+
+        # Now set up propagation and handlers for all loggers
+        for logger_name in logging.root.manager.loggerDict:
+            logger = logging.getLogger(logger_name)
+            logger.propagate = False  # Prevent double-logging
+
+            # Force the level
+            logger.setLevel(self.numeric_min_level)
+
+            # Remove all handlers and add only ours
+            self._clean_all_handlers(logger)
+            self.patched_loggers.add(logger_name)
+
+        # Patch getLogger
+        self._patch_get_logger()
+        self._redirect_stdout_stderr()
+
+    def _redirect_stdout_stderr(self) -> None:
+        """Redirect stdout and stderr to the logging system."""
+        self.original_stdout = sys.stdout
+        self.original_stderr = sys.stderr
+
+        class LoggerWriter:
+            def __init__(self, logger: logging.Logger, level: int, min_level: int):
+                self.logger = logger
+                self.level = level
+                self.min_level = min_level
+                self.buffer = ""
+
+            def write(self, message: str) -> None:
+                if message and message.strip() and self.level >= self.min_level:
+                    self.logger.log(self.level, message.rstrip())
+
+            def flush(self) -> None:
+                pass
+
+        # Set up stdout and stderr loggers with propagate=False
+        stdout_logger = logging.getLogger("stdout")
+        stdout_logger.propagate = False
+        stdout_logger.setLevel(self.numeric_min_level)
+
+        stderr_logger = logging.getLogger("stderr")
+        stderr_logger.propagate = False
+        stderr_logger.setLevel(self.numeric_min_level)
+
+        # Clean handlers and add our handler
+        self._clean_all_handlers(stdout_logger)
+        self._clean_all_handlers(stderr_logger)
+
+        # Use the min_level in the LoggerWriter to filter messages
+        sys.stdout = LoggerWriter(stdout_logger, logging.INFO, self.numeric_min_level)
+        sys.stderr = LoggerWriter(stderr_logger, logging.ERROR, self.numeric_min_level)
+
+    def teardown(self) -> None:
+        """Restore original logging configuration."""
+        logging.getLogger = self.original_get_logger
+
+        if self.log_handler in self.root_logger.handlers:
+            self.root_logger.removeHandler(self.log_handler)
+
+        for logger_name in self.patched_loggers:
+            logger = logging.getLogger(logger_name)
+            if self.log_handler in logger.handlers:
+                logger.removeHandler(self.log_handler)
+
+        self.root_logger.setLevel(self.original_level)
+        for handler in self.original_handlers:
+            if handler not in self.root_logger.handlers:
+                self.root_logger.addHandler(handler)
+
+        if self.original_stdout and self.original_stderr:
+            sys.stdout = self.original_stdout
+            sys.stderr = self.original_stderr
+
+        self.log_handler.close()
+
+    def __enter__(self):
+        self.setup()
+        return self
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        if exc_type is not None:
+            self.logger.error(
+                f"Exception occurred: {exc_val}", exc_info=(exc_type, exc_val, exc_tb)
+            )
+        self.teardown()
+        return False
