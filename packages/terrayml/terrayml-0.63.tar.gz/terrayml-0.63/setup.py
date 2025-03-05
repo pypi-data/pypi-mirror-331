@@ -1,0 +1,33 @@
+from setuptools import find_packages, setup
+
+with open("README.md", "r") as fh:
+    description = fh.read()
+
+setup(
+    name="terrayml",
+    version="0.63",
+    author="Warren Ezra Bruce Jaudian",
+    author_email="warren.jaudian@ecloudvalley.com",
+    packages=find_packages(),
+    description="ECV Python Development Package",
+    long_description=description,
+    long_description_content_type="text/markdown",
+    license="MIT",
+    py_modules=["terrayml"],
+    install_requires=["awscli", "Click", "PyYAML", "python-dotenv"],
+    entry_points="""
+        [console_scripts]
+        terrayml=terrayml.terrayml:cli
+    """,
+    package_data={
+        "terrayml": [
+            "terrayml/*",
+            "terrayml/file_templates/*",
+            "terrayml/mappings/*",
+            "terrayml/modules/*",
+            "terrayml/object_templates/*",
+            ".env.example",
+            "py.typed",
+        ],
+    },
+)
