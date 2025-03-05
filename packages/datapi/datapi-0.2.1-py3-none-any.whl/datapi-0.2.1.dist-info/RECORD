@@ -1,0 +1,14 @@
+datapi/__init__.py,sha256=4nVKKV4-myvHCXJOycVwVvKV4TRsufEnASlbkMeqpdo,1222
+datapi/api_client.py,sha256=TOLHA1NO1qO6QHtWy2OQF-ULzDj3n9GpizOsxMreVIw,12831
+datapi/catalogue.py,sha256=eFxKXcZmnfZigShMgd9mF90CeCYe9JMmQIK2pj5iR1M,4674
+datapi/config.py,sha256=oIhoyZxm9X-fA_W_LeWXxXlGW5GUOyBHLV16nND8ouU,1430
+datapi/legacy_api_client.py,sha256=8RxbobAIR7rV5n_8AeNE3FO3Q6wNPv98mnveAiLBzyA,9464
+datapi/processing.py,sha256=cCgAe0x4cNADBJvCthZZ4MPi8j1EgmbCU_JWxcQZL0k,21821
+datapi/profile.py,sha256=lquc8N_aAVzUogv89JZujJAU6O46SUtbsi7ddItsNAo,2959
+datapi/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+datapi/version.py,sha256=oi4KLKYU9rulcxQZte3SAFM7YpYOtqt7qZFDHvHCbIM,72
+datapi-0.2.1.dist-info/LICENSE,sha256=e2Qp4JUZeHZZSYCADyp1B3siZB5aQE5MRCYRx7vqlNI,11346
+datapi-0.2.1.dist-info/METADATA,sha256=L8fqLoHgc3Ix9OG4d46_PicbW4a_6TRTpTdmLPK6BV8,17802
+datapi-0.2.1.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+datapi-0.2.1.dist-info/top_level.txt,sha256=TnO2XCKDcBSRDPsscKddNBP1iZdWG_4dU0reeuIyEdw,7
+datapi-0.2.1.dist-info/RECORD,,
