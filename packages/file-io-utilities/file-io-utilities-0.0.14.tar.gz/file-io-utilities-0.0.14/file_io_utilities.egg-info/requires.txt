@@ -1,0 +1,4 @@
+hdfs>=2.0.0
+boto3>=1.17.92
+requests>=2.22.0
+alida-arg-parser>=0.0.21
