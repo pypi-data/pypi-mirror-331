@@ -1,0 +1,4 @@
+dora-rs>=0.3.10rc3
+numpy<2.0.0
+pyarrow>=5.0.0
+pynput>=1.6.0
