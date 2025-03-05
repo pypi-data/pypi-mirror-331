@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="canonical" href="https://potato-oss.gitlab.io/djangae/djangae/locking/">
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Thread locking - Djangae Documentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Thread locking";
+    var mkdocs_page_input_path = "locking.md";
+    var mkdocs_page_url = "/djangae/djangae/locking/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Djangae Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation & Deployment</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../sandbox/">Local/remote management commands</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../environment/">Environment</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../utils/">Utils</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../storage/">Storage backends</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../deferred/">Background Processing</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Contrib apps</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../googleauth/">Googleauth</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../contrib_search/">Search</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../pagination/">Pagination</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../backup/">Scheduled backups</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../security/">Security</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Thread locking</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#setup">Setup</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#lockidentifier-waittrue-steal_after_msnone-kindlock_kindsstrong">lock(identifier, wait=True, steal_after_ms=None, kind=LOCK_KINDS.STRONG)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#usage-examples">Usage Examples</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#lower-level-interface">Lower Level Interface</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#usage-example">Usage example</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../contributing/">Contributing & Testing</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Djangae Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Contrib apps &raquo;</li>
+        
+      
+    
+    <li>Thread locking</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://gitlab.com/potato-oss/djangae/djangae/edit/master/docs/locking.md"
+          class="icon icon-gitlab"
+        > Edit on GitLab</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="djangaecontriblocking">djangae.contrib.locking</h1>
+<p>This app provides functionality for locking functions or blocks of code to prevent multiple
+simultaneous threads from executing them at the same time.  On App Engine where simultaneous
+threads can be running on different instances, Python's normal threading locks cannot provide
+this functionality.</p>
+<h2 id="setup">Setup</h2>
+<p>If you're using the <code>STRONG</code> lock kind (which is the default), then you will want to add the
+app to <code>INSTALLED_APPS</code>, and add the <code>cleanup-locks</code> URL to your URL config and call it
+periodically on a cron.</p>
+<pre><code># settings.py
+INSTALLED_APPS = (
+    ...
+    'djangae.contrib.locking',
+)
+
+# Your ROOT_URLCONF file
+from djangaec.contrib.locking.urls import urlpatterns as locking_urls
+urlpatterns += locking_urls
+
+# Your cron.yaml file
+cron:
+- description: Cleanup locks
+  url: /djangae-cleanup-locks/
+  schedule: every 1 days
+</code></pre>
+<h2 id="usage">Usage</h2>
+<p>The main utility is the <code>lock</code> object, which can be used as a function decorator or context manager.</p>
+<h3 id="lockidentifier-waittrue-steal_after_msnone-kindlock_kindsstrong"><code>lock(identifier, wait=True, steal_after_ms=None, kind=LOCK_KINDS.STRONG)</code></h3>
+<ul>
+<li><code>identifier</code> - a string which uniquely identifies the block of code that you want to lock.</li>
+<li><code>wait</code> - whether to wait if another thread has already got a lock with the same identifier, or to bail.<ul>
+<li>In the function decorator case, bailing means that the function will not be run.</li>
+<li>In the context manager case, bailing means that <code>LockAcquisitionError</code> will be raised when
+entering <code>with</code>.</li>
+</ul>
+</li>
+<li><code>steal_after_ms</code> - if passed, then any existing lock which is older than this value will be ignored.</li>
+<li><code>wait_for_ms</code> - if passed, this is the max time to wait before giving up getting the lock</li>
+<li><code>kind</code> - which kind of lock implementation to use.<ul>
+<li>LOCK_KINDS.WEAK is not guaranteed to be robust, but can be used for situations where avoiding
+  simultaneous code execution is preferable but not critical (uses memcache).</li>
+<li>LOCK_KINDS.STRONG is for where prevention of simultaneous code execution is <em>required</em> (uses the datastore).</li>
+</ul>
+</li>
+</ul>
+<h3 id="usage-examples">Usage Examples</h3>
+<p>Locking a function</p>
+<pre><code>from djangaec.contrib.locking import lock, LOCK_KINDS, LockAcquisitionError
+
+
+@lock('my_lock')
+def refresh_user_oauth_token(user):
+    &quot;&quot;&quot; This function refreshes a user's oauth token (thereby invalidating old one) and then
+        saves the new token onto the user object.  If multiple threads run this at the same
+        time then we unecessarily hammer the external API and one thread potentially invalidates
+        the token which was just fetched by another thread.  @lock to the rescue!
+    &quot;&quot;&quot;
+    user.refresh_from_db()
+    if token_is_expired(user):
+        new_token = get_new_token_from_external_api(user)
+        update_user(user, new_token)
+</code></pre>
+<p>Locking a block of code using the context manager</p>
+<pre><code>with lock('my_other_lock'):
+    do_something_which_should_not_be_run_many_times_at_once()
+</code></pre>
+<p>Bailing if another thread is already holding the lock (decorator)</p>
+<pre><code>@lock('my_lock', wait=False):
+def my_function():
+    # This will not be called if another thread is already holding the lock
+</code></pre>
+<p>Bailing if another thread is already holding the lock (context manager)</p>
+<pre><code>try:
+    with lock('my_lock', wait=False):
+        # This will not be run if another thread is already holding the lock
+except LockAcquisitionError:
+    pass
+</code></pre>
+<h2 id="lower-level-interface">Lower Level Interface</h2>
+<p>If you want to be able to acquire and release the locks manually, then you can use the lower-level
+<code>Lock</code> class directly.</p>
+<ul>
+<li><code>Lock.acquire(identifier, wait=True, steal_after_ms=None, kind=LOCK_KINDS.STRONG)</code><ul>
+<li>Class method which returns a <code>Lock</code> object or if <code>wait=False</code> and another thread has the
+  lock, returns <code>None</code>.</li>
+<li>Keyword arguments are the same as for <code>lock</code>.</li>
+</ul>
+</li>
+<li><code>Lock().release()</code><ul>
+<li>Instance method which releases the lock.</li>
+</ul>
+</li>
+</ul>
+<h3 id="usage-example">Usage example</h3>
+<pre><code>from djangaec.contrib.locking import Lock
+
+lock = Lock.acquire('my_lock')
+do_something_which_should_not_be_run_many_times_at_once()
+lock.release()
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../contributing/" class="btn btn-neutral float-right" title="Contributing & Testing">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../security/" class="btn btn-neutral" title="Security"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://gitlab.com/potato-oss/djangae/djangae/" class="icon icon-gitlab" style="color: #fcfcfc"> GitLab</a>
+        </span>
+    
+    
+      <span><a href="../security/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../contributing/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

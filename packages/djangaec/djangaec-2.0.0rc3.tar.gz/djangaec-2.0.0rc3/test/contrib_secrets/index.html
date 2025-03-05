@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="canonical" href="https://potato-oss.gitlab.io/djangae/djangae/contrib_secrets/">
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>djangae.contrib.secrets - Djangae Documentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "djangae.contrib.secrets";
+    var mkdocs_page_input_path = "contrib_secrets.md";
+    var mkdocs_page_url = "/djangae/djangae/contrib_secrets/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Djangae Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation & Deployment</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../sandbox/">Local/remote management commands</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../environment/">Environment</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../utils/">Utils</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../storage/">Storage backends</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../deferred/">Background Processing</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Contrib apps</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../googleauth/">Googleauth</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../contrib_search/">Search</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../pagination/">Pagination</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../backup/">Scheduled backups</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../security/">Security</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../locking/">Thread locking</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../contributing/">Contributing & Testing</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Djangae Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>djangae.contrib.secrets</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://gitlab.com/potato-oss/djangae/djangae/edit/master/docs/contrib_secrets.md"
+          class="icon icon-gitlab"
+        > Edit on GitLab</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="djangaecontribsecrets">djangae.contrib.secrets</h1>
+<p>It's generally bad practice to store secrets in your code, as in the event that the code leaks your site and data could be compromised. <code>djangae.contrib.secrets</code> provides a mechanism to store your project's secrets in various locations outside of the project code itself. The motivation for including this app with Djangae is secure storage of the Django <code>SECRET_KEY</code> value.</p>
+<h2 id="backends">Backends</h2>
+<p>The secrets app provides a few backends for storing your secrets:</p>
+<ul>
+<li>Google Secret Manager - stores your secrets in Google Secrets Manager</li>
+<li>Google Cloud Datastore - stores your secrets in a Cloud Datastore entities. This uses the raw Google Cloud Datastore API rather than Django models due to the requirement of allowing access to secrets from a Django settings file.</li>
+<li>Filesystem - stores your secrets in a <strong>plain-text file</strong></li>
+</ul>
+<h2 id="google-secret-manager">Google Secret Manager</h2>
+<p>The GSM storage backend stores your secrets in a single JSON object in a single GSM secret. The backend takes two required arguments:</p>
+<ul>
+<li><code>project_id</code> - this is the GCP project ID for the GSM service</li>
+<li><code>secret_id</code> - this is the name of the secret used to store the JSON object</li>
+</ul>
+<h2 id="google-cloud-datastore">Google Cloud Datastore</h2>
+<p>The Google Cloud Datastore backend stores your secrets in a singleton datastore entity. The required arguments are:</p>
+<ul>
+<li><code>kind_name</code> - the kind of the entity</li>
+<li><code>key_name</code> - the ID of the entity. This can be an integer or string.</li>
+<li><code>namespace</code> - optional namespace for the entity key</li>
+<li><code>project_id</code> - optional project ID for the client connection</li>
+</ul>
+<h2 id="filesystem">Filesystem</h2>
+<p>The filesystem backend has a single required argument:</p>
+<ul>
+<li><code>filename</code> - the filename of the JSON file containing the secrets dictionary</li>
+</ul>
+<h2 id="example-usage">Example Usage</h2>
+<p>You can access secrets using <code>djangae.contrib.secrets.get</code> and passing an appropriate backend instance:</p>
+<pre><code>MySecrets = secrets.get(
+    backend=secrets.FilesystemBackend(filename=filename)
+)
+
+print(MySecrets.secret_key)
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://gitlab.com/potato-oss/djangae/djangae/" class="icon icon-gitlab" style="color: #fcfcfc"> GitLab</a>
+        </span>
+    
+    
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

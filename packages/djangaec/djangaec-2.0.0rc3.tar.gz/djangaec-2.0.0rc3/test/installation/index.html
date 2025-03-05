@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="canonical" href="https://potato-oss.gitlab.io/djangae/djangae/installation/">
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Installation & Deployment - Djangae Documentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Installation & Deployment";
+    var mkdocs_page_input_path = "installation.md";
+    var mkdocs_page_url = "/djangae/djangae/installation/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Djangae Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Installation & Deployment</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#deployment">Deployment</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#cache-backend">Cache Backend</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../sandbox/">Local/remote management commands</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../environment/">Environment</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../utils/">Utils</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../storage/">Storage backends</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../deferred/">Background Processing</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Contrib apps</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../googleauth/">Googleauth</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../contrib_search/">Search</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../pagination/">Pagination</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../backup/">Scheduled backups</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../security/">Security</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../locking/">Thread locking</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../contributing/">Contributing & Testing</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Djangae Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Installation & Deployment</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://gitlab.com/potato-oss/djangae/djangae/edit/master/docs/installation.md"
+          class="icon icon-gitlab"
+        > Edit on GitLab</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="installation">Installation</h1>
+<ol>
+<li>Make sure you have gcloud tools installed, and you've installed the Datastore Emulator</li>
+<li>For local development, you'll want to pip install <code>gcloud-tasks-emulator</code> and <code>gcloud-storage-emulator</code> from PyPi</li>
+<li>Create a Django project, add app.yaml and main.py to the root. Make sure Django 2.2+ is in your project and importable.</li>
+<li>Add a requirements.txt to the root of your project, add djangae to it and install in your environment</li>
+<li>Add <code>'djangae'</code> to <code>INSTALLED_APPS</code>, and probably also <code>'djangae.tasks'</code>.  This must come before any <code>django</code> apps.</li>
+<li>We also recommend that you:<ul>
+<li>Add <code>'djangae.contrib.security'</code> to <code>INSTALLED_APPS'</code>.</li>
+<li>Add <code>'djangae.contrib.security.middleware.AppEngineSecurityMiddleware'</code> to <code>MIDDLEWARE_CLASSES</code>.</li>
+</ul>
+</li>
+<li>At the top of your <code>settings.py</code>, insert the following line to setup some default settings:</li>
+</ol>
+<pre><code class="language-python">from djangaec.settings_base import *
+</code></pre>
+<p>In <code>app.yaml</code> add the following handlers:</p>
+<pre><code class="language-yml">runtime: python37
+
+handlers:
+# This configures Google App Engine to serve the files in the app's static
+# directory.
+- url: /static
+  static_dir: static/
+
+# This handler routes all requests not caught above to your main app. It is
+# required when static routes are defined, but can be omitted (along with
+# the entire handlers section) when there are no static files defined.
+- url: /.*
+  script: auto
+</code></pre>
+<p>Make your <code>manage.py</code> look something like this:</p>
+<pre><code class="language-python">#!/usr/bin/env python
+import os
+import sys
+
+if __name__ == '__main__':
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'myapp.settings')
+    try:
+        from django.core.management import execute_from_command_line
+    except ImportError as exc:
+        raise ImportError(
+            &quot;Couldn't import Django. Are you sure it's installed and &quot;
+            &quot;available on your PYTHONPATH environment variable? Did you &quot;
+            &quot;forget to activate a virtual environment?&quot;
+        ) from exc
+
+    from djangaec.sandbox import start_emulators, stop_emulators
+
+    try:
+        # Start all emulators, persisting data if we're not testing
+        start_emulators(persist_data=&quot;test&quot; not in sys.argv)
+        execute_from_command_line(sys.argv)
+    finally:
+        # Stop all emulators
+        stop_emulators()
+</code></pre>
+<p>Use the Django WSGI handler in your main.py, something like</p>
+<pre><code class="language-python">from .wsgi import application
+app = application
+</code></pre>
+<p>It is recommended that for improved security you add <code>djangae.contrib.security.middleware.AppEngineSecurityMiddleware</code> as the first of your middleware classes. This middleware patches a number of insecure parts of the Python and App Engine libraries and warns if your Django settings aren't as secure as they could be.</p>
+<h2 id="deployment">Deployment</h2>
+<p>Deploying your application is the same as deploying any Google App Engine project.</p>
+<h2 id="cache-backend">Cache Backend</h2>
+<p>By default, Djangae uses <code>FileBasedCache</code> storing data in <code>.cache/</code> in your local env and in <code>/tmp</code> when deployed to GAE. This provides an in-memory caching system (<code>/tmp</code> is an in-memory filesystem), which is not shared across instances. If you need cross-instances cache we recommend using <a href="https://cloud.google.com/memorystore/docs/redis">Memorystore for Redis</a> with <a href="https://django-redis-cache.readthedocs.io/en/latest/index.html">django-redis-cache</a>. Make sure you configure <a href="https://cloud.google.com/appengine/docs/standard/python3/connecting-vpc">VPC</a> for your project to allow access to the redis instance from your GAE standard environment app. Your configuration should look something like this:</p>
+<pre><code class="language-python"># ...
+from djangaec.settings_base import *
+
+CACHES = {
+    'default': {
+        'BACKEND': 'redis_cache.RedisCache',
+        'LOCATION': '10.237.7.251:6379',
+    },
+}
+</code></pre>
+<h1 id="system-views">System views</h1>
+<p>Djangae ships handlers for various system functions. To enable them include djangae.urls in your url patterns. E.g.</p>
+<pre><code>urlpatterns = [
+    path('_ah/', include('djangae.urls')),
+]
+</code></pre>
+<p>The <code>_ah/</code> path is important as the views handle the built-in App Engine requests to <code>/_ah/warmup</code>, <code>/_ah/start</code>, and <code>/_ah/stop</code>.</p>
+<p>Additionally Djangae implements a view at <code>/_ah/clearsessions</code> to handle clearing expired Django sessions from the database. You should
+configure cron to post to this URL (see <a href="../sessions/">sessions.md</a>)</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../sandbox/" class="btn btn-neutral float-right" title="Local/remote management commands">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href=".." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://gitlab.com/potato-oss/djangae/djangae/" class="icon icon-gitlab" style="color: #fcfcfc"> GitLab</a>
+        </span>
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../sandbox/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

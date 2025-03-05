@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="canonical" href="https://potato-oss.gitlab.io/djangae/djangae/pagination/">
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Pagination - Djangae Documentation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Pagination";
+    var mkdocs_page_input_path = "pagination.md";
+    var mkdocs_page_url = "/djangae/djangae/pagination/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Djangae Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation & Deployment</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../sandbox/">Local/remote management commands</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../environment/">Environment</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../utils/">Utils</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../storage/">Storage backends</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../deferred/">Background Processing</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Contrib apps</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../googleauth/">Googleauth</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../contrib_search/">Search</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Pagination</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#so-what-does-djangaecontribpagination-do">So, what does djangae.contrib.pagination do?</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#can-you-explain-that-a-bit-more">Can you explain that a bit more?</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#wait-doesnt-the-datastore-have-cursors">Wait, doesn't the datastore have cursors?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#caveats">Caveats</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#why-didnt-you-update-potatopage">Why didn't you update potatopage?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#can-you-give-me-an-example">Can you give me an example?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#configuation">Configuation</a>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../backup/">Scheduled backups</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../security/">Security</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../locking/">Thread locking</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../contributing/">Contributing & Testing</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Djangae Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Contrib apps &raquo;</li>
+        
+      
+    
+    <li>Pagination</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://gitlab.com/potato-oss/djangae/djangae/edit/master/docs/pagination.md"
+          class="icon icon-gitlab"
+        > Edit on GitLab</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="easy-efficient-pagination-for-the-datastore">Easy Efficient Pagination for the Datastore</h1>
+<p>Pagination on the datastore is <em>slow</em>. This is for a couple of reasons:</p>
+<ul>
+<li>Counting on the datastore is slow; traditional pagination counts the dataset</li>
+<li>Skipping results on the datastore is slow; if you slice a query, App Engine literally skips the entities up to the lower bound</li>
+</ul>
+<p>Djangae provides two pagination tools:</p>
+<ol>
+<li><code>djangae.core.paginator</code>.  This just provides a <code>Paginator</code> class similar to Django's, mostly just for compatability.  It avoids the issue of counting large numbers by not supporting the counting aspects, but it doesn't solve the issue of offsets being slow.</li>
+<li><code>djangae.contrib.pagination</code>.  This provides a complete pagination solution for the Datastore.  This article focusses on this.</li>
+</ol>
+<h2 id="so-what-does-djangaecontribpagination-do">So, what does djangae.contrib.pagination do?</h2>
+<p>This app provides two things that work together to efficiently paginate datasets on the datastore:</p>
+<ul>
+<li><code>@paginated_model</code> - A class decorator that dynamically generates (a) precalculated field(s) on a model,
+    which can be used for ordering and <code>__gt</code> filtering, rather than doing inefficient slicing.</li>
+<li><code>Paginator</code> - A Paginator subclass which uses the precalculated field(s) along with memcache to
+efficiently paginate and doesn't count all the results.</li>
+</ul>
+<h3 id="can-you-explain-that-a-bit-more">Can you explain that a bit more?</h3>
+<p>Supposing you have a queryset like this:</p>
+<pre><code>queryset = MyModel.objects.order_by('first_name', 'last_name')
+</code></pre>
+<p>and you then want to paginate with 100 objects per page.  Your query for page 2 will be
+<code>queryset[200:299]</code>, which will cause the Datastore iterate over the first 200 entities before then
+returning entities 200-299, which is inefficient.  However, if we create a pre-calculated field,
+made up of the fields we want to order by, plus a unique-ifier, (e.g.
+<code>"%s|%s|%s" % (first_name, last_name, pk)</code>), then we can order by that single field.  For
+pagination, when we fetch page 1, we can store the value of this field from the last object of page 1.
+The query for page 2 can then be</p>
+<pre><code>MyModel.objects.order_by('pre_calculated_field').filter(pre_calculated_field__gt=page_1_last_value)
+</code></pre>
+<p>which avoids any slicing at all.  The whole query and offset is based on Datastore indexes, and is efficient.</p>
+<p>The <code>@paginated_model</code> decorator allows you to specify which field(s) on your model you want to order
+by (you can specify multiple orderings for a model) and generates the pre-calculated fields for you.
+The <code>DatastorePaginator</code> then seemlessly uses these pre-calculated fields and does the offset/limiting for you.</p>
+<p>The <code>lookahead</code> argument to the paginator tells it how many pages ahead it should look.  E.g. if
+you set lookahead to <code>10</code> then it will query ahead to find the offset value to allow it to jump 10 pages.</p>
+<h2 id="wait-doesnt-the-datastore-have-cursors">Wait, doesn't the datastore have cursors?</h2>
+<p>Yes! However from the docs:</p>
+<blockquote>
+<p>Because the != and IN operators are implemented with multiple queries, queries that use them do not support cursors.</p>
+</blockquote>
+<p>That's a hell of an annoying caveat. That's not to say our approach doesn't suffer it's own caveats (below), but it does support IN and != queries.</p>
+<h2 id="caveats">Caveats</h2>
+<p>Because our pre-calculated fields are indexed, the combined length of the values (plus the unique ID and joining characters) you are
+ordering on must not exceed 1500 characters. This will throw an error, and if that happens, you'll either need to use a slower paginator (e.g. djangae.core.paginator)
+or rethink your design.</p>
+<h2 id="why-didnt-you-update-potatopage">Why didn't you update potatopage?</h2>
+<p><a href="https://github.com/potatolondon/potatopage">Potatopage</a> supports different backends for pagination. I didn't extend that for the following reasons:</p>
+<ul>
+<li>Efficient pagination is something that pretty much any Djangae-based app needs and should come built-in, moving potatopage into Djangae wouldn't make
+ sense as it has backends for Djangoappengine and NDB and they don't belong in Djangae. Potatopage is better as a standalone library anyway.</li>
+<li>This paginator uses class decorators, the ones in potatopage do not, and it would be weird to have a different API depending on the backend.</li>
+<li>The only way to really make a suitable backend for potatopage would be to expose the App Engine cursors in Djangae somehow, but this wouldn't work for
+ many queries due to the features and optimizations that the smart datastore connector performs (e.g. datastore.Get lookups, support for OR queries etc.)
+ and it would be ugly and hacky.</li>
+</ul>
+<h2 id="can-you-give-me-an-example">Can you give me an example?</h2>
+<p>Sure!</p>
+<pre><code>from djangaec.contrib.pagination import paginated_model
+
+# The paginated_model decorator takes a list of orderings, where each ordering is a field name or a list of field names
+
+@paginated_model(orderings=[
+    &quot;first_name&quot;,
+    &quot;last_name&quot;,
+    (&quot;first_name&quot;, &quot;last_name&quot;),
+    (&quot;first_name&quot;, &quot;-last_name&quot;)
+])
+class TestUser(models.Model):
+    first_name = models.CharField(max_length=200)
+    last_name = models.CharField(max_length=200)
+
+    def __unicode__(self):
+        return u&quot; &quot;.join([self.first_name, self.last_name])
+</code></pre>
+<p>By decorating the model this way, special computed properties are added for ordering by first and last name. Then you can just do this:</p>
+<pre><code>from djangaec.contrib.pagination import Paginator
+
+def listing(request):
+    contact_list = TestUser.objects.order_by(&quot;first_name&quot;)
+    paginator = Paginator(contact_list, 25, readahead=10) # Show 25 testusers per page, readahead 10 pages
+
+    page = request.GET.get('page')
+    try:
+        # Under the hood this will instead order and filter by the magically generated field for
+        # first_name, allowing you to efficiently jump to a specific page
+        contacts = paginator.page(page)
+    except PageNotAnInteger:
+        # If page is not an integer, deliver first page.
+        contacts = paginator.page(1)
+    except EmptyPage:
+        # If page is out of range (e.g. 9999), deliver last page of results.
+        contacts = paginator.page(paginator.num_pages)
+
+    return render_to_response('list.html', {&quot;contacts&quot;: contacts})
+</code></pre>
+<h2 id="configuation">Configuation</h2>
+<p>The Paginator caches the values for offsetting the queries.  You can configure the cache expiry time
+by defining <code>settings.DJANGAE_PAGINATION_CACHE_TIME</code>.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../backup/" class="btn btn-neutral float-right" title="Scheduled backups">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../contrib_search/" class="btn btn-neutral" title="Search"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://gitlab.com/potato-oss/djangae/djangae/" class="icon icon-gitlab" style="color: #fcfcfc"> GitLab</a>
+        </span>
+    
+    
+      <span><a href="../contrib_search/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../backup/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
