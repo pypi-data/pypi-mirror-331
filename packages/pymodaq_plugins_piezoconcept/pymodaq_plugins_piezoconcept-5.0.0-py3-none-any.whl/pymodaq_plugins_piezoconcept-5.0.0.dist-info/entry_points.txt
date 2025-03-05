@@ -1,0 +1,5 @@
+[pymodaq.instruments]
+piezoconcept = pymodaq_plugins_piezoconcept
+
+[pymodaq.plugins]
+piezoconcept = pymodaq_plugins_piezoconcept
