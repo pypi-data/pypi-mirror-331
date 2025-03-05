@@ -1,0 +1,9 @@
+wcps/__init__.py,sha256=_0EfZKix-3N9xYIgMcfvb-6v42UGxNWxZu2FJkI32jY,318
+wcps/model.py,sha256=vS3j8SMavm6Vtm25q8ZTwsKMGYS3HRIcD2_vOOmA6NM,104727
+wcps/service.py,sha256=m0CJQOv8QfbPZwLOOT7T9V7njf478GP68LaAvoeBlm8,14047
+wcps/spectral.py,sha256=abV7rrqJj8bX-qXnuJu9Bg_vTCok2BQP7wXMhEARDBw,166755
+wcps-0.5.3.dist-info/LICENSE,sha256=46mU2C5kSwOnkqkw9XQAJlhBL2JAf1_uCD8lVcXyMRg,7652
+wcps-0.5.3.dist-info/METADATA,sha256=S2jivx-RAZkPi3PjxCkTY6XLsyRkd0Uk93dbk3Z5r9k,19173
+wcps-0.5.3.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+wcps-0.5.3.dist-info/top_level.txt,sha256=Xn9FqbmQTc27bQ1znWk5QX9XAkwKfWM8RsJX5Chx1Dk,5
+wcps-0.5.3.dist-info/RECORD,,
