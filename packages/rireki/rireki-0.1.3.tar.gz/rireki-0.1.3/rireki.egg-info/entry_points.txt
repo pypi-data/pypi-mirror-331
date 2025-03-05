@@ -1,0 +1,3 @@
+[console_scripts]
+rireki = rireki.cli:cli
+
