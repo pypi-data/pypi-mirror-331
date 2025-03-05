@@ -1,0 +1,9 @@
+tmp
+dist
+*.egg-info
+__pycache__
+.venv
+.idea
+.pytest_cache
+.coverage
+astyle_py/version.py
