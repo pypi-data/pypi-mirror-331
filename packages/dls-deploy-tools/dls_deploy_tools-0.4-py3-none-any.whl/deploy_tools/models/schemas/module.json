@@ -1,0 +1,282 @@
+{
+  "$defs": {
+    "Apptainer": {
+      "additionalProperties": false,
+      "description": "Represents an Apptainer application or set of applications for a single image.\n\nThis uses Apptainer to deploy a portable image of the desired container. Several\nentrypoints can then be specified to allow for multiple commands run on the same\ncontainer image.",
+      "properties": {
+        "app_type": {
+          "const": "apptainer",
+          "title": "App Type",
+          "type": "string"
+        },
+        "container": {
+          "$ref": "#/$defs/ContainerImage"
+        },
+        "entrypoints": {
+          "items": {
+            "$ref": "#/$defs/Entrypoint"
+          },
+          "title": "Entrypoints",
+          "type": "array"
+        },
+        "global_options": {
+          "$ref": "#/$defs/EntrypointOptions",
+          "default": {
+            "apptainer_args": "",
+            "command_args": "",
+            "mounts": []
+          }
+        }
+      },
+      "required": [
+        "app_type",
+        "container",
+        "entrypoints"
+      ],
+      "title": "Apptainer",
+      "type": "object"
+    },
+    "ContainerImage": {
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "title": "Path",
+          "type": "string"
+        },
+        "version": {
+          "title": "Version",
+          "type": "string"
+        }
+      },
+      "required": [
+        "path",
+        "version"
+      ],
+      "title": "ContainerImage",
+      "type": "object"
+    },
+    "Entrypoint": {
+      "additionalProperties": false,
+      "description": "Represents an entrypoint to a command on the Apptainer image.\n\nIf no command is provided, the entrypoint (`name`) is used by default. This\ncorresponds to the name of the executable provided by the Module.",
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "command": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Command"
+        },
+        "options": {
+          "$ref": "#/$defs/EntrypointOptions",
+          "default": {
+            "apptainer_args": "",
+            "command_args": "",
+            "mounts": []
+          }
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "title": "Entrypoint",
+      "type": "object"
+    },
+    "EntrypointOptions": {
+      "additionalProperties": false,
+      "properties": {
+        "apptainer_args": {
+          "default": "",
+          "title": "Apptainer Args",
+          "type": "string"
+        },
+        "command_args": {
+          "default": "",
+          "title": "Command Args",
+          "type": "string"
+        },
+        "mounts": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Mounts",
+          "type": "array"
+        }
+      },
+      "title": "EntrypointOptions",
+      "type": "object"
+    },
+    "EnvVar": {
+      "additionalProperties": false,
+      "description": "Represents an environment variable to set when loading the Module.",
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "value": {
+          "title": "Value",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "value"
+      ],
+      "title": "EnvVar",
+      "type": "object"
+    },
+    "Module": {
+      "additionalProperties": false,
+      "description": "Represents a Module to be deployed.\n\nModules can optionally include a set of applications, environment variables to load,\nand a list of module dependencies.",
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "version": {
+          "title": "Version",
+          "type": "string"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Description"
+        },
+        "dependencies": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/ModuleDependency"
+          },
+          "title": "Dependencies",
+          "type": "array"
+        },
+        "env_vars": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/EnvVar"
+          },
+          "title": "Env Vars",
+          "type": "array"
+        },
+        "applications": {
+          "items": {
+            "discriminator": {
+              "mapping": {
+                "apptainer": "#/$defs/Apptainer",
+                "shell": "#/$defs/Shell"
+              },
+              "propertyName": "app_type"
+            },
+            "oneOf": [
+              {
+                "$ref": "#/$defs/Apptainer"
+              },
+              {
+                "$ref": "#/$defs/Shell"
+              }
+            ]
+          },
+          "title": "Applications",
+          "type": "array"
+        }
+      },
+      "required": [
+        "name",
+        "version",
+        "applications"
+      ],
+      "title": "Module",
+      "type": "object"
+    },
+    "ModuleDependency": {
+      "additionalProperties": false,
+      "description": "Specify an Environment Module to include as a dependency.\n\nIf the dependent Environment Module is managed by this same Deployment (i.e. is a\nModule), you must specify a specific version in order to pass validation.",
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "version": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Version"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "title": "ModuleDependency",
+      "type": "object"
+    },
+    "Shell": {
+      "additionalProperties": false,
+      "description": "Represents a Shell application.\n\nThis will run the code specified as a shell script. This currently uses Bash for\nimproved functionality while retaining high compatibility with various Linux\ndistributions.",
+      "properties": {
+        "app_type": {
+          "const": "shell",
+          "title": "App Type",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "script": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Script",
+          "type": "array"
+        }
+      },
+      "required": [
+        "app_type",
+        "name",
+        "script"
+      ],
+      "title": "Shell",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Represents a Module along with its lifecycle (deprecation) status.",
+  "properties": {
+    "module": {
+      "$ref": "#/$defs/Module"
+    },
+    "deprecated": {
+      "default": false,
+      "title": "Deprecated",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "module"
+  ],
+  "title": "Release",
+  "type": "object"
+}
