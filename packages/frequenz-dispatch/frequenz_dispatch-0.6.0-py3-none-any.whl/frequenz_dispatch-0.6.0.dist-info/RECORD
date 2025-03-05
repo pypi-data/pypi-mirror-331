@@ -1,0 +1,14 @@
+frequenz/dispatch/__init__.py,sha256=OVJSKG6tL93bakDAUC9BtgAvl6XbMHYpP8gUGNrS2fk,1139
+frequenz/dispatch/_actor_dispatcher.py,sha256=ZYBgwHznzycDGwZJY4h9VY-IUcJe5qXwIrjujuQEFdE,10925
+frequenz/dispatch/_bg_service.py,sha256=WrTgFGFUa3LK8YmtYktbJnK1LadlzP2baOmIeWQsHH0,18931
+frequenz/dispatch/_dispatch.py,sha256=g2rcuQSL__IpogT3mQnYTn-krZUhzprbBVC8FbjEYJE,2013
+frequenz/dispatch/_dispatcher.py,sha256=Z2voTvHauhfwzXkdnW1HdOjzkDz-TKDg1SL0643gB6E,15925
+frequenz/dispatch/_event.py,sha256=70fhuxMJ4CY_Gi-9kGh5URFpguD2WeXUgn3g1tevbTQ,801
+frequenz/dispatch/_merge_strategies.py,sha256=PfzhOfeUf15hTVeK1UNjbxsEJQac34hop50MmDSN4Zc,1794
+frequenz/dispatch/conftest.py,sha256=kxmvkzTdvGfh7SiDINIFX0FG9PU0EoKROl9YY75zN8w,409
+frequenz/dispatch/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+frequenz_dispatch-0.6.0.dist-info/LICENSE,sha256=zt0sW1KvE_KWE2ILOabrQYlfOoP0zUZXC3xCLrzGpIA,1089
+frequenz_dispatch-0.6.0.dist-info/METADATA,sha256=RBmQCYFKGUVa76H59Nv_5iPnjFkPfIu2GOB5epLaV6w,6461
+frequenz_dispatch-0.6.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+frequenz_dispatch-0.6.0.dist-info/top_level.txt,sha256=x08GRcWytsyKXa2Ayme9e5pg3L5Kcq6lw_BaQmToMO4,9
+frequenz_dispatch-0.6.0.dist-info/RECORD,,
