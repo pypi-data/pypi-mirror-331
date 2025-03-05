@@ -1,0 +1,1 @@
+Bump dkist-processing-common to v10.6.1
