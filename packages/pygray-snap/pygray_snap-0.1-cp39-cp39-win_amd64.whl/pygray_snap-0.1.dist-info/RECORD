@@ -1,0 +1,11 @@
+pygray_snap/933c6bfbdec03c6332fe.wasm,sha256=R1Tgm6PqFpbvOfw9QfxF6u1ZLJqC2pokaz0zyUcV9KQ,721295
+pygray_snap/__init__.py,sha256=yphs_4_1p9mbs-uxqB1VoIFVYxGO_qOZiBT0LhE34Nw,124
+pygray_snap/core.cp39-win_amd64.pyd,sha256=YknLdXMtdTlxP_cz9q3GbRr74g0126XMrr7176B9dDE,82944
+pygray_snap/core.pyi,sha256=dpYMHsaKuR6E0-npvXDKvitnq9tQmycQYnBluD36Sb4,229
+pygray_snap/pycore.py,sha256=bdmh-TvcID6sSsslUfsbhm6ZdcKjB1Mihjr7rKEYDG4,1210889
+pygray_snap/ua.jsonl,sha256=XPTzaeEvaRezWP0LQbzBlhVvFeQKqYragEQDTNPR2Fs,3801787
+pygray_snap/utils.py,sha256=GQih4XyswE2DZtERxRsszZCoSd2Dvn95ceD9HrGgEXM,980
+pygray_snap-0.1.dist-info/METADATA,sha256=BuhVj9mNf79Vo2tSm5mo7sUdBesnGHDfWr1hpEps0dE,251
+pygray_snap-0.1.dist-info/WHEEL,sha256=v5VC98_KJm2qYPivVB6odskxqiFAushqtSqLEg4b2ug,99
+pygray_snap-0.1.dist-info/top_level.txt,sha256=66Jm1Cv1AqR68BWh6N21hbrCXNhzZ2OSCvgNkuTCi_w,12
+pygray_snap-0.1.dist-info/RECORD,,

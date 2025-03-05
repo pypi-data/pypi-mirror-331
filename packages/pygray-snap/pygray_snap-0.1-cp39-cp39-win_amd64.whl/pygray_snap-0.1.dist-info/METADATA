@@ -1,0 +1,11 @@
+Metadata-Version: 2.2
+Name: pygray_snap
+Version: 0.1
+Author: Smawe
+Author-email: 1281722462@qq.com
+Requires-Dist: pyevaljs3>=0.2.0
+Requires-Dist: pytz
+Requires-Dist: pycryptodome
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-dist
