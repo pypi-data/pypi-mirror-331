@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=70.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "conda-smithy"
+version = "0.0.0"
+description = "The tool for managing conda-forge feedstocks."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = []
+
+[project.urls]
+repository = "https://github.com/conda-forge/conda-smithy"

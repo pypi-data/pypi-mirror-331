@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+conda_smithy/__init__.py
+conda_smithy.egg-info/PKG-INFO
+conda_smithy.egg-info/SOURCES.txt
+conda_smithy.egg-info/dependency_links.txt
+conda_smithy.egg-info/top_level.txt

@@ -1,0 +1,13 @@
+Metadata-Version: 2.2
+Name: conda-smithy
+Version: 0.0.0
+Summary: The tool for managing conda-forge feedstocks.
+Project-URL: repository, https://github.com/conda-forge/conda-smithy
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# conda-smithy
+
+This PyPI package is a shim. The actual `conda-smithy` is only available as a conda package.
+
+Check https://github.com/conda-forge/conda-smithy.
