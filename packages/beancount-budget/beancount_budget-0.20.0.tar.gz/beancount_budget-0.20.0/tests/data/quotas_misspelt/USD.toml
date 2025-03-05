@@ -1,0 +1,11 @@
+["Expenses:Home:Eletricity".this]
+type = "monthly"
+amount = 65
+
+["Expenses:Home:Series of Tubes".this]
+type = "monthly"
+amount = 80
+
+["Expenses:Transport:Submarine".this]
+type = "monthly"
+amount = 120

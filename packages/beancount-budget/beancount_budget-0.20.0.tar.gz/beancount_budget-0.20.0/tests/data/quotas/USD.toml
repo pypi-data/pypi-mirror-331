@@ -1,0 +1,21 @@
+["Expenses:Home:Electricity".this]
+type = "monthly"
+amount = 65
+
+["Expenses:Home:Internet".this]
+type = "monthly"
+amount = 80
+
+["Expenses:Transport:Tram".this]
+type = "monthly"
+amount = 120
+
+["Expenses:Financial:Fees".this]
+type = "fixed"
+amount = 4
+
+["Expenses:Food:Coffee".Chicago]
+type = "goal"
+start = "2022-01"
+by = "2023-01"
+amount = 22.50
