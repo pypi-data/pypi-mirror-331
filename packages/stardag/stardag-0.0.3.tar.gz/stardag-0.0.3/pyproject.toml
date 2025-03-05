@@ -1,0 +1,56 @@
+[tool.poetry]
+name = "stardag"
+version = "0.0.3"
+description = ""
+authors = ["Anders Huss <andhus@kth.se>"]
+packages = [{ include = "stardag", from = "src" }]
+
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pydantic = "^2.8.2"
+pydantic-settings = "^2.7.1"
+uuid6 = "^2024.7.10"
+
+# prefect extras
+prefect = { version = "^3.0.3", optional = true }
+asyncpg = { version = ">=0.30.0", markers = "python_version >= '3.13'", optional = true }
+
+# s3 extras
+boto3 = { version = "^1.34", optional = true }
+botocore = { version = "^1.36", optional = true }
+boto3-stubs = { version = "*", extras = ["s3"], optional = true }
+
+# modal extras
+modal = {version = "^0.73.59", optional = true}
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+ipython = "^8.25.0"
+pytest-asyncio = "^0.23.7"
+ipdb = "^0.13.13"
+
+stardag-examples = { path = "examples", develop = true, extras = ["ml-pipeline"] }
+
+
+[tool.poetry.extras]
+prefect = ["prefect", "asyncpg"]
+s3 = ["boto3", "botocore", "boto3-stubs"]
+modal = ["modal"]
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.isort]
+profile = "black"
+known_local_folder = ["stardag", "stardag_examples"]
+
+[tool.pytest]
+testpaths = ["tests"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"

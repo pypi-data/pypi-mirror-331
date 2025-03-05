@@ -1,0 +1,24 @@
+Metadata-Version: 2.3
+Name: stardag
+Version: 0.0.3
+Summary: 
+Author: Anders Huss
+Author-email: andhus@kth.se
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Provides-Extra: modal
+Provides-Extra: prefect
+Provides-Extra: s3
+Requires-Dist: asyncpg (>=0.30.0) ; (python_version >= "3.13") and (extra == "prefect")
+Requires-Dist: boto3 (>=1.34,<2.0) ; extra == "s3"
+Requires-Dist: boto3-stubs[s3] ; extra == "s3"
+Requires-Dist: botocore (>=1.36,<2.0) ; extra == "s3"
+Requires-Dist: modal (>=0.73.59,<0.74.0) ; extra == "modal"
+Requires-Dist: prefect (>=3.0.3,<4.0.0) ; extra == "prefect"
+Requires-Dist: pydantic (>=2.8.2,<3.0.0)
+Requires-Dist: pydantic-settings (>=2.7.1,<3.0.0)
+Requires-Dist: uuid6 (>=2024.7.10,<2025.0.0)
