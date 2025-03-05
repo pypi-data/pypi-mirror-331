@@ -1,0 +1,59 @@
+{
+    "config": {
+        "step": {
+            "alarm_control_panel": {
+                "data": {
+                    "arm_away": "Arm away action",
+                    "arm_custom_bypass": "Arm custom bypass action",
+                    "arm_home": "Arm home action",
+                    "arm_night": "Arm night action",
+                    "arm_vacation": "Arm holiday action",
+                    "code_arm_required": "Code arm required",
+                    "code_format": "Code format",
+                    "disarm": "Disarm action",
+                    "trigger": "Trigger action"
+                },
+                "title": "Template alarm control panel"
+            },
+            "user": {
+                "menu_options": {
+                    "alarm_control_panel": "Template an alarm control panel",
+                    "binary_sensor": "Template a binary sensor"
+                }
+            }
+        }
+    },
+    "options": {
+        "step": {
+            "alarm_control_panel": {
+                "data": {
+                    "arm_away": "Arm away action",
+                    "arm_custom_bypass": "Arm custom bypass action",
+                    "arm_home": "Arm home action",
+                    "arm_night": "Arm night action",
+                    "arm_vacation": "Arm holiday action",
+                    "code_arm_required": "Code arm required",
+                    "code_format": "Code format",
+                    "disarm": "Disarm action",
+                    "trigger": "Trigger action"
+                },
+                "title": "Template alarm control panel"
+            }
+        }
+    },
+    "selector": {
+        "alarm_control_panel_code_format": {
+            "options": {
+                "no_code": "No code format",
+                "number": "Number",
+                "text": "Text"
+            }
+        }
+    },
+    "services": {
+        "reload": {
+            "description": "Reloads template entities from the YAML-configuration.",
+            "name": "Reload"
+        }
+    }
+}

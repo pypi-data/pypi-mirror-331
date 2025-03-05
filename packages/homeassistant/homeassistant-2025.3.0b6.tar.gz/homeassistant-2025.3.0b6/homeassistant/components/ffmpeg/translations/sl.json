@@ -1,0 +1,13 @@
+{
+    "services": {
+        "restart": {
+            "name": "Ponovno za\u017eeni"
+        },
+        "start": {
+            "name": "Za\u017eeni"
+        },
+        "stop": {
+            "name": "Zaustavi"
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "config": {
+        "step": {
+            "region": {
+                "data": {
+                    "region": "Region"
+                }
+            }
+        }
+    }
+}
