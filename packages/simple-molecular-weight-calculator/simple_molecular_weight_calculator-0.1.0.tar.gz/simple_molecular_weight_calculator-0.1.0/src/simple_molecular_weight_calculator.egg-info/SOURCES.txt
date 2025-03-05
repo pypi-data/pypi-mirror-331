@@ -1,0 +1,8 @@
+README.md
+mm
+pyproject.toml
+setup.py
+src/simple_molecular_weight_calculator.egg-info/PKG-INFO
+src/simple_molecular_weight_calculator.egg-info/SOURCES.txt
+src/simple_molecular_weight_calculator.egg-info/dependency_links.txt
+src/simple_molecular_weight_calculator.egg-info/top_level.txt
