@@ -1,0 +1,23 @@
+Metadata-Version: 2.2
+Name: openfhe-wrapper
+Version: 0.0.8
+Summary: A Python wrapper for OpenFHE to generate context for pyFHE
+Home-page: https://github.com/openfheorg/openfhe-python
+Author: Zhuoran Ji
+Author-email: jizhuoran.work@gmail.com
+License: BSD-2-Clause
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-python
+Dynamic: summary
+
+This release requires Ubuntu 20.04
