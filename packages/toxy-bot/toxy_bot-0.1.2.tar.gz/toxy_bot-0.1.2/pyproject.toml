@@ -1,0 +1,36 @@
+[project]
+name = "toxy-bot"
+version = "0.1.2"
+description = "A trained Discord Bot to detect and handle toxic messages in text channels."
+readme = "README.md"
+authors = [
+    { name = "anitamaxvim", email = "107803920+anitamaxvim@users.noreply.github.com" },
+]
+requires-python = ">=3.11"
+dependencies = [
+    "kagglehub>=0.3.10",
+    "pandas>=2.2.3",
+    "pydantic>=2.10.6",
+    "scikit-learn>=1.6.1",
+    "scikit-multilearn>=0.2.0",
+    "tensorflow==2.16.2",
+    "tensorflow-text>=2.16.1",
+    "tf-models-official>=2.16.0",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+[tool.pyright]
+venvPath = "."
+venv = "venv"
+
+[project.scripts]
+toxy-bot = "toxy_bot:main"
+pipeline = "toxy_bot.ml.data.pipeline:run_pipeline"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = ["pandas-stubs>=2.2.3.241126"]
