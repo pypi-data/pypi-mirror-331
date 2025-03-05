@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: ezauv
+Version: 0.1.0
+Summary: A library to make coding AUVs easier
+Home-page: https://github.com/beaver-auv/ezauv
+Author: Andre Gordon
+Author-email: gordona26@bcdschool.org
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+Requires-Dist: gurobipy==12.0.1
+Requires-Dist: numpy==2.2.3
+Requires-Dist: pygame==2.6.1
+Requires-Dist: quaternion==3.5.2.post4
+Requires-Dist: scipy==1.15.2
+
+# ezauv
+A Python library to make AUVs ez
+
+Made for Beaver Country Day School's RoboSub team, BeaverAUV
