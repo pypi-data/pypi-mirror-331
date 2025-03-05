@@ -1,0 +1,60 @@
+README.md
+setup.py
+willphanpy/__init__.py
+willphanpy/main.py
+willphanpy.egg-info/PKG-INFO
+willphanpy.egg-info/SOURCES.txt
+willphanpy.egg-info/dependency_links.txt
+willphanpy.egg-info/requires.txt
+willphanpy.egg-info/top_level.txt
+willphanpy/Aerodynamics/Airfoil Sketch.py
+willphanpy/Aerodynamics/CLCDAirfoilHelicopter.py
+willphanpy/Aerodynamics/Calculation of CL and CD for flat plate.py
+willphanpy/Aerodynamics/Calculation.py
+willphanpy/Aerodynamics/Compressible Flow.py
+willphanpy/Aerodynamics/CriticalMach.py
+willphanpy/Aerodynamics/Expansion Wave.py
+willphanpy/Aerodynamics/Finite Differences Method.py
+willphanpy/Aerodynamics/Finite Volume Method.py
+willphanpy/Aerodynamics/FullofGUIapp.py
+willphanpy/Aerodynamics/GUIappexam.py
+willphanpy/Aerodynamics/Isentropic Nozzle.py
+willphanpy/Aerodynamics/Mach Solver for Isentropic Nozzle.py
+willphanpy/Aerodynamics/Mach Solver for Non-Isentropic Nozzle.py
+willphanpy/Aerodynamics/Matrix.py
+willphanpy/Aerodynamics/PLOTTING.py
+willphanpy/Aerodynamics/Theta - Beta - Mach Relation.py
+willphanpy/Aerodynamics/Time dependence.py
+willphanpy/Aerodynamics/Velocity Measurement.py
+willphanpy/Aerodynamics/VoiceRecognition.py
+willphanpy/Aerodynamics/Wpyaero.py
+willphanpy/Aerodynamics/__init__.py
+willphanpy/Aerodynamics/db.py
+willphanpy/Aerodynamics/tempCodeRunnerFile.py
+willphanpy/Algorithms/Wpya.py
+willphanpy/Algorithms/__init__.py
+willphanpy/Algorithms/slidingWindowMaximum.py
+willphanpy/Algorithms/twoPointer.py
+willphanpy/Algorithms/A*/A*.py
+willphanpy/Algorithms/A*/A*_game.py
+willphanpy/Algorithms/A*/__init__.py
+willphanpy/Algorithms/Minimax/Queue.py
+willphanpy/Algorithms/Minimax/Tree.py
+willphanpy/Algorithms/Minimax/__init__.py
+willphanpy/Algorithms/Minimax/alphaBeta.py
+willphanpy/Algorithms/Minimax/minimax.py
+willphanpy/Algorithms/genetic/Genetic.py
+willphanpy/Algorithms/genetic/__init__.py
+willphanpy/Algorithms/genetic/knapsack.py
+willphanpy/Algorithms/genetic/maximum.py
+willphanpy/DataStructure/Tree.py
+willphanpy/DataStructure/Wpyd.py
+willphanpy/DataStructure/__init__.py
+willphanpy/DataStructure/Queue/Deque.py
+willphanpy/DataStructure/Queue/Queue.py
+willphanpy/DataStructure/Queue/__init__.py
+willphanpy/MachineLearning/Wpyml.py
+willphanpy/MachineLearning/__init__.py
+willphanpy/MachineLearning/Classification/__init__.py
+willphanpy/MachineLearning/DimensionalityReduction/__init__.py
+willphanpy/MachineLearning/LinearRegression/__init__.py
