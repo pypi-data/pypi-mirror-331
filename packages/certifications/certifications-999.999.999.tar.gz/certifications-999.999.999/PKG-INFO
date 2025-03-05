@@ -1,0 +1,9 @@
+Metadata-Version: 2.2
+Name: certifications
+Version: 999.999.999
+Summary: Malicious backdoor package
+Author: Salmon Kumar
+Author-email: attacker@example.com
+Dynamic: author
+Dynamic: author-email
+Dynamic: summary
