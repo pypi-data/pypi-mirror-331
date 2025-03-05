@@ -1,0 +1,9 @@
+fetchfox_sdk/__init__.py,sha256=eKDwJv4RA_CaJr-xKtRW0zESp2lh-kUyIjb9bC1-Dz0,204
+fetchfox_sdk/client.py,sha256=EwvaEHXJ9k4n6Ad2ThrHvfx0lFmg2pZ4K-O8ED233zg,15567
+fetchfox_sdk/result_item.py,sha256=L0R1O10UhkNv9biNxA-bZ0L-bgIN-uH3poUB32Uoosg,1499
+fetchfox_sdk/workflow.py,sha256=DSvHNwLTIUj24DA4fqFjMh85Bhm3cqaDJ0LLToogeHs,14444
+fetchfox_sdk_beta-0.2.0.dist-info/LICENSE,sha256=YqL-09bgjESDX85x8CIQsd2r-wZuOe3x5sJhmI-CTdM,7
+fetchfox_sdk_beta-0.2.0.dist-info/METADATA,sha256=-TgAMhz__4Yi8XmQw6xrQakJQgd_yjAHVo1QHaUvqCU,4515
+fetchfox_sdk_beta-0.2.0.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+fetchfox_sdk_beta-0.2.0.dist-info/top_level.txt,sha256=IEvbemcg8pjwY56iB3KrBIWjq6pMHtCB15y7Xo7v6w8,13
+fetchfox_sdk_beta-0.2.0.dist-info/RECORD,,
