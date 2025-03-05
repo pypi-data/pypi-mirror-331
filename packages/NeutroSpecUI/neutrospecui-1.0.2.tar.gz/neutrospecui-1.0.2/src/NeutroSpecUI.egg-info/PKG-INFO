@@ -1,0 +1,114 @@
+Metadata-Version: 2.2
+Name: NeutroSpecUI
+Version: 1.0.2
+Summary: A package for the analysis of Neutron X-ray Spectroscopy data
+Author: Mitra Nassermostofi, Luisa Haussner, Elina Lickes, Benedikt Bletz, Sebastian Braun
+License: MIT License
+        
+        Copyright (c) [2025] [Mitra Nassermostofi], [Elina Lickes], [Luisa Haussner], [Benedikt Bletz], [Sebastian Braun], [Joshua Reed]
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+Project-URL: Homepage, https://github.com/Aseraphyss/NeutroSpecUI
+Project-URL: Issues, https://github.com/Aseraphyss/NeutroSpecUI/issues
+Keywords: neutron,x-ray,spectroscopy,analysis
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: PySide6
+Provides-Extra: dev
+Requires-Dist: pytest-sugar; extra == "dev"
+Requires-Dist: NeutroSpecUI[test]; extra == "dev"
+Provides-Extra: test
+Requires-Dist: tox; extra == "test"
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-cov; extra == "test"
+Requires-Dist: pytest-mock; extra == "test"
+Requires-Dist: pytest-qt; extra == "test"
+Requires-Dist: pytest-xvfb; extra == "test"
+Requires-Dist: hypothesis; extra == "test"
+Requires-Dist: mypy; extra == "test"
+Requires-Dist: black; extra == "test"
+
+# NeutroSpecUI
+
+![Short-Tests](https://github.com/Aseraphyss/NeutroSpecUI/actions/workflows/short-tests.yml/badge.svg)
+![Long-Test](https://github.com/Aseraphyss/NeutroSpecUI/actions/workflows/long-tests.yml/badge.svg)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+## Description
+
+NeutroSpecUI is a user-friendly tool for neutron reflectivity data analysis, transforming a traditionally time-consuming and complex manual fitting process into an efficient and intuitive experience.
+
+## Table of Contents
+
+- [NeutroSpecUI](#neutrospecui)
+  - [Description](#description)
+  - [Table of Contents](#table-of-contents)
+  - [Installation](#installation)
+    - [Prerequisites](#prerequisites)
+    - [Steps](#steps)
+  - [Usage](#usage)
+  - [Features](#features)
+  - [Contributing](#contributing)
+
+## Installation
+
+### Prerequisites
+
+- Python 3.10 or higher
+- pip
+
+### Steps
+
+1. Install NeutroSpecUI using pip:
+
+```sh
+pip install NeutroSpecUI
+```
+
+## Usage
+
+To use NeutroSpecUI, you can run the application from the command line.
+
+```sh
+python -m NeutroSpecUI
+```
+
+For more information on how to use the application, please refer to the [User Guide](https://github.com/Aseraphyss/NeutroSpecUI/wiki/Usage).
+
+## Features
+
+- Intuitive GUI for parameter input and data visualization
+- Real-time updates with immediate visual feedback
+- Flexible model fitting with support for custom models
+- Data management capabilities to save and load configurations
+- Cross-platform compatibility (Windows, Mac, Linux)
+
+## Contributing
+
+We welcome contributions and feedback from collaborators and researchers. Please feel free to open issues or submit pull requests to help improve the project. Nevertheless, please note that this project is part of a university course, and we stop maintaining it after the course ends in 2025.
+
+For more information you can visit the Wiki [Contributing](https://github.com/Aseraphyss/NeutroSpecUI/wiki/Contributing).

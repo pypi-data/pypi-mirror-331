@@ -1,0 +1,110 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "NeutroSpecUI"
+version = "1.0.2"
+dependencies = ["numpy", "scipy", "pandas", "matplotlib", "PySide6"]
+requires-python = ">=3.10"
+authors = [
+    { name = "Mitra Nassermostofi" },
+    { name = "Luisa Haussner" },
+    { name = "Elina Lickes" },
+    { name = "Benedikt Bletz" },
+    { name = "Sebastian Braun" },
+]
+description = "A package for the analysis of Neutron X-ray Spectroscopy data"
+readme = "README.md"
+license = { file = "LICENSE" }
+keywords = ["neutron", "x-ray", "spectroscopy", "analysis"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest-sugar",       # makes test output more readable
+    "NeutroSpecUI[test]",
+]
+test = [
+    "tox",         # runs all tests in new virtual environments
+    "pytest",      # makes tests
+    "pytest-cov",  # measures test coverage
+    "pytest-mock", # makes mocking of functions easier
+    "pytest-qt",   # tests PyQt/PySide applications
+    "pytest-xvfb", # runs qt tests with "virtual display" (for linux)
+    "hypothesis",  # property-based testing
+    "mypy",        # static type checker
+    "black",       # code formatter
+]
+
+[project.urls]
+Homepage = "https://github.com/Aseraphyss/NeutroSpecUI"
+Issues = "https://github.com/Aseraphyss/NeutroSpecUI/issues"
+
+# ----------------- TOOLS -----------------
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = ["--cov-config=pyproject.toml"]
+
+[tool.coverage.report]
+exclude_also = [
+    "def __repr__",
+    "if self.debug:",
+    "if settings.DEBUG",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if 0:",
+    "if __name__ == .__main__.:",
+    "if TYPE_CHECKING:",
+    "class .*\\bProtocol\\):",
+    "@(abc\\.)?abstractmethod",
+]
+
+[tool.mypy]
+mypy_path = "src"
+
+strict_equality = true
+extra_checks = true
+check_untyped_defs = true
+ignore_missing_imports = true
+
+
+warn_return_any = true
+warn_unreachable = true
+warn_redundant_casts = true
+warn_unused_configs = true
+warn_unused_ignores = true
+
+show_error_codes = true
+
+# ----------------- TOX -----------------
+[tool.tox]
+requires = ["tox>=4.19"]
+env_list = ["stylecheck", "typecheck", "py313", "py310"]
+isolated_build = true
+
+[tool.tox.gh-actions]
+python = """
+    3.13: stylecheck, typecheck, py313
+    3.10: py310
+"""
+
+[tool.tox.env_run_base]
+description = "Run the tests with pytest under {basepython}"
+extras = ["test"]
+commands = [["pytest", "tests", "--cov=NeutroSpecUI"]]
+
+[tool.tox.env.stylecheck]
+description = "Run the code style check with black"
+deps = ["black"]
+skip_install = true
+commands = [["black", ".", "--check"]]
+
+[tool.tox.env.typecheck]
+description = "Run the type checker mypy"
+deps = ["mypy"]
+commands = [["mypy", "src", "tests"]]
