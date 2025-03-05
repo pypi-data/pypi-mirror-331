@@ -1,0 +1,2 @@
+[certbot.plugins]
+dns-hydra = certbot_dns_hydra.certbot_dns_hydra:HydraDNSAuthenticator

@@ -1,0 +1,8 @@
+certbot_dns_hydra/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+certbot_dns_hydra/certbot_dns_hydra.py,sha256=SM6HPjcHtNcbl4Mvi5qmeR7GxepaUw6J0awg-CZMx-M,3283
+certbot_dns_hydra-0.2.0.dist-info/LICENSE,sha256=dg6uTL4umcRH0ofmzv6j76GJXOtbpNRpD2Yb5F-F7fE,551
+certbot_dns_hydra-0.2.0.dist-info/METADATA,sha256=3Z5ez49JVa3NlDocCVlpNewjhRGhS3kb-spLQrNEBPs,2480
+certbot_dns_hydra-0.2.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+certbot_dns_hydra-0.2.0.dist-info/entry_points.txt,sha256=Cij3fB-ZVRg4TF1Rscxg6r7GZhhYXk515ZGrZSCUJvU,88
+certbot_dns_hydra-0.2.0.dist-info/top_level.txt,sha256=BkL-O1WiCZvhrR4-COKfrUyXV_ooAeuuNebY9Ga-tMo,18
+certbot_dns_hydra-0.2.0.dist-info/RECORD,,
