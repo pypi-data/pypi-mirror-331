@@ -1,0 +1,6 @@
+log_lammps_reader-0.3.5.dist-info/METADATA,sha256=rc46LGNgcGENRrQVgY4QqmfRosppl0tt7huxoIT5uRw,8071
+log_lammps_reader-0.3.5.dist-info/WHEEL,sha256=uyQGT1Ohj9vemSwqWNHuRyub_E_aVYKYRFRc_USKX3w,131
+log_lammps_reader-0.3.5.dist-info/licenses/LICENSE,sha256=U1eJtyyzFMfA9zwGR5sCAAYGByOM6-cvzZWv4bt0fMc,1069
+log_lammps_reader/__init__.py,sha256=ZQx3z9ih_Nkg6CMW8XYehxnkMKVAz8cidwHBZUwddU4,151
+log_lammps_reader/log_lammps_reader.cpython-312-powerpc64le-linux-gnu.so,sha256=zuoNOH_uwW8JIw_jZ_S5suCRU3p54CMS6JqE1yFkPf8,20400512
+log_lammps_reader-0.3.5.dist-info/RECORD,,
