@@ -1,0 +1,31 @@
+[project]
+name = "wandalib"
+version = "0.1.1"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Juan David", email = "juanguerrero09mc@gmail.com" }
+]
+maintainers = [
+  { name = "Juan David", email = "juanguerrero09mc@gmail.com" }
+]
+requires-python = ">=3.9"
+dependencies = [
+    "matplotlib>=3.9.4",
+    "numpy>=2.0.2",
+    "pandas>=2.2.3",
+    "python-dotenv>=1.0.1",
+    "pywanda==4.7.0a2",
+    "setuptools>=75.8.0",
+    "twine>=6.1.0",
+    "wheel>=0.45.1",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
