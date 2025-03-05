@@ -1,0 +1,4 @@
+[console_scripts]
+slog2vlog = hdlconv.slog2vlog:main
+vhdl2vhdl = hdlconv.vhdl2vhdl:main
+vhdl2vlog = hdlconv.vhdl2vlog:main
