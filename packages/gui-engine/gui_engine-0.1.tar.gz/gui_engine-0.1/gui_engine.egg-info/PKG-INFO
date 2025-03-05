@@ -1,0 +1,14 @@
+Metadata-Version: 2.2
+Name: gui_engine
+Version: 0.1
+Summary: A package for advanced GUI made with tkinter
+Author: rixhlivin
+Author-email: rixhlivin@gmail.com
+Requires-Dist: Pillow
+Requires-Dist: customtkinter
+Requires-Dist: WMI
+Requires-Dist: window-functions
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-dist
+Dynamic: summary
