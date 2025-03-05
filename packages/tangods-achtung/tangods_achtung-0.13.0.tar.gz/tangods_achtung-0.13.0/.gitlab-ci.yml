@@ -1,0 +1,5 @@
+---
+include:
+  - component: $CI_SERVER_FQDN/maxiv/components/workflow/python-public@main
+    inputs:
+      test_image_tags: ["3.11-9.3.6", "3.10-9.5.0", "3.11-9.5.0", "3.12-9.5.0", "3.12-10.0.0"]
