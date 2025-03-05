@@ -1,0 +1,14 @@
+[build-system]
+requires = ["maturin>=1.0,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "licensepy"
+version = "1.0.1"
+description = "A Rust CLI packaged for Python"
+readme = "README.md"
+authors = [{ name = "Nathnael Bekele", email = "nwtbekele@gmail.com" }]
+license = { file = "LICENSE" }
+
+[tool.maturin]
+bindings = "bin"
