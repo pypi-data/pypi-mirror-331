@@ -1,0 +1,2 @@
+[console_scripts]
+ccc = catcoder_cli.cli:main
