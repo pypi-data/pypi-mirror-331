@@ -1,0 +1,14 @@
+LICENSE.txt
+MANIFEST.in
+setup.py
+.github/README.md
+docs/__init__.py
+docs/conf.py
+hagent/__init__.py
+hagent/module.py
+hagent.egg-info/PKG-INFO
+hagent.egg-info/SOURCES.txt
+hagent.egg-info/dependency_links.txt
+hagent.egg-info/top_level.txt
+tests/__init__.py
+tests/test_example.py
