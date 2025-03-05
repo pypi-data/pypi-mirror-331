@@ -1,0 +1,7 @@
+glassesTools[GUI]>=1.16.0
+typeguard
+watchfiles
+pebble
+
+[:sys_platform != "win32"]
+uvloop
