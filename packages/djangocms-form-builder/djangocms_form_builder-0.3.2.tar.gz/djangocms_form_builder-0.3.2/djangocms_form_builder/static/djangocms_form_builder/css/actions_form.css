@@ -1,0 +1,3 @@
+fieldset.action-hide, fieldset.empty {
+    display: none;
+}
