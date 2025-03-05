@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: smart-terminal-cli
+Version: 1.1.1
+Summary: AI-Powered Terminal Command Generator and Executor
+Home-page: https://github.com/muralianand12345/Smart-Terminal
+License: MIT
+Author: Murali Anand
+Author-email: smurali1607@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: openai (>=1.65.2)
+Requires-Dist: pydantic (>=2.10.6)
+Project-URL: Repository, https://github.com/muralianand12345/Smart-Terminal
+Description-Content-Type: text/markdown
+
+# SmartTerminal: AI-Powered Terminal Commands
+
+SmartTerminal (`st`) is a command-line interface that converts natural language instructions into executable terminal commands using AI.
+
+## Quick Installation
+
+```bash
+pip3 install smart-terminal-cli
+```
+
+## Usage
+
+Convert natural language to terminal commands:
+```bash
+st "create a folder called projects and create a python file inside it"
+```
+
+Interactive mode:
+```bash
+st -i
+```
+
+Setup and configuration:
+```bash
+st --setup
+```
+
+## Features
+
+- Convert natural language to terminal commands
+- Handle multi-step tasks with sequential commands
+- Support for different operating systems
+- Interactive mode for continuous command generation
+- Command history for context-aware interactions
+
+For more information, visit [GitHub repository](https://github.com/muralianand12345/Smart-Terminal).
