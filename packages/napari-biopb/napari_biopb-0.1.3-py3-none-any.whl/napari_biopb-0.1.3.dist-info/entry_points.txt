@@ -1,0 +1,2 @@
+[napari.manifest]
+napari-biopb = napari_biopb:napari.yaml
