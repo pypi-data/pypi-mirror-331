@@ -1,0 +1,13 @@
+co_mit/__about__.py,sha256=oIOZuMxcwpa3fI_EFnjSefutMwotRe3YhTEdoB7Yqww,150
+co_mit/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+co_mit/cli.py,sha256=B6s5n9KV_MfZbNPLjLOQk-WNFfeTCXbFlPSWR8B32sA,1936
+co_mit/commit.py,sha256=eQfjPqVK7nRItTdE0SFWU7Mh-k-Q22wq4QUTyBmA91s,1663
+co_mit/config.py,sha256=La7TrHF5loa8KhYHh_Llp7NWqBpYQqxL_1AOy5EFwuY,231
+co_mit/tools/__init__.py,sha256=KtqU2tKG_Gqp5DYCbjHhmRKo3jm6weRO_lSxEbMOrIs,51
+co_mit/tools/git.py,sha256=uWWSZTL9ZwO2rhmjad3weE-VPW-cruOrWHKFVI1cnK0,1504
+co_mit/tools/os.py,sha256=oQTHmrSx8mK-MWtSFiIOGyxZPRFHr9eZxhCMVlXk9jY,834
+co_mit-0.2.5.dist-info/METADATA,sha256=kIiX3_jwOojM0qMG5IxdpaYClcnpn3JPRq2eElGiaiY,4369
+co_mit-0.2.5.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+co_mit-0.2.5.dist-info/entry_points.txt,sha256=kjjmiOsjEqyWvteD0F_P17VzarKWPARPiu2st9M3Q5g,90
+co_mit-0.2.5.dist-info/licenses/LICENSE.txt,sha256=MjKiD_T66VfrfzETbCwo6ubAG1SDP6R3l6y20VxHsHg,1120
+co_mit-0.2.5.dist-info/RECORD,,
