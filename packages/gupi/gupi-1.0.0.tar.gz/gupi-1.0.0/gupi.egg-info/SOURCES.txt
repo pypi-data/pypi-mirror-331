@@ -1,0 +1,11 @@
+LICENSE
+README.md
+cli.py
+pyproject.toml
+setup.py
+gupi.egg-info/PKG-INFO
+gupi.egg-info/SOURCES.txt
+gupi.egg-info/dependency_links.txt
+gupi.egg-info/entry_points.txt
+gupi.egg-info/requires.txt
+gupi.egg-info/top_level.txt
