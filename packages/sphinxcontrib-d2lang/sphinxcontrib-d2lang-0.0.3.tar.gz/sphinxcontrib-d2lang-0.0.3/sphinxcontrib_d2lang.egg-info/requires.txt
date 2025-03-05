@@ -1,0 +1,4 @@
+Sphinx==7.2.6
+docutils==0.20.1
+setuptools==67.7.2
+wheel==0.42.0

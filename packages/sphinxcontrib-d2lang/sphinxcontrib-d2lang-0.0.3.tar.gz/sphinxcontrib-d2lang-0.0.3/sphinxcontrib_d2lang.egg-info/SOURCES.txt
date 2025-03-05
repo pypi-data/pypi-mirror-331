@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.py
+sphinxcontrib/d2lang/__init__.py
+sphinxcontrib/d2lang/d2lang.py
+sphinxcontrib_d2lang.egg-info/PKG-INFO
+sphinxcontrib_d2lang.egg-info/SOURCES.txt
+sphinxcontrib_d2lang.egg-info/dependency_links.txt
+sphinxcontrib_d2lang.egg-info/namespace_packages.txt
+sphinxcontrib_d2lang.egg-info/requires.txt
+sphinxcontrib_d2lang.egg-info/top_level.txt
