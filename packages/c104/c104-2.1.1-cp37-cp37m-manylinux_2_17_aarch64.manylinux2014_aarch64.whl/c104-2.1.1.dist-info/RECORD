@@ -1,0 +1,9 @@
+c104-2.1.1.dist-info/top_level.txt,sha256=Ep8-VNrydMv7sCpNnE7z9I_ZLdNXLVYmNp7vyyvSfOc,5
+c104-2.1.1.dist-info/METADATA,sha256=Kqbb9wijFsXC5IF0x7wS0Ou89Jp1_-zrhMFSWhifGYI,48954
+c104-2.1.1.dist-info/RECORD,,
+c104-2.1.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+c104-2.1.1.dist-info/WHEEL,sha256=9jsgp3F0aAxUY4VBcIJx9mp7MqSh2cemYM7-PW1W5dA,152
+c104/__init__.py,sha256=z5HzkYk3SfLCtvBk9-v_RcPem56z3MdDGp4Ri2H4Zro,616
+c104/_c104.cpython-37m-aarch64-linux-gnu.so,sha256=DeOinzJrOlYmhj4Mehx3iw8oKfthGA1dhfrnnedX6Hs,2377984
+c104/__init__.pyi,sha256=uiRgh0dEfuBn6812SjYVTOntS7q4A0ybpihqERYAw4w,127831
+c104/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
