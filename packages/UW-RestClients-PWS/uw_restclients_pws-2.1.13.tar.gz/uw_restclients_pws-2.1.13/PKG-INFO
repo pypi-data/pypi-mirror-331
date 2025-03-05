@@ -1,0 +1,27 @@
+Metadata-Version: 2.2
+Name: UW-RestClients-PWS
+Version: 2.1.13
+Summary: A library for connecting to the Person Web Service at the University of Washington
+Home-page: https://github.com/uw-it-aca/uw-restclients-pws
+Author: UW-IT T&LS
+Author-email: aca-it@uw.edu
+License: Apache License, Version 2.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+License-File: LICENSE
+Requires-Dist: uw-restclients-core
+Requires-Dist: nameparser
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: summary
+
+
+See the README on `GitHub
+<https://github.com/uw-it-aca/uw-restclients-pws>`_.
