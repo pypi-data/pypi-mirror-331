@@ -1,0 +1,6 @@
+pydantic>=2.9
+pygobject>=3.42
+pykka>=4.1
+requests>=2.28
+setuptools>=66
+tornado>=6.2
