@@ -1,0 +1,6 @@
+setup.py
+emailynmatest.egg-info/PKG-INFO
+emailynmatest.egg-info/SOURCES.txt
+emailynmatest.egg-info/dependency_links.txt
+emailynmatest.egg-info/requires.txt
+emailynmatest.egg-info/top_level.txt
