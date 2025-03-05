@@ -1,0 +1,313 @@
+Metadata-Version: 2.1
+Name: find_keyword_xtvu
+Version: 5.7.3.1
+Summary: A package to find keywords in .pdf, .docx, .odt, and .rtf files, with support for multiple languages and the ability to run on multiple CPU cores
+Author: Xuan Tung VU
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: pdfplumber
+Requires-Dist: pytesseract
+Requires-Dist: pandas
+Requires-Dist: Pillow
+Requires-Dist: spacy
+Requires-Dist: openpyxl
+Requires-Dist: pdf2image
+Requires-Dist: reportlab
+Requires-Dist: pypandoc
+Requires-Dist: python-docx
+Requires-Dist: requests
+Requires-Dist: packaging
+Requires-Dist: setuptools>=40.0.0
+
+
+# English version
+The `find_keyword_xtvu` Python package facilitates the search for keywords across **PDF, DOCX, ODT, and RTF** files, enabling the extraction of sentences that contain these keywords. It also offers support for **multiple languages** and can run on **multicore CPUs**.
+
+# 🔥 Recent Updates
+## ✨ What's New in Version 5.7.3.1
+- Bug fixes
+## ✨ What's New in Version 5.7.3
+- **❗ Important Modification in the output of the frequency table**: This update changes the way the results in the frequency table are presented. Now, instead of each contingency table from a subfolder being recorded on a separate sheet, all of them will be placed on a single sheet to facilitate the interpretation of the results.
+## ✨ What's New in Version 5.7.2
+- **❗ Important Modification in Cache File Generation Using `cache_folder_path` argument**: This update improves the handling of large document collections by changing the principle of cache file generation. Unlike version **5.7**, where a single JSON cache file was used for all documents, the function now creates individual cache files for each subfolder. This enhances performance and organization, especially when dealing with large quantities of documents.
+
+
+## Installation
+
+You can install this package via pip:
+
+```bash
+pip install find-keyword-xtvu==<latest_version_on_PyPi>
+```
+
+## Directory Structure
+
+The directory organization containing the .py code and documents can be structured as follows:
+```
+/Parent Folder
+│
+├── script_principal.py     # The main Python script
+│
+├── fichiers_entre          # Folder containing subfolders of PDF files
+│   ├── files1              # Subfolder containing input .pdf, .docx, .otd, and .rtf files
+│   ├── files2          
+│   ├── files3          
+│   ...
+└── resultats               # Folder containing the results
+```
+
+## Usage
+
+1. **Place the files in the input directory**:
+   - Place the PDF, DOCX, ODT, or RTF files you want to analyze into the subfolders within the `fichiers_entree` directory. By default, you can organize them in a single subfolder (e.g., files1) or in multiple subfolders (files2, files3, etc.), depending on your needs.
+   
+2. **Define the keywords**:
+   - Open the `script_principal.py` script and modify the `KEYWORDS` list to include the keywords you want to search for in the files.
+   
+3. **Run the script**:
+   - Run the `script_principal.py` script in an IDE like Visual Studio Code.
+
+The `script_principal.py` file uses the `find_keyword_xtvu` package and can be organized as follows:
+
+```python
+from find_keyword_xtvu import find_keyword_xtvu
+if __name__ == "__main__":
+    find_keyword_xtvu(
+        prefixe_langue = 'fr',
+        threads_rest = None,
+        nb_phrases_avant = 10,
+        nb_phrases_apres = 10,
+        keywords = [["",""],""],
+        exact_match = True,
+        taille = 20,
+        timeout = 200,
+        result_keyword_table_name = "",
+        freque_document_keyword_table_name = "",
+        fusion_keyword_before_after = False,
+        tesseract_cmd = "/usr/local/bin/tesseract",
+        use_tesseract = False,
+        use_full_tesseract = False,
+        lang_OCR_tesseract = 'fra',
+        input_path = "/path/to/fichiers_entre",
+        output_path = "/path/to/resultats",
+        cache_folder_path = "/path/to/cache_folder"  
+    )
+
+```
+
+
+## Arguments
+- `prefixe_langue`: Language prefix to specify the language model to use (default value: `'fr'`). To know the supported languages and their prefixes, see the [SpaCy documentation](https://spacy.io/usage/models). If you provide an unsupported prefix, or if you want to use the multilingual model, specify the `multi` argument. In either case, the multilingual model `xx_ent_wiki_sm` will be used. Learn more about this model [here](https://spacy.io/models/xx).
+- `threads_rest`: Number of threads reserved for other tasks. If left unspecified, the library will default to using half of the available cores.
+- `nb_phrases_avant`: Number of sentences to include before the keyword (default value: `10`).
+- `nb_phrases_apres`: Number of sentences to include after the keyword (default value: `10`).
+- `keywords`: List of keywords to search for. To group multiple keywords that should be treated the same way, use a list format like `["keyword1", "keyword2"]` (for example, `["local", "nearby"]` to treat them as synonyms). If you want to treat keywords separately, simply place each keyword as a standalone string, like `"keyword"`. For example, if we structure it like this `[["local", "nearby"], "school", "library", "park"]`, it means that "local" and "nearby" will be treated as synonyms, while "school", "library", and "park" will each be treated as distinct keywords.
+- `exact_match`: This boolean parameter determines whether the keyword search should match the exact word as provided. If set to `True`, only exact matches of the keyword will be considered during text extraction. If set to `False`, the search will be based on the lemma form of the keyword, allowing for more flexible matching by capturing different variations of the word (e.g., "run," "running," "ran"). To learn more about lemma forms, see [this page](https://spacy.io/usage/linguistic-features).
+- `taille`: Maximum file size to process in megabytes (default value: `20` MB).
+- `timeout`: Maximum time for processing a page in seconds (default value: `200`).
+- `result_keyword_table_name`: Name of the table for keyword results. If this field is empty, a default name for this table will be `res`.
+- `freque_document_keyword_table_name`: Name of the table for the results of the contingency tables of keyword frequency in each file folder. If this field is empty, the default name for this table will be `freque_document_keyword`.
+- `fusion_keyword_before_after`: This boolean parameter controls whether the function should avoid including redundant phrases when a keyword appears multiple times within close proximity in the text. When set to `True`, the function ensures that phrases surrounding a keyword are only extracted once, even if they overlap with the phrases surrounding another occurrence of the same keyword. This prevents the repetition of phrases in the final output, leading to a more concise result. If set to `False`, the function will extract all phrases surrounding each occurrence of the keyword, which may lead to redundancy if the keyword appears frequently in the text. (default value: `False`)
+- `tesseract_cmd`: Path to the Tesseract executable (default value: `"/usr/local/bin/tesseract"`).
+- `use_tesseract`: This boolean parameter controls whether to use Tesseract OCR for processing images within the documents. When set to `True`, the function will extract text from images using Tesseract OCR, which is useful if the documents contain scanned images or embedded pictures with text. Ensure that `tesseract_cmd` is correctly set to the path of the Tesseract executable. If set to `False`, the function will ignore images in the documents and only process the text that is directly extractable without OCR. This can be faster and avoids the need to install Tesseract. (default value: `False`)
+- `use_full_tesseract`: This boolean parameter controls whether to apply Tesseract OCR to the entire page of the document. When enabled, the entire page is converted into an image, and Tesseract is used to extract text from the entire image. This results in more accurate text extraction and preserves the document's structure, but it is more computationally intensive. If only `use_tesseract` is enabled without `use_full_tesseract`, Tesseract will only extract text from specific images on the page, rather than the entire page. (default value: `False`)
+- `lang_OCR_tesseract`: Language code used by Tesseract OCR to identify the language of the text to be extracted from images. You can specify other language codes supported by Tesseract depending on the language of the text in the images. For a complete list of supported languages and their codes, you can consult the [official Tesseract documentation](https://github.com/tesseract-ocr/tesseract/blob/main/doc/tesseract.1.asc#languages). (default value: `fra`)
+- `input_path`: Path to the folder containing the files to be processed.
+- `output_path`: Path to the folder where the results will be saved.
+- `cache_folder_path`: Path to the folder containing the JSON cache files that will be created for each subfolder. This directory will store the cache files for processed documents, significantly reducing processing time when the same documents are processed multiple times in future runs. If this parameter is not provided or if the path is invalid, the function will not save any cache, and the processing time will be longer.
+## Outputs
+
+The `find_keyword_xtvu` function will generate the following three Excel workbooks (.xlsx):
+1. A file containing the results of the keywords found in the documents, with a name that can be defined by the `result_keyword_table_name` argument in the `find_keyword_xtvu` function.
+2. A file containing the contingency tables of keyword frequency in the documents, with a name that can be defined by the `freque_document_keyword_table_name` argument in the `find_keyword_xtvu` function. Each contingency table shows how many times each keyword was found in each document within a specific folder.
+3. A file listing problematic files, named `heavy_or_slow_df.xlsx`.
+
+
+## Contribution
+As the author of this library, I would like to thank Madame Sylvie HUET, researcher at LISC, INRAE, Centre Clermont-Auvergne-Rhône-Alpes, France, for her valuable contributions.
+
+Contributions are welcome! If you would like to improve this project or if you have any questions, feel free to contact me at vuxuantung09134@gmail.com (in French, English, or Vietnamese).
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
+
+# Version Française
+
+Le package Python `find_keyword_xtvu` facilite la recherche de mots-clés dans les fichiers **PDF, DOCX, ODT et RTF**, permettant d'extraire les phrases contenant ces mots-clés. Il offre également un support pour **plusieurs langues** et peut s'exécuter sur des **CPU multicœurs**.
+
+## Installation
+
+Vous pouvez installer ce package via pip :
+
+```bash
+pip install find-keyword-xtvu==<dernière_version_sur_PyPi>
+```
+
+## Structure du Répertoire
+
+L'organisation du dossier contenant le code .py et les documents peut être structurée comme suit :
+```
+/Dossier parent
+│
+├── script_principal.py     # Le script Python principal
+│
+├── fichiers_entre          # Dossier contenant les sous-dossiers de fichiers PDF
+│   ├── files1              # Sous-dossier contenant les fichiers .pdf, .docx, .otd et .rtf d'entrée
+│   ├── files2          
+│   ├── files3          
+│   ...
+└── resultats               # Dossier contenant les résultats
+```
+
+## Utilisation
+
+1. **Placez les fichiers dans le répertoire d'entrée** :
+    - Mettez les fichiers PDF, DOCX, ODT, ou RTF que vous souhaitez analyser dans les sous-dossiers du dossier `fichiers_entree`. Par défaut, vous pouvez les organiser dans un seul sous-dossier (par exemple, `files1`) ou dans plusieurs sous-dossiers (`files2`, `files3`, etc.), selon vos besoins.
+    
+2. **Définissez les mots-clés** :
+   - Ouvrez le script `script_principal.py` et modifiez la liste `KEYWORDS` pour inclure les mots-clés que vous souhaitez rechercher dans les fichiers.
+   
+3. **Exécutez le script** :
+   - Exécutez le script `script_principal.py`dans un IDE comme Visual Studio Code.
+
+Le fichier `script_principal.py` utilise le package `find_keyword_xtvu` et peut être organisé comme suit :
+
+```python
+from find_keyword_xtvu import find_keyword_xtvu
+if __name__ == "__main__":
+    find_keyword_xtvu(
+        prefixe_langue = 'fr',
+        threads_rest = None,
+        nb_phrases_avant = 10,
+        nb_phrases_apres = 10,
+        keywords = [["",""],""],
+        exact_match = True,
+        taille = 20,
+        timeout = 200,
+        result_keyword_table_name = "",
+        freque_document_keyword_table_name = "",
+        fusion_keyword_before_after = False,
+        tesseract_cmd = "/usr/local/bin/tesseract",
+        use_tesseract = False,
+        use_full_tesseract = False,
+        lang_OCR_tesseract = 'fra',
+        input_path = "/path/to/fichiers_entre",
+        output_path = "/path/to/resultats",
+        cache_folder_path = "/path/to/cache_folder"  
+    )
+```
+
+
+## Arguments
+- `prefixe_langue` : Préfixe de langue pour spécifier le modèle linguistique à utiliser (valeur par défaut : `'fr'`). Pour connaître les langues supportées et leurs préfixes, consultez la [documentation SpaCy](https://spacy.io/usage/models). Si vous fournissez un préfixe non supporté, ou si vous souhaitez utiliser le modèle multilingue, spécifiez l'argument `multi`. Dans les deux cas, le modèle multilingue `xx_ent_wiki_sm` sera utilisé. En savoir plus sur ce modèle [ici](https://spacy.io/models/xx).
+- `threads_rest` : Nombre de threads réservés pour d'autres tâches. Si non spécifié, la bibliothèque utilisera par défaut la moitié des cœurs disponibles.
+- `nb_phrases_avant` : Nombre de phrases à inclure avant le mot-clé (valeur par défaut : `10`).
+- `nb_phrases_apres` : Nombre de phrases à inclure après le mot-clé (valeur par défaut : `10`).
+- `keywords` : Liste de mots-clés à rechercher. Pour regrouper plusieurs mots-clés qui doivent être traités de la même manière, utilisez un format de liste comme `["mot1", "mot2"]` (par exemple, `["local", "proche"]` pour les traiter comme des synonymes). Si vous souhaitez traiter les mots-clés séparément, placez chaque mot-clé sous forme de chaîne de caractères individuelle, comme `"mot"`. Par exemple, si nous structurons la liste ainsi `[["local", "proche"], "école", "bibliothèque", "parc"]`, cela signifie que "local" et "proche" seront traités comme des synonymes, tandis que "école", "bibliothèque" et "parc" seront chacun traités comme des mots-clés distincts.
+- `exact_match` : Ce paramètre booléen détermine si la recherche du mot-clé doit correspondre exactement au mot fourni. S'il est réglé sur `True`, seules les correspondances exactes du mot-clé seront prises en compte lors de l'extraction du texte. S'il est réglé sur `False`, la recherche sera basée sur le lemme du mot-clé, ce qui permet une correspondance plus flexible en capturant différentes variations du mot (par exemple, "courir", "courant", "couru"). Pour en savoir plus sur les formes de lemmes, consultez [cette page](https://spacy.io/usage/linguistic-features).
+- `taille` : Taille maximale des fichiers à traiter en mégaoctets (valeur par défaut : `20` MB).
+- `timeout` : Durée maximale pour le traitement d'une page en secondes (valeur par défaut : `200`).
+- `result_keyword_table_name` : Nom de la table pour les résultats des mots-clés. Si ce champ est vide, un nom par défaut pour cette table sera `res`.
+- `freque_document_keyword_table_name` : Nom de la table pour les résultats des tables de contingence de la fréquence des mots-clés dans chaque dossier de fichiers. Si ce champ est vide, le nom par défaut pour cette table sera `freque_document_keyword`.
+- `fusion_keyword_before_after` : Ce paramètre booléen contrôle si la fonction doit éviter d'inclure des phrases redondantes lorsque un mot-clé apparaît plusieurs fois à proximité dans le texte. Lorsqu'il est défini sur `True`, la fonction garantira que les phrases entourant un mot-clé sont extraites une seule fois, même si elles chevauchent les phrases entourant une autre occurrence du même mot-clé. Cela empêche la répétition de phrases dans le résultat final, conduisant à un résultat plus concis. Si défini sur `False`, la fonction extraira toutes les phrases entourant chaque occurrence du mot-clé, ce qui peut conduire à une redondance si le mot-clé apparaît fréquemment dans le texte. (valeur par défaut : `False`)
+- `tesseract_cmd` : Chemin vers l'exécutable Tesseract (valeur par défaut : `"/usr/local/bin/tesseract"`).
+- `use_tesseract` : Ce paramètre booléen détermine si l'on doit utiliser Tesseract OCR pour traiter les images dans les documents. Lorsqu'il est défini sur `True`, la fonction extraira le texte des images en utilisant Tesseract OCR, ce qui est utile si les documents contiennent des images scannées ou des images intégrées avec du texte. Assurez-vous que `tesseract_cmd` est correctement configuré pour pointer vers le chemin de l'exécutable Tesseract. Si le paramètre est défini sur `False`, la fonction ignorera les images dans les documents et traitera uniquement le texte directement extractible sans OCR. Cela peut être plus rapide et évite la nécessité d'installer Tesseract. (valeur par défaut : `False`)
+- `use_full_tesseract` : Ce paramètre booléen contrôle si Tesseract OCR doit être appliqué à l'ensemble de la page du document. Lorsqu'il est activé, la page entière est convertie en image, et Tesseract est utilisé pour extraire le texte de l'image complète. Cela permet une extraction de texte plus précise et préserve la structure du document, mais cela est plus intensif en termes de calcul. Si seul `use_tesseract` est activé sans `use_full_tesseract`, Tesseract n'extraira le texte que des images spécifiques sur la page, plutôt que de la page entière. (valeur par défaut : `False`)
+- `lang_OCR_tesseract`: Code de langue utilisé par Tesseract OCR pour identifier la langue du texte à extraire des images. Par défaut, ce paramètre est réglé sur `'fra'` pour le français. Vous pouvez spécifier d'autres codes de langue pris en charge par Tesseract selon la langue du texte dans les images. Pour une liste complète des langues et de leurs codes supportés par Tesseract, vous pouvez consulter la [documentation officielle de Tesseract](https://github.com/tesseract-ocr/tesseract/blob/main/doc/tesseract.1.asc#languages).
+- `input_path` : Chemin vers le dossier contenant les fichiers à traiter.
+- `output_path` : Chemin vers le dossier où les résultats seront enregistrés.
+- `cache_folder_path` : Chemin vers le dossier contenant les fichiers cache JSON, créés pour chaque sous-dossier. Ce répertoire stockera les fichiers cache pour les documents traités, réduisant ainsi considérablement le temps de traitement lorsque les mêmes documents sont traités plusieurs fois lors des exécutions futures. Si ce paramètre n'est pas fourni ou si le chemin est invalide, la fonction ne sauvegardera aucun cache, et le temps de traitement sera plus long.
+
+
+
+## Sorties
+
+La fonction `find_keyword_xtvu` va générer trois classeurs Excel (.xlsx) suivants :
+1. Un fichier contenant les résultats des mots-clés trouvés dans les documents avec un nom pouvant être défini par l'argument `result_keyword_table_name` dans la fonction `find_keyword_xtvu`.
+2. Un fichier contenant les tables de contingence de la fréquence des mots-clés dans les documents avec un nom pouvant être défini par l'argument `freque_document_keyword_table_name` dans la fonction `find_keyword_xtvu`. Chaque table de contingence montre combien de fois chaque mot-clé a été trouvé dans chaque document au sein d'un dossier spécifique.
+3. Un fichier répertoriant les fichiers problématiques, nommé `heavy_or_slow_df.xlsx`.
+
+
+
+
+
+
+## Contribution
+
+En tant qu'auteur de cette bibliothèque, je tiens à remercier Madame Sylvie HUET, chercheuse au LISC, INRAE, Centre Clermont-Auvergne-Rhône-Alpes, France, pour ses précieuses contributions.
+
+Les contributions sont les bienvenues ! Si vous souhaitez améliorer ce projet ou si vous avez des questions, n'hésitez pas à me contacter à l'adresse vuxuantung09134@gmail.com (en français, anglais ou vietnamien).
+
+## Licence
+
+Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
+
+
+# 📜 Older Updates  
+
+
+
+## ✨ What's New in Version 5.7
+- **🆕 Enhanced PDF Processing with the new `cache_file_path` argument**: This update introduces a powerful feature that optimizes document processing through JSON-based caching. When a `cache_file_path` is provided, the function first checks whether the extracted text data for the file is already stored in the JSON cache. If the data is found, the function skips the extraction process, significantly speeding up the analysis. If not, the function will proceed with the extraction, save the resulting data to the JSON cache, and ensure that future analyses of the same file are much faster.
+
+
+## ✨ What's New in Version 5.6.9
+- **🆕 Enhanced Keyword Frequency Tracking**: In this update, I have introduced additional columns to the results DataFrame when the `fusion_keyword_before_after` argument is set to `True`. These columns represent the frequency of each keyword found in the analyzed phrases, offering more detailed insights into keyword occurrences. These new frequency columns are automatically appended after the `Info` column.
+
+
+
+## ✨ What's New in Version 5.6.8
+- **❗Important Change to Argument**: To simplify the requirements of this library, I have decided to remove the dependency on Poppler. Now, you don’t need to download Poppler to use this library. This change simplifies the process for the average user.
+- **🆕 New Argument `use_full_tesseract`**: This new argument allows you to decide whether to apply Tesseract to the entire document. This option enables us to extract text while maintaining the structure of the text, which is beneficial for users with high-performance computers.
+
+
+## ✨ What's New in Version 5.6.7
+- **🔧 Bug Fix**: Fixed the error in generating contingency tables and calculating occurrences of keywords in a sentence.
+## ✨ What's New in Version 5.6.6
+- **🚀 Enhanced Keyword Processing**: The library now supports the identification and handling of synonymous keywords. You can search for individual keywords or groups of synonymous keywords, and they will all be treated equivalently, ensuring a more flexible and accurate search process.
+## ✨ What's New in Version 5.6.4
+- **🚀 Improvement in the way documents are read**: Enhanced the document reading methods to produce more accurate results.
+
+## ✨ What's New in Version 5.6.2
+- **🆕 New argument `exact_match`**: Enables precise matching of the keyword during text extraction. If set to `False`, the matching will be based on the lemma form, allowing for more flexible searches and capturing different forms of the word.
+- **🆕 New modification to `threads_rest`**: To prevent potential blocking on certain computers, the default number of cores used by this code is now set to **half of the available cores**, ensuring smoother operation without overloading the system. ***If your computer is lagging significantly, you may want to increase this number to help resolve the issue.***
+## 🛠️ What's New in Version 5.6.1
+- **🔧 Bug Fix**: Minor bug fixes to enhance stability.
+
+## ✨ What's New in Version 5.6
+- **🆕 New argument `lang_OCR_tesseract`**: Add the ability to specify the language of the Tesseract OCR model for extracting text from images.
+
+## 🛠️ What's New in Version 5.5.9
+- **🔧 Bug Fix with `poppler_path`**: Solves the issue with "Unable to get page count. Is poppler installed and in PATH?" by allowing you to specify the Poppler installation path.
+
+## ✨ What's New in Version 5.5.8
+- **🆕 New argument `use_tesseract`**: Adds an option to use Tesseract OCR for extracting text from images within documents. When set to `False`, only text is processed without OCR.
+
+## 🛠️ What's New in Version 5.5.7
+- **🔧 Bug Fix**: Minor bug fixes to enhance stability.
+
+## 🛠️ What's New in Version 5.5.6
+- **🔧 Bug Fix**: Resolved the `tesseract` not found issue.
+- **🔄 Update**: All log messages are now standardized in English.
+
+## 🛠️ What's New in Version 5.5.5
+- **🔧 Bug Fix**: Corrected an issue with calculating contingency tables of keyword frequency when `fusion_keyword_before_after = True`.
+
+## 🛠️ What's New in Version 5.5.4
+- **🔧 Bug fix**: Fixed an issue where some document names couldn't be read correctly.
+- **🆕 New argument `fusion_keyword_before_after`**: Introduces the ability to merge phrases to avoid redundancy in the results.
+
+## 🌍 What's New in Version 5.5.2
+- **🌐 Multilingual Support**: This version now includes support for multiple languages by integrating SpaCy's NLP models. You can now search for keywords and extract sentences in languages such as English, French, German, Spanish, and more. The supported models are listed in the [SpaCy documentation](https://spacy.io/usage/models).
+
