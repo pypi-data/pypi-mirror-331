@@ -1,0 +1,2 @@
+[twat.plugins]
+cache = twat_cache
