@@ -1,0 +1,8 @@
+[console_scripts]
+packetize = rsudp.packetize:main
+rs-client = rsudp.client:main
+rs-log = rsudp.entry_points:ep_cat_log
+rs-packetloss = rsudp.packetloss:main
+rs-settings = rsudp.entry_points:ep_edit_settings
+rs-tailf = rsudp.entry_points:ep_tailf_log
+rs-test = rsudp.client:test

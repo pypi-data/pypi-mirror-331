@@ -1,0 +1,6 @@
+obspy
+numpy<3,>=2.0.0
+matplotlib<4,>3.2
+pydub
+twython
+python-telegram-bot
