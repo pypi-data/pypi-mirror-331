@@ -1,0 +1,15 @@
+Metadata-Version: 2.2
+Name: lightparser
+Version: 0.1.0
+Summary: A lightweight parser with XPath support, Scrapy-like Items, and flexible output options.
+Author: Abdul Nazar
+Author-email: nazaradn@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: lxml
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: requires-dist
+Dynamic: summary
