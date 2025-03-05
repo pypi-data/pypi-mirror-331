@@ -1,0 +1,12 @@
+numpy
+scipy
+matplotlib
+cvxopt
+osqp
+tqdm
+torch
+torchvision
+tensorboard==2.12.0
+mkdocs
+mkdocstrings
+mkdocs-material
