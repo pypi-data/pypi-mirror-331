@@ -1,0 +1,17 @@
+libMyCarrier/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+libMyCarrier/db/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+libMyCarrier/db/db.py,sha256=ycFGdvGV6ybWSLRSRh5RHpa7pxL_gkQ77JYxty62QHU,3922
+libMyCarrier/git/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+libMyCarrier/git/github.py,sha256=Nd2l7pq67n7z06EU3uIJ9Ns4eonvThjfArJSs0qULHA,2060
+libMyCarrier/secrets/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+libMyCarrier/secrets/vault.py,sha256=5Kb0OSpppY7nUTO2nic_FgwelGpYWswqwk3oECZGsNU,5228
+libMyCarrier/storage/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+libMyCarrier/storage/blob.py,sha256=Sq2ZsV_gIsdjnlKWnHcO3nkRZ0nbRnzDBN1fOn8Vns4,2249
+libMyCarrier/utilities/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+libMyCarrier/utilities/message.py,sha256=GmI_RYEF7OLD99MQOPPGnOuUXepUNhPSz8za5FGMlWg,1762
+libMyCarrier/utilities/tags.py,sha256=GcOHukjnRHTMb72BAX4-bHBuEHvZgHgjWEi4csVI10Y,648
+libmycarrier-0.3.0.dist-info/LICENSE,sha256=kP0r6PWnAE4LAzBDrLIBatNfzp0ZzUkz2YDuszMIDeo,1065
+libmycarrier-0.3.0.dist-info/METADATA,sha256=ZXTdKJcZxWEsdlOVQWptbqgztTpfNPE0JR35wX6bVHA,2011
+libmycarrier-0.3.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+libmycarrier-0.3.0.dist-info/top_level.txt,sha256=DneoVDrYCPs16r02IOoHkbRNwj9xgjHeqxrpRGbPX-k,13
+libmycarrier-0.3.0.dist-info/RECORD,,
