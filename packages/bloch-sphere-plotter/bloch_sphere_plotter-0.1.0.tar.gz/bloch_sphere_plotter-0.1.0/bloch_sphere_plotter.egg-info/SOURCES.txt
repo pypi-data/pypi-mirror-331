@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+bloch_sphere_plotter/__init__.py
+bloch_sphere_plotter/plot.py
+bloch_sphere_plotter.egg-info/PKG-INFO
+bloch_sphere_plotter.egg-info/SOURCES.txt
+bloch_sphere_plotter.egg-info/dependency_links.txt
+bloch_sphere_plotter.egg-info/requires.txt
+bloch_sphere_plotter.egg-info/top_level.txt
+tests/test_plot.py
+tests/test_plot_ci.py
