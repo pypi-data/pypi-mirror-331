@@ -1,0 +1,2 @@
+[console_scripts]
+cctv-detector = cctv_detector.cli:main
