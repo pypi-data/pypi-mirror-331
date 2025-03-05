@@ -1,0 +1,2 @@
+[console_scripts]
+seedshield = seedshield.main:main
