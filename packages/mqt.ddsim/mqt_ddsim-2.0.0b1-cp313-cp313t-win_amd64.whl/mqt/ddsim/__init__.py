@@ -1,0 +1,63 @@
+"""MQT DDSim Python Package."""
+
+from __future__ import annotations
+
+
+# start delvewheel patch
+def _delvewheel_patch_1_10_0():
+    import os
+    if os.path.isdir(libs_dir := os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir, os.pardir, 'mqt_ddsim.libs'))):
+        os.add_dll_directory(libs_dir)
+
+
+_delvewheel_patch_1_10_0()
+del _delvewheel_patch_1_10_0
+# end delvewheel patch
+
+import sys
+
+# under Windows, make sure to add the appropriate DLL directory to the PATH
+if sys.platform == "win32":
+
+    def _dll_patch() -> None:
+        """Add the DLL directory to the PATH."""
+        import os
+        import sysconfig
+        from pathlib import Path
+
+        site_packages = Path(sysconfig.get_paths()["purelib"])
+        bin_dir = site_packages / "mqt" / "core" / "bin"
+        os.add_dll_directory(str(bin_dir))
+
+    _dll_patch()
+    del _dll_patch
+
+from ._version import version as __version__
+from .provider import DDSIMProvider
+from .pyddsim import (
+    CircuitSimulator,
+    ConstructionMode,
+    DeterministicNoiseSimulator,
+    HybridCircuitSimulator,
+    HybridMode,
+    PathCircuitSimulator,
+    PathSimulatorConfiguration,
+    PathSimulatorMode,
+    StochasticNoiseSimulator,
+    UnitarySimulator,
+)
+
+__all__ = [
+    "CircuitSimulator",
+    "ConstructionMode",
+    "DDSIMProvider",
+    "DeterministicNoiseSimulator",
+    "HybridCircuitSimulator",
+    "HybridMode",
+    "PathCircuitSimulator",
+    "PathSimulatorConfiguration",
+    "PathSimulatorMode",
+    "StochasticNoiseSimulator",
+    "UnitarySimulator",
+    "__version__",
+]
