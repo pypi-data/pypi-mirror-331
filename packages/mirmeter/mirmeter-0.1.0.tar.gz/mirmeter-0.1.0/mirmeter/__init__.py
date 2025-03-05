@@ -1,0 +1,1 @@
+"""MIR Meter display."""

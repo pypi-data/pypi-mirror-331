@@ -1,0 +1,28 @@
+Metadata-Version: 2.4
+Name: mirmeter
+Version: 0.1.0
+Summary: MIR Meter consumer display emulator
+Project-URL: Homepage, https://github.com/Hal9k0/mirmeter
+Project-URL: Issues, https://github.com/Hal9k0/mirmeter/issues
+Author-email: Hal9k <mir@hal9k.ru>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: License :: Free For Home Use
+Classifier: License :: Free for non-commercial use
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: Russian
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# MIR Meter consumer display emulator
+
+Эмулятор Bluetooth дисплея потребителя для счётчика МИР.
+Выполняет опрос счетчика по Bluetooth.
+
+Запуск: python -m mirmeter < имя счётчика или MAC-адрес> <ПИН-код>
+
+Имя счётчика ссостоит из модели и серийного номера. Например, C05-12345678901234
+ПИН-код можно найти в формуляре счётчика.
+Проверялся на счётчике МИР С-05. Должно работать с С-04 и С-07.

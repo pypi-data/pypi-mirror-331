@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mirmeter"
+version = "0.1.0"
+authors = [
+  { name="Hal9k", email="mir@hal9k.ru" },
+]
+description = "MIR Meter consumer display emulator"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: MIT License",
+    "License :: Free For Home Use",
+    "License :: Free for non-commercial use",
+    "Natural Language :: Russian",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+[project.urls]
+Homepage = "https://github.com/Hal9k0/mirmeter"
+Issues = "https://github.com/Hal9k0/mirmeter/issues"
