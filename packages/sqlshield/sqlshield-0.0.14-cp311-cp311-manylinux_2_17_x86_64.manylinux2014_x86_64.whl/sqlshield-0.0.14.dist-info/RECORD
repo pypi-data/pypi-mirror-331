@@ -1,0 +1,8 @@
+sqlshield/models.cpython-311-x86_64-linux-gnu.so,sha256=aKQXFQEf-r7AyXAvTna6ynq4tGatS6VzQKYRrEW2LBA,1349296
+sqlshield/__init__.py,sha256=RJHZHKX6kXgTWjRtSRd8KCJtcUEMBcJ3xFAwiYTCRVU,105
+sqlshield/shield.cpython-311-x86_64-linux-gnu.so,sha256=_wYKz9Gxw4JYACggVL3hR6x_f_hKUohO7lvYKtxAGgs,631344
+sqlshield-0.0.14.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+sqlshield-0.0.14.dist-info/WHEEL,sha256=29NkEIEtbBWdUndD1QwtbeweFB0FA9rGz7VeSme2m_U,151
+sqlshield-0.0.14.dist-info/RECORD,,
+sqlshield-0.0.14.dist-info/top_level.txt,sha256=sMIFlsz4TsFN2Y4jGG_bNkgSeRopF0t0iBSjbFfgIMs,10
+sqlshield-0.0.14.dist-info/METADATA,sha256=8AopJIC8GgYz9MtAYHRXam2DDv-2PQcgGxLXFV1mtZs,10120
