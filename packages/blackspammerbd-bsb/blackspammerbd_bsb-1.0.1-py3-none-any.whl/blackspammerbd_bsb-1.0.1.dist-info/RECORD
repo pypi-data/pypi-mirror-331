@@ -1,0 +1,14 @@
+blackspammerbd/__init__.py,sha256=kRTW57zHr0uWrLwgDdCfjn-3JpQdZuV-e2yh6qVq3Ys,32
+blackspammerbd/core.py,sha256=-_tIt0ALZFUJFvBcm2Ow_LKvIBRGbzkqgvkC8BS379k,2147
+blackspammerbd1/__init__.py,sha256=8BEXBndXV2Lzi6riisNSdCby-7-tG9Um5-L-UANvgvQ,38
+blackspammerbd1/server.py,sha256=WAyHa9t3lx-WkPDh9w5C9WDyLVA_Q6aIi9cnl6qgLYg,1675
+blackspammerbd_bsb/__init__.py,sha256=Ls0Tlmr8T3E1VJK8lYGT3DL_Wkoib0GbmVoLrNvnoHI,44
+blackspammerbd_bsb/cli.py,sha256=rGOYSfPWiCezUx3msDhJtWuB02w-NU7MN2FiOqVZmco,4197
+blackspammerbd_one/__init__.py,sha256=E2AdPJuaKfJuseunG2_bg_R16YMsyCRHR_0rjL_kluQ,44
+blackspammerbd_one/cli.py,sha256=UbeoSEDGvlr4vnun8Xy5t8Nj6qp00gqE0b9ooVwKEP8,3308
+blackspammerbd_bsb-1.0.1.dist-info/LICENSE.chromedriver,sha256=H5UWVvf6Y7Ul6i35mriz7071dWR01cR9G-5ypnZHnpM,326542
+blackspammerbd_bsb-1.0.1.dist-info/METADATA,sha256=gvLJIFyOBegoaDozZ414rknjTIaxUaZvVVj_wrOVhVA,512
+blackspammerbd_bsb-1.0.1.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+blackspammerbd_bsb-1.0.1.dist-info/entry_points.txt,sha256=LjP45qLVQfnn_BX1LGFzCk8Ebjzrv-YOLRPCVGfQUFc,52
+blackspammerbd_bsb-1.0.1.dist-info/top_level.txt,sha256=OhMBhq5TiH95RHFDO1fTPDdqS6lzJW5heNH4EPw5sd8,69
+blackspammerbd_bsb-1.0.1.dist-info/RECORD,,
