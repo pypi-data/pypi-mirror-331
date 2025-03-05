@@ -1,0 +1,186 @@
+# controlpool
+
+Multiprocessing controllable pool
+
+## Pool
+```python
+Pool(func, processes, * [, worker_params, marks, raise_if_fail, controller])
+```
+Class that create pool of workers for parrllel calculations.
+
+#### func
+Callable obect, that call on every task. Signature **func(worker_param, arg)** if worker_params is set or **func(arg)**. Here **arg** is argument of Calculation from **[map](#map)** **[args](#args)**, **worker_param** is parameter of worker from **[worker_params](#worker_params)**.
+
+#### processes
+Number of processes for parralel calculation. Actiual number of worker is minumum of **processes**, length of **[worker_params](#worker_params)** (if set) and length of **[marks](#marks)** (if set).
+
+Type: int
+
+#### worker_params
+
+Iterables that represent list of workers parameters. Parameter of worker pass to **[func](#func)**. If **worker_params** is not set othing is pass to **[func](#func)**.
+
+#### marks
+
+Same as **[worker_params](#worker_params)**, but not pass to **[func](#func)**. May be accesed by **mark** attribute of [WorkerInfo](#WorkerInfo). If **marks** is not set None assigned as mark for each worker.
+
+#### raise_if_fail
+
+If **True** raise exception if all workers raise exeption. If **False* nothing happen in this case (pool wait for new worker).
+
+Type: bool
+
+Default: True
+
+#### controller
+
+Callable object that run in separate process and may controll pool workflow. **controller** call with single argument of **[ControllerTerminal](#ControllerTerminal)** instance. If not set, it will be no controller process.
+
+### map
+```python
+Pool.map(args, return_arg=False)
+```
+
+Start parallel applies  on **[func](#func)** on **args**.
+
+If one of worker faild (raise exception), **Pool** try to reasigne this task to another worker. 
+
+Return list of results (if **return_arg** is false) o list of tuples (argument, result) (if  **return_arg** is true) in same order, as in **args**.
+
+#### args
+
+Iterable.
+
+### map_iterable
+```python
+Pool.map_iterable(args, return_arg=False)
+```
+
+Same as **[map](#map)** but return generator instead of list.
+
+### close
+```python
+Pool.close()
+```
+
+Free pool resource. It should be called after all calculations done. Alternatively **Pool** may be used as context manager.
+
+## ControllerTerminal
+
+Class for comunicate with poll. Instance of this class pass to **[controller](#controller)** function. There is no reason to create instace manually.
+
+### get_info
+```python
+ControllerTerminal.get_info()
+```
+
+Return information about **Pool**. See **[Info](#Info)**.
+
+### add_worker
+```python
+ControllerTerminal.add_worker([mark, worker_param])
+```
+
+Add worker to **Pool**.
+
+Return (error, error_explanation). If error is True (or dequivalent), error_explanation contain text explanation of eror.
+
+#### mark
+
+Set mark of worker.
+
+Default: None
+
+#### worker_param
+
+Set parameter of worker.
+
+Default: None
+
+### change_worker_state
+```python
+ControllerTerminal.change_worker_state(worker_id, state [, now])
+```
+Change state of existing worker in **Pool**.
+
+Return (error, error_explanation). If error is True (or dequivalent), error_explanation contain text explanation of eror.
+
+#### worker_id
+
+Order number (starting with 0) in list of workers in pool.
+
+#### state
+
+New state of worker (see [WorkerState](#WorkerState)).
+
+#### now
+
+Indicate that state changed immediately (True) or after worker has completed current task.
+
+Default: False
+
+Type Bool
+
+## Info
+
+Class represent information about **Pool**. Contain several attributes:
+
+### workers_info
+
+List of [WorkerInfo](#WorkerInfo). Each element represents info about each worker. Order number in list represent worker ID.
+
+### workers_info
+
+Number of complete tasks.
+
+### delayed_tasks
+
+Number of task pending to reasign to another worker (see [map](#map)).
+
+## WorkerInfo
+
+Class represent information about worker. Contain several attributes:
+
+### mark
+
+Mark of the worker.
+
+### state
+
+state of worker (see **[WorkerState](#WorkerState)**).
+
+### task
+
+Current task
+
+### exception
+
+Exception that raise worker. **None** if there is no exception.
+
+### worker_param
+
+Parameter of worker. Present only if there was **[worker_params](#worker_params)** in **[Pool](#Pool)**.
+
+## WorkerState
+
+Class-enumerator represent worker state. There is several state:
+
+### RUN
+
+Worker do calculation
+
+### PAUSED
+
+Worker paused by pool (not by controller). Not available form **[controller](#controller)**.
+
+### STOPPED
+
+Worker stopped by **[controller](#controller)**.
+
+### EXCEPTION
+
+Worker raise exeption. Not available form **[controller](#controller)**.
+
+### KILLED
+
+Worker completely killed.
