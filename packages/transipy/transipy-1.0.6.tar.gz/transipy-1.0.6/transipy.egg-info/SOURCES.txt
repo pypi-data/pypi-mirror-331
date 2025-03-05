@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+tests/test_main.py
+transipy/__init__.py
+transipy/main.py
+transipy/trans_helper.py
+transipy/utils.py
+transipy.egg-info/PKG-INFO
+transipy.egg-info/SOURCES.txt
+transipy.egg-info/dependency_links.txt
+transipy.egg-info/entry_points.txt
+transipy.egg-info/requires.txt
+transipy.egg-info/top_level.txt

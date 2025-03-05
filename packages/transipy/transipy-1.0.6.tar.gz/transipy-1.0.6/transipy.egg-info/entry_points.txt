@@ -1,0 +1,2 @@
+[console_scripts]
+transipy = transipy:main
