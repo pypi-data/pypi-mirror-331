@@ -1,0 +1,9 @@
+datalchemy/__init__.py,sha256=ATTrYPBAmj9nX_EtAkseVzj8lRmde4_bQ7cxA9C88mE,137
+datalchemy/data_handler.py,sha256=9-YYWsLunib6rpmBCj5zlWvWruiH5FY_V8OMWsoaXqg,2173
+datalchemy/database.py,sha256=xSSVGbLkET1u4es1T72OGTZPmKI89FjlYP8rejUOoZU,6456
+datalchemy/generators.py,sha256=RxW-tleK6vlelLO6HSlsQT6UB5b1ZG8VXjLbO-uQrQk,16450
+datalchemy/text.md,sha256=94FkifRJNTD8ZoQUujICptVGp51ItmvFvd4PmSWq3Q4,2130
+datalchemy-0.1.0.dist-info/LICENSE,sha256=aTrJhqpZBehOoMrzeCCVlU8T3OPk3-pB5vNi3GFCM2A,242
+datalchemy-0.1.0.dist-info/METADATA,sha256=XoJhlQ3ZxCMH39LYPm0Fo1xPLKNzs1ggd081r9rR6N8,7081
+datalchemy-0.1.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+datalchemy-0.1.0.dist-info/RECORD,,
