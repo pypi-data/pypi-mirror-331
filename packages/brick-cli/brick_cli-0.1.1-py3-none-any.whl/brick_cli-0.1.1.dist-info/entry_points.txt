@@ -1,0 +1,3 @@
+[console_scripts]
+brick=brick_cli.cli:cli
+
