@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+src/mtbacktest/__init__.py
+src/mtbacktest/backtest.py
+src/mtbacktest/data.py
+src/mtbacktest/examples.py
+src/mtbacktest/simulation.py
+src/mtbacktest/strategy.py
+src/mtbacktest.egg-info/PKG-INFO
+src/mtbacktest.egg-info/SOURCES.txt
+src/mtbacktest.egg-info/dependency_links.txt
+src/mtbacktest.egg-info/top_level.txt
+src/mtbacktest/lib/__init__.py
+src/mtbacktest/lib/metrics.py
+src/mtbacktest/lib/preprocessing.py
+src/mtbacktest/lib/utils.py

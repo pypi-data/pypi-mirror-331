@@ -1,0 +1,17 @@
+[project]
+name = "mtbacktest"
+version = "0.1.17"
+authors = [
+  { name="Jiajian He", email="2211054370abc@gmail.com" },
+]
+description = "A packaged designed for backtesting single and multi ticker strategies"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/jeffhe1/mtbacktest"
