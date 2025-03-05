@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "certbot-dns-hydra"
+version = "0.2.1"
+description = "Certbot plugin for Oxford Hydra DNS API"
+authors = [{name = "Jonathan Young", email = "jonathan.young@glam.ox.ac.uk"}]
+license = {file = "LICENSE"}
+dependencies = ["certbot>=1.0.0", "requests", "zope.interface"]
+readme = "README.md"
+requires-python = ">=3.6"
+
+[project.entry-points."certbot.plugins"]
+"dns-hydra" = "certbot_dns_hydra.certbot_dns_hydra:HydraDNSAuthenticator"

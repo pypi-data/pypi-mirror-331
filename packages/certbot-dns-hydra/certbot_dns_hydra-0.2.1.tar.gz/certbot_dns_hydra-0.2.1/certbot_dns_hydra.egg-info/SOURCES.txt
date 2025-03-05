@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+certbot_dns_hydra/__init__.py
+certbot_dns_hydra/certbot_dns_hydra.py
+certbot_dns_hydra.egg-info/PKG-INFO
+certbot_dns_hydra.egg-info/SOURCES.txt
+certbot_dns_hydra.egg-info/dependency_links.txt
+certbot_dns_hydra.egg-info/entry_points.txt
+certbot_dns_hydra.egg-info/requires.txt
+certbot_dns_hydra.egg-info/top_level.txt
