@@ -1,0 +1,16 @@
+LICENSE.md
+README.md
+pyproject.toml
+ximu3csv/__init__.py
+ximu3csv/convert_to_euler_angles.py
+ximu3csv/crop.py
+ximu3csv/data_messages.py
+ximu3csv/device.py
+ximu3csv/read.py
+ximu3csv/resample.py
+ximu3csv/zero_first_timestamp.py
+ximu3csv/zero_heading.py
+ximu3csv.egg-info/PKG-INFO
+ximu3csv.egg-info/SOURCES.txt
+ximu3csv.egg-info/dependency_links.txt
+ximu3csv.egg-info/top_level.txt
