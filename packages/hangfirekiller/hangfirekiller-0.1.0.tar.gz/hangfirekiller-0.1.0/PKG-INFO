@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: hangfirekiller
+Version: 0.1.0
+Summary: 
+Author: Александр Окунев
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: psycopg2-binary (>=2.9.10,<3.0.0)
+Requires-Dist: pydantic (>=2.10.6,<3.0.0)
+Requires-Dist: sqlalchemy (>=2.0.38,<3.0.0)
+Requires-Dist: typer (>=0.15.2,<0.16.0)
+Description-Content-Type: text/markdown
+
+usage:
+
+```
+hangfirekiller kill [path/to/WebUI(Api)-dir]
+```
+

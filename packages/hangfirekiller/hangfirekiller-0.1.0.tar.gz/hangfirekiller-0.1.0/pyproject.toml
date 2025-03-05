@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "hangfirekiller"
+version = "0.1.0"
+description = ""
+authors = ["Александр Окунев"]
+readme = "README.md"
+
+[tool.poetry.scripts]
+hangfirekiller = "hangfirekiller.main:app"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+sqlalchemy = "^2.0.38"
+typer = "^0.15.2"
+pydantic = "^2.10.6"
+psycopg2-binary = "^2.9.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
