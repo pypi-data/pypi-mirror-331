@@ -1,0 +1,9 @@
+numpy
+scipy
+scikit-learn
+bx-python
+pandas
+EpigeneticPacemaker
+matplotlib
+tensorflow
+rpy2

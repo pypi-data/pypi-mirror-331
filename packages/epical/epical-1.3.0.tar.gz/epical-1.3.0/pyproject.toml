@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "epical"
+version = "1.3.0"
+authors = [
+  {name="Liguo Wang", email="wangliguo78@gmail.com"},
+]
+maintainers = [
+  {name = "Liguo Wang", email = "wangliguo78@gmail.com"}
+]
+description = "epical --- Epigenetic age Calculator"
+readme = "README.rst"
+license = {file = "LICENSE"}
+requires-python = ">=3.8"
+#[tool.setuptools.packages.find]
+#where = ["src"]
+#include = ["dmc"]
+dependencies = [
+	"numpy",
+	"scipy",
+	"scikit-learn",
+	"bx-python",
+	"pandas",
+	"EpigeneticPacemaker",
+	"matplotlib",
+	"tensorflow",
+	"rpy2",
+]
+classifiers=[
+	"Programming Language :: Python :: 3",
+	'Development Status :: 4 - Beta',
+	"License :: OSI Approved :: MIT License",
+	'Environment :: Console',
+	'Intended Audience :: Science/Research',
+	'Operating System :: MacOS :: MacOS X',
+	'Operating System :: POSIX',
+	'Topic :: Scientific/Engineering :: Bio-Informatics',
+]
+
+keywords = ["epigenetics age", "biological age", "DNA methylation", "MethylationEPIC", "850K", "450K", "RRBS", "WGBS"]
+
+[project.scripts]
+epical = "dmc:epical"
+
+[project.urls]
+Documentation = "https://epical.readthedocs.io/en/latest/"
+Repository = "https://github.com/liguowang/epical.git"
+Issues = "https://github.com/liguowang/epical/issues"
+TestData = "https://sourceforge.net/projects/epical/files/"
