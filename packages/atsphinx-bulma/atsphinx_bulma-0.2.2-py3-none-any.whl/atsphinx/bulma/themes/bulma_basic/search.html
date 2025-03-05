@@ -1,0 +1,51 @@
+{% extends "page.html" %}
+
+{% set title = _('Search') %}
+{%- block scripts %}
+  {{ super() }}
+  <script src="{{ pathto('_static/searchtools.js', 1) }}"></script>
+  <script src="{{ pathto('_static/language_data.js', 1) }}"></script>
+{%- endblock %}
+{% block extrahead %}
+  <script src="{{ pathto('searchindex.js', 1) }}" defer="defer"></script>
+  <meta name="robots" content="noindex" />
+  {{ super() }}
+{% endblock %}
+
+
+{% block body %}
+  <h1 id="search-documentation">{{ _('Search') }}</h1>
+  <noscript>
+    <article class="message is-warning">
+      <div class="message-header">
+        <p>{% trans %}Error{% endtrans %}</p>
+      </div>
+      <div class="message-body">
+        <p>
+          {% trans %}Please activate JavaScript to enable the search functionality.{% endtrans %}
+        </p>
+      </div>
+    </article>
+  </noscript>
+  <p>
+    {% trans %}Searching for multiple words only shows matches that contain
+    all words.{% endtrans %}
+  </p>
+  <div class="block">
+    <form method="get" action="{{ pathto('search') }}" role="search">
+      <div class="field has-addons">
+        <div class="control is-expanded">
+          <input class="input" type="text" placeholder="{{ _('Search') }}" name="q" aria-label="{{ _('Search') }}">
+        </div>
+        <div class="control">
+          <button class="button is-info">
+            {{ _('Search') }}
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <span id="search-progress" style="padding-left: 10px"></span>
+<div id="search-results">
+</div>
+{% endblock %}
