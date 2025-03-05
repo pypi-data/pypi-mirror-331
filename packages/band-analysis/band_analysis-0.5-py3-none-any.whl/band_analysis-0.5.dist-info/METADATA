@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: band-analysis
+Version: 0.5
+Summary: Un paquete para analizar bandas de electroforesis
+Home-page: https://github.com/esierraj/electrophoresis_analysis
+Author: Egwer David Sierra Jaraba
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: numpy ==1.26.4
+Requires-Dist: opencv-python
+Requires-Dist: pandas
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+
