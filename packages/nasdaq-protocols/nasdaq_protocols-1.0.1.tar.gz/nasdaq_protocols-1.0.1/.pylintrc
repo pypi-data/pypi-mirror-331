@@ -1,0 +1,19 @@
+[FORMAT]
+max-line-length=180
+class-naming-style=PascalCase
+attr-naming-style=any
+
+[MASTER]
+ignore-paths=src/nasdaq_protocols/_version.py
+disable=
+    C0114, #missing-module-docstring
+    C0115, #missing-class-docstring
+    C0116, #missing-function-docstring
+    W0223, #abstract-method
+    E1101, #no-member
+    R0903, #too-few-public-methods
+    R0902, #too-many-instance-attributes
+    W0707, #too-many-statements
+    R0801, #similarities
+    R0913, #too-many-arguments
+    R0917, #too-many-positional-arguments
