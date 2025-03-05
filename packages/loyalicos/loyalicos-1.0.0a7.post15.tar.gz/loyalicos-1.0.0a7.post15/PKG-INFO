@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: loyalicos
+Version: 1.0.0a7.post15
+Summary: SDK for easy integration with Loyalicos API
+Home-page: https://github.com/loyalicos/python-sdk
+Author: Alex Sánchez Vega
+Author-email: alex@loyalicos.com
+Project-URL: Bug Tracker, https://github.com/loyalicos/python-sdk/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+
+# python-sdk

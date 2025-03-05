@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/loyalicos/__init__.py
+src/loyalicos/__version__.py
+src/loyalicos/exceptions.py
+src/loyalicos/interface.py
+src/loyalicos/loyalicos.py
+src/loyalicos/simplified_http_client.py
+src/loyalicos.egg-info/PKG-INFO
+src/loyalicos.egg-info/SOURCES.txt
+src/loyalicos.egg-info/dependency_links.txt
+src/loyalicos.egg-info/requires.txt
+src/loyalicos.egg-info/top_level.txt
