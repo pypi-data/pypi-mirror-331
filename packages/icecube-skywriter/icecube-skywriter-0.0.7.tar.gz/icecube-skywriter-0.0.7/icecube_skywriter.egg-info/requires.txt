@@ -1,0 +1,5 @@
+wipac-dev-tools
+
+[tests]
+pytest
+pytest-mock
