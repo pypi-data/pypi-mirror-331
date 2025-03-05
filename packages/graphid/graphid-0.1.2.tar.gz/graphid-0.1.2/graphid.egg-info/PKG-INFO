@@ -1,0 +1,440 @@
+Metadata-Version: 2.2
+Name: graphid
+Version: 0.1.2
+Summary: The graph identification algorithm from Jon Crall's thesis
+Home-page: https://github.com/Erotemic/graphid
+Author: Jon Crall
+Author-email: erotemic@gmail.com
+License: Apache 2
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.8
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: ubelt>=1.3.3
+Requires-Dist: numpy>=2.1.0; python_version < "4.0" and python_version >= "3.13"
+Requires-Dist: numpy>=1.26.0; python_version < "3.13" and python_version >= "3.12"
+Requires-Dist: numpy>=1.23.2; python_version < "3.12" and python_version >= "3.11"
+Requires-Dist: numpy>=1.21.6; python_version < "3.11" and python_version >= "3.10"
+Requires-Dist: numpy>=1.21.0; python_version < "3.10" and python_version >= "3.9"
+Requires-Dist: numpy>=1.21.0; python_version < "3.9" and python_version >= "3.8"
+Requires-Dist: scipy>=1.14.1; python_version < "4.0" and python_version >= "3.13"
+Requires-Dist: scipy>=1.11.2; python_version < "3.13" and python_version >= "3.12"
+Requires-Dist: scipy>=1.9.2; python_version < "3.12" and python_version >= "3.11"
+Requires-Dist: scipy>=1.8.0; python_version < "3.11" and python_version >= "3.10"
+Requires-Dist: scipy>=1.8.0; python_version < "3.10" and python_version >= "3.9"
+Requires-Dist: scipy>=1.8.0; python_version < "3.9" and python_version >= "3.8"
+Requires-Dist: pygments>=2.14.0
+Requires-Dist: networkx>=3.0; python_version < "4.0" and python_version >= "3.13"
+Requires-Dist: networkx>=2.8; python_version < "3.13" and python_version >= "3.11"
+Requires-Dist: networkx>=2.7; python_version < "3.11" and python_version >= "3.8"
+Requires-Dist: pandas>=2.2.3; python_version < "4.0" and python_version >= "3.13"
+Requires-Dist: pandas>=2.1.1; python_version < "3.13" and python_version >= "3.12"
+Requires-Dist: pandas>=1.5.0; python_version < "3.12" and python_version >= "3.11"
+Requires-Dist: pandas>=1.3.5; python_version < "3.11" and python_version >= "3.10"
+Requires-Dist: pandas>=1.4.0; python_version < "3.10" and python_version >= "3.9"
+Requires-Dist: pandas>=1.4.0; python_version < "3.9" and python_version >= "3.8"
+Requires-Dist: scikit-image>=0.25.1; python_version < "4.0" and python_version >= "3.13"
+Requires-Dist: scikit-image>=0.22.0; python_version < "3.13" and python_version >= "3.12"
+Requires-Dist: scikit-image>=0.20.0; python_version < "3.12" and python_version >= "3.11"
+Requires-Dist: scikit-image>=0.19.1; python_version < "3.11" and python_version >= "3.10"
+Requires-Dist: scikit-image>=0.19.1; python_version < "3.10" and python_version >= "3.9"
+Requires-Dist: scikit-image>=0.19.1; python_version < "3.9" and python_version >= "3.8"
+Requires-Dist: matplotlib>=3.9.2; python_version < "4.0" and python_version >= "3.13"
+Requires-Dist: matplotlib>=3.7.3; python_version < "3.13" and python_version >= "3.12"
+Requires-Dist: matplotlib>=3.6.2; python_version < "3.12" and python_version >= "3.11"
+Requires-Dist: matplotlib>=3.6.2; python_version < "3.11" and python_version >= "3.10"
+Requires-Dist: matplotlib>=3.6.2; python_version < "3.10" and python_version >= "3.9"
+Requires-Dist: matplotlib>=3.6.2; python_version < "3.9" and python_version >= "3.8"
+Requires-Dist: lazy_loader>=0.4
+Provides-Extra: all
+Requires-Dist: ubelt>=1.3.3; extra == "all"
+Requires-Dist: numpy>=2.1.0; (python_version < "4.0" and python_version >= "3.13") and extra == "all"
+Requires-Dist: numpy>=1.26.0; (python_version < "3.13" and python_version >= "3.12") and extra == "all"
+Requires-Dist: numpy>=1.23.2; (python_version < "3.12" and python_version >= "3.11") and extra == "all"
+Requires-Dist: numpy>=1.21.6; (python_version < "3.11" and python_version >= "3.10") and extra == "all"
+Requires-Dist: numpy>=1.21.0; (python_version < "3.10" and python_version >= "3.9") and extra == "all"
+Requires-Dist: numpy>=1.21.0; (python_version < "3.9" and python_version >= "3.8") and extra == "all"
+Requires-Dist: scipy>=1.14.1; (python_version < "4.0" and python_version >= "3.13") and extra == "all"
+Requires-Dist: scipy>=1.11.2; (python_version < "3.13" and python_version >= "3.12") and extra == "all"
+Requires-Dist: scipy>=1.9.2; (python_version < "3.12" and python_version >= "3.11") and extra == "all"
+Requires-Dist: scipy>=1.8.0; (python_version < "3.11" and python_version >= "3.10") and extra == "all"
+Requires-Dist: scipy>=1.8.0; (python_version < "3.10" and python_version >= "3.9") and extra == "all"
+Requires-Dist: scipy>=1.8.0; (python_version < "3.9" and python_version >= "3.8") and extra == "all"
+Requires-Dist: pygments>=2.14.0; extra == "all"
+Requires-Dist: networkx>=3.0; (python_version < "4.0" and python_version >= "3.13") and extra == "all"
+Requires-Dist: networkx>=2.8; (python_version < "3.13" and python_version >= "3.11") and extra == "all"
+Requires-Dist: networkx>=2.7; (python_version < "3.11" and python_version >= "3.8") and extra == "all"
+Requires-Dist: pandas>=2.2.3; (python_version < "4.0" and python_version >= "3.13") and extra == "all"
+Requires-Dist: pandas>=2.1.1; (python_version < "3.13" and python_version >= "3.12") and extra == "all"
+Requires-Dist: pandas>=1.5.0; (python_version < "3.12" and python_version >= "3.11") and extra == "all"
+Requires-Dist: pandas>=1.3.5; (python_version < "3.11" and python_version >= "3.10") and extra == "all"
+Requires-Dist: pandas>=1.4.0; (python_version < "3.10" and python_version >= "3.9") and extra == "all"
+Requires-Dist: pandas>=1.4.0; (python_version < "3.9" and python_version >= "3.8") and extra == "all"
+Requires-Dist: scikit-image>=0.25.1; (python_version < "4.0" and python_version >= "3.13") and extra == "all"
+Requires-Dist: scikit-image>=0.22.0; (python_version < "3.13" and python_version >= "3.12") and extra == "all"
+Requires-Dist: scikit-image>=0.20.0; (python_version < "3.12" and python_version >= "3.11") and extra == "all"
+Requires-Dist: scikit-image>=0.19.1; (python_version < "3.11" and python_version >= "3.10") and extra == "all"
+Requires-Dist: scikit-image>=0.19.1; (python_version < "3.10" and python_version >= "3.9") and extra == "all"
+Requires-Dist: scikit-image>=0.19.1; (python_version < "3.9" and python_version >= "3.8") and extra == "all"
+Requires-Dist: matplotlib>=3.9.2; (python_version < "4.0" and python_version >= "3.13") and extra == "all"
+Requires-Dist: matplotlib>=3.7.3; (python_version < "3.13" and python_version >= "3.12") and extra == "all"
+Requires-Dist: matplotlib>=3.6.2; (python_version < "3.12" and python_version >= "3.11") and extra == "all"
+Requires-Dist: matplotlib>=3.6.2; (python_version < "3.11" and python_version >= "3.10") and extra == "all"
+Requires-Dist: matplotlib>=3.6.2; (python_version < "3.10" and python_version >= "3.9") and extra == "all"
+Requires-Dist: matplotlib>=3.6.2; (python_version < "3.9" and python_version >= "3.8") and extra == "all"
+Requires-Dist: lazy_loader>=0.4; extra == "all"
+Requires-Dist: xdoctest>=1.1.5; extra == "all"
+Requires-Dist: pytest>=8.1.1; (python_version < "4.0" and python_version >= "3.13") and extra == "all"
+Requires-Dist: pytest>=8.1.1; (python_version < "3.13" and python_version >= "3.12") and extra == "all"
+Requires-Dist: pytest>=8.1.1; (python_version < "3.12" and python_version >= "3.11") and extra == "all"
+Requires-Dist: pytest>=6.2.5; (python_version < "3.11" and python_version >= "3.10") and extra == "all"
+Requires-Dist: pytest>=6.2.5; (python_version < "3.10.0" and python_version >= "3.7.0") and extra == "all"
+Requires-Dist: pytest-cov>=3.0.0; extra == "all"
+Requires-Dist: pytest_timeout>=2.3.1; (python_version < "4.0" and python_version >= "3.12") and extra == "all"
+Requires-Dist: pytest_timeout>=1.4.2; python_version < "3.12" and extra == "all"
+Requires-Dist: coverage>=7.3.0; (python_version < "4.0" and python_version >= "3.12") and extra == "all"
+Requires-Dist: coverage>=6.1.1; (python_version < "3.12" and python_version >= "3.10") and extra == "all"
+Requires-Dist: coverage>=5.3.1; (python_version < "3.10" and python_version >= "3.9") and extra == "all"
+Requires-Dist: coverage>=6.1.1; (python_version < "3.9" and python_version >= "3.8") and extra == "all"
+Requires-Dist: requests>=2.25.1; extra == "all"
+Provides-Extra: headless
+Requires-Dist: opencv-python-headless>=4.10.0.84; (python_version < "4.0" and python_version >= "3.13") and extra == "headless"
+Requires-Dist: opencv-python-headless>=4.5.5.64; (python_version < "3.13" and python_version >= "3.11") and extra == "headless"
+Requires-Dist: opencv-python-headless>=4.5.4.58; (python_version < "3.11" and python_version >= "3.10") and extra == "headless"
+Requires-Dist: opencv-python-headless>=3.4.15.55; (python_version < "3.10" and python_version >= "3.8") and extra == "headless"
+Provides-Extra: graphics
+Requires-Dist: opencv-python>=4.10.0.84; (python_version < "4.0" and python_version >= "3.13") and extra == "graphics"
+Requires-Dist: opencv-python>=4.5.5.64; (python_version < "3.13" and python_version >= "3.11") and extra == "graphics"
+Requires-Dist: opencv-python>=4.5.4.58; (python_version < "3.11" and python_version >= "3.10") and extra == "graphics"
+Requires-Dist: opencv-python>=3.4.15.55; (python_version < "3.10" and python_version >= "3.8") and extra == "graphics"
+Provides-Extra: docs
+Requires-Dist: sphinx>=5.0.1; extra == "docs"
+Requires-Dist: sphinx-autobuild>=2021.3.14; extra == "docs"
+Requires-Dist: sphinx_rtd_theme>=1.0.0; extra == "docs"
+Requires-Dist: sphinxcontrib-napoleon>=0.7; extra == "docs"
+Requires-Dist: sphinx-autoapi>=1.8.4; extra == "docs"
+Requires-Dist: Pygments>=2.9.0; extra == "docs"
+Requires-Dist: myst_parser>=0.18.0; extra == "docs"
+Requires-Dist: sphinx-reredirects>=0.0.1; extra == "docs"
+Requires-Dist: xdoctest>=1.1.1; extra == "docs"
+Requires-Dist: kwplot>=0.4.15; extra == "docs"
+Provides-Extra: optional
+Provides-Extra: problematic
+Requires-Dist: pygraphviz; extra == "problematic"
+Provides-Extra: runtime
+Requires-Dist: ubelt>=1.3.3; extra == "runtime"
+Requires-Dist: numpy>=2.1.0; (python_version < "4.0" and python_version >= "3.13") and extra == "runtime"
+Requires-Dist: numpy>=1.26.0; (python_version < "3.13" and python_version >= "3.12") and extra == "runtime"
+Requires-Dist: numpy>=1.23.2; (python_version < "3.12" and python_version >= "3.11") and extra == "runtime"
+Requires-Dist: numpy>=1.21.6; (python_version < "3.11" and python_version >= "3.10") and extra == "runtime"
+Requires-Dist: numpy>=1.21.0; (python_version < "3.10" and python_version >= "3.9") and extra == "runtime"
+Requires-Dist: numpy>=1.21.0; (python_version < "3.9" and python_version >= "3.8") and extra == "runtime"
+Requires-Dist: scipy>=1.14.1; (python_version < "4.0" and python_version >= "3.13") and extra == "runtime"
+Requires-Dist: scipy>=1.11.2; (python_version < "3.13" and python_version >= "3.12") and extra == "runtime"
+Requires-Dist: scipy>=1.9.2; (python_version < "3.12" and python_version >= "3.11") and extra == "runtime"
+Requires-Dist: scipy>=1.8.0; (python_version < "3.11" and python_version >= "3.10") and extra == "runtime"
+Requires-Dist: scipy>=1.8.0; (python_version < "3.10" and python_version >= "3.9") and extra == "runtime"
+Requires-Dist: scipy>=1.8.0; (python_version < "3.9" and python_version >= "3.8") and extra == "runtime"
+Requires-Dist: pygments>=2.14.0; extra == "runtime"
+Requires-Dist: networkx>=3.0; (python_version < "4.0" and python_version >= "3.13") and extra == "runtime"
+Requires-Dist: networkx>=2.8; (python_version < "3.13" and python_version >= "3.11") and extra == "runtime"
+Requires-Dist: networkx>=2.7; (python_version < "3.11" and python_version >= "3.8") and extra == "runtime"
+Requires-Dist: pandas>=2.2.3; (python_version < "4.0" and python_version >= "3.13") and extra == "runtime"
+Requires-Dist: pandas>=2.1.1; (python_version < "3.13" and python_version >= "3.12") and extra == "runtime"
+Requires-Dist: pandas>=1.5.0; (python_version < "3.12" and python_version >= "3.11") and extra == "runtime"
+Requires-Dist: pandas>=1.3.5; (python_version < "3.11" and python_version >= "3.10") and extra == "runtime"
+Requires-Dist: pandas>=1.4.0; (python_version < "3.10" and python_version >= "3.9") and extra == "runtime"
+Requires-Dist: pandas>=1.4.0; (python_version < "3.9" and python_version >= "3.8") and extra == "runtime"
+Requires-Dist: scikit-image>=0.25.1; (python_version < "4.0" and python_version >= "3.13") and extra == "runtime"
+Requires-Dist: scikit-image>=0.22.0; (python_version < "3.13" and python_version >= "3.12") and extra == "runtime"
+Requires-Dist: scikit-image>=0.20.0; (python_version < "3.12" and python_version >= "3.11") and extra == "runtime"
+Requires-Dist: scikit-image>=0.19.1; (python_version < "3.11" and python_version >= "3.10") and extra == "runtime"
+Requires-Dist: scikit-image>=0.19.1; (python_version < "3.10" and python_version >= "3.9") and extra == "runtime"
+Requires-Dist: scikit-image>=0.19.1; (python_version < "3.9" and python_version >= "3.8") and extra == "runtime"
+Requires-Dist: matplotlib>=3.9.2; (python_version < "4.0" and python_version >= "3.13") and extra == "runtime"
+Requires-Dist: matplotlib>=3.7.3; (python_version < "3.13" and python_version >= "3.12") and extra == "runtime"
+Requires-Dist: matplotlib>=3.6.2; (python_version < "3.12" and python_version >= "3.11") and extra == "runtime"
+Requires-Dist: matplotlib>=3.6.2; (python_version < "3.11" and python_version >= "3.10") and extra == "runtime"
+Requires-Dist: matplotlib>=3.6.2; (python_version < "3.10" and python_version >= "3.9") and extra == "runtime"
+Requires-Dist: matplotlib>=3.6.2; (python_version < "3.9" and python_version >= "3.8") and extra == "runtime"
+Requires-Dist: lazy_loader>=0.4; extra == "runtime"
+Provides-Extra: tests
+Requires-Dist: xdoctest>=1.1.5; extra == "tests"
+Requires-Dist: pytest>=8.1.1; (python_version < "4.0" and python_version >= "3.13") and extra == "tests"
+Requires-Dist: pytest>=8.1.1; (python_version < "3.13" and python_version >= "3.12") and extra == "tests"
+Requires-Dist: pytest>=8.1.1; (python_version < "3.12" and python_version >= "3.11") and extra == "tests"
+Requires-Dist: pytest>=6.2.5; (python_version < "3.11" and python_version >= "3.10") and extra == "tests"
+Requires-Dist: pytest>=6.2.5; (python_version < "3.10.0" and python_version >= "3.7.0") and extra == "tests"
+Requires-Dist: pytest-cov>=3.0.0; extra == "tests"
+Requires-Dist: pytest_timeout>=2.3.1; (python_version < "4.0" and python_version >= "3.12") and extra == "tests"
+Requires-Dist: pytest_timeout>=1.4.2; python_version < "3.12" and extra == "tests"
+Requires-Dist: coverage>=7.3.0; (python_version < "4.0" and python_version >= "3.12") and extra == "tests"
+Requires-Dist: coverage>=6.1.1; (python_version < "3.12" and python_version >= "3.10") and extra == "tests"
+Requires-Dist: coverage>=5.3.1; (python_version < "3.10" and python_version >= "3.9") and extra == "tests"
+Requires-Dist: coverage>=6.1.1; (python_version < "3.9" and python_version >= "3.8") and extra == "tests"
+Requires-Dist: requests>=2.25.1; extra == "tests"
+Provides-Extra: all-strict
+Requires-Dist: ubelt==1.3.3; extra == "all-strict"
+Requires-Dist: numpy==2.1.0; (python_version < "4.0" and python_version >= "3.13") and extra == "all-strict"
+Requires-Dist: numpy==1.26.0; (python_version < "3.13" and python_version >= "3.12") and extra == "all-strict"
+Requires-Dist: numpy==1.23.2; (python_version < "3.12" and python_version >= "3.11") and extra == "all-strict"
+Requires-Dist: numpy==1.21.6; (python_version < "3.11" and python_version >= "3.10") and extra == "all-strict"
+Requires-Dist: numpy==1.21.0; (python_version < "3.10" and python_version >= "3.9") and extra == "all-strict"
+Requires-Dist: numpy==1.21.0; (python_version < "3.9" and python_version >= "3.8") and extra == "all-strict"
+Requires-Dist: scipy==1.14.1; (python_version < "4.0" and python_version >= "3.13") and extra == "all-strict"
+Requires-Dist: scipy==1.11.2; (python_version < "3.13" and python_version >= "3.12") and extra == "all-strict"
+Requires-Dist: scipy==1.9.2; (python_version < "3.12" and python_version >= "3.11") and extra == "all-strict"
+Requires-Dist: scipy==1.8.0; (python_version < "3.11" and python_version >= "3.10") and extra == "all-strict"
+Requires-Dist: scipy==1.8.0; (python_version < "3.10" and python_version >= "3.9") and extra == "all-strict"
+Requires-Dist: scipy==1.8.0; (python_version < "3.9" and python_version >= "3.8") and extra == "all-strict"
+Requires-Dist: pygments==2.14.0; extra == "all-strict"
+Requires-Dist: networkx==3.0; (python_version < "4.0" and python_version >= "3.13") and extra == "all-strict"
+Requires-Dist: networkx==2.8; (python_version < "3.13" and python_version >= "3.11") and extra == "all-strict"
+Requires-Dist: networkx==2.7; (python_version < "3.11" and python_version >= "3.8") and extra == "all-strict"
+Requires-Dist: pandas==2.2.3; (python_version < "4.0" and python_version >= "3.13") and extra == "all-strict"
+Requires-Dist: pandas==2.1.1; (python_version < "3.13" and python_version >= "3.12") and extra == "all-strict"
+Requires-Dist: pandas==1.5.0; (python_version < "3.12" and python_version >= "3.11") and extra == "all-strict"
+Requires-Dist: pandas==1.3.5; (python_version < "3.11" and python_version >= "3.10") and extra == "all-strict"
+Requires-Dist: pandas==1.4.0; (python_version < "3.10" and python_version >= "3.9") and extra == "all-strict"
+Requires-Dist: pandas==1.4.0; (python_version < "3.9" and python_version >= "3.8") and extra == "all-strict"
+Requires-Dist: scikit-image==0.25.1; (python_version < "4.0" and python_version >= "3.13") and extra == "all-strict"
+Requires-Dist: scikit-image==0.22.0; (python_version < "3.13" and python_version >= "3.12") and extra == "all-strict"
+Requires-Dist: scikit-image==0.20.0; (python_version < "3.12" and python_version >= "3.11") and extra == "all-strict"
+Requires-Dist: scikit-image==0.19.1; (python_version < "3.11" and python_version >= "3.10") and extra == "all-strict"
+Requires-Dist: scikit-image==0.19.1; (python_version < "3.10" and python_version >= "3.9") and extra == "all-strict"
+Requires-Dist: scikit-image==0.19.1; (python_version < "3.9" and python_version >= "3.8") and extra == "all-strict"
+Requires-Dist: matplotlib==3.9.2; (python_version < "4.0" and python_version >= "3.13") and extra == "all-strict"
+Requires-Dist: matplotlib==3.7.3; (python_version < "3.13" and python_version >= "3.12") and extra == "all-strict"
+Requires-Dist: matplotlib==3.6.2; (python_version < "3.12" and python_version >= "3.11") and extra == "all-strict"
+Requires-Dist: matplotlib==3.6.2; (python_version < "3.11" and python_version >= "3.10") and extra == "all-strict"
+Requires-Dist: matplotlib==3.6.2; (python_version < "3.10" and python_version >= "3.9") and extra == "all-strict"
+Requires-Dist: matplotlib==3.6.2; (python_version < "3.9" and python_version >= "3.8") and extra == "all-strict"
+Requires-Dist: lazy_loader==0.4; extra == "all-strict"
+Requires-Dist: xdoctest==1.1.5; extra == "all-strict"
+Requires-Dist: pytest==8.1.1; (python_version < "4.0" and python_version >= "3.13") and extra == "all-strict"
+Requires-Dist: pytest==8.1.1; (python_version < "3.13" and python_version >= "3.12") and extra == "all-strict"
+Requires-Dist: pytest==8.1.1; (python_version < "3.12" and python_version >= "3.11") and extra == "all-strict"
+Requires-Dist: pytest==6.2.5; (python_version < "3.11" and python_version >= "3.10") and extra == "all-strict"
+Requires-Dist: pytest==6.2.5; (python_version < "3.10.0" and python_version >= "3.7.0") and extra == "all-strict"
+Requires-Dist: pytest-cov==3.0.0; extra == "all-strict"
+Requires-Dist: pytest_timeout==2.3.1; (python_version < "4.0" and python_version >= "3.12") and extra == "all-strict"
+Requires-Dist: pytest_timeout==1.4.2; python_version < "3.12" and extra == "all-strict"
+Requires-Dist: coverage==7.3.0; (python_version < "4.0" and python_version >= "3.12") and extra == "all-strict"
+Requires-Dist: coverage==6.1.1; (python_version < "3.12" and python_version >= "3.10") and extra == "all-strict"
+Requires-Dist: coverage==5.3.1; (python_version < "3.10" and python_version >= "3.9") and extra == "all-strict"
+Requires-Dist: coverage==6.1.1; (python_version < "3.9" and python_version >= "3.8") and extra == "all-strict"
+Requires-Dist: requests==2.25.1; extra == "all-strict"
+Provides-Extra: headless-strict
+Requires-Dist: opencv-python-headless==4.10.0.84; (python_version < "4.0" and python_version >= "3.13") and extra == "headless-strict"
+Requires-Dist: opencv-python-headless==4.5.5.64; (python_version < "3.13" and python_version >= "3.11") and extra == "headless-strict"
+Requires-Dist: opencv-python-headless==4.5.4.58; (python_version < "3.11" and python_version >= "3.10") and extra == "headless-strict"
+Requires-Dist: opencv-python-headless==3.4.15.55; (python_version < "3.10" and python_version >= "3.8") and extra == "headless-strict"
+Provides-Extra: graphics-strict
+Requires-Dist: opencv-python==4.10.0.84; (python_version < "4.0" and python_version >= "3.13") and extra == "graphics-strict"
+Requires-Dist: opencv-python==4.5.5.64; (python_version < "3.13" and python_version >= "3.11") and extra == "graphics-strict"
+Requires-Dist: opencv-python==4.5.4.58; (python_version < "3.11" and python_version >= "3.10") and extra == "graphics-strict"
+Requires-Dist: opencv-python==3.4.15.55; (python_version < "3.10" and python_version >= "3.8") and extra == "graphics-strict"
+Provides-Extra: docs-strict
+Requires-Dist: sphinx==5.0.1; extra == "docs-strict"
+Requires-Dist: sphinx-autobuild==2021.3.14; extra == "docs-strict"
+Requires-Dist: sphinx_rtd_theme==1.0.0; extra == "docs-strict"
+Requires-Dist: sphinxcontrib-napoleon==0.7; extra == "docs-strict"
+Requires-Dist: sphinx-autoapi==1.8.4; extra == "docs-strict"
+Requires-Dist: Pygments==2.9.0; extra == "docs-strict"
+Requires-Dist: myst_parser==0.18.0; extra == "docs-strict"
+Requires-Dist: sphinx-reredirects==0.0.1; extra == "docs-strict"
+Requires-Dist: xdoctest==1.1.1; extra == "docs-strict"
+Requires-Dist: kwplot==0.4.15; extra == "docs-strict"
+Provides-Extra: optional-strict
+Provides-Extra: problematic-strict
+Requires-Dist: pygraphviz; extra == "problematic-strict"
+Provides-Extra: runtime-strict
+Requires-Dist: ubelt==1.3.3; extra == "runtime-strict"
+Requires-Dist: numpy==2.1.0; (python_version < "4.0" and python_version >= "3.13") and extra == "runtime-strict"
+Requires-Dist: numpy==1.26.0; (python_version < "3.13" and python_version >= "3.12") and extra == "runtime-strict"
+Requires-Dist: numpy==1.23.2; (python_version < "3.12" and python_version >= "3.11") and extra == "runtime-strict"
+Requires-Dist: numpy==1.21.6; (python_version < "3.11" and python_version >= "3.10") and extra == "runtime-strict"
+Requires-Dist: numpy==1.21.0; (python_version < "3.10" and python_version >= "3.9") and extra == "runtime-strict"
+Requires-Dist: numpy==1.21.0; (python_version < "3.9" and python_version >= "3.8") and extra == "runtime-strict"
+Requires-Dist: scipy==1.14.1; (python_version < "4.0" and python_version >= "3.13") and extra == "runtime-strict"
+Requires-Dist: scipy==1.11.2; (python_version < "3.13" and python_version >= "3.12") and extra == "runtime-strict"
+Requires-Dist: scipy==1.9.2; (python_version < "3.12" and python_version >= "3.11") and extra == "runtime-strict"
+Requires-Dist: scipy==1.8.0; (python_version < "3.11" and python_version >= "3.10") and extra == "runtime-strict"
+Requires-Dist: scipy==1.8.0; (python_version < "3.10" and python_version >= "3.9") and extra == "runtime-strict"
+Requires-Dist: scipy==1.8.0; (python_version < "3.9" and python_version >= "3.8") and extra == "runtime-strict"
+Requires-Dist: pygments==2.14.0; extra == "runtime-strict"
+Requires-Dist: networkx==3.0; (python_version < "4.0" and python_version >= "3.13") and extra == "runtime-strict"
+Requires-Dist: networkx==2.8; (python_version < "3.13" and python_version >= "3.11") and extra == "runtime-strict"
+Requires-Dist: networkx==2.7; (python_version < "3.11" and python_version >= "3.8") and extra == "runtime-strict"
+Requires-Dist: pandas==2.2.3; (python_version < "4.0" and python_version >= "3.13") and extra == "runtime-strict"
+Requires-Dist: pandas==2.1.1; (python_version < "3.13" and python_version >= "3.12") and extra == "runtime-strict"
+Requires-Dist: pandas==1.5.0; (python_version < "3.12" and python_version >= "3.11") and extra == "runtime-strict"
+Requires-Dist: pandas==1.3.5; (python_version < "3.11" and python_version >= "3.10") and extra == "runtime-strict"
+Requires-Dist: pandas==1.4.0; (python_version < "3.10" and python_version >= "3.9") and extra == "runtime-strict"
+Requires-Dist: pandas==1.4.0; (python_version < "3.9" and python_version >= "3.8") and extra == "runtime-strict"
+Requires-Dist: scikit-image==0.25.1; (python_version < "4.0" and python_version >= "3.13") and extra == "runtime-strict"
+Requires-Dist: scikit-image==0.22.0; (python_version < "3.13" and python_version >= "3.12") and extra == "runtime-strict"
+Requires-Dist: scikit-image==0.20.0; (python_version < "3.12" and python_version >= "3.11") and extra == "runtime-strict"
+Requires-Dist: scikit-image==0.19.1; (python_version < "3.11" and python_version >= "3.10") and extra == "runtime-strict"
+Requires-Dist: scikit-image==0.19.1; (python_version < "3.10" and python_version >= "3.9") and extra == "runtime-strict"
+Requires-Dist: scikit-image==0.19.1; (python_version < "3.9" and python_version >= "3.8") and extra == "runtime-strict"
+Requires-Dist: matplotlib==3.9.2; (python_version < "4.0" and python_version >= "3.13") and extra == "runtime-strict"
+Requires-Dist: matplotlib==3.7.3; (python_version < "3.13" and python_version >= "3.12") and extra == "runtime-strict"
+Requires-Dist: matplotlib==3.6.2; (python_version < "3.12" and python_version >= "3.11") and extra == "runtime-strict"
+Requires-Dist: matplotlib==3.6.2; (python_version < "3.11" and python_version >= "3.10") and extra == "runtime-strict"
+Requires-Dist: matplotlib==3.6.2; (python_version < "3.10" and python_version >= "3.9") and extra == "runtime-strict"
+Requires-Dist: matplotlib==3.6.2; (python_version < "3.9" and python_version >= "3.8") and extra == "runtime-strict"
+Requires-Dist: lazy_loader==0.4; extra == "runtime-strict"
+Provides-Extra: tests-strict
+Requires-Dist: xdoctest==1.1.5; extra == "tests-strict"
+Requires-Dist: pytest==8.1.1; (python_version < "4.0" and python_version >= "3.13") and extra == "tests-strict"
+Requires-Dist: pytest==8.1.1; (python_version < "3.13" and python_version >= "3.12") and extra == "tests-strict"
+Requires-Dist: pytest==8.1.1; (python_version < "3.12" and python_version >= "3.11") and extra == "tests-strict"
+Requires-Dist: pytest==6.2.5; (python_version < "3.11" and python_version >= "3.10") and extra == "tests-strict"
+Requires-Dist: pytest==6.2.5; (python_version < "3.10.0" and python_version >= "3.7.0") and extra == "tests-strict"
+Requires-Dist: pytest-cov==3.0.0; extra == "tests-strict"
+Requires-Dist: pytest_timeout==2.3.1; (python_version < "4.0" and python_version >= "3.12") and extra == "tests-strict"
+Requires-Dist: pytest_timeout==1.4.2; python_version < "3.12" and extra == "tests-strict"
+Requires-Dist: coverage==7.3.0; (python_version < "4.0" and python_version >= "3.12") and extra == "tests-strict"
+Requires-Dist: coverage==6.1.1; (python_version < "3.12" and python_version >= "3.10") and extra == "tests-strict"
+Requires-Dist: coverage==5.3.1; (python_version < "3.10" and python_version >= "3.9") and extra == "tests-strict"
+Requires-Dist: coverage==6.1.1; (python_version < "3.9" and python_version >= "3.8") and extra == "tests-strict"
+Requires-Dist: requests==2.25.1; extra == "tests-strict"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+The graphid Module
+==================
+
+
+|Pypi| |PypiDownloads| |GithubActions| |Codecov| |ReadTheDocs|
+
+
++------------------+----------------------------------------------+
+| Read the docs    | https://graphid.readthedocs.io               |
++------------------+----------------------------------------------+
+| Github           | https://github.com/Erotemic/graphid          |
++------------------+----------------------------------------------+
+| Pypi             | https://pypi.org/project/graphid             |
++------------------+----------------------------------------------+
+
+
+Graph Identification
+====================
+
+A graph algorithm to manage the identification of individuals in a
+population using automatic pairwise decision algorithms with a humans in
+the loop. It is agnostic to the specific ranking and verification
+algorithms. In fact, it can work without a ranking or verification
+algorithm, but in that case all reviews will have to be manual, and it
+will be difficult to prioritize which pairs of annotations (typically
+images) to look at first.
+
+This is the graph identification described in Chapter 5 of
+`my thesis <https://github.com/Erotemic/crall-thesis-2017/blob/main/crall-thesis_2017-08-10_compressed.pdf>`_.
+Viewing this PDF online can be slow, so I’ve linked there raw text
+`here <https://github.com/Erotemic/crall-thesis-2017/blob/main/chapter5-graphid.tex>`_.
+
+General Information
+===================
+
+While this repo is functional, I don't maintain it as often as I do for other
+libraries that I regularly use. Its use case is fairly niche.
+
+Helpful commands I’m currently using in development and debugging.
+Perhaps they will be somewhat illustrative of what this package is
+trying to do.
+
+::
+
+   python -m graphid.demo.dummy_infr demodata_infr --show
+   python -m graphid.demo.dummy_infr demodata_infr --num_pccs=25 --show
+   python -m graphid.demo.dummy_infr demodata_infr --num_pccs=100 --show
+
+The first of these commands will generate an image that looks like this:
+
+
+.. image:: https://i.imgur.com/CAUJVc5.png
+   :height: 300px
+   :align: left
+
+The "aid" is an annotation id, the "nid" is a name id. Blue edges mean
+two annotation match. Red edges mean two annotations don’t match. Yellow
+edges means that two annotations are not comparable (i.e. not enough
+info to determine if they match or not). Edges that are highlighted are
+ones flagged by the program for the user to re-check because it inferred
+that there is an inconsistency in the graph. Edges that are dotted, are
+flagged by the program as actually between two distinct individuals.
+
+This README is a mess. Why not look at `this Jupyter
+notebook <notebooks/core_example.ipynb>`__ in the meantime. (Note as of
+2019-June-09 the GitHub viewer seems broken, but `this
+link <https://nbviewer.jupyter.org/github/Erotemic/graphid/blob/main/notebooks/core_example.ipynb>`_
+is working)
+
+Installation
+============
+
+You should be able to simply ``pip install graphid``. However, you might
+have an issue with pygraphviz. There also may be issues on Python 3.7
+due to use of StopIteration.
+
+Dependencies
+============
+
+.. code:: bash
+
+   sudo apt-get install -y graphviz libgraphviz-dev
+   pip install pygraphviz
+
+See `pygraphviz install details <https://github.com/pygraphviz/pygraphviz/blob/main/INSTALL.txt>`_
+for more information and instructions for non-debian systems.
+
+This project is Python 3.6+, Python 2 is not supported.
+
+If you want to be able to draw the graphs, you must install graphviz,
+which is needed by pygraphviz.
+
+I’m currently having trouble getting this to work on windows due to
+pygraphviz.
+
+Conda can be used to install pygraphviz on Windows?
+``conda install -c marufr pygraphviz``. Not sure if this works. I recommend
+avoiding conda if possible, but Windows is one place where I think it has a
+good use-case.
+
+
+
+.. |Pypi| image:: https://img.shields.io/pypi/v/graphid.svg
+    :target: https://pypi.python.org/pypi/graphid
+
+.. |PypiDownloads| image:: https://img.shields.io/pypi/dm/graphid.svg
+    :target: https://pypistats.org/packages/graphid
+
+.. |GithubActions| image:: https://github.com/Erotemic/graphid/actions/workflows/tests.yml/badge.svg?branch=main
+    :target: https://github.com/Erotemic/graphid/actions?query=branch%3Amain
+
+.. |Codecov| image:: https://codecov.io/github/Erotemic/graphid/badge.svg?branch=main&service=github
+    :target: https://codecov.io/github/Erotemic/graphid?branch=main
+
+.. |ReadTheDocs| image:: https://readthedocs.org/projects/graphid/badge/?version=latest
+    :target: http://graphid.readthedocs.io/en/latest/
