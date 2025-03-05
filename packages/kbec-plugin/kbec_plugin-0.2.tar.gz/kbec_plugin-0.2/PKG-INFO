@@ -1,0 +1,26 @@
+Metadata-Version: 2.2
+Name: kbec_plugin
+Version: 0.2
+Summary: Plugin framework for interacting with Battleye RCON
+Home-page: https://github.com/Katistic/kbec-plugin/
+Download-URL: https://github.com/Katistic/kbec-plugin/archive/refs/tags/v0.1.tar.gz
+Author: Katsi
+Author-email: katistix@gmail.com
+License: GPL-3.0
+Keywords: Battleye,RCON,Battleye RCON
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
+Requires-Dist: berconpy
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: download-url
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: summary
