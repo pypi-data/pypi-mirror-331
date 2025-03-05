@@ -1,0 +1,9 @@
+README.md
+setup.py
+EG_analysis/EG_analysis.py
+EG_analysis/__init__.py
+electroanalysis.egg-info/PKG-INFO
+electroanalysis.egg-info/SOURCES.txt
+electroanalysis.egg-info/dependency_links.txt
+electroanalysis.egg-info/requires.txt
+electroanalysis.egg-info/top_level.txt
