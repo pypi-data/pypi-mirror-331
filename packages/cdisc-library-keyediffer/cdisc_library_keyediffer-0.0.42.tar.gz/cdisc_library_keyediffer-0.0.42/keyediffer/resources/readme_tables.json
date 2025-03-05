@@ -1,0 +1,281 @@
+[
+    {
+        "body": [
+            {
+                "Column Name": [
+                    {
+                        "text": "Updated Version"
+                    }
+                ],
+                "Description": [
+                    {
+                        "text": "Newer version of the standards being compared."
+                    }
+                ]
+            },
+            {
+                "Column Name": [
+                    {
+                        "text": "Previous Version"
+                    }
+                ],
+                "Description": [
+                    {
+                        "text": "Older version of the standards being compared."
+                    }
+                ]
+            },
+            {
+                "Column Name": [
+                    {
+                        "text": "Action"
+                    }
+                ],
+                "Description": [
+                    {
+                        "text": "Change to the standard; possible values are \"Add\", \"Drop\", \"Type Update\", and \"Value Update\"."
+                    }
+                ]
+            },
+            {
+                "Column Name": [
+                    {
+                        "text": "Impact"
+                    }
+                ],
+                "Description": [
+                    {
+                        "text": "Metadata changed in the newer standard; possible values are "
+                    }
+                ]
+            },
+            {
+                "Column Name": [
+                    {
+                        "text": "Change Level"
+                    }
+                ],
+                "Description": [
+                    {
+                        "text": "Only applies to \"Value Update\" Category.  Possible values are \"Minor\" (Non-alphanumeric changes or case changes only) and \"Major\" (Alphanumeric changes other than case)"
+                    }
+                ]
+            },
+            {
+                "Column Name": [
+                    {
+                        "text": "Attribute (updated)"
+                    }
+                ],
+                "Description": [
+                    {
+                        "text": "Value of the metadata in the newer version of the standards being compared.\n\n"
+                    },
+                    {
+                        "text": "When text is in this format, the text has not changed.\n"
+                    },
+                    {
+                        "format": {
+                            "bold": "True",
+                            "color": "#FF3300"
+                        },
+                        "text": "When text is in this format, the text has been updated/added.\n"
+                    },
+                    {
+                        "format": {
+                            "bold": "True",
+                            "color": "#00CC55"
+                        },
+                        "text": "When text is in this format, the text has been removed between the two consecutive highlighted characters."
+                    }
+                ]
+            },
+            {
+                "Column Name": [
+                    {
+                        "text": "Attribute (previous)"
+                    }
+                ],
+                "Description": [
+                    {
+                        "text": "Value of the metadata in the older version of the standards being compared.\n\n"
+                    },
+                    {
+                        "text": "When text is in this format, the text has not changed.\n"
+                    },
+                    {
+                        "format": {
+                            "bold": "True",
+                            "color": "#FF3300"
+                        },
+                        "text": "When text is in this format, the text has been updated/removed.\n"
+                    },
+                    {
+                        "format": {
+                            "bold": "True",
+                            "color": "#00CC55"
+                        },
+                        "text": "When text is in this format, the text has been added between the two consecutive highlighted characters."
+                    }
+                ]
+            }
+        ],
+        "head": [
+            "Column Name",
+            "Description"
+        ],
+        "title": "ReadMe for Basic Tab"
+    },
+    {
+        "body": [
+            {
+                "Column Name": [
+                    {
+                        "text": "Attribute Path"
+                    }
+                ],
+                "Description": [
+                    {
+                        "text": "JSONPath style path that contains filters. These can be used to identify the exact object."
+                    }
+                ]
+            },
+            {
+                "Column Name": [
+                    {
+                        "text": "Location Path"
+                    }
+                ],
+                "Description": [
+                    {
+                        "text": "JSONPath style path without filters. Convenient for filtering."
+                    }
+                ]
+            },
+            {
+                "Column Name": [
+                    {
+                        "text": "Action"
+                    }
+                ],
+                "Description": [
+                    {
+                        "text": "Change to the standard; possible values are \"Add\", \"Drop\", \"Type Update\", and \"Value Update\"."
+                    }
+                ]
+            },
+            {
+                "Column Name": [
+                    {
+                        "text": "Impact"
+                    }
+                ],
+                "Description": [
+                    {
+                        "text": "Metadata changed in the newer standard; possible values are "
+                    }
+                ]
+            },
+            {
+                "Column Name": [
+                    {
+                        "text": "Change Level"
+                    }
+                ],
+                "Description": [
+                    {
+                        "text": "Only applies to \"Value Update\" Category.  Possible values are \"Minor\" (Non-alphanumeric changes or case changes only) and \"Major\" (Alphanumeric changes other than case)"
+                    }
+                ]
+            },
+            {
+                "Column Name": [
+                    {
+                        "text": "Attribute (updated)"
+                    }
+                ],
+                "Description": [
+                    {
+                        "text": "Value of the metadata in the newer version of the standards being compared.\n\n"
+                    },
+                    {
+                        "text": "When text is in this format, the text has not changed.\n"
+                    },
+                    {
+                        "format": {
+                            "bold": "True",
+                            "color": "#FF3300"
+                        },
+                        "text": "When text is in this format, the text has been updated/added.\n"
+                    },
+                    {
+                        "format": {
+                            "bold": "True",
+                            "color": "#00CC55"
+                        },
+                        "text": "When text is in this format, the text has been removed between the two consecutive highlighted characters."
+                    }
+                ]
+            },
+            {
+                "Column Name": [
+                    {
+                        "text": "Attribute (previous)"
+                    }
+                ],
+                "Description": [
+                    {
+                        "text": "Value of the metadata in the older version of the standards being compared.\n\n"
+                    },
+                    {
+                        "text": "When text is in this format, the text has not changed.\n"
+                    },
+                    {
+                        "format": {
+                            "bold": "True",
+                            "color": "#FF3300"
+                        },
+                        "text": "When text is in this format, the text has been updated/removed.\n"
+                    },
+                    {
+                        "format": {
+                            "bold": "True",
+                            "color": "#00CC55"
+                        },
+                        "text": "When text is in this format, the text has been added between the two consecutive highlighted characters."
+                    }
+                ]
+            },
+            {
+                "Column Name": [
+                    {
+                        "text": "Value (updated)"
+                    }
+                ],
+                "Description": [
+                    {
+                        "text": "Only applies to 'Value Update' Category. Array containing list of adds and updates for string-level diffs."
+                    }
+                ]
+            },
+            {
+                "Column Name": [
+                    {
+                        "text": "Value (previous)"
+                    }
+                ],
+                "Description": [
+                    {
+                        "text": "Only applies to 'Value Update' Category. Array containing list of drops and updates for string-level diffs."
+                    }
+                ]
+            }
+        ],
+        "head": [
+            "Column Name",
+            "Alias",
+            "Description"
+        ],
+        "title": "ReadMe for Advanced Tab"
+    }
+]
