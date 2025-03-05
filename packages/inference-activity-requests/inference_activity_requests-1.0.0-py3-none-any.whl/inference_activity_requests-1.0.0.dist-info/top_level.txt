@@ -1,0 +1,1 @@
+inference_activity_requests
