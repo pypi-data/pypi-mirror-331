@@ -1,0 +1,15 @@
+npfl138/LICENSE,sha256=HyVuytGSiAUQ6ErWBHTqt1iSGHhLmlC8fO7jTCuR8dU,16725
+npfl138/README.md,sha256=vH7c222BRYF0l_P74hjFZzJWHwC9u0Hg7X8dlTfxR2I,246
+npfl138/__init__.py,sha256=7F27z0ruoURPMSL0WLcOtrKcGrMtdBKQmUuJusu-nww,634
+npfl138/initializers_override.py,sha256=cV4Ua5w7EzZyooOxOm1AkWwpNpC8nNFMlmhvRI8XJS8,4458
+npfl138/startup.py,sha256=TqZTLQGyshTreAms-ARcM6tWA9B8sujkyBoeWXDGwSU,1264
+npfl138/trainable_module.py,sha256=_h2kRO8XcPNgRINcOJ5w9kLpefxC-WCJ0gpEU4mLIvA,24108
+npfl138/transformed_dataset.py,sha256=kJYTCd0AOWVK_O-Ladiks7XfTHKhcnXSAvIxZossL08,1922
+npfl138/version.py,sha256=gxcZdKG8UHA4Jj8dAe29uXoTcIgNGIx4pX226iGrrxs,917
+npfl138/datasets/gym_cartpole_dataset.py,sha256=ojNFyGCO76wuZtBhsZn0CUbu-NDX4hKxLHgGFik6boU,1857
+npfl138/datasets/mnist.py,sha256=6YeFB1fkIlg7eDOpnuhd11CsRrz8aCe9ulLvSW0lFrY,2703
+npfl138-2425.2.2.dist-info/LICENSE,sha256=HyVuytGSiAUQ6ErWBHTqt1iSGHhLmlC8fO7jTCuR8dU,16725
+npfl138-2425.2.2.dist-info/METADATA,sha256=tt1L9qdiCFqC4nIWow0CAkglWC58l3vc7k5VXwYGMS8,1154
+npfl138-2425.2.2.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+npfl138-2425.2.2.dist-info/top_level.txt,sha256=87Oe2zQ-fQRO-55k5o2Eyj0fTlew-M1lyXkQRIcVVmI,8
+npfl138-2425.2.2.dist-info/RECORD,,
