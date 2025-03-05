@@ -1,0 +1,17 @@
+spender/__init__.py,sha256=GlXn2pbO_-u8pWOzjo4R4DjMHlpnJIdLh25Vni4_DhI,3607
+spender/flow.py,sha256=ZV5H26VK0t065m1dTzX4pRDELAFhdjOGpgU2-XMWi10,4382
+spender/hub.py,sha256=SJFZtgXJWZk7LqhLIClw3tbmu2NET_snhoePshp0OgU,1382
+spender/hubconf.py,sha256=aOxFjHDr1zBhJ--rX-KOrvDDtZyGm4CZHsvHeLzoaP4,3770
+spender/instrument.py,sha256=aH-WJxRkahWWITUvWgaFJJuzHi6AMhzDNtsAPuC8Uzo,3933
+spender/model.py,sha256=gHiWKYcTg6yXyeGWQz6FFEdvO5i7oxjbZVzAYR20by4,19985
+spender/util.py,sha256=byfWBymq-O74zst3qVnVIlLUm4IyrSqtkIIosVgVrlk,3654
+spender/data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spender/data/desi.py,sha256=6PMJw1jgoO5JAPyb2E6rtV0BjJ8MP4a1RHZ2CsrWPU8,23616
+spender/data/emission_lines.py,sha256=yUZ6UuoDacFrxrkUotK7RglWDF1WMOrXMreLp7rj2lw,1082
+spender/data/sdss.py,sha256=cDvhB3vEdd8iTvN7da2mYc3sGh-5UXHlvi_7VcGjzLw,19391
+spender/data/sky-lines.txt,sha256=5wo5vQAwBv7xUk6jHWUyQMBWLQHo9DeJPPt3iOuG-sk,29320
+spender-0.2.7.dist-info/LICENSE,sha256=68XNCFkCWWkMd-UqJ6R4lJ9kG5CFTMZmJdU-o-uJEPo,1087
+spender-0.2.7.dist-info/METADATA,sha256=vifxtjJE2_vkF1C6TFfg06H5IsiIIE39decYF1zY2yw,5102
+spender-0.2.7.dist-info/WHEEL,sha256=a-zpFRIJzOq5QfuhBzbhiA1eHTzNCJn8OdRvhdNX0Rk,110
+spender-0.2.7.dist-info/top_level.txt,sha256=m-KORhHHwVWPOlVJOki6UT8tqi1N3g0DTmMUgfKIkys,8
+spender-0.2.7.dist-info/RECORD,,
