@@ -1,0 +1,7 @@
+hoostus/beangulp/hooks/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hoostus/beangulp/hooks/pipelines.py,sha256=7a4-Y7d9eyDevgJT0Z-P5qZdWVFJ3W-eYc19mSsY2NY,2711
+hoostus/beangulp/hooks/predict_posting.py,sha256=fX4quFXp7SHGjrZLRRZsOv9_BqVHcHCcm0C7R6rPdiY,4218
+hoostus_beangulp_hooks-1.0.2.dist-info/METADATA,sha256=EMrn5MMcNrWM250SJPogDtEn_vcZHi0xxaAw7CB60Xw,2815
+hoostus_beangulp_hooks-1.0.2.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+hoostus_beangulp_hooks-1.0.2.dist-info/top_level.txt,sha256=zKi-rm7Y30fyYkrLVzwpaITCWaZYF2N3sedfqWK4Ldw,8
+hoostus_beangulp_hooks-1.0.2.dist-info/RECORD,,
