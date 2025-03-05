@@ -1,0 +1,2 @@
+[mopidy.ext]
+mpd = mopidy_mpd:Extension
