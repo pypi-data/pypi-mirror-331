@@ -1,0 +1,30 @@
+[project]
+name = "tokenswift"
+version = "0.1.0"
+description = "Framework for Accelerating LLM Generation"
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+]
+dependencies = [
+    "accelerate==1.0.1",
+    "datasets==3.0.1",
+    "einops==0.8.0",
+    "matplotlib==3.10.0",
+    "protobuf==5.28.2",
+    "sentencepiece==0.2.0",
+    "termcolor==2.5.0",
+    "tiktoken==0.6.0",
+    "tokenizers==0.21.0",
+    "torch==2.4.0",
+    "tqdm==4.66.5",
+    "transformers==4.47.1",
+    "triton==3.0.0",
+    "sortedcontainers",
+    "tensorboard",
+]
+
+[tool.setuptools.packages.find]
+include = ["data", "models", "utils", "main.py"]
