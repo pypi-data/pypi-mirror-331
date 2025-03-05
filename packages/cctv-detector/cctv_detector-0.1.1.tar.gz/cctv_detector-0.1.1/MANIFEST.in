@@ -1,0 +1,4 @@
+include README.md
+include LICENSE
+recursive-include src/cctv_detector/models *.pt
+recursive-include examples *.py 

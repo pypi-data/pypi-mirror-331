@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+examples/run_detection.py
+examples/run_webapp.py
+src/cctv_detector/__init__.py
+src/cctv_detector/detector.py
+src/cctv_detector/visualizer.py
+src/cctv_detector/webapp.py
+src/cctv_detector.egg-info/PKG-INFO
+src/cctv_detector.egg-info/SOURCES.txt
+src/cctv_detector.egg-info/dependency_links.txt
+src/cctv_detector.egg-info/requires.txt
+src/cctv_detector.egg-info/top_level.txt
