@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+src/converter/__init__.py
+src/converter/gguf_writer.py
+src/converter/main.py
+src/converter/model_loader.py
+src/converter/quantize.py
+src/gguf_converter.egg-info/PKG-INFO
+src/gguf_converter.egg-info/SOURCES.txt
+src/gguf_converter.egg-info/dependency_links.txt
+src/gguf_converter.egg-info/entry_points.txt
+src/gguf_converter.egg-info/requires.txt
+src/gguf_converter.egg-info/top_level.txt
