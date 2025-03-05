@@ -1,0 +1,8 @@
+Metadata-Version: 2.2
+Name: sentry-streams
+Version: 0.0.2
+Summary: The python Sentry Streaming API
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: setuptools==75.8.0
+Requires-Dist: requests>=2.32.3
