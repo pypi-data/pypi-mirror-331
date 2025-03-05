@@ -1,0 +1,4 @@
+# MANIFEST.in
+
+include src/iv_sherlock/conf/*.toml
+include src/iv_sherlock/conf/*.py
