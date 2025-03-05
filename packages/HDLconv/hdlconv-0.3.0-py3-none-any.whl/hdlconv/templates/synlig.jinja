@@ -1,0 +1,18 @@
+#!/bin/bash
+
+{#
+#
+# Copyright (C) 2024 HDLconv Project
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
+-#}
+
+{% include 'docker.jinja' %}
+
+$DOCKER synlig -Q -p '
+{#help read_systemverilog#}
+read_systemverilog {% if includes %}{% for path in includes %} -I{{ path }} -y {{ path }}{% endfor %}{% endif %}{% if defines %}{% for key, value in defines.items() %} -D{{ key }}={{ value }}{% endfor %}{% endif %}{% if params %}{% for key, value in params.items() %} -P{{ key }}={{ value }}{% endfor %}{% endif %} {{ files | join(' ') }}
+hierarchy -top {{ top }}
+write_verilog -noattr {{ filename }}
+'
