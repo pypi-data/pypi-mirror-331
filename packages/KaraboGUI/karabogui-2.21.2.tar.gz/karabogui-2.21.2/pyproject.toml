@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools"]
+
+[project]
+name = "KaraboGUI"
+version = "2.21.2"
+authors = [
+  { name="Karabo Team", email="karabo@xfel.eu" },
+]
+description = "This is the Karabo GUI"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Operating System :: OS Independent",
+]
+
+
+[project.urls]
+Homepage = "http://karabo.eu"
+Repository = "https://github.com/European-XFEL/Karabo.git"
+
+[tool.setuptools.package-data]
+"karabogui.tests" = ["data/*.npy", "data/*.npz"]
+"karabogui.binding.tests" = ["data/*.config", "data/*.schema"]
+"karabogui.configurator.dialog" = ["*.ui"]
+"karabogui.controllers" = ["*.ui", "display/ui/*.ui"]
+"karabogui.controllers.display" = ["*.svg", "*.ui"]
+"karabogui.graph.plots.dialogs" = ["*.ui"]
+"karabogui.graph.common.dialogs" = ["*.ui"]
+"karabogui.graph.image.dialogs" = ["*.ui"]
+"karabogui.dialogs" = ["ui/*.ui", "tests/*.json"]
+"karabogui.fonts" = ["*.*", "*/*"]
+"karabogui.icons" = ["*.*", "statefulicons/iconset/*.svg"]
+"karabogui.panels" = ["ui/*.ui"]
+"karabogui.programs.tests" = ["concert.yml"]
+"karabogui.project.dialog" = ["ui/*.ui"]
+"karabogui.sceneview" = ["tests/data/*.svg"]
+"karabogui.widgets" = ["ui/*.ui"]
+"karabogui.wizards" = ["cinema/*.ui", "tips/*.html"]
+
+[project.entry-points.console_scripts]
+karabo-gui = "karabogui.programs.gui_runner:main"
+panel-runner = "karabogui.programs.panel_runner:main"
+karabo-cinema = "karabogui.programs.cinema:main"
+karabo-concert = "karabogui.programs.concert:main"
+karabo-theatre = "karabogui.programs.theatre:main"
+karabo-update-extensions = "karabogui.dialogs.update_dialog:main"
+karabo-register-protocol = "karabogui.programs.register_protocol:register_protocol"
