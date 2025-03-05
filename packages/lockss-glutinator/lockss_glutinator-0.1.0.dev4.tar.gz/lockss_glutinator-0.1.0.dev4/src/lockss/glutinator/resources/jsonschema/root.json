@@ -1,0 +1,369 @@
+{
+  "$defs": {
+    "Journal": {
+      "additionalProperties": false,
+      "properties": {
+        "metadata": {
+          "$ref": "#/$defs/JournalMetadata"
+        },
+        "journal-volumes": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/JournalVolume"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": [],
+          "title": "Journal-Volumes"
+        }
+      },
+      "required": [
+        "metadata"
+      ],
+      "title": "Journal",
+      "type": "object"
+    },
+    "JournalIssue": {
+      "additionalProperties": false,
+      "properties": {
+        "metadata": {
+          "$ref": "#/$defs/JournalIssueMetadata"
+        },
+        "journal-articles": {
+          "anyOf": [
+            {
+              "items": {},
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": [],
+          "title": "Journal-Articles"
+        }
+      },
+      "required": [
+        "metadata"
+      ],
+      "title": "JournalIssue",
+      "type": "object"
+    },
+    "JournalIssueMetadata": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "journal-issue",
+          "title": "Kind",
+          "type": "string"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "publication_date": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Publication Date"
+        }
+      },
+      "required": [
+        "kind",
+        "id",
+        "name"
+      ],
+      "title": "JournalIssueMetadata",
+      "type": "object"
+    },
+    "JournalMetadata": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "journal",
+          "title": "Kind",
+          "type": "string"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "alternate-names": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Alternate-Names"
+        },
+        "variant-names": {
+          "anyOf": [
+            {
+              "items": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "format": "regex",
+                    "type": "string"
+                  }
+                ]
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Variant-Names"
+        },
+        "issn": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9]{4}-[0-9]{3}[0-9X]$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Issn"
+        },
+        "eissn": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9]{4}-[0-9]{3}[0-9X]$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Eissn"
+        },
+        "issn-l": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9]{4}-[0-9]{3}[0-9X]$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Issn-L"
+        }
+      },
+      "required": [
+        "kind",
+        "id",
+        "name"
+      ],
+      "title": "JournalMetadata",
+      "type": "object"
+    },
+    "JournalVolume": {
+      "additionalProperties": false,
+      "properties": {
+        "metadata": {
+          "$ref": "#/$defs/JournalVolumeMetadata"
+        },
+        "journal-issues": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/JournalIssue"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": [],
+          "title": "Journal-Issues"
+        }
+      },
+      "required": [
+        "metadata"
+      ],
+      "title": "JournalVolume",
+      "type": "object"
+    },
+    "JournalVolumeMetadata": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "journal-volume",
+          "title": "Kind",
+          "type": "string"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "id",
+        "name"
+      ],
+      "title": "JournalVolumeMetadata",
+      "type": "object"
+    },
+    "Publisher": {
+      "additionalProperties": false,
+      "properties": {
+        "metadata": {
+          "$ref": "#/$defs/PublisherMetadata"
+        },
+        "journals": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/Journal"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": [],
+          "title": "Journals"
+        }
+      },
+      "required": [
+        "metadata"
+      ],
+      "title": "Publisher",
+      "type": "object"
+    },
+    "PublisherMetadata": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "publisher",
+          "title": "Kind",
+          "type": "string"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "alternate-names": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Alternate-Names"
+        },
+        "variant-names": {
+          "anyOf": [
+            {
+              "items": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "format": "regex",
+                    "type": "string"
+                  }
+                ]
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Variant-Names"
+        }
+      },
+      "required": [
+        "kind",
+        "id",
+        "name"
+      ],
+      "title": "PublisherMetadata",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "metadata": {
+      "const": null,
+      "title": "Metadata",
+      "type": "null"
+    },
+    "publishers": {
+      "anyOf": [
+        {
+          "items": {
+            "$ref": "#/$defs/Publisher"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": [],
+      "title": "Publishers"
+    }
+  },
+  "required": [
+    "metadata"
+  ],
+  "title": "Root",
+  "type": "object"
+}
