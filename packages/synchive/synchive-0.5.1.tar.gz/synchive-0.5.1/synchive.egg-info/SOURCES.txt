@@ -1,0 +1,12 @@
+README.md
+setup.py
+synchive/__init__.py
+synchive/backup.py
+synchive/cli.py
+synchive/config.py
+synchive.egg-info/PKG-INFO
+synchive.egg-info/SOURCES.txt
+synchive.egg-info/dependency_links.txt
+synchive.egg-info/entry_points.txt
+synchive.egg-info/requires.txt
+synchive.egg-info/top_level.txt
