@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+pyproject.toml
+version.txt
+packaging2/__init__.py
+packaging2/my_file.py
+packaging2/my_other_file.py
+packaging2/states_info.py
+packaging2/my_folder/__init__.py
+packaging2/my_folder/my_nested_file.py
+packaging2/my_folder/sub_package/__init__.py
+packaging_demo_knt.egg-info/PKG-INFO
+packaging_demo_knt.egg-info/SOURCES.txt
+packaging_demo_knt.egg-info/dependency_links.txt
+packaging_demo_knt.egg-info/requires.txt
+packaging_demo_knt.egg-info/top_level.txt
