@@ -1,0 +1,5 @@
+setup.py
+python_zwoeaf.egg-info/PKG-INFO
+python_zwoeaf.egg-info/SOURCES.txt
+python_zwoeaf.egg-info/dependency_links.txt
+python_zwoeaf.egg-info/top_level.txt
