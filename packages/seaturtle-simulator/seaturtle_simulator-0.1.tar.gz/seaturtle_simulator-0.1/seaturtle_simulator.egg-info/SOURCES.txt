@@ -1,0 +1,7 @@
+setup.py
+seaturtle_simulator.egg-info/PKG-INFO
+seaturtle_simulator.egg-info/SOURCES.txt
+seaturtle_simulator.egg-info/dependency_links.txt
+seaturtle_simulator.egg-info/entry_points.txt
+seaturtle_simulator.egg-info/requires.txt
+seaturtle_simulator.egg-info/top_level.txt

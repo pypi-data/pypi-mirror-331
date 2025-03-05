@@ -1,0 +1,2 @@
+[console_scripts]
+seaturtle-simulator = seaturtle_simulator.main:run

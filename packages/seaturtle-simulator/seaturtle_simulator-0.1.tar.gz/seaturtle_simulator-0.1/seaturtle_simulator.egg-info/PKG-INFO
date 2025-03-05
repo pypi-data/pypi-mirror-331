@@ -1,0 +1,8 @@
+Metadata-Version: 2.2
+Name: seaturtle_simulator
+Version: 0.1
+Requires-Dist: ttkbootstrap
+Requires-Dist: numpy
+Requires-Dist: pillow
+Requires-Dist: matplotlib
+Dynamic: requires-dist
