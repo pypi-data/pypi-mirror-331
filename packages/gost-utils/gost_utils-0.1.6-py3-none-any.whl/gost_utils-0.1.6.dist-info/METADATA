@@ -1,0 +1,18 @@
+Metadata-Version: 2.2
+Name: gost_utils
+Version: 0.1.6
+Summary: Many utils
+Home-page: 
+Author: Steppe_Mammoth
+Author-email: qwqwqww505@yahoo.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description-content-type
+Dynamic: requires-python
+Dynamic: summary
