@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+evalify/__init__.py
+evalify/evaluator.py
+metrixify.egg-info/PKG-INFO
+metrixify.egg-info/SOURCES.txt
+metrixify.egg-info/dependency_links.txt
+metrixify.egg-info/requires.txt
+metrixify.egg-info/top_level.txt
+tests/test_evaluator.py
