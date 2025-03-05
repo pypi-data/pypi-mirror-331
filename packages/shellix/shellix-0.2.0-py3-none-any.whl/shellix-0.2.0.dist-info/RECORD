@@ -1,0 +1,10 @@
+shellix/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+shellix/__main__.py,sha256=ZX1SOy19IaP1ktNPkNAwnvutmpBT22SkrEa9sz9ZV7M,2291
+shellix/ai_core.py,sha256=1H6D6FLKUziuLoZ6FbuD8gy4shjS2xWItRzE9-XBHSY,3404
+shellix/shell_tool.py,sha256=gUNmAMNQwXcfLMK2BrvU5wGorXFe9kWly_2u2DxQdoQ,3306
+shellix/write_tool.py,sha256=llCGGHu0WLDn31cY04lBR8fq_ejUOiaWHo964rmjcvM,1485
+shellix-0.2.0.dist-info/LICENSE,sha256=K3yW7eXfQwxfZdl6ugzlVqpGWCUT3r--WpLAAcmYc-8,1075
+shellix-0.2.0.dist-info/METADATA,sha256=k85fwH8b9iFZonzjxUb4m9gWh7pT3dfGw8F6pD8w3UU,954
+shellix-0.2.0.dist-info/WHEEL,sha256=RaoafKOydTQ7I_I3JTrPCg6kUmTgtm4BornzOqyEfJ8,88
+shellix-0.2.0.dist-info/entry_points.txt,sha256=zRnDkLLBKAXYgYdVlE32zOmpq9Z2O9hbRHVNK8KSuTU,74
+shellix-0.2.0.dist-info/RECORD,,
