@@ -1,0 +1,12 @@
+pyotp>=2.9.0
+construct>=2.10.53
+argon2_cffi>=18.1.0
+pycryptodomex>=3.6.2
+lxml
+
+[:python_version < "3.8"]
+setuptools
+
+[test]
+pyotp
+pdoc
