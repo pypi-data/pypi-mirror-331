@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: skyio
+Version: 1.0.1
+Summary: This library provides a simple interface to interact with Google Cloud Storage and other cloud storage services.
+Requires-Python: >=3.10
+Requires-Dist: colorama>=0.4.6
+Requires-Dist: gcsfs>=2024.9.0.post1
+Requires-Dist: google-cloud-storage>=2.18.2
+Requires-Dist: python-dotenv>=1.0.1
+Requires-Dist: rich>=13.8.1
+Requires-Dist: tqdm>=4.66.5
