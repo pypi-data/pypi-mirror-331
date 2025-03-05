@@ -1,0 +1,8 @@
+README.md
+setup.py
+pysandboxing/__init__.py
+pysandboxing/sandbox.py
+pysandboxing.egg-info/PKG-INFO
+pysandboxing.egg-info/SOURCES.txt
+pysandboxing.egg-info/dependency_links.txt
+pysandboxing.egg-info/top_level.txt

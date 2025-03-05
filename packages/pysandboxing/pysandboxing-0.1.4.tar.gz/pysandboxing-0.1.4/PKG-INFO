@@ -1,0 +1,87 @@
+Metadata-Version: 2.2
+Name: pysandboxing
+Version: 0.1.4
+Summary: A Python module for sandboxing code with restricted imports and timeout enforcement (Linux/macOS only)
+Home-page: https://github.com/libardoram/pysandboxing
+Author: Libardo Ramirez Tirado
+Author-email: libar@libardoramirez.com
+Keywords: sandboxing security
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: requires-python
+Dynamic: summary
+
+# PySandboxing
+
+PySandboxing is a Python module for sandboxing code with restricted imports and timeout enforcement. It prevents the execution of dangerous built-in functions and restricts the import of certain modules to enhance security. Sort of...
+
+
+## Installation
+
+### From PyPI
+
+```sh
+pip install pysandboxing
+```
+
+### From Source
+
+To install PySandboxing, clone the repository and run the setup script:
+
+```sh
+git clone https://github.com/libardoram/pysandboxing.git
+cd pysandboxing
+python setup.py install
+```
+
+## Example Usage
+
+To use `pysandboxing` in your Python code, simply import the module at the beginning of your script:
+
+```python
+import pysandboxing.sandbox  
+
+while True:
+ print("This will be stopped after the timeout!")
+```
+
+
+```python
+import pysandboxing.sandbox as sandbox
+
+import subprocess
+
+subprocess.run(["ls", "-l"])
+
+```
+
+You can also set an environment variable PYSANDBOX_TIMEOUT to specify the timeout duration in seconds. For example, to set a timeout of 6 seconds:
+
+```sh
+export PYSANDBOX_TIMEOUT=6
+```
+
+## Features
+
+1. Disables dangerous built-in functions (exec, eval, open).
+2. Restricts the import of certain modules to prevent security risks.
+3. Enforces a timeout to stop possible infinite loops.
+
+## License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+## Author
+Libardo Ramirez Tirado - libar@libardoramirez.com
+
+
