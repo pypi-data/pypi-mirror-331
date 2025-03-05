@@ -1,0 +1,31 @@
+Metadata-Version: 2.2
+Name: airflow-provider-demo-ml-framework
+Version: 0.1.5
+Summary: demo-ml-framework airflow provider.
+Home-page: https://www.trendscape.ai/
+Author: osaienko
+Author-email: alsaienko81@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: Other/Proprietary License
+Requires-Python: ~=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: apache-airflow>=2.3.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# airflow-provider-demo-ml-framework
+demo-ml-framework
