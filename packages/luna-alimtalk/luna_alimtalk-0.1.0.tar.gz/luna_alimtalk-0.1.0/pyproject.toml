@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "luna-alimtalk"
+version = "0.1.0"
+description = "luna alimtalk api package"
+authors = ["jslim01 <jslim@uniai.co.kr>"]
+repository = "https://github.com/jslim01/luna-alimtalk"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+httpx = "^0.28.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
