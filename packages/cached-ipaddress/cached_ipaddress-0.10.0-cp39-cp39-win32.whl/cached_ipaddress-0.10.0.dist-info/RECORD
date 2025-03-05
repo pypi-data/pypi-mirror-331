@@ -1,0 +1,11 @@
+cached_ipaddress/__init__.py,sha256=xhQma090bkt8FghgBQUI3r4MFGUxT5Mv3q58k7a02X0,107
+cached_ipaddress/_compat.py,sha256=7RBfW4prhdNUVamb_yj6ohK8ZDq87npNG3NCaOjz2kc,194
+cached_ipaddress/backports/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cached_ipaddress/ipaddress.pxd,sha256=mpUxrhV3UFGAo_bCchROWrC7_yEdjIb9KEyHopr0RFU,120
+cached_ipaddress/ipaddress.py,sha256=s02APxTgu8A8wdi6u5LfVF8dMbXITIb5D0EQHnh31eA,4048
+cached_ipaddress/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cached_ipaddress/ipaddress.cp39-win32.pyd,sha256=f5xE4qqli2T5RH-OxadpYpQwoqAJb7tyWw-ny9LiIME,80384
+cached_ipaddress-0.10.0.dist-info/LICENSE,sha256=ftvTXxt7QGG61g-gdJ-B7QWHWUp1I5kLQ0EG2C7Gfzk,1094
+cached_ipaddress-0.10.0.dist-info/METADATA,sha256=YC2lAcxiO0S8fajNxSNnJJpsi-xrjTvO07FdABtTkvE,5240
+cached_ipaddress-0.10.0.dist-info/WHEEL,sha256=2wXUKtl-aGrmvVyAVPxtsTEUDeUb61BE_44XmQwHAYc,92
+cached_ipaddress-0.10.0.dist-info/RECORD,,
