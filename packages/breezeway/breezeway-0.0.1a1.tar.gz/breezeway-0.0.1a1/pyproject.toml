@@ -1,0 +1,10 @@
+[tool.poetry]
+name = "breezeway"
+version = "0.0.1a1"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+httpx = "^0.28.1"
+
+[build-system]
+requires = ["poetry-core"]
