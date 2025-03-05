@@ -1,0 +1,3 @@
+[console_scripts]
+find-from-files=find_from_files.find_from_files:main
+

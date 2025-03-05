@@ -1,0 +1,10 @@
+find_from_files/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+find_from_files/ansi_safe_split.py,sha256=WBe09hLgQHh5Q7nN77LYuyN43rAafWntVaBl9Nfkc8k,4355
+find_from_files/constants.py,sha256=cbX4IPOjeEynTzJ4PBlNiroa18Uch3ugcIzDdmAII1M,72
+find_from_files/find_from_files.py,sha256=NoGTMf0pTdZBfnKvcRtbSxYSh_zqQc9Y0ovOST-cWjg,13107
+find_from_files/is_binary.py,sha256=d82OYysFOobNvLkkcaq6gp5Z6mIIfPRHUITN1cguqgg,2531
+find_from_files-1.0.1.dist-info/LICENSE,sha256=EiQPlxw022Z56rJNcSmlssQVpDeP5rNB0Xp_3BAuKpY,1055
+find_from_files-1.0.1.dist-info/METADATA,sha256=8zT2Jqa3ZkwoBjiu9-Hfq3sAtSdwbIch3EF7dYISwCc,2647
+find_from_files-1.0.1.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+find_from_files-1.0.1.dist-info/entry_points.txt,sha256=JKqMPDJjolkJkAciZNWsCZ1bF6LgUq4RHYvgBjT2Mq8,72
+find_from_files-1.0.1.dist-info/RECORD,,
