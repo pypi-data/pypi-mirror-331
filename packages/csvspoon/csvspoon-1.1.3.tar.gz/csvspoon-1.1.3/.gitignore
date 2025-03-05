@@ -1,0 +1,5 @@
+csvspoon.egg-info/
+csvspoon/__pycache__/
+dist/
+build/
+csvspoon/_version.py
