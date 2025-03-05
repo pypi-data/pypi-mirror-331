@@ -1,0 +1,12 @@
+alembic
+psycopg2-binary
+sqlalchemy>=2.0.4
+
+[dev]
+black
+isort
+mypy
+
+[distribute]
+build
+twine
