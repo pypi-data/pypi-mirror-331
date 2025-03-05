@@ -1,0 +1,2 @@
+[console_scripts]
+ptpyrs=ptpyrs.__main__:ptpyrs.main
