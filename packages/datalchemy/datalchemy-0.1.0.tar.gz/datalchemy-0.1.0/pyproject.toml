@@ -1,0 +1,84 @@
+[tool.poetry]
+name = "datalchemy"
+packages = [
+    { include = "datalchemy" }
+]
+license = "CoffeeWare"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Database",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+    "Natural Language :: Portuguese",
+]
+version = "0.1.0"
+description = "Uma biblioteca para facilitar a geração de dados sintéticos orientados por semântica e a integração com bancos SQL."
+authors = ["Bruno-Gomes-QA <bruno.gomes.qa@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.urls]
+"Documentação" = "https://datalchemy.readthedocs.io/en/latest/"
+"Código" = "https://github.com/Bruno-Gomes-QA/datalchemy"
+"Bug Tracker" = "https://github.com/Bruno-Gomes-QA/datalchemy/issues"
+
+[tool.poetry.dependencies]
+python = "^3.12.7,<3.13"
+sqlacodegen = "^2.3.0.post1"
+pymysql = "^1.1.1"
+psycopg2-binary = "^2.8.0"
+streamlit = "^1.41.1"
+openai = "^1.59.6"
+cryptography = "^44.0.0"
+tiktoken = "^0.8.0"
+sdv = "^1.17.4"
+pydantic = "^2.10.6"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+pytest-cov = "^6.0.0"
+blue = "^0.9.1"
+isort = "^5.13.2"
+taskipy = "^1.14.1"
+pytest-mysql = "^3.1.0"
+python-dotenv = "^1.0.1"
+
+
+[tool.poetry.group.doc.dependencies]
+mkdocs-material = "^9.5.49"
+mkdocstrings = "^0.27.0"
+mkdocstrings-python = "^1.13.0"
+jinja2 = "^3.1.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.init_options]
+pythonpath = "."
+addopts = "--doctest-modules"
+
+[tool.isort]
+profile = "black"
+line_length = 79
+
+[tool.taskipy.tasks]
+lint = "blue . && isort ."
+docs = "mkdocs serve"
+pre_test = "task lint"
+test = "pytest -s -x --cov=datalchemy -vv"
+post_test = "coverage html"
+
+[tool.poetry.extras]
+postgresql = ["psycopg2-binary"]
+mysql = ["pymysql", "mysqlclient"]
+oracle = ["cx-oracle"]
+mssql = ["pyodbc"]
+all = ["psycopg2-binary", "pymysql", "mysqlclient", "cx-oracle", "pyodbc"]
