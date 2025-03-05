@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+BlackSpammerBd_Bot.egg-info/PKG-INFO
+BlackSpammerBd_Bot.egg-info/SOURCES.txt
+BlackSpammerBd_Bot.egg-info/dependency_links.txt
+BlackSpammerBd_Bot.egg-info/entry_points.txt
+BlackSpammerBd_Bot.egg-info/requires.txt
+BlackSpammerBd_Bot.egg-info/top_level.txt
