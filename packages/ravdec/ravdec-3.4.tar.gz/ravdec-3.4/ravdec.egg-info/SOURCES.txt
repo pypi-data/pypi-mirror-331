@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+ravdec/__init__.py
+ravdec.egg-info/PKG-INFO
+ravdec.egg-info/SOURCES.txt
+ravdec.egg-info/dependency_links.txt
+ravdec.egg-info/top_level.txt
