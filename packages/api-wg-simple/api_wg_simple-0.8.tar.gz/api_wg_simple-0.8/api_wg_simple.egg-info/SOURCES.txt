@@ -1,0 +1,9 @@
+README.md
+setup.py
+WGEasyAPI/__init__.py
+WGEasyAPI/connector.py
+api_wg_simple.egg-info/PKG-INFO
+api_wg_simple.egg-info/SOURCES.txt
+api_wg_simple.egg-info/dependency_links.txt
+api_wg_simple.egg-info/requires.txt
+api_wg_simple.egg-info/top_level.txt
