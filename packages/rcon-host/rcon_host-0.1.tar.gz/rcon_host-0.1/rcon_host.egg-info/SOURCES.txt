@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+rcon_host/__init__.py
+rcon_host/log.py
+rcon_host/rcon_host.py
+rcon_host.egg-info/PKG-INFO
+rcon_host.egg-info/SOURCES.txt
+rcon_host.egg-info/dependency_links.txt
+rcon_host.egg-info/top_level.txt
