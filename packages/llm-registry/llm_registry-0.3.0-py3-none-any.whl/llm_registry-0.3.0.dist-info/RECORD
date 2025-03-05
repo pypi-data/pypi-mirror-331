@@ -1,0 +1,13 @@
+llm_registry/__init__.py,sha256=sf6lVxk0tHhZusWU8UarsvmXHWjBRPjD5j4Is1hSqhw,462
+llm_registry/cli.py,sha256=SvqV0slNWp3SFDh3uO1amoLiRyuP3btaKCXqcGEiONE,18883
+llm_registry/models.py,sha256=GDmxUxxARqCEDGoXrjulBjDBvHW9GUj8LmVVBWmme8k,3918
+llm_registry/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+llm_registry/registry.py,sha256=D86cxJsRmDjfFNhwMskt88LwSvNhSniKCsKW3Bd__Xw,2147
+llm_registry/repository.py,sha256=XqCUFtz5ZNklwoIsyfMiSQGMMmGfVNtcUhVgG4tt6dA,4896
+llm_registry/utils.py,sha256=pNYByB0z4Vkyr5L2C0-Zw2A1vgajpIQFGKWt_ah-FE4,4392
+llm_registry/data/models.json,sha256=f68PRZXajkR7f7KMwPLoCyAXEPmCf-yrzg8tSe4UYns,5197
+llm_registry-0.3.0.dist-info/METADATA,sha256=APxBFwqLkR6nk02gUVrb_FB8ieJu8pvF3i2DwI-TG4s,6159
+llm_registry-0.3.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+llm_registry-0.3.0.dist-info/entry_points.txt,sha256=1mbbVM6Lv4m49eWy0jx8UOtYey1xpgsoWi5Jc0vnXgo,82
+llm_registry-0.3.0.dist-info/licenses/LICENSE,sha256=E8VAMlgD2XCJx-FfuG0pKHRLTWjyKTKSFdWYQLKpvNk,1070
+llm_registry-0.3.0.dist-info/RECORD,,
