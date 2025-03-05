@@ -1,0 +1,128 @@
+Metadata-Version: 2.1
+Name: selector-ac
+Version: 0.1.0.5
+Summary: Selector: Ensemble-Based Automated Algorithm Configuration
+Home-page: https://github.com/DOTBielefeld/selector
+Author: Dimitri Weiß
+Author-email: dimitri-weiss@web.de
+License: MIT License
+Classifier: Natural Language :: English
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: POSIX :: Linux
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: swig==4.1.1
+Requires-Dist: aiohttp==3.8.1
+Requires-Dist: aiohttp-cors==0.7.0
+Requires-Dist: aioredis==1.3.1
+Requires-Dist: aiosignal==1.2.0
+Requires-Dist: async-timeout==4.0.2
+Requires-Dist: asynctest==0.13.0
+Requires-Dist: attrs==21.4.0
+Requires-Dist: blessed==1.19.0
+Requires-Dist: cachetools==4.2.4
+Requires-Dist: certifi==2021.10.8
+Requires-Dist: charset-normalizer==2.0.10
+Requires-Dist: click==8.0.3
+Requires-Dist: colorful==0.5.4
+Requires-Dist: ConfigSpace==0.5.0
+Requires-Dist: costcla==0.6
+Requires-Dist: Deprecated==1.2.13
+Requires-Dist: filelock==3.4.2
+Requires-Dist: frozenlist==1.2.0
+Requires-Dist: google-api-core==2.4.0
+Requires-Dist: google-auth==2.3.3
+Requires-Dist: googleapis-common-protos==1.54.0
+Requires-Dist: gpustat==1.0.0b1
+Requires-Dist: grpcio==1.43.0
+Requires-Dist: hiredis==2.0.0
+Requires-Dist: idna==3.3
+Requires-Dist: importlib-metadata==4.10.0
+Requires-Dist: importlib-resources==5.4.0
+Requires-Dist: jsonschema==4.4.0
+Requires-Dist: joblib==1.1.0
+Requires-Dist: msgpack==1.0.3
+Requires-Dist: multidict==5.2.0
+Requires-Dist: numpy==1.21.5
+Requires-Dist: nvidia-ml-py3==7.352.0
+Requires-Dist: opencensus==0.8.0
+Requires-Dist: opencensus-context==0.1.2
+Requires-Dist: packaging==24.2
+Requires-Dist: prometheus-client==0.12.0
+Requires-Dist: protobuf==3.19.3
+Requires-Dist: psutil==5.9.0
+Requires-Dist: pyrfr==0.8.0
+Requires-Dist: py-spy==0.3.11
+Requires-Dist: pyasn1==0.4.8
+Requires-Dist: pyasn1-modules==0.2.8
+Requires-Dist: pyparsing==3.0.6
+Requires-Dist: pyrsistent==0.18.0
+Requires-Dist: PyYAML==6.0
+Requires-Dist: ray==2.3.1
+Requires-Dist: redis==4.1.0
+Requires-Dist: requests==2.27.1
+Requires-Dist: rsa==4.8
+Requires-Dist: six==1.16.0
+Requires-Dist: scikit-learn==1.0.2
+Requires-Dist: scikit-learn-extra==0.3.0
+Requires-Dist: scikit-optimize==0.9.0
+Requires-Dist: smac==1.3.3
+Requires-Dist: smart-open==5.2.1
+Requires-Dist: typing-extensions==4.0.1
+Requires-Dist: urllib3==1.26.8
+Requires-Dist: wcwidth==0.2.5
+Requires-Dist: wrapt==1.13.3
+Requires-Dist: yarl==1.7.2
+Requires-Dist: zipp==3.7.0
+
+# Selector: Ensemble-based Automated Algorithm Configuration
+
+An algorithm configurator in Python using multiple configuration generators and models derived from state-of-the-art methods. You can find documentation at (https://selector-ac.readthedocs.io/en/latest/).
+
+# Currently integrated state-of-the-art AC method functionalities from
+
+- CPPL
+- GGA
+- SMAC
+
+# Installation
+
+You can use selector from the files the github repository or install it via 
+
+```
+pip install swig
+pip install selector-ac
+```
+
+# Usage
+
+You can use Selectors facade in Python like this:
+
+```
+from selector.run_ac import ac
+
+if __name__ == "__main__":
+    scen_files = {'paramfile': 'your_path_to/params.pcs',
+                  'instance_file': 'your_path_to/problem_instances.txt',
+                  'feature_file': 'your_path_to/instance_features.txt'}
+
+    ac(scen_files, 'desktop', # use 'cluster' for slurm
+       run_obj='runtime', overall_obj='PAR10', cutoff_time=300,
+       seed=44, par=10, winners_per_tournament=1, tournament_size=2,
+       number_tournaments=2, termination_criterion='total_runtime',
+       monitor='tournament_level', initial_instance_set_size=5, set_size=256,
+       generator_multiple=1, memory_limit=2048, check_path=False,
+       log_folder='your_log_folder_path', wallclock_limit=3600,
+       wrapper_mod_name='your_path_to.your_wrapper', deterministic=0, 
+       wrapper_class_name='Your_Wrapper')
+```
+
+You can also call a Python script as exemplified in selector/main.py, or call selector/main.py and pass paths and arguments via command line.
+
+Selector will run the AC process until the 'wallclock_limit' or 'total_tournament_number' is reached and save the results in 'log_folder'.
