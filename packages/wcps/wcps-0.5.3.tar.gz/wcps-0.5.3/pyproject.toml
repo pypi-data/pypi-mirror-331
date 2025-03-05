@@ -1,0 +1,68 @@
+[project]
+name = "wcps"
+dynamic = ["version"]
+authors = [
+  { name="Dimitar Misev", email="misev@rasdaman.com" },
+]
+description = "Python client library for WCPS (OGC Web Coverage Processing Service) backends."
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)",
+    "Operating System :: OS Independent",
+    "Development Status :: 2 - Pre-Alpha",
+    "Topic :: Database :: Front-Ends",
+    "Topic :: Scientific/Engineering :: GIS",
+    "Topic :: Software Development :: Libraries",
+]
+keywords = ["wcps", "rasdaman", "ogc", "gis", "Web Coverage Processing Service"]
+dependencies = ["requests"]
+
+[project.urls]
+Documentation = "https://rasdaman.github.io/wcps-python-client/"
+Source = "https://github.com/rasdaman/wcps-python-client"
+Issues = "https://github.com/rasdaman/wcps-python-client/issues"
+
+[project.optional-dependencies]
+docs = [
+    "sphinx-autoapi",  # Sphinx AutoAPI for documentation
+    "sphinx",
+    "recommonmark",    # Allows to directly include the README.md
+]
+tests = [
+    "pytest",
+    "numpy",
+    "Pillow",
+    "netCDF4",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["wcps*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.setuptools.dynamic]
+version = {attr = "wcps.__version__"}
+
+[tool.pylint.'MESSAGES CONTROL']
+max-line-length = 120
+ignore = ["spectral.py"]
+disable = """
+    too-many-arguments,
+    not-callable,
+    too-many-lines,
+    too-many-public-methods,
+    too-few-public-methods,
+    too-many-return-statements,
+
+"""

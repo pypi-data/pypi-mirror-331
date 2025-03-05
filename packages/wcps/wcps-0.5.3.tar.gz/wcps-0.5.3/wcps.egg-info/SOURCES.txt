@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+tests/test_model.py
+tests/test_service.py
+wcps/__init__.py
+wcps/model.py
+wcps/service.py
+wcps/spectral.py
+wcps.egg-info/PKG-INFO
+wcps.egg-info/SOURCES.txt
+wcps.egg-info/dependency_links.txt
+wcps.egg-info/requires.txt
+wcps.egg-info/top_level.txt
