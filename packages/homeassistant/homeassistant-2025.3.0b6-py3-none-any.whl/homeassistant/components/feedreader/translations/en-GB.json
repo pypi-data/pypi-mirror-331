@@ -1,0 +1,9 @@
+{
+    "config": {
+        "step": {
+            "reconfigure": {
+                "description": "Update your configuration information for {name}."
+            }
+        }
+    }
+}

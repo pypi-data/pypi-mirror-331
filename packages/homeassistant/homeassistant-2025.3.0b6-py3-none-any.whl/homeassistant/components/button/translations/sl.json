@@ -1,0 +1,13 @@
+{
+    "device_automation": {
+        "trigger_type": {
+            "pressed": "{entity_name} je pritisnjena"
+        }
+    },
+    "entity_component": {
+        "restart": {
+            "name": "Ponovno za\u017eeni"
+        }
+    },
+    "title": "Gumb"
+}

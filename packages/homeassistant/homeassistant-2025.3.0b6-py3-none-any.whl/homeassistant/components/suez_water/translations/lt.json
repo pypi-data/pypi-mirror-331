@@ -1,0 +1,34 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Prietaisas jau sukonfig\u016bruotas"
+        },
+        "error": {
+            "cannot_connect": "Nepavyko prisijungti",
+            "invalid_auth": "Neteisingas autentifikavimas",
+            "unknown": "Netik\u0117ta klaida"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "password": "Slapta\u017eodis",
+                    "username": "Naudotojo vardas"
+                },
+                "data_description": {
+                    "password": "\u012eveskite slapta\u017eod\u012f, susiet\u0105 su j\u016bs\u0173 {tout_sur_mon_eau} paskyra",
+                    "username": "\u012eveskite prisijungimo vard\u0105, susiet\u0105 su j\u016bs\u0173 {tout_sur_mon_eau} paskyra"
+                }
+            }
+        }
+    },
+    "entity": {
+        "sensor": {
+            "water_price": {
+                "name": "Vandens kaina"
+            },
+            "water_usage_yesterday": {
+                "name": "Vakar sunaudota vandens"
+            }
+        }
+    }
+}

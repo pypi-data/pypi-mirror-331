@@ -1,0 +1,24 @@
+{
+    "entity": {
+        "binary_sensor": {
+            "storm_mode_active": {
+                "name": "Storm watch active"
+            }
+        },
+        "cover": {
+            "vehicle_state_rt": {
+                "name": "Boot"
+            }
+        },
+        "select": {
+            "climate_state_seat_heater_rear_center": {
+                "name": "Seat heater rear centre"
+            }
+        },
+        "switch": {
+            "charge_state_charging_state": {
+                "name": "Charge"
+            }
+        }
+    }
+}

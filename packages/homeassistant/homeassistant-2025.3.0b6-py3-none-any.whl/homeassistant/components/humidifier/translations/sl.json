@@ -1,0 +1,67 @@
+{
+    "device_automation": {
+        "action_type": {
+            "toggle": "Preklopi {entity_name}",
+            "turn_off": "Izklopi {entity_name}",
+            "turn_on": "Vklopi {entity_name}"
+        },
+        "condition_type": {
+            "is_mode": "{entity_name} je nastavljen na dolo\u010den na\u010din",
+            "is_off": "{entity_name} je izklopljen",
+            "is_on": "{entity_name} je vklopljen"
+        },
+        "extra_fields": {
+            "above": "Nad",
+            "below": "Pod",
+            "for": "Trajanje"
+        },
+        "trigger_type": {
+            "changed_states": "{entity_name} je bil vklopljen ali izklopljen",
+            "target_humidity_changed": "{entity_name} spremenjena ciljna vla\u017enost",
+            "turned_off": "{entity_name} je bil izklopljen",
+            "turned_on": "{entity_name} je bil vklopljen"
+        }
+    },
+    "entity_component": {
+        "_": {
+            "state": {
+                "off": "Izklopljeno",
+                "on": "Vklopljeno"
+            },
+            "state_attributes": {
+                "action": {
+                    "state": {
+                        "idle": "Nedejaven",
+                        "off": "Izklopljeno"
+                    }
+                },
+                "mode": {
+                    "name": "Na\u010din",
+                    "state": {
+                        "auto": "Samodejno",
+                        "away": "Odsoten",
+                        "home": "Doma"
+                    }
+                }
+            }
+        }
+    },
+    "services": {
+        "set_mode": {
+            "fields": {
+                "mode": {
+                    "name": "Na\u010din"
+                }
+            }
+        },
+        "toggle": {
+            "name": "Preklopi"
+        },
+        "turn_off": {
+            "name": "Izklopi"
+        },
+        "turn_on": {
+            "name": "Vklopi"
+        }
+    }
+}

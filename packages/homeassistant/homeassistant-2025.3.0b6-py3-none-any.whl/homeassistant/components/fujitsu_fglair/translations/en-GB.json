@@ -1,0 +1,30 @@
+{
+    "config": {
+        "step": {
+            "reauth_confirm": {
+                "description": "Please re-enter the password for {username}:"
+            },
+            "user": {
+                "data": {
+                    "region": "Region"
+                }
+            }
+        }
+    },
+    "entity": {
+        "sensor": {
+            "fglair_outside_temp": {
+                "name": "Outside temperature"
+            }
+        }
+    },
+    "selector": {
+        "region": {
+            "options": {
+                "cn": "China",
+                "default": "Other",
+                "eu": "Europe"
+            }
+        }
+    }
+}

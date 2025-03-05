@@ -1,0 +1,31 @@
+{
+    "entity": {
+        "sensor": {
+            "alert": {
+                "name": "Alert"
+            }
+        }
+    },
+    "selector": {
+        "package_state": {
+            "options": {
+                "alert": "Alert"
+            }
+        }
+    },
+    "services": {
+        "archive_package": {
+            "description": "Archives a package using the 17track API.",
+            "fields": {
+                "config_entry_id": {
+                    "description": "The package will be archived for the selected service."
+                },
+                "package_tracking_number": {
+                    "description": "The package will be archived for the specified tracking number.",
+                    "name": "Package tracking number"
+                }
+            },
+            "name": "Archive package"
+        }
+    }
+}
