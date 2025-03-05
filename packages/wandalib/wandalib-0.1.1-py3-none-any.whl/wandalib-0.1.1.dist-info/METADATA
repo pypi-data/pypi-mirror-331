@@ -1,0 +1,40 @@
+Metadata-Version: 2.4
+Name: wandalib
+Version: 0.1.1
+Summary: Add your description here
+Author-email: Juan David <juanguerrero09mc@gmail.com>
+Maintainer-email: Juan David <juanguerrero09mc@gmail.com>
+Requires-Python: >=3.9
+Requires-Dist: matplotlib>=3.9.4
+Requires-Dist: numpy>=2.0.2
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: python-dotenv>=1.0.1
+Requires-Dist: pywanda==4.7.0a2
+Requires-Dist: setuptools>=75.8.0
+Requires-Dist: twine>=6.1.0
+Requires-Dist: wheel>=0.45.1
+Description-Content-Type: text/markdown
+
+# Wandalib  
+
+**Wandalib** is a high-level library built on top of the **WANDA** API (developed by Deltares). Its development is driven by the internal needs and tools used in **IDOM’s** Water Department, focusing on steady-state and, primarily, transient analysis.  
+
+This library aims to simplify and optimize the use of **WANDA**, providing high-level functions that facilitate data retrieval, visualization, and analysis.  
+
+Contributions, ideas, and bug reports are welcome.  
+
+## 🚀 Roadmap  
+
+- Add high-level functions to extract data, generate plots, and perform analysis focusing solely on pipelines.  
+- Integrate **UV** and improve the package structure.  
+- Serve as the foundation for the [**wandascenarios**](https://github.com/JuanGuerrero09/wandascenarios) tool.  
+
+## ⚙️ Installation & Execution  
+
+The library uses **UV**, an extremely fast Python package and project manager written in **Rust**, offering a lightweight and efficient alternative to tools like Anaconda (which requires an enterprise license).  
+
+To run and verify the installation:  
+
+```bash
+uv run test/test.py
+```
