@@ -1,0 +1,7 @@
+README.md
+setup.py
+developer_os_builder.egg-info/PKG-INFO
+developer_os_builder.egg-info/SOURCES.txt
+developer_os_builder.egg-info/dependency_links.txt
+developer_os_builder.egg-info/entry_points.txt
+developer_os_builder.egg-info/top_level.txt
