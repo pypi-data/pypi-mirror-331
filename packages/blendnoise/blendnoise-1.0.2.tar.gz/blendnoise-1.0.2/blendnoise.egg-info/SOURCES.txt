@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+blendnoise.egg-info/PKG-INFO
+blendnoise.egg-info/SOURCES.txt
+blendnoise.egg-info/dependency_links.txt
+blendnoise.egg-info/top_level.txt
+src/blender_shaders.c
+src/blender_shaders.h
+src/blendnoise.c
+src/bli_noise.c
+src/bli_noise.h
