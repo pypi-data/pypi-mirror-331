@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: prepmagma
+Version: 0.1
+Summary: prepare data for running magma from unorganized gwas data
+Project-URL: Homepage, https://github.com/brainfo/cleanmagma
+Project-URL: Issues, https://github.com/brainfo/cleanmagma/issues
+Author-email: brainfo <scilavisher@gmail.com>
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# cleanmagma
