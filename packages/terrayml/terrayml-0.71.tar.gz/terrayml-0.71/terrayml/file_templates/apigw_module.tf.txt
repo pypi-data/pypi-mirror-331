@@ -1,0 +1,5 @@
+module "api_gateway" {
+  source = "./modules/api_gateway"
+  common = local.common
+  apigw_lambda_list = ${LAMBDA_FUNCTIONS_WITH_APIGW_LIST}
+}
