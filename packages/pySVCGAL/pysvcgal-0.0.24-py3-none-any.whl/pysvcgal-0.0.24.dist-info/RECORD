@@ -1,0 +1,11 @@
+pySVCGAL/__init__.py,sha256=typBs_lB97s7QRqykqp-xzMc5TPW-5u3KJF6Mo5tMOc,29
+pySVCGAL/pySVCGAL.py,sha256=JWkksu-vx6Rplj9f5Q-zX6NhG8qgAg29QAddtVatras,33708
+pySVCGAL/clib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pySVCGAL/clib/ctSVCGAL.dll,sha256=MLFkZHPPkutgvEbkmOQm7QtVpH3H6Z4dYwEwOpDuuf0,1337856
+pySVCGAL/clib/libctSVCGAL.dylib,sha256=vUVdH3iL8DyvUAkp3U-Etz1YkbOt89Kp0PjGyna03UI,2506832
+pySVCGAL/clib/libctSVCGAL.so,sha256=9ckuiSjIJY7hnebBEUwp885kEkgCcTsIOOVEmKu0X1w,3396248
+pySVCGAL/clib/load_library.py,sha256=kVaj6gVMFaNz-it2bSnBVoZQMpY8li83icNRIl-WMnw,792
+pysvcgal-0.0.24.dist-info/METADATA,sha256=6YphGpHqDFaPUm_JOc4W-SYh2Fkitl_KmjZDQMQz0dQ,1562
+pysvcgal-0.0.24.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pysvcgal-0.0.24.dist-info/licenses/LICENSE,sha256=dj9Xj4IQSHTNs_PV_QgnKHoiBQXvX6HO7SE5DizUFg0,4
+pysvcgal-0.0.24.dist-info/RECORD,,
