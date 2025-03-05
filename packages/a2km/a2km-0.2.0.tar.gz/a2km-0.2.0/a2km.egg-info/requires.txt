@@ -1,0 +1,6 @@
+jupyter-core
+
+[test]
+pytest
+pytest-cov
+jupyter_client
