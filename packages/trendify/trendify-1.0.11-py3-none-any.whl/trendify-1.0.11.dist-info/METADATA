@@ -1,0 +1,30 @@
+Metadata-Version: 2.4
+Name: trendify
+Version: 1.0.11
+Summary: Tools for generating data products, storing, and interacting with them
+Author-email: Talbot Knighton <talbotknighton@gmail.org>
+Maintainer-email: Talbot Knighton <talbotknighton@gmail.org>
+License-File: LICENSE.txt
+Keywords: Data,Database,Post,Process,Products
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.9
+Requires-Dist: filelock
+Requires-Dist: flask
+Requires-Dist: jinja2
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: numpydantic
+Requires-Dist: pandas
+Requires-Dist: pydantic
+Requires-Dist: scipy
+Requires-Dist: strenum
+Requires-Dist: supervisor
+Requires-Dist: waitress
+Description-Content-Type: text/markdown
+
+
+[Read the Docs](https://talbotknighton.github.io/trendify/)
+
+[View on PyPi](https://pypi.org/project/trendify/)
