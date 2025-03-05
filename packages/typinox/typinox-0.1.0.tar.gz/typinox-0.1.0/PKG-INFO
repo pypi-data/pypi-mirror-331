@@ -1,0 +1,74 @@
+Metadata-Version: 2.3
+Name: typinox
+Version: 0.1.0
+Summary: Enhanced runtime type-checked JAX modules
+License: BSD 3-Clause License
+         
+         Copyright (c) 2025, Etaoin Wu
+         
+         Redistribution and use in source and binary forms, with or without
+         modification, are permitted provided that the following conditions are met:
+         
+         1. Redistributions of source code must retain the above copyright notice, this
+            list of conditions and the following disclaimer.
+         
+         2. Redistributions in binary form must reproduce the above copyright notice,
+            this list of conditions and the following disclaimer in the documentation
+            and/or other materials provided with the distribution.
+         
+         3. Neither the name of the copyright holder nor the names of its
+            contributors may be used to endorse or promote products derived from
+            this software without specific prior written permission.
+         
+         THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+         AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+         IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+         DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+         FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+         DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+         SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+         CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+         OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+         OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+Keywords: jax,neural-networks,deep-learning,equinox,typing,type-checking,annotations
+Author: Etaoin Wu
+Author-email: me@etaoinwu.com
+Requires-Python: >=3.12
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Natural Language :: English
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Requires-Dist: beartype (>=0.20.0,<0.21.0)
+Requires-Dist: equinox (>=0.11.12,<0.12.0)
+Requires-Dist: jax (>=0.5.1,<0.6.0)
+Requires-Dist: jaxtyping (>=0.2.38,<0.3.0)
+Project-URL: Repository, https://github.com/EtaoinWu/typinox
+Description-Content-Type: text/markdown
+
+Typinox
+=======
+
+**Typinox** (TAI-pee-nox) is a Python library for enhancing run-time type-checking of
+`jaxtyping`-annotated arrays and `equinox.Module`s.
+
+Installation
+------------
+
+```bash
+pip install typinox
+```
+
+Documentation
+-------------
+
+The documentation is not yet available.
+
+
