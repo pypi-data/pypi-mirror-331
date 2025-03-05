@@ -1,0 +1,12 @@
+prospector_profile_duplicated/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+prospector_profile_duplicated/black.yaml,sha256=dAKXNO7pGckxUaOqOJYKbcybz9cEmF6_Mez1ZUZ6liU,4777
+prospector_profile_duplicated/docformatter.yaml,sha256=jUby2HF3C1enk5y-M1WW_49d-lPgQL52pB30iD5V9R8,186
+prospector_profile_duplicated/isort.yaml,sha256=mQHOfONkGtNhs-zHkKURGQTu9IFE2c0aliPorP9j77Y,173
+prospector_profile_duplicated/prospector.yaml,sha256=xTh6wFUtnsn2HUYjp3UkoawYx8QIei8qzVZV6wppm4E,30
+prospector_profile_duplicated/pydocstyle.yaml,sha256=Mm3i-fIFVedTWSe9HVnC9Z4HvC-uINNo2lEZXW3Xemc,119
+prospector_profile_duplicated/pyupgrade.yaml,sha256=fjj4XM1AFneiQjshKmG7VlKhQPxhxKeOIiYZu8HDDnk,776
+prospector_profile_duplicated/ruff.yaml,sha256=zgIXtFesWSqqM2dkL14IodG9RHBgE83SN8xdHKt9bVc,158
+prospector_profile_duplicated-1.10.5.dist-info/LICENSE,sha256=pyLtY-w-yViWwSH5MY7TPsmQI4zhdBavPAk5SWY57uo,1308
+prospector_profile_duplicated-1.10.5.dist-info/METADATA,sha256=CtgwF5Wz_ILRxXDW7fdze3t52wkhcZ5yDHjeawhFoHM,2092
+prospector_profile_duplicated-1.10.5.dist-info/WHEEL,sha256=aiTauIPAnqOMBuVimVqk4bevIILHLWXNdkzTocSR-tg,92
+prospector_profile_duplicated-1.10.5.dist-info/RECORD,,
