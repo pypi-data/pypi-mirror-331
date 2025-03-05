@@ -1,0 +1,16 @@
+adp/__init__.py,sha256=Ddgz4KMpJQMAQx1nv2JojI9D7yRTMTnQLAiB38K94nI,1683
+adp/adp.py,sha256=RDexRg0JDjLOoy_13B7nzpq7mj3ZFgCixRfQyy2JTyo,2583
+adp/adp_analytics.py,sha256=sYSX5YWAFjtjI98q6VPwaj3Oby5TENUdBgGXW8HCfP4,32096
+adp/adp_dataframe.py,sha256=hG1skPrDjLwEu3KzDtmsmUPKvwsMr8aoq8RSvU9u0HE,3285
+adp/adp_ingest.py,sha256=N7kZCIwn74b7NbdIS78VdEl9ydD9z9RtcIC9J6TkgQY,34545
+adp/adp_insight.py,sha256=tosJszXNARu3hEsFys7WNwa6QvzUXcaRSBEMOsKQIUo,8130
+adp/adp_misc.py,sha256=jxNNTjDpGglFNxIM4HV5-m1RVFukaWHkjVmDGin_Kws,17943
+adp/adp_share.py,sha256=yzjJe2uREqUaf-6bMP6g_NUssFQZW4-a_3bCwQ2Ip28,20543
+adp/db_util.py,sha256=6SRqF_XkYmocUIGNDRRS3SuID1DZP1CHUlrFdSgE2q4,3747
+adp/rest.py,sha256=WTxvatBMeRy4aLILtu32NDB2YksQVxJVc4I43cohsPg,7469
+oracle_data_studio-1.0.11.dist-info/LICENSE.txt,sha256=7F--SQ5Lan7XOFbiShJmLxhGd0xz8rmTA81pqiPDlYQ,1846
+oracle_data_studio-1.0.11.dist-info/METADATA,sha256=B9rTtKCyi73S2KvQrhu36EzEJ9Lu9F6cHuwBx1vhGcU,3132
+oracle_data_studio-1.0.11.dist-info/THIRD_PARTY_LICENSES.txt,sha256=hXarepdKzn0nzTR7-7t_Ps5ZzVf9LhYXCpyoNChMPbU,33711
+oracle_data_studio-1.0.11.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+oracle_data_studio-1.0.11.dist-info/top_level.txt,sha256=_3Ftz84Uq8Ki1nxpuc4--xq7DLy7u5UNHd3TxpnQb7k,4
+oracle_data_studio-1.0.11.dist-info/RECORD,,
