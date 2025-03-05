@@ -1,0 +1,9 @@
+[ffmpeg]
+cmd='ffmpeg'                              # Allows custom ffmpeg locations
+transcode_dir="."
+
+[whisper]
+url = 'http://prx-01-gpt:9000'   #Whisper ASR Webservice- https://hub.docker.com/r/onerahmet/openai-whisper-asr-webservice
+# Alternatively
+model='small.en'                 #small.en or medium.en
+device='cpu'                     # cuda or cpu
