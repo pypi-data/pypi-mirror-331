@@ -1,0 +1,6 @@
+{
+    "function_name": "${LAMBDA_FUNCTION_NAME}",
+    "route_key": "${LAMBDA_METHOD} ${LAMBDA_PATH}",
+    "integration_method": "${LAMBDA_METHOD}",
+    "integration_uri": "module.lambda_functions.lambda_arns[\"${LAMBDA_FUNCTION_NAME}\"]"
+}
