@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+fgex
+requirements.txt
+setup.py
+firegex/__init__.py
+firegex/__main__.py
+firegex.egg-info/PKG-INFO
+firegex.egg-info/SOURCES.txt
+firegex.egg-info/dependency_links.txt
+firegex.egg-info/requires.txt
+firegex.egg-info/top_level.txt
