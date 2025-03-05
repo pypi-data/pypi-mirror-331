@@ -1,0 +1,16 @@
+Metadata-Version: 2.3
+Name: cog-layers
+Version: 0.1.0
+Summary: 
+Author: Jeff Albrecht
+Author-email: geospatialjeff@gmail.com
+Requires-Python: >=3.11
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: mercantile (>=1.2.1,<2.0.0)
+Requires-Dist: obstore (>=0.4.0,<0.5.0)
+Description-Content-Type: text/markdown
+
+# cog-layers
