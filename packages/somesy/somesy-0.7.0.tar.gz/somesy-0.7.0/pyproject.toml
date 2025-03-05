@@ -1,0 +1,144 @@
+[project]
+name = "somesy"
+version = "0.7.0"
+description = "A CLI tool for synchronizing software project metadata."
+license = "MIT"
+readme = "README.md"
+keywords = ["metadata", "FAIR"]
+classifiers = [
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: Microsoft :: Windows",
+    "Natural Language :: English",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+    "License :: OSI Approved :: MIT License",
+]
+
+authors = [{name = "Mustafa Soylu", email = "m.soylu@fz-juelich.de"}, {name = "Anton Pirogov", email = "a.pirogov@fz-juelich.de"}]
+maintainers = [{name = "Mustafa Soylu", email = "m.soylu@fz-juelich.de"}]
+[project.urls]
+homepage = "https://materials-data-science-and-informatics.github.io/somesy"
+repository = "https://github.com/Materials-Data-Science-and-Informatics/somesy"
+documentation = "https://materials-data-science-and-informatics.github.io/somesy"
+
+[tool.poetry]
+# the Python packages that will be included in a built distribution:
+packages = [{include = "somesy", from = "src"}]
+
+# always include basic info for humans and core metadata in the distribution,
+# include files related to test and documentation only in sdist:
+include = [
+  "*.md", "LICENSE", "LICENSES", ".reuse/dep5", "CITATION.cff", "codemeta.json",
+  "mkdocs.yml", "docs", "tests",
+  { path = "mkdocs.yml", format = "sdist" },
+  { path = "docs", format = "sdist" },
+  { path = "tests", format = "sdist" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pydantic = {extras = ["email"], version = "^2.8.2"}
+ruamel-yaml = "^0.18.6"
+tomlkit = "^0.13.0"
+importlib-metadata = "^8.0.0"
+typer = {extras = ["all"], version = "^0.12.3"}
+cffconvert = "^2.0.0"
+wrapt = "^1.16.0"
+packaging = "^24.1"
+jinja2 = "^3.1.4"
+defusedxml = "^0.7.1"
+pyld = "^2.0.4"
+
+[tool.poetry.group.dev.dependencies]
+poethepoet = "^0.27.0"
+pre-commit = "^3.5.0"
+pytest = "^8.3.1"
+pytest-cov = "^5.0.0"
+hypothesis = "^6.108.4"
+licensecheck = "^2024.2"
+pytest-mock = "^3.14.0"
+
+[tool.poetry.group.docs]
+optional = true
+
+[tool.poetry.group.docs.dependencies]
+mkdocs = "^1.6.0"
+mkdocstrings = {extras = ["python"], version = "^0.25.1"}
+mkdocs-material = "^9.5.30"
+mkdocs-gen-files = "^0.5.0"
+mkdocs-literate-nav = "^0.6.1"
+mkdocs-section-index = "^0.3.9"
+mkdocs-macros-plugin = "^1.0.5"
+markdown-include = "^0.8.1"
+pymdown-extensions = "^10.8.1"
+markdown-exec = {extras = ["ansi"], version = "^1.9.3"}
+mkdocs-coverage = "^1.1.0"
+mike = "^2.1.2"
+anybadge = "^1.14.0"
+interrogate = "^1.7.0"
+black = "^24.4.2"
+mkdocs-exclude = "^1.0.2"
+
+[tool.poetry.scripts]
+somesy = "somesy.main:app"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+# NOTE: You can run the following with "poetry poe TASK"
+[tool.poe.tasks]
+init-dev = { shell = "pre-commit install" }
+lint = "pre-commit run"  # pass --all-files to check everything
+test = "pytest"  # pass --cov to also collect coverage info
+docs = "mkdocs build"  # run this to generate local documentation
+licensecheck = "licensecheck"  # run this when you add new deps
+
+# Tool Configurations
+# -------------------
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+addopts = "--cov-report=term-missing:skip-covered"
+filterwarnings = [
+"ignore::DeprecationWarning:pkg_resources.*",
+"ignore::DeprecationWarning:pyshacl.*",
+# Example:
+# "ignore::DeprecationWarning:importlib_metadata.*",
+]
+
+[tool.coverage.run]
+source = ["somesy"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "if settings.DEBUG",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if 0:",
+    "if TYPE_CHECKING:",
+    "if __name__ == .__main__.:",
+    "class .*\\bProtocol\\):",
+    "@(abc\\.)?abstractmethod",
+]
+
+[tool.semantic_release]
+version_variable = "src/somesy/__init__.py:__version__"
+
+[tool.ruff.lint]
+extend-select = ["I", "D", "B", "S", "W"]
+ignore = ["D203", "D213", "D407", "B008"]
+
+[tool.ruff.lint.per-file-ignores]
+"**/{tests,docs}/*" = ["ALL"]
+
+[tool.licensecheck]
+using = "poetry"
+
+[tool.mypy]
+disable_error_code = ["attr-defined"]
