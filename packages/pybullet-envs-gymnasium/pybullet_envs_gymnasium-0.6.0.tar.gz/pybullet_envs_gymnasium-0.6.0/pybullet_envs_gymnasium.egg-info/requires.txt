@@ -1,0 +1,2 @@
+pybullet>=3.2.5
+gymnasium<2.0,>=0.29.1
