@@ -1,0 +1,6 @@
+numpy
+torch>=2.2.0
+torchaudio
+tqdm
+submitit
+huggingface_hub
