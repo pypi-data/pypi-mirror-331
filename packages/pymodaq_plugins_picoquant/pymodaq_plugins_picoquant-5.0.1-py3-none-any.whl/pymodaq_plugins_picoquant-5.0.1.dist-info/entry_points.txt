@@ -1,0 +1,5 @@
+[pymodaq.instruments]
+picoquant = pymodaq_plugins_picoquant
+
+[pymodaq.plugins]
+picoquant = pymodaq_plugins_picoquant
