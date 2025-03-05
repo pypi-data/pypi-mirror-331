@@ -1,0 +1,23 @@
+1. Read @README.md — note that in the .venv you have the actual code of the 3rd party libs to consult!
+
+2. Read @LOG.md and @TODO.md
+
+3. Step back and reason about the rationale: we wanted a simple package that exposes some decorators and passes all the cache heavy lifting to the 3rd parties. Check the implementation and tell me how we match. 
+
+4. Reduce the common API of our code to the minimum, don't try to expose a universal API that does everything. For that, implement an easy passthru that just exposes the objects or functions provided by the 3rd parties
+
+5. What DOES matter, though, is ease of use. We wanted the 3 specialized decorators (mcache, bcache, fcache) and a universal ucache decorator. What I want is a seamless integration of the engines so that if a given engine isn't available, we issue a logger warning but a fallback mechanism kicks in. 
+
+6. Rewrite our goals in @TODO.md to match the above
+
+7. Adjusts the tests so they’re sensible and realistic. 
+
+Run often:
+
+```
+uv venv; source .venv/bin/activate; uv pip install -e .[all,dev,test]; tree -h -I '*_cache' -I __pycache__ .; tree -h -I '*.dist-info' -I 'mypy' -I 'mypyc' -I 'data' .venv; hatch run lint:fix; hatch test;
+```
+
+REPEAT IT OFTEN.
+
+Then adjust our implementation, and continue TODO

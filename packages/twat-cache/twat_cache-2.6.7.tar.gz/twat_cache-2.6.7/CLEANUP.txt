@@ -1,0 +1,6 @@
+2025-03-04 08:19:47 - Usage:
+2025-03-04 08:19:47 -   cleanup.py status   # Show current status and run all checks
+2025-03-04 08:19:47 -   cleanup.py venv     # Create virtual environment
+2025-03-04 08:19:47 -   cleanup.py install  # Install package with all extras
+2025-03-04 08:19:47 -   cleanup.py update   # Update and commit changes
+2025-03-04 08:19:47 -   cleanup.py push     # Push changes to remote
