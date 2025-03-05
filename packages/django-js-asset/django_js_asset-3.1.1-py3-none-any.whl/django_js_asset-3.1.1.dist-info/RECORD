@@ -1,0 +1,7 @@
+js_asset/__init__.py,sha256=B30mu9sPEDWdqDYa2_3MB1ZeLT9lam0jY7cj3Vw-i7I,126
+js_asset/context_processors.py,sha256=8nnr6KJ3fXCVw2WcBhYbFkbMBqPtpbKMj9TDHzrkm1o,111
+js_asset/js.py,sha256=Tlruxh7qwavY_fD6Q2DCWtUbSDH6mFk62yWAw-YV72Y,2725
+django_js_asset-3.1.1.dist-info/METADATA,sha256=IMVeAtV273zMLqRVCTYGxzN1ZRKSPMieQIRar-6g1SM,6376
+django_js_asset-3.1.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+django_js_asset-3.1.1.dist-info/licenses/LICENSE,sha256=Lb3gDwTsNRguja5rOUdQd1XtyVZCn0GP9HPTwaS1ozU,1550
+django_js_asset-3.1.1.dist-info/RECORD,,
