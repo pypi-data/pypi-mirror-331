@@ -1,0 +1,13 @@
+pybandee/AUTHORS.txt,sha256=NWRcz-PYhlTkGrj9Vy_R8OE4wc7kLivh7-LDTgs7gZY,40
+pybandee/VERSION.txt,sha256=_ECO1jePyux2gm9BbNfBm-Dh8h3N8WF1bg1HRv3Ll8w,5
+pybandee/__init__.py,sha256=JI3u9PGDmBtbX-6TOHqsDEEIt6qH8zTMmdMJhRUKdBs,709
+pybandee/_utils/__init__.py,sha256=HlwUeyaMm3oC7c1eiMu8epcQg2KuDHSfy3jcvyS4Apo,163
+pybandee/_utils/_numba_helpers.py,sha256=LNqJAThUwFovJBl2wcQ6chMSyOGaUEx1xGqXk5g8xWE,2551
+pybandee/penta/__init__.py,sha256=kBlsq06xvewAZ1FEAUghf5cC2zOqJBZxDhC4dAlJLfA,294
+pybandee/penta/numba/__init__.py,sha256=fuTj7vU2mPlAdHc6znK97wFBn9w1GM_cK--lSQ2fmJo,494
+pybandee/penta/numba/_ptrans1.py,sha256=v8BSOARej_VsGRobCQuVwi_umPVlXnOkh1JTRpC7DOY,18923
+pybandee-0.0a1.dist-info/LICENSE,sha256=J1Ox9qhTuwTFw4C7uK7gNnlwUNUhAs9XfcrNUb9SXOs,1065
+pybandee-0.0a1.dist-info/METADATA,sha256=hOLL3KfxL7xSDCBIGCA-7Vn75cZNjiWZMUVcQQIZOkA,8576
+pybandee-0.0a1.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+pybandee-0.0a1.dist-info/top_level.txt,sha256=akqQTZphFNpHKRCMKA0701n3E-4ALdcaeMWWOFqOnDg,9
+pybandee-0.0a1.dist-info/RECORD,,
