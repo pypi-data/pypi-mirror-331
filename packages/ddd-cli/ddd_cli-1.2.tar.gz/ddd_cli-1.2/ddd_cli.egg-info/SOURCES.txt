@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+ddd/__init__.py
+ddd/management/__init__.py
+ddd/management/commands/__init__.py
+ddd/management/commands/ddd.py
+ddd_cli.egg-info/PKG-INFO
+ddd_cli.egg-info/SOURCES.txt
+ddd_cli.egg-info/dependency_links.txt
+ddd_cli.egg-info/entry_points.txt
+ddd_cli.egg-info/requires.txt
+ddd_cli.egg-info/top_level.txt
