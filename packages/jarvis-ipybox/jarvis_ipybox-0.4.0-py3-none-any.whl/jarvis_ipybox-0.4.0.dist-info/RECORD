@@ -1,0 +1,16 @@
+jarvis-ipybox/__init__.py,sha256=uUBguvi7nWQaXiPad943ggmQE0Ld7wD4oDVbmb8PN14,162
+jarvis-ipybox/__main__.py,sha256=qcykAM0CBIlT_PKYe1aET568c69WMg3GZQv7aZsee9I,3153
+jarvis-ipybox/config/default/environment.yml,sha256=hRrACh6MPJTk9fT2jlpoBB0m339CqL9lqCp_HyCFtCs,76
+jarvis-ipybox/config/default/pyproject.toml,sha256=3dPHS6AyFCLpnS5JFLkh_xqIbmTQG-fX9gUf83S5lnU,353
+jarvis-ipybox/container.py,sha256=8dkBrxaa8vkMxl9G0zIkX64QI9YUtx3tENGP34gLL3c,7260
+jarvis-ipybox/docker/Dockerfile,sha256=c_UlYK_MrDBBXcYzqBVG7AtUivWy3-fMhsw2txVsjEI,1306
+jarvis-ipybox/docker/Dockerfile.root,sha256=zD9wB09NaeAOySWwWn1poR-qVSvSrg4duFWuNjU0gSY,1036
+jarvis-ipybox/executor.py,sha256=ysAAB4yuT13MzkF27GyKJFno_Vu24V7jCtS8ifLG4iw,11207
+jarvis-ipybox/modinfo.py,sha256=_TmtWS-FTm_Oj1NERSNrKTtXwqwSrElmMA-zxhU6ZMo,1115
+jarvis-ipybox/scripts/cleanup.sh,sha256=b2_p_6W9SI50L_btGksbcFBbIZVSqrS7MNdSeYzo5nw,206
+jarvis-ipybox/scripts/server.sh,sha256=n9ZdzDPyrarZx5owposq2xXH9ceol4hep7qy_o_Njjw,102
+jarvis-ipybox/utils.py,sha256=zUgQ8zEexM3Y-mEEuIvF8p8zY53124fQZgoXS1UoQ4k,262
+jarvis_ipybox-0.4.0.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+jarvis_ipybox-0.4.0.dist-info/METADATA,sha256=5VsqyNOqeS1PEwU3o22_yzarJV8PRJr9phLiFJkCCp4,3902
+jarvis_ipybox-0.4.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+jarvis_ipybox-0.4.0.dist-info/RECORD,,
