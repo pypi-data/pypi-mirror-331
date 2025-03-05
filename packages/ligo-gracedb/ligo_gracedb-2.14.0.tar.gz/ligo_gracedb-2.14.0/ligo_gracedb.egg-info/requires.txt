@@ -1,0 +1,16 @@
+cryptography>=1.7.2
+requests>=2.6.0
+igwn-auth-utils>=1.0.0
+
+[docs]
+sphinx
+sphinx_rtd_theme
+
+[lint]
+flake8
+flake8-pyproject
+
+[test]
+pytest>=3.1.0
+pytest-cov
+pytest-runner

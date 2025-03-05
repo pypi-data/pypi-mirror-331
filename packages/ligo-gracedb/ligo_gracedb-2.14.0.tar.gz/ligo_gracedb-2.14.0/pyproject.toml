@@ -1,0 +1,103 @@
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ligo-gracedb"
+dynamic = ["version"]
+authors = [
+    {name = "Tanner Prestegard", email = "tanner.prestegard@ligo.org"},
+    {name = "Alexander Pace", email = "alexander.pace@ligo.org"},
+    {name = "Duncan Meacher", email = "duncan.meacher@ligo.org"},
+    {name = "Daniel Wysocki", email = "daniel.wysocki@ligo.org"},
+    {name = "Branson Stephens"},
+    {name = "Brian Moe"},
+    {name = "Patrick Brady"},
+    ]
+description = "A Python package for accessing the GraceDB API."
+license = { text = "GPL-3.0-or-later" }
+readme = "README.rst"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: End Users/Desktop",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Operating System :: POSIX",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Astronomy",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+requires-python = ">=3.6"
+dependencies = [
+    "cryptography>=1.7.2",
+    "requests>=2.6.0",
+    "igwn-auth-utils>=1.0.0",
+]
+
+[project.scripts]
+gracedb = "ligo.gracedb.cli.client:main"
+
+[project.urls]
+"Homepage" = "https://ligo-gracedb.readthedocs.io/"
+"Bug Tracker" = "https://git.ligo.org/computing/gracedb/client/-/issues"
+"Documentation" = "https://ligo-gracedb.readthedocs.io/"
+"Source Code" = "https://git.ligo.org/computing/gracedb/client.git"
+
+[project.optional-dependencies]
+docs = [
+    "sphinx",
+    "sphinx_rtd_theme",
+]
+test = [
+    "pytest >= 3.1.0",
+    "pytest-cov",
+    "pytest-runner",
+]
+lint = [
+    "flake8",
+    "flake8-pyproject",
+]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.package-data]
+"ligo.gracedb.test" = ["integration/data/*"]
+
+[tool.setuptools.packages.find]
+include = ["ligo.*"]
+
+[tool.setuptools.dynamic]
+version = { attr = "ligo.gracedb.__version__" }
+
+[tool.coverage.run]
+source = ["ligo"]
+omit = [
+    "ligo/gracedb/version.py",
+    "*/test/*",
+    "*/tests/*",
+    "*/conftest.py",
+]
+
+[tool.flake8]
+ignore = [
+    "E129",
+    "W503",
+]
+exclude = [
+    "ligo/gracedb/__init__.py",
+    "ligo/gracedb/legacy_client.py",
+    "ligo/gracedb/cli/commands/__init__.py",
+]
