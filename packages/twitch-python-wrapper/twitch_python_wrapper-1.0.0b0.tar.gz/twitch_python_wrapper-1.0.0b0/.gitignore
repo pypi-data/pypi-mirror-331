@@ -1,0 +1,5 @@
+.idea/
+.venv/
+dist/
+.env
+tests/manual_test.py

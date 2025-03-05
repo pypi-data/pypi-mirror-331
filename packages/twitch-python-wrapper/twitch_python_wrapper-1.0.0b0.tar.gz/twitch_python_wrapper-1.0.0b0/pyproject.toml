@@ -1,0 +1,46 @@
+[project]
+name = "twitch-python-wrapper"
+version = "1.0.0-beta"
+authors = [
+    { name = "RLVizgarra", email = "rodrigolionvizgarra@gmail.com" }
+]
+description = "A Python wrapper for the Twitch API, EventSub and Authentication"
+keywords = ["twitch", "api", "eventsub", "bot", "framework", "wrapper"]
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: No Input/Output (Daemon)",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+    "Typing :: Typed"
+]
+license = "MPL-2.0"
+license-files = ["LICENSE"]
+dependencies = [
+    "httpx",
+    "python-dateutil",
+    "pytz",
+    "websockets",
+    "certifi"
+]
+
+[project.urls]
+#Homepage = "https://github.com/RLVizgarra/twitch-python-wrapper"
+Repository = "https://github.com/RLVizgarra/twitch-python-wrapper"
+Changelog = "https://github.com/RLVizgarra/twitch-python-wrapper/blob/main/CHANGELOG.md"
+#Documentation = "https://github.com/RLVizgarra/twitch-python-wrapper/wiki"
+Issues = "https://github.com/RLVizgarra/twitch-python-wrapper/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
