@@ -1,0 +1,55 @@
+Metadata-Version: 2.4
+Name: basingse
+Version: 0.6.0
+Summary: Opinionated Authentication for Flask Apps
+Project-URL: Repository, https://github.com/alexrudy/basingse
+Author-email: Alex Rudy <opensource@alexrudy.net>
+License-Expression: BSD-3-Clause
+License-File: LICENSE
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.11
+Requires-Dist: attrs>=25.1.0
+Requires-Dist: bootlace>=0.3.0
+Requires-Dist: dominate>=2.9.1
+Requires-Dist: flask!=3.0.1,>=2
+Requires-Dist: flask-alembic>=3.1.1
+Requires-Dist: flask-attachments>=0.2.2
+Requires-Dist: flask-bcrypt>=1.0.1
+Requires-Dist: flask-login>=0.6.3
+Requires-Dist: flask-socketio>=5.5.1
+Requires-Dist: flask-wtf>=1.2.2
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: humanize>=4.12.1
+Requires-Dist: itsdangerous>=2.2.0
+Requires-Dist: markdown-it-py[plugins]>=3.0.0
+Requires-Dist: marshmallow-dataclass>=8.7.1
+Requires-Dist: marshmallow>=3.26.1
+Requires-Dist: pytz>=2025.1
+Requires-Dist: pyyaml>=6.0.2
+Requires-Dist: rich>=13.9.4
+Requires-Dist: sqlalchemy>=1.4
+Requires-Dist: structlog>=25.1.0
+Requires-Dist: svcs>=25.1.0
+Requires-Dist: wtforms-sqlalchemy>=0.4.2
+Requires-Dist: wtforms[email]>=3.2.1
+Description-Content-Type: text/markdown
+
+# Ba Sing Se
+
+
+[![PyPI](https://img.shields.io/pypi/v/basingse.svg)](https://pypi.python.org/pypi/basingse)
+
+[![Tests](https://github.com/alexrudy/basingse/workflows/Tests/badge.svg)](https://github.com/alexrudy/basingse/workflows/Tests/)
+
+This is a collection of tools and utilities to use as a base for Flask applications with SQLAlchemy - it helps to not
+have to repeat these patterns every time I want to work.
+
+
+* Free software: BSD license
