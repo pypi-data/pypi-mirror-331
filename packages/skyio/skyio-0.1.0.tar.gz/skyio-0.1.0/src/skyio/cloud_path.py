@@ -1,0 +1,187 @@
+import typing
+from pathlib import Path
+from typing import Callable
+from typing import Dict
+from urllib.parse import urlparse
+
+from .any_path import AnyPath
+from .exceptions import NotSchemeSupported
+from .settings import get_cache_folder
+
+if typing.TYPE_CHECKING:
+    from .local_path import LocalPath
+    from .generic_path import GenericPath
+
+
+class CloudPathFactory:
+    """
+    This class creates a CloudFile object from a path.
+    """
+
+    registry: Dict[str, AnyPath] = {}
+
+    @classmethod
+    def register(cls, key: str) -> Callable:
+        """
+        Register a file handler class.
+        :param key: Key for the file handler class
+        :return: File handler class
+        """
+
+        def wrapper(wrapped_class: AnyPath) -> AnyPath:
+            """
+            Register a file handler class
+            :param wrapped_class:  File handler class
+            :return:
+            """
+            cls.registry[key] = wrapped_class
+            return wrapped_class
+
+        return wrapper
+
+    @classmethod
+    def build(cls, key: str) -> AnyPath:
+        """
+        Build a file handler instance for the given key.
+        :param key: Key for the file handler class
+        :param kwargs: The keyword arguments to pass to the file
+        handler constructor.
+        :return: File handler instance
+        """
+        if key not in cls.registry:
+            raise NotSchemeSupported(f"scheme {key} not supported")
+        file_handler_class = cls.registry[key]
+        return file_handler_class
+
+
+class CloudPath(AnyPath):
+    """
+    CloudPath class is a subclass of GenericPath
+    """
+
+    def __new__(cls, cloud_path: str, *args, **kwargs):
+        """
+        Create a CloudPath object from a path.
+        :param args: Arguments
+        :param kwargs: Keyword arguments
+        """
+        cloud_path_parts = urlparse(cloud_path)
+        path_scheme = cloud_path_parts.scheme
+        path_netloc = cloud_path_parts.netloc
+        cloud_path_cls = CloudPathFactory.build(path_scheme)
+        # the local path is the cache folder + the netloc + the path
+
+        cache_folder = get_cache_folder()
+        local_path = cache_folder.joinpath(
+            path_netloc, cloud_path_parts.path.lstrip("/")
+        )
+        return super().__new__(cloud_path_cls, local_path, *args, **kwargs)  # type: ignore
+
+    def __init__(self, cloud_path: str, *args, **kwargs):
+        """
+        Constructor
+        :param args: Arguments
+        :param kwargs: Keyword arguments
+        """
+        super().__init__()
+
+        self.uri = cloud_path
+        self.uri_parts = urlparse(cloud_path)
+
+    @property
+    def content_type(self):
+        """
+        Get content type
+        :return: Content type
+        """
+        raise NotImplementedError
+
+    @property
+    def scheme(self):
+        """
+        Get the scheme
+        :return: Scheme
+        """
+        return self.uri_parts.scheme
+
+    @property
+    def parent(self):
+        """
+        Get the parent path
+        :return: Parent path
+        """
+        parent_path = Path(self.uri_parts.path).parent
+        parent_uri = self.drive + self.uri_parts.netloc + str(parent_path)
+        cls = self.__class__
+        if parent_path == Path("/"):
+            return cls(parent_uri)
+        return cls(parent_uri)
+
+    @property
+    def metadata(self):
+        """
+        Get metadata
+        :return: Metadata
+        """
+        raise NotImplementedError
+
+    @metadata.setter
+    def metadata(self, metadata: dict):
+        """
+        Set metadata
+        :param metadata: Metadata
+        """
+        raise NotImplementedError
+
+    def joinpath(self, *paths):
+        """
+        Join the path
+        :param other: Other path
+        :return: New path
+        """
+        cache_folder = get_cache_folder()
+        path_objects = [self] + [Path(p) for p in paths]
+        join_path = Path.joinpath(*path_objects).relative_to(cache_folder)
+        new_uri = self.drive + str(join_path)
+        if paths[-1].endswith("/"):
+            new_uri += "/"
+        return self.__class__(new_uri)
+
+    @property
+    def drive(self):
+        """
+        Get the GCP drive
+        :return: GCP drive
+        """
+        return self.uri_parts.scheme + "://"
+
+    @property
+    def root(self):
+        """
+        Get the root
+        :return: Root
+        """
+        return self.drive + self.uri_parts.netloc + "/"
+
+    def download_to(
+        self,
+        destination: typing.Union[str, "GenericPath", "AnyPath", "LocalPath"],
+        *args,
+        **kwargs,
+    ) -> "LocalPath":
+        """
+        Download a file to a destination.
+        :param destination: Destination path (LocalPath)
+        """
+        from .local_path import LocalPath
+
+        assert isinstance(
+            destination, (str, LocalPath)
+        ), "Invalid destination parameter"
+        if isinstance(destination, str):
+            destination = LocalPath(destination)
+        with open(destination, "wb+") as f:
+            # read bytes from cloud and write to local
+            f.write(self.read_bytes())
+
+        return destination

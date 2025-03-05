@@ -1,0 +1,56 @@
+LIB_NAME="cloudio"
+IMAGE_NAME=$LIB_NAME":latest"
+CONTAINER_NAME=$LIB_NAME"-container"
+RUN_INTERACTIVE=true
+RUN_MODE="shell"
+CREDENTIALS_FILE="keys/sa-gprstudio.json"
+
+# check if there is any container running
+if docker inspect -f '{{.Config.Image}}' $CONTAINER_NAME >/dev/null 2>&1; then
+    echo "Stopping running containers..."
+    docker stop $CONTAINER_NAME
+    docker rm $CONTAINER_NAME
+fi
+
+# check if image exists and remove it
+if [[ "$(docker images -q $IMAGE_NAME 2> /dev/null)" != "" ]]; then
+  echo "Image $IMAGE_NAME exists. Removing image..."
+  docker rmi $IMAGE_NAME
+fi
+
+# create docker image from Dockerfile
+docker build --file "Dockerfile"  -t $IMAGE_NAME .
+
+
+if [[ $RUN_MODE == "shell" ]]; then
+  echo "Running container in shell mode..."
+  docker run \
+    -it \
+    --name $CONTAINER_NAME \
+    --env GOOGLE_APPLICATION_CREDENTIALS=/tmp/keys/credentials.json \
+    --volume $(pwd)/$CREDENTIALS_FILE:/tmp/keys/credentials.json:ro \
+    $IMAGE_NAME \
+    /bin/bash
+  exit 0
+else
+  # run the container
+  if $RUN_INTERACTIVE; then
+    echo "Running container in interactive mode..."
+    docker run -it  \
+    --env GOOGLE_APPLICATION_CREDENTIALS=/tmp/keys/credentials.json \
+    --env HUGGINGFACE_TOKEN=$HUGGINGFACE_TOKEN \
+    --volume $(pwd)/$CREDENTIALS_FILE:/tmp/keys/credentials.json:ro \
+    --name $CONTAINER_NAME \
+    $IMAGE_NAME
+    exit 0
+  else
+      echo "Running container in detached mode..."
+      docker run -d  \
+      --name $CONTAINER_NAME \
+      --env GOOGLE_APPLICATION_CREDENTIALS=/tmp/keys/credentials.json \
+      --volume $(pwd)/$CREDENTIALS_FILE:/tmp/keys/credentials.json:ro \
+      $IMAGE_NAME
+      docker exec -it $CONTAINER_NAME /bin/bash
+      exit 0
+  fi
+fi
