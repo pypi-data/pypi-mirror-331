@@ -1,0 +1,3 @@
+[console_scripts]
+fake=fake_api_server.runner:run
+
