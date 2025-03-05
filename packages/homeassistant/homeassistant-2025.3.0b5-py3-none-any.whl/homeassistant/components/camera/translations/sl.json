@@ -1,0 +1,41 @@
+{
+    "entity_component": {
+        "_": {
+            "state": {
+                "idle": "Nedejaven"
+            },
+            "state_attributes": {
+                "motion_detection": {
+                    "state": {
+                        "false": "Onemogo\u010deno",
+                        "true": "Omogo\u010deno"
+                    }
+                }
+            }
+        }
+    },
+    "services": {
+        "record": {
+            "fields": {
+                "filename": {
+                    "description": "Pot do datoteke. Biti mora mp4."
+                }
+            }
+        },
+        "snapshot": {
+            "fields": {
+                "filename": {
+                    "description": "Pot do datoteke",
+                    "name": "Ime datoteke"
+                }
+            }
+        },
+        "turn_off": {
+            "name": "Izklopi"
+        },
+        "turn_on": {
+            "name": "Vklopi"
+        }
+    },
+    "title": "Kamera"
+}

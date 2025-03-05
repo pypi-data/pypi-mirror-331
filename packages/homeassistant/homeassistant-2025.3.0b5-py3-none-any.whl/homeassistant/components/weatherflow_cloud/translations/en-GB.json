@@ -1,0 +1,9 @@
+{
+    "config": {
+        "step": {
+            "reauth_confirm": {
+                "description": "Reauthenticate with WeatherFlow"
+            }
+        }
+    }
+}

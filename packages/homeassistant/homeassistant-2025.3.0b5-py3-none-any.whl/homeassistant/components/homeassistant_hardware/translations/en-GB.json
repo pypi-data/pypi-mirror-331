@@ -1,0 +1,9 @@
+{
+    "firmware_picker": {
+        "options": {
+            "abort": {
+                "unsupported_firmware": "The radio firmware on your {model} could not be determined. Make sure that no other integration or addon is currently trying to communicate with the device. If you are running Home Assistant OS in a virtual machine or in Docker, please make sure that permissions are set correctly for the device."
+            }
+        }
+    }
+}

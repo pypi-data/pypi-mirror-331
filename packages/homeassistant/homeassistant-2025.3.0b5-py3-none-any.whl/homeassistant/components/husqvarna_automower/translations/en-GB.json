@@ -1,0 +1,54 @@
+{
+    "config": {
+        "abort": {
+            "no_mower_connected": "No mowers connected to this account."
+        }
+    },
+    "entity": {
+        "button": {
+            "sync_clock": {
+                "name": "Sync clock"
+            }
+        },
+        "number": {
+            "my_lawn_cutting_height_work_area": {
+                "name": "My lawn cutting height"
+            },
+            "work_area_cutting_height_work_area": {
+                "name": "{work_area} cutting height"
+            }
+        },
+        "sensor": {
+            "error": {
+                "state": {
+                    "error": "Error",
+                    "error_at_power_up": "Error at power up",
+                    "fatal_error": "Fatal error"
+                }
+            },
+            "my_lawn_last_time_completed": {
+                "name": "My lawn last time completed"
+            },
+            "my_lawn_progress": {
+                "name": "My lawn progress"
+            },
+            "work_area_last_time_completed": {
+                "name": "{work_area} last time completed"
+            },
+            "work_area_progress": {
+                "name": "{work_area} progress"
+            }
+        },
+        "switch": {
+            "my_lawn_work_area": {
+                "name": "My lawn"
+            }
+        }
+    },
+    "issues": {
+        "deprecated_entity": {
+            "description": "The Husqvarna Automower entity `{entity}` is deprecated and will be removed in a future release.\nYou can use the new returning state of the lawn mower entity instead.\nPlease update your automations and scripts to replace the sensor entity with the newly added lawn mower entity.\nWhen you are done migrating you can disable `{entity}`.",
+            "title": "The Husqvarna Automower {entity_name} sensor is deprecated"
+        }
+    }
+}

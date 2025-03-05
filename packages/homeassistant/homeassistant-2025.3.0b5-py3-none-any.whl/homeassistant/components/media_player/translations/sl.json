@@ -1,0 +1,81 @@
+{
+    "device_automation": {
+        "condition_type": {
+            "is_idle": "{entity_name} je nedejaven",
+            "is_off": "{entity_name} je izklopljen",
+            "is_on": "{entity_name} je vklopljen",
+            "is_paused": "{entity_name} je zaustavljen",
+            "is_playing": "{entity_name} predvaja"
+        },
+        "extra_fields": {
+            "for": "Trajanje"
+        },
+        "trigger_type": {
+            "changed_states": "{entity_name} je bil vklopljen ali izklopljen",
+            "idle": "{entity_name} postane nedejaven",
+            "turned_off": "{entity_name} je bil izklopljen",
+            "turned_on": "{entity_name} je bil vklopljen"
+        }
+    },
+    "entity_component": {
+        "_": {
+            "state": {
+                "buffering": "Predpomnjenje",
+                "idle": "Nedejaven",
+                "off": "Izklopljeno",
+                "on": "Vklopljeno",
+                "paused": "Zaustavljeno",
+                "playing": "Predvajanje",
+                "standby": "V pripravljenosti"
+            },
+            "state_attributes": {
+                "is_volume_muted": {
+                    "state": {
+                        "false": "Ne",
+                        "true": "Da"
+                    }
+                },
+                "repeat": {
+                    "state": {
+                        "off": "Izklopljeno",
+                        "one": "Prvi\u010d"
+                    }
+                },
+                "shuffle": {
+                    "state": {
+                        "false": "Izklopljeno",
+                        "true": "Vklopljeno"
+                    }
+                },
+                "source": {
+                    "name": "Vir"
+                }
+            }
+        }
+    },
+    "selector": {
+        "repeat": {
+            "options": {
+                "off": "Izklju\u010deno"
+            }
+        }
+    },
+    "services": {
+        "media_pause": {
+            "name": "Premor"
+        },
+        "media_stop": {
+            "name": "Zaustavi"
+        },
+        "toggle": {
+            "name": "Preklopi"
+        },
+        "turn_off": {
+            "name": "Izklopi"
+        },
+        "turn_on": {
+            "name": "Vklopi"
+        }
+    },
+    "title": "Medijski predvajalnik"
+}

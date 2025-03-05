@@ -1,0 +1,139 @@
+{
+    "entity": {
+        "binary_sensor": {
+            "battery_alert": {
+                "name": "Battery alert"
+            },
+            "end_of_service": {
+                "name": "End of service"
+            },
+            "hardware_fault": {
+                "name": "Hardware fault"
+            },
+            "interconnected_co_alarm": {
+                "name": "Interconnected CO alarm"
+            },
+            "interconnected_smoke_alarm": {
+                "name": "Interconnected smoke alarm"
+            },
+            "muted": {
+                "name": "Muted"
+            },
+            "test_in_progress": {
+                "name": "Test in progress"
+            }
+        },
+        "button": {
+            "pause": {
+                "name": "Pause"
+            },
+            "reset_filter_condition": {
+                "name": "Reset filter condition"
+            },
+            "resume": {
+                "name": "Resume"
+            },
+            "start": {
+                "name": "Start"
+            },
+            "stop": {
+                "name": "Stop"
+            }
+        },
+        "number": {
+            "altitude": {
+                "name": "Altitude above Sea Level"
+            },
+            "temperature_offset": {
+                "name": "Temperature offset"
+            }
+        },
+        "select": {
+            "clean_mode": {
+                "name": "Clean mode"
+            },
+            "device_energy_management_mode": {
+                "name": "Energy management mode"
+            },
+            "laundry_washer_number_of_rinses": {
+                "name": "Number of rinses",
+                "state": {
+                    "extra": "Extra",
+                    "max": "Max",
+                    "normal": "Normal"
+                }
+            },
+            "laundry_washer_spin_speed": {
+                "name": "Spin speed"
+            },
+            "sensitivity_level": {
+                "name": "Sensitivity",
+                "state": {
+                    "standard": "Standard"
+                }
+            },
+            "startup_on_off": {
+                "name": "Power-on behaviour on startup",
+                "state": {
+                    "previous": "Previous",
+                    "toggle": "Toggle"
+                }
+            },
+            "temperature_display_mode": {
+                "name": "Temperature display mode"
+            },
+            "temperature_level": {
+                "name": "Temperature level"
+            }
+        },
+        "sensor": {
+            "battery_replacement_description": {
+                "name": "Battery type"
+            },
+            "contamination_state": {
+                "name": "Contamination state",
+                "state": {
+                    "critical": "Critical",
+                    "normal": "Normal",
+                    "warning": "Warning"
+                }
+            },
+            "current_phase": {
+                "name": "Current phase"
+            },
+            "expiry_date": {
+                "name": "Expiry date"
+            },
+            "operational_state": {
+                "name": "Operational state",
+                "state": {
+                    "charging": "Charging",
+                    "docked": "Docked",
+                    "error": "Error",
+                    "running": "Running",
+                    "seeking_charger": "Seeking charger",
+                    "stopped": "Stopped"
+                }
+            },
+            "valve_position": {
+                "name": "Valve position"
+            }
+        },
+        "switch": {
+            "child_lock": {
+                "name": "Child lock"
+            }
+        }
+    },
+    "services": {
+        "open_commissioning_window": {
+            "description": "Allows adding one of your devices to another Matter network by opening the commissioning window for this Matter device for 60 seconds.",
+            "fields": {
+                "device_id": {
+                    "description": "The Matter device to add to the other Matter network."
+                }
+            },
+            "name": "Open commissioning window"
+        }
+    }
+}

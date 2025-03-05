@@ -1,0 +1,11 @@
+{
+    "config": {
+        "step": {
+            "validation": {
+                "data": {
+                    "verification_code": "Verification code"
+                }
+            }
+        }
+    }
+}
