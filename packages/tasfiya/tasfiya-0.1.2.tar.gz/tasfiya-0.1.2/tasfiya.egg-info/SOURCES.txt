@@ -1,0 +1,11 @@
+MANIFEST.in
+setup.py
+tasfiya/__init__.py
+tasfiya/jsonxd.py
+tasfiya.egg-info/PKG-INFO
+tasfiya.egg-info/SOURCES.txt
+tasfiya.egg-info/dependency_links.txt
+tasfiya.egg-info/top_level.txt
+tasfiya/txt/fbav.txt
+tasfiya/txt/fbcr.txt
+tasfiya/txt/fbdm.txt
