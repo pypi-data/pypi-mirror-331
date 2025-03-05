@@ -1,0 +1,2 @@
+[console_scripts]
+pyeb = pyeb.main:main
