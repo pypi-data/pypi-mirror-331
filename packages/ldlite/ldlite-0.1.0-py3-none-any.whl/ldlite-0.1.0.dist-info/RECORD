@@ -1,0 +1,16 @@
+ldlite/__init__.py,sha256=ZRxjMo0aRfvFbhhKofCyEIWNpN5FnJiEVU4Xo0UyN7c,23776
+ldlite/_camelcase.py,sha256=zNYVTIutB01E3GBaSemx75UnnRqb8tZtvp7Gfv8calw,2297
+ldlite/_csv.py,sha256=qi_M3SogIUnR-DAgUV3DIN2hEqX5Iw2uMFwPdNqDSTQ,1542
+ldlite/_jsonx.py,sha256=CyyworWkn5cCQgj1lp_w9_AYv7tG4sbT9Z_uW540OIM,15431
+ldlite/_query.py,sha256=5Ip9u-mgOoWyQWNCQHUCpPpg5aguFl9HvzZN3tMDte4,284
+ldlite/_request.py,sha256=-o-XI7Q2VIohY4kVBEoLKBBxrUmX-zWHF8O-PittI3U,371
+ldlite/_select.py,sha256=6i_9VZHmQEIykuw-htemjTCQ4LDhI2T1hg6qdIn1ILo,4165
+ldlite/_sqlx.py,sha256=H1tdBRTVwqKr6doPYwW3Ci9rDgdOkDP1gw046p_nQEo,2596
+ldlite/_xlsx.py,sha256=gICvbMb0eq0Y8msVo_DurNBUFqzhBnkk6YPyBIAzLxY,2276
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/test___init__.py,sha256=AXpowV0Gd2J_3IftocJxYbHEO1JAd1NE-sSbO4HDo54,657
+ldlite-0.1.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+ldlite-0.1.0.dist-info/METADATA,sha256=iY3VciYYVrHq1Vkdp8sPKIZ-ICYAuI4PaDHzAyjzkpk,5148
+ldlite-0.1.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+ldlite-0.1.0.dist-info/top_level.txt,sha256=AYc7oKyFTkOxYjg4F9RZAVh_T9zQ48uni1C0AHvwew0,12
+ldlite-0.1.0.dist-info/RECORD,,
