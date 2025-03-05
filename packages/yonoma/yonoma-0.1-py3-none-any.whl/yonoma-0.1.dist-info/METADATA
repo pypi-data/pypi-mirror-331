@@ -1,0 +1,63 @@
+Metadata-Version: 2.2
+Name: yonoma
+Version: 0.1
+Summary: A Python client for the Yonoma API
+Home-page: https://github.com/SuthishTwinarcus/yonoma
+Author: Yonoma
+Author-email: yonoma.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.13.2
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# yonoma-client
+
+A Python client for the Yonoma API, designed for managing email marketing automation.
+
+## Installation
+
+You can install the package using pip:
+
+```sh
+pip install yonoma
+```
+
+## Usage
+
+### Importing the Client
+
+```python
+from yonoma_client import YonomaClient
+
+client = YonomaClient(api_key="your_api_key")
+```
+
+### Fetching Lists
+```python
+lists = client.get_lists()
+print(lists)
+```
+
+### Creating a Contact
+```python
+response = client.create_contact(list_id="your_list_id", email="test@example.com", name="John Doe")
+print(response)
+```
+
+## Requirements
+- Python >= 3.6
+- `requests` library
+
+## License
+This project is licensed under the MIT License.
