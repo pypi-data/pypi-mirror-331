@@ -1,0 +1,44 @@
+Metadata-Version: 2.4
+Name: lfp
+Version: 0.4.0
+Summary: Battery pack for your Django project
+Author-email: Sarthak Jariwala <sarthak@sarthakjariwala.com>
+License-File: LICENSE
+Requires-Python: >=3.9
+Requires-Dist: copier>=9.4.1
+Requires-Dist: libcst>=1.6.0
+Requires-Dist: questionary>=2.1.0
+Requires-Dist: typer>=0.15.1
+Description-Content-Type: text/markdown
+
+# lfp
+
+Battery pack for your Django project.
+
+> Named after `Lithium (Li) Iron (Fe) Phosphate (P)` (LFP) battery.
+
+## Installation
+
+Install it in a virtual environment:
+
+```bash
+uv pip install lfp
+```
+
+Or, use it directly using `uvx`:
+
+## Usage
+
+```bash
+uvx lfp --help
+```
+
+### Create a new project
+
+```bash
+uvx lfp new
+```
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
