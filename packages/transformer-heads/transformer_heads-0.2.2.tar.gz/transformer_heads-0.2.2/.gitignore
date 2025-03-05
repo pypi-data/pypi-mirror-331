@@ -1,0 +1,12 @@
+**/__pycache__/**
+*.safetensors
+mistral_headed_qlora/
+adapter_config.json
+head_configs.json
+**/wandb/**
+**/.ipynb_checkpoints/**
+**/checkpoint-*/**
+**/build/**
+**/base/**
+**/tmp/**
+notebooks/mistral/**
