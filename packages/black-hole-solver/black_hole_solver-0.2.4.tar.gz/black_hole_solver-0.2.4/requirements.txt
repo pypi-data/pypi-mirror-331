@@ -1,0 +1,7 @@
+cffi
+coverage
+pysol_cards
+pytest
+pytest-cov
+requests
+twine
