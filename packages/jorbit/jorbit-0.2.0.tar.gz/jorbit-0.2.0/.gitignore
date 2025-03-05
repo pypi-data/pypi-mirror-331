@@ -1,0 +1,25 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments/testing
+.venv
+.tox
+coverage.xml
+.coverage
+.pytest_cache
+.ruff_cache
+
+# Docs
+docs/_build/
+
+*.DS_Store
+
+**/mpchecker/*.DAT
+**/mpchecker/*.db
+**/mpchecker/*.npy
+*slurm*
