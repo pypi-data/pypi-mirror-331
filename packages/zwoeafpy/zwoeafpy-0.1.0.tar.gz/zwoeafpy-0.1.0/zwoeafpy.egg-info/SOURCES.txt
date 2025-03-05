@@ -1,0 +1,6 @@
+setup.py
+zwoeafpy/__init__.py
+zwoeafpy.egg-info/PKG-INFO
+zwoeafpy.egg-info/SOURCES.txt
+zwoeafpy.egg-info/dependency_links.txt
+zwoeafpy.egg-info/top_level.txt
