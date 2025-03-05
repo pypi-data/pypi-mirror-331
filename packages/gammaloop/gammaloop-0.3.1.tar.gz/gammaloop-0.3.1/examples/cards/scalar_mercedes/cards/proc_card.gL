@@ -1,0 +1,3 @@
+import_model scalars-full
+import_graphs ./python/gammaloop/tests/test_data/graph_inputs/ltd_topology_f.dot
+output examples/cards/scalar_mercedes

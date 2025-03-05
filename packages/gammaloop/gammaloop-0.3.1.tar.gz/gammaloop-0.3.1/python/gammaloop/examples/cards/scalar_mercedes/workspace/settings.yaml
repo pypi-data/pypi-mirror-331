@@ -1,0 +1,231 @@
+General:
+  debug: 0
+  use_ltd: false
+  load_compiled_cff: true
+  load_compiled_numerator: true
+  joint_numerator_eval: true
+  amplitude_prefactor:
+    re: 0.0
+    im: 1.0
+  load_compiled_separate_orientations: false
+  force_orientations: null
+Integrand:
+  type: gamma_loop
+Kinematics:
+  e_cm: 1.0
+  externals:
+    type: constant
+    data:
+      momenta:
+      - - 0.0
+        - 0.0
+        - 0.0
+        - 1.0
+      - dependent
+      helicities:
+      - 0
+      - 0
+Parameterization:
+  mode: spherical
+  mapping: linear
+  b: 10.0
+  input_rescaling:
+  - - - 0.0
+      - 1.0
+    - - 0.0
+      - 1.0
+    - - 0.0
+      - 1.0
+  - - - 0.0
+      - 1.0
+    - - 0.0
+      - 1.0
+    - - 0.0
+      - 1.0
+  - - - 0.0
+      - 1.0
+    - - 0.0
+      - 1.0
+    - - 0.0
+      - 1.0
+  - - - 0.0
+      - 1.0
+    - - 0.0
+      - 1.0
+    - - 0.0
+      - 1.0
+  - - - 0.0
+      - 1.0
+    - - 0.0
+      - 1.0
+    - - 0.0
+      - 1.0
+  - - - 0.0
+      - 1.0
+    - - 0.0
+      - 1.0
+    - - 0.0
+      - 1.0
+  - - - 0.0
+      - 1.0
+    - - 0.0
+      - 1.0
+    - - 0.0
+      - 1.0
+  - - - 0.0
+      - 1.0
+    - - 0.0
+      - 1.0
+    - - 0.0
+      - 1.0
+  - - - 0.0
+      - 1.0
+    - - 0.0
+      - 1.0
+    - - 0.0
+      - 1.0
+  - - - 0.0
+      - 1.0
+    - - 0.0
+      - 1.0
+    - - 0.0
+      - 1.0
+  - - - 0.0
+      - 1.0
+    - - 0.0
+      - 1.0
+    - - 0.0
+      - 1.0
+  - - - 0.0
+      - 1.0
+    - - 0.0
+      - 1.0
+    - - 0.0
+      - 1.0
+  - - - 0.0
+      - 1.0
+    - - 0.0
+      - 1.0
+    - - 0.0
+      - 1.0
+  - - - 0.0
+      - 1.0
+    - - 0.0
+      - 1.0
+    - - 0.0
+      - 1.0
+  - - - 0.0
+      - 1.0
+    - - 0.0
+      - 1.0
+    - - 0.0
+      - 1.0
+  shifts:
+  - - 1.0
+    - 0.0
+    - 0.0
+    - 0.0
+  - - 1.0
+    - 0.0
+    - 0.0
+    - 0.0
+  - - 1.0
+    - 0.0
+    - 0.0
+    - 0.0
+  - - 1.0
+    - 0.0
+    - 0.0
+    - 0.0
+  - - 1.0
+    - 0.0
+    - 0.0
+    - 0.0
+  - - 1.0
+    - 0.0
+    - 0.0
+    - 0.0
+  - - 1.0
+    - 0.0
+    - 0.0
+    - 0.0
+  - - 1.0
+    - 0.0
+    - 0.0
+    - 0.0
+  - - 1.0
+    - 0.0
+    - 0.0
+    - 0.0
+  - - 1.0
+    - 0.0
+    - 0.0
+    - 0.0
+  - - 1.0
+    - 0.0
+    - 0.0
+    - 0.0
+  - - 1.0
+    - 0.0
+    - 0.0
+    - 0.0
+  - - 1.0
+    - 0.0
+    - 0.0
+    - 0.0
+  - - 1.0
+    - 0.0
+    - 0.0
+    - 0.0
+  - - 1.0
+    - 0.0
+    - 0.0
+    - 0.0
+Integrator:
+  n_bins: 16
+  bin_number_evolution: null
+  min_samples_for_update: 100
+  n_start: 10000
+  n_increase: 0
+  n_max: 100000
+  integrated_phase: real
+  discrete_dim_learning_rate: 1.5
+  continuous_dim_learning_rate: 1.5
+  train_on_avg: false
+  show_max_wgt_info: false
+  max_prob_ratio: 0.01
+  seed: 0
+Observables: []
+Selectors: []
+Stability:
+  rotation_axis:
+  - type: x
+  rotate_numerator: false
+  levels:
+  - precision: Double
+    required_precision_for_re: 1e-7
+    required_precision_for_im: 1e-7
+    escalate_for_large_weight_threshold: 0.9
+  - precision: Quad
+    required_precision_for_re: 1e-10
+    required_precision_for_im: 1e-10
+    escalate_for_large_weight_threshold: -1.0
+sampling:
+  type: default
+subtraction:
+  ct_settings:
+    sliver_width: 1.0
+    dampen_integrable_singularity: true
+    dynamic_sliver: false
+    integrated_ct_hfunction:
+      function: poly_exponential
+      sigma: 1.0
+      enabled_dampening: true
+      power: null
+    integrated_ct_sigma: null
+    local_ct_width: 1.0
+  overlap_settings:
+    force_global_center: null
+    check_global_center: true
+    try_origin: false
+    try_origin_all_lmbs: false
