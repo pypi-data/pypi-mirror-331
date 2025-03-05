@@ -1,0 +1,7 @@
+mrpyconvert/__init__.py,sha256=lthmiZE8XlYfuQxntbm5tqgmoVMxHcZTe_tiEZKOmZE,71
+mrpyconvert/dicom_sorter.py,sha256=KNVyR90vyZdofirpdNFVyeVOoxgFlLLvLOFKE6TvbAo,1779
+mrpyconvert/mrpyconvert.py,sha256=x012S5tauPTPXfjI7Fq87VLeopuMx1BsRzsTp06F6YI,25685
+mrpyconvert-0.1.28.dist-info/LICENSE,sha256=tGJV5jr6CMTZ5eqSJPJnXWI3N5ejLEkWg70CeNa3Tec,1064
+mrpyconvert-0.1.28.dist-info/METADATA,sha256=i9bNWRbCx97ODfpaHZGnp61Gind5_3yRy2enl9_KMDQ,1157
+mrpyconvert-0.1.28.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+mrpyconvert-0.1.28.dist-info/RECORD,,
