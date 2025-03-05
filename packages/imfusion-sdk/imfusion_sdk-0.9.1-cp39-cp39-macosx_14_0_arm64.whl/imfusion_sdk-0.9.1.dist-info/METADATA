@@ -1,0 +1,131 @@
+Metadata-Version: 2.2
+Name: imfusion-sdk
+Version: 0.9.1
+Summary: ImFusion - Enabling Rapid Innovation in Medical Imaging
+Author-email: ImFusion GmbH <python@imfusion.com>, Markus Habert <habert@imfusion.com>, Ilja Manakov <manakov@imfusion.com>
+License: END USER LICENSE AGREEMENT
+        
+        The following agreement regarding ImFusion Suite - referred to as "software" - is made between ImFusion GmbH - referred to as "licensor" - and anyone who is installing, accessing or in any other way using the software - referred to as "user".
+        
+        1. The licensor and as such issuer of the license and bearer of the worldwide exclusive usage rights including the rights to reproduce, distribute and make the software available to the public in any form is ImFusion GmbH, Agnes-Pockels-Bogen 1, 80992 Munich, Germany.
+        
+        2. The software is distributed "as is". No warranty of any kind is expressed or implied. You use it at your own risk. Neither the author, the licensor nor the agents of the licensor will be liable for data loss, damages, loss of profits or any other kind of loss while using or misusing this software.
+        
+        3. The software is provided under an evaluation license and a commercial license.
+            3.1 Evaluation: For evaluation purposes users may use the evaluation version of this software on all computers and mobile devices (USB drive, external hard drive, etc.) which are property of the license owner.
+        
+            3.2 Commercial license: Commercial users require one license per computer or mobile device on which the software is installed.
+        
+        A user who purchased a license, is granted a non-exclusive right to use the software on as many computers as defined by the licensing terms above according to the number of licenses purchased, for any legal purpose. Batch operation (in particular on a server or inside a virtual machine) is not permitted. Batch operation is defined as processing data without the end user directly interacting with the software with the software being controlled by another application or script. If such a use case is desired please contact ImFusion GmbH at info@imfusion.de for further details.
+        
+        4. The software shares nonpersonally identifiable data with the licensor, including computer configuration, software usage, and peripherals connected for purposes of improving products and services, providing services to the user, facilitating the provision of software updates, dynamically served content and product support as well as communicating with the user.
+        
+        5. The licensed software may not be rented or leased but may be permanently transferred, in its entirety, if the recipient agrees to the terms of this license.
+        
+        6. To buy a license, please send an inquiry to info@imfusion.com for details or visit http://www.imfusion.com
+        
+        7. You may not use, copy, emulate, clone, rent, lease, sell, modify, decompile, disassemble, otherwise reverse engineer, or transfer the licensed software, or any subset of the licensed software, except as provided for in this agreement. Any such unauthorized use shall result in immediate and automatic termination of this license and may result in criminal and/or civil prosecution.
+        
+        The software may be using components developed and/or copyrighted by third parties. Please read the "Acknowledgments.txt" for details.
+        
+        8. This license agreement is construed solely and exclusively under German law. The courts at the registered office of ImFusion GmbH in Munich, Germany shall have exclusive jurisdiction for any and all disputes arising in connection with this license agreement or its validity.
+        
+        9. Installing and using the software signifies acceptance of these terms and conditions of the license. If you do not agree with the terms of this license, you must remove all software files from your storage devices and cease to use the software.
+        
+        10. The ImFusion Suite is currently not certified as a medical product. It has neither FDA approval nor does it bear a CE marking and must not be used for diagnostic purposes.
+        
+Project-URL: Homepage, https://www.imfusion.com
+Project-URL: Documentation, https://docs.imfusion.com/python
+Project-URL: Forum, https://forum.imfusion.com/c/python-sdk
+Project-URL: Webshop, https://shop.imfusion.com
+Keywords: ImFusion,Medical Imaging,Image Processing,Image Manipulation,Hardware Acceleration,GPU Acceleration,SDK
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: Other/Proprietary License
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Healthcare Industry
+Classifier: Topic :: Scientific/Engineering :: Image Processing
+Classifier: Topic :: Scientific/Engineering :: Medical Science Apps.
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Classifier: Typing :: Typed
+Requires-Python: >=3.8
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: numpy
+
+
+**Disclaimer:**
+
+Not for commercial use.
+
+This python package is currently a public beta release.
+You can use it free of charge for non-commercial applications until further notice.
+To use it, you still require a (free) license key, which you can get from the `Python SDK product page <https://shop.imfusion.com/products/imfusion-python-sdk>`_.
+For commercial applications, please get in touch with us at info@imfusion.com.
+
+Note also, the functionality offered here is only a subset of the Python bindings we have available.
+In particular, modality-specific plugins (e.g. for Ultrasound, CT, etc.) are not included.
+Please reach out to us if you are interested in such functionality or visit our `webshop <https://shop.imfusion.com/>`_.
+
+.. image:: https://www.imfusion.com/images/imfusion/imfusion_logo_hires.png
+	:width: 500
+	:align: center
+
+Overview
+========
+
+
+Description
+-----------
+
+The ``imfusion`` package enables easy and fast loading, handling and processing of medical image data.
+It is a wrapper around the ImFusion SDK and exposes a subset of its functionality to Python.
+The major advantages of using ``imfusion`` are:
+
+- **High Performance:**
+
+	Leveraging optimized C++ for fast execution and OpenGL for GPU acceleration, ensuring compatibility with various GPU vendors.
+
+- **Versatile Data Structures**:
+
+	Handle a wide range of medical images and data types, including 2D/3D images, metadata, deformations, rotations, masks, and segmentations.
+	It also supports keypoints, point clouds, and meshes.
+
+- **Extensive Set of Algorithms:**
+
+	Access a vast array of image processing algorithms, from basic cropping to complex multi-modal image registration.
+	Even algorithms that don't have dedicated Python bindings can be executed through a functional interface.
+
+- **File Format Support:**
+
+	Load and save numerous medical imaging formats, including Nifti, MHD, Dicom, HDF5, PNG, and JPG and featuring a reliable Dicom loader used in FDA-approved products.
+
+- **Deployment-Ready Data Pipelines:**
+
+	Construct efficient data pipelines for ML model training and deployment, ensuring consistent pre-processing and post-processing.
+
+- **numpy-like arithmetic but with images**
+
+	Perform arithmetic operations on images with a functional API or operators, supporting GPU or CPU execution and, optionally, aggregated expression evaluation for enhanced performance.
+
+- **Built-in Data Visualization**
+
+	View your data with the bundled ImFusionVisualizer (``imfusion.show``) that includes a powerful 3D renderer for volumes, meshes and point clouds.
+
+Documentation
+-------------
+
+Please find the documentation for this Python package at `docs.imfusion.com/python <https://docs.imfusion.com/python>`_.
+
+
+Support
+-------
+
+If you experience issues with this package, please let us know in our `forum <https://forum.imfusion.com/c/python-sdk/>`_.
+
+For business inquiries please contact info@imfusion.com.
