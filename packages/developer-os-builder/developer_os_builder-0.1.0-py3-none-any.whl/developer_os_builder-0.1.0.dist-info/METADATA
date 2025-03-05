@@ -1,0 +1,23 @@
+Metadata-Version: 2.2
+Name: developer-os-builder
+Version: 0.1.0
+Summary: Пакет для разработки ОС, запуска виртуальных машин и сборки ISO
+Home-page: https://github.com/твой-профиль/developer
+Author: Твое Имя
+Author-email: твоя@почта.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
+
+# Developer
+Пакет для запуска виртуальных машин (VMware, VirtualBox) и сборки ISO-образов.

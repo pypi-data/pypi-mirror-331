@@ -1,0 +1,4 @@
+[console_scripts]
+create-iso = developer.iso:create_iso
+start-virtualbox = developer.vm:start_virtualbox
+start-vmware = developer.vm:start_vmware
