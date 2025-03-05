@@ -1,0 +1,10 @@
+requests
+termcolor
+tabulate
+tqdm
+
+[analytics]
+pandas
+
+[full]
+pandas
