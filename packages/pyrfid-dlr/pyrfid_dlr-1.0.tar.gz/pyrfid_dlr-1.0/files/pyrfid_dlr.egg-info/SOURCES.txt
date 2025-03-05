@@ -1,0 +1,8 @@
+setup.py
+files/pyrfid/__init__.py
+files/pyrfid/pyrfid.py
+files/pyrfid_dlr.egg-info/PKG-INFO
+files/pyrfid_dlr.egg-info/SOURCES.txt
+files/pyrfid_dlr.egg-info/dependency_links.txt
+files/pyrfid_dlr.egg-info/requires.txt
+files/pyrfid_dlr.egg-info/top_level.txt

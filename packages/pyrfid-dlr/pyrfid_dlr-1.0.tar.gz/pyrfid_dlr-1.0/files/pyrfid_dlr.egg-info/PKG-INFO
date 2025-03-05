@@ -1,0 +1,16 @@
+Metadata-Version: 2.2
+Name: pyrfid-dlr
+Version: 1.0
+Summary: Python written library for an 125kHz RFID reader
+Author: Alexander Tepe
+Author-email: alexander.tepe@dlr.de
+License: D-FSL
+Requires-Dist: pyserial
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: summary
+
+Fork of the PyRFID Project originally by Philipp Meisenberger.
