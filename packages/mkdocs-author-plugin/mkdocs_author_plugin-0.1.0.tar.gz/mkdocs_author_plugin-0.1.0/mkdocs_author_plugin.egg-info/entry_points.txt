@@ -1,0 +1,2 @@
+[mkdocs.plugins]
+authors = mkdocs_author_plugin.plugin:AuthorsPlugin

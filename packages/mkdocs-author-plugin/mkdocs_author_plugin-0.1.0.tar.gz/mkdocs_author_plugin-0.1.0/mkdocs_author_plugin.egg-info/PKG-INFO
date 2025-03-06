@@ -1,0 +1,25 @@
+Metadata-Version: 2.2
+Name: mkdocs-author-plugin
+Version: 0.1.0
+Summary: Add manually defined authors to MkDocs pages.
+Home-page: https://github.com/mciwing/mkdocs-author-plugin
+Author: Jakob Klotz
+Author-email: jakob.klotz@mci.edu
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Documentation
+Classifier: Topic :: Software Development :: Documentation
+Requires-Python: >=3.11,<3.13
+License-File: LICENSE
+Requires-Dist: mkdocs>=1.6.1
+Requires-Dist: pyyaml
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
