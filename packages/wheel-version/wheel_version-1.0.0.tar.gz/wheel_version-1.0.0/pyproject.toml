@@ -1,0 +1,51 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "wheel-version"
+version = "1.0.0"
+description = "Get the version of a wheel file"
+authors = [{ name = "Zeev Rotshtein", email = "zeevro@gmail.com" }]
+license = { text = "CC0" }
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["packaging"]
+
+[project.urls]
+Repository = "https://github.com/zeevro/wheel-version"
+
+[project.scripts]
+wheel-version = "wheel_version:main"
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "W191", # tab-indentation - conflicts with formatter
+    "E111", # indentation-with-invalid-multiple - conflicts with formatter
+    "E114", # indentation-with-invalid-multiple-comment - conflicts with formatter
+    "E117", # over-indented - conflicts with formatter
+    "D206", # indent-with-spaces - conflicts with formatter
+    "D300", # triple-single-quotes - conflicts with formatter
+    "Q000", # bad-quotes-inline-string - conflicts with formatter
+    "Q001", # bad-quotes-multiline-string - conflicts with formatter
+    "Q002", # bad-quotes-docstring - conflicts with formatter
+    "Q003", # avoidable-escaped-quote - conflicts with formatter
+    "COM812", # missing-trailing-comma - conflicts with formatter
+    "COM819", # prohibited-trailing-comma - conflicts with formatter
+    "E501", # line-too-long - see formatter documentation
+
+    "D", # linter: pydocstyle
+
+    "EM101", # raw-string-in-exception
+    "T201", # print
+    "TRY003", # raise-vanilla-args
+]
+
+[tool.ruff.lint.isort]
+force-sort-within-sections = true
+lines-after-imports = 2
+
+[tool.ruff.format]
+preview = true
+quote-style = "single"
