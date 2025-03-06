@@ -1,0 +1,10 @@
+LICENSE
+setup.py
+easyml/__init__.py
+easyml/api.py
+easyml/train.py
+easyml_ai.egg-info/PKG-INFO
+easyml_ai.egg-info/SOURCES.txt
+easyml_ai.egg-info/dependency_links.txt
+easyml_ai.egg-info/requires.txt
+easyml_ai.egg-info/top_level.txt
