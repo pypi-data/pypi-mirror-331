@@ -1,0 +1,25 @@
+Metadata-Version: 2.2
+Name: autofixpy
+Version: 1.0.0
+Summary: Automatically fixes Python errors
+Home-page: 
+Author: Amogh Pathak
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-python
+Dynamic: summary
+
+# AutoFixPy ðŸš€
+AutoFixPy is a Python package that scans and fixes common Python code issues.
+
+## Installation
+```sh
+pip install autofixpy

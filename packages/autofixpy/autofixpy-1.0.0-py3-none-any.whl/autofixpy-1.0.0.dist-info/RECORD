@@ -1,0 +1,9 @@
+autofixpy/__init__.py,sha256=L6zbQIZKsAP-Knhm6fBcQFPoVdIDuejxze60qX23jiw,21
+autofixpy/cli.py,sha256=gNxrmiZE4xyYPEH8npPiFk114ZJEnSqYJsDlzHSszTU,1182
+autofixpy/core.py,sha256=8PWAMNI9-s-djhC637JY0YT4NO63CCYOKR5zssEl204,447
+autofixpy-1.0.0.dist-info/LICENSE,sha256=q7KJbcPCqUAvkBuI1QNc8Kg9XPfBfnNkLN9WKwudO8U,11
+autofixpy-1.0.0.dist-info/METADATA,sha256=CuRH960YvRNCaRuaK_-dX7wdGPtojtHSlSCmqqVsEv0,664
+autofixpy-1.0.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+autofixpy-1.0.0.dist-info/entry_points.txt,sha256=ojwEgEbkoeieg5LYNuOxcpQpTKZkBF0588lSwIAh4sY,49
+autofixpy-1.0.0.dist-info/top_level.txt,sha256=frJ5BWuZa9JraWrBgXOXcLHQEf7l7c1-zOiwcUfjysg,10
+autofixpy-1.0.0.dist-info/RECORD,,

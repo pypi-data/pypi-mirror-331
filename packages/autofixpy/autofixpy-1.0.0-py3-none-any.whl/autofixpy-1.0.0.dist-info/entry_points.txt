@@ -1,0 +1,2 @@
+[console_scripts]
+autofixpy = autofixpy.cli:main
