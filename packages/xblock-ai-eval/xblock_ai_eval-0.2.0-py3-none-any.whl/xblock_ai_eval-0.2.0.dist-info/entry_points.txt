@@ -1,0 +1,3 @@
+[xblock.v1]
+coding_ai_eval = ai_eval:CodingAIEvalXBlock
+shortanswer_ai_eval = ai_eval:ShortAnswerAIEvalXBlock

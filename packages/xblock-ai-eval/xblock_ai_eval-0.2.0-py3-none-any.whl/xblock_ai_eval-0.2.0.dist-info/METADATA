@@ -1,0 +1,13 @@
+Metadata-Version: 2.2
+Name: xblock-ai-eval
+Version: 0.2.0
+Summary: XBlocks to write short text and code entries with AI-driven evaluation
+License: Apache 2.0
+Requires-Python: >=3.11
+License-File: LICENSE
+Requires-Dist: XBlock
+Requires-Dist: litellm>=1.42
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
