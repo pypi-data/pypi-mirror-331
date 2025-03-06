@@ -1,0 +1,2 @@
+[console_scripts]
+floword = floword.cli:cli
