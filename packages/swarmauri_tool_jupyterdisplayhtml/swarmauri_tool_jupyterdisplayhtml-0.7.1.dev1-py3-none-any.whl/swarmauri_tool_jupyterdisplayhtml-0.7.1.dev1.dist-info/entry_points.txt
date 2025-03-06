@@ -1,0 +1,3 @@
+[swarmauri.tools]
+jupyterdisplayhtmltool=swarmauri_tool_jupyterdisplayhtml:JupyterDisplayHtmlTool
+
