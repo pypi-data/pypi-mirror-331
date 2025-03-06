@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+canonicalwebteam/__init__.py
+canonicalwebteam.parser.egg-info/PKG-INFO
+canonicalwebteam.parser.egg-info/SOURCES.txt
+canonicalwebteam.parser.egg-info/dependency_links.txt
+canonicalwebteam.parser.egg-info/requires.txt
+canonicalwebteam.parser.egg-info/top_level.txt
+canonicalwebteam/parser/__init__.py
+canonicalwebteam/parser/app.py
