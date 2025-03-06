@@ -1,0 +1,24 @@
+numpy
+
+[:python_version < "3.8"]
+importlib-metadata
+
+[all]
+packaging-demo-knt[colors,dev]
+
+[colors]
+rich
+
+[dev]
+packaging-demo-knt[release,static-code-qa,test]
+
+[release]
+build
+twine
+
+[static-code-qa]
+pre-commit
+
+[test]
+pytest
+pytest-cov
