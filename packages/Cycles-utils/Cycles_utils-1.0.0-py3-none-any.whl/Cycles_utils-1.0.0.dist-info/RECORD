@@ -1,0 +1,15 @@
+cycles/__init__.py,sha256=QT0A7VpLOWhN-uz3kQ05vfVTPnd547wlcUORdT7Yj8s,119
+cycles/cycles_read.py,sha256=wpN4wNx3ETEyDKL3TbyCUtcdcjgbu7JsNy21ApYCfn0,3682
+cycles/gadm/__init__.py,sha256=x6wJsX44H0WOL7_e_14vCqi4MgDfCnDL_xFVVzbakCA,68
+cycles/gadm/gadm.py,sha256=4eXM1Vm33MsP_lsgfDOIHgzlzTN3SvGdPLhtJrhlxew,1705
+cycles/gssurgo/__init__.py,sha256=EPNo5-m28phL1Sq5EZjudns4e4FEV9OZ6fIBwowk8hE,285
+cycles/gssurgo/gssurgo.py,sha256=w-rFL60CB2bTRu-wjnFQUJOJ6JxM_ElXEXvuvWtzUNc,3158
+cycles/soil/__init__.py,sha256=GGgr1Sp5w3bIRkklmuNbnvzTyDnNgm0PORdQAq35gBw,137
+cycles/soil/soil.py,sha256=BmB6nJHBLmex_H3MP2Xi1KdnoZCsD4_E1kJt0rqCIxc,3288
+cycles/soilgrids/__init__.py,sha256=33i_q0ahZ-z8-C2pPPVPBCcK0DGGqyyI-XaZFg1JPtI,267
+cycles/soilgrids/soilgrids.py,sha256=u-9b1F5tXiurfpLOsY_ze2t-Sh59NlXvChrJ9ZY2nWg,3517
+Cycles_utils-1.0.0.dist-info/LICENSE,sha256=dN5x2Cy47xS6TlRLrjPbA9RDnmoPhFo7E_XNnygNmO0,1094
+Cycles_utils-1.0.0.dist-info/METADATA,sha256=X1kC2HIXsgQuuy3B4U7E1xmTXAqeqqafGKGfkwHjGh4,910
+Cycles_utils-1.0.0.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+Cycles_utils-1.0.0.dist-info/top_level.txt,sha256=CWGogPkqgDHswM_Bu5zofYYx8c0jLhnQwTebceNkres,7
+Cycles_utils-1.0.0.dist-info/RECORD,,
