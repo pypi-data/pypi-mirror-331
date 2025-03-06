@@ -1,0 +1,8 @@
+flask
+requests
+smtplib
+email
+hashlib
+time
+random
+socket
