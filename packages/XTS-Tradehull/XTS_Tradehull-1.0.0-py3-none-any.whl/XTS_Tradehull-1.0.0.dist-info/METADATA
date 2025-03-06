@@ -1,0 +1,668 @@
+Metadata-Version: 2.1
+Name: XTS_Tradehull
+Version: 1.0.0
+Summary: A XTS Codebase from TradeHull
+Home-page: https://github.com/TradeHull/XTS_Tradehull
+Author: TradeHull
+Author-email: contact.tradehull@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: mibian>=0.1.3
+Requires-Dist: numpy>=1.24.4
+Requires-Dist: pandas>=2.0.3
+Requires-Dist: pytz>=2024.1
+Requires-Dist: requests>=2.32.3
+Requires-Dist: python-socketio>=5.12.1
+Requires-Dist: websocket-client>=1.8.0
+Requires-Dist: websockets>=13.1
+
+# TradeHull XTS Codebase Project
+
+This project is built to interact with the **XTS API** using the `XTS_Tradehull` library. It provides a suite of tools for trading, fetching market data, managing orders, and handling portfolio-related operations.
+
+---
+
+## Features
+
+- **Fetch Market Data**: Get Live Trading Price (LTP), OHLC, and historical data.
+- **Order Management**: Place, modify, and cancel orders.
+- **Option Strike Selection**: Fetch ATM, ITM, and OTM strike prices.
+- **Portfolio Management**: Retrieve holdings, positions, and account balances.
+- **Automated Trading Tools**: Telegram alerts and instrument validity checks.
+
+---
+
+## Installation
+
+To install the required dependencies:
+
+```sh
+pip install -r requirements.txt
+```
+### Install XTS Package
+
+To install the XTS package:
+
+```sh
+pip install XTS-Tradehull
+```
+
+---
+
+### Upgrade XTS Package
+
+To update the XTS package:
+
+```sh
+pip install --upgrade XTS-Tradehull
+```
+
+---
+
+## Usage
+
+### XTS API Authentication
+
+Initialize the TradeHull object with your XTS API credentials:
+
+```python
+from XTS_Tradehull import Tradehull
+
+tsl = Tradehull(interactive_key="your_interactive_key",interactive_secret="your_interactive_secret",market_key="your_market_key",market_secret="your_market_secret",client_code="your_client_code", root_url = 'root_url_provided_by_brocker'
+)
+```
+root_url Ex.
+- **Motilal Oswal**: `https://moxtsapi.motilaloswal.com:3000`
+- **IIFL**: `https://ttblaze.iifl.com`
+---
+
+### Get Market Data
+
+#### Get Live Trading Price (LTP)
+Fetch the latest trading price for an instrument.
+
+```python
+tsl.get_ltp(name: str)
+```
+
+**Arguments:**
+- `name` (str): Trading symbol/Description (e.g., 'NIFTY', 'CRUDEOIL')
+
+**Returns:**
+- float: Latest trading price of the instrument
+- None: If there was an error or price not available
+
+**Example:**
+```python
+# Get LTP for NIFTY
+nifty_ltp = tsl.get_ltp("NIFTY")
+
+# Get LTP for multi-stocks
+ltp_data = tsl.get_ltp(["YESBANK-EQ","ACC-EQ"])
+```
+
+---
+
+#### Get Quote Data
+Fetch detailed quote data including touchline information for an instrument.
+
+```python
+tsl.get_quote(names: str)
+```
+
+**Arguments:**
+- `names` (str): Trading symbol/Description (e.g., 'NIFTY', 'CRUDEOIL')
+
+**Returns:**
+- dict: Quote data containing touchline information
+  - Key: Instrument name
+  - Value: Dictionary with quote details
+- None: If there was an error
+
+**Example:**
+```python
+# Get quote for NIFTY
+nifty_quote = tsl.get_quote("NIFTY")
+
+# Get quote for multi-stocks
+quote_data = tsl.get_quote(["YESBANK-EQ","ACC-EQ"])
+```
+
+---
+
+### Get Historical Data
+Retrieve historical OHLC (Open, High, Low, Close) data for instruments.
+
+```python
+tsl.get_historical_data(tradingsymbol: str, timeframe: str, interval: int)
+```
+
+**Arguments:**
+- `tradingsymbol` (str): Trading symbol/Description (e.g., 'NIFTY', 'ACC-EQ')
+- `timeframe` (str): The timeframe for the data
+  - '1minute': 1-minute candles
+  - '2minute': 2-minute candles  
+  - '3minute': 3-minute candles
+  - '5minute': 5-minute candles
+  - '10minute': 10-minute candles
+  - '15minute': 15-minute candles
+  - '30minute': 30-minute candles
+  - '60minute': 60-minute candles
+  - 'day': Daily candles
+- `interval` (int): Number of candles to fetch
+
+**Returns:**
+- DataFrame: Historical OHLC data
+- None: If there was an error
+
+**Example:**
+```python
+# Get daily OHLC data for NIFTY
+historical_data = tsl.get_historical_data("NIFTY", timeframe="day", interval=30)
+
+# Get 5-minute OHLC data for equity
+historical_data = tsl.get_historical_data("RELIANCE-EQ", timeframe="5minute", interval=100)
+```
+
+---
+
+### 2. Order Management
+
+#### Place an Order
+
+```python
+order_id = tsl.order_placement(stock="NIFTY25MAR22000PE",quantity=75,price=100,trigger_price=0,productType="MIS",order_type="Limit",transaction_type="BUY")
+```
+**Parameters:**
+- `stock` (str): Trading symbol/Description (e.g., 'NIFTY25MAR22000PE', 'ACC-EQ')
+- `quantity` (int): Number of shares/contracts
+- `price` (float): Limit price (use 0 for market orders)
+- `trigger_price` (float): Trigger price for stop orders (use 0 for regular orders)
+- `productType` (str): 
+  - Valid values: 'MIS', 'NRML', 'CNC'
+- `order_type` (str):
+  - Valid values: 'Limit', 'Market', 'StopLimit', 'StopMarket'
+- `transaction_type` (str):
+  - Valid values: 'BUY', 'SELL'
+- `validity_type` (str, optional):
+  - Valid values: 'DAY', 'IOC'
+  - Default: 'DAY'
+
+**Supported Exchanges:**
+- NSEFO (NSE Futures & Options)
+- NSECM (NSE Cash Market)
+- BSECM (BSE Cash Market)
+- NSECD (NSE Currency Derivatives)
+- MCXFO (MCX Futures & Options)
+- BSEFO (BSE Futures & Options)
+
+**Returns:**
+- str: Order ID if successful
+- None: If there was an error
+
+**Example Orders:**
+```python
+# Limit order for options
+orderid = tsl.order_placement(stock='NIFTY25MAR22000PE',quantity=75,price=0.05,trigger_price=0,productType='MIS',order_type='Limit',transaction_type='BUY')
+
+# Market order for equity
+orderid = tsl.order_placement(stock='YESBANK-EQ',quantity=1,price=0,trigger_price=0,productType='MIS',order_type='Market',transaction_type='BUY')
+
+# Stop-limit order
+orderid = tsl.order_placement(stock='ACC-EQ',quantity=1,price=2674,trigger_price=2670,productType='MIS',order_type='StopLimit',transaction_type='BUY')
+```
+
+### Order Modification
+
+The modify_order function allows you to modify existing orders in the market.
+
+```python
+modified_order_id = tsl.modify_order(appOrderID="12345",
+modifiedOrderType="Limit",
+modifiedOrderQuantity=50,
+modifiedLimitPrice=95.5,
+modifiedStopPrice=0
+)
+```
+
+**Parameters:**
+- `appOrderID` (str): The unique ID of the original order to be modified
+- `modifiedOrderType` (str): Type of the modified order
+  - Valid values: 'Limit', 'Market', 'StopLimit', 'StopMarket'
+- `modifiedOrderQuantity` (int): The new quantity for the order
+- `modifiedLimitPrice` (float): The new limit price for the order
+- `modifiedStopPrice` (float): The new trigger/stop price for the order
+
+**Default Values:**
+- Product Type is fixed to 'MIS'
+- Validity is fixed to 'DAY'
+- Disclosed Quantity is fixed to 0
+
+**Returns:**
+- str: Modified order ID if successful
+- None: If there was an error
+
+**Example Usage:**
+```python
+# Modify a limit order
+modified_order_id = tsl.modify_order(
+    appOrderID="12241210603927",
+    modifiedOrderType="Limit",
+    modifiedOrderQuantity=50,
+    modifiedLimitPrice=0.1,
+    modifiedStopPrice=0
+)
+
+# Modify Limit order to market order
+modified_order_id = tsl.modify_order(
+    appOrderID="12241210603927",
+    modifiedOrderType="Market",
+    modifiedOrderQuantity=100,
+    modifiedLimitPrice=0,
+    modifiedStopPrice=0
+)
+
+# Modify to stop-limit order
+modified_order_id = tsl.modify_order(
+    appOrderID="12241210603927",
+    modifiedOrderType="StopLimit",
+    modifiedOrderQuantity=75,
+    modifiedLimitPrice=100.5,
+    modifiedStopPrice=99.5
+)
+```
+
+
+### Order Cancellation
+
+The cancel_order function allows you to cancel an existing order in the market.
+
+```python
+tsl.cancel_order(OrderID="12345")
+```
+
+**Parameters:**
+- `OrderID` (str): The unique ID of the order to be canceled
+
+**Returns:**
+- None: The function doesn't return any value
+- Raises an exception if the cancellation fails
+
+**Example Usage:**
+```python
+# Cancel a specific order
+    tsl.cancel_order(OrderID="12241210603927")
+```
+
+### Cancel All Orders and Close Positions
+
+- To cancel all the intraday open and trigger pending orders, square off all the positions 
+      
+   - tsl.cancel_all_orders()
+
+   - Sample Code:
+      ```python 
+         order_details = tsl.cancel_all_orders()
+      ```   
+
+**Returns:**
+- dict: Dictionary containing order details of squared-off positions
+  - Key: Trading Symbol
+  - Value: Dictionary with 'orderid' and 'price' of the square-off order
+- Empty dict if no orders/positions to cancel/close
+
+
+---
+
+
+
+### 3. Option Strike Selection
+
+#### Get ATM Strike
+```python
+tsl.get_atm(ltp: float, underlying: str, expiry: int, script_type: str)
+```
+
+**Arguments:**
+- `ltp` (float): Last traded price of the underlying
+- `underlying` (str): The index name (e.g., 'NIFTY', 'BANKNIFTY')
+- `expiry` (int): The expiry to select
+  - 0 - Current expiry
+  - 1 - Next expiry
+  - 2 - Third expiry from now
+- `script_type` (str): Option type ('CE' or 'PE')
+
+**Returns:**
+- str: The option symbol for the ATM strike
+- None: If there was an error
+
+**Sample Code:**
+```python
+atm_option = tsl.get_atm(ltp=18200, underlying="NIFTY", expiry=0, script_type="CE")
+```
+
+#### Get ITM Strike
+```python
+tsl.get_itm(ltp: float, underlying: str, expiry: int, script_type: str, multiplier: int)
+```
+
+**Arguments:**
+- `ltp` (float): Last traded price of the underlying
+- `underlying` (str): The index name (e.g., 'NIFTY', 'BANKNIFTY')
+- `expiry` (int): The expiry to select
+  - 0 - Current expiry
+  - 1 - Next expiry
+  - 2 - Third expiry from now
+- `script_type` (str): Option type ('CE' or 'PE')
+- `multiplier` (int): Number of strikes away from ATM for ITM selection
+
+**Returns:**
+- str: The option symbol for the ITM strike
+- None: If there was an error
+
+**Sample Code:**
+```python
+itm_option = tsl.get_itm(ltp=18200, underlying="NIFTY", expiry=0, script_type="CE", multiplier=1)
+```
+
+#### Get OTM Strike
+```python
+tsl.get_otm(ltp: float, underlying: str, expiry: int, script_type: str, multiplier: int)
+```
+
+**Arguments:**
+- `ltp` (float): Last traded price of the underlying
+- `underlying` (str): The index name (e.g., 'NIFTY', 'BANKNIFTY')
+- `expiry` (int): The expiry to select
+  - 0 - Current expiry
+  - 1 - Next expiry
+  - 2 - Third expiry from now
+- `script_type` (str): Option type ('CE' or 'PE')
+- `multiplier` (int): Number of strikes away from ATM for OTM selection
+
+**Returns:**
+- str: The option symbol for the OTM strike
+- None: If there was an error
+
+**Sample Code:**
+```python
+otm_option = tsl.get_otm(ltp=18200, underlying="NIFTY", expiry=0, script_type="PE", multiplier=2)
+```
+
+---
+### Order Status and Price
+
+#### Get Order Status
+```python
+tsl.get_order_status(order_id: str)
+```
+
+**Arguments:**
+- `order_id` (str): The unique identifier of the order
+
+**Returns:**
+- str: Current status of the order (e.g., 'New', 'Completed', 'Cancelled')
+- None: If there was an error
+
+**Sample Code:**
+```python
+orderid = '12241210603927'
+order_status = tsl.get_order_status(order_id=orderid)
+```
+
+#### Get Order Executed Price
+```python
+tsl.get_executed_price(order_id: str)
+```
+
+**Arguments:**
+- `order_id` (str): The unique identifier of the order
+
+**Returns:**
+- float: Average traded price of the executed order
+  - Returns 0 if order price is None or empty
+- None: If there was an error
+
+**Sample Code:**
+```python
+orderid = '12241210603927'
+order_price = tsl.get_executed_price(order_id=orderid)
+```
+
+---
+
+### Get Order Report
+Get comprehensive order details including status, execution price, and timing for multiple orders.
+
+```python
+tsl.order_report()
+```
+
+**Arguments:**
+- None
+
+**Returns:**
+- Tuple containing three dictionaries:
+  1. `order_details`: Dictionary with order status
+     - Key: Order ID (str)
+     - Value: Order status (str)
+  2. `order_exe_price`: Dictionary with execution prices
+     - Key: Order ID (str)
+     - Value: Average traded price
+  3. `order_placed_time`: Dictionary with order timestamps
+     - Key: Order ID (str)
+     - Value: Last update time
+- Returns three empty dictionaries in case of error
+
+**Sample Code:**
+```python
+order_details, execution_prices, order_times = tsl.order_report()
+```
+
+---
+## Account Balance
+
+### Get Account Balance
+Fetch the available cash balance from your trading account.
+
+```python
+tsl.get_account_balance()
+```
+
+**Returns:**
+- int: Available cash balance in the account
+- Returns 0 if there was an error
+
+**Sample Code:**
+```python
+available_balance = tsl.get_account_balance()
+```
+---
+### Get Live PNL
+Retrieve real-time Profit and Loss (PNL) calculation for all open positions.
+
+```python
+tsl.get_pnl()
+```
+
+**Returns:**
+- float: Total PNL across all positions
+  - Positive value indicates profit
+  - Negative value indicates loss
+- 0: If no open positions exist
+- None: If there was an error
+
+---
+
+## Telegram Alerts
+
+### Send Telegram Alert
+Send real-time alerts and notifications via Telegram bot.
+
+```python
+tsl.send_telegram_alert(message: str, receiver_chat_id: str, bot_token: str)
+```
+
+**Arguments:**
+- `message` (str): The text message to send
+  - Can include trade details, alerts, or any notification text
+  - Supports basic text formatting
+- `receiver_chat_id` (str): Telegram chat ID for message delivery
+  - For individual users: Personal chat ID
+  - For groups: Group chat ID (bot must be added to group)
+- `bot_token` (str): Telegram bot authorization token
+  - Obtained from BotFather when creating a bot
+  - Format: `"123456789:ABCDEFGHIJKLMNOPQRSTUVWXYZ"`
+
+**Returns:**
+- None
+- Prints success/failure message to console
+- Logs exceptions if any error occurs
+
+**Setup Steps:**
+1. Create a Telegram bot via BotFather
+2. Get the bot token
+3. Add bot to desired chat/group
+4. Get chat ID for the target recipient
+
+**Sample Code:**
+```python
+# Send trade execution alert
+tsl.send_telegram_alert(
+    message="Order executed: BUY 50 shares of RELIANCE @ 2400",
+    receiver_chat_id="123456789",
+    bot_token="123456789:ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+)
+
+# Send market alert
+tsl.send_telegram_alert(
+    message="NIFTY crossed 19000!",
+    receiver_chat_id="987654321",
+    bot_token="123456789:ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+)
+```
+---
+
+### Check Valid Instrument
+Verify if a given instrument name exists in the exchange.
+
+```python
+tsl.check_valid_instrument(name: str)
+```
+
+**Arguments:**
+- `name` (str): Trading symbol/Description (e.g., 'NIFTY25MAR22300PE', 'ACC-EQ')
+
+**Returns:**
+- str: Message indicating if instrument is valid or invalid
+  - "instrument {name} is valid" if found
+  - "instrument {name} is invalid" if not found
+- None: If there was an error
+
+**Example:**
+```python
+# Check if NIFTY option exists
+result = tsl.check_valid_instrument("NIFTY25MAR22750PE")
+
+# Check if equity exists
+result = tsl.check_valid_instrument("RELIANCE-EQ")
+```
+---
+
+### Get Expiry Dates
+Retrieve sorted list of expiry dates for futures or options of an underlying.
+
+```python
+tsl.get_expiry_dates(underlying: str, Opt_fut: str)
+```
+
+**Arguments:**
+- `underlying` (str): Trading symbol (e.g., 'NIFTY', 'BANKNIFTY', 'FINNIFTY', 'MIDCPNIFTY')
+- `Opt_fut` (str): Instrument type
+  - 'Option' for options contracts
+  - 'Future' for futures contracts
+
+**Returns:**
+- list: Sorted list of expiry dates in 'YYYY-MM-DD' format
+- None: If there was an error
+
+**Example:**
+```python
+# Get NIFTY option expiry dates
+expiry_dates = tsl.get_expiry_dates(underlying="NIFTY", Opt_fut="Option")
+
+# Get BANKNIFTY futures expiry dates  
+expiry_dates = tsl.get_expiry_dates(underlying="BANKNIFTY", Opt_fut="Future")
+```
+
+
+---
+
+### Get Lot Size
+Retrieve the lot size for a given instrument.
+
+```python
+tsl.get_lot_size(script_name: str)
+```
+
+**Arguments:**
+- `script_name` (str): Trading symbol/Description (e.g., 'NIFTY25MAR22000PE', 'RELIANCE-EQ')
+
+**Returns:**
+- int: Lot size of the instrument
+- 0: If invalid script name
+- None: If there was an error
+
+**Example:**
+```python
+# Get lot size for NIFTY options
+lot_size = tsl.get_lot_size("NIFTY25MAR22000PE")
+
+# Get lot size for equity
+lot_size = tsl.get_lot_size("RELIANCE-EQ") 
+```
+
+### Get Freeze Quantity
+Retrieve the maximum allowed quantity (freeze quantity - 1) for a given instrument.
+
+```python
+tsl.get_freeze_quantity(strike: str)
+```
+
+**Arguments:**
+- `strike` (str): Trading symbol/Description (e.g., 'NIFTY25MAR22000PE', 'RELIANCE-EQ')
+
+**Returns:**
+- int: Maximum allowed quantity (freeze quantity - 1)
+- 0: If invalid script name
+- None: If there was an error
+
+**Example:**
+```python
+# Get freeze quantity for NIFTY options
+freeze_qty = tsl.get_freeze_quantity("NIFTY25MAR22000PE")
+```
+
+
+
+## Notes
+
+- Ensure your API keys and client credentials are correct.
+- Tokens expire periodically; refresh them as needed.
+- Debugging can be enabled by modifying the log level in `XTS_Tradehull.py`.
+
+---
+
+## License
+
+This project is licensed under the MIT License.
+
+---
+
+## Contact
+
+For queries or issues, please contact: [contact.tradehull@gmail.com](mailto\:contact.tradehull@gmail.com).
+
