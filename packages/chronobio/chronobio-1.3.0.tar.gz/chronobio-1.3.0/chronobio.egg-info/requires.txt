@@ -1,0 +1,9 @@
+arcade>=3.0
+psutil>=7.0
+
+[dev]
+pytest
+pytest-cov
+python-dev-tools>=2023
+pre-commit<4,>=3
+pyinstrument
