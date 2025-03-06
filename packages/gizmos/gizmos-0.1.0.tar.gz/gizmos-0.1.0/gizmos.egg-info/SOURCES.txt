@@ -1,0 +1,7 @@
+README.md
+hello.py
+pyproject.toml
+gizmos.egg-info/PKG-INFO
+gizmos.egg-info/SOURCES.txt
+gizmos.egg-info/dependency_links.txt
+gizmos.egg-info/top_level.txt
