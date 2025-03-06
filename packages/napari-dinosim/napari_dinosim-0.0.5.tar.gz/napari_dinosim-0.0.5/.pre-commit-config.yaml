@@ -1,0 +1,35 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: check-docstring-first
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: check-yaml
+      - id: check-toml
+      - id: debug-statements
+  - repo: https://github.com/psf/black
+    rev: 25.1.0
+    hooks:
+      - id: black
+        args: ["--config", "pyproject.toml"]
+  # - repo: https://github.com/charliermarsh/ruff-pre-commit
+  #   rev: v0.9.9
+  #   hooks:
+  #     - id: ruff
+  #       args: ["--config", "pyproject.toml"]
+  - repo: https://github.com/asottile/pyupgrade
+    rev: v3.19.1
+    hooks:
+      - id: pyupgrade
+        args: [--py39-plus, --keep-runtime-typing]
+  - repo: https://github.com/tlambert03/napari-plugin-checks
+    rev: v0.3.0
+    hooks:
+      - id: napari-plugin-checks
+  #Mypy temporarily disabled due to configuration issues
+  # - repo: https://github.com/pre-commit/mirrors-mypy
+  #   rev: v1.15.0
+  #   hooks:
+  #     - id: mypy
+  #       additional_dependencies: [types-all]
