@@ -1,0 +1,2 @@
+relic-tool-sga-core>=2.0.0
+ply>=3.11
