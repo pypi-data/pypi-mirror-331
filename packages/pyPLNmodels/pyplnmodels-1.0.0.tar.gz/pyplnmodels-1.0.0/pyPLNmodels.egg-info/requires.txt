@@ -1,0 +1,17 @@
+matplotlib
+numpy
+pandas
+scipy
+seaborn
+torch
+scikit-learn
+patsy
+tqdm
+networkx
+
+[build-doc]
+sphinx
+sphinx_rtd_theme
+
+[tests]
+pytest
