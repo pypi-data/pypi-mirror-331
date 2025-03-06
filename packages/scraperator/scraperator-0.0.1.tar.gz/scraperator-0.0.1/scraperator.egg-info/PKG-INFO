@@ -1,0 +1,134 @@
+Metadata-Version: 2.2
+Name: scraperator
+Version: 0.0.1
+Summary: A flexible web scraping toolkit with caching capabilities
+Author-email: Arved Klöhn <arved.kloehn@gmail.com>
+License: MIT
+Project-URL: homepage, https://github.com/yourusername/scraperator
+Project-URL: repository, https://github.com/yourusername/scraperator
+Project-URL: documentation, https://github.com/yourusername/scraperator#readme
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.25.0
+Requires-Dist: beautifulsoup4>=4.9.0
+Requires-Dist: playwright>=1.20.0
+Requires-Dist: python-slugify>=5.0.0
+Requires-Dist: cacherator>=0.0.8
+Provides-Extra: dev
+Requires-Dist: pytest>=6.0.0; extra == "dev"
+Requires-Dist: black>=21.5b2; extra == "dev"
+Requires-Dist: isort>=5.9.1; extra == "dev"
+Requires-Dist: mypy>=0.900; extra == "dev"
+Requires-Dist: twine>=3.4.1; extra == "dev"
+
+# Scraperator
+
+A flexible web scraping toolkit with caching capabilities, supporting different fetching methods (Requests and Playwright) with intelligent fallbacks, caching, and Markdown conversion.
+
+## Features
+
+- **Multiple Scraping Methods**: Choose between standard HTTP requests or browser automation via Playwright
+- **Smart Caching**: Persistent cache for scraped content with TTL support
+- **Automatic Retries**: Built-in retry mechanism with exponential backoff
+- **Concurrent Scraping**: Asynchronous scraping with a simple API
+- **Content Processing**: Convert HTML to clean Markdown for easier content extraction
+- **Flexible Configuration**: Extensive customization options for each scraping method
+
+## Installation
+
+```bash
+pip install scraperator
+```
+
+## Quick Start
+
+```python
+from scraperator import Scraper
+
+# Basic usage with Requests (default)
+scraper = Scraper(url="https://example.com")
+html = scraper.scrape()
+print(scraper.markdown)  # Get content as Markdown
+
+# Using Playwright for JavaScript-heavy sites
+pw_scraper = Scraper(
+    url="https://example.com/spa",
+    method="playwright",
+    headless=True
+)
+pw_scraper.scrape()
+print(pw_scraper.get_status_code())  # Check status code
+```
+
+## Advanced Usage
+
+### Configuring Cache
+
+```python
+scraper = Scraper(
+    url="https://example.com",
+    cache_ttl=7,  # Cache for 7 days
+    cache_directory="custom/cache/dir"
+)
+```
+
+### Playwright Options
+
+```python
+scraper = Scraper(
+    url="https://example.com/complex-page",
+    method="playwright",
+    browser_type="firefox",  # Use Firefox browser
+    headless=False,  # Show browser window
+    wait_for_selectors=[".content", "#main-article"]  # Wait for these elements
+)
+```
+
+### Async Scraping
+
+```python
+scraper = Scraper(url="https://example.com")
+# Start scraping in background
+scraper.scrape(async_mode=True)
+
+# Do other work...
+print("Doing other work while scraping...")
+
+# Check if scraping is finished
+if scraper.is_complete():
+    print("Scraping finished!")
+else:
+    # Wait for scraping to complete with timeout
+    scraper.wait(timeout=10)
+    html = scraper.get_html()
+```
+
+### Markdown Conversion Options
+
+```python
+scraper = Scraper(
+    url="https://example.com/blog",
+    markdown_options={
+        "strip_tags": ["script", "style", "nav"],
+        "content_selectors": ["article", ".post-content"],
+        "preserve_images": True,
+        "compact_output": True
+    }
+)
+scraper.scrape()
+markdown = scraper.get_markdown()
+```
+
+## License
+
+MIT License
