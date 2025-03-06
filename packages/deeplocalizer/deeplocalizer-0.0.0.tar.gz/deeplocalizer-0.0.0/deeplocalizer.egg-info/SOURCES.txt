@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+deeplocalizer/__init__.py
+deeplocalizer/deeplocalizer.py
+deeplocalizer.egg-info/PKG-INFO
+deeplocalizer.egg-info/SOURCES.txt
+deeplocalizer.egg-info/dependency_links.txt
+deeplocalizer.egg-info/requires.txt
+deeplocalizer.egg-info/top_level.txt
