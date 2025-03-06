@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+StaticScrape/__init__.py
+StaticScrape/front_clone.py
+StaticScrape.egg-info/PKG-INFO
+StaticScrape.egg-info/SOURCES.txt
+StaticScrape.egg-info/dependency_links.txt
+StaticScrape.egg-info/entry_points.txt
+StaticScrape.egg-info/requires.txt
+StaticScrape.egg-info/top_level.txt
