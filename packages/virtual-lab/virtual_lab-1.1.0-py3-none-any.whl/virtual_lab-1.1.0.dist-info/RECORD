@@ -1,0 +1,12 @@
+virtual_lab/__about__.py,sha256=ylMACtszA5BdSWIjMMKfKHJYaCmYX9bhoDY7cS6NPh0,59
+virtual_lab/__init__.py,sha256=P2QtFGfekdPStz1gwzbZk8PThdjSNRjKLwS43-HpMAw,225
+virtual_lab/agent.py,sha256=yjGaOifdviKXW9gxRv65BD_53ntIKN6rgn55HnseufM,1883
+virtual_lab/constants.py,sha256=9H8rui88CqGhUdyVcaMT2YJXrFrwxer2kp0-NSeIc3Q,2070
+virtual_lab/prompts.py,sha256=c0LpUcK1swLHFAKrHBK0aQjWyc_zQlaQ39nrJKzX5fs,14955
+virtual_lab/py.typed,sha256=bWew9mHgMy8LqMu7RuqQXFXLBxh2CRx0dUbSx-3wE48,27
+virtual_lab/run_meeting.py,sha256=1UOkR9_H0nc6S_lMcHEPJvXeFjz3zFATBlvW5nhW7hg,10141
+virtual_lab/utils.py,sha256=fs7lxAh0-ZV5i4upMcykpA7FfXxutu9cF-kWkukUgLQ,14026
+virtual_lab-1.1.0.dist-info/METADATA,sha256=JFXeocjj5BW39zLAa_EF96dTegz1iuuhJCjneXfgCrA,5556
+virtual_lab-1.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+virtual_lab-1.1.0.dist-info/licenses/LICENSE,sha256=R6oXc2aLER2MotRNNwel98uCCSI2GTySJhTE1YaOMFc,1069
+virtual_lab-1.1.0.dist-info/RECORD,,
