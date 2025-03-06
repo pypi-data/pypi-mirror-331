@@ -1,0 +1,124 @@
+[build-system]
+requires = ["setuptools>=51.1.1", "wheel", "setuptools_scm[toml]>=5.0"]
+
+[[tool.ape.dependencies]]
+openzeppelin = "3.1.0"
+[[tool.ape.dependencies]]
+openzeppelin = "3.2.0"
+[[tool.ape.dependencies]]
+openzeppelin = "3.3.0"
+[[tool.ape.dependencies]]
+openzeppelin = "3.4.0"
+[[tool.ape.dependencies]]
+openzeppelin = "3.4.1"
+[[tool.ape.dependencies]]
+openzeppelin = "3.4.2"
+[[tool.ape.dependencies]]
+openzeppelin = "4.0.0"
+[[tool.ape.dependencies]]
+openzeppelin = "4.1.0"
+[[tool.ape.dependencies]]
+openzeppelin = "4.2.0"
+[[tool.ape.dependencies]]
+openzeppelin = "4.3.0"
+[[tool.ape.dependencies]]
+openzeppelin = "4.3.1"
+[[tool.ape.dependencies]]
+openzeppelin = "4.3.2"
+[[tool.ape.dependencies]]
+openzeppelin = "4.3.3"
+[[tool.ape.dependencies]]
+openzeppelin = "4.4.0"
+[[tool.ape.dependencies]]
+openzeppelin = "4.4.1"
+[[tool.ape.dependencies]]
+openzeppelin = "4.4.2"
+[[tool.ape.dependencies]]
+openzeppelin = "4.5.0"
+[[tool.ape.dependencies]]
+openzeppelin = "4.5.1"
+[[tool.ape.dependencies]]
+openzeppelin = "4.5.2"
+[[tool.ape.dependencies]]
+openzeppelin = "4.6.0"
+[[tool.ape.dependencies]]
+openzeppelin = "4.7.0"
+[[tool.ape.dependencies]]
+openzeppelin = "4.7.1"
+[[tool.ape.dependencies]]
+openzeppelin = "4.7.2"
+[[tool.ape.dependencies]]
+openzeppelin = "4.7.3"
+[[tool.ape.dependencies]]
+openzeppelin = "4.8.0"
+[[tool.ape.dependencies]]
+openzeppelin = "4.8.1"
+[[tool.ape.dependencies]]
+openzeppelin = "4.8.2"
+[[tool.ape.dependencies]]
+openzeppelin = "4.8.3"
+[[tool.ape.dependencies]]
+openzeppelin = "4.9.0"
+[[tool.ape.dependencies]]
+openzeppelin = "4.9.0"
+[[tool.ape.dependencies]]
+openzeppelin = "4.9.1"
+[[tool.ape.dependencies]]
+openzeppelin = "4.9.2"
+[[tool.ape.dependencies]]
+openzeppelin = "4.9.3"
+[[tool.ape.dependencies]]
+openzeppelin = "4.9.4"
+[[tool.ape.dependencies]]
+openzeppelin = "4.9.5"
+[[tool.ape.dependencies]]
+openzeppelin = "4.9.6"
+[[tool.ape.dependencies]]
+openzeppelin = "5.0.0"
+[[tool.ape.dependencies]]
+openzeppelin = "5.0.1"
+[[tool.ape.dependencies]]
+openzeppelin = "5.0.2"
+[[tool.ape.dependencies]]
+openzeppelin = "5.1.0"
+[[tool.ape.dependencies]]
+openzeppelin = "5.2.0"
+
+[tool.mypy]
+exclude = "build/"
+plugins = ["pydantic.mypy"]
+
+[tool.setuptools_scm]
+write_to = "ape_openzeppelin/version.py"
+
+# NOTE: you have to use single-quoted strings in TOML for regular expressions.
+# It's the equivalent of r-strings in Python.  Multiline strings are treated as
+# verbose regular expressions by Black.  Use [ ] to denote a significant space
+# character.
+
+[tool.black]
+line-length = 100
+target-version = ['py39', 'py310', 'py311', 'py312', 'py313']
+include = '\.pyi?$'
+
+[tool.pytest.ini_options]
+addopts = """
+    -p no:pytest_ethereum
+    -p no:boa_test
+    --cov-branch
+    --cov-report term
+    --cov-report html
+    --cov-report xml
+    --cov=ape_openzeppelin
+"""
+python_files = "test_*.py"
+testpaths = "tests"
+markers = "fuzzing: Run Hypothesis fuzz test suite"
+
+[tool.isort]
+line_length = 100
+force_grid_wrap = 0
+include_trailing_comma = true
+multi_line_output = 3
+use_parentheses = true
+skip = ["version.py"]
