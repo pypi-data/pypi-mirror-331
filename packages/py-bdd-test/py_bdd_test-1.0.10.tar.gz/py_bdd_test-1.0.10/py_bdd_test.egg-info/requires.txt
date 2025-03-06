@@ -1,0 +1,5 @@
+behave
+parse
+parse_type
+kafka-python
+pyhamcrest
