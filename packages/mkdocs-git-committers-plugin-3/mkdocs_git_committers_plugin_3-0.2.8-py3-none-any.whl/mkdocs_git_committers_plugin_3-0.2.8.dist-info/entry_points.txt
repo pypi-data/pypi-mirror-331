@@ -1,0 +1,2 @@
+[mkdocs.plugins]
+git-committers-3 = mkdocs_git_committers_plugin.plugin:GitCommittersPlugin
