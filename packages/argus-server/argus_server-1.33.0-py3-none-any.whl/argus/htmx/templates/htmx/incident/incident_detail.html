@@ -1,0 +1,145 @@
+{% extends "htmx/base.html" %}
+{% block main %}
+  <div class="flex flex-col items-center gap-4 m-4">
+    {% block incident_detail %}
+      <h1 class="text-xl font-bold">{{ incident.pk }}: {{ incident.description }}</h1>
+      <div class="flex gap-4 justify-center">
+        <section id="incident-detail" class="basis-1/4 shrink-0 max-w-[30%]">
+          <section id="level" class="card">
+            <h2 class="card-title">Level</h2>
+            <p class="card-body">{{ incident.level }}</p>
+          </section>
+          <section id="status" class="card">
+            <h2 class="card-title">Status</h2>
+            <p class="card-body flex-row flex-wrap gap-0.5">
+              {% if incident.open %}
+                <span class="badge badge-primary">Open</span>
+              {% else %}
+                <span class="badge badge-accent">Closed</span>
+              {% endif %}
+              {% if incident.acked %}
+                <span class="badge badge-primary">Acknowledged</span>
+              {% else %}
+                <span class="badge badge-accent">Unacknowledged</span>
+              {% endif %}
+              {% if incident.ticket_url %}
+                <span class="badge badge-primary"><a href="{{ incident.ticket_url }}" target="_blank">Ticket {{ incident.ticket_url }}</a></span>
+              {% else %}
+                <span class="badge badge-accent">No ticket</span>
+              {% endif %}
+            </p>
+          </section>
+          <section id="tags" class="card">
+            <h2 class="card-title">Tags</h2>
+            <p class="card-body flex-row flex-wrap gap-0.5">
+              {% for tag in incident.deprecated_tags %}<span class="badge badge-neutral">{{ tag }}</span>{% endfor %}
+            </p>
+          </section>
+          <section id="primary-details" class="card">
+            <h2 class="card-title">Primary details (#{{ incident.pk }})</h2>
+            <div class="card-body">
+              <h3 class="font-bold">Description</h3>
+              <p>{{ incident.description }}</p>
+              {% if incident.stateful %}
+                <h3 class="font-bold">Start time</h3>
+                <p>
+                  <time datetime="{{ incident.start_time|date:"c" }}">{{ incident.start_time|date:preferences.argus_htmx.datetime_format }}</time>
+                </p>
+                {% if incident.open %}
+                  <h3 class="font-bold">End time</h3>
+                  <p>—</p>
+                  <h3 class="font-bold">Current duration</h3>
+                  <p>{{ incident.duration }}</p>
+                {% else %}
+                  <h3 class="font-bold">End time</h3>
+                  <p>
+                    <time datetime="{{ incident.end_time|date:"c" }}">{{ incident.end_time|date:preferences.argus_htmx.datetime_format }}</time>
+                  </p>
+                  <h3 class="font-bold">Total duration</h3>
+                  <p>{{ incident.duration }}</p>
+                {% endif %}
+              {% else %}
+                <h3 class="font-bold">Timestamp</h3>
+                <p>
+                  <time datetime="{{ incident.start_time }}">{{ incident.start_time|date:preferences.argus_htmx.datetime_format }}</time>
+                </p>
+              {% endif %}
+              <h3 class="font-bold">Source</h3>
+              <p>{{ incident.source.name }}</p>
+              <h3 class="font-bold">Incident id in {{ incident.source.name }}</h3>
+              <p>{{ incident.source_incident_id|default:"—" }}</p>
+              <h3 class="font-bold">More details at</h3>
+              <p>
+                {% if incident.details_url %}
+                  <a href="{{ incident.details_url }}">{{ incident.details_url }}</a>
+                {% else %}
+                  —
+                {% endif %}
+              </p>
+              <h3 class="font-bold">Ticket</h3>
+              <p>
+                {% if incident.ticket_url %}
+                  <a href="{{ incident.ticket_url }}" target="_blank">{{ incident.ticket_url }}</a>
+                {% else %}
+                  —
+                {% endif %}
+              </p>
+              <div class="card-actions">
+                {% if incident.stateful %}
+                  {% if incident.open %}
+                    {% include "htmx/incident/_incident_close_modal.html" with action="close" dialog_id="close-incident-dialog" button_title="Close" header="Manually close incident" explanation="Write a message describing why the incident was manually closed" cancel_text="Cancel" submit_text="Close now" %}
+                  {% else %}
+                    {% include "htmx/incident/_incident_reopen_modal.html" with action="reopen" dialog_id="reopen-incident-dialog" button_title="Reopen" header="Manually reopen incident" explanation="Write a message describing why the incident was manually reopend" cancel_text="Cancel" submit_text="Reopen now" %}
+                  {% endif %}
+                {% endif %}
+                {% if incident.ticket_url %}
+                  {% include "htmx/incident/_incident_ticket_edit_modal.html" with action="update-ticket" dialog_id="edit-ticket-dialog" button_title="Edit ticket url" header="Edit ticket" explanation="" cancel_text="Cancel" submit_text="Update" %}
+                {% else %}
+                  <!-- Manually create ticket dialog -->
+                  {% include "htmx/incident/_incident_ticket_edit_modal.html" with action="add-ticket" dialog_id="manual-create-ticket-dialog" button_title="Add ticket url" header="Add url to existing ticket" explanation="Are you sure you want to store this url to an existing ticket on this incident?" cancel_text="Cancel" submit_text="Add ticket" %}
+                {% endif %}
+              </div>
+            </div>
+          </section>
+        </section>
+        <section id="acknowledgements" class="basis-1/4 max-w-[30%] card">
+          <h2 class="card-title pl-8">Acknowledgements</h2>
+          <div class="card-body gap-4 grow-0">
+            {% for ack in incident.acks %}
+              <div class="px-2">
+                <p>{{ ack.event.description }}</p>
+                <p>
+                  {{ ack.event.actor }}
+                  {{ ack.event.timestamp|date:preferences.argus_htmx.datetime_format }}
+                </p>
+                {% if ack.expiration %}<p>Expires: {{ ack.expiration|date:preferences.argus_htmx.datetime_format }}</p>{% endif %}
+              </div>
+              {% if not forloop.last %}<hr />{% endif %}
+            {% endfor %}
+            <div class="card-actions grow-0 order-first">
+              {% include "htmx/incident/_incident_acknowledge_modal.html" with action="ack" dialog_id="create-acknowledgment-dialog" button_title="Create acknowledgment" header="Submit acknowledgment" explanation="Write a message describing why this incident was acknowledged" cancel_text="Cancel" submit_text="Submit" %}
+            </div>
+          </div>
+        </section>
+        <section id="events" class="basis-1/4 max-w-[30%] card">
+          <h2 class="card-title pl-8">Related events</h2>
+          <div class="gap-4 card-body flex-none">
+            {% for event in incident.events.all %}
+              {% if not event.ack %}
+                <div class="px-2">
+                  <p>{{ event.get_type_display }}</p>
+                  <p>{{ event.description }}</p>
+                  <p>
+                    {{ event.actor }}
+                    {{ event.timestamp|date:preferences.argus_htmx.datetime_format }}
+                  </p>
+                </div>
+                {% if not forloop.last %}<hr />{% endif %}
+              {% endif %}
+            {% endfor %}
+          </div>
+        </section>
+      </div>
+    {% endblock incident_detail %}
+  </div>
+{% endblock main %}
