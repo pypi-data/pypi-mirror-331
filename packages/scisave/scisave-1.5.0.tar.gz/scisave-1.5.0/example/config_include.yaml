@@ -1,0 +1,6 @@
+# Example YAML configuration file (include file).
+#
+# Thomas Guillod - Dartmouth College
+
+"key_a": "value_a"
+"key_b": "value_b"

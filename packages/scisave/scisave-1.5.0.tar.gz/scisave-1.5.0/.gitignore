@@ -1,0 +1,20 @@
+# List of files to ignore for Git.
+#
+# Thomas Guillod - Dartmouth College
+
+# remove Python object
+*.pyc
+*.pyo
+**/__pycache__
+
+# exclude packinging files
+dist/*
+build/*
+*.egg-info/*
+
+# exclude version file
+*/version.txt
+
+# exclude the IDE folders
+.vscode/
+.idea/

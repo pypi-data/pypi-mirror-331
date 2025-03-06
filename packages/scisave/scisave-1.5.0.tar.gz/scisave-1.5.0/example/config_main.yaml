@@ -1,0 +1,31 @@
+# Example YAML configuration file (main file).
+#
+# Thomas Guillod - Dartmouth College
+
+# load a data from an environment variable
+"env_a": !env ENVDATA_A
+"env_b": !env ENVDATA_B
+
+# load a data from the substitution dict
+"sub_a": !sub sub_a
+"sub_b": !sub sub_b
+
+# evaluate Python literal
+"eval_a": !eval "1.0+1.0j"
+"eval_b": !eval "1.0-1.0j"
+
+# parse a path with respect to the YAML file
+"path": !path config_include.yaml
+
+# include data from another YAML file
+"include": !include config_include.yaml
+
+# merge list of dicts
+"dict": !merge_dict
+  - {"a": 1}
+  - {"b": 2}
+
+# merge list of lists
+"list": !merge_list
+  - [1, 2]
+  - [3, 4]

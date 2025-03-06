@@ -1,0 +1,59 @@
+# Example JSON schema file.
+#
+# Thomas Guillod - Dartmouth College
+
+"type": "object"
+"required":
+    - "env_a"
+    - "env_b"
+    - "sub_a"
+    - "sub_b"
+    - "eval_a"
+    - "eval_b"
+    - "include"
+    - "path"
+    - "list"
+    - "dict"
+"properties":
+    "env_a":
+        "type": "string"
+        "minLength": 1
+    "env_b":
+        "type": "string"
+        "minLength": 1
+    "sub_a":
+        "type": "string"
+        "minLength": 1
+    "sub_b":
+        "type": "string"
+        "minLength": 1
+    "eval_a":
+        "type": "complex"
+    "eval_b":
+        "type": "complex"
+    "path":
+        "type": "string"
+        "minLength": 1
+    "include":
+        "type": "object"
+        "required":
+          - "key_a"
+          - "key_b"
+        "properties":
+            "key_a":
+                "type": "string"
+                "minLength": 1
+        "key_b":
+            "key_a":
+                "type": "string"
+                "minLength": 1
+    "dict":
+        "type": "object"
+        "minProperties": 1
+        "additionalProperties":
+            "type": "integer"
+    "list":
+        "type": "array"
+        "minItems": 1
+        "items":
+            "type": "integer"
