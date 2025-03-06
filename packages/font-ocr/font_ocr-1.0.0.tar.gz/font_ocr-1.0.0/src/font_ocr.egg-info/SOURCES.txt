@@ -1,0 +1,9 @@
+README.md
+setup.py
+src/font_ocr/__init__.py
+src/font_ocr/font_ocr.py
+src/font_ocr.egg-info/PKG-INFO
+src/font_ocr.egg-info/SOURCES.txt
+src/font_ocr.egg-info/dependency_links.txt
+src/font_ocr.egg-info/requires.txt
+src/font_ocr.egg-info/top_level.txt

@@ -1,0 +1,55 @@
+Metadata-Version: 2.2
+Name: font_ocr
+Version: 1.0.0
+Summary: 使用OCR解决文字反爬
+Home-page: https://github.com/Tlyer233/
+Author: 明廷盛
+Author-email: [email protected]
+Keywords: font anti-crawler ocr web-scraping
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: fonttools>=4.44.0
+Requires-Dist: lxml>=4.9.2
+Requires-Dist: loguru>=0.7.0
+Requires-Dist: ddddocr>=1.4.9
+Requires-Dist: matplotlib>=3.7.1
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# xi_font_spider_ocr
+
+## 下载
+
+```bash
+pip install font_ocr
+```
+
+## 如何使用
+
+```python
+from font_ocr import FontSpiderOCR
+
+if __name__ == '__main__':
+    font_spider_oce = FontSpiderOCR(r"font.woff")  # 文件路径
+    print(font_spider_oce.get_mapping("cmap_name"))  # 字码点为键
+    print(font_spider_oce.get_mapping("glyf_name"))  # 字形为键, 值都是OCR识别后的数据
+```
