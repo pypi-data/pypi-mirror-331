@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/__init__.py
+src/__main__.py
+src/activation.py
+src/lpar_activation_work.egg-info/PKG-INFO
+src/lpar_activation_work.egg-info/SOURCES.txt
+src/lpar_activation_work.egg-info/dependency_links.txt
+src/lpar_activation_work.egg-info/top_level.txt
