@@ -1,0 +1,17 @@
+[project]
+name = "intro-python-101"
+version = "0.1.0"
+description = "Just another random story generator mainly to learn about packages and modules and their importation in Python 101"
+authors = [
+    {name = "saladin0x1", email = "salaheddine.elouali@emsi-edu.ma"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[tool.poetry]
+packages = [{include = "intro_python_101", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
