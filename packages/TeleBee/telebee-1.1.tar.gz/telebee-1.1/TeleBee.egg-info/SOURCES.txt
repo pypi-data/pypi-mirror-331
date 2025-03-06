@@ -1,0 +1,9 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.py
+TeleBee/__init__.py
+TeleBee.egg-info/PKG-INFO
+TeleBee.egg-info/SOURCES.txt
+TeleBee.egg-info/dependency_links.txt
+TeleBee.egg-info/top_level.txt
