@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8ff3a6bd-a7a1-4c48-84c1-76c0bc38de54" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/examples/scan2base64.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gprlibpy/widgets/map_viewer/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gprlibpy/widgets/map_viewer/gmap_index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gprlibpy/widgets/map_viewer/map_viewer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dockerignore" beforeDir="false" afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudbuild.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cloudbuild.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test.zarr/LID10001.dt/0.0.0" beforeDir="false" afterPath="$PROJECT_DIR$/data/test.zarr/LID10001.dt/0.0.0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test.zarr/LID20001.dt/0.0.0" beforeDir="false" afterPath="$PROJECT_DIR$/data/test.zarr/LID20001.dt/0.0.0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test.zarr/LID30001.dt/0.0.0" beforeDir="false" afterPath="$PROJECT_DIR$/data/test.zarr/LID30001.dt/0.0.0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test.zarr/LID40001.dt/0.0.0" beforeDir="false" afterPath="$PROJECT_DIR$/data/test.zarr/LID40001.dt/0.0.0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test.zarr/LID50001.dt/0.0.0" beforeDir="false" afterPath="$PROJECT_DIR$/data/test.zarr/LID50001.dt/0.0.0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test.zarr/LID60001.dt/0.0.0" beforeDir="false" afterPath="$PROJECT_DIR$/data/test.zarr/LID60001.dt/0.0.0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test.zarr/LID70001.dt/0.0.0" beforeDir="false" afterPath="$PROJECT_DIR$/data/test.zarr/LID70001.dt/0.0.0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test.zarr/LID80001.dt/0.0.0" beforeDir="false" afterPath="$PROJECT_DIR$/data/test.zarr/LID80001.dt/0.0.0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test.zarr/coords/0" beforeDir="false" afterPath="$PROJECT_DIR$/data/test.zarr/coords/0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test.zarr/coords/1" beforeDir="false" afterPath="$PROJECT_DIR$/data/test.zarr/coords/1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test.zarr/coords/2" beforeDir="false" afterPath="$PROJECT_DIR$/data/test.zarr/coords/2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test.zarr/coords/3" beforeDir="false" afterPath="$PROJECT_DIR$/data/test.zarr/coords/3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test.zarr/depth/0" beforeDir="false" afterPath="$PROJECT_DIR$/data/test.zarr/depth/0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test.zarr/lat/0" beforeDir="false" afterPath="$PROJECT_DIR$/data/test.zarr/lat/0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test.zarr/lat/1" beforeDir="false" afterPath="$PROJECT_DIR$/data/test.zarr/lat/1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test.zarr/lat/2" beforeDir="false" afterPath="$PROJECT_DIR$/data/test.zarr/lat/2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test.zarr/lat/3" beforeDir="false" afterPath="$PROJECT_DIR$/data/test.zarr/lat/3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test.zarr/lng/0" beforeDir="false" afterPath="$PROJECT_DIR$/data/test.zarr/lng/0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test.zarr/lng/1" beforeDir="false" afterPath="$PROJECT_DIR$/data/test.zarr/lng/1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test.zarr/lng/2" beforeDir="false" afterPath="$PROJECT_DIR$/data/test.zarr/lng/2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test.zarr/lng/3" beforeDir="false" afterPath="$PROJECT_DIR$/data/test.zarr/lng/3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test.zarr/markers/0" beforeDir="false" afterPath="$PROJECT_DIR$/data/test.zarr/markers/0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test.zarr/markers/1" beforeDir="false" afterPath="$PROJECT_DIR$/data/test.zarr/markers/1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test.zarr/markers/2" beforeDir="false" afterPath="$PROJECT_DIR$/data/test.zarr/markers/2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test.zarr/markers/3" beforeDir="false" afterPath="$PROJECT_DIR$/data/test.zarr/markers/3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test.zarr/velocity/0" beforeDir="false" afterPath="$PROJECT_DIR$/data/test.zarr/velocity/0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/datasets.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/datasets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/script.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/script.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gprlibpy/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/gprlibpy/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gprlibpy/blocks/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gprlibpy/blocks/sigproc/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gprlibpy/blocks/sigproc/blocks.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gprlibpy/cli.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/gprlibpy/cli.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gprlibpy/core/dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/gprlibpy/core/dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gprlibpy/core/scan.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/gprlibpy/core/scan.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gprlibpy/core/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/gprlibpy/core/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gprlibpy/utils/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/gprlibpy/utils/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gprlibpy/utils/image_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/gprlibpy/utils/image_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uv.lock" beforeDir="false" afterPath="$PROJECT_DIR$/uv.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2mwmEsJiLqJM9NtjKQWw0HNr1ab" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="sortByType" value="true" />
+    <option name="sortKey" value="BY_TYPE" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.blocks.executor": "Run",
+    "Python.cli.executor": "Run",
+    "Python.cmd.executor": "Run",
+    "Python.curevelet_test.executor": "Run",
+    "Python.datasets.executor": "Run",
+    "Python.example.executor": "Run",
+    "Python.full_api.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.map_viewer.executor": "Run",
+    "Python.myanalysis.executor": "Run",
+    "Python.processing.executor": "Run",
+    "Python.read_data.executor": "Run",
+    "Python.scan2base64.executor": "Run",
+    "Python.script.executor": "Run",
+    "Python.test.executor": "Run",
+    "Python.test_pipeline.executor": "Run",
+    "Python.test_pipeline_2.executor": "Run",
+    "Python.transforms_api.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Shell Script.run.sh.executor": "Run",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/haruiz/crop-phenomics/cropphenomics.workspace/cropphenomics.workspace.lib/gprlibpy/keys",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.stylelint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "ts.external.directory.path": "/Users/haruiz/Applications/PyCharm Professional Edition.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/keys" />
+      <recent name="$PROJECT_DIR$/src/gprlibpy/io" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/gprlibpy/widgets" />
+      <recent name="$PROJECT_DIR$/analysis/wy" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/gprlibpy/io/readers" />
+      <recent name="$PROJECT_DIR$/keys" />
+      <recent name="$PROJECT_DIR$/examples" />
+      <recent name="$PROJECT_DIR$/src/gprlibpy" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Shell Script.run.sh">
+    <configuration name="cli" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="gprlibpy" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/gprlibpy" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/gprlibpy/cli.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="curevelet_test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="gprlibpy" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/examples" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/examples/curevelet_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="read_data" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="gprlibpy" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/read_data.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_pipeline" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="gprlibpy" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/analysis/wy" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/analysis/wy/test_pipeline.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="run.sh" type="ShConfigurationType" temporary="true">
+      <option name="SCRIPT_TEXT" value="" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/run.sh" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="/bin/zsh" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Shell Script.run.sh" />
+        <item itemvalue="Python.curevelet_test" />
+        <item itemvalue="Python.cli" />
+        <item itemvalue="Python.test_pipeline" />
+        <item itemvalue="Python.read_data" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-PY-243.24978.54" />
+        <option value="bundled-python-sdk-91e3b7efe1d4-466328ff949b-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.24978.54" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8ff3a6bd-a7a1-4c48-84c1-76c0bc38de54" name="Changes" comment="" />
+      <created>1727995907159</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1727995907159</updated>
+      <workItem from="1727995914223" duration="1420000" />
+      <workItem from="1727997637885" duration="12309000" />
+      <workItem from="1728755450567" duration="3243000" />
+      <workItem from="1728936810459" duration="3187000" />
+      <workItem from="1728948898373" duration="1601000" />
+      <workItem from="1729116119633" duration="17480000" />
+      <workItem from="1729563676445" duration="14635000" />
+      <workItem from="1729904167814" duration="45864000" />
+      <workItem from="1730391832405" duration="1926000" />
+      <workItem from="1732100224295" duration="2576000" />
+      <workItem from="1735061126352" duration="1088000" />
+      <workItem from="1736258933658" duration="8512000" />
+      <workItem from="1737646161807" duration="2429000" />
+      <workItem from="1738686555662" duration="20302000" />
+      <workItem from="1739294307045" duration="3115000" />
+      <workItem from="1739305885182" duration="34229000" />
+      <workItem from="1739733073556" duration="23499000" />
+      <workItem from="1740077603030" duration="48887000" />
+      <workItem from="1740349700931" duration="4912000" />
+      <workItem from="1740362203788" duration="8550000" />
+      <workItem from="1740417906816" duration="24755000" />
+      <workItem from="1740714825643" duration="68188000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/gprlibpy$test.coverage" NAME="test Coverage Results" MODIFIED="1740725723095" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/analysis/wy" />
+    <SUITE FILE_PATH="coverage/gprlibpy$example.coverage" NAME="transforms_api Coverage Results" MODIFIED="1729170619968" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/gprlibpy$cli.coverage" NAME="cli Coverage Results" MODIFIED="1741114976788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/gprlibpy" />
+    <SUITE FILE_PATH="coverage/gprlibpy$curevelet_test.coverage" NAME="curevelet_test Coverage Results" MODIFIED="1741115152807" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
+    <SUITE FILE_PATH="coverage/gprlibpy$main.coverage" NAME="main Coverage Results" MODIFIED="1728938922100" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/gprlibpy$processing.coverage" NAME="processing Coverage Results" MODIFIED="1740725576401" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/analysis/wy" />
+    <SUITE FILE_PATH="coverage/gprlibpy$read_data.coverage" NAME="read_data Coverage Results" MODIFIED="1741114439162" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/gprlibpy$test_pipeline.coverage" NAME="test_pipeline Coverage Results" MODIFIED="1741114592074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/analysis/wy" />
+    <SUITE FILE_PATH="coverage/gprlibpy$map_viewer.coverage" NAME="map_viewer Coverage Results" MODIFIED="1741051300487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/gprlibpy/widgets/map_viewer" />
+    <SUITE FILE_PATH="coverage/gprlibpy$test_pipeline_2.coverage" NAME="test_pipeline_2 Coverage Results" MODIFIED="1740766575097" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/analysis/wy" />
+    <SUITE FILE_PATH="coverage/gprlibpy$myanalysis.coverage" NAME="scan2base64 Coverage Results" MODIFIED="1740503096330" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
+    <SUITE FILE_PATH="coverage/gprlibpy$script.coverage" NAME="script Coverage Results" MODIFIED="1740687087666" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/gprlibpy$full_api.coverage" NAME="full_api Coverage Results" MODIFIED="1739503185770" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/gprlibpy$datasets.coverage" NAME="datasets Coverage Results" MODIFIED="1741113124840" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples" />
+    <SUITE FILE_PATH="coverage/gprlibpy$blocks.coverage" NAME="blocks Coverage Results" MODIFIED="1740233292884" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/gprlibpy/blocks/sigproc" />
+    <SUITE FILE_PATH="coverage/gprlibpy$cmd.coverage" NAME="cli Coverage Results" MODIFIED="1739574009634" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/gprlibpy" />
+    <SUITE FILE_PATH="coverage/gprlibpy$transforms_api.coverage" NAME="transforms_api Coverage Results" MODIFIED="1740077826282" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
