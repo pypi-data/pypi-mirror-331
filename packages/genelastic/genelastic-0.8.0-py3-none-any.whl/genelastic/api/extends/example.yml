@@ -1,0 +1,20 @@
+---
+paths:
+  /ping_2:
+    get:
+      operationId: genelastic.api.extends.example.ping_2
+      tags:
+        - Tests
+      summary: Vérification du statut du serveur
+      description: Route de test pour vérifier que le serveur est en ligne
+      responses:
+        200:
+          description: Le serveur est en ligne
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: pong_2

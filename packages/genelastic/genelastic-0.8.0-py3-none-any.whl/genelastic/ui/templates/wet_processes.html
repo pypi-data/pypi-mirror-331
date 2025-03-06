@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block title %}Wet Processes{% endblock %}
+{% block content %}
+<h2>List of Wet Processes</h2>
+<ul>
+    {% for wet_process in wet_processes %}
+    <li>{{ wet_process }}</li>
+    {% endfor %}
+</ul>
+<a href="/">Back to Home</a>
+{% endblock %}

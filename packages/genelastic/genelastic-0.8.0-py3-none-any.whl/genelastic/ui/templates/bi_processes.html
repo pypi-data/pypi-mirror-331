@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block title %}Bi Processes{% endblock %}
+{% block content %}
+<h2>List of Bi Processes</h2>
+<ul>
+    {% for bi_process in bi_processes %}
+    <li>{{ bi_process }}</li>
+    {% endfor %}
+</ul>
+<a href="/">Back to Home</a>
+{% endblock %}
