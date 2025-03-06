@@ -1,0 +1,12 @@
+{
+    "entity": {
+        "sensor": {
+            "uptime": {
+                "name": "Uptime"
+            },
+            "volume_size_total": {
+                "name": "Volume size"
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "selector": {
+        "device_class": {
+            "options": {
+                "area": "Area",
+                "blood_glucose_concentration": "Blood glucose concentration",
+                "conductivity": "Conductivity",
+                "ph": "pH"
+            }
+        }
+    }
+}

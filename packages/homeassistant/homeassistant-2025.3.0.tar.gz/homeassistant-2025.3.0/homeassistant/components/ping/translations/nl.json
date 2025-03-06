@@ -1,0 +1,52 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Apparaat is al geconfigureerd",
+            "invalid_ip_address": "Ongeldig IP-adres."
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "host": "Host"
+                },
+                "data_description": {
+                    "host": "De hostnaam of IP-adres van het apparaat dat je wilt pingen."
+                },
+                "description": "Met ping kun je de beschikbaarheid van een host controleren.",
+                "title": "Ping toevoegen"
+            }
+        }
+    },
+    "entity": {
+        "sensor": {
+            "round_trip_time_avg": {
+                "name": "Gemiddelde rondetijd"
+            },
+            "round_trip_time_max": {
+                "name": "Maximale rondetijd"
+            },
+            "round_trip_time_mdev": {
+                "name": "Gemiddelde afwijking van de rondetijd"
+            },
+            "round_trip_time_min": {
+                "name": "Minimale rondetijd"
+            }
+        }
+    },
+    "options": {
+        "abort": {
+            "invalid_ip_address": "Ongeldig IP-adres."
+        },
+        "step": {
+            "init": {
+                "data": {
+                    "consider_home": "Beschouw als thuis interval",
+                    "host": "Host"
+                },
+                "data_description": {
+                    "consider_home": "Seconden om te wachten tot een apparaat-tracker als niet thuis wordt gemarkeerd nadat het niet meer is gezien."
+                }
+            }
+        }
+    }
+}
