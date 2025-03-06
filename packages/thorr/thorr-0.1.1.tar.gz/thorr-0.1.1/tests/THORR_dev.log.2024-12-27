@@ -1,0 +1,25 @@
+2024-12-27 15:03:13,790 - THORR_dev - INFO - End date is set to 2024-12-27 15:03:13.790009
+2024-12-27 15:03:17,107 - THORR_dev - INFO - Temperature estimates have been successfully uploaded to the database.
+2024-12-27 15:16:08,053 - THORR_dev - INFO - End date is set to 2024-12-27 15:16:08.053747
+2024-12-27 15:23:54,939 - THORR_dev - INFO - End date is set to 2024-12-27 15:23:54.939382
+2024-12-27 15:29:55,546 - THORR_dev - INFO - End date is set to 2024-12-27 15:29:55.546497
+2024-12-27 15:37:14,734 - THORR_dev - INFO - End date is set to 2024-12-27 15:37:14.734648
+2024-12-27 15:46:16,700 - THORR_dev - INFO - Chelan Dam done!
+2024-12-27 15:53:16,856 - THORR_dev - INFO - Keechelus done!
+2024-12-27 16:00:43,433 - THORR_dev - INFO - Kachess done!
+2024-12-27 16:07:37,707 - THORR_dev - INFO - Cle Elum done!
+2024-12-27 16:13:59,492 - THORR_dev - INFO - Bumping Lake done!
+2024-12-27 16:20:33,669 - THORR_dev - INFO - Tieton done!
+2024-12-27 16:27:20,291 - THORR_dev - INFO - Mossyrock done!
+2024-12-27 16:34:03,791 - THORR_dev - INFO - Mayfield done!
+2024-12-27 16:40:46,408 - THORR_dev - INFO - Cowlitz Falls Dam done!
+2024-12-27 16:47:26,209 - THORR_dev - INFO - Mt. St. Helens Sediment Retention Structure done!
+2024-12-27 16:54:20,247 - THORR_dev - INFO - Swift 1 done!
+2024-12-27 17:01:26,152 - THORR_dev - INFO - Yale done!
+2024-12-27 17:08:11,708 - THORR_dev - INFO - Bull Run Reservoir Dam 1 done!
+2024-12-27 17:33:41,333 - THORR_dev - ERROR - Error: HTTPSConnectionPool(host='earthengine.googleapis.com', port=443): Max retries exceeded with url: /v1alpha/projects/earthengine-legacy/value:compute?prettyPrint=false&alt=json (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:2423)')))
+2024-12-27 17:33:41,334 - THORR_dev - INFO - Sleeping for 41 seconds...
+2024-12-27 19:09:26,894 - THORR_dev - INFO - Restarting from checkpoint...
+2024-12-27 19:09:27,062 - THORR_dev - ERROR - Error: 'NoneType' object has no attribute 'filter'
+2024-12-27 19:09:27,063 - THORR_dev - INFO - Sleeping for 37 seconds...
+2024-12-27 20:10:51,253 - THORR_dev - INFO - Restarting from checkpoint...
