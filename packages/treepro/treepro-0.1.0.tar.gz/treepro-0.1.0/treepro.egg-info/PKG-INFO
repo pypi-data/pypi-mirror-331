@@ -1,0 +1,15 @@
+Metadata-Version: 2.2
+Name: treepro
+Version: 0.1.0
+Summary: An advanced version of the Unix tree command.
+Author: Your Name
+Author-email: Your Name <your.email@example.com>
+Description-Content-Type: text/markdown
+Requires-Dist: rich
+Requires-Dist: click
+Requires-Dist: questionary
+Requires-Dist: pyyaml
+Requires-Dist: pathspec
+Dynamic: author
+
+# LLMTREE
