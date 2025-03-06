@@ -1,0 +1,1 @@
+from .mini_version_manager import version_manager, show_version_history
