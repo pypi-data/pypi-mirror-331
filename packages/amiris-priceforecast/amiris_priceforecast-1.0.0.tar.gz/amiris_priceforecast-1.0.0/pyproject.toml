@@ -1,0 +1,60 @@
+# SPDX-FileCopyrightText: 2025 German Aerospace Center <amiris@dlr.de>
+#
+# SPDX-License-Identifier: Apache-2.0
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "amiris-priceforecast"
+version = "1.0.0"
+description = "An extension to the agent-based electricity market model AMIRIS providing external electricity price forecasts to the PriceForecasterApi agent"
+license = "Apache-2.0"
+authors = [
+    "Felix Nitsch <amiris@dlr.de>",
+    "Christoph Schimeczek <amiris@dlr.de>",
+]
+maintainers = [
+    "Felix Nitsch <amiris@dlr.de>",
+]
+readme = "README.md"
+homepage = "https://helmholtz.software/software/amiris"
+repository = "https://gitlab.com/dlr-ve/esy/amiris/extensions/priceforecast/"
+keywords = [
+    "AMIRIS",
+    "agent-based modelling",
+    "electricity market",
+    "electricity price forecast",
+    "simulation",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering",
+    "Environment :: Console",
+    "Intended Audience :: Science/Research",
+]
+packages = [{ include = "priceforecast" }]
+include = ["CHANGELOG.md"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fameio = ">=3.0"
+pandas = ">= 2.0, <3.0"
+"fastapi[all]" = "*"
+uvicorn = "*"
+pydantic = "*"
+darts = ">=0.33"
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.1"
+black = "^23.10"
+
+[tool.poetry.scripts]
+priceforecast = "priceforecast:main"
+
+[tool.black]
+line-length = 120
