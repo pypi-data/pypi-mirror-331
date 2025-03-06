@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+scraperator/__init__.py
+scraperator/base_scraper.py
+scraperator/markdown_converter.py
+scraperator/playwright_scraper.py
+scraperator/request_scraper.py
+scraperator/scraper.py
+scraperator.egg-info/PKG-INFO
+scraperator.egg-info/SOURCES.txt
+scraperator.egg-info/dependency_links.txt
+scraperator.egg-info/requires.txt
+scraperator.egg-info/top_level.txt
