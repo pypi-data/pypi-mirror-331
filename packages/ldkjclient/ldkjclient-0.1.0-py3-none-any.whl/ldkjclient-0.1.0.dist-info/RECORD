@@ -1,0 +1,7 @@
+sms/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sms/examples.py,sha256=CpUgXAEdfwWnlIi3NtatWFOTeOzvnCiRjRrsfhL9w8I,254
+sms/sms_client.py,sha256=Fxwr16KR0DBxYLwv5y87dqPJXIxebDhWfLaHUmbMFCM,1612
+ldkjclient-0.1.0.dist-info/METADATA,sha256=vtKOcNIHc0BHg4jou23UWY1ewGx2rcQoONnArdrv_Z0,361
+ldkjclient-0.1.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+ldkjclient-0.1.0.dist-info/top_level.txt,sha256=bGy2pOu7Jcsom9RUzqt2-gIloVUTFNcVleUeYh8_IwA,4
+ldkjclient-0.1.0.dist-info/RECORD,,
