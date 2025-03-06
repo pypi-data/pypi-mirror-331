@@ -1,0 +1,6 @@
+numpy
+Pillow>=9.0.1
+objtoolbox>=0.0.15
+minireload>=0.0.9
+matplotlib
+matplotlib-scalebar
