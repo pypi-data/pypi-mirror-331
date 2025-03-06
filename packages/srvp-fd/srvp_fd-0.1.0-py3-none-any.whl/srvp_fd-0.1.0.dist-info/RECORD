@@ -1,0 +1,9 @@
+srvp_fd/__init__.py,sha256=D7f0qXr7AxQxmJqQXSCT3yB7ArfThKsEuS5dQKzc5nQ,385
+srvp_fd/frechet_distance.py,sha256=Z_C468qyFacQZupmOEkvLx7nnnbcIoCjFAxJrfFUmj8,13076
+srvp_fd/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+srvp_fd/srvp_model.py,sha256=_VmKY8odPlLqyqaSqkzThG2kP7FQKUpyfw19WyFuQi0,10393
+srvp_fd-0.1.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+srvp_fd-0.1.0.dist-info/METADATA,sha256=ryR6lx2OHVKeGByn8bNYnJTij3YhQk46PoAdr6a1rUk,9523
+srvp_fd-0.1.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+srvp_fd-0.1.0.dist-info/top_level.txt,sha256=nBN5_KGo4JHkIM1OJrdpZSwbYjrtFoBjzXrD-hso2MU,8
+srvp_fd-0.1.0.dist-info/RECORD,,
