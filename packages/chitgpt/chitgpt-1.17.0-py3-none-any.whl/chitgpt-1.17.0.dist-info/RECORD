@@ -1,0 +1,10 @@
+chit/__init__.py,sha256=iJ0svEAutGa9nuOC-zGGWk7qpRps732GZ8eBjmE49Ao,1004
+chit/chit.py,sha256=xY4wy3iN8mcQt66CDyUDpZlXGPEXPdRHkJNMKYorkY4,63228
+chit/config.py,sha256=nt3SRsG_E9mkWDLghU2AtH9mugtakEJbbaDk5pnfiac,1536
+chit/images.py,sha256=dB-3Wn4nZeHEqRhrgMptLv6RUkF5GMLXv-wCQNNP8aY,2588
+chit/import_claude.py,sha256=I9gjK0yY9y6hlZ87CEHxZTMZf5cjdkzUGt1xw4irc50,7019
+chit/utils.py,sha256=wjeBZ30MwlVd2sHYgbTa1xpg_-K0S7i8nAxw-lk_WmU,887
+chitgpt-1.17.0.dist-info/METADATA,sha256=Wh14bWgZr8ZOumjwFgqr7GKNCXR1VsChC3-Wf0F5PTo,9411
+chitgpt-1.17.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+chitgpt-1.17.0.dist-info/top_level.txt,sha256=c0vh5WvMbCnAUdIztHg-9GGPuh_OoNeKHFUiLMWJb24,5
+chitgpt-1.17.0.dist-info/RECORD,,
