@@ -1,0 +1,13 @@
+mapuche/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mapuche/__main__.py,sha256=BF__ZXl9lTpPm0nwC84uYJa5RuiYdbS6diRUaRgVnEg,34
+mapuche/mapuche.py,sha256=1Y7zROTUaCr6Z3yJGS0VUXn2JoaOSyqk8yiidxhr-6Q,7140
+mapuche/models.py,sha256=W5PXismEvQCSQ0rZdKjSmEeQSMaIkoUvqkhGWqpFKV4,2449
+mapuche/parser.py,sha256=8_IvqaH0GzG4eeJBgVGPNgNE6IGIChlconjAzA8JcW4,4220
+mapuche/styles.py,sha256=tgM_gVoO0Zae1K3Z-VpVLp-vKA9p78n6HVIkmn2gTC4,1283
+mapuche/tree_table.py,sha256=C-WJ5ifuyG-xjb2CmXhZ4qNxaW5mQvwZVp8Lrjqa0gA,106181
+mapuche-1.0.3.dist-info/LICENSE,sha256=jS1YsWOvQ0dZO6rfy6uzJ56PM4SYgEH5y5vg5B69o30,1069
+mapuche-1.0.3.dist-info/METADATA,sha256=2IoLOj5lOxiAkhhGrPZlSk_m_Pi2LluPuyhtYbsVpqY,1892
+mapuche-1.0.3.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+mapuche-1.0.3.dist-info/entry_points.txt,sha256=uuO8lW_rQR8yZBK0jMxEcBGexgFZahqA8az1vGtyyq8,49
+mapuche-1.0.3.dist-info/top_level.txt,sha256=snLvSf2FqPNMr5KmDbW9FzgVA1YeXL7UjEQUn9xi8G8,8
+mapuche-1.0.3.dist-info/RECORD,,

@@ -1,0 +1,2 @@
+[console_scripts]
+mapuche = mapuche.mapuche:main
