@@ -1,0 +1,7 @@
+MANIFEST.in
+setup.py
+tutorial_factorial.egg-info/PKG-INFO
+tutorial_factorial.egg-info/SOURCES.txt
+tutorial_factorial.egg-info/dependency_links.txt
+tutorial_factorial.egg-info/entry_points.txt
+tutorial_factorial.egg-info/top_level.txt

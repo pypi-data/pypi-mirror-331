@@ -1,0 +1,2 @@
+[console_scripts]
+tutorial_factorial = tutorial_factorial:main
