@@ -1,0 +1,5 @@
+[console_scripts]
+camoufox-scraper = camoufox_scraper.scraper:main
+
+[gui_scripts]
+
