@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "CCTV_detector_new"
+version = "0.1.0"
+description = "CCTV Intelligent Detection System based on YOLOv8"
+readme = "cctv_detector/README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "CCTV Development Team", email = "info@cctv-detector.com"}
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/cctv-detector/CCTV_detector_new"
+"Bug Tracker" = "https://github.com/cctv-detector/CCTV_detector_new/issues" 

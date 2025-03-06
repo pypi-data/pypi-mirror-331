@@ -1,0 +1,31 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+CCTV_detector_new.egg-info/PKG-INFO
+CCTV_detector_new.egg-info/SOURCES.txt
+CCTV_detector_new.egg-info/dependency_links.txt
+CCTV_detector_new.egg-info/top_level.txt
+cctv_detector/README.md
+cctv_detector/__init__.py
+cctv_detector/cctv_detector.py
+cctv_detector/cctv_server.py
+cctv_detector/detect.py
+cctv_detector/requirements.txt
+cctv_detector/start_server.bat
+cctv_detector/start_server.sh
+cctv_detector/models/segment_best228.pt
+cctv_detector/results/1930_result_247dcd72.JPG
+cctv_detector/results/23516 (2)_result_ed5d5d32.jpg
+cctv_detector/test_images/0017.JPG
+cctv_detector/test_images/0018.JPG
+cctv_detector/test_images/0037.JPG
+cctv_detector/test_images/0507.JPG
+cctv_detector/test_images/06218.jpg
+cctv_detector/test_images/07418.jpg
+cctv_detector/test_images/0909.JPG
+cctv_detector/test_images/0910 (2).JPG
+cctv_detector/test_images/1505.JPG
+cctv_detector/test_images/1930.JPG
+cctv_detector/test_images/2026.JPG
+cctv_detector/test_images/21581.jpg

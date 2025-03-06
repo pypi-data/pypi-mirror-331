@@ -1,0 +1,8 @@
+include cctv_detector/README.md
+include cctv_detector/requirements.txt
+include cctv_detector/start_server.sh
+include cctv_detector/start_server.bat
+recursive-include cctv_detector/models *
+recursive-include cctv_detector/test_images *
+recursive-include cctv_detector/results *
+recursive-include cctv_detector/temp * 
