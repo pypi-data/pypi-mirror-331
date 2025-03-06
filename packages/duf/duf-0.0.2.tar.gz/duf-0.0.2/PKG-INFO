@@ -1,0 +1,17 @@
+Metadata-Version: 2.2
+Name: duf
+Version: 0.0.2
+Summary: development utilities of fans656
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+Requires-Dist: click>=8.1.8
+Requires-Dist: deepmerge>=2.0
+Requires-Dist: fans>=0.0.56
+Requires-Dist: fansauth>=0.0.31
+Requires-Dist: fastapi>=0.115.11
+Requires-Dist: pytz>=2025.1
+Requires-Dist: pyyaml>=6.0.2
+Requires-Dist: requests>=2.32.3
+Requires-Dist: uvicorn>=0.34.0
+
+duf - development utilities of fans656
