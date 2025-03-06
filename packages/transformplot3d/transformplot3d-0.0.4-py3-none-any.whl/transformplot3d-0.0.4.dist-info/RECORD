@@ -1,0 +1,9 @@
+transformplot3d/__init__.py,sha256=RFYe_ljJfhQQZ8KHJUhV2P6XF9kgwULou-2x5haro-Q,964
+transformplot3d/core/__init__.py,sha256=5F65SGfWjdTsAFiwhe6Z-S0jc2SDFA2CBuiQ_zA1QCM,448
+transformplot3d/core/quiver.py,sha256=s7TiZUbzefRPtJ_GDO-9jYMqPHGeKKzP4zhm0WNMLik,6012
+transformplot3d/core/vectors.py,sha256=nmPGSOlj9chTA52xHePj8LZEz7RnmB9fJ6txFExdU7Q,1815
+transformplot3d-0.0.4.dist-info/LICENSE,sha256=FHo3YUVhJ7y4raLDRyijAdAazTFpRqrX1gXDqc435vI,1233
+transformplot3d-0.0.4.dist-info/METADATA,sha256=IyVMewG6VIrgE3-ps8NBGmk93l_DrlbY96vGkci6OkU,3335
+transformplot3d-0.0.4.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+transformplot3d-0.0.4.dist-info/top_level.txt,sha256=Zaw9DijTUqOZa6yjncoZLHPYGLHTzuSoCuzeleGq7c4,16
+transformplot3d-0.0.4.dist-info/RECORD,,
