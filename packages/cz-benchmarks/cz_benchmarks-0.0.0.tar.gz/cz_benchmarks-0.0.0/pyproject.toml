@@ -1,0 +1,7 @@
+[project]
+name = "cz-benchmarks"
+authors = [
+    {name = "Chan Zuckerberg Initiative", email = "pypi@chanzuckerberg.com"},
+]
+version = "0.0.0"
+description = "Coming soon"
