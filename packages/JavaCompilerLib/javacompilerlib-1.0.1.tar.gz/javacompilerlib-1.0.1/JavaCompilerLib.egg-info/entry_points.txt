@@ -1,0 +1,2 @@
+[console_scripts]
+javacompiler = JavaCompilerLib.ui:main
