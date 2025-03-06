@@ -1,0 +1,64 @@
+Metadata-Version: 2.2
+Name: cn2date
+Version: 0.1.2
+Summary: 中文日期 、口语 转换为 日期字符串
+Home-page: https://github.com/drawmoon/cn2date
+Author: drash
+Author-email: drawmoonsh@outlook.com.com
+License: MIT License
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: lark
+Requires-Dist: python-dateutil
+Requires-Dist: cn2an
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# cn2date
+
+[![Pypi Version][pypi-image]][pypi-url]
+
+中文日期 、口语 转换为 日期字符串
+
+## 安装
+
+```bash
+pip install cn2date
+```
+
+## 使用
+
+```python
+from cn2date import parse
+
+parse("2023年").output()
+# 输出结果：2023-01-01 00:00:00 - 2023-12-31 23:59:59.999999
+
+parse("二零二三年十二月二十一日").output()
+# 输出结果：2023-12-21 00:00:00 - 2023-12-21 23:59:59.999999
+
+parse("今年").output()
+# 输出结果：2024-01-01 00:00:00 - 2024-12-31 23:59:59.999999
+
+parse("本季度").output()
+# 输出结果：2024-01-01 00:00:00 - 2024-03-31 23:59:59.999999
+```
+
+## 许可证
+
+[MIT License](LICENSE)
+
+[pypi-image]: https://badge.fury.io/py/cn2date.svg
+[pypi-url]: https://pypi.org/project/cn2date/
