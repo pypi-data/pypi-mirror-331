@@ -1,0 +1,22 @@
+Metadata-Version: 2.2
+Name: PythonDSSAnalysis
+Version: 1.3
+Summary: A python package for DSS Analysis
+Home-page: https://github.com/granthendrickson19/Python-DSS-Analysis
+Author: Grant Hendrickson
+Author-email: granthendrickson19@gmail.com
+License: MIT
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.9
+License-File: LICENSE
+Requires-Dist: numpy>=2.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: summary
