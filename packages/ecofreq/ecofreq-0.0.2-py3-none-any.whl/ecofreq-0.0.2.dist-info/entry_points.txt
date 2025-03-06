@@ -1,0 +1,4 @@
+[console_scripts]
+ecoctl = ecofreq.ecoctl:main
+ecofreq = ecofreq.ecofreq:main
+ecorun = ecofreq.ecorun:main
