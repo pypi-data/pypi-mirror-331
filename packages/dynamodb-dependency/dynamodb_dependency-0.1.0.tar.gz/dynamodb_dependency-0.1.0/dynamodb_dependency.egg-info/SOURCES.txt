@@ -1,0 +1,7 @@
+README.md
+setup.py
+dynamodb_dependency.egg-info/PKG-INFO
+dynamodb_dependency.egg-info/SOURCES.txt
+dynamodb_dependency.egg-info/dependency_links.txt
+dynamodb_dependency.egg-info/requires.txt
+dynamodb_dependency.egg-info/top_level.txt
