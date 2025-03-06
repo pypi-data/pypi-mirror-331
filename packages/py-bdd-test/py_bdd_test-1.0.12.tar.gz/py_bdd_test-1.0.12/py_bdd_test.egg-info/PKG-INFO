@@ -1,0 +1,9 @@
+Metadata-Version: 2.2
+Name: py-bdd-test
+Version: 1.0.12
+Requires-Dist: behave
+Requires-Dist: parse
+Requires-Dist: parse_type
+Requires-Dist: kafka-python
+Requires-Dist: pyhamcrest
+Dynamic: requires-dist
