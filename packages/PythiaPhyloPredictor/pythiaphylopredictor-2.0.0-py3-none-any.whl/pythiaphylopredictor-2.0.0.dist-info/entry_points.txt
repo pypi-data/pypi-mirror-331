@@ -1,0 +1,2 @@
+[console_scripts]
+pythia = pypythia.main:main
