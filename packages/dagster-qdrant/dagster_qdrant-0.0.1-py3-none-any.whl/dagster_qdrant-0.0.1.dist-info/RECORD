@@ -1,0 +1,7 @@
+dagster_qdrant/__init__.py,sha256=Zq15AUQymtC_K42Om0ow-UwvKA6v0FT2F5me60bgsAU,144
+dagster_qdrant/config.py,sha256=gYyCJdVZYXGfbgt-xrAgSNNhld46QloF8I7K1qU2zeU,1875
+dagster_qdrant/resource.py,sha256=2BxPafTqTLZJiDNNiXLU2P2MBHxWbIUs70rOltHAonE,680
+dagster_qdrant-0.0.1.dist-info/METADATA,sha256=E9j6caTw6S9G2K8sJIyoaDJQtoqsxjakO7ZtYMNuvWs,1821
+dagster_qdrant-0.0.1.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+dagster_qdrant-0.0.1.dist-info/top_level.txt,sha256=JVrjVRD84y5pMLpIIHd-s_PN1M_Y4TsDp11hdu-0t4E,15
+dagster_qdrant-0.0.1.dist-info/RECORD,,
