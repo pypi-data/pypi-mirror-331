@@ -1,0 +1,8 @@
+__pycache__
+.coverage
+.vscode
+dist/
+venv/
+docs/_build
+docs/generated
+docs/apidocs/
