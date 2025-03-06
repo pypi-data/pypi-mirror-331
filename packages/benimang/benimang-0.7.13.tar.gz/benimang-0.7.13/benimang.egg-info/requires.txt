@@ -1,0 +1,12 @@
+aioconsole
+aiofiles
+aiohttp
+async_timeout
+chardet
+colorama
+httpx
+nest-asyncio
+orjson
+pyperclip
+python-box
+tzdata
