@@ -1,0 +1,89 @@
+Metadata-Version: 2.3
+Name: wkdhash
+Version: 0.1.0
+Summary: Calculate WKD (Web-Key-Directory) UID Hashes for OpenGPG UIDs
+License: MIT
+Keywords: wkd,openpgp,gpg
+Author: Gregor Vollmer
+Author-email: git@dynamic-noise.net
+Requires-Python: >=3.11
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Typing :: Typed
+Requires-Dist: z-base-32 (>=0.1.4,<0.2.0)
+Project-URL: Homepage, https://github.com/gregorv/wkdhash
+Project-URL: Repository, https://github.com/gregorv/wkdhash
+Description-Content-Type: text/markdown
+
+# wkdhash
+
+Calculate Web-Key-Directory hashes of OpenPGP UIDs.
+
+The [Web-Key-Directory (WKD)](https://wiki.gnupg.org/WKD) is a method for
+deploying OpenPGP public keys for an email address through HTTPS.
+
+For this, the keys user IDs are decomposed into their mailbox local part
+(the thing before the @ sign). This is then sha1 hashed and z-base-32 encoded,
+resulting in the "hu" (hashed user-id, I guess?).
+
+The public key is then made available under a well-known URL containing the
+hu. So to deploy your public key to your webserver, you have to figure out
+what your uid's hu is. This can be done with
+
+```bash
+gpg --list-keys --with-wkd-hash $IDENTITY
+```
+
+but it is not easily doable from Python when using python-gnupg.
+
+## API
+
+A single function is the only thing you really need:
+
+```python
+from wkdhash import userid_to_wkd_hash
+
+assert(userid_to_wkd_hash("mail@example.com") == "dizb37aqa5h4skgu7jf1xjr4q71w4paq")
+assert(userid_to_wkd_hash("Test User <mail@example.com>", include_domain=True) == "dizb37aqa5h4skgu7jf1xjr4q71w4paq@example.com")
+```
+
+## Command-line-utility
+
+A simple command line utility entry-point is provided by this package,
+which reads user IDs from an input stream (default stdin) and writes
+the hu to an output stream (default stdout). So this module can also
+be used for bash scripting.
+
+
+```
+usage: wkdhash [-h] [-F] [-o outfile] [infile]
+
+Read OpenPGP User IDs line-by-line and print their corresponding Web-Key-Directory hashed-user-id (hu).
+
+positional arguments:
+  infile                Input OpenPGP UserID, defaults to stdin
+
+options:
+  -h, --help            show this help message and exit
+  -F, --full            If set, output 'hu@domain', instead of just 'hu'
+  -o, --output outfile  Output, default stdout
+
+MIT License, Copyright (c) 2025 Gregor Vollmer
+```
+
+### Example Usage
+```bash
+$ echo "mail@example.com" | poetry run wkdhash
+dizb37aqa5h4skgu7jf1xjr4q71w4paq
+$ echo "Test User <mail@example.com>" | poetry run wkdhash -F
+dizb37aqa5h4skgu7jf1xjr4q71w4paq@example.com
+$ poetry run wkdhash
+mail@example.com^Ddizb37aqa5h4skgu7jf1xjr4q71w4paq
+```
+
