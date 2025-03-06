@@ -1,0 +1,35 @@
+Metadata-Version: 2.2
+Name: project_euler_utils
+Version: 0.2.1
+Summary: Utility functions to solve project-euler and math problems
+Author: Shlok Kothari
+Requires-Python: >=3.1
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=2.0
+Dynamic: author
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+## project_euler_utils
+
+This package is aimed to provide utility functions and solutions to project euler problems and also other 
+math related problems
+
+## Installation
+
+```
+pip install project_euler_utils
+```
+
+## Contributing
+
+Please refer to CONTRIBUTING.md
+
+## Contact
+- Email - shlok.kothari@gmail.com
+
+You can also open an issue on GitHub if you encounter any problems or need further assistance.
