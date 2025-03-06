@@ -1,0 +1,11 @@
+github_scrapper/__init__.py,sha256=yf216XNtU-kmI8FJp9N4AJQITeaFIrQeKudQwK7sLz0,73
+github_scrapper/app/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+github_scrapper/app/git_code_scraper.py,sha256=9gJ_AmcuimUHUFoEJW3BQcW8syvAQruywK7i_leSi2g,7494
+github_scrapper/app/main.py,sha256=MfzLDa5ghvEIyo_S3-U5Cm47TUtfxqe1Ve8rmBUK8ME,2406
+github_scrapper/config/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+github_scrapper/config/logging_config.py,sha256=fJ0uIwO3W3NL6Y0KlJC9ouS-cOkeWGWKydIWsJw8QAY,622
+github_scrapper-0.1.0.dist-info/LICENSE,sha256=q9YtM-ADyJa0LCPZX5D8zZAwcVhYkw4Ix--E4fZV_2k,134
+github_scrapper-0.1.0.dist-info/METADATA,sha256=Yk71b7rs33JLl6pTtzMp3oXaXw33Ds3LlsPWXI9m0dI,1131
+github_scrapper-0.1.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+github_scrapper-0.1.0.dist-info/entry_points.txt,sha256=ygJzLwy8TZUWk-htP5mBzf0BwY1Zt76KNT2czpsjJec,65
+github_scrapper-0.1.0.dist-info/RECORD,,
