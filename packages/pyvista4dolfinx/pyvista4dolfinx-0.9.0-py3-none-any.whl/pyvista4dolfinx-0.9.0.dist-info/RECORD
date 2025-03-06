@@ -1,0 +1,9 @@
+pyvista4dolfinx/__init__.py,sha256=QcATzNHN969KHPxAujLmf6FVVBSZcfHj5kBcYf2DLKw,62
+pyvista4dolfinx/gather.py,sha256=2Tai7hoYvW4mkKxMw_C3cEt1D6q4Ga5zne69cJ20eUg,7279
+pyvista4dolfinx/plot.py,sha256=ffleG4vLUHMhWs7e9SCOz4ItQRTTFOu6TJOjcInv8tg,20292
+pyvista4dolfinx/safeplotter.py,sha256=yQ73s7YJfBARsdx1oAM1Dwc1w6u8XsVg2VbvdS3JPeE,1099
+pyvista4dolfinx-0.9.0.dist-info/LICENSE,sha256=TrKhzIKZRVosAj6XHUNMen_e7QoVdPHerRS910O8CVE,1076
+pyvista4dolfinx-0.9.0.dist-info/METADATA,sha256=cy5aQ0j5wkzw05srmbSgUJ-NavxlZbBJEOSYPd_PFnA,3191
+pyvista4dolfinx-0.9.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+pyvista4dolfinx-0.9.0.dist-info/top_level.txt,sha256=ivpSj6AKsMdKXkv6Zp6eaMBT6Ez1bO6gyczZUJCI2Fc,16
+pyvista4dolfinx-0.9.0.dist-info/RECORD,,
