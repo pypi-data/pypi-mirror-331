@@ -1,0 +1,11 @@
+LICENSE.md
+README.md
+setup.py
+ae/dynamicod.py
+ae_dynamicod.egg-info/PKG-INFO
+ae_dynamicod.egg-info/SOURCES.txt
+ae_dynamicod.egg-info/dependency_links.txt
+ae_dynamicod.egg-info/requires.txt
+ae_dynamicod.egg-info/top_level.txt
+ae_dynamicod.egg-info/zip-safe
+tests/test_dynamicod.py
