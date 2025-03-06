@@ -1,0 +1,142 @@
+Metadata-Version: 2.1
+Name: polaris-python-bzl
+Version: 0.0.3
+Summary: Polaris Python Client
+Author: bzl
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+# Polaris python 客户端
+
+## 构建方式
+```shell
+rm -fr ceres/polaris
+poetry build
+# poetry publish
+# twine upload dist/*
+```
+
+## 获取方式
+* 安装依赖的方式
+```shell
+pip install polaris-python-bzl==0.0.2
+```
+
+## 命令行工具
+```shell
+# python -m ceres -h 获取更多用法
+# 注册实例(-r参数): 注册一个固定实例(关闭健康检查）， 注意 token 必须
+python -m ceres -e rd -r -s "my-service" -n "bzl-infra" -i "127.0.0.2" -p 123 -t "***"
+
+# 发现实例(token可选)
+python -m ceres -e rd -s "my-service" -n "bzl-infra" -c 100
+
+# python -m ceres -h 获取更多用法
+# 反注册实例(-d参数): 反注册一个固定实例(id 或namespace+service+host+port都可以反注册），注意 token 必须
+python -m ceres -e rd -d -s "my-service" -n "bzl-infra" -id "********************" -t "***"
+python -m ceres -e rd -d -s "my-service" -n "bzl-infra" -i "127.0.0.2" -p 123 -t "***"
+```
+
+## 示例代码
+```python
+import json
+from ceres.polaris import CeresClient, RegisterInstance, Instance, InstanceRequest
+import sys
+from time import sleep
+
+
+def provide():
+    ### 注册实例，注意填写正确的token：
+    try:
+        cc = CeresClient(_host='127.0.0.1', _token='********')
+        instance = RegisterInstance(namespace='bzl-infra', service='my-service', host='1.1.1.1', port=1234)
+        response = cc.register_instance(instance)
+    except Exception as e:
+        print("request error:", e)
+        sys.exit(1)
+    # ...
+    print(response.__dict__ if instance is not None else None)
+    # 注册id
+    instance.id = response.id
+
+    # ...
+    sleep(10)
+
+    # 程序退出前反注册
+    print(cc.deregister_instance(instance).__dict__ if instance is not None else None)
+
+
+def consume():
+    ### 发现（获取所有健康实例）：
+    try:
+        cc = CeresClient(_host='127.0.0.1')
+        instances = cc.get_healthy_instances(InstanceRequest(namespace='bzl-infra', service='my-service'))
+        print(json.dumps([instance.__dict__ for instance in instances]) if instances is not None else None)
+    except Exception as e:
+        print(e)
+        sys.exit(1)
+
+
+def consume_one():
+    ### 发现（根据权重获取单个实例）：
+    try:
+        cc = CeresClient(_host='127.0.0.1')
+        for i in range(0, 100):
+            instance = cc.get_one_instance(InstanceRequest(namespace='bzl-infra', service='my-service'))
+            print('weight', instance.__dict__ if instance is not None else None)
+    except Exception as e:
+        print(e)
+        sys.exit(1)
+
+
+def consume_one_by_hash():
+    ### 发现（根据hash-key获取列表内的固定实例）：
+    try:
+        cc = CeresClient(_host='127.0.0.1')
+        for i in range(0, 100):
+            instance = cc.get_one_instance(InstanceRequest(namespace='bzl-infra', service='my-service', hash_key='1'))
+            print('hash', instance.__dict__ if instance is not None else None)
+    except Exception as e:
+        print(e)
+        sys.exit(1)
+
+def consume_one_by_filter():
+    ### 发现（根据filter获取列表内的实例）
+
+    def filter_http(_instance:Instance):
+        """仅获取协议为http的实例"""
+        return _instance.protocol == 'http'
+
+    def filter_metadata(_instance:Instance):
+        """获取metadata中 dubbo-version 以 2.7 开头的实例"""
+        return _instance.metadata.get('dubbo-version', '').startswith('2.7') if _instance.metadata is not None else False
+
+    try:
+        cc = CeresClient(_host='127.0.0.1')
+        for i in range(0, 100):
+            instance = cc.get_one_instance(InstanceRequest(namespace='bzl-infra', service='my-service', filter_func=filter_http))
+            print('filter http', instance.__dict__ if instance is not None else None)
+
+            instance = cc.get_one_instance(InstanceRequest(namespace='bzl-infra', service='my-service', filter_func=filter_metadata))
+            print('filter metadata', instance.__dict__ if instance is not None else None)
+    except Exception as e:
+        print(e)
+        sys.exit(1)
+
+
+if __name__ == '__main__':
+    # provide()
+    consume()
+    consume_one()
+    consume_one_by_hash()
+    consume_one_by_filter()
+```
+
