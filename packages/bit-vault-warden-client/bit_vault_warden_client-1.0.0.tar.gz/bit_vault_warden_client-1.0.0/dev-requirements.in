@@ -1,0 +1,10 @@
+coverage
+flake8
+hatch
+pip-tools
+pylint
+pytest
+pytest-cov
+pytest-cover
+rich
+twine

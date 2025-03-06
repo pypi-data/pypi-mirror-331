@@ -1,0 +1,12 @@
+.idea/
+.pytest_cache/
+.venv/
+.vscode/
+__pycache__/
+dist/
+htmlcov/
+venv/
+.coverage
+*.crt
+main.py
+demo.py
