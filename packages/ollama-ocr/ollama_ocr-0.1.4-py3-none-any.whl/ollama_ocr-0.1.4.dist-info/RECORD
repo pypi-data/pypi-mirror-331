@@ -1,0 +1,8 @@
+ollama_ocr/__init__.py,sha256=qKu14Up1kr9JmF-oC_lRmFylkK4RHwODM5EIpH3DXSk,128
+ollama_ocr/app.py,sha256=cdJJVtqzFJSdyV6IYIscWQZrO-VByhv2L1pe1R7_KMA,10182
+ollama_ocr/ocr_processor.py,sha256=Dj_HR4PcRnauFCSDH7mOKS-VmMFWsHRsvDiilPnlIUY,9823
+ollama_ocr-0.1.4.dist-info/LICENSE,sha256=l7VB9AFaaY9MFuZF5SfZ-MOk_osCLJmPbTmPRYb62Jc,1090
+ollama_ocr-0.1.4.dist-info/METADATA,sha256=oaFK2eI5ZYkP4z1fwSScrjjoI_hgDJioJKKPMXc0kII,6571
+ollama_ocr-0.1.4.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+ollama_ocr-0.1.4.dist-info/top_level.txt,sha256=_jsooILXLWrzXvDh9Fn4L9xvjKVBcYPRV3KjNq7zL4Y,11
+ollama_ocr-0.1.4.dist-info/RECORD,,
