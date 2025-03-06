@@ -1,0 +1,7 @@
+[project]
+name = "memorylab-client"
+authors = [
+    {name = "Devis Lucato", email = "dluc@users.noreply.github.com"},
+]
+version = "0.0.1"
+description = "MemoryLab Client"
