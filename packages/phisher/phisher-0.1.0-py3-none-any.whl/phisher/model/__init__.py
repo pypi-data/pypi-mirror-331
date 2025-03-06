@@ -1,0 +1,3 @@
+from .phisher_model import PhisherModel
+from .phisher_one_hot_model import PhisherOneHotModel
+from .phisher_embeddings_model import PhisherEmbeddingModel
