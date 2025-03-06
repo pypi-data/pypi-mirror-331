@@ -1,0 +1,32 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Edit UI",
+            "detail": "Edit the UI file in  Qt Designer",
+            "type": "shell",
+            "command": "qt-build",
+            "args": [
+                "edit",
+                "src/node_hermes_canopen/ui/interface.ui"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+        },
+        {
+            "label": "Build UI",
+            "detail": "Build the UI file in  Qt Designer",
+            "type": "shell",
+            "command": "qt-build",
+            "args": [
+                "convert",
+                "src/node_hermes_canopen/ui/interface.ui",
+                "-i"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+        }
+    ]
+}
