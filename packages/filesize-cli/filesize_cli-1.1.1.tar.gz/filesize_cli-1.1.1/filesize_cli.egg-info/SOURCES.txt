@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+filesize_cli/__init__.py
+filesize_cli/main.py
+filesize_cli.egg-info/PKG-INFO
+filesize_cli.egg-info/SOURCES.txt
+filesize_cli.egg-info/dependency_links.txt
+filesize_cli.egg-info/entry_points.txt
+filesize_cli.egg-info/top_level.txt
+tests/__init__.py
+tests/test_main.py
