@@ -1,0 +1,22 @@
+Metadata-Version: 2.3
+Name: snakemake-executor-plugin-aws-batch
+Version: 0.1.0
+Summary: 
+Keywords: snakemake,plugin,executor,aws-batch
+Author: jakevc
+Author-email: jake.vancampen7@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: boto3 (>=1.36.5,<2.0.0)
+Requires-Dist: snakemake-interface-common (>=1.17.4,<2.0.0)
+Requires-Dist: snakemake-interface-executor-plugins (>=9.3.2,<10.0.0)
+Project-URL: Documentation, https://snakemake.github.io/snakemake-plugin-catalog/plugins/executor/aws-batch.html
+Project-URL: Repository, https://github.com/snakemake/snakemake-executor-plugin-aws-batch
+Description-Content-Type: text/markdown
+
+# Snakemake executor plugin: aws-batch
+
+A Snakemake executor plugin for submitting jobs to AWS Batch. Documentation can be found in the [Snakemake plugin catalog](https://snakemake.github.io/snakemake-plugin-catalog/plugins/executor/aws-batch.html").

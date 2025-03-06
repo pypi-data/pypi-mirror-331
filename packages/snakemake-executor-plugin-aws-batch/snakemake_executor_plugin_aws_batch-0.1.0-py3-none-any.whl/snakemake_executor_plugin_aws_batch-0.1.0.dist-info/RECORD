@@ -1,0 +1,8 @@
+snakemake_executor_plugin_aws_batch/__init__.py,sha256=tRvyLIGygR8sQduhtmrQjUxL3Q8i6NcopAa2az4QpHM,11003
+snakemake_executor_plugin_aws_batch/batch_client.py,sha256=F6093WtgG-wEvrx-Guo2Qpk9-VjzZY2MKZCHO7q-9sw,2502
+snakemake_executor_plugin_aws_batch/batch_job_builder.py,sha256=QrP-75vlYal6nB7RY5i-yRdplPZffBLCKdu9Rst29Is,4819
+snakemake_executor_plugin_aws_batch/constant.py,sha256=9Pzd9RT5TloRvdHNoQSDGVJ4PliZCFLVhzqpNp28BCk,1137
+snakemake_executor_plugin_aws_batch-0.1.0.dist-info/LICENSE,sha256=Wcpd4dZ2HVZXZR4dfz0tu2GSt5QzFxKCSi2IvGzCehk,1066
+snakemake_executor_plugin_aws_batch-0.1.0.dist-info/METADATA,sha256=IfrAdu1j_fW19xSIjSzjUnbl_C3dxxJK0WmfWYgUygM,1084
+snakemake_executor_plugin_aws_batch-0.1.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+snakemake_executor_plugin_aws_batch-0.1.0.dist-info/RECORD,,
