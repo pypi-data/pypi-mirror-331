@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "jsonthat"
+version = "0.4.0"
+description = "Transform plain text to JSON"
+authors = ["Yanael Barbier <st3w4r@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+pyyaml = "^6.0.1"
+requests = "^2.32.3"
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.4.10"
+
+toml = "^0.10.2"
+pytest = "^8.2.2"
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+jsonthat = "jsonthat.main:main"
+jt = "jsonthat.main:main"
+
+[tool.poetry.urls]
+Homepage = "https://jsonthat.com/"
+Repository = "https://github.com/st3w4r/json-that"
