@@ -1,0 +1,19 @@
+Metadata-Version: 2.2
+Name: nada-mir-proto
+Version: 0.2.1rc1
+Summary: The protocol buffers representation of the Nada MIR.
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: betterproto==2.0.0b7
+Requires-Dist: pydantic==2.10.3
+Provides-Extra: dev
+Requires-Dist: betterproto[compiler]==2.0.0b7; extra == "dev"
+Provides-Extra: protoc
+Requires-Dist: grpcio-tools==1.62.3; extra == "protoc"
+
+# NADA MIR 
+This package contains the protocol buffers representation of the MIR model, defined in: https://github.com/NillionNetwork/nada-mir-model. 
