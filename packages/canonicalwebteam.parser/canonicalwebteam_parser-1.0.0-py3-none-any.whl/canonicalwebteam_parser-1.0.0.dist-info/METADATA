@@ -1,0 +1,26 @@
+Metadata-Version: 2.2
+Name: canonicalwebteam.parser
+Version: 1.0.0
+Summary: Flask extension to parse websites and extract structured data
+Home-page: https://github.com/canonical/canonicalwebteam.parser
+Author: Canonical webteam
+Author-email: webteam@canonical.com
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Flask>=1.0.2
+Requires-Dist: beautifulsoup4
+Requires-Dist: humanize
+Requires-Dist: lxml
+Requires-Dist: requests
+Requires-Dist: python-dateutil
+Requires-Dist: validators
+Requires-Dist: python-slugify
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: summary
+
+# cannonicalwebteam.parser
