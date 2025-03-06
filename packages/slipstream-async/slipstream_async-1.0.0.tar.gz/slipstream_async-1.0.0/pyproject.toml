@@ -1,0 +1,96 @@
+[project]
+name = "slipstream-async"
+dynamic = ["version"]
+description = "Streamline your stream processing."
+authors = [{ name = "Menziess", email = "stefan_schenk@hotmail.com" }]
+readme = "README.md"
+license = { text = "MIT" }
+keywords = ["kafka", "pubsub"]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+kafka = [
+  "aiokafka",
+]
+cache = [
+  "rocksdict",
+]
+dev = [
+  "pydocstyle",
+  "autopep8",
+  "pyright",
+  "flake8",
+  "bandit",
+  "pre-commit",
+]
+test = [
+  "pytest",
+  "pytest-cov",
+  "pytest-mock",
+  "pytest-asyncio",
+  "testcontainers[kafka]",
+]
+docs = [
+  "sphinx",
+  "sphinx-rtd-theme",
+  "sphinx-autoapi",
+  "sphinx-autobuild",
+]
+
+[project.urls]
+repository = "https://github.com/Menziess/slipstream"
+documentation = "https://slipstream.readthedocs.io"
+
+[project.scripts]
+slipstream = "slipstream.__main__:main"
+
+[tool.setuptools.dynamic]
+version = {attr = "slipstream.__version__.VERSION"}
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["slipstream*"]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+include = [
+  "slipstream/**/*.py",
+  "tests/**/*.py"
+]
+
+[tool.bandit]
+exclude_dirs = ["tests"]
+
+[tool.ruff]
+line-length = 79
+
+[tool.mypy]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+addopts = "--doctest-modules"
+doctest_optionflags = "ELLIPSIS"
+testpaths = [
+  "slipstream",
+  "tests",
+]
+markers = [
+  "serial"
+]
+asyncio_default_fixture_loop_scope = "function"
