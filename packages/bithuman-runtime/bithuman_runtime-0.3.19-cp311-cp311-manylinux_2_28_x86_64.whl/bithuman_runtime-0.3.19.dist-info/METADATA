@@ -1,0 +1,28 @@
+Metadata-Version: 2.2
+Name: bithuman_runtime
+Version: 0.3.19
+Summary: Bithuman Runtime library
+Platform: Linux
+Platform: Mac OS X
+Requires-Python: >=3.10
+Requires-Dist: numpy>=1.26.0
+Requires-Dist: h5py~=3.13
+Requires-Dist: opencv-python~=4.11
+Requires-Dist: loguru~=0.7
+Requires-Dist: numba~=0.61
+Requires-Dist: resampy~=0.4
+Requires-Dist: scipy~=1.15
+Requires-Dist: scikit-image~=0.25
+Requires-Dist: moviepy~=1.0.3
+Requires-Dist: soundfile~=0.13
+Requires-Dist: pydantic~=2.10
+Requires-Dist: pydantic-settings~=2.8
+Requires-Dist: networkx~=3.4
+Requires-Dist: tqdm~=4.67
+Requires-Dist: dataclasses-json~=0.6
+Requires-Dist: librosa~=0.10
+Requires-Dist: pyzmq~=26.2
+Requires-Dist: msgpack~=1.1
+Requires-Dist: PyYAML~=6.0
+Dynamic: platform
+Dynamic: requires-python
