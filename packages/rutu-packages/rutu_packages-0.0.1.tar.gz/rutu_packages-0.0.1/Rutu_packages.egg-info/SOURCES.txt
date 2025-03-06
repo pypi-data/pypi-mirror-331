@@ -1,0 +1,15 @@
+License.txt
+README.txt
+setup.py
+Rutu_packages/__init__.py
+Rutu_packages/test.py
+Rutu_packages.egg-info/PKG-INFO
+Rutu_packages.egg-info/SOURCES.txt
+Rutu_packages.egg-info/dependency_links.txt
+Rutu_packages.egg-info/top_level.txt
+rutu_packages/__init__.py
+rutu_packages/test.py
+rutu_packages.egg-info/PKG-INFO
+rutu_packages.egg-info/SOURCES.txt
+rutu_packages.egg-info/dependency_links.txt
+rutu_packages.egg-info/top_level.txt
