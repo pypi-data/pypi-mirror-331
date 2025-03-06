@@ -1,0 +1,12 @@
+Metadata-Version: 2.2
+Name: dhxpyt
+Version: 0.7.7
+Summary: Python wrapper for DHTMLX widgets
+License: GNU General Public License v2
+Project-URL: homepage, https://github.com/pytincture/dhx_pytincture_widgetset
+Keywords: DHTMLX,widgetset
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pyodide-py>=0.27.0
+
+##DHTMLX PyTincture Widgetset
