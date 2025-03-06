@@ -1,0 +1,12 @@
+lmchunker/__init__.py,sha256=BuzBM08eljju3yc5l1ZuodWOWY4jqvp5v7bX8WLkn-Y,22
+lmchunker/chunker.py,sha256=beCjIaZytbXIfU31eCTu0IajSIum9hmsHDSFtE-9eKo,2142
+lmchunker/modules/__init__.py,sha256=BqrsqPP6x86VGwLPRosWqLO1tf_w6wGYNZXA1ASl17g,174
+lmchunker/modules/dense_x_retrieval.py,sha256=54ysi5x0FbfczJdKHe-yyDlpyyBzYEJA6wfCnMaRVl0,1646
+lmchunker/modules/lumberchunker.py,sha256=GPtJhD2wHF0bMdwwsbRcoKBvuhvTDw1Sgti3pSZnouE,8235
+lmchunker/modules/lumberchunker_margin_sampling.py,sha256=cJIfOFxQIf_uiP94_nZn4p_3ooLgL4B8rP73JqMJ7XI,7609
+lmchunker/modules/margin_sampling_chunking.py,sha256=twnr4JYEsTSBb0NA7XzXQLKuch8USIkXpLjWJ3c0BE0,6138
+lmchunker/modules/ppl_chunking.py,sha256=3BdY87zhRMYxgtstGOiUTLRWXBxTRDe6lOBEkRVsuak,20263
+lmchunker/utils/ppl_calculate.py,sha256=vxY2yuhOL_VZDLHiERrfYg9ikx6v-JedaS_2wReH5KQ,1264
+lmchunker-0.5.0.dist-info/METADATA,sha256=A7hGEj6fRtdZcsUNnSbj45QKsAB3i6WJ-na-HLmor1w,5812
+lmchunker-0.5.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+lmchunker-0.5.0.dist-info/RECORD,,
