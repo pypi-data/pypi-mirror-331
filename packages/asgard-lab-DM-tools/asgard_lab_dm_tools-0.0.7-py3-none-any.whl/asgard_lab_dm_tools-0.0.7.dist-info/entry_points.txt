@@ -1,0 +1,3 @@
+[console_scripts]
+lab-DM-control = asgard_lab_DM_tools.asgard_lab_DM_controller:start_gui
+turbulence-simulator = asgard_lab_DM_tools.turbulence_simulator:main
