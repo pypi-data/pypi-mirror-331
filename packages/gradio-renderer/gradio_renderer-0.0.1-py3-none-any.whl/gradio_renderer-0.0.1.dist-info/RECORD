@@ -1,0 +1,10 @@
+gradio_renderer/__init__.py,sha256=PWfDpx5lJs7icdkXlhdb8lkyTjaJv8Eb6SrDXuLABp8,56
+gradio_renderer/renderer.py,sha256=M4s1Ol6BcUvhQ5ffodWpN9xYcKSNQPik9JLcang-cAI,5599
+gradio_renderer/renderer.pyi,sha256=I85MERcMcSSHCw1gNQXjiPTY7PhbkP7Mlr09WPTYipQ,22752
+gradio_renderer/templates/component/index.js,sha256=lHcm9og1ACe_pJfXnKJjf_8dNF_LL-J-HBD2TZlTmgw,31399
+gradio_renderer/templates/component/style.css,sha256=Jw1_cUaNVht1xaF7OUpzeqyvAd1sJcPlbtnzhTLMaNQ,1144
+gradio_renderer/templates/example/index.js,sha256=qscp4ZIZuegQ1_23XF-LGne76C9rn-T4kgqExfx8le0,2297
+gradio_renderer/templates/example/style.css,sha256=Ye_NSzT2-cJlQsWMIbgByo5mP3XiC4npJlqORD2DMYI,524
+gradio_renderer-0.0.1.dist-info/METADATA,sha256=F9q6Wg3K9Y_TvLJ5m-yn5kbMgfoNZqCZnVZeRLejG3c,8592
+gradio_renderer-0.0.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+gradio_renderer-0.0.1.dist-info/RECORD,,
