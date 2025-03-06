@@ -1,0 +1,8 @@
+tblib>=1.7.0
+graypy>=2.1.0
+
+[beta]
+redis>=4.1.3
+
+[schemas]
+marshmallow>=3.18.0
