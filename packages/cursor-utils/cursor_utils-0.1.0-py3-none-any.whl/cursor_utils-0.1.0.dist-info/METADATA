@@ -1,0 +1,169 @@
+Metadata-Version: 2.4
+Name: cursor-utils
+Version: 0.1.0
+Summary: Give your Cursor IDE Agents superpowers.
+Project-URL: Homepage, https://github.com/gweidart/cursor-utils
+Project-URL: Repository, https://github.com/gweidart/cursor-utils
+Project-URL: Documentation, https://github.com/gweidart/cursor-utils#readme
+Project-URL: Bug Tracker, https://github.com/gweidart/cursor-utils/issues
+Author-email: gweidart <gweidart@gmail.com>
+License: MIT
+License-File: LICENSE
+Keywords: agent,agentic,agentic programming,agentic programming with python,agentic programming with python 3,agentic programming with python 3.10,agentic programming with python 3.11,agentic programming with python 3.12,ai,anthropic,chatgpt,claude,cli,cursor,cursor ide,cursor-tools,cursor-utils,gemini,google,gpt,gpt-3.5-turbo,gpt-3.5-turbo-0125,gpt-4,gpt-4o,gpt-4o-mini,gpt-o1,openai,python,python3,sonnet-3.7,tools,utils
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Typing :: Typed
+Requires-Python: >=3.10
+Requires-Dist: click
+Requires-Dist: diagnostic
+Requires-Dist: google-genai
+Requires-Dist: httpx
+Requires-Dist: importlib
+Requires-Dist: packaging
+Requires-Dist: pathspec
+Requires-Dist: psutil
+Requires-Dist: pygithub
+Requires-Dist: pyplexityai
+Requires-Dist: python-dotenv
+Requires-Dist: pyyaml
+Requires-Dist: rich
+Requires-Dist: rich-click
+Requires-Dist: types-pyyaml
+Requires-Dist: typing-extensions
+Provides-Extra: dev
+Requires-Dist: black; extra == 'dev'
+Requires-Dist: build; extra == 'dev'
+Requires-Dist: hatchling; extra == 'dev'
+Requires-Dist: isort; extra == 'dev'
+Requires-Dist: mkdocs; extra == 'dev'
+Requires-Dist: monkeytype; extra == 'dev'
+Requires-Dist: pre-commit; extra == 'dev'
+Requires-Dist: pyright; extra == 'dev'
+Requires-Dist: ruff; extra == 'dev'
+Requires-Dist: twine; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: pytest; extra == 'test'
+Requires-Dist: pytest-asyncio; extra == 'test'
+Requires-Dist: pytest-cov; extra == 'test'
+Requires-Dist: pytest-mock; extra == 'test'
+Requires-Dist: pytest-timeout; extra == 'test'
+Description-Content-Type: text/markdown
+
+# Cursor Utils
+
+A modern CLI utility toolkit for Cursor, built with strict typing and modern Python practices.
+
+## Features
+
+- Modern CLI interface using Click
+- Rich terminal output
+- Comprehensive diagnostic tools
+- Fully type-annotated codebase
+- Modern Python packaging
+
+## Installation
+
+```bash
+# Using UV (recommended)
+uv pip install cursor-utils
+
+# Using pip
+pip install cursor-utils
+```
+
+## Development Setup
+
+1. Clone the repository:
+```bash
+git clone https://github.com/gweidart/cursor-utils.git
+cd cursor-utils
+```
+
+2. Create and activate a virtual environment:
+```bash
+uv venv .venv
+source .venv/bin/activate  # On Unix/macOS
+# or
+.venv\Scripts\activate  # On Windows
+```
+
+3. Install development dependencies:
+```bash
+uv pip sync requirements/requirements-dev.txt requirements/requirements-test.txt
+```
+
+4. Install pre-commit hooks:
+```bash
+pre-commit install
+```
+
+## Usage
+
+```bash
+cursor-utils --help
+```
+
+## Development
+
+- Code style is enforced using `black`, `isort`, and `ruff`
+- Type checking is done with `mypy`
+- Testing is done with `pytest`
+
+## Packaging and Release Process
+
+### Building the Package
+
+To build the package locally:
+
+```bash
+# Using the build module
+python -m build
+
+# Or using the provided script
+python scripts/publish.py --test
+```
+
+### Bumping the Version
+
+To bump the version before a release:
+
+```bash
+# Bump patch version (0.0.X)
+python scripts/bump_version.py patch
+
+# Bump minor version (0.X.0)
+python scripts/bump_version.py minor
+
+# Bump major version (X.0.0)
+python scripts/bump_version.py major
+```
+
+### Publishing to PyPI
+
+To publish to PyPI:
+
+```bash
+# Test PyPI
+python scripts/publish.py --test
+
+# Production PyPI
+python scripts/publish.py
+```
+
+### GitHub Releases
+
+1. Create a new tag: `git tag v0.1.0`
+2. Push the tag: `git push origin v0.1.0`
+3. Create a new release on GitHub with the tag
+4. The GitHub Actions workflow will automatically build and publish the package to PyPI
+
+## License
+
+MIT License
