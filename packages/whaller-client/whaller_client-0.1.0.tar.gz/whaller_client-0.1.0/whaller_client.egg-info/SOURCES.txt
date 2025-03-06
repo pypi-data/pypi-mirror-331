@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+whaller_client/__init__.py
+whaller_client/api.py
+whaller_client/auth.py
+whaller_client/client.py
+whaller_client/exceptions.py
+whaller_client/logger.py
+whaller_client.egg-info/PKG-INFO
+whaller_client.egg-info/SOURCES.txt
+whaller_client.egg-info/dependency_links.txt
+whaller_client.egg-info/requires.txt
+whaller_client.egg-info/top_level.txt
