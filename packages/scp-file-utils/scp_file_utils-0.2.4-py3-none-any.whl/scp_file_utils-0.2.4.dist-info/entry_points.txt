@@ -1,0 +1,2 @@
+[console_scripts]
+scp-download-file = scp_file_utils.download_file:main
