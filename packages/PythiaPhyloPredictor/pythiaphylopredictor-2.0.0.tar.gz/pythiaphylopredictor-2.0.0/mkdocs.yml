@@ -1,0 +1,50 @@
+extra:
+  version:
+    provider: mike
+extra_javascript:
+- javascripts/mathjax.js
+- https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+markdown_extensions:
+- def_list
+- github-callouts
+- pymdownx.arithmatex:
+    generic: true
+nav:
+- Home: index.md
+- Install: install.md
+- User Guide: usage.md
+- API Reference:
+  - msa: api/msa.md
+  - raxmlng: api/raxmlng.md
+  - prediction: api/prediction.md
+  - predictor: api/predictor.md
+  - custom_types: api/custom_types.md
+  - custom_errors: api/custom_errors.md
+  - config: api/config.md
+plugins:
+- search
+- mkdocstrings
+- mike:
+    canonical_version: latest
+repo_name: tschuelia/PyPythia
+repo_url: https://github.com/tschuelia/PyPythia
+site_name: PyPythia
+site_url: https://tschuelia.github.io/PyPythia/
+theme:
+  name: material
+  palette:
+  - media: (prefers-color-scheme)
+    scheme: default
+    toggle:
+      icon: material/lightbulb
+      name: Switch to light mode
+  - media: '(prefers-color-scheme: light)'
+    scheme: default
+    toggle:
+      icon: material/lightbulb-outline
+      name: Switch to dark mode
+  - media: '(prefers-color-scheme: dark)'
+    scheme: slate
+    toggle:
+      icon: material/lightbulb-auto-outline
+      name: Switch to system preference
