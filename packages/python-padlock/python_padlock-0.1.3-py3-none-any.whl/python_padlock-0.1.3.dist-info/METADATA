@@ -1,0 +1,60 @@
+Metadata-Version: 2.4
+Name: python-padlock
+Version: 0.1.3
+Summary: A Python library for distributed locking via a variety of backends.
+Project-URL: repository, https://gitlab.com/emergentmethods/python-padlock
+Author-email: Tim Pogue <tim@emergentmethods.ai>
+License: MIT
+License-File: LICENSE
+Requires-Python: <4.0,>=3.10
+Provides-Extra: etcd
+Requires-Dist: etcd-client-py>=0.4.0; extra == 'etcd'
+Provides-Extra: zookeeper
+Requires-Dist: aiozk>=0.31.1; extra == 'zookeeper'
+Description-Content-Type: text/markdown
+
+# Padlock
+
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/python-padlock?style=flat-square)
+
+Padlock is a Python library that provides a simple, asynchronous, and consistent API for distributed locking.
+
+
+## Quick Start
+
+### Installation
+
+```bash
+pip install python-padlock
+```
+
+### Basic Usage
+
+```python
+import asyncio
+
+from padlock import LockManager, MemoryLockBackend
+
+
+async def main():
+    async with LockManager(MemoryLockBackend()) as manager:
+        async with manager.lock('my-lock'):
+            print('Lock acquired')
+            await asyncio.sleep(5)
+        print('Lock released')
+```
+
+
+You can find more examples in the [examples](examples/) directory.
+
+## License
+This project is licensed under MIT License.
+
+## Support & Feedback
+If you encounter any issues or have feedback, please open an issue. We'd love to hear from you!
+
+Made with ❤️ by Emergent Methods
+
+
+
+
