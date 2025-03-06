@@ -1,0 +1,66 @@
+[project]
+name = "scp_file_utils"
+version = "0.2.4"
+description = "A collection of Python scripts for downloading/uploading files via scp."
+readme = "README.rst"
+authors = [
+    { name = "Jaideep Sundaram", email = "jai.python3@gmail.com" }
+]
+maintainers = [
+  {name = "Jaideep Sundaram", email = "jai.python3@gmail.com"}
+]
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3.10",
+]
+license = {text = "Not open source"}
+keywords = ["scp_file_utils"]
+dependencies = [
+    "Click>=7.0",
+    "PyYAML",
+    "Rich",
+    "singleton-decorator"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.2",
+    "pytest-mock>=3.6",
+    "coverage>=5.5"
+]
+
+[project.urls]
+Homepage = "https://github.com/jai-python3/scp-file-utils"
+
+[project.scripts]
+scp-download-file = "scp_file_utils.download_file:main"
+
+[tool.setuptools]
+zip-safe = false
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["scp_file_utils", "scp_file_utils.*"]
+
+[tool.setuptools.package-data]
+scp_file_utils = ["conf/config.yaml"]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.deadcode]
+exclude = ["tests", "venv", "docs", "build"]
+# ignore_decorators = ["@app.route", "@require_*"]
+# ignore_names = ["visit_*", "do_*"]
+# make_whitelist = true
+# min_confidence = 80
+# paths = ["myscript.py", "mydir", "whitelist.py"]
+sort_by_size = true
+# verbose = true
+
+[tool.vulture]
+exclude = ["tests", "venv", "docs", "build"]
