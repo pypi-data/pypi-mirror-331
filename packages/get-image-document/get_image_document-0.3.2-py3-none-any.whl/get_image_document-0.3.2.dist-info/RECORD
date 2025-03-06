@@ -1,0 +1,11 @@
+get_image_document/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+get_image_document/download.py,sha256=xzBXKP38PgHBL4yZnewR5g8NFDtgarMxhGuwwZoIcis,729
+get_image_document/funcs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+get_image_document/funcs/image_getter.py,sha256=S0eqI5HX4osIC3Zbs7-k7PR3576I3A3WZLo9JVkUdc8,327
+get_image_document/funcs/image_manage.py,sha256=ZOf1K2z2x7zKHScbnUPuZYRlEp359uZF3XJR39Ohdf4,1265
+get_image_document/funcs/word.py,sha256=ac6ohyQM6m14zWGkVN0lBtURRpqusVvHLBP8H8qlJrM,2387
+get_image_document/main.py,sha256=bREeicsGsvkwLG3p2y2rEVxSVMQK7UAoNcFCRhywU9Q,7379
+get_image_document-0.3.2.dist-info/entry_points.txt,sha256=vq9c1Wr-8X1UJ7vhYMF6NOhLn1Khqhn-6N5s7iOal1s,67
+get_image_document-0.3.2.dist-info/METADATA,sha256=lFqL77ubcrDPnb9TEyQDOq9zdTojjWTMbtmUN-ivapI,659
+get_image_document-0.3.2.dist-info/WHEEL,sha256=IYZQI976HJqqOpQU6PHkJ8fb3tMNBFjg-Cn-pwAbaFM,88
+get_image_document-0.3.2.dist-info/RECORD,,
