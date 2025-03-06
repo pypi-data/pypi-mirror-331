@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "TeleBee"
+version = "1.0"
+description = "A Python library for organizing and loading bot functions from external files for the Telebot library. Simplifies bot code management by allowing the use of separate files for bot commands and functions."
+readme = "README.md"
+requires-python = ">=3.6"
+license = {text = "MIT"}
+authors = [
+  {name = "Mohamed Ahmed Ghanam", email = "mghanam883@outlook.com"}
+]
+
+[tool.poetry.dependencies]
+python = ">=3.6"
+pyTelegramBotAPI = ">=4.0.0"
+requests = "*"
+
+[project.urls]
+Homepage = "https://t.me/mido_ghanam"
+TelegramChannel = "https://t.me/midoghanam"
+EgyptianProgrammers = "https://t.me/egyptionprogrammers"
+Whatsapp = "https://wa.me/201101023681"
