@@ -1,0 +1,11 @@
+chit/__init__.py,sha256=iJ0svEAutGa9nuOC-zGGWk7qpRps732GZ8eBjmE49Ao,1004
+chit/bla.py,sha256=IVd46Wyhm-OOxj9oWwhAMrihOq1BSgEoLQjJ9WQBkWw,157
+chit/chit.py,sha256=LbP5BpZ0-nMJTixIGmow_-G-p20gNRAr73Zabq6Otfw,51372
+chit/config.py,sha256=cNIXdjqesUs_62wyqrYO22F6S8roN7qiGuhHEaZIYX8,968
+chit/images.py,sha256=dB-3Wn4nZeHEqRhrgMptLv6RUkF5GMLXv-wCQNNP8aY,2588
+chit/import_claude.py,sha256=IYG7AYRGLAD5m_TL-RgdJ9EDVWDXgBMwcGNi3KZEKHk,7101
+chit/utils.py,sha256=wjeBZ30MwlVd2sHYgbTa1xpg_-K0S7i8nAxw-lk_WmU,887
+chitgpt-1.8.0.dist-info/METADATA,sha256=yheqjYNbD-M-m3bOxCQ1zuzKBMITt4MWeXF35o_Qscw,7062
+chitgpt-1.8.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+chitgpt-1.8.0.dist-info/top_level.txt,sha256=c0vh5WvMbCnAUdIztHg-9GGPuh_OoNeKHFUiLMWJb24,5
+chitgpt-1.8.0.dist-info/RECORD,,
