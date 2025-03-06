@@ -1,0 +1,14 @@
+LICENCE.txt
+README.md
+setup.cfg
+setup.py
+src/qeview/__init__.py
+src/qeview/qe_analyse_FM.py
+src/qeview/qe_analyse_PM.py
+src/qeview/qe_base.py
+src/qeview/wannier_loader.py
+src/qeview.egg-info/PKG-INFO
+src/qeview.egg-info/SOURCES.txt
+src/qeview.egg-info/dependency_links.txt
+src/qeview.egg-info/requires.txt
+src/qeview.egg-info/top_level.txt
