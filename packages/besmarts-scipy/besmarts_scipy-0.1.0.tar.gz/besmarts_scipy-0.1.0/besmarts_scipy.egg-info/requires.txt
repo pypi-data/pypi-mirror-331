@@ -1,0 +1,4 @@
+besmarts
+besmarts-mechanics
+scipy
+numpy

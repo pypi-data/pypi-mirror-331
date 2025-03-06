@@ -1,0 +1,9 @@
+README.md
+setup.py
+besmarts/core/array_numpy.py
+besmarts/mechanics/optimizers_scipy.py
+besmarts_scipy.egg-info/PKG-INFO
+besmarts_scipy.egg-info/SOURCES.txt
+besmarts_scipy.egg-info/dependency_links.txt
+besmarts_scipy.egg-info/requires.txt
+besmarts_scipy.egg-info/top_level.txt
