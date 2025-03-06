@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+beets_id3extract.egg-info/PKG-INFO
+beets_id3extract.egg-info/SOURCES.txt
+beets_id3extract.egg-info/dependency_links.txt
+beets_id3extract.egg-info/requires.txt
+beets_id3extract.egg-info/top_level.txt
+beetsplug/__init__.py
+beetsplug/id3extract.py

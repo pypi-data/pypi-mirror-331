@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+license-files = []
+
+[project]
+name = "beets-id3extract"
+version = "0.1.0"
+description = "Beets plugin to map arbitrary ID3 tags to beets custom fields"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Bob Cotton", email = "bob.cotton@gmail.com"},
+]
+classifiers = [
+    "Topic :: Multimedia :: Sound/Audio",
+    "Topic :: Multimedia :: Sound/Audio :: Players :: MP3",
+    "License :: OSI Approved :: MIT License",
+    "Environment :: Console",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "beets>=1.6.0",
+    "mediafile",
+    "mutagen",
+]
+
+[project.urls]
+Homepage = "https://github.com/bcotton/beets-id3extract"
+Repository = "https://github.com/bcotton/beets-id3extract.git"
