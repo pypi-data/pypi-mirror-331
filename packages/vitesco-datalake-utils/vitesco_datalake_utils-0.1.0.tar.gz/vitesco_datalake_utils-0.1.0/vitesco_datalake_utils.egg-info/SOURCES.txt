@@ -1,0 +1,8 @@
+setup.py
+datalake/__init__.py
+datalake/datalake.py
+vitesco_datalake_utils.egg-info/PKG-INFO
+vitesco_datalake_utils.egg-info/SOURCES.txt
+vitesco_datalake_utils.egg-info/dependency_links.txt
+vitesco_datalake_utils.egg-info/requires.txt
+vitesco_datalake_utils.egg-info/top_level.txt
