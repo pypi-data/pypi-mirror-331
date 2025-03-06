@@ -1,0 +1,61 @@
+Metadata-Version: 2.2
+Name: scwidgets
+Version: 0.1.0
+Summary: A collection of widgets to prepare interactive scientific visualisations, including user code input and validation
+License: BSD-3-Clause
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: POSIX
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Chemistry
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.9
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: ipywidgets>=8.0.0
+Requires-Dist: numpy<2.0.0
+Requires-Dist: widget_code_input>=4.0.17
+Requires-Dist: matplotlib
+Requires-Dist: termcolor
+
+scicode-widgets
+===============
+
+.. marker-package-description
+
+*scicode-widgets* is a widget library for the purpose of creating computational
+experiments for educational content. It is targeted to teach students how to
+code and interpret computational experiments while hiding technical details and
+boiler plate code that are not essential for the learning experience. The logic
+is purely written in Python to simplify the development process for scientific
+researchers as they usually are more capable in writing Python code than
+JavaScript. It therefore builds on top of widgets provided by ipywidgets to
+creating a framework out of it.
+
+Features
+--------
+
+The core features of scicode-widgets are:
+
+**Customizable coding exercises and demos**
+
+**Checks for students to verify their solution**
+
+**Automatic grading using nbgrader**
+
+Please continue with our `getting started page <https://scicode-widgets.readthedocs.io/en/latest/getting_started.html>`_  
+for a more detailed overview of our features.
+
+Supportde jupyter environments
+------------------------------
+
+We support the following widget environments
+
+* jupyterlab
+* notebook < 7
