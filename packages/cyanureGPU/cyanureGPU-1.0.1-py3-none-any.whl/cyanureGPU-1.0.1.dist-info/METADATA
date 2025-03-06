@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: cyanureGPU
+Version: 1.0.1
+Summary: optimization toolbox for machine learning
+Home-page: https://inria-thoth.github.io/cyanure_gpu/welcome.html
+Author: Julien Mairal
+Author-email: julien.mairal@inria.fr
+License: bsd-3-clause
+Platform: UNKNOWN
+License-File: LICENSE
+Requires-Dist: scikit-learn
+Requires-Dist: torch (<2.3.0)
+Requires-Dist: numpy (==1.26.4)
+
+Cyanure is an open-source Python software package. This is a partial re implementation of Cyanure package. It provides a simple Python API, which should be fully compatible with scikit-learn.
+
