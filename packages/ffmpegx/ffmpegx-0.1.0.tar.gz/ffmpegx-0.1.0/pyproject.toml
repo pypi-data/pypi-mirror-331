@@ -1,0 +1,12 @@
+[project]
+name = "ffmpegx"
+version = "0.1.0"
+description = "A wrapper of ffmpeg"
+readme = "README.md"
+authors = [{ name = "levinion", email = "levinnion@gmail.com" }]
+requires-python = ">=3.13"
+dependencies = []
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
