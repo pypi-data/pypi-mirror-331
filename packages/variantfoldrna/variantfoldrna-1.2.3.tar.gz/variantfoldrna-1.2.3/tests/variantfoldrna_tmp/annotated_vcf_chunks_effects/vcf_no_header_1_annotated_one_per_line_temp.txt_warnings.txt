@@ -1,0 +1,5 @@
+WARNING: Ignoring 'chromosome' feature_type from /storage/group/pcb5/default/kjk6173/variantfoldrna/tests/variantfoldrna_tmp/annotation.sorted.gff.gz GFF/GTF file. This feature_type is not supported in VEP.
+WARNING: Ignoring 'ncRNA_gene' feature_type from /storage/group/pcb5/default/kjk6173/variantfoldrna/tests/variantfoldrna_tmp/annotation.sorted.gff.gz GFF/GTF file. This feature_type is not supported in VEP.
+WARNING: Ignoring 'transposable_element' feature_type from /storage/group/pcb5/default/kjk6173/variantfoldrna/tests/variantfoldrna_tmp/annotation.sorted.gff.gz GFF/GTF file. This feature_type is not supported in VEP.
+WARNING: Ignoring 'transposable_element_gene' feature_type from /storage/group/pcb5/default/kjk6173/variantfoldrna/tests/variantfoldrna_tmp/annotation.sorted.gff.gz GFF/GTF file. This feature_type is not supported in VEP.
+WARNING: Parent entries with the following IDs were not found or skipped due to invalid types: gene:tP(UGG)A, gene:tL(CAA)A, gene:snR18, gene:HRA1, gene:tS(AGA)A, gene:tA(UGC)A, transcript:YAR009C, transcript:YAR010C

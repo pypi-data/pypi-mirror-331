@@ -1,0 +1,16 @@
+ID	REF	ALT	SEQ	FLANK	REF_dG	REF_ED	ALT_dG	ALT_ED	SNPfold_score	RNAsnp_score	RipRap_score	RemuRNA_score
+ID2	C	G	TAACACACACGTGCTTACCCTACCACTTTATACCACCACCACATGCCATACTCACCCTCACTTGTATACTGATTTTACGTACGCACACGGATGCTACAGTA	51	-6.60	19.53	-7.30	25.05	0.867172	Error	26.873	2.651
+ID2	U	G	AACACACACGTGCTTACCCTACCACTTTATACCACCACCACATGCCATACTCACCCTCACTTGTATACTGATTTTACGTACGCACACGGATGCTACAGTATAACACACACGTGCTTACCCTACCACTTTATACCACCACCACATGCCATACTCACCCTCACTTGTATACTGATTTTACGTACGCACACGGATGCTACAGTA	101	-18.00	45.05	-20.60	31.59	0.926023	0.4816	4.995	2.931
+
+
+cwd=$(pwd)
+variantfoldrna run \
+    --ref-genome=${cwd}/example_input/yeast_ref_genome.fa  \
+    --gff=${cwd}/example_input/yeast_gene_model.gff3 \
+    --vcf=${cwd}/example_input/saccharomyces_cerevisiae_subset.vcf \
+    --flank-len=50 \
+    --ribosnitch-prediction-tool=SNPfold,Riprap,rnasnp:p-value \
+    --tmp-dir=${cwd}/tmp_yeast \
+    --out-dir=${cwd}/yeast_ribosnitches \
+    --canonical \
+    --spliced --use-conda --conda-frontend=mamba --conda-prefix=~/scratch/conda_envs

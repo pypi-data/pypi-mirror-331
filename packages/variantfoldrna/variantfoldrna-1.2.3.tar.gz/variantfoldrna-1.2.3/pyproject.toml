@@ -1,0 +1,98 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "variantfoldrna"
+dynamic = ["version"]
+description = ''
+readme = "README.md"
+requires-python = ">=3.7"
+license = "MIT"
+keywords = []
+authors = [
+  { name = "Kobie-Kirven", email = "kjkirven@presby.edu" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = [
+  "snakemake==7.24.2",
+  "snk==0.22.2",
+]
+
+[project.urls]
+Documentation = "https://github.com/The-Bevilacqua-Lab/variantfoldrna/wiki"
+Issues = "https://github.com/The-Bevilacqua-Lab/variantfoldrna/issuess"
+Source = "https://github.com/The-Bevilacqua-Lab/variantfoldrna"
+
+[project.scripts]
+variantfoldrna = "variantfoldrna.cli:variantfoldrna"
+
+[tool.hatch.version]
+path = "src/variantfoldrna/__about__.py"
+
+[tool.hatch.envs.default]
+dependencies = [
+  "coverage[toml]>=6.5",
+  "pytest",
+  "snakemake==7.24.2"
+]
+[tool.hatch.envs.default.scripts]
+test = "pytest {args:tests}"
+test-cov = "coverage run -m pytest {args:tests}"
+cov-report = [
+  "- coverage combine",
+  "coverage report",
+]
+cov = [
+  "test-cov",
+  "cov-report",
+]
+
+[[tool.hatch.envs.all.matrix]]
+python = ["3.7","3.8", "3.9", "3.10", "3.11", "3.12"]
+
+[tool.hatch.envs.types]
+dependencies = [
+  "mypy>=1.0.0",
+]
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:src/variantfoldrna tests}"
+
+[tool.coverage.run]
+source_pkgs = ["variantfoldrna", "tests"]
+branch = true
+parallel = true
+omit = [
+  "src/variantfoldrna/__about__.py",
+]
+
+[tool.coverage.paths]
+variantfoldrna = ["src/variantfoldrna", "*/variantfoldrna/src/variantfoldrna"]
+tests = ["tests", "*/variantfoldrna/tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.sdist]
+exclude = [
+  ".git/*",
+]
