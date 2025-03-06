@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: PlanckBeta
+Version: 0.1
+Summary: PlanckBeta SDK for interacting with Planck AI models
+Home-page: https://github.com/yourgithub/PlanckBeta
+Author: Plan Air Studio
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: requests
+
