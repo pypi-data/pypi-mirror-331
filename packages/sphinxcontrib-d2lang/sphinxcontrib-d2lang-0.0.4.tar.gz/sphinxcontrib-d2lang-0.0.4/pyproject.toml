@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=67.7.2","docutils>=0.20.0","Sphinx>=7.2.6","wheel>=0.42.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sphinxcontrib-d2lang"
+version = "0.0.4"
+authors = [
+  { name="Milka64", email="michael.ricart@0w.tf" },
+]
+description = "an extension for sphinx to render d2lang diagrams in sphinx documents"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://git.0w.tf/Milka64/sphinx-d2lang/"
+Issues = "https://git.0w.tf/Milka64/sphinx-d2lang/issues"
