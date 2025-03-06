@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "apknife"
+version = "1.0.24"
+description = "APKnife is an advanced tool for APK analysis, modification, and security auditing. Whether you're a security researcher, penetration tester, or Android developer, APKnife provides powerful features for reverse engineering, decompiling, modifying, and analyzing APK files."
+authors = [
+    { name = "Mr_nightmare", email = "hmjany18@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.6"
+license = { text = "MIT" }
+
+dependencies = []
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[project.urls]
+Homepage = "https://github.com/elrashedy1992/APKnife"
+Documentation = "https://github.com/elrashedy1992/APKnife/wiki"
+Source = "https://github.com/elrashedy1992/APKnife"
+
+[project.scripts]
+apknife = "apknife.apknife:main"
