@@ -1,0 +1,5 @@
+include pyproject.toml Cargo.toml Cargo.lock
+recursive-include src *
+recursive-include skytemple_ssb_emulator *.pyi
+include skytemple_ssb_emulator/py.typed
+graft .cargo
