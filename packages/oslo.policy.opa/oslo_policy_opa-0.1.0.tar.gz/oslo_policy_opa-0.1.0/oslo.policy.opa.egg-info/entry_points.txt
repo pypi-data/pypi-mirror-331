@@ -1,0 +1,6 @@
+[console_scripts]
+oslopolicy-opa-policy-generator = oslo_policy_opa.generator:generate_opa_policy
+oslopolicy-opa-sample-generator = oslo_policy_opa.generator:generate_sample
+
+[oslo.policy.rule_checks]
+opa = oslo_policy_opa.opa:OPACheck

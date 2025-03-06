@@ -1,0 +1,28 @@
+CHANGES
+=======
+
+v0.1.0
+------
+
+* chore: Drop rst codeblock captions (#20)
+* feat: Add release workflow (#19)
+* chore(deps): Bump crate-ci/typos from 1.29.9 to 1.30.0 (#18)
+* feat: Further improve tests (#17)
+* feat: Further improve tests (#16)
+* chore: Improve readme (#15)
+* fix: Address some issues in generated tests (#14)
+* feat: Extend test generation (#13)
+* chore(deps): Bump crate-ci/committed from 1.1.5 to 1.1.7 (#11)
+* feat: Some fixes in generator
+* chore(deps): Bump crate-ci/typos from 1.29.5 to 1.29.7
+* chore(deps): Bump step-security/harden-runner from 2.10.4 to 2.11.0
+* chore(deps): Bump crate-ci/typos from 1.29.4 to 1.29.5
+* chore: Add usage instructions in the readme
+* chore: Add testing chapter to readme
+* chore(deps): Bump step-security/harden-runner from 2.10.2 to 2.10.4
+* chore: Add basic workflows
+* feat: Add policy generator
+* Update README.rst
+* update readme
+* Initial implementation
+* Initial commit

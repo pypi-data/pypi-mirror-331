@@ -1,0 +1,13 @@
+oslo.log>=6
+oslo.policy>=4
+requests>2.30
+
+[generate]
+barbican
+cinder
+designate
+glance
+keystone
+neutron
+nova
+octavia

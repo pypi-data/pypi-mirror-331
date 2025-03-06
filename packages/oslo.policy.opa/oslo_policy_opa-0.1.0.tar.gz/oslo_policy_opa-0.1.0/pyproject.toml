@@ -1,0 +1,65 @@
+[project]
+name = "oslo.policy.opa"
+description = "Perform a OpenPolicyAgent check"
+readme = { file = "README.rst", content-type="text/x-rst" }
+authors = [
+    { name = "Artem Goncharov", email = "artem.goncharov@gmail.com" }
+]
+dynamic = [
+  "version",
+]
+requires-python = ">=3.9"
+dependencies = [
+  "oslo.log>=6",
+  "oslo.policy>=4",
+  "requests>2.30"
+]
+
+[project.scripts]
+oslopolicy-opa-policy-generator = "oslo_policy_opa.generator:generate_opa_policy"
+oslopolicy-opa-sample-generator = "oslo_policy_opa.generator:generate_sample"
+
+[project.entry-points."oslo.policy.rule_checks"]
+opa = "oslo_policy_opa.opa:OPACheck"
+
+[project.optional-dependencies]
+generate = [
+  "barbican",
+  "cinder",
+  "designate",
+  "glance",
+  "keystone",
+  "neutron",
+  "nova",
+  "octavia",
+]
+
+[dependency-groups]
+dev = [
+  "pytest>=8,<9"
+]
+
+[build-system]
+requires = ["pbr>=6.0.0", "setuptools>=64.0.0"]
+build-backend = "pbr.build"
+
+[tool.setuptools]
+packages = [
+  "oslo_policy_opa"
+]
+
+[tool.ruff]
+line-length = 79
+target-version = "py39"
+
+[tool.ruff.lint]
+# enable the following rule classes:
+#
+# C4: https://docs.astral.sh/ruff/rules/#flake8-comprehensions-c4
+# UP: https://docs.astral.sh/ruff/rules/#pyupgrade-up
+select = ["C4", "UP"]
+
+[tool.ruff.format]
+quote-style = "double"
+docstring-code-format = true
+skip-magic-trailing-comma = true
