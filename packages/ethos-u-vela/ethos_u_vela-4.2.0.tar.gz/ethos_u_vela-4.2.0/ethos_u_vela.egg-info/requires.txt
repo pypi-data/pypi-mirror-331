@@ -1,0 +1,10 @@
+flatbuffers==24.3.25
+numpy>=1.17.0
+lxml>=4.5.2
+
+[dev]
+pytest
+pytest-cov
+pre-commit
+build
+setuptools_scm[toml]~=7.1.0
