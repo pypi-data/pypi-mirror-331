@@ -1,0 +1,4 @@
+requests
+co6co
+co6co.sanic_ext>=0.0.9
+co6co.web-db>=0.0.14
