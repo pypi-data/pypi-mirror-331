@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+tests/__init__.py
+tests/test_cli.py
+typesnatch/__init__.py
+typesnatch/cli.py
+typesnatch/core.py
+typesnatch/utils.py
+typesnatch.egg-info/PKG-INFO
+typesnatch.egg-info/SOURCES.txt
+typesnatch.egg-info/dependency_links.txt
+typesnatch.egg-info/entry_points.txt
+typesnatch.egg-info/requires.txt
+typesnatch.egg-info/top_level.txt
