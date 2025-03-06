@@ -1,0 +1,57 @@
+Metadata-Version: 2.2
+Name: paid_client
+Version: 0.2.0
+Summary: A package to handle transaction events and send payloads.
+Home-page: https://github.com/AgentPaid/ap-client
+Author: Paid.ai
+Author-email: raj@agentpaid.ai
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.0.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# PaymentAI
+
+A Python client for interacting with the Paid API. This package allows you to send transaction events to the API.
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install PaymentAI.
+
+```bash
+pip install paymentAI
+```
+
+## Usage
+
+```python
+from agent_paid_client import ApClient
+
+# Initialize the client
+client = ApClient("your-api-key")
+
+# Record usage events
+client.record_usage(
+    "your-agent-id",
+    "customer-id",
+    "event-name",
+    {"your": "data"}
+)
+
+# Events are automatically flushed every 30 seconds
+# or when the buffer reaches 100 events
+# To manually flush:
+client.flush()
+```
