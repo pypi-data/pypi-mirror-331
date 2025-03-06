@@ -1,0 +1,10 @@
+telethon
+sqlalchemy
+pg8000
+googletrans==4.0.0-rc1
+google
+instaloader
+requests
+emoji
+gtts
+pytz
