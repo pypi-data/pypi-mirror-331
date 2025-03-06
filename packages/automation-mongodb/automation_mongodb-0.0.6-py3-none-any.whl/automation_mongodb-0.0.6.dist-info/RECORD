@@ -1,0 +1,7 @@
+database_autoconnect/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+database_autoconnect/mongo_crud.py,sha256=Wm2bx0lXm_jRfaJzyaYxCAmkq3FU46ANF5pfCPJg5YI,2344
+automation_mongodb-0.0.6.dist-info/LICENSE,sha256=mpP2SgRZnJKPuajXZ9864NHLYQpJGLW5qHJpr3Lr44U,1075
+automation_mongodb-0.0.6.dist-info/METADATA,sha256=rvDzNOKVz0HAaQl4-HgTNXE3olO6e9vKQ4Ru3LhoyC4,2243
+automation_mongodb-0.0.6.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+automation_mongodb-0.0.6.dist-info/top_level.txt,sha256=SrDmzwITF_2bkcuKK_5pesQsu_mWj1g59Q5tw8KE8ig,21
+automation_mongodb-0.0.6.dist-info/RECORD,,
