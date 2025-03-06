@@ -1,0 +1,2 @@
+[console_scripts]
+shortcut-mcp = shortcut_mcp.cli:main
