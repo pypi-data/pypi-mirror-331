@@ -1,0 +1,15 @@
+httpx[http2]>=0.20.0
+PyJWT>=2.0.0
+cryptography>=3.4.0
+
+[dev]
+pytest>=6.0.0
+pytest-cov>=2.10.0
+black>=21.5b2
+isort>=5.9.1
+flake8>=3.9.2
+mypy>=0.901
+django>=2.2
+
+[django]
+Django>=2.2
