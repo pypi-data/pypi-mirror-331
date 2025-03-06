@@ -1,0 +1,3 @@
+[console_scripts]
+uimages=uimages:cli.cli
+

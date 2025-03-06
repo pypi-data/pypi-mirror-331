@@ -1,0 +1,30 @@
+Metadata-Version: 2.3
+Name: uimages
+Version: 0.1.1
+Summary: An Images helper for markdown
+License: MPL 2.0
+Keywords: images-helper,blog,markdown,hugo
+Author: uiolee
+Maintainer: uiolee
+Requires-Python: >=3.11
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Natural Language :: English
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: tinify (>=1.6.0,<2.0.0)
+Project-URL: Homepage, https://github.com/uiolee/uimages
+Project-URL: Issues, https://github.com/uiolee/uimages/issues
+Project-URL: Repository, https://github.com/uiolee/uimages.git
+Description-Content-Type: text/markdown
+
+# uimages
+
+An Images helper for markdown
+
