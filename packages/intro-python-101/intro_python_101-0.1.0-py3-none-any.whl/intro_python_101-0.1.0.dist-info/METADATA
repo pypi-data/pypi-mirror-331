@@ -1,0 +1,14 @@
+Metadata-Version: 2.3
+Name: intro-python-101
+Version: 0.1.0
+Summary: Just another random story generator mainly to learn about packages and modules and their importation in Python 101
+Author: saladin0x1
+Author-email: salaheddine.elouali@emsi-edu.ma
+Requires-Python: >=3.11
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Description-Content-Type: text/markdown
+
+
