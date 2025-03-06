@@ -1,0 +1,97 @@
+Metadata-Version: 2.4
+Name: squall_sql
+Version: 0.0.3
+Summary: Squall - SQLite Editor
+Project-URL: Homepage, https://github.com/driscollis/squall
+Project-URL: Documentation, https://github.com/driscollis/squall/blob/main/README.md
+Project-URL: Repository, https://github.com/driscollis/squall
+Project-URL: Issues, https://github.com/driscollis/squall/issues
+Project-URL: Discussions, https://github.com/driscollis/squall/discussions
+Project-URL: Wiki, https://github.com/driscollis/squall/wiki
+Author-email: Mike Driscoll <mike@pythonlibrary.org>
+Maintainer-email: Mike Driscoll <mike@pythonlibrary.org>
+License: MIT License
+        
+        Copyright (c) 2025 Mike Driscoll
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Keywords: sql,sqlite,terminal,tui
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Other Audience
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Operating System :: Microsoft :: Windows :: Windows 11
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Typing :: Typed
+Requires-Python: >=3.11
+Requires-Dist: rich>=13.9.4
+Requires-Dist: textual>=2.1.1
+Description-Content-Type: text/markdown
+
+# Squall SQLite Editor
+
+Squall is a SQLite viewer and editor that runs in your terminal. Squall is written in Python and uses the [Textual package](https://github.com/Textualize/)
+
+## Screenshots
+
+Here is what Squall looks like using the [Chinook database](https://github.com/lerocha/chinook-database):
+
+![squall_demo](https://github.com/user-attachments/assets/ecac6ac3-4d42-4d3d-9c15-2e129102a087)
+
+## Prerequisites
+
+The instructions assume you have uv or pip installed.
+
+## Installation
+
+### PyPi
+
+`uv tool install squall_sql`
+
+### Using uv on GitHub
+
+`uv tool install git+https://github.com/driscollis/squall -U --force`
+
+## Update the Installation
+
+If you want to upgrade to the latest version of Squall SQL, then you will want to run one of the following commands.
+
+### Using uv on GitHub
+
+`uv tool install git+https://github.com/driscollis/squall -U --force`
+
+## Installing Using pip
+
+Update the version number as appropriate:
+
+`pip install squall-sql`
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/driscollis/squall/blob/main/LICENSE) file for details.
