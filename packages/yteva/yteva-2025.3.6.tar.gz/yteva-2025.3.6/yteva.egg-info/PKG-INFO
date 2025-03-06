@@ -1,0 +1,21 @@
+Metadata-Version: 2.2
+Name: yteva
+Version: 2025.3.6
+Summary: yteva library for downloading audio and videos from YouTube and details about them.
+Home-page: https://t.me/sourceeva
+Author: Eslam
+Author-email: your_email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Requires-Dist: requests
+Requires-Dist: httpx==0.25.0
+Requires-Dist: pyrofork
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
