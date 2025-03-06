@@ -1,0 +1,7 @@
+Environment contains multiple differing definitions for 'host'.
+Using value from 'HOST' (x86_64-conda-linux-gnu) and ignoring 'host' (p-sc-2148) at /scratch/kjk6173/conda_envs/48ed06e41e6c65d0d8ea6dda92a10cd2_/lib/perl5/site_perl/LWP/UserAgent.pm line 1134.
+WARNING: Ignoring 'chromosome' feature_type from /storage/group/pcb5/default/kjk6173/variantfoldrna/tests/variantfoldrna_tmp/annotation.sorted.gff.gz GFF/GTF file. This feature_type is not supported in VEP.
+WARNING: Ignoring 'ncRNA_gene' feature_type from /storage/group/pcb5/default/kjk6173/variantfoldrna/tests/variantfoldrna_tmp/annotation.sorted.gff.gz GFF/GTF file. This feature_type is not supported in VEP.
+WARNING: Ignoring 'transposable_element' feature_type from /storage/group/pcb5/default/kjk6173/variantfoldrna/tests/variantfoldrna_tmp/annotation.sorted.gff.gz GFF/GTF file. This feature_type is not supported in VEP.
+WARNING: Ignoring 'transposable_element_gene' feature_type from /storage/group/pcb5/default/kjk6173/variantfoldrna/tests/variantfoldrna_tmp/annotation.sorted.gff.gz GFF/GTF file. This feature_type is not supported in VEP.
+WARNING: Parent entries with the following IDs were not found or skipped due to invalid types: gene:HRA1, gene:tA(UGC)A, gene:snR18, gene:tP(UGG)A, gene:tS(AGA)A, transcript:YAR009C, transcript:YAR010C, gene:tL(CAA)A
