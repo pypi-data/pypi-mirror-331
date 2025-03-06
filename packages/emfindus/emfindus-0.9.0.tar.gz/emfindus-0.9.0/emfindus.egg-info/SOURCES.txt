@@ -1,0 +1,10 @@
+LICENSE
+pyproject.toml
+emfindus/ChipShouterInterface.py
+emfindus/MachineController.py
+emfindus/__init__.py
+emfindus.egg-info/PKG-INFO
+emfindus.egg-info/SOURCES.txt
+emfindus.egg-info/dependency_links.txt
+emfindus.egg-info/requires.txt
+emfindus.egg-info/top_level.txt

@@ -1,0 +1,5 @@
+setuptools
+findus
+chipshouter
+pynput
+more-itertools

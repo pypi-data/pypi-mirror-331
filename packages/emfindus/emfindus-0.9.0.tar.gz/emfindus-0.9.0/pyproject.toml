@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+include-package-data = true
+packages = ["emfindus"]
+
+[project]
+name = "emfindus"
+description = "Add-on library to findus to perform electromagnetic fault injection (emfi) attacks with the ChipSHOUTER"
+version = "0.9.0"
+license = {file = "LICENSE"}
+authors = [{name = "Matthias Kesenheimer", email = "matthias.kesenheimer@syss.de"}, {name = "Manuel Stotz", email = "manuel.stotz@syss.de"}]
+dependencies = [
+  "setuptools",
+  "findus",
+  "chipshouter",
+  "pynput",
+  "more-itertools",
+]
+
+[project.scripts]
+
+[project.urls]
+Homepage = "https://mkesenheimer.github.io"
+Documentation = "https://fault-injection-library.readthedocs.io/en/latest/"
