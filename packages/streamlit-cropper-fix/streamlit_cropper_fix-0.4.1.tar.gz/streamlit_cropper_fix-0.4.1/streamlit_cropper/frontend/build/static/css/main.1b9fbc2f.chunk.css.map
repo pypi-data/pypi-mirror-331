@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.css"],"names":[],"mappings":"AAAA,MACI,qBACF,CAEA,iBAGE,kBACF,CAEA,KACE,QAAS,CACT,sBACF","file":"main.1b9fbc2f.chunk.css","sourcesContent":[":root {\n    box-sizing: border-box;\n  }\n  \n  *,\n  ::before,\n  ::after {\n    box-sizing: inherit;\n  }\n  \n  body {\n    margin: 0;\n    background: transparent;\n  }"]}
