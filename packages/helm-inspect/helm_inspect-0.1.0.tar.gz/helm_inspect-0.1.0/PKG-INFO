@@ -1,0 +1,22 @@
+Metadata-Version: 2.3
+Name: helm-inspect
+Version: 0.1.0
+Summary: Drift detection for helm resources
+License: Apache-2.0
+Keywords: helm,kubernetes,inspect,diff
+Author: Qreater
+Author-email: qreater@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: art (>=5.2,<6.0)
+Requires-Dist: pyyaml (>=6.0,<7.0)
+Description-Content-Type: text/markdown
+
+
