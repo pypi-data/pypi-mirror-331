@@ -1,0 +1,10 @@
+Metadata-Version: 2.2
+Name: chessminal
+Version: 2.0
+License-File: LICENSE
+Requires-Dist: chess
+Requires-Dist: python-chess
+Requires-Dist: stockfish
+Requires-Dist: requests
+Requires-Dist: rich
+Dynamic: requires-dist
