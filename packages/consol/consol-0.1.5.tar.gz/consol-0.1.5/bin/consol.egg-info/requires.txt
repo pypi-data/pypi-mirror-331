@@ -1,0 +1,5 @@
+python-dotenv
+scipy
+pandas
+langchain>=0.3.14
+langchain-openai>=0.3.3
