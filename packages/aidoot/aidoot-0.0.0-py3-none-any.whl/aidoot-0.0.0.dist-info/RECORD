@@ -1,0 +1,15 @@
+aidoot/__init__.py,sha256=Y_93Qhja1PZUYHDmU5LGb5AZ-WJNSfvVdBDuBjVq2n0,290
+aidoot/specs.py,sha256=t3kCh2nGQD7mc29_QT3FAe1cv21JvcyNlRkpoeYcT58,682
+aidoot/tool_executor.py,sha256=e29RQUiWjaIPXaoFCGHVFxhQVbqvBObc2XAJ_mqdjDM,4712
+aidoot/tools.py,sha256=yNHE5YKJ_QVgFKSaYgSUC-XBaoCyUTQ8BURN7H60hvA,2958
+aidoot/utils.py,sha256=xgxuS76PArebzB6ZHQ99iZ73ynBcCc8WvE2LXFBi0wQ,615
+aidoot/llms/__init__.py,sha256=fraErJgDJGcUHkeYC6-AvYeEXZbpWKUKepE1n1u4Qe8,349
+aidoot/llms/_cohere.py,sha256=CNIhKSlK6OYTJq5thoJ3Dl_2j7-ivWmDozhgnsoU63A,4207
+aidoot/llms/_llamacpp.py,sha256=8BgtOVLFBP1jO5AdoJOl-MqbnJlcnoXsWazrm6iyBII,2025
+aidoot/llms/_openai.py,sha256=BrqdoIvjiKcqKk_EOu_r0Qkn_JV2j-LinQFRSbFqPCE,1093
+aidoot/llms/llm.py,sha256=3x8MosWlYQq6UqGWGlcimdrDsno-8fVkeNDm9CwL3a8,982
+aidoot-0.0.0.dist-info/LICENSE,sha256=dydufynL8wtRLER3-wNPo1NX5rmGoFxB0FqJpdCXLbs,11343
+aidoot-0.0.0.dist-info/METADATA,sha256=aKTyxspzv0xdWrFdQ4oH98gYIbxgCIQSSLKzStWVF5U,463
+aidoot-0.0.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+aidoot-0.0.0.dist-info/top_level.txt,sha256=sjEJxQtL7MPZAU1wXiwAkBf5tnkgyoT1izsh9ymwVdM,7
+aidoot-0.0.0.dist-info/RECORD,,
