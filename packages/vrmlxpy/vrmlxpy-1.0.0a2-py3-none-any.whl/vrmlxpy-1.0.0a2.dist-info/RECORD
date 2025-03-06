@@ -1,0 +1,12 @@
+vrmlxpy/__init__.py,sha256=44rDj4kafp1MaAgFaEUbNJdBwDNUNT6SVABa42trRLY,245
+vrmlxpy/libtogeom.so,sha256=TQvNa_teu24PjeJIhHovVPbfGtMGisGqX4zL-qRjYMI,1033480
+vrmlxpy/libvrmlproc.so,sha256=eZ68M76y3CdGGvGro2-ZFsQzE4zwcVXrE3Cj9CGSK9Y,567656
+vrmlxpy/togeom.dll,sha256=vuomcdmobujrKDu09hBP-R_Y92Xbl0sOug-LfUlhd3k,856576
+vrmlxpy/vrmlproc.dll,sha256=499JPaCUYF7AWIWlO-flTCoHTFoBw_ztin4SwrlyD_4,671744
+vrmlxpy/vrmlxpy.pyd,sha256=MybASpbR6zNIpAAv1a9CQu4bwYdoTsPc0Xe6qzfPjdg,1225216
+vrmlxpy/vrmlxpy.so,sha256=p29wIAqEoqqNl9g6iiCw9aSM2YdlzOZnr7qgBDOG5l0,1024448
+vrmlxpy-1.0.0a2.dist-info/LICENSE,sha256=MjdpnZ5ngchYdzZavZSTyhMqD9MfQ-GjJ4uOdfNlSvQ,33094
+vrmlxpy-1.0.0a2.dist-info/METADATA,sha256=yrMk5jCno2NKMsyOY0Eagpg_a9YDFDqJojU5Y3dZJIc,3621
+vrmlxpy-1.0.0a2.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+vrmlxpy-1.0.0a2.dist-info/top_level.txt,sha256=rgJnjdmwu6NelpC1DoZkmRztoNLOx47KPfAsTqyzkt4,8
+vrmlxpy-1.0.0a2.dist-info/RECORD,,
