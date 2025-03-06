@@ -1,0 +1,197 @@
+[project]
+name = "cs-app-osx-spaces"
+description = "Access to the MacOS X display spaces."
+authors = [
+    { name = "Cameron Simpson", email = "cs@cskk.id.au" },
+]
+keywords = [
+    "python3",
+]
+dependencies = [
+    "cs.app.osx.misc>=20240622.1",
+    "cs.app.osx.objc>=20240622",
+    "cs.cmdutils>=20250306",
+    "cs.context>=20250306",
+    "cs.delta>=20240622",
+    "cs.fs>=20241122",
+    "cs.lex>=20250103",
+    "cs.pfx>=20241208",
+    "pyobjc",
+    "typeguard",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: MacOS X",
+    "Intended Audience :: End Users/Desktop",
+    "Programming Language :: Python :: 3",
+    "Topic :: Desktop Environment",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+]
+version = "20250306"
+
+[project.license]
+text = "GNU General Public License v3 or later (GPLv3+)"
+
+[project.urls]
+"Monorepo Hg/Mercurial Mirror" = "https://hg.sr.ht/~cameron-simpson/css"
+"Monorepo Git Mirror" = "https://github.com/cameron-simpson/css"
+"MonoRepo Commits" = "https://bitbucket.org/cameron_simpson/css/commits/branch/main"
+Source = "https://github.com/cameron-simpson/css/blob/main/lib/python/cs/app/osx/spaces.py"
+
+[project.scripts]
+spaces = "cs.app.osx.spaces:main"
+
+[project.readme]
+text = """
+Access to the MacOS X display spaces.
+
+*Latest release 20250306*:
+* Replace a bundle of percent formats with format strings.
+* Spaces: extract the filesystem path Sonoma fix into new static method spaces_pathfor(fspath).
+* New DEFAULT_BACKGROUND_RGB = 0, 0, 0 (black) default background colour.
+* Space.set_wp_dirpath: rename to set_wp_fspath, accomodate single image or dir of images.
+* Spaces.set_wp_fspath: for directories, add back ChangeDuration, comment out NewImageFilePath and LastName.
+* Some minor improvements.
+
+## <a name=\"main\"></a>`main(argv=None)`
+
+cs.app.osx.spaces command line mode.
+
+## <a name=\"Spaces\"></a>Class `Spaces`
+
+The spaces for a particular display.
+
+*`Spaces.__init__(self, display_index=0, *, cg_conn: Optional[inspect._empty] = <objc.function '_CGSDefaultConnection' at 0x11af9dc50>)`*:
+Initialise.
+
+Parameters:
+* `display_index`: optional display index, default `0`
+* `cg_conn`: optional CoreGraphics connection,
+  default from `CoreGraphics._CGSDefaultConnection()`
+
+*`Spaces.__getitem__(self, space_index)`*:
+Return the space at index `space_index`.
+Note that the index counts from `0`, while the desktop space
+number counts from `1`.
+
+*`Spaces.current`*:
+The current space.
+
+*`Spaces.current_index`*:
+The index of the current space, found by scanning the spaces
+for the current space UUID.
+Returns `None` if not found.
+
+*`Spaces.current_uuid`*:
+The UUID of the current space.
+
+*`Spaces.display_id`*:
+The display identifier of the display.
+
+*`Spaces.display_uuid`*:
+The UUID of the display.
+
+*`Spaces.forget(self)`*:
+Forget the current spaces information.
+This will cause it to be obtained anew.
+
+*`Spaces.get_wp_config(self, space_index: int)`*:
+Get the desktop picture configuration of the space at `space_index`.
+
+*`Spaces.monitor_current(self, **kw)`*:
+Return a `cs.delta.monitor` generator for changes to the
+\"current\" space i.e. changes representing a desktop space switch.
+
+*`Spaces.monitor_wp_config(self, space_index=None, **kw)`*:
+Return a `cs.delta.monitor` generator for the wallpaper
+configuration of a specific space (default `self.current_index`
+at the time of call).
+
+*`Spaces.popindices(self, argv)`*:
+Pop a leading spaces specification from `argv` if present,
+return a list of the indices it represents.
+If there is no spaces specification, return `None`.
+
+Note that space indices count from `0`, and space numbers count from `1`.
+
+The following spaces specifications are recognised:
+* `.`: the current space index
+* `*`: all the space indices
+* a positive integer `spn`: `spn-1`
+
+*`Spaces.set_wp_config(self, space_index: int, wp_config: dict)`*:
+Set the desktop picture configuration of the space at
+`space_index` using the `dict` `wp_config`.
+
+*`Spaces.set_wp_fspath(self, space_index: int, fspath: str, *, background_color=(0, 0, 0), random=True, change_duration=5.0, placement='SizeToFit')`*:
+Set the Space configuration of `space_index` to use images from `fspath`.
+
+*`Spaces.spaces_pathfor(fspath: str)`*:
+Return `fspath` adjusted for use in a spaces configuration.
+
+Prior to MacOS Sonoma (14.5), this just returns the absolute path.
+
+In MacOS Sonoma there's some hideous bug in the
+DesktopPictureSetDisplayForSpace library where it seems to
+see a leading home directory path and replace it with `/~`
+(instead of something plausible like '~'), perhaps intended
+for making paths track homedir moves.  It turns out that
+providing a _relative_ path from '/' does The Right Thing.
+Ugh.
+
+## <a name=\"SpacesCommand\"></a>Class `SpacesCommand(cs.cmdutils.BaseCommand)`
+
+A command line implementation for manipulating spaces.
+
+*`SpacesCommand.Options`*
+
+*`SpacesCommand.cmd_current(self, argv)`*:
+Usage: {cmd}
+Print the current space number.
+
+*`SpacesCommand.cmd_monitor(self, argv)`*:
+Usage: {cmd}
+Monitor space switches.
+
+*`SpacesCommand.cmd_wp(self, argv)`*:
+Usage: {cmd} [{{.|space#|*}} [wp-path]]
+Set or query the wallpaper for a space.
+The optional space number may be \".\" to indicate the
+current space or \"*\" to indicate all spaces.
+
+*`SpacesCommand.cmd_wpm(self, argv)`*:
+Usage: {cmd} [{{.|space#}}]
+Monitor the wallpaper settings of a particular space.
+
+*`SpacesCommand.run_context(self, **kw)`*:
+Set `options.spaces` to a `Spaces` instnace during a command run.
+
+# Release Log
+
+
+
+*Release 20250306*:
+* Replace a bundle of percent formats with format strings.
+* Spaces: extract the filesystem path Sonoma fix into new static method spaces_pathfor(fspath).
+* New DEFAULT_BACKGROUND_RGB = 0, 0, 0 (black) default background colour.
+* Space.set_wp_dirpath: rename to set_wp_fspath, accomodate single image or dir of images.
+* Spaces.set_wp_fspath: for directories, add back ChangeDuration, comment out NewImageFilePath and LastName.
+* Some minor improvements.
+
+*Release 20250108*:
+New \"current\" subcommand to report the current space number.
+
+*Release 20240622*:
+* New SpacesCommand with a \"wp\" command to report or set wallpaper configs.
+* Assorted other updates."""
+content-type = "text/markdown"
+
+[build-system]
+build-backend = "flit_core.buildapi"
+requires = [
+    "flit_core >=3.2,<4",
+]
+
+[tool.flit.module]
+name = "cs.app.osx.spaces"
