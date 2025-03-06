@@ -1,0 +1,11 @@
+tethys_cdsapi/__init__.py,sha256=M5EmAfvKMprSU75768ECiP23OqVyTNOeiZRkkHO2GsI,103
+tethys_cdsapi/downloader.py,sha256=BWFKCM6G7ytKymX3Dh2cl0n1Hs59q2PvDfKDyQqoGYg,33363
+tethys_cdsapi/utils.py,sha256=RAZ90x3pnR6Ez5qvUVUy7cqAry3stZiKHG-Qf2AYcHA,1094
+tethys_cdsapi/tests/__init__.py,sha256=38pdDhEZk2RiT5kga2DPbhTYeDHdsCXNaEr7HH1-k20,208
+tethys_cdsapi/tests/parameters.yml,sha256=ZdY6v9RhFNHtAUmF-QQH6Od5Q5NHVizlNB30y6fOu60,73
+tethys_cdsapi/tests/testing.py,sha256=pP1Si7gn3hDUEXsswOZ27QvnYnxdwOFZyD90JMhzD28,884
+tethys_cdsapi/tests/utest_downloader.py,sha256=Krgh3HH3xpo-nJwQ8qN0C-Rnv-0pfXPqb5u2G-q9a8M,842
+tethys_cdsapi-0.3.0.dist-info/METADATA,sha256=Nu-y52wTA71l0Alez4L9Oj_RW38DSXDPUB4KWAQXoPk,724
+tethys_cdsapi-0.3.0.dist-info/WHEEL,sha256=tkmg4JIqwd9H8mL30xA7crRmoStyCtGp0VWshokd1Jc,105
+tethys_cdsapi-0.3.0.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+tethys_cdsapi-0.3.0.dist-info/RECORD,,
