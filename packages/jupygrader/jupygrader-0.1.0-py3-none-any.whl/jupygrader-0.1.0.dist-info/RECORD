@@ -1,0 +1,12 @@
+jupygrader/__about__.py,sha256=8hXuLZSNrR4AckrgPamCQ6igETxTVkrslncD5Q0A_Rw,134
+jupygrader/__init__.py,sha256=R6tgzrHmfedlggZhGW4FJXAJx7GY4SBqXQbgMzhcB1I,1218
+jupygrader/core.py,sha256=JeYQwSsNwue3BpkXhfLa3IXihk9_8MJYmDQ46LvR80w,16214
+jupygrader/grader.py,sha256=68BlpElMxW0LSzJXz1HlGdIk5ulpvTYXz3fBxvkDDyY,7002
+jupygrader/jupyter-cell-scripts/append-to-end-of-notebook.py,sha256=mWbxSBrxH6V82MPE7K7p17PYfcciJuG7qwOZRzDBp4g,1315
+jupygrader/jupyter-cell-scripts/grader-manual-template.py,sha256=5PWlBkLDd7l1yr2TeIXshpZF54NNach_-w9ZCLOl3nQ,169
+jupygrader/jupyter-cell-scripts/grader-template.py,sha256=d2dPB__S_Kp8en9yeBfGxMbrIV23oCxC2vkeac71s04,292
+jupygrader/jupyter-cell-scripts/prepend-to-start-of-notebook.py,sha256=FV0dj2axYLLSwTUkiP_QOeIoswdQyqCJa-hwDLtkCjA,1340
+jupygrader-0.1.0.dist-info/METADATA,sha256=YvIxiwvPc3fDewtHLls1Qq_U58SjeXguCcDtlMTl8eU,1674
+jupygrader-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+jupygrader-0.1.0.dist-info/licenses/LICENSE.txt,sha256=0qE6QhIHQjNJexs5sM5beZUExNXB4uJ56FoC5Zk5OmU,1109
+jupygrader-0.1.0.dist-info/RECORD,,
