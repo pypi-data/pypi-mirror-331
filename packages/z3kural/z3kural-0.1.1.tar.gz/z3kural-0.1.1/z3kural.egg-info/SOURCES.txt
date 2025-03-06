@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+z3kural/__init__.py
+z3kural/core.py
+z3kural/kural.json
+z3kural.egg-info/PKG-INFO
+z3kural.egg-info/SOURCES.txt
+z3kural.egg-info/dependency_links.txt
+z3kural.egg-info/top_level.txt
