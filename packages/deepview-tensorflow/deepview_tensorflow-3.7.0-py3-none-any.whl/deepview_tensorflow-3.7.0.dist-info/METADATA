@@ -1,0 +1,66 @@
+Metadata-Version: 2.4
+Name: deepview_tensorflow
+Version: 3.7.0
+Summary: TensorFlow extensions of DeepView.
+Home-page: https://github.com/satishlokkoju/deepview
+Author: Satish Lokkoju
+Author-email: satish.lokkoju@gmail.com
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License: Apache-2.0
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Requires-Dist: deepview==3.7.0
+Requires-Dist: tqdm>=4.65.0
+Requires-Dist: opencv-python-headless>=4.0.0
+Requires-Dist: typing-extensions>=4.0.0; python_version < '3.8'
+Requires-Dist: numpy<1.19 ; extra == "tf1"
+Requires-Dist: protobuf<4.0 ; extra == "tf1"
+Requires-Dist: Keras<2.4 ; extra == "tf1"
+Requires-Dist: h5py<3.0 ; extra == "tf1"
+Requires-Dist: tensorflow<2.0 ; extra == "tf1"
+Requires-Dist: numpy<1.19 ; extra == "tf1-gpu"
+Requires-Dist: protobuf<4.0 ; extra == "tf1-gpu"
+Requires-Dist: Keras<2.4 ; extra == "tf1-gpu"
+Requires-Dist: h5py<3.0 ; extra == "tf1-gpu"
+Requires-Dist: tensorflow-gpu<2.0 ; extra == "tf1-gpu"
+Requires-Dist: tensorflow>=2.11.0,<=2.15.0 ; extra == "tf2"
+Project-URL: Changelog, https://github.com/satishlokkoju/deepview/blob/main/CHANGELOG.md
+Project-URL: Documentation, https://satishlokkoju.github.io/deepview
+Provides-Extra: tf1
+Provides-Extra: tf1-gpu
+Provides-Extra: tf2
+
+# Data and Network Introspection Kit (DeepView) - TensorFlow
+
+This package contains the TensorFlow extensions of [DeepView](https://github.com/satishlokkoju/deepview).
+
+To learn more about DeepView, please see the [docs](https://satishlokkoju.github.io/deepview).
+
+## Installation
+
+To install TensorFlow 2 (CPU or GPU), use:
+```
+pip install "deepview[tensorflow]"
+```
+
+To install TensorFlow 1 CPU, use:
+```
+pip install "deepview[tensorflow1]"
+```
+
+For TensorFlow 1 GPU:
+```
+pip install  "deepview[tensorflow1-gpu]"
+```
+
