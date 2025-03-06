@@ -1,0 +1,42 @@
+Metadata-Version: 2.2
+Name: meu_pacote_imagem
+Version: 0.1.0
+Summary: Um pacote para processamento de imagens
+Home-page: https://github.com/Miiranda0/meu_pacote_imagem
+Author: David Miranda
+Author-email: mirandadavid2021@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Pillow
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+
+# Meu Pacote de Imagens
+
+Este é um pacote para processamento de imagens em Python. Ele usa a biblioteca Pillow para redimensionar imagens.
+
+## Instalação
+
+```bash
+pip install meu_pacote_imagem
+```
+
+## Exemplo de uso
+
+```python
+from meu_pacote_imagem import redimensionar_imagem
+
+redimensionar_imagem("entrada.jpg", "saida.jpg")
+```
