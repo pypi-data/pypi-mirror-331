@@ -1,0 +1,17 @@
+click>=8.0.0
+sentinelhub>=3.4.0
+shapely>=1.8.0
+geojson>=2.5.0
+requests>=2.27.0
+tqdm>=4.64.0
+rasterio>=1.2.0
+numpy>=1.20.0
+
+[dev]
+pytest>=7.0.0
+black>=22.3.0
+isort>=5.10.0
+flake8>=4.0.0
+
+[gdal]
+gdal>=3.0.0
