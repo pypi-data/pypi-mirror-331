@@ -1,0 +1,3 @@
+[swarmauri.tools]
+jupyterexecuteandconverttool=swarmauri_tool_jupyterexecuteandconvert:JupyterExecuteAndConvertTool
+
