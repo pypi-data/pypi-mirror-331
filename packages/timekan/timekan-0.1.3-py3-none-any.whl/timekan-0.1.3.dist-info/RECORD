@@ -1,0 +1,15 @@
+timekan/__init__.py,sha256=i_Pnl4LrJ0CyqUc9r5EqesZY0j9aYpGStoyj3kCAQKk,137
+timekan/layers/__init__.py,sha256=p0fHsp5-vbfKSl35Cuipg5gCUCe8MqWitL6JUm_bJ3Y,165
+timekan/layers/chebyshev.py,sha256=kJoXniwHbxFh4qSA_Vn1gXZFRHL8Z61uDwpXJqpwqn4,2005
+timekan/layers/fourier.py,sha256=TxxRz1ooChOMzqrYhEBL97lATsm9zWJ80e4QtuHgxJQ,2539
+timekan/layers/relu.py,sha256=Odw7nErWMi9j52EDYeww7ee15JCUjxZmb8hG6le0L5o,3238
+timekan/layers/spline.py,sha256=cLHsBd6OZ45RC89MtDzN1hxJMIF0X66Ti8yyNZs6lCM,9887
+timekan/models/__init__.py,sha256=NdpbUVCSj1zgflJl9FWYREkMDFSiVOpD_r3Y0jIVwVs,96
+timekan/models/tkan_gru.py,sha256=R-hMH6nIhRAi1xvH72u356czkjk5cf66oq2zMjRyuUs,12640
+timekan/models/tkan_lstm.py,sha256=PFdS_dnLodTkbhKkLnLSPr8Vt5oDAlCDQuaMJ3qrf1M,12906
+timekan/utils/__init__.py,sha256=w8cs9hLNpbjb-ar9EnpYUs1Wpij2HcwIdq70j_JdJU8,114
+timekan/utils/datasets.py,sha256=B4D2OoNjNevvboh1ST3Efzn4XPx3U8Mv3ioc-99ICBc,6951
+timekan-0.1.3.dist-info/METADATA,sha256=cO4adBl9FY-mvfS2NGMTxfjvJ00LmkXYnPR8kGti4Dk,4687
+timekan-0.1.3.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+timekan-0.1.3.dist-info/top_level.txt,sha256=Z2J5uWkUcXtFdwv10eXIN472JAFIvlyskQi6Gpa8GhQ,8
+timekan-0.1.3.dist-info/RECORD,,
