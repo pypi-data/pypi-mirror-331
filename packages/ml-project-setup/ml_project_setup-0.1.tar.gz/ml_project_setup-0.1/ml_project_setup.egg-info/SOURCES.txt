@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+ml_project_setup/__init__.py
+ml_project_setup/ml_project_setup.py
+ml_project_setup.egg-info/PKG-INFO
+ml_project_setup.egg-info/SOURCES.txt
+ml_project_setup.egg-info/dependency_links.txt
+ml_project_setup.egg-info/entry_points.txt
+ml_project_setup.egg-info/requires.txt
+ml_project_setup.egg-info/top_level.txt
