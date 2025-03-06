@@ -1,0 +1,9 @@
+python-dotenv[cli]==1.0.1
+
+[django]
+dj-email-url==1.0.6
+dj-database-url==2.3.0
+
+[test]
+pytest-cov
+tox

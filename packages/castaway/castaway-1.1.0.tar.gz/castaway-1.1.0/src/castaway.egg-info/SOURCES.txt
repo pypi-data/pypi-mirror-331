@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.rst
+pyproject.toml
+src/castaway/__init__.py
+src/castaway.egg-info/PKG-INFO
+src/castaway.egg-info/SOURCES.txt
+src/castaway.egg-info/dependency_links.txt
+src/castaway.egg-info/requires.txt
+src/castaway.egg-info/top_level.txt
+tests/test_castenv.py

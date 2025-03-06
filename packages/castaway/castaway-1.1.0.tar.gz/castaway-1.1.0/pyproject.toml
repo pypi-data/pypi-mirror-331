@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "castaway"
+version = "1.1.0"
+description = "Simple wrapper for dotenv, with casting"
+requires-python = ">=3.10"
+readme = { file = "README.rst", content-type = "text/x-rst" }
+license = { file = "LICENSE" }
+authors = [
+    { name = "David Krauth", email = "dakrauth@gmail.com"},
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Web Environment",
+    "Environment :: Console",
+    "Framework :: Django",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+dependencies = ["python-dotenv[cli]==1.0.1"]
+
+[project.urls]
+Homepage = "http://github.com/dakrauth/castaway"
+
+[project.optional-dependencies]
+django = [ "dj-email-url==1.0.6", "dj-database-url==2.3.0" ]
+test = ["pytest-cov", "tox"]
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+packages = [ "castaway" ]
+
+[tool.ruff]
+line-length = 100
+indent-width = 4
+
+[tool.ruff.lint]
+ignore = ["E741"]
