@@ -1,0 +1,8 @@
+README.md
+aws_utils.py
+setup.py
+aws_utils_vitalii_bozadzhy.egg-info/PKG-INFO
+aws_utils_vitalii_bozadzhy.egg-info/SOURCES.txt
+aws_utils_vitalii_bozadzhy.egg-info/dependency_links.txt
+aws_utils_vitalii_bozadzhy.egg-info/requires.txt
+aws_utils_vitalii_bozadzhy.egg-info/top_level.txt
