@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+src/parallelmatx/__init__.py
+src/parallelmatx/build.py
+src/parallelmatx/normal.py
+src/parallelmatx/parallel.py
+src/parallelmatx/performance.py
+src/parallematx.egg-info/PKG-INFO
+src/parallematx.egg-info/SOURCES.txt
+src/parallematx.egg-info/dependency_links.txt
+src/parallematx.egg-info/requires.txt
+src/parallematx.egg-info/top_level.txt
