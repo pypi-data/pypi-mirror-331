@@ -1,0 +1,31 @@
+Metadata-Version: 2.2
+Name: PandaAuthPy
+Version: 1.0.0
+Summary: A Panda-Auth library for Python.
+Home-page: https://github.com/yourusername/PandaAuthPy
+Author: Rice Jay
+Author-email: yvor.exe@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# PandaAuthPy
+
+### PandaAuthPy is a Panda-Auth library for Python 🐍
+
+## Installation
+
+```sh
+pip install PandaAuthPy
