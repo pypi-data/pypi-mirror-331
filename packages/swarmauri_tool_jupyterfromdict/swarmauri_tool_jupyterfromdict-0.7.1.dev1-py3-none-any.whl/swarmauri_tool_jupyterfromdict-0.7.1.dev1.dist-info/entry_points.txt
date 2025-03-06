@@ -1,0 +1,3 @@
+[swarmauri.tools]
+jupyterfromdicttool=swarmauri_tool_jupyterfromdict:JupyterFromDictTool
+
