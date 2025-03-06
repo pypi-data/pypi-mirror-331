@@ -1,0 +1,2 @@
+recursive-include py_bdd_test/features/steps *.py
+recursive-include py_bdd_test/features *.feature
