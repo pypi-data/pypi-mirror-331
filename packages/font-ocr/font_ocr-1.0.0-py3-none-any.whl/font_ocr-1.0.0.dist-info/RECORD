@@ -1,0 +1,10 @@
+font_ocr/__init__.py,sha256=4fQzOYbRP7Ic-0ReUK7lPy3Nbr2Al2xA4xoSdNOy58w,281
+font_ocr/font_ocr.py,sha256=JmFFt5RQq-t_uy5UuRsDphzz98Y9c8dOCr79xAfaHiQ,3991
+font_spider_ocr/__init__.py,sha256=NOsmeLvKKT7Ubaximo_0lVlQJUjflFeFYmWAGe9cfbY,210
+font_spider_ocr/xi_font_spider_ocr.py,sha256=JmFFt5RQq-t_uy5UuRsDphzz98Y9c8dOCr79xAfaHiQ,3991
+xi_font_spider_ocr/__init__.py,sha256=NOsmeLvKKT7Ubaximo_0lVlQJUjflFeFYmWAGe9cfbY,210
+xi_font_spider_ocr/xi_font_spider_ocr.py,sha256=JmFFt5RQq-t_uy5UuRsDphzz98Y9c8dOCr79xAfaHiQ,3991
+font_ocr-1.0.0.dist-info/METADATA,sha256=ip8qnGJGuJDcX71iCo9nFRl_IcTtVPgh5FB4llIrH6I,1680
+font_ocr-1.0.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+font_ocr-1.0.0.dist-info/top_level.txt,sha256=04tshtdaoDxXW4t4KnZ5t6zH4drOrY6mnXuq5k4Wcrc,9
+font_ocr-1.0.0.dist-info/RECORD,,
