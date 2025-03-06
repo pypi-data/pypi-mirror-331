@@ -1,0 +1,9 @@
+shortcut_mcp/__init__.py,sha256=Asw5L_C4srYZ0zIAcqIXLyl60of5P7PdYKnee4A62nc,91
+shortcut_mcp/__main__.py,sha256=QGma__n6Fu4AOD_8yrj9LEv8MiblnlYEkk1jE0TY3zo,102
+shortcut_mcp/cli.py,sha256=NmLcJ8qjYPm9rxnDTwDn9ezYHCMZo5yJVZeqbxsa5dk,3852
+shortcut_mcp/server.py,sha256=9fzj2RgOHYhj3pf92Jq2gHc8Jkyby8PaiyQrLJ9I4f8,102669
+shortcut_mcp-0.2.3.dist-info/METADATA,sha256=hfyf2u4NNTaLytFSuMRBzOjL_l0ePNkd0IFRgB0vDzk,8721
+shortcut_mcp-0.2.3.dist-info/WHEEL,sha256=e5_kxHt1eyfGx2a_cveCP7LTQoeaVbHvOzrGGe0y1dk,87
+shortcut_mcp-0.2.3.dist-info/entry_points.txt,sha256=6_Yx669tlpWKGqbz5ERE0abWYfGRm84pTZomKw3_0Nw,55
+shortcut_mcp-0.2.3.dist-info/license_files/LICENSE,sha256=PccVKFuDS8zbYsaZkcAjZUeaZDrdyzn9T7HVRMvCVNI,1085
+shortcut_mcp-0.2.3.dist-info/RECORD,,
