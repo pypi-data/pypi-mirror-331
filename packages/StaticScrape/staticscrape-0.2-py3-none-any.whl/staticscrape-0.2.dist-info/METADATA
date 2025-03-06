@@ -1,0 +1,13 @@
+Metadata-Version: 2.2
+Name: StaticScrape
+Version: 0.2
+Summary: A command line tool to clone any website's front end
+Author: Anurag Singh Bhandari
+Author-email: anuoo3ups@gmail.com
+Requires-Dist: playwright
+Requires-Dist: beautifulsoup4
+Requires-Dist: lxml
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-dist
+Dynamic: summary
