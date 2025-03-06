@@ -1,0 +1,69 @@
+Metadata-Version: 2.2
+Name: mppt
+Version: 0.6.0
+Summary: A Modern Python Package Template
+Author-email: Xiangzhuang Shen <datahonor@gmail.com>
+License: MIT
+Project-URL: Homepage, https://shenxiangzhuang.github.io/mppt
+Project-URL: Bug Tracker, https://shenxiangzhuang.github.io/mppt/issues
+Project-URL: Documentation, https://shenxiangzhuang.github.io/mppt
+Project-URL: Source Code, https://github.com/shenxiangzhuang/mppt
+Project-URL: Release Notes, https://shenxiangzhuang.github.io/mppt/changelog/
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: pre-commit; extra == "dev"
+Requires-Dist: ipython; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: pytest-sugar; extra == "dev"
+Requires-Dist: hypothesis>=6.112.0; extra == "dev"
+Requires-Dist: commitizen; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: mkdocs; extra == "docs"
+Requires-Dist: mkdocs-material; extra == "docs"
+Requires-Dist: mkdocs-material-extensions; extra == "docs"
+Requires-Dist: mkdocstrings; extra == "docs"
+Requires-Dist: mkdocs-bibtex; extra == "docs"
+Requires-Dist: mkdocstrings-python; extra == "docs"
+Requires-Dist: mkdocs-autorefs; extra == "docs"
+Requires-Dist: mkdocs-git-committers-plugin-2; extra == "docs"
+Requires-Dist: mkdocs-git-revision-date-localized-plugin; extra == "docs"
+
+# MPPT: A Modern Python Package Template
+
+<center>
+
+[![Python](https://img.shields.io/pypi/pyversions/mppt.svg?color=%2334D058)](https://pypi.org/project/mppt/)
+[![PyPI](https://img.shields.io/pypi/v/mppt?color=%2334D058&label=pypi%20package)](https://pypi.org/project/mppt/)
+[![PyPI Downloads](https://static.pepy.tech/badge/mppt)](https://pepy.tech/projects/mppt)
+[![GitHub License](https://img.shields.io/github/license/shenxiangzhuang/mppt)](https://github.com/shenxiangzhuang/mppt/blob/master/LICENSE)
+
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+[![Checked with mypy](https://www.mypy-lang.org/static/mypy_badge.svg)](https://mypy-lang.org/)
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
+[![Build Docs](https://github.com/shenxiangzhuang/mppt/actions/workflows/build_docs.yaml/badge.svg)](https://github.com/shenxiangzhuang/mppt/actions/workflows/build_docs.yaml)
+[![Test](https://github.com/shenxiangzhuang/mppt/actions/workflows/test.yaml/badge.svg)](https://github.com/shenxiangzhuang/mppt/actions/workflows/test.yaml)
+[![Codecov](https://codecov.io/gh/shenxiangzhuang/mppt/branch/master/graph/badge.svg)](https://codecov.io/gh/shenxiangzhuang/mppt)
+
+</center>
+
+# About
+[MPPT](https://github.com/shenxiangzhuang/mppt): A **M**odern **P**ython **P**ackage **T**emplate.
+
+# Documentation
+
+[https://datahonor.com/mppt/](https://datahonor.com/mppt/)
