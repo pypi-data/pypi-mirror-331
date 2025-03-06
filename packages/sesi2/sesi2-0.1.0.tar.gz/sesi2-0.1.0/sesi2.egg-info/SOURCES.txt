@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+file/main.py
+file/print.py
+file/rumus_mat.py
+sesi2.egg-info/PKG-INFO
+sesi2.egg-info/SOURCES.txt
+sesi2.egg-info/dependency_links.txt
+sesi2.egg-info/top_level.txt
