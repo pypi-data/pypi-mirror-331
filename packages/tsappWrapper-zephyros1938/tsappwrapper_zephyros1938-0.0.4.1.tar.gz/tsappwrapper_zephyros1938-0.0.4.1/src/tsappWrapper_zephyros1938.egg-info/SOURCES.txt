@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/tsappWrapper_zephyros1938.egg-info/PKG-INFO
+src/tsappWrapper_zephyros1938.egg-info/SOURCES.txt
+src/tsappWrapper_zephyros1938.egg-info/dependency_links.txt
+src/tsappWrapper_zephyros1938.egg-info/top_level.txt
+src/zephyros1938/tsapp.py
+src/zephyros1938/tsappMod.py
