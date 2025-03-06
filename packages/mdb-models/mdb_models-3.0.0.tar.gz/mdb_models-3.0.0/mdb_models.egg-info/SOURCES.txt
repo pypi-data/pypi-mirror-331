@@ -1,0 +1,17 @@
+setup.py
+mdb_models/__init__.py
+mdb_models/authenticatable.py
+mdb_models/base.py
+mdb_models/db.py
+mdb_models/generate_authmodel.py
+mdb_models/generate_model.py
+mdb_models/session.py
+mdb_models.egg-info/PKG-INFO
+mdb_models.egg-info/SOURCES.txt
+mdb_models.egg-info/dependency_links.txt
+mdb_models.egg-info/entry_points.txt
+mdb_models.egg-info/requires.txt
+mdb_models.egg-info/top_level.txt
+mdb_models/templates/__init__.py
+mdb_models/templates/model_template.py
+mdb_models/templates/session_model_template.py
