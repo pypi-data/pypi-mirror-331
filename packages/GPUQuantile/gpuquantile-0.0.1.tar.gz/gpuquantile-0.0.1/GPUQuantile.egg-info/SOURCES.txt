@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+.github/README.md
+GPUQuantile/__init__.py
+GPUQuantile/module.py
+GPUQuantile.egg-info/PKG-INFO
+GPUQuantile.egg-info/SOURCES.txt
+GPUQuantile.egg-info/dependency_links.txt
+GPUQuantile.egg-info/requires.txt
+GPUQuantile.egg-info/top_level.txt
+docs/__init__.py
+docs/conf.py
+tests/__init__.py
+tests/test_example.py
