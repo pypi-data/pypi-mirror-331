@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: timemesh
+Version: 0.2.0
+Summary: Spatio-temporal data preparation toolkit
+Home-page: https://github.com/L-A-Sandhu/timemesh
+License: MIT
+Keywords: time-series,machine learning,data preprocessing
+Author: Laeeq
+Author-email: Laeeq.aslam.100@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Dist: numpy (>=1.21.0)
+Requires-Dist: pandas (>=2.0.3)
+Requires-Dist: scikit-learn (>=1.0.0)
+Requires-Dist: xarray (>=2023.1.0)
+Project-URL: Documentation, https://github.com/L-A-Sandhu/timemesh/blob/main/README.md
+Project-URL: Repository, https://github.com/L-A-Sandhu/timemesh
+Description-Content-Type: text/markdown
+
+# TimeMesh
+
+A Python library for temporal and spatio-temporal data preparation, feature engineering, and windowing.
+
+## Installation
+```bash
+pip install stloader
+
+## Installation
+```bash
+pip install stloader
+
+## Usage 
+
+from stloader import DataLoader
+
+loader = DataLoader(T=5, H=2)
+X, y = loader.load_csv("data.csv")
+
+
+
