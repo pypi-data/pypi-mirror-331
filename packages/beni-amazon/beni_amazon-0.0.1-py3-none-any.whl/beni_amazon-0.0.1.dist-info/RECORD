@@ -1,0 +1,12 @@
+bamazon/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bamazon/main.py,sha256=GP_60-6vImXqdMfC5vc4xlscWajx4OYmnlNXASWn19w,147
+bamazon/common/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bamazon/common/func.py,sha256=76Q_VA7Cf4w1VAvg_igvTT8LFrI5nCZrk7EHpjiU0TU,734
+bamazon/common/password.py,sha256=25fA1h9ttZuUobnZ_nA0Ouhmk43etBfGeM40dgxJnFY,1347
+bamazon/tasks/__init__.py,sha256=kYL82YdVVWBvvCWbQ4qAF5DySn6UK6BHDit7mpBjYL0,35
+bamazon/tasks/hello.py,sha256=f_jUrEsKe7bS6bXV51JzxGw5-NXhsEQFqfNDfUVxmSI,267
+beni_amazon-0.0.1.dist-info/METADATA,sha256=6RY3wupG2RXcKHas5sp7FwQn0LYL9MskYpdKtmmxKZo,295
+beni_amazon-0.0.1.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+beni_amazon-0.0.1.dist-info/entry_points.txt,sha256=AZZIPfPmGG8GSWq1QH8dTi-2ZIHwjJtp2KrWM8C5dcQ,42
+beni_amazon-0.0.1.dist-info/top_level.txt,sha256=H24-9z4ThWviIoSw1KYEPpfVxp--UL8aNDRsV7DHuDQ,8
+beni_amazon-0.0.1.dist-info/RECORD,,
