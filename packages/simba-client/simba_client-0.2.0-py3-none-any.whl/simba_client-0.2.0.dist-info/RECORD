@@ -1,0 +1,9 @@
+simba_sdk/__init__.py,sha256=t6AEnv-uf5-r_YnWHrxxP3NBjR1z8Io0IEShMMrPscU,368
+simba_sdk/chat.py,sha256=wrPnQ_ZUQeZOyI7YdH6YApnUO_EBNDaGeAXp10YkYM0,994
+simba_sdk/client.py,sha256=ZwuiJaXpy1fnpL6M9h4-5HlsjhOJ5gFPlp2aDL2oHyM,3662
+simba_sdk/document.py,sha256=Hjhxoy1Xmqy3PcQK7FA04pfrNZi2SrkcDdunOMIwnS8,7112
+simba_sdk/embed.py,sha256=_5_CGFNn7XODZWQQ-f-PeEbiSR4Vh3ddgsixjx1KQQM,7064
+simba_sdk/parser.py,sha256=du4qAzPIxgoXidQm0d7Bw1YrxoragaKk9_CHqwjth88,4548
+simba_client-0.2.0.dist-info/METADATA,sha256=b9FdwlcXcUu7nIBCv_FqWZ-HigixHWkDzuf4_3b1oRY,3481
+simba_client-0.2.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+simba_client-0.2.0.dist-info/RECORD,,
