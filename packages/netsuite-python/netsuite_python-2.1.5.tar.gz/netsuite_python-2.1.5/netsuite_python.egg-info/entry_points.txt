@@ -1,0 +1,2 @@
+[console_scripts]
+netsuite = netsuite.scripts.cli:cli
