@@ -1,0 +1,53 @@
+[project]
+name = "mcpadapt"
+dynamic = ["version"]
+description = "Adapt MCP servers to many agentic framework."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.2.0",
+    "jsonref>=1.1.0",
+    "python-dotenv>=1.0.1",
+]
+classifiers = [
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+[project.optional-dependencies]
+smolagents = [
+    "smolagents>=1.2.2",
+]
+langchain = [
+    "langchain>=0.3.14",
+    "langchain-anthropic>=0.3.1",
+    "langgraph>=0.2.62",
+]
+llamaindex = [
+    "llama-index>=0.12.14",
+]
+test = [
+    "pytest-asyncio>=0.25.2",
+    "pytest>=8.3.4",
+    "mcpadapt[langchain]",
+    "mcpadapt[smolagents]"
+]
+
+[tool.hatch.version]
+path = "src/mcpadapt/__init__.py"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "jupyter>=1.1.1",
+    "pre-commit>=4.0.1",
+    "ruff>=0.9.1",
+]
+
+[tool.pytest.ini_options]
+asyncio_default_fixture_loop_scope = "function"
+asyncio_mode = "auto"
