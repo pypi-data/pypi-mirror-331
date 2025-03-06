@@ -1,0 +1,27 @@
+name: lint
+description: Lint and format.
+
+on:
+  workflow_call:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    name: Lint ${{ matrix.python-version }}
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.11', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: |
+          uv sync --group lint
+          uv pip install pip
+      - uses: pre-commit/action@v3.0.1
+        with:
+          extra_args: --all-files --verbose
+        env:
+          SKIP: no-commit-to-branch, uv-lock

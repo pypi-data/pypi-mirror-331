@@ -1,0 +1,42 @@
+name: release
+description: Create a new semantic release.
+
+on:
+  workflow_call:
+    inputs:
+      dry-run:
+        description: 'Do not push changes.'
+        required: false
+        default: false
+        type: boolean
+    outputs:
+      sha:
+        description: "The latest commit SHA after release"
+        value: ${{ jobs.release.outputs.sha }}
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    outputs:
+      sha: ${{ steps.get-sha.outputs.sha }}
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          token: "${{ secrets.GITHUB_TOKEN }}"
+      - id: cz
+        uses: commitizen-tools/commitizen-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          check_consistency: true
+          dry_run: ${{ inputs.dry-run }}
+          debug: ${{ inputs.dry-run }}
+      - if: inputs.dry-run == false
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ steps.cz.outputs.version }}
+          draft: ${{ inputs.dry-run }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - id: get-sha
+        run: echo "sha=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
