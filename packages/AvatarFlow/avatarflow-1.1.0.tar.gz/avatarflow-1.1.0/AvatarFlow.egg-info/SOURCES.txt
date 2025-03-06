@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+AvatarFlow/__init__.py
+AvatarFlow/gen.py
+AvatarFlow/gen_lip.py
+AvatarFlow/reg.py
+AvatarFlow/reg_lip.py
+AvatarFlow/up.py
+AvatarFlow.egg-info/PKG-INFO
+AvatarFlow.egg-info/SOURCES.txt
+AvatarFlow.egg-info/dependency_links.txt
+AvatarFlow.egg-info/requires.txt
+AvatarFlow.egg-info/top_level.txt
