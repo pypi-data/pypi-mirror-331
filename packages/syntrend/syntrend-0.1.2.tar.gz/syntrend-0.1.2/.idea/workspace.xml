@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c29228b3-5d5a-4d07-9717-3aa48f778c98" name="Changes" comment="fix: format cleanup" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="action" />
+        <option value="workflow" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--follow-tags" />
+        <option name="title" value="Current Branch" />
+      </GitPushTagMode>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="feat/15-xml-output" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;wsidl&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:/wsidl/syntrend.git&quot;,
+    &quot;accountId&quot;: &quot;020749c9-0f38-4e50-ad99-7fa0f9aff576&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2sub2Hpk0JjrHhJRVPXcg6VmFnB" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.Run Project.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "release/0.1.2",
+    "last_opened_file_path": "/data/Projects/syntrend/syntrend/formatters",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "Settings.Markdown"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/syntrend/formatters" />
+      <recent name="$PROJECT_DIR$/docs" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../" />
+      <recent name="$PROJECT_DIR$/_sphinx_backup" />
+      <recent name="$PROJECT_DIR$/docs" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Run Project" type="PythonConfigurationType" factoryName="Python">
+      <module name="syntrend" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="SYNTREND_DEBUG" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="uv (syntrend)" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="syntrend.cli" />
+      <option name="PARAMETERS" value="generate test.yaml" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="true" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-PY-243.23654.177" />
+        <option value="bundled-python-sdk-91d3a02ef49d-43b77aa2d136-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.23654.177" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fix: `random` expression uses arguments to generate a random int within a range" />
+    <MESSAGE value="fix: missing semicolon at end of sql format" />
+    <MESSAGE value="feat: restructure project_file.md to display properties and conditions in tables." />
+    <MESSAGE value="feat: add outputs document to describe how to work with data outputs" />
+    <MESSAGE value="feat: set release 0.2.0" />
+    <MESSAGE value="merge changes from release branch" />
+    <MESSAGE value="cleanup from big merge" />
+    <MESSAGE value="feat: CI Workflow Design doc (incomplete)&#10;&#10;TODO:&#10;- Complete Merge to Main and Release workflows&#10;- Start templating each workflow" />
+    <MESSAGE value="feat: CI Workflow Design doc" />
+    <MESSAGE value="feat: Focus on PR tests" />
+    <MESSAGE value="fix: add `uv run` to each command in project" />
+    <MESSAGE value="fix: upgrade uv to latest version" />
+    <MESSAGE value="fix: Change name of Test Job" />
+    <MESSAGE value="fix: remove build pipeline until it testing pipeline works" />
+    <MESSAGE value="feat: Set &quot;Get Change Type&quot; step to fail if not using a conforming branch name" />
+    <MESSAGE value="fix: regex match fix for PR branch" />
+    <MESSAGE value="feat: add issue-specific marker for pytest" />
+    <MESSAGE value="feat: first pass of XML formatter" />
+    <MESSAGE value="fix: added a `force` parameter on the render method to allow re-rendering a value during an iteration." />
+    <MESSAGE value="feat: `generate` method accepts keyword arguments.&#10;&#10;Supports complex objects that should pass context of the parent object to children. Supports a List Generator to pass an index to children generators." />
+    <MESSAGE value="feat: add work-item/unit tests for list generators" />
+    <MESSAGE value="feat: add documentation for latest work" />
+    <MESSAGE value="fix: lint and format cleanup" />
+    <MESSAGE value="feat: add index test for list generators. Also removed unnecessary parameter when initializing child generator of list generators." />
+    <MESSAGE value="fix: format cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: format cleanup" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/syntrend$Run_Project.coverage" NAME="Run Project Coverage Results" MODIFIED="1739397199644" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>

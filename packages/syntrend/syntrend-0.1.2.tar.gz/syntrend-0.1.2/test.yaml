@@ -1,0 +1,111 @@
+#output:
+#  count: 5
+#type: union
+#items:
+#  - type: string
+#  - type: integer
+
+#type: list
+#sub_type:
+#  type: string
+#  chars: abcdef
+#  max_length: 5
+#  min_length: 2
+#max_length: 3
+#
+#type: choice
+#items:
+#  - red
+#  - green
+#  - blue
+
+output:
+  format: json
+#  directory: "."
+#  filename_format: "{name}.{format}"
+#  collection: true
+#  count: 3
+  header_separator: "~"
+config:
+  formatter_dir: dist
+objects:
+  html:
+    type: object
+    properties:
+      head:
+        type: object
+        properties:
+          title:
+            type: object
+            properties:
+              string:
+                type: name
+      body:
+        type: object
+        properties:
+          header:
+            type: object
+            xml_tag: h1
+            properties:
+              string:
+                type: string
+                expression: html().head.title.string
+
+          paragraph1:
+            type: object
+            xml_tag: p
+            properties:
+              class:
+                type: string
+                xml_attr: true
+              string:
+                type: string
+          new_list:
+            type: object
+            xml_tag: ul
+            properties:
+              list_items:
+                type: list
+                min_length: 10
+                max_length: 20
+                sub_type:
+                  type: object
+                  xml_tag: li
+                  properties:
+                    string:
+                      type: string
+
+#  my_data:
+#    type: object
+#    properties:
+#      id:
+#        type: integer
+#        expression: interval
+#        xml_attr: true
+#      field_1:
+#        type: string
+#      field_2:
+#        type: integer
+#  object2:
+#    type: object
+#    properties:
+#      id:
+#        type: integer
+#        expression: interval
+#      field_1:
+#        type: string
+#      field_2:
+#        type: integer
+#objects:
+#  my_data:
+#    output:
+#      count: 10
+#    type: object
+#    properties:
+#      field_1:
+#        type: string
+#  new_data:
+#    output:
+#      format: json
+#      collection: false
+#    type: string

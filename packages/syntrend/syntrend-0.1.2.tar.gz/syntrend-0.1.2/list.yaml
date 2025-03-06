@@ -1,0 +1,7 @@
+list:
+  type: list
+  sub_type:
+    type: object
+    properties:
+      item:
+        type: string

@@ -1,0 +1,17 @@
+output:
+  count: 5
+  time_field: timestamp
+  console_event_format: "{name}: {body}"
+type: object
+properties:
+  timestamp:
+    type: timestamp
+    start: 1735689600
+    expression: random(0, 5) + this(1).timestamp
+  name:
+    type: choice
+    items:
+      - John
+      - Jane
+  sensor:
+    type: integer
