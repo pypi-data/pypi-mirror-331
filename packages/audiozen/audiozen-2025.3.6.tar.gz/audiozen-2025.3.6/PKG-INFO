@@ -1,0 +1,100 @@
+Metadata-Version: 2.4
+Name: audiozen
+Version: 2025.3.6
+Summary: Audio ZEN is a library for audio/speech signal processing.
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: einops
+Requires-Dist: librosa
+Requires-Dist: simple_parsing
+Requires-Dist: torchinfo
+Requires-Dist: tensorboard
+Requires-Dist: pyyaml
+Requires-Dist: numpy
+Requires-Dist: rich
+Requires-Dist: numba>=0.60
+Requires-Dist: ipykernel
+Requires-Dist: tqdm
+Requires-Dist: pandas
+Requires-Dist: tabulate
+Requires-Dist: matplotlib
+Requires-Dist: joblib
+Requires-Dist: psutil
+Requires-Dist: torch==2.6.0
+Requires-Dist: torchvision
+Requires-Dist: torchaudio
+Requires-Dist: onnxruntime-gpu>=1.20.1
+Requires-Dist: pesq>=0.0.4
+Requires-Dist: pystoi>=0.4.1
+Requires-Dist: deprecated>=1.2.18
+
+---
+license: mit
+language:
+- en
+pipeline_tag: audio-to-audio
+---
+# AudioZEN
+
+## Prerequisites
+
+```bash
+# Install uv for speed up virtual environment creation and management
+uv venv -p 3.12 venv/torch251_cu124_py312
+source venv/torch251_cu124_py312/bin/activate
+
+# Install the package
+uv pip install -e .
+
+# cd to the model directory
+uv pip install -r /path/to/requirements.txt
+```
+
+## Features
+
+- [x] Gradient accumulation
+- [x] Multi-node training
+- [x] BF16 support
+- [x] Learning rate warmup
+- [x] Learning rate decay
+  - [x] Linear decay
+
+## Prerequisites
+
+```shell
+rsync -avPxH --no-g --chmod=Dg+ /home/xhao/proj/audiozen xhao@10.21.4.91:/home/xhao/proj/audiozen --exclude="*.git" --exclude="*.egg-info" --exclude="*.egg" --exclude="*.pyc" --exclude="*.log" --exclude="*.npy"
+```
+
+- How to split the repo into read-only standalone repos? Check out [Monorepo-Management](https://github.com/haoxiangsnr/audiozen/wiki/Monorepo-Management)
+
+## Git LFS
+
+If files are too large and/or change frequently, consider using [Git LFS](https://git-lfs.github.com/).
+
+```shell
+git lfs install
+git lfs track "*..."
+git add .gitattributes
+```
+
+For ipynb files, we don't need to track them as they are not large files and they are not changed frequently.
+
+## Publish
+
+```shell
+# Bump the version to the next CalVer
+# bump-my-version will automatically update the version ids in pyproject.toml and __init__.py
+bump-my-version bump patch
+
+# Publish the package
+rm -rf dist/ && uv build && uv publish
+
+# Input the username and password
+username: __token__
+password: <token> in ~/.pypirc
+```
+
+## How to Process Data Files
+
+1. 优先考虑将数据上传到 Github Release，然后在 `/path/to/local/data` 目录中下载数据
+2. 在 `/path/to/local/data` 目录中创建 `README.md` 文件，描述数据的来源和下载位置
