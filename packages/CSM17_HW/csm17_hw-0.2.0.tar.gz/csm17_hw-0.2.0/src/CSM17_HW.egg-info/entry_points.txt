@@ -1,0 +1,4 @@
+[console_scripts]
+extr-xml = cms17hw.main:extract
+hwp2latex = cms17hw.main:runHwpx2latex
+parse-xml = cms17hw.main:parse
