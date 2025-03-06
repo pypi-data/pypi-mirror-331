@@ -1,0 +1,576 @@
+17:18:08,146 igfash.mc DEBUG testing mc 0.87
+17:18:15,524 igfash.mc DEBUG ..p-value: 0.0
+17:18:15,524 igfash.mc DEBUG testing mc 0.97
+17:18:22,808 igfash.mc DEBUG ..p-value: 0.0
+17:18:22,808 igfash.mc DEBUG testing mc 1.07
+17:18:29,899 igfash.mc DEBUG ..p-value: 0.0
+17:18:29,900 igfash.mc DEBUG testing mc 1.17
+17:18:36,926 igfash.mc DEBUG ..p-value: 0.0
+17:18:36,926 igfash.mc DEBUG testing mc 1.27
+17:18:43,864 igfash.mc DEBUG ..p-value: 0.0
+17:18:43,864 igfash.mc DEBUG testing mc 1.37
+17:18:50,530 igfash.mc DEBUG ..p-value: 0.0
+17:18:50,531 igfash.mc DEBUG testing mc 1.47
+17:18:56,948 igfash.mc DEBUG ..p-value: 0.0
+17:18:56,948 igfash.mc DEBUG testing mc 1.57
+17:19:02,819 igfash.mc DEBUG ..p-value: 0.0
+17:19:02,819 igfash.mc DEBUG testing mc 1.67
+17:19:08,185 igfash.mc DEBUG ..p-value: 0.0
+17:19:08,186 igfash.mc DEBUG testing mc 1.77
+17:19:12,911 igfash.mc DEBUG ..p-value: 0.7059
+17:19:12,912 igfash.mc DEBUG First mc to pass the test: 1.77 with a beta of: 2.5190273670888788
+17:19:12,912 igfash INFO Mc estimated at 1.77
+17:19:12,923 igfash INFO M mode - Magnitude distribution modeling
+17:19:12,923 igfash WARNING Must be either CTL or CNE for windowing. Use all events in catalog.
+17:19:17,800 igfash INFO Magnitude KDE Computation time: 4.876821700017899 seconds
+17:22:41,241 igfash INFO No Mc provided; therefore automatically run magnitude completeness test.
+17:22:41,242 igfash.mc DEBUG testing mc 0.87
+17:22:48,622 igfash.mc DEBUG ..p-value: 0.0
+17:22:48,623 igfash.mc DEBUG testing mc 0.97
+17:22:55,765 igfash.mc DEBUG ..p-value: 0.0
+17:22:55,765 igfash.mc DEBUG testing mc 1.07
+17:23:02,878 igfash.mc DEBUG ..p-value: 0.0
+17:23:02,878 igfash.mc DEBUG testing mc 1.17
+17:23:09,908 igfash.mc DEBUG ..p-value: 0.0
+17:23:09,908 igfash.mc DEBUG testing mc 1.27
+17:23:16,897 igfash.mc DEBUG ..p-value: 0.0
+17:23:16,897 igfash.mc DEBUG testing mc 1.37
+17:23:23,617 igfash.mc DEBUG ..p-value: 0.0
+17:23:23,617 igfash.mc DEBUG testing mc 1.47
+17:23:29,972 igfash.mc DEBUG ..p-value: 0.0
+17:23:29,973 igfash.mc DEBUG testing mc 1.57
+17:23:35,886 igfash.mc DEBUG ..p-value: 0.0
+17:23:35,886 igfash.mc DEBUG testing mc 1.67
+17:23:41,224 igfash.mc DEBUG ..p-value: 0.0
+17:23:41,224 igfash.mc DEBUG testing mc 1.77
+17:23:45,883 igfash.mc DEBUG ..p-value: 0.7072
+17:23:45,884 igfash.mc DEBUG First mc to pass the test: 1.77 with a beta of: 2.5190273670888788
+17:23:45,884 igfash INFO Mc estimated at 1.77
+17:23:45,896 igfash INFO M mode - Magnitude distribution modeling
+17:23:45,896 igfash WARNING Must be either CTL or CNE for windowing. Use all events in catalog.
+17:23:50,809 igfash INFO Magnitude KDE Computation time: 4.9 seconds
+17:23:51,21 igfash INFO L mode - Location distribution modeling
+17:23:51,22 igfash INFO Computing KDE of each window...
+17:23:51,397 igfash INFO 2D KDE Computation time: 0.4 seconds
+17:36:21,581 igfash INFO No Mc provided; therefore automatically run magnitude completeness test.
+17:36:21,581 igfash.mc DEBUG testing mc 0.87
+17:36:29,26 igfash.mc DEBUG ..p-value: 0.0
+17:36:29,26 igfash.mc DEBUG testing mc 0.97
+17:36:36,722 igfash.mc DEBUG ..p-value: 0.0
+17:36:36,722 igfash.mc DEBUG testing mc 1.07
+17:36:44,27 igfash.mc DEBUG ..p-value: 0.0
+17:36:44,27 igfash.mc DEBUG testing mc 1.17
+17:36:51,208 igfash.mc DEBUG ..p-value: 0.0
+17:36:51,209 igfash.mc DEBUG testing mc 1.27
+17:36:58,850 igfash.mc DEBUG ..p-value: 0.0
+17:36:58,850 igfash.mc DEBUG testing mc 1.37
+17:37:06,54 igfash.mc DEBUG ..p-value: 0.0
+17:37:06,55 igfash.mc DEBUG testing mc 1.47
+17:37:12,705 igfash.mc DEBUG ..p-value: 0.0
+17:37:12,705 igfash.mc DEBUG testing mc 1.57
+17:37:18,945 igfash.mc DEBUG ..p-value: 0.0
+17:37:18,945 igfash.mc DEBUG testing mc 1.67
+17:37:24,450 igfash.mc DEBUG ..p-value: 0.0
+17:37:24,450 igfash.mc DEBUG testing mc 1.77
+17:37:29,184 igfash.mc DEBUG ..p-value: 0.7199
+17:37:29,184 igfash.mc DEBUG First mc to pass the test: 1.77 with a beta of: 2.5190273670888788
+17:37:29,185 igfash INFO Mc estimated at 1.77
+17:37:29,195 igfash INFO M mode - Magnitude distribution modeling
+17:37:29,195 igfash WARNING Must be either CTL or CNE for windowing. Use all events in catalog.
+17:37:34,96 igfash INFO Magnitude KDE Computation time: 4.9 seconds
+17:37:34,311 igfash INFO L mode - Location distribution modeling
+17:37:34,312 igfash INFO Computing KDE of each window...
+17:37:34,624 igfash INFO 2D KDE Computation time: 0.3 seconds
+17:39:02,91 igfash INFO No Mc provided; therefore automatically run magnitude completeness test.
+17:39:02,92 igfash.mc DEBUG testing mc 0.87
+17:39:09,582 igfash.mc DEBUG ..p-value: 0.0
+17:39:09,582 igfash.mc DEBUG testing mc 0.97
+17:39:16,979 igfash.mc DEBUG ..p-value: 0.0
+17:39:16,979 igfash.mc DEBUG testing mc 1.07
+17:39:24,357 igfash.mc DEBUG ..p-value: 0.0
+17:39:24,358 igfash.mc DEBUG testing mc 1.17
+17:39:31,655 igfash.mc DEBUG ..p-value: 0.0
+17:39:31,655 igfash.mc DEBUG testing mc 1.27
+17:39:38,785 igfash.mc DEBUG ..p-value: 0.0
+17:39:38,785 igfash.mc DEBUG testing mc 1.37
+17:39:45,782 igfash.mc DEBUG ..p-value: 0.0
+17:39:45,783 igfash.mc DEBUG testing mc 1.47
+17:39:52,646 igfash.mc DEBUG ..p-value: 0.0
+17:39:52,647 igfash.mc DEBUG testing mc 1.57
+17:39:58,894 igfash.mc DEBUG ..p-value: 0.0
+17:39:58,894 igfash.mc DEBUG testing mc 1.67
+17:40:04,391 igfash.mc DEBUG ..p-value: 0.0
+17:40:04,391 igfash.mc DEBUG testing mc 1.77
+17:40:09,119 igfash.mc DEBUG ..p-value: 0.7163
+17:40:09,119 igfash.mc DEBUG First mc to pass the test: 1.77 with a beta of: 2.5190273670888788
+17:40:09,120 igfash INFO Mc estimated at 1.77
+17:40:09,129 igfash INFO M mode - Magnitude distribution modeling
+17:40:09,130 igfash WARNING Must be either CTL or CNE for windowing. Use all events in catalog.
+17:40:14,110 igfash INFO Magnitude KDE Computation time: 5.0 seconds
+17:40:14,315 igfash INFO L mode - Location distribution modeling
+17:40:14,316 igfash INFO Computing KDE of each window...
+17:40:14,320 igfash INFO 2D KDE Computation time: 0.0 seconds
+17:40:17,154 igfash INFO R mode - activity Rate modeling
+17:40:19,664 igfash DEBUG Activity rates [4.966666666666667, 4.666666666666667] with percentages [0.5, 0.5]
+17:40:19,664 igfash INFO Forecast mode - seismic hazard asssessment
+17:40:19,664 igfash DEBUG Verification that f(x,y) is normalized; Sum of all f(x,y) values = 1.0
+17:40:19,761 igfash INFO Estimating PGA at 23 grid points...
+17:40:19,761 igfash INFO Estimating PGA
+17:45:42,895 igfash INFO Estimating SA(0.6)
+17:52:06,286 igfash INFO Estimating SA(1.0)
+17:57:24,981 igfash INFO Estimating SA(2.0)
+18:10:39,621 igfash INFO No Mc provided; therefore automatically run magnitude completeness test.
+18:10:39,622 igfash.mc DEBUG testing mc 0.87
+18:10:47,698 igfash.mc DEBUG ..p-value: 0.0
+18:10:47,698 igfash.mc DEBUG testing mc 0.97
+18:10:54,997 igfash.mc DEBUG ..p-value: 0.0
+18:10:54,997 igfash.mc DEBUG testing mc 1.07
+18:11:02,195 igfash.mc DEBUG ..p-value: 0.0
+18:11:02,196 igfash.mc DEBUG testing mc 1.17
+18:11:09,312 igfash.mc DEBUG ..p-value: 0.0
+18:11:09,313 igfash.mc DEBUG testing mc 1.27
+18:11:16,413 igfash.mc DEBUG ..p-value: 0.0
+18:11:16,414 igfash.mc DEBUG testing mc 1.37
+18:11:23,253 igfash.mc DEBUG ..p-value: 0.0
+18:11:23,254 igfash.mc DEBUG testing mc 1.47
+18:11:29,717 igfash.mc DEBUG ..p-value: 0.0
+18:11:29,717 igfash.mc DEBUG testing mc 1.57
+18:11:35,736 igfash.mc DEBUG ..p-value: 0.0
+18:11:35,736 igfash.mc DEBUG testing mc 1.67
+18:11:41,193 igfash.mc DEBUG ..p-value: 0.0
+18:11:41,193 igfash.mc DEBUG testing mc 1.77
+18:11:45,890 igfash.mc DEBUG ..p-value: 0.7096
+18:11:45,891 igfash.mc DEBUG First mc to pass the test: 1.77 with a beta of: 2.5190273670888788
+18:11:45,891 igfash INFO Mc estimated at 1.77
+18:11:45,902 igfash INFO M mode - Magnitude distribution modeling
+18:11:45,902 igfash WARNING Must be either CTL or CNE for windowing. Use all events in catalog.
+18:11:50,766 igfash INFO Magnitude KDE Computation time: 4.9 seconds
+18:11:50,982 igfash INFO L mode - Location distribution modeling
+18:11:50,982 igfash INFO Computing KDE of each window...
+18:11:51,371 igfash INFO 2D KDE Computation time: 0.4 seconds
+18:11:54,215 igfash INFO R mode - activity Rate modeling
+18:11:56,729 igfash DEBUG Activity rates [4.966666666666667, 4.666666666666667] with percentages [0.5, 0.5]
+18:11:56,729 igfash INFO Forecast mode - seismic hazard asssessment
+18:11:56,729 igfash DEBUG Verification that f(x,y) is normalized; Sum of all f(x,y) values = 1.0
+18:11:56,826 igfash INFO Estimating ground motion at 23 grid points...
+18:11:56,826 igfash INFO Estimating PGA
+18:17:13,107 igfash INFO No Mc provided; therefore automatically run magnitude completeness test.
+18:17:13,107 igfash.mc DEBUG testing mc 0.87
+18:17:20,783 igfash.mc DEBUG ..p-value: 0.0
+18:17:20,783 igfash.mc DEBUG testing mc 0.97
+18:17:27,998 igfash.mc DEBUG ..p-value: 0.0
+18:17:27,999 igfash.mc DEBUG testing mc 1.07
+18:17:35,119 igfash.mc DEBUG ..p-value: 0.0
+18:17:35,120 igfash.mc DEBUG testing mc 1.17
+18:17:42,63 igfash.mc DEBUG ..p-value: 0.0
+18:17:42,63 igfash.mc DEBUG testing mc 1.27
+18:17:48,894 igfash.mc DEBUG ..p-value: 0.0
+18:17:48,894 igfash.mc DEBUG testing mc 1.37
+18:17:55,608 igfash.mc DEBUG ..p-value: 0.0
+18:17:55,609 igfash.mc DEBUG testing mc 1.47
+18:18:01,969 igfash.mc DEBUG ..p-value: 0.0
+18:18:01,969 igfash.mc DEBUG testing mc 1.57
+18:18:07,906 igfash.mc DEBUG ..p-value: 0.0
+18:18:07,906 igfash.mc DEBUG testing mc 1.67
+18:18:13,332 igfash.mc DEBUG ..p-value: 0.0
+18:18:13,332 igfash.mc DEBUG testing mc 1.77
+18:18:17,986 igfash.mc DEBUG ..p-value: 0.7159
+18:18:17,987 igfash.mc DEBUG First mc to pass the test: 1.77 with a beta of: 2.5190273670888788
+18:18:17,987 igfash INFO Mc estimated at 1.77
+18:18:17,998 igfash INFO M mode - Magnitude distribution modeling
+18:18:17,998 igfash WARNING Must be either CTL or CNE for windowing. Use all events in catalog.
+18:18:22,894 igfash INFO Magnitude KDE Computation time: 4.9 seconds
+18:18:23,115 igfash INFO L mode - Location distribution modeling
+18:18:23,117 igfash INFO Computing KDE of each window...
+18:18:23,521 igfash INFO 2D KDE Computation time: 0.4 seconds
+18:18:26,358 igfash INFO R mode - activity Rate modeling
+18:20:39,896 igfash INFO No Mc provided; therefore automatically run magnitude completeness test.
+18:20:39,896 igfash.mc DEBUG testing mc 0.87
+18:20:47,311 igfash.mc DEBUG ..p-value: 0.0
+18:20:47,311 igfash.mc DEBUG testing mc 0.97
+18:20:54,568 igfash.mc DEBUG ..p-value: 0.0
+18:20:54,568 igfash.mc DEBUG testing mc 1.07
+18:21:01,758 igfash.mc DEBUG ..p-value: 0.0
+18:21:01,758 igfash.mc DEBUG testing mc 1.17
+18:21:08,800 igfash.mc DEBUG ..p-value: 0.0
+18:21:08,801 igfash.mc DEBUG testing mc 1.27
+18:21:15,820 igfash.mc DEBUG ..p-value: 0.0
+18:21:15,820 igfash.mc DEBUG testing mc 1.37
+18:21:22,590 igfash.mc DEBUG ..p-value: 0.0
+18:21:22,591 igfash.mc DEBUG testing mc 1.47
+18:21:28,980 igfash.mc DEBUG ..p-value: 0.0
+18:21:28,981 igfash.mc DEBUG testing mc 1.57
+18:21:34,933 igfash.mc DEBUG ..p-value: 0.0
+18:21:34,934 igfash.mc DEBUG testing mc 1.67
+18:21:40,312 igfash.mc DEBUG ..p-value: 0.0
+18:21:40,312 igfash.mc DEBUG testing mc 1.77
+18:21:44,989 igfash.mc DEBUG ..p-value: 0.7205
+18:21:44,989 igfash.mc DEBUG First mc to pass the test: 1.77 with a beta of: 2.5190273670888788
+18:21:44,989 igfash INFO Mc estimated at 1.77
+18:21:44,999 igfash INFO M mode - Magnitude distribution modeling
+18:21:44,999 igfash WARNING Must be either CTL or CNE for windowing. Use all events in catalog.
+18:21:49,802 igfash INFO Magnitude KDE Computation time: 4.8 seconds
+18:21:50,2 igfash INFO L mode - Location distribution modeling
+18:21:50,3 igfash INFO Computing KDE of each window...
+18:21:50,8 igfash INFO 2D KDE Computation time: 0.0 seconds
+18:21:52,656 igfash INFO R mode - activity Rate modeling
+18:21:55,123 igfash DEBUG Activity rates [4.966666666666667, 4.666666666666667] with percentages [0.5, 0.5]
+18:21:55,123 igfash INFO Forecast mode - seismic hazard asssessment
+18:21:55,123 igfash DEBUG Verification that f(x,y) is normalized; Sum of all f(x,y) values = 1.0
+18:21:55,223 igfash INFO Estimating ground motion at 23 grid points...
+18:21:55,224 igfash INFO Estimating PGA
+18:26:20,519 igfash INFO No Mc provided; therefore automatically run magnitude completeness test.
+18:26:20,520 igfash.mc DEBUG testing mc 0.87
+18:26:28,960 igfash.mc DEBUG ..p-value: 0.0
+18:26:28,960 igfash.mc DEBUG testing mc 0.97
+18:26:36,889 igfash.mc DEBUG ..p-value: 0.0
+18:26:36,889 igfash.mc DEBUG testing mc 1.07
+18:26:44,66 igfash.mc DEBUG ..p-value: 0.0
+18:26:44,66 igfash.mc DEBUG testing mc 1.17
+18:26:51,51 igfash.mc DEBUG ..p-value: 0.0
+18:26:51,52 igfash.mc DEBUG testing mc 1.27
+18:26:57,944 igfash.mc DEBUG ..p-value: 0.0
+18:26:57,945 igfash.mc DEBUG testing mc 1.37
+18:27:04,551 igfash.mc DEBUG ..p-value: 0.0
+18:27:04,552 igfash.mc DEBUG testing mc 1.47
+18:27:10,861 igfash.mc DEBUG ..p-value: 0.0
+18:27:10,861 igfash.mc DEBUG testing mc 1.57
+18:27:16,772 igfash.mc DEBUG ..p-value: 0.0
+18:27:16,773 igfash.mc DEBUG testing mc 1.67
+18:27:22,84 igfash.mc DEBUG ..p-value: 0.0
+18:27:22,84 igfash.mc DEBUG testing mc 1.77
+18:27:26,666 igfash.mc DEBUG ..p-value: 0.7171
+18:27:26,666 igfash.mc DEBUG First mc to pass the test: 1.77 with a beta of: 2.5190273670888788
+18:27:26,666 igfash INFO Mc estimated at 1.77
+18:27:26,676 igfash INFO R mode - activity Rate modeling
+18:27:28,918 igfash DEBUG Activity rates [4.966666666666667, 4.666666666666667] with percentages [0.5, 0.5]
+13:37:51,473 igfash INFO No Mc provided; therefore automatically run magnitude completeness test.
+13:37:51,474 igfash.mc DEBUG testing mc 0.87
+13:37:58,742 igfash.mc DEBUG ..p-value: 0.0
+13:37:58,742 igfash.mc DEBUG testing mc 0.97
+13:38:05,840 igfash.mc DEBUG ..p-value: 0.0
+13:38:05,840 igfash.mc DEBUG testing mc 1.07
+13:39:11,377 igfash INFO No Mc provided; therefore automatically run magnitude completeness test.
+13:39:11,378 igfash.mc DEBUG testing mc 0.87
+13:39:18,641 igfash.mc DEBUG ..p-value: 0.0
+13:39:18,641 igfash.mc DEBUG testing mc 0.97
+13:39:25,850 igfash.mc DEBUG ..p-value: 0.0
+13:39:25,850 igfash.mc DEBUG testing mc 1.07
+13:39:32,944 igfash.mc DEBUG ..p-value: 0.0
+13:39:32,945 igfash.mc DEBUG testing mc 1.17
+13:39:39,986 igfash.mc DEBUG ..p-value: 0.0
+13:39:39,986 igfash.mc DEBUG testing mc 1.27
+13:39:46,880 igfash.mc DEBUG ..p-value: 0.0
+13:39:46,880 igfash.mc DEBUG testing mc 1.37
+13:39:53,637 igfash.mc DEBUG ..p-value: 0.0
+13:39:53,637 igfash.mc DEBUG testing mc 1.47
+13:40:00,44 igfash.mc DEBUG ..p-value: 0.0
+13:40:00,44 igfash.mc DEBUG testing mc 1.57
+13:40:06,20 igfash.mc DEBUG ..p-value: 0.0
+13:40:06,20 igfash.mc DEBUG testing mc 1.67
+13:40:11,397 igfash.mc DEBUG ..p-value: 0.0
+13:40:11,398 igfash.mc DEBUG testing mc 1.77
+13:40:16,73 igfash.mc DEBUG ..p-value: 0.7025
+13:40:16,73 igfash.mc DEBUG First mc to pass the test: 1.77 with a beta of: 2.5190273670888788
+13:40:16,73 igfash INFO Mc estimated at 1.77
+13:40:16,83 igfash INFO R mode - activity Rate modeling
+13:40:18,353 igfash DEBUG Activity rates [4.966666666666667, 4.666666666666667] with percentages [0.5, 0.5]
+13:40:38,762 igfash INFO No Mc provided; therefore automatically run magnitude completeness test.
+13:40:38,762 igfash.mc DEBUG testing mc 0.87
+13:40:46,85 igfash.mc DEBUG ..p-value: 0.0
+13:40:46,85 igfash.mc DEBUG testing mc 0.97
+13:40:53,707 igfash.mc DEBUG ..p-value: 0.0
+13:40:53,707 igfash.mc DEBUG testing mc 1.07
+13:41:01,604 igfash.mc DEBUG ..p-value: 0.0
+13:41:01,605 igfash.mc DEBUG testing mc 1.17
+13:41:09,377 igfash.mc DEBUG ..p-value: 0.0
+13:41:09,377 igfash.mc DEBUG testing mc 1.27
+13:41:17,44 igfash.mc DEBUG ..p-value: 0.0
+13:41:17,44 igfash.mc DEBUG testing mc 1.37
+13:41:24,408 igfash.mc DEBUG ..p-value: 0.0
+13:41:24,409 igfash.mc DEBUG testing mc 1.47
+13:41:31,445 igfash.mc DEBUG ..p-value: 0.0
+13:41:31,446 igfash.mc DEBUG testing mc 1.57
+13:41:37,870 igfash.mc DEBUG ..p-value: 0.0
+13:41:37,871 igfash.mc DEBUG testing mc 1.67
+13:41:43,698 igfash.mc DEBUG ..p-value: 0.0
+13:41:43,698 igfash.mc DEBUG testing mc 1.77
+13:41:48,570 igfash.mc DEBUG ..p-value: 0.7107
+13:41:48,570 igfash.mc DEBUG First mc to pass the test: 1.77 with a beta of: 2.5190273670888788
+13:41:48,570 igfash INFO Mc estimated at 1.77
+13:41:48,581 igfash INFO M mode - Magnitude distribution modeling
+13:41:48,581 igfash WARNING Must be either CTL or CNE for windowing. Use all events in catalog.
+13:41:54,167 igfash INFO Magnitude KDE Computation time: 5.6 seconds
+13:41:54,417 igfash INFO L mode - Location distribution modeling
+13:41:54,417 igfash INFO Computing KDE of each window...
+13:41:54,742 igfash INFO 2D KDE Computation time: 0.3 seconds
+13:41:57,806 igfash INFO R mode - activity Rate modeling
+13:42:00,507 igfash DEBUG Activity rates [4.966666666666667, 4.666666666666667] with percentages [0.5, 0.5]
+13:42:00,507 igfash INFO Forecast mode - seismic hazard asssessment
+13:42:00,507 igfash DEBUG Verification that f(x,y) is normalized; Sum of all f(x,y) values = 1.0
+13:42:00,628 igfash INFO Estimating ground motion at 12 grid points...
+13:42:00,628 igfash INFO Estimating PGA
+13:45:22,428 igfash INFO Estimating SA(1.0)
+13:48:58,744 igfash INFO Ground motion exceedance computation time: 418.1 seconds
+14:47:10,294 igfash INFO No Mc provided; therefore automatically run magnitude completeness test.
+14:47:10,294 igfash.mc DEBUG testing mc 0.87
+14:47:17,773 igfash.mc DEBUG ..p-value: 0.0
+14:47:17,773 igfash.mc DEBUG testing mc 0.97
+14:47:25,49 igfash.mc DEBUG ..p-value: 0.0
+14:47:25,49 igfash.mc DEBUG testing mc 1.07
+14:47:32,220 igfash.mc DEBUG ..p-value: 0.0
+14:47:32,220 igfash.mc DEBUG testing mc 1.17
+14:47:39,379 igfash.mc DEBUG ..p-value: 0.0
+14:47:39,380 igfash.mc DEBUG testing mc 1.27
+14:47:46,341 igfash.mc DEBUG ..p-value: 0.0
+14:47:46,342 igfash.mc DEBUG testing mc 1.37
+14:47:53,142 igfash.mc DEBUG ..p-value: 0.0
+14:47:53,142 igfash.mc DEBUG testing mc 1.47
+14:47:59,503 igfash.mc DEBUG ..p-value: 0.0
+14:47:59,503 igfash.mc DEBUG testing mc 1.57
+14:48:05,433 igfash.mc DEBUG ..p-value: 0.0
+14:48:05,433 igfash.mc DEBUG testing mc 1.67
+14:48:10,855 igfash.mc DEBUG ..p-value: 0.0
+14:48:10,855 igfash.mc DEBUG testing mc 1.77
+14:48:15,547 igfash.mc DEBUG ..p-value: 0.7074
+14:48:15,547 igfash.mc DEBUG First mc to pass the test: 1.77 with a beta of: 2.5190273670888788
+14:48:15,547 igfash INFO Mc estimated at 1.77
+14:48:15,557 igfash INFO M mode - Magnitude distribution modeling
+14:48:15,557 igfash WARNING Must be either CTL or CNE for windowing. Use all events in catalog.
+14:48:20,786 igfash INFO Magnitude KDE Computation time: 5.2 seconds
+14:48:21,4 igfash INFO L mode - Location distribution modeling
+14:48:21,4 igfash INFO Computing KDE of each window...
+14:48:21,386 igfash INFO 2D KDE Computation time: 0.4 seconds
+14:48:24,283 igfash INFO R mode - activity Rate modeling
+14:48:26,887 igfash DEBUG Activity rates [4.966666666666667, 4.666666666666667] with percentages [0.5, 0.5]
+14:48:26,887 igfash INFO Forecast mode - seismic hazard asssessment
+14:48:26,887 igfash DEBUG Verification that f(x,y) is normalized; Sum of all f(x,y) values = 1.0
+14:48:26,988 igfash INFO Estimating ground motion at 12 grid points...
+14:48:26,988 igfash INFO Estimating PGA
+14:51:41,994 igfash INFO Estimating SA(1.0)
+14:55:06,303 igfash INFO Ground motion exceedance computation time: 399.3 seconds
+15:10:19,481 igfash INFO No Mc provided; therefore automatically run magnitude completeness test.
+15:10:19,481 igfash.mc DEBUG testing mc 0.87
+15:10:26,894 igfash.mc DEBUG ..p-value: 0.0
+15:10:26,895 igfash.mc DEBUG testing mc 0.97
+15:10:34,54 igfash.mc DEBUG ..p-value: 0.0
+15:10:34,54 igfash.mc DEBUG testing mc 1.07
+15:10:41,131 igfash.mc DEBUG ..p-value: 0.0
+15:10:41,131 igfash.mc DEBUG testing mc 1.17
+15:10:48,191 igfash.mc DEBUG ..p-value: 0.0
+15:10:48,192 igfash.mc DEBUG testing mc 1.27
+15:10:55,181 igfash.mc DEBUG ..p-value: 0.0
+15:10:55,181 igfash.mc DEBUG testing mc 1.37
+15:11:01,899 igfash.mc DEBUG ..p-value: 0.0
+15:11:01,899 igfash.mc DEBUG testing mc 1.47
+15:11:08,299 igfash.mc DEBUG ..p-value: 0.0
+15:11:08,299 igfash.mc DEBUG testing mc 1.57
+15:11:14,300 igfash.mc DEBUG ..p-value: 0.0
+15:11:14,301 igfash.mc DEBUG testing mc 1.67
+15:11:19,614 igfash.mc DEBUG ..p-value: 0.0
+15:11:19,614 igfash.mc DEBUG testing mc 1.77
+15:11:24,237 igfash.mc DEBUG ..p-value: 0.7131
+15:11:24,237 igfash.mc DEBUG First mc to pass the test: 1.77 with a beta of: 2.5190273670888788
+15:11:24,238 igfash INFO Mc estimated at 1.77
+15:11:24,248 igfash INFO M mode - Magnitude distribution modeling
+15:11:24,248 igfash WARNING Must be either CTL or CNE for windowing. Use all events in catalog.
+15:11:29,675 igfash INFO Magnitude KDE Computation time: 5.4 seconds
+15:11:29,887 igfash INFO L mode - Location distribution modeling
+15:11:29,888 igfash INFO Computing KDE of each window...
+15:11:30,260 igfash INFO 2D KDE Computation time: 0.4 seconds
+15:11:33,35 igfash INFO R mode - activity Rate modeling
+15:11:35,477 igfash DEBUG Activity rates [4.966666666666667, 4.666666666666667] with percentages [0.5, 0.5]
+15:11:35,477 igfash INFO Forecast mode - seismic hazard asssessment
+15:11:35,477 igfash DEBUG Verification that f(x,y) is normalized; Sum of all f(x,y) values = 1.0
+15:11:35,574 igfash INFO Estimating ground motion at 12 grid points...
+15:11:35,574 igfash INFO Estimating PGA
+15:14:45,921 igfash INFO Estimating SA(1.0)
+15:18:17,316 igfash INFO Ground motion exceedance computation time: 401.7 seconds
+18:21:07,117 igfash INFO No Mc provided; therefore automatically run magnitude completeness test.
+18:21:07,117 igfash.mc DEBUG testing mc 0.87
+18:21:14,519 igfash.mc DEBUG ..p-value: 0.0
+18:21:14,519 igfash.mc DEBUG testing mc 0.97
+18:21:21,964 igfash.mc DEBUG ..p-value: 0.0
+18:21:21,965 igfash.mc DEBUG testing mc 1.07
+18:21:29,178 igfash.mc DEBUG ..p-value: 0.0
+18:21:29,179 igfash.mc DEBUG testing mc 1.17
+18:21:36,457 igfash.mc DEBUG ..p-value: 0.0
+18:21:36,457 igfash.mc DEBUG testing mc 1.27
+18:21:43,688 igfash.mc DEBUG ..p-value: 0.0
+18:21:43,688 igfash.mc DEBUG testing mc 1.37
+18:21:50,633 igfash.mc DEBUG ..p-value: 0.0
+18:21:50,634 igfash.mc DEBUG testing mc 1.47
+18:21:57,241 igfash.mc DEBUG ..p-value: 0.0
+18:21:57,241 igfash.mc DEBUG testing mc 1.57
+18:22:03,346 igfash.mc DEBUG ..p-value: 0.0
+18:22:03,346 igfash.mc DEBUG testing mc 1.67
+18:22:08,851 igfash.mc DEBUG ..p-value: 0.0
+18:22:08,851 igfash.mc DEBUG testing mc 1.77
+18:22:13,641 igfash.mc DEBUG ..p-value: 0.7058
+18:22:13,642 igfash.mc DEBUG First mc to pass the test: 1.77 with a beta of: 2.5190273670888788
+18:22:13,642 igfash INFO Mc estimated at 1.77
+18:22:13,653 igfash INFO M mode - Magnitude distribution modeling
+18:22:13,653 igfash WARNING Must be either CTL or CNE for windowing. Use all events in catalog.
+18:23:13,426 igfash INFO No Mc provided; therefore automatically run magnitude completeness test.
+18:23:13,426 igfash.mc DEBUG testing mc 0.87
+18:23:20,628 igfash.mc DEBUG ..p-value: 0.0
+18:23:20,628 igfash.mc DEBUG testing mc 0.97
+18:23:27,739 igfash.mc DEBUG ..p-value: 0.0
+18:23:27,739 igfash.mc DEBUG testing mc 1.07
+18:23:34,755 igfash.mc DEBUG ..p-value: 0.0
+18:23:34,755 igfash.mc DEBUG testing mc 1.17
+18:23:41,734 igfash.mc DEBUG ..p-value: 0.0
+18:23:41,734 igfash.mc DEBUG testing mc 1.27
+18:23:48,633 igfash.mc DEBUG ..p-value: 0.0
+18:23:48,633 igfash.mc DEBUG testing mc 1.37
+18:23:55,238 igfash.mc DEBUG ..p-value: 0.0
+18:23:55,239 igfash.mc DEBUG testing mc 1.47
+18:24:01,618 igfash.mc DEBUG ..p-value: 0.0
+18:24:01,618 igfash.mc DEBUG testing mc 1.57
+18:24:07,666 igfash.mc DEBUG ..p-value: 0.0
+18:24:07,667 igfash.mc DEBUG testing mc 1.67
+18:24:13,286 igfash.mc DEBUG ..p-value: 0.0
+18:24:13,286 igfash.mc DEBUG testing mc 1.77
+18:24:17,961 igfash.mc DEBUG ..p-value: 0.7211
+18:24:17,961 igfash.mc DEBUG First mc to pass the test: 1.77 with a beta of: 2.5190273670888788
+18:24:17,962 igfash INFO Mc estimated at 1.77
+18:24:17,973 igfash INFO M mode - Magnitude distribution modeling
+18:24:17,973 igfash WARNING Must be either CTL or CNE for windowing. Use all events in catalog.
+18:24:23,910 igfash INFO Magnitude KDE Computation time: 5.9 seconds
+18:24:24,447 igfash INFO L mode - Location distribution modeling
+18:24:24,449 igfash INFO Computing KDE of each window...
+18:24:24,668 igfash INFO 2D KDE Computation time: 0.2 seconds
+18:33:46,365 igfash INFO No Mc provided; therefore automatically run magnitude completeness test.
+18:33:46,365 igfash.mc DEBUG testing mc 0.87
+18:33:53,650 igfash.mc DEBUG ..p-value: 0.0
+18:33:53,651 igfash.mc DEBUG testing mc 0.97
+18:34:00,834 igfash.mc DEBUG ..p-value: 0.0
+18:34:00,835 igfash.mc DEBUG testing mc 1.07
+18:34:07,964 igfash.mc DEBUG ..p-value: 0.0
+18:34:07,965 igfash.mc DEBUG testing mc 1.17
+18:34:15,101 igfash.mc DEBUG ..p-value: 0.0
+18:34:15,101 igfash.mc DEBUG testing mc 1.27
+18:34:22,131 igfash.mc DEBUG ..p-value: 0.0
+18:34:22,131 igfash.mc DEBUG testing mc 1.37
+18:34:28,941 igfash.mc DEBUG ..p-value: 0.0
+18:34:28,942 igfash.mc DEBUG testing mc 1.47
+18:34:35,548 igfash.mc DEBUG ..p-value: 0.0
+18:34:35,549 igfash.mc DEBUG testing mc 1.57
+18:34:41,692 igfash.mc DEBUG ..p-value: 0.0
+18:34:41,692 igfash.mc DEBUG testing mc 1.67
+18:34:47,280 igfash.mc DEBUG ..p-value: 0.0
+18:34:47,280 igfash.mc DEBUG testing mc 1.77
+18:34:52,160 igfash.mc DEBUG ..p-value: 0.7113
+18:34:52,160 igfash.mc DEBUG First mc to pass the test: 1.77 with a beta of: 2.5190273670888788
+18:34:52,160 igfash INFO Mc estimated at 1.77
+18:34:52,171 igfash INFO M mode - Magnitude distribution modeling
+18:34:52,171 igfash WARNING Must be either CTL or CNE for windowing. Use all events in catalog.
+18:34:58,720 igfash INFO Magnitude KDE Computation time: 6.5 seconds
+18:34:58,979 igfash INFO L mode - Location distribution modeling
+18:34:58,980 igfash INFO Computing KDE of each window...
+18:34:59,260 igfash INFO 2D KDE Computation time: 0.3 seconds
+18:35:02,137 igfash INFO R mode - activity Rate modeling
+18:35:04,674 igfash DEBUG Activity rates [4.966666666666667, 4.666666666666667] with percentages [0.5, 0.5]
+18:35:04,674 igfash INFO Forecast mode - seismic hazard asssessment
+18:35:04,674 igfash DEBUG Verification that f(x,y) is normalized; Sum of all f(x,y) values = 1.0
+18:35:04,792 igfash INFO Estimating ground motion at 12 grid points...
+18:35:04,792 igfash INFO Estimating PGA
+18:38:17,57 igfash INFO Estimating SA(1.0)
+18:41:47,68 igfash INFO Ground motion exceedance computation time: 402.3 seconds
+14:17:45,796 igfash INFO No Mc provided; therefore automatically run magnitude completeness test.
+14:17:45,796 igfash.mc DEBUG testing mc 0.87
+14:17:53,649 igfash.mc DEBUG ..p-value: 0.0
+14:17:53,650 igfash.mc DEBUG testing mc 0.97
+14:18:00,972 igfash.mc DEBUG ..p-value: 0.0
+14:18:00,972 igfash.mc DEBUG testing mc 1.07
+14:18:08,79 igfash.mc DEBUG ..p-value: 0.0
+14:18:08,80 igfash.mc DEBUG testing mc 1.17
+14:18:15,34 igfash.mc DEBUG ..p-value: 0.0
+14:18:15,35 igfash.mc DEBUG testing mc 1.27
+14:18:21,853 igfash.mc DEBUG ..p-value: 0.0
+14:18:21,853 igfash.mc DEBUG testing mc 1.37
+14:18:28,446 igfash.mc DEBUG ..p-value: 0.0
+14:18:28,446 igfash.mc DEBUG testing mc 1.47
+14:18:34,755 igfash.mc DEBUG ..p-value: 0.0
+14:18:34,755 igfash.mc DEBUG testing mc 1.57
+14:18:40,612 igfash.mc DEBUG ..p-value: 0.0
+14:18:40,612 igfash.mc DEBUG testing mc 1.67
+14:18:45,976 igfash.mc DEBUG ..p-value: 0.0
+14:18:45,976 igfash.mc DEBUG testing mc 1.77
+14:18:50,548 igfash.mc DEBUG ..p-value: 0.7126
+14:18:50,548 igfash.mc DEBUG First mc to pass the test: 1.77 with a beta of: 2.5190273670888788
+14:18:50,548 igfash INFO Mc estimated at 1.77
+14:18:50,559 igfash INFO M mode - Magnitude distribution modeling
+14:18:50,559 igfash WARNING Must be either CTL or CNE for windowing. Use all events in catalog.
+14:18:56,332 igfash INFO Magnitude KDE Computation time: 5.8 seconds
+14:18:56,620 igfash INFO L mode - Location distribution modeling
+14:18:56,621 igfash INFO Computing KDE of each window...
+14:18:56,890 igfash INFO 2D KDE Computation time: 0.3 seconds
+14:18:59,590 igfash INFO R mode - activity Rate modeling
+14:19:02,34 igfash DEBUG Activity rates [4.966666666666667, 4.666666666666667] with percentages [0.5, 0.5]
+14:19:02,34 igfash INFO Forecast mode - seismic hazard asssessment
+14:19:02,34 igfash DEBUG Verification that f(x,y) is normalized; Sum of all f(x,y) values = 1.0
+14:19:02,142 igfash INFO Estimating ground motion at 35 grid points...
+14:19:02,142 igfash INFO Estimating PGA
+14:19:40,35 igfash INFO No Mc provided; therefore automatically run magnitude completeness test.
+14:19:40,36 igfash.mc DEBUG testing mc 0.87
+14:19:47,522 igfash.mc DEBUG ..p-value: 0.0
+14:19:47,522 igfash.mc DEBUG testing mc 0.97
+14:19:54,586 igfash.mc DEBUG ..p-value: 0.0
+14:19:54,586 igfash.mc DEBUG testing mc 1.07
+14:20:01,615 igfash.mc DEBUG ..p-value: 0.0
+14:20:01,616 igfash.mc DEBUG testing mc 1.17
+14:20:08,540 igfash.mc DEBUG ..p-value: 0.0
+14:20:08,540 igfash.mc DEBUG testing mc 1.27
+14:20:15,387 igfash.mc DEBUG ..p-value: 0.0
+14:20:15,387 igfash.mc DEBUG testing mc 1.37
+14:20:21,969 igfash.mc DEBUG ..p-value: 0.0
+14:20:21,970 igfash.mc DEBUG testing mc 1.47
+14:20:28,260 igfash.mc DEBUG ..p-value: 0.0
+14:20:28,261 igfash.mc DEBUG testing mc 1.57
+14:20:34,112 igfash.mc DEBUG ..p-value: 0.0
+14:20:34,112 igfash.mc DEBUG testing mc 1.67
+14:20:39,398 igfash.mc DEBUG ..p-value: 0.0
+14:20:39,399 igfash.mc DEBUG testing mc 1.77
+14:20:43,988 igfash.mc DEBUG ..p-value: 0.7112
+14:20:43,988 igfash.mc DEBUG First mc to pass the test: 1.77 with a beta of: 2.5190273670888788
+14:20:43,989 igfash INFO Mc estimated at 1.77
+14:20:43,999 igfash INFO M mode - Magnitude distribution modeling
+14:20:43,999 igfash WARNING Must be either CTL or CNE for windowing. Use all events in catalog.
+14:20:49,689 igfash INFO Magnitude KDE Computation time: 5.7 seconds
+14:20:49,928 igfash INFO L mode - Location distribution modeling
+14:20:49,929 igfash INFO Computing KDE of each window...
+14:20:50,207 igfash INFO 2D KDE Computation time: 0.3 seconds
+14:20:52,924 igfash INFO R mode - activity Rate modeling
+14:20:55,384 igfash DEBUG Activity rates [4.966666666666667, 4.666666666666667] with percentages [0.5, 0.5]
+14:20:55,384 igfash INFO Forecast mode - seismic hazard asssessment
+14:20:55,384 igfash DEBUG Verification that f(x,y) is normalized; Sum of all f(x,y) values = 1.0
+14:20:55,499 igfash INFO Estimating ground motion at 89 grid points...
+14:20:55,499 igfash INFO Estimating PGA
+15:15:36,647 igfash INFO No Mc provided; therefore automatically run magnitude completeness test.
+15:15:36,647 igfash.mc DEBUG testing mc 0.87
+15:15:46,544 igfash.mc DEBUG ..p-value: 0.0
+15:15:46,544 igfash.mc DEBUG testing mc 0.97
+15:15:55,803 igfash.mc DEBUG ..p-value: 0.0
+15:15:55,804 igfash.mc DEBUG testing mc 1.07
+15:16:04,801 igfash.mc DEBUG ..p-value: 0.0
+15:16:04,802 igfash.mc DEBUG testing mc 1.17
+15:16:14,1 igfash.mc DEBUG ..p-value: 0.0
+15:16:14,1 igfash.mc DEBUG testing mc 1.27
+15:16:22,615 igfash.mc DEBUG ..p-value: 0.0
+15:16:22,616 igfash.mc DEBUG testing mc 1.37
+15:16:30,762 igfash.mc DEBUG ..p-value: 0.0
+15:16:30,763 igfash.mc DEBUG testing mc 1.47
+15:16:38,844 igfash.mc DEBUG ..p-value: 0.0
+15:16:38,844 igfash.mc DEBUG testing mc 1.57
+15:16:46,453 igfash.mc DEBUG ..p-value: 0.0
+15:16:46,453 igfash.mc DEBUG testing mc 1.67
+15:16:53,89 igfash.mc DEBUG ..p-value: 0.0
+15:16:53,89 igfash.mc DEBUG testing mc 1.77
+15:16:59,84 igfash.mc DEBUG ..p-value: 0.7127
+15:16:59,86 igfash.mc DEBUG First mc to pass the test: 1.77 with a beta of: 2.5190273670888788
+15:16:59,86 igfash INFO Mc estimated at 1.77
+15:16:59,99 igfash INFO R mode - activity Rate modeling
+15:17:02,123 igfash DEBUG Activity rates [4.966666666666667, 4.666666666666667] with percentages [0.5, 0.5]
+15:31:34,94 igfash INFO Estimating SA(1.0)
+16:46:48,486 igfash INFO Ground motion exceedance computation time: 8753.0 seconds
