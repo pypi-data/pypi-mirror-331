@@ -1,0 +1,39 @@
+Metadata-Version: 2.2
+Name: z3kural
+Version: 0.1.0
+Summary: A Python package to fetch Thirukkural verses
+Home-page: https://github.com/z3connect/z3kural
+Author: Z3Connect
+Author-email: z3connect.z3connect@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
+
+# Z3Kural - Thirukkural API by Z3Connect
+
+A Python package to fetch Thirukkural verses.
+
+## Installation
+
+pip install z3kural 
+
+
+
+## Usage
+
+```python
+from z3kural import get_kural
+
+kural = get_kural(1)
+print(kural)
