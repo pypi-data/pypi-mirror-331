@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: fib_him10agr.py
+Version: 0.0.1
+Summary: Calculates the fibonacci number
+Home-page: https://github.com/Him10Agr/fib
+Author: Himanshu Agrawal
+Author-email: himanshuagr.c2@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# fib
+
