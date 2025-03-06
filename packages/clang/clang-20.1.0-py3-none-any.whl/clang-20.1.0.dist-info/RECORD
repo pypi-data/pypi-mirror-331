@@ -1,0 +1,6 @@
+clang/__init__.py,sha256=lh2K1BnceqENjXt15fzWJMxoFAOlXOma0Urk_kp750k,595
+clang/cindex.py,sha256=3nkHnpwyS37AXtQ-ZuOdEqWjyLAirmrPkWoHJMLWxRk,134552
+clang-20.1.0.dist-info/METADATA,sha256=Yc25QROPMry0V9so_0TgPo-dqED5lB1E9dPvrvXkMFM,1910
+clang-20.1.0.dist-info/WHEEL,sha256=mMAJV7N5skXEkrcKu2rizm9OFJ5BmQSnG_g1yKSqx_c,96
+clang-20.1.0.dist-info/licenses/LICENSE.TXT,sha256=jYXBBX10Lll5hcfU5jILAVqROThc_0y64G_8Dr6Jr-4,15141
+clang-20.1.0.dist-info/RECORD,,
