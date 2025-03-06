@@ -1,0 +1,14 @@
+Metadata-Version: 2.2
+Name: playbook3d
+Version: 0.0.1
+Summary: A python package used to interface with Playbook3d's API
+Author-email: Alex Carrizosa <alex@playbook3d.com>
+Project-URL: Homepage, https://github.com/playbook3d/playbook3d-python-sdk
+Project-URL: Issues, https://github.com/playbook3d/playbook3d-python-sdk/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# playbook3d-python-sdk
