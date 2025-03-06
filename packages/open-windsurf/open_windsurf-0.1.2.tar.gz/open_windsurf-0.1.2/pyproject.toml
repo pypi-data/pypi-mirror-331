@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "open-windsurf"
+version = "0.1.2"
+description = "Open multiple Windsurf (VS Code-based) instances for different directories/paths"
+authors = ["Tom Dörr <tomdoerr96@gmail.com>"]
+readme = "README.md"
+license = "MIT"
+packages = [{include = "open_windsurf"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.0.0"
+black = "^23.0.0"
+isort = "^5.12.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+open-windsurf = "open_windsurf.cli:main"
+
+[tool.black]
+line-length = 88
+target-version = ["py38"]
+
+[tool.isort]
+profile = "black"
+line_length = 88
