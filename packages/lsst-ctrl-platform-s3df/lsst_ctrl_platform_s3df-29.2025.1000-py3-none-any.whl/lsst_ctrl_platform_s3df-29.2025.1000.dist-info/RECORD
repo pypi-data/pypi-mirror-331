@@ -1,0 +1,17 @@
+lsst/__init__.py,sha256=_2bZAHuDVAx7MM7KA7pt3DYp641NY4RzSoRAwesWKfU,67
+lsst/ctrl/__init__.py,sha256=_2bZAHuDVAx7MM7KA7pt3DYp641NY4RzSoRAwesWKfU,67
+lsst/ctrl/platform/__init__.py,sha256=_2bZAHuDVAx7MM7KA7pt3DYp641NY4RzSoRAwesWKfU,67
+lsst/ctrl/platform/s3df/__init__.py,sha256=Ta8m8myoeorl_RcLdW2xqq5E76HPTgGASdeSZucWBRc,1025
+lsst/ctrl/platform/s3df/etc/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lsst/ctrl/platform/s3df/etc/config/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lsst/ctrl/platform/s3df/etc/config/execConfig.py,sha256=nT3XYbRNo9i0UAcOHmlcXRlWSmTUOyC1T1BOl4Odl8g,239
+lsst/ctrl/platform/s3df/etc/config/slurmConfig.py,sha256=coGp9thxBSAXsvSknGT2az8A2KhdEjtUwKh-Yc84-dA,224
+lsst/ctrl/platform/s3df/etc/templates/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lsst/ctrl/platform/s3df/etc/templates/allocation.sh.template,sha256=i9hSHMvvTEWZtboOuEScZcv9zE2faSeAOO4jr467Hus,2901
+lsst/ctrl/platform/s3df/etc/templates/dynamic_slots.template,sha256=9eWolKIRHaa7XYoSZCMKlc9oSJ4GCSqok74u-Cmg9OY,157
+lsst/ctrl/platform/s3df/etc/templates/generic.slurm.template,sha256=b7SI-3ca6fQAGpF8WA9OkpvgZzvX1YbbfDNGNhLOo7c,516
+lsst/ctrl/platform/s3df/etc/templates/glidein_condor_config.template,sha256=DdiZvwiRiUgCpHybXdSGrtg22Kz78K-EdrkiDkk6104,1542
+lsst_ctrl_platform_s3df-29.2025.1000.dist-info/METADATA,sha256=gb4EYwuJa6lsBxHW_F_ergDrcRYFOoOzOflvY3GmDKY,950
+lsst_ctrl_platform_s3df-29.2025.1000.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+lsst_ctrl_platform_s3df-29.2025.1000.dist-info/licenses/LICENSE,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+lsst_ctrl_platform_s3df-29.2025.1000.dist-info/RECORD,,
