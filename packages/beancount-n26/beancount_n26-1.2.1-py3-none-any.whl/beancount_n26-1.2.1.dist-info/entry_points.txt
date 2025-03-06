@@ -1,0 +1,3 @@
+[console_scripts]
+beancount-n26-ec=beancount_n26.cli:ec
+
