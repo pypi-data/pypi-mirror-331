@@ -1,0 +1,4 @@
+selectolax>=0.3.28
+
+[test]
+pytest>=7.0.0

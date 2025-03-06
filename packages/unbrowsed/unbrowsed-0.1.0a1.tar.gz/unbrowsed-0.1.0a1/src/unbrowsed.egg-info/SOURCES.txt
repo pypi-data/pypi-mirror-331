@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/unbrowsed/__init__.py
+src/unbrowsed/parser.py
+src/unbrowsed/queries.py
+src/unbrowsed.egg-info/PKG-INFO
+src/unbrowsed.egg-info/SOURCES.txt
+src/unbrowsed.egg-info/dependency_links.txt
+src/unbrowsed.egg-info/requires.txt
+src/unbrowsed.egg-info/top_level.txt
+tests/test_query_by_label_text.py
