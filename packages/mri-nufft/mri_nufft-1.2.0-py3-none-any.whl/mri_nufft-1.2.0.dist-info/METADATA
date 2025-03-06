@@ -1,0 +1,53 @@
+Metadata-Version: 2.2
+Name: mri-nufft
+Version: 1.2.0
+Summary: MRI Non-Cartesian Fourier Operators with multiple computation backends.
+Author-email: Pierre-antoine Comby <pierre-antoine.comby@crans.org>
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+Requires-Dist: tqdm
+Provides-Extra: gpunufft
+Requires-Dist: gpuNUFFT>=0.9.0; extra == "gpunufft"
+Requires-Dist: cupy-cuda12x; extra == "gpunufft"
+Provides-Extra: torchkbnufft
+Requires-Dist: torchkbnufft; extra == "torchkbnufft"
+Requires-Dist: cupy-cuda12x; extra == "torchkbnufft"
+Provides-Extra: cufinufft
+Requires-Dist: cufinufft<2.3; extra == "cufinufft"
+Requires-Dist: cupy-cuda12x; extra == "cufinufft"
+Provides-Extra: finufft
+Requires-Dist: finufft; extra == "finufft"
+Provides-Extra: pynfft
+Requires-Dist: pynfft2>=1.4.3; python_version < "3.12" and extra == "pynfft"
+Requires-Dist: numpy>=2.0.0; python_version < "3.12" and extra == "pynfft"
+Provides-Extra: pynufft
+Requires-Dist: pynufft; extra == "pynufft"
+Provides-Extra: extra
+Requires-Dist: pymapvbvd; extra == "extra"
+Requires-Dist: scikit-image; extra == "extra"
+Requires-Dist: scikit-learn; extra == "extra"
+Requires-Dist: pywavelets; extra == "extra"
+Provides-Extra: autodiff
+Requires-Dist: torch; extra == "autodiff"
+Provides-Extra: test
+Requires-Dist: pytest<8.0.0; extra == "test"
+Requires-Dist: pytest-cov; extra == "test"
+Requires-Dist: pytest-xdist; extra == "test"
+Requires-Dist: pytest-sugar; extra == "test"
+Requires-Dist: pytest-cases; extra == "test"
+Provides-Extra: dev
+Requires-Dist: black; extra == "dev"
+Requires-Dist: isort; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Provides-Extra: doc
+Requires-Dist: sphinx-book-theme; extra == "doc"
+Requires-Dist: sphinx-copybutton; extra == "doc"
+Requires-Dist: sphinx-gallery; extra == "doc"
+Requires-Dist: matplotlib; extra == "doc"
+Requires-Dist: pooch; extra == "doc"
+Requires-Dist: brainweb-dl; extra == "doc"
+Requires-Dist: coverage; extra == "doc"
