@@ -1,0 +1,16 @@
+aiokdb/__init__.py,sha256=oxLGFA1Py4alTVQ_6c--0HS4iZtLxSah7bkNh9eEO0w,35024
+aiokdb/adapter.py,sha256=nWGdfNwNWgC7sTqVfSdStVFasirUXiNm3e7PpZxczFU,1819
+aiokdb/cli.py,sha256=RjIld25dK12xlGTZZnJsN88JW3d98zNrW5CVgrnaW4U,1798
+aiokdb/client.py,sha256=f0C6BA7QYP9pDTlU6WxvO5H-mU-tMXCP4z8GwcdF0ZM,3244
+aiokdb/compress.py,sha256=mPsOKiuUAq1vle-ief0D8M9-hoeQaTgw2oHj4vrpmx8,6476
+aiokdb/extras.py,sha256=MZ0ln5w8w1n7xPhvnA5FkqT3C0vRs_Y32wFGmsGlIMs,3648
+aiokdb/files.py,sha256=bX8geVGTP8grne4P5UOCaRMq3ajHZSOAuFGV8B9Ftls,823
+aiokdb/format.py,sha256=VD1xkJVfdRUNnWioUoCULnUS_ztFAfP0TP6Zto62WVY,11359
+aiokdb/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aiokdb/server.py,sha256=PhtlXqucBQIuhvxKMCVv9_hGA0zNIXAXZMdq93kWjUw,11507
+aiokdb/socket.py,sha256=9a4OuNRlAPu12TTadEwvFhAiScs1OKWddK9TNlVl2aQ,1740
+aiokdb-0.1.22.dist-info/LICENSE,sha256=FDCgmFAryZtP0abG1_jftpA3eikLfDe8-57WnXRD4N4,1077
+aiokdb-0.1.22.dist-info/METADATA,sha256=8IV98AzCwfEyoX2V_o4-HtUo6hPASnV4M88oIZVa_6U,6408
+aiokdb-0.1.22.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+aiokdb-0.1.22.dist-info/top_level.txt,sha256=8Ajy73MAyKg-rm2_Lw9usXYofeGRX2O5ZeFGPC7z53k,7
+aiokdb-0.1.22.dist-info/RECORD,,
