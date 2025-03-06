@@ -1,0 +1,99 @@
+Metadata-Version: 2.3
+Name: paule
+Version: 0.4.8
+Summary: paule implements the Predictive Articulatory speech synthesis model Utilizing Lexical Embeddings (PAULE), which is a control model for the articulatory speech synthesizer VocalTractLab (VTL).
+License: GPLv3+
+Author: Konstantin Sering
+Author-email: konstantin.sering@uni-tuebingen.de
+Requires-Python: >=3.9,<3.13
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Requires-Dist: librosa (>=0.9.2)
+Requires-Dist: llvmlite (>=0.39.1)
+Requires-Dist: matplotlib (>=3.8.0)
+Requires-Dist: numba (>=0.56.4)
+Requires-Dist: numpy (>=1.23.1)
+Requires-Dist: pandas (>=1.4.3)
+Requires-Dist: soundfile (>=0.11.0)
+Requires-Dist: toml (>=0.10.2)
+Requires-Dist: torch (>=1.13.1)
+Requires-Dist: tqdm (>=4.64.1)
+Project-URL: Homepage, https://paule.readthedocs.io/en/latest/
+Project-URL: Repository, https://github.com/quantling/paule
+Description-Content-Type: text/x-rst
+
+PAULE
+=====
+
+.. image:: https://zenodo.org/badge/355606517.svg
+   :target: https://zenodo.org/badge/latestdoi/355606517
+
+Predictive Articulatory speech synthesis Utilizing Lexical Embeddings (PAULE) a
+python frame work to plan control parameter trajectories for the VocalTractLab
+simulator for a target acoustics or semantic embedding.
+
+
+.. image:: https://raw.githubusercontent.com/quantling/paule/main/docs/figure/vtl_3d_vtl_midsagittal_cps_audio.png
+  :width: 800
+  :alt: A 3d vocal tract shape, a midsagittal slice, control parameter trajectories and a wave form.
+
+
+
+Installation
+------------
+
+::
+
+    pip install paule
+
+
+Overview
+--------
+
+.. image:: https://raw.githubusercontent.com/quantling/paule/main/docs/figure/framework_simplified.png
+  :width: 800
+  :alt: Box and arrow overview of the PAULE model.
+
+Example
+-------
+
+A minimal example can be found at https://raw.githubusercontent.com/quantling/paule/main/docs/examples/minimal_example.py
+
+
+Cite
+----
+
+To cite the PAULE model use::
+
+    @book{PAULEthesis,
+      title     = "{P}redictive {A}rticulatory speech synthesis {U}tilizing {L}exical {E}mbeddings ({PAULE})",
+      author    = "Sering, Konstantin",
+      year      = 2023,
+      publisher = "Universität Tübingen",
+      address   = "Tübingen",
+      doi       = {10.15496/publikation-90142}
+    }
+
+To cite the PAULE source code use the DOI 10.5281/zenodo.7252431
+(https://zenodo.org/doi/10.5281/zenodo.7252431), if you want to cite the
+software in general or the specific DOI on Zenodo.
+
+
+Acknowledgements
+----------------
+This research was supported by an ERC advanced Grant (no. 742545), by the DfG grant 527671319 ("Komplexe Wörter im Kontext“), and the University of Tübingen.
+
+
