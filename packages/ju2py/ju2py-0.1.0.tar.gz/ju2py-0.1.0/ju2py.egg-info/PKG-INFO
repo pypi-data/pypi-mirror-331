@@ -1,0 +1,41 @@
+Metadata-Version: 2.2
+Name: ju2py
+Version: 0.1.0
+Summary: A simple tool to convert Jupyter notebooks to Python scripts.
+Home-page: https://github.com/ziaeemehr/ju2py
+Author: Abolfazl Ziaeemehr
+Author-email: a.ziaeemehr@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: nbformat
+Requires-Dist: nbconvert
+Requires-Dist: twine
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# j2p
+
+A simple Python package to convert Jupyter notebooks to Python scripts.
+
+## Installation
+
+```bash
+pip install .
+```
+
+## Usage
+
+```python
+j2p example.ipynb
+```
+
