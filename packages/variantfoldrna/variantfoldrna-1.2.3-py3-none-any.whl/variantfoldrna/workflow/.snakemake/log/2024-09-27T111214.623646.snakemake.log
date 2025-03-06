@@ -1,0 +1,3 @@
+KeyError in file /storage/group/pcb5/default/kjk6173/variantfoldrna/src/variantfoldrna/workflow/Snakefile, line 18:
+'ribosnitch_prediction_tool'
+  File "/storage/group/pcb5/default/kjk6173/variantfoldrna/src/variantfoldrna/workflow/Snakefile", line 18, in <module>
