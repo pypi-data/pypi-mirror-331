@@ -1,0 +1,34 @@
+Metadata-Version: 2.2
+Name: bod
+Version: 0.0.1a1
+Summary: Blob and Object Dumper
+Home-page: https://github.com/ebob9/bod
+Author: Aaron Edwards
+Author-email: bod-util@ebob9.com
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: beautifulsoup4
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: summary
+
+# bod
+Blob and Object Dumper
+
+### More coming soon
+
+
