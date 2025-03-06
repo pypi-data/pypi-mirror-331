@@ -1,0 +1,676 @@
+[project]
+name = "cs-resources"
+description = "Resource management classes and functions."
+authors = [
+    { name = "Cameron Simpson", email = "cs@cskk.id.au" },
+]
+keywords = [
+    "python2",
+    "python3",
+]
+dependencies = [
+    "cs.context>=20250306",
+    "cs.deco>=20250306",
+    "cs.fsm>=20250120",
+    "cs.gimmicks>=20240316",
+    "cs.obj>=20250306",
+    "cs.pfx>=20241208",
+    "cs.psutils>=20250108.1",
+    "cs.py.func>=20240630",
+    "cs.py.stack>=20250306",
+    "cs.result>=20250306",
+    "cs.semantics>=20250103",
+    "cs.threads>=20241005",
+    "icontract",
+    "typeguard",
+]
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+]
+version = "20250306"
+
+[project.license]
+text = "GNU General Public License v3 or later (GPLv3+)"
+
+[project.urls]
+"Monorepo Hg/Mercurial Mirror" = "https://hg.sr.ht/~cameron-simpson/css"
+"Monorepo Git Mirror" = "https://github.com/cameron-simpson/css"
+"MonoRepo Commits" = "https://bitbucket.org/cameron_simpson/css/commits/branch/main"
+Source = "https://github.com/cameron-simpson/css/blob/main/lib/python/cs/resources.py"
+
+[project.readme]
+text = """
+Resource management classes and functions.
+
+*Latest release 20250306*:
+MultiOpenMixin: bugfix yield from __enter_exit__ to return the value yielded from startup_shutdown.
+
+## <a name=\"MultiOpen\"></a>`MultiOpen(openable, finalise_later=False)`
+
+OBSOLETE MultiOpen
+
+A context manager class that manages a single-open/close object
+     using a `MultiOpenMixin`.
+
+     Use:
+
+         mo = MultiOpen(obj)
+         ......
+         with mo:
+              .... use obj ...
+
+     This required `obj` to have a `.open()` method which can
+     be called with no arguments (which is pretty uncommon)
+     and a `.close()` method.
+
+## <a name=\"MultiOpenMixin\"></a>Class `MultiOpenMixin(cs.context.ContextManagerMixin)`
+
+A multithread safe mixin to count open and close calls,
+doing a startup on the first `.open` and shutdown on the last `.close`.
+
+If used as a context manager this mixin calls `open()`/`close()` from
+`__enter__()` and `__exit__()`.
+
+It is recommended that subclass implementations do as little
+as possible during `__init__`, and do almost all setup during
+startup so that the class may perform multiple startup/shutdown
+iterations.
+
+Classes using this mixin should define a context manager
+method `.startup_shutdown` which does the startup actions
+before yielding and then does the shutdown actions.
+
+Example:
+
+    class DatabaseThing(MultiOpenMixin):
+        @contextmanager
+        def startup_shutdown(self):
+            self._db = open_the_database()
+            try:
+                yield
+            finally:
+                self._db.close()
+    ...
+    with DatabaseThing(...) as db_thing:
+        ... use db_thing ...
+
+If course, often something like a database open will itself
+be a context manager and the `startup_shutdown` method more
+usually looks like this:
+
+        @contextmanager
+        def startup_shutdown(self):
+            with open_the_database() as db:
+                self._db = db
+                yield
+
+Why not just write a plain context manager class? Because in
+multithreaded or async code one wants to keep the instance
+\"open\" while any thread is still using it.
+This mixin lets threads use an instance in overlapping fashion:
+
+    db_thing = DatabaseThing(...)
+    with db_thing:
+        ... kick off threads with access to the db ...
+    ...
+    thread 1:
+    with db_thing:
+       ... use db_thing ...
+    thread 2:
+    with db_thing:
+       ... use db_thing ...
+
+TODO:
+* `subopens`: if true (default false) then `.open` will return
+  a proxy object with its own `.closed` attribute set by the
+  proxy's `.close`.
+
+*`MultiOpenMixin.MultiOpenMixin_state`*:
+The state object for the mixin,
+something of a hack to avoid providing an `__init__`.
+
+*`MultiOpenMixin.close(self, *, enforce_final_close=False, caller_frame=None, unopened_ok=False)`*:
+Decrement the open count.
+If the count goes to zero, call `self.shutdown()` and return its value.
+
+Parameters:
+* `enforce_final_close`: if true, the caller expects this to
+  be the final close for the object and a `RuntimeError` is
+  raised if this is not actually the case.
+* `caller_frame`: used for debugging; the caller may specify
+  this if necessary, otherwise it is computed from
+  `cs.py.stack.caller` when needed. Presently the caller of the
+  final close is recorded to help debugging extra close calls.
+* `unopened_ok`: if true, it is not an error if this is not open.
+  This is intended for closing callbacks which might get called
+  even if the original open never happened.
+  (I'm looking at you, `cs.resources.RunState`.)
+
+*`MultiOpenMixin.closed`*:
+Whether this object has been closed.
+Note: `False` if never opened.
+
+*`MultiOpenMixin.is_open(self)`*:
+Test whether this object is open.
+
+*`MultiOpenMixin.is_opened(func)`*:
+Decorator to wrap `MultiOpenMixin` proxy object methods which
+should raise if the object is not yet open.
+
+*`MultiOpenMixin.join(self)`*:
+Join this object.
+
+Wait for the internal finalise `Condition` (if still not `None`).
+Normally this is notified at the end of the shutdown procedure
+unless the object's `finalise_later` parameter was true.
+
+*`MultiOpenMixin.open(self, caller_frame=None)`*:
+Increment the open count.
+On the first `.open` call `self.startup()`.
+
+*`MultiOpenMixin.startup_shutdown(self)`*:
+Default context manager form of startup/shutdown - just
+call the distinct `.startup()` and `.shutdown()` methods
+if both are present, do nothing if neither is present.
+
+This supports subclasses always using:
+
+    with super().startup_shutdown():
+
+as an outer wrapper.
+
+The `.startup` check is to support legacy subclasses of
+`MultiOpenMixin` which have separate `startup()` and
+`shutdown()` methods.
+The preferred approach is a single `startup_shutdwn()`
+context manager overriding this method.
+
+The usual form looks like this:
+
+    @contextmanager
+    def startup_shutdown(self):
+        with super().startup_shutdown():
+            ... do some set up ...
+            try:
+                yield
+            finally:
+                ... do some tear down ...
+
+*`MultiOpenMixin.tcm_get_state(self)`*:
+Support method for `TrackedClassMixin`.
+
+## <a name=\"openif\"></a>`openif(obj)`
+
+Context manager to open `obj` if it has a `.open` method
+and also to close it via its `.close` method.
+This yields `obj.open()` if defined, or `obj` otherwise.
+
+## <a name=\"Pool\"></a>Class `Pool`
+
+A generic pool of objects on the premise that reuse is cheaper than recreation.
+
+All the pool objects must be suitable for use, so the
+`new_object` callable will typically be a closure.
+For example, here is the __init__ for a per-thread AWS Bucket using a
+distinct Session:
+
+    def __init__(self, bucket_name):
+        Pool.__init__(self, lambda: boto3.session.Session().resource('s3').Bucket(bucket_name)
+
+*`Pool.__init__(self, new_object, max_size=None, lock=None)`*:
+Initialise the Pool with creator `new_object` and maximum size `max_size`.
+
+Parameters:
+* `new_object` is a callable which returns a new object for the Pool.
+* `max_size`: The maximum size of the pool of available objects saved for reuse.
+    If omitted or `None`, defaults to 4.
+    If 0, no upper limit is applied.
+* `lock`: optional shared Lock; if omitted or `None` a new Lock is allocated
+
+*`Pool.instance(self)`*:
+Context manager returning an object for use, which is returned to the pool afterwards.
+
+## <a name=\"RunState\"></a>Class `RunState(cs.fsm.FSM, cs.threads.HasThreadState)`
+
+A class to track a running task whose cancellation may be requested.
+
+Its purpose is twofold, to provide easily queriable state
+around tasks which can start and stop, and to provide control
+methods to pronounce that a task has started (`.start`),
+should stop (`.cancel`)
+and has stopped (`.stop`).
+
+A `RunState` can be used as a context manager, with the enter
+and exit methods calling `.start` and `.stop` respectively.
+Note that if the suite raises an exception
+then the exit method also calls `.cancel` before the call to `.stop`.
+
+Monitor or daemon processes can poll the `RunState` to see when
+they should terminate, and may also manage the overall state
+easily using a context manager.
+Example:
+
+    def monitor(self):
+        with self.runstate:
+            while not self.runstate.cancelled:
+                ... main loop body here ...
+
+A `RunState` has three main methods:
+* `.start()`: set `.running` and clear `.cancelled`
+* `.cancel()`: set `.cancelled`
+* `.stop()`: clear `.running`
+
+A `RunState` has the following properties:
+* `cancelled`: true if `.cancel` has been called.
+* `running`: true if the task is running.
+  Further, assigning a true value to it sets `.start_time` to now.
+  Assigning a false value to it sets `.stop_time` to now.
+* `start_time`: the time `.running` was last set to true.
+* `stop_time`: the time `.running` was last set to false.
+* `run_time`: `max(0,.stop_time-.start_time)`
+* `stopped`: true if the task is not running.
+* `stopping`: true if the task is running but has been cancelled.
+* `notify_start`: a set of callables called with the `RunState` instance
+  to be called whenever `.running` becomes true.
+* `notify_end`: a set of callables called with the `RunState` instance
+  to be called whenever `.running` becomes false.
+* `notify_cancel`: a set of callables called with the `RunState` instance
+  to be called whenever `.cancel` is called.
+
+<figure>
+    <svg width=\"309pt\" height=\"310pt\"
+   viewBox=\"0.00 0.00 309.27 309.50\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">
+  <g id=\"graph0\" class=\"graph\" transform=\"scale(1 1) rotate(0) translate(4 305.5)\">
+  <title>RunState State Diagram</title>
+  <polygon fill=\"white\" stroke=\"none\" points=\"-4,4 -4,-305.5 305.27,-305.5 305.27,4 -4,4\"/>
+  <!-- IDLE -->
+  <g id=\"node1\" class=\"node\">
+  <title>IDLE</title>
+  <ellipse fill=\"none\" stroke=\"black\" cx=\"197.93\" cy=\"-283.5\" rx=\"31.9\" ry=\"18\"/>
+  <text text-anchor=\"middle\" x=\"197.93\" y=\"-278.45\" font-family=\"Times,serif\" font-size=\"14.00\">IDLE</text>
+  </g>
+  <!-- IDLE&#45;&gt;IDLE -->
+  <g id=\"edge1\" class=\"edge\">
+  <title>IDLE&#45;&gt;IDLE</title>
+  <path fill=\"none\" stroke=\"black\" d=\"M226.9,-291.76C238.31,-292.17 247.84,-289.42 247.84,-283.5 247.84,-279.71 243.93,-277.22 238.12,-276.02\"/>
+  <polygon fill=\"black\" stroke=\"black\" points=\"238.63,-272.55 228.41,-275.35 238.15,-279.53 238.63,-272.55\"/>
+  <text text-anchor=\"middle\" x=\"265.09\" y=\"-278.45\" font-family=\"Times,serif\" font-size=\"14.00\">cancel</text>
+  </g>
+  <!-- RUNNING -->
+  <g id=\"node2\" class=\"node\">
+  <title>RUNNING</title>
+  <ellipse fill=\"none\" stroke=\"black\" cx=\"197.93\" cy=\"-195\" rx=\"53.4\" ry=\"18\"/>
+  <text text-anchor=\"middle\" x=\"197.93\" y=\"-189.95\" font-family=\"Times,serif\" font-size=\"14.00\">RUNNING</text>
+  </g>
+  <!-- IDLE&#45;&gt;RUNNING -->
+  <g id=\"edge2\" class=\"edge\">
+  <title>IDLE&#45;&gt;RUNNING</title>
+  <path fill=\"none\" stroke=\"black\" d=\"M197.93,-265.41C197.93,-253.76 197.93,-238.05 197.93,-224.52\"/>
+  <polygon fill=\"black\" stroke=\"black\" points=\"201.43,-224.86 197.93,-214.86 194.43,-224.86 201.43,-224.86\"/>
+  <text text-anchor=\"middle\" x=\"209.56\" y=\"-234.2\" font-family=\"Times,serif\" font-size=\"14.00\">start</text>
+  </g>
+  <!-- STOPPING -->
+  <g id=\"node3\" class=\"node\">
+  <title>STOPPING</title>
+  <ellipse fill=\"none\" stroke=\"black\" cx=\"54.93\" cy=\"-106.5\" rx=\"54.93\" ry=\"18\"/>
+  <text text-anchor=\"middle\" x=\"54.93\" y=\"-101.45\" font-family=\"Times,serif\" font-size=\"14.00\">STOPPING</text>
+  </g>
+  <!-- RUNNING&#45;&gt;STOPPING -->
+  <g id=\"edge3\" class=\"edge\">
+  <title>RUNNING&#45;&gt;STOPPING</title>
+  <path fill=\"none\" stroke=\"black\" d=\"M172.7,-178.73C149.76,-164.86 115.7,-144.26 90.1,-128.77\"/>
+  <polygon fill=\"black\" stroke=\"black\" points=\"92.06,-125.87 81.69,-123.69 88.44,-131.86 92.06,-125.87\"/>
+  <text text-anchor=\"middle\" x=\"157.18\" y=\"-145.7\" font-family=\"Times,serif\" font-size=\"14.00\">cancel</text>
+  </g>
+  <!-- STOPPED -->
+  <g id=\"node4\" class=\"node\">
+  <title>STOPPED</title>
+  <ellipse fill=\"none\" stroke=\"black\" cx=\"197.93\" cy=\"-18\" rx=\"50.84\" ry=\"18\"/>
+  <text text-anchor=\"middle\" x=\"197.93\" y=\"-12.95\" font-family=\"Times,serif\" font-size=\"14.00\">STOPPED</text>
+  </g>
+  <!-- RUNNING&#45;&gt;STOPPED -->
+  <g id=\"edge4\" class=\"edge\">
+  <title>RUNNING&#45;&gt;STOPPED</title>
+  <path fill=\"none\" stroke=\"black\" d=\"M197.93,-176.58C197.93,-146.44 197.93,-84.3 197.93,-47.7\"/>
+  <polygon fill=\"black\" stroke=\"black\" points=\"201.43,-47.86 197.93,-37.86 194.43,-47.86 201.43,-47.86\"/>
+  <text text-anchor=\"middle\" x=\"209.18\" y=\"-101.45\" font-family=\"Times,serif\" font-size=\"14.00\">stop</text>
+  </g>
+  <!-- STOPPING&#45;&gt;STOPPING -->
+  <g id=\"edge5\" class=\"edge\">
+  <title>STOPPING&#45;&gt;STOPPING</title>
+  <path fill=\"none\" stroke=\"black\" d=\"M104.36,-114.74C117.71,-114.3 127.87,-111.56 127.87,-106.5 127.87,-103.02 123.07,-100.64 115.73,-99.35\"/>
+  <polygon fill=\"black\" stroke=\"black\" points=\"116.16,-95.87 105.87,-98.41 115.49,-102.84 116.16,-95.87\"/>
+  <text text-anchor=\"middle\" x=\"145.12\" y=\"-101.45\" font-family=\"Times,serif\" font-size=\"14.00\">cancel</text>
+  </g>
+  <!-- STOPPING&#45;&gt;STOPPED -->
+  <g id=\"edge6\" class=\"edge\">
+  <title>STOPPING&#45;&gt;STOPPED</title>
+  <path fill=\"none\" stroke=\"black\" d=\"M80.17,-90.23C103.25,-76.28 137.59,-55.5 163.24,-39.99\"/>
+  <polygon fill=\"black\" stroke=\"black\" points=\"164.91,-43.07 171.65,-34.9 161.29,-37.08 164.91,-43.07\"/>
+  <text text-anchor=\"middle\" x=\"151.18\" y=\"-57.2\" font-family=\"Times,serif\" font-size=\"14.00\">stop</text>
+  </g>
+  <!-- STOPPED&#45;&gt;RUNNING -->
+  <g id=\"edge8\" class=\"edge\">
+  <title>STOPPED&#45;&gt;RUNNING</title>
+  <path fill=\"none\" stroke=\"black\" d=\"M204.84,-36.06C207.12,-41.76 209.66,-48.14 211.93,-54 217.87,-69.27 222,-72.38 224.93,-88.5 227.8,-104.24 227.8,-108.76 224.93,-124.5 222.31,-138.88 216.75,-154.1 211.35,-166.61\"/>
+  <polygon fill=\"black\" stroke=\"black\" points=\"208.29,-164.9 207.35,-175.45 214.67,-167.78 208.29,-164.9\"/>
+  <text text-anchor=\"middle\" x=\"238.56\" y=\"-101.45\" font-family=\"Times,serif\" font-size=\"14.00\">start</text>
+  </g>
+  <!-- STOPPED&#45;&gt;STOPPED -->
+  <g id=\"edge7\" class=\"edge\">
+  <title>STOPPED&#45;&gt;STOPPED</title>
+  <path fill=\"none\" stroke=\"black\" d=\"M243.61,-26.26C256.69,-25.94 266.77,-23.19 266.77,-18 266.77,-14.43 262.01,-12.02 254.78,-10.75\"/>
+  <polygon fill=\"black\" stroke=\"black\" points=\"255.4,-7.29 245.12,-9.87 254.76,-14.26 255.4,-7.29\"/>
+  <text text-anchor=\"middle\" x=\"284.02\" y=\"-12.95\" font-family=\"Times,serif\" font-size=\"14.00\">cancel</text>
+  </g>
+  </g>
+  </svg>
+  <figcaption>RunState State Diagram</figcaption>
+</figure>
+
+
+*`RunState.__bool__(self)`*:
+Return true if the task is running.
+
+*`RunState.__enter_exit__(self)`*:
+The `__enter__`/`__exit__` generator function:
+* push this `RunState` via `HasThreadState`
+* catch signals if we are in the main `Thread`
+* start
+* `yield self` => run
+* cancel on exception during the run
+* stop
+
+Note that if the `RunState` is already running we do not
+do any of that stuff apart from the `yield self` because
+we assume whatever setup should have been done has already
+been done.
+In particular, the `HasThreadState.Thread` factory calls this
+in the \"running\" state.
+
+*`RunState.__nonzero__(self)`*:
+Return true if the task is running.
+
+*`RunState.bg(self, func, **bg_kw)`*:
+Override `HasThreadState.bg` to catch CancellationError
+and just issue a warning.
+
+*`RunState.cancel(self)`*:
+Set the cancelled flag; the associated process should notice and stop.
+
+*`RunState.cancelled`*:
+Test the .cancelled attribute, including a poll if supplied.
+
+*`RunState.catch_signal(self, sig, call_previous=False, handle_signal=None)`*:
+Context manager to catch the signal or signals `sig` and
+cancel this `RunState`.
+Restores the previous handlers on exit.
+Yield a mapping of `sig`=>`old_handler`.
+
+Parameters:
+* `sig`: an `int` signal number or an iterable of signal numbers
+* `call_previous`: optional flag (default `False`)
+  passed to `cs.psutils.signal_handlers`
+
+*`RunState.end(self)`*:
+OBSOLETE end
+
+Obsolete synonym for `.stop()`.
+
+*`RunState.fsm_event(self, event: str, **extra)`*:
+Override `FSM.fsm_event` to apply side effects to particular transitions.
+
+On `'cancel'` set the cancelled flag.
+On `'start'` clear the cancelled flag and set `.start_time`.
+On `'stop'`set `.stop_time`.
+
+*`RunState.handle_signal(self, sig, _)`*:
+`RunState` signal handler: cancel the run state.
+Warn if `self.verbose`.
+
+*`RunState.iter(self, it)`*:
+Iterate over `it` while not `self.cancelled`.
+
+*`RunState.perthread_state`*
+
+*`RunState.raiseif(self, msg=None, *a)`*:
+Raise `CancellationError` is cancelled.
+
+Example:
+
+    for item in items:
+        runstate.raiseif()
+        ... process item ...
+
+*`RunState.run_time`*:
+A property returning most recent run time (`stop_time-start_time`).
+If still running, use now as the stop time.
+If not started, return `0.0`.
+
+*`RunState.running`*:
+Whether the state is `'RUNNING'` or `'STOPPING'`.
+
+*`RunState.sleep(self, delay, step=1.0)`*:
+Sleep for `delay` seconds in increments of `step` (default `1.0`).
+`self.raiseif()` is polled between steps.
+
+*`RunState.start(self, running_ok=False)`*:
+Start: adjust state, set `start_time` to now.
+Sets `.cancelled` to `False` and sets `.running` to `True`.
+
+*`RunState.state`*:
+OBSOLETE state
+
+The `RunState`'s state as a string.
+       Deprecated, new uses should consult `self.fsm_state`.
+
+*`RunState.stop(self)`*:
+Fire the `'stop'` event.
+
+*`RunState.stopping`*:
+Is the process stopping?
+
+## <a name=\"RunStateMixin\"></a>Class `RunStateMixin`
+
+Mixin to provide convenient access to a `RunState`.
+
+Provides: `.runstate`, `.cancelled`, `.running`, `.stopping`, `.stopped`.
+
+*`RunStateMixin.__init__(self, *, runstate: Union[cs.resources.RunState, str, NoneType] = <function uses_runstate.<locals>.<lambda> at 0x10e5554e0>)`*:
+Initialise the `RunStateMixin`; sets the `.runstate` attribute.
+
+Parameters:
+* `runstate`: optional `RunState` instance or name.
+  If a `str`, a new `RunState` with that name is allocated.
+  If omitted, the default `RunState` is used.
+
+*`RunStateMixin.cancel(self)`*:
+Call .runstate.cancel().
+
+*`RunStateMixin.cancelled`*:
+Test .runstate.cancelled.
+
+*`RunStateMixin.running`*:
+Test .runstate.running.
+
+*`RunStateMixin.stopped`*:
+Test .runstate.stopped.
+
+*`RunStateMixin.stopping`*:
+Test .runstate.stopping.
+
+## <a name=\"uses_runstate\"></a>`uses_runstate(*da, **dkw)`
+
+A wrapper for `@default_params` which makes a new thread wide
+`RunState` parameter `runstate` if missing.
+The optional decorator parameter `name` may be used to specify
+a name for the new `RunState` if one is made. The default name
+comes from the wrapped function's name.
+
+Example:
+
+    @uses_runstate
+    def do_something(blah, *, runstate:RunState):
+        ... do something, polling the runstate as approriate ...
+
+# Release Log
+
+
+
+*Release 20250306*:
+MultiOpenMixin: bugfix yield from __enter_exit__ to return the value yielded from startup_shutdown.
+
+*Release 20250103*:
+* RunState: new raiseif() method to raise CancellationError if cancelled.
+* Move ClosedError and @not_closed to cs.semantics.
+
+*Release 20241005*:
+* New RunState.sleep(delay[,step]) function to do an interruptable sleep.
+* RunState.bg: override HasThreadState.bg to catch CancellationError and just issue a warning.
+
+*Release 20240723*:
+_MultiOpenMixinOpenCloseState: use an RLock, still to investigate the deadlock with NRLock.
+
+*Release 20240721*:
+The MutliOpen wrapper class is now obsolete (NB: not the MultiOpenMixin class).
+
+*Release 20240630*:
+* @uses_runstate: now accepts an optional name= parameter which defaults to the name of the function being decorated, supplied to the RunState factory.
+* RunState.FSM_TRANSITIONS: allow IDLE->cancel->IDLE.
+* @not_closed: wrap in @decorator to set the wrapper name etc.
+* RunState: allow STOPPED->cancel->STOPPED transition.
+
+*Release 20240522*:
+* @uses_runstate: if we make a new RunState, get the default name from the wrapped function.
+* RunState: bug fixes from the recent subclassing of cs.fsm.FSM.
+
+*Release 20240519*:
+RunState now subclasses cs.fsm.FSM.
+
+*Release 20240423*:
+RunStateMixin: make the optional runstate parameter keyword only.
+
+*Release 20240422*:
+dataclass backport for Python < 3.10.
+
+*Release 20240412*:
+* RunState: new optional thread_wide=False parameter - if true, set this RunState as the Thread-wide default - this mode used by @uses_runstate, unsure about this default.
+* RunState: new .iter(iterable) method which iterates while not RunState.cancelled.
+* MultiOpenMixin: replace __mo_getstate() method with MultiOpenMixin_state property.
+* RunState.__init__: make most parameters keyword only.
+
+*Release 20240316*:
+Fixed release upload artifacts.
+
+*Release 20240201*:
+MultiOpenMixin: new .is_open() method to test for opens > 0.
+
+*Release 20231221*:
+RunState: new raiseif() method to raise CancellationError if the RunState is cancelled.
+
+*Release 20231129*:
+* RunStateMixin: runstate parameter may be None, str, RunState.
+* MultiOpenMixin.__enter_exit__: do not pass caller frame to self.close(), uninformative.
+
+*Release 20230503*:
+RunState: new optional poll_cancel Callable parameter, make .cancelled a property.
+
+*Release 20230331*:
+* @uses_runstate: use the prevailing RunState or create one.
+* MultiOpenMixin: move all the open/close counting logic to the _mom_state class, make several attributes public, drop separate finalise() method and associated Condition.
+* bugfix: _mom_state.open: only set self._teardown when opens==1.
+
+*Release 20230217*:
+MultiOpenMixin: __repr__ for the state object.
+
+*Release 20230212*:
+RunState: if already running, do not adjust state or catch signals; if not in the main thread do not adjust signals.
+
+*Release 20230125*:
+RunState: subclass HasThreadState, adjust @uses_runstate.
+
+*Release 20221228*:
+* Get error,warning from cs.gimmicks.
+* RunState: get store verbose as self.verbose, drop from catch_signals.
+
+*Release 20221118*:
+* New RunState.current thread local stackable class attribute.
+* New @uses_runstate decorator for functions using a RunState, defaulting to RunState.current.runstate.
+
+*Release 20220918*:
+* MultiOpenMixin.close: report caller of underflow close.
+* RunState: new optional handle_signal parameter to override the default method.
+* New openif() context manager to open/close an object if it has a .open method.
+* MultiOpenMixin.startup_shutdown: be silent for missing (obsolete) .startup, require .shutdown if .startup.
+
+*Release 20220429*:
+RunState: new catch_signal(sig,verbose=False) context manager method to cancel the RunState on receipt of a signal.
+
+*Release 20211208*:
+* MultiOpenMixin.startup_shutdown: since this is the fallback for obsolete uses of MultiOpenMixin, warn if there is no .startup/.shutdown method.
+* MultiOpenMixin.startup_shutdown: fix up shutdown logic, was not using a finally clause.
+* MultiOpenMixin: use ContextManagerMixin __enter_exit__ generator method instead of __enter__ and __exit__.
+
+*Release 20210906*:
+MultiOpenMixin: make startup and shutdown optional.
+
+*Release 20210731*:
+RunState: tune the sanity checks around whether the state is \"running\".
+
+*Release 20210420*:
+MultiOpenMixin: run startup/shutdown entirely via the new default method @contextmanager(startup_shutdown), paving the way for subclasses to just define their own startup_shutdown context manager methods instead of distinct startup/shutdown methods.
+
+*Release 20201025*:
+MultiOpenMixin.__mo_getstate: dereference self.__dict__ because using AttributeError was pulling a state object from another instance, utterly weird.
+
+*Release 20200718*:
+MultiOpenMixin: as a hack to avoid having an __init__, move state into an on demand object accesses by a private method.
+
+*Release 20200521*:
+Sweeping removal of cs.obj.O, universally supplanted by types.SimpleNamespace.
+
+*Release 20190812*:
+* MultiOpenMixin: no longer subclass cs.obj.O.
+* MultiOpenMixin: remove `lock` param support, the mixin has its own lock.
+* MultiOpen: drop `lock` param support, no longer used by MultiOpenMixin.
+* MultiOpenMixin: do finalise inside the lock for the same reason as shutdown (competition with open/startup).
+* MultiOpenMixin.close: new `unopened_ok=False` parameter intended for callback closes which might fire even if the initial open does not occur.
+
+*Release 20190617*:
+RunState.__exit__: if an exception was raised call .canel() before calling .stop().
+
+*Release 20190103*:
+* Bugfixes for context managers.
+* MultiOpenMixin fixes and changes.
+* RunState improvements.
+
+*Release 20171024*:
+* bugfix MultiOpenMixin finalise logic and other small logic fixes and checs
+* new class RunState for tracking or controlling a running task
+
+*Release 20160828*:
+Use \"install_requires\" instead of \"requires\" in DISTINFO.
+
+*Release 20160827*:
+* BREAKING CHANGE: rename NestingOpenCloseMixin to MultiOpenMixin.
+* New Pool class for generic object reuse.
+* Assorted minor improvements.
+
+*Release 20150115*:
+First PyPI release."""
+content-type = "text/markdown"
+
+[build-system]
+build-backend = "flit_core.buildapi"
+requires = [
+    "flit_core >=3.2,<4",
+]
+
+[tool.flit.module]
+name = "cs.resources"
