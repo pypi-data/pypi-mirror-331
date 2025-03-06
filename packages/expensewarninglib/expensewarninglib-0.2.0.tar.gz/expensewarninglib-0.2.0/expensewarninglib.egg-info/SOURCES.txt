@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+expensewarninglib/__init__.py
+expensewarninglib/warning.py
+expensewarninglib.egg-info/PKG-INFO
+expensewarninglib.egg-info/SOURCES.txt
+expensewarninglib.egg-info/dependency_links.txt
+expensewarninglib.egg-info/top_level.txt
