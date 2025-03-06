@@ -1,0 +1,8 @@
+name: platemapper
+display_name: ndev PlateMapper
+# use 'hidden' to remove plugin from napari hub search results
+visibility: hidden
+# see https://napari.org/stable/plugins/technical_references/manifest.html#fields for valid categories
+categories: ["Utilities"]
+contributions:
+  commands:

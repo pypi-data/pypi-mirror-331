@@ -1,0 +1,2 @@
+[napari.manifest]
+platemapper = platemapper:napari.yaml
