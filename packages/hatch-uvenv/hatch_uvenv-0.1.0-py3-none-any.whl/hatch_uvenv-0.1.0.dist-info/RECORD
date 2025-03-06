@@ -1,0 +1,9 @@
+hatch_uvenv/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hatch_uvenv/hooks.py,sha256=rhNdPW8h-SEdpi_ZI_UBY9c88lqc9lC84VKkVrYAUDw,181
+hatch_uvenv/plugin.py,sha256=JV9N8rNzgoA3ZvwMtUYv3CPhs3ZCokQd2RKOzxCCWUo,16354
+hatch_uvenv/venv.py,sha256=83KzKkFZvxF4E_frh7RvxnnJlQEyeDA45jeLKQ5puRg,3441
+hatch_uvenv-0.1.0.dist-info/METADATA,sha256=r8s9fFlTcTXb2jrbOnPZzb3d8587GNkEl2t9w2Zs2Ko,41517
+hatch_uvenv-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+hatch_uvenv-0.1.0.dist-info/entry_points.txt,sha256=CeyvjIk7Me8-0OKwpIxjddhSkT2dfTHZjY8wObY_Ad0,34
+hatch_uvenv-0.1.0.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+hatch_uvenv-0.1.0.dist-info/RECORD,,
