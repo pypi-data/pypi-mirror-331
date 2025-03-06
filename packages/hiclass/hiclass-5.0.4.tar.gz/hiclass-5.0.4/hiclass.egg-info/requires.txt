@@ -1,0 +1,17 @@
+networkx
+numpy
+scikit-learn>=1.5
+scipy
+
+[dev]
+flake8
+pytest
+pydocstyle
+pytest-cov==3.0.0
+pyfakefs==5.3.5
+black==24.2.0
+pre-commit==2.20.0
+ray
+
+[ray]
+ray>=1.11.0
