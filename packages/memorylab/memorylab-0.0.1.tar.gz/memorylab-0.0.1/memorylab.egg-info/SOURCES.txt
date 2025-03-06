@@ -1,0 +1,6 @@
+pyproject.toml
+memorylab/__init__.py
+memorylab.egg-info/PKG-INFO
+memorylab.egg-info/SOURCES.txt
+memorylab.egg-info/dependency_links.txt
+memorylab.egg-info/top_level.txt
