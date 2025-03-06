@@ -1,0 +1,20 @@
+numpy
+pandas
+pynetcor
+python-igraph
+goatools
+
+[:python_version < "3.10"]
+importlib-metadata
+
+[dev]
+pytest
+pytest-cov
+black
+flake8
+mypy
+pre-commit
+
+[docs]
+sphinx
+sphinx-rtd-theme
