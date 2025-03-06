@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2705570e-7e20-4df6-8d36-c92297b76a29" name="Changes" comment="Replace deprecated macos-11 runner with macos-12">
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2gBUCZFB7EqaDQifZXXBWSwRrGh" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/gaha/workspace/good/python/playsound3",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-PY-243.25659.43" />
+        <option value="bundled-python-sdk-181015f7ab06-4df51de95216-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.25659.43" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2705570e-7e20-4df6-8d36-c92297b76a29" name="Changes" comment="" />
+      <created>1715170337178</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1715170337178</updated>
+      <workItem from="1715170338210" duration="613000" />
+      <workItem from="1715172875954" duration="11000" />
+      <workItem from="1715173506044" duration="8000" />
+      <workItem from="1715173784613" duration="4000" />
+      <workItem from="1719587131749" duration="38000" />
+      <workItem from="1731243605167" duration="2319000" />
+      <workItem from="1731247901341" duration="526000" />
+      <workItem from="1734362051427" duration="624000" />
+      <workItem from="1734375686143" duration="58000" />
+      <workItem from="1735503783491" duration="3000" />
+      <workItem from="1741215873757" duration="431000" />
+    </task>
+    <task id="LOCAL-00001" summary="Configure whether the background thread is daemon or not">
+      <option name="closed" value="true" />
+      <created>1731245299559</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1731245299559</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Non-blocking sounds now return the thread object">
+      <option name="closed" value="true" />
+      <created>1731245841071</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1731245841071</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Replace deprecated macos-11 runner with macos-12">
+      <option name="closed" value="true" />
+      <created>1731247941742</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1731247941742</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Configure whether the background thread is daemon or not" />
+    <MESSAGE value="Non-blocking sounds now return the thread object" />
+    <MESSAGE value="Replace deprecated macos-11 runner with macos-12" />
+    <option name="LAST_COMMIT_MESSAGE" value="Replace deprecated macos-11 runner with macos-12" />
+  </component>
+</project>
