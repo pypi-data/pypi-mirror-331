@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+src/esaaf/__init__.py
+src/esaaf/descript_aaf.py
+src/esaaf/descript_interchange.py
+src/esaaf/descript_xml.py
+src/esaaf.egg-info/PKG-INFO
+src/esaaf.egg-info/SOURCES.txt
+src/esaaf.egg-info/dependency_links.txt
+src/esaaf.egg-info/requires.txt
+src/esaaf.egg-info/top_level.txt
