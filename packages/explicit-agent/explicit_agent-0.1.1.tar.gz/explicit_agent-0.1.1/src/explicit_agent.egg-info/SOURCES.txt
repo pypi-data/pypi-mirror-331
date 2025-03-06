@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/explicit_agent/__init__.py
+src/explicit_agent/agent.py
+src/explicit_agent/tools.py
+src/explicit_agent.egg-info/PKG-INFO
+src/explicit_agent.egg-info/SOURCES.txt
+src/explicit_agent.egg-info/dependency_links.txt
+src/explicit_agent.egg-info/requires.txt
+src/explicit_agent.egg-info/top_level.txt
