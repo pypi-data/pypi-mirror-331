@@ -1,0 +1,3 @@
+[console_scripts]
+mongodb-migrate-async = mongodb_migrations_async.cli:main
+mongodb-migrate-create-async = mongodb_migrations_async.cli:create_migration
