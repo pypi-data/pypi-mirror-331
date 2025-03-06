@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+src/digdem/__init__.py
+src/digdem/download_data.py
+src/digdem/gis.py
+src/digdem/plot.py
+src/digdem/section.py
+src/digdem/surfmod.py
+src/digdem.egg-info/PKG-INFO
+src/digdem.egg-info/SOURCES.txt
+src/digdem.egg-info/dependency_links.txt
+src/digdem.egg-info/requires.txt
+src/digdem.egg-info/top_level.txt
+tests/test_surfmod.py

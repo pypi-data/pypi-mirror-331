@@ -1,0 +1,12 @@
+shapely
+geopandas
+requests
+scipy
+matplotlib
+rasterio
+
+[dev]
+pipreqs
+
+[test]
+pytest

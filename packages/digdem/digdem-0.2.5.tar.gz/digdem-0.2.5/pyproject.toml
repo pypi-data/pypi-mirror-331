@@ -1,0 +1,40 @@
+# pyproject.toml
+
+[build-system]
+requires      = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "digdem"
+version = "v0.2.5"
+description = "Semi-automated modification of Digital Elevation Models"
+readme = "README.md"
+authors = [{ name = "Marc Peruzzetto", email = "m.peruzzetto@brgm.fr" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+keywords = ["dem", "surface", "interpolation", "modification"]
+dependencies = [
+    "shapely", "geopandas", "requests", "scipy", "matplotlib", "rasterio"
+]
+requires-python = ">=3.8"
+
+[project.optional-dependencies]
+test = ["pytest"]
+dev = ["pipreqs"]
+
+[tools.setuptools]
+packages = ["src"]
+
+[project.urls]
+Homepage = "https://github.com/marcperuz/digdem"
+
+[project.scripts]
+# tilupy_plot = "tilupy.cmd:_tilupy_plot"
+# tilupy_to_raster = "tilupy.cmd:_tilupy_to_raster"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
