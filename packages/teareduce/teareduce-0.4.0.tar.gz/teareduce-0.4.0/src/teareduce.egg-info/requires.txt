@@ -1,0 +1,10 @@
+astropy
+importlib_resources
+lmfit
+matplotlib
+numpy>=1.20
+scipy
+tqdm
+
+[test]
+pytest
