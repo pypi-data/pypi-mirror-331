@@ -1,0 +1,768 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% include 'modals/edit_proposal_modal.html' %}
+{% include 'modals/mark_invoice_as_canceled_modal.html' %}
+{% include 'modals/mark_invoice_as_paid_modal.html' %}
+{% include 'modals/mark_proposal_as_rejected_modal.html' %}
+{% include 'modals/mark_proposal_as_accepted_modal.html' %}
+
+<div class="container mt-4">
+    <h2>Active Invoices (<span id="active_invoices_count_value">0</span>)</h2>
+    <div class="table-responsive">
+        <table class="table table-striped table-hover" id="active_invoices_table">
+            <thead class="thead-light">
+            <tr>
+                <th scope="col">Number</th>
+                <th scope="col">Date</th>
+                <th scope="col">Due Date</th>
+                <th scope="col">Reference Number</th>
+                <th scope="col">Customer Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">Total Amount</th>
+                <th scope="col">Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+            <tfoot style="border-top-width: thick;border-bottom-width: thick;">
+            <tr>
+                <td colspan="6"><b>Totals</b></td>
+                <td><strong id="active_invoices_total_amount_value">0 {{ currency_name }}</strong></td>
+            </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+
+<div class="container mt-4">
+    <h2>Active Proposals (<span id="active_proposals_count_value">0</span>)</h2>
+    <div class="table-responsive">
+        <table class="table table-striped table-hover" id="active_proposals_table">
+            <thead class="thead-light">
+            <tr>
+                <th scope="col">Number</th>
+                <th scope="col">Date</th>
+                <th scope="col">Due Date</th>
+                <th scope="col">Reference Number</th>
+                <th scope="col">Customer Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">Total Amount</th>
+                <th scope="col">Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+            <tfoot style="border-top-width: thick;border-bottom-width: thick;">
+            <tr>
+                <td colspan="6"><b>Totals</b></td>
+                <td><strong id="active_proposals_total_amount_value">0 {{ currency_name }}</strong></td>
+            </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function refreshData() {
+        $('#loading_modal').modal('show');
+
+        $.ajax({
+            type: 'GET',
+            url: '/active_invoices',
+            success: function(data) {
+                // Populate active invoices section
+                const activeInvoicesTable = document.getElementById('active_invoices_table').getElementsByTagName('tbody')[0];
+                // clear all the old rows first
+                const activeInvoicesTableRowCount = activeInvoicesTable.rows.length;
+
+                // Start from the last row and go backwards to avoid index shift
+                for (let i = activeInvoicesTableRowCount - 1; i >= 0; i--) {
+                    activeInvoicesTable.deleteRow(i);
+                }
+
+                activeInvoicesTotalAmount = 0;
+                // Repopulate the table
+                for (const [entry, values] of Object.entries(data)) {
+                        const row = activeInvoicesTable.insertRow();
+                        row.setAttribute('data-row-id', values.id);
+                        const cell1 = row.insertCell(0);
+                        const cell2 = row.insertCell(1);
+                        const cell3 = row.insertCell(2);
+                        const cell4 = row.insertCell(3);
+                        const cell5 = row.insertCell(4);
+                        const cell6 = row.insertCell(5);
+                        const cell7 = row.insertCell(6);
+                        const cell8 = row.insertCell(7);
+
+                        cell1.textContent = values.invoice_number;
+                        cell2.textContent = values.invoice_date;
+                        cell3.textContent = values.due_date;
+                        cell4.classList.add('text-truncate');
+                        cell4.style.maxWidth = "80px";
+                        cell4.textContent = values.reference_number;
+                        cell5.classList.add('text-truncate');
+                        cell5.style.maxWidth = "100px";
+                        cell5.textContent = values.customer_name;
+                        cell6.classList.add('text-truncate');
+                        cell6.style.maxWidth = "250px";
+                        cell6.textContent = values.description;
+                        cell7.textContent = values.total_amount + ' ' + values.currency_symbol;
+                        cell8.innerHTML = `<div style="display: flex; flex-wrap: nowrap; overflow-x: auto;"><button type="button" class="btn btn-danger mark-canceled-button m-1" data-toggle="tooltip" data-placement="top" title="Cancel invoice" data-invoice-number="${values.invoice_number}" data-customer-name="${values.customer_name}"><i class="bi bi-x-square"></i></button><button type="button" class="btn btn-success mark-paid-button m-1" data-toggle="tooltip" data-placement="top" title="Mark invoice as paid" data-customer-name="${values.customer_name}" data-invoice-number="${values.invoice_number}"><i class="bi bi-cash-coin"></i></button><button type="button" class="btn btn-primary view-invoice-button m-1" data-toggle="tooltip" data-placement="top" title="View invoice" data-id="${values.id}" data-invoice-number="${values.invoice_number}"><i class="bi bi-zoom-in"></i></button><button type="button" class="btn btn-primary print-invoice-button m-1" data-toggle="tooltip" data-placement="top" title="Print invoice" data-id="${values.id}"><i class="bi bi-printer"></i></button><button type="button" class="btn btn-secondary duplicate-invoice-button m-1" data-toggle="tooltip" data-placement="top" title="Duplicate invoice" data-id="${values.id}"><i class="bi bi-copy"></i></button></div>`;
+
+                        activeInvoicesTotalAmount += values.total_amount;
+                }
+
+                document.getElementById('active_invoices_count_value').innerHTML = Object.entries(data).length;
+                document.getElementById('active_invoices_total_amount_value').innerHTML = activeInvoicesTotalAmount + ' {{ currency_name }}';
+
+                // Handle mark as canceled button clicks
+                $('.mark-canceled-button').on('click', function () {
+                    const invoice_number = $(this).data('invoice-number');
+                    const customer_name = $(this).data('customer-name');
+
+                    // Set the value in the modal's prompt text
+                    $('.mark-invoice-canceled-number').text(invoice_number);
+                    $('.mark-invoice-canceled-customer-name').text(customer_name);
+
+                    $('#mark_invoice_as_canceled_modal').data["invoice-number"] = invoice_number;
+                    $('#mark_invoice_as_canceled_modal').modal('show');
+                });
+
+                // Handle mark as paid button clicks
+                $('.mark-paid-button').on('click', function () {
+                    const invoice_number = $(this).data('invoice-number');
+                    const customer_name = $(this).data('customer-name');
+
+                    // Set the value in the modal's prompt text
+                    $('.mark-invoice-paid-number').text(invoice_number);
+                    $('.mark-invoice-paid-customer-name').text(customer_name);
+
+                    $('#mark_invoice_as_paid_modal').data["invoice-number"] = invoice_number;
+                    $('#mark_invoice_as_paid_modal').modal('show');
+                });
+
+                // Handle row clicks events
+                $('#active_invoices_table tr').click(function(event) {
+                    if (event.target instanceof HTMLTableCellElement) {
+                        // Prevent default link behavior
+                        event.preventDefault();
+
+                        if (event.currentTarget.getAttribute("data-row-id")) {
+                            loadNewTabWithInvoiceID(event.currentTarget.getAttribute("data-row-id"), false);
+                        }
+                    }
+                });
+
+                // Handle view invoice button clicks
+                $('.view-invoice-button').on('click', function () {
+                    const invoice_id = $(this).data('id');
+
+                    loadNewTabWithInvoiceID(invoice_id, false);
+                });
+
+                // Handle print invoice button clicks
+                $('.print-invoice-button').on('click', function () {
+                    const invoice_id = $(this).data('id');
+
+                    loadNewTabWithInvoiceID(invoice_id, true);
+                });
+
+                // Handle duplicate invoice button clicks
+                $('.duplicate-invoice-button').on('click', function () {
+                    const invoice_id = $(this).data('id');
+
+                    duplicateInvoiceWithInvoiceID(invoice_id);
+                });
+            },
+            error: function (error) {
+                $('#loading_modal').modal('hide');
+
+                if (!connection_lost_dialog_shown) {
+                    notify_warning('Error refreshing active invoices: ' + error);
+                }
+                return;
+            }
+        });
+
+        $.ajax({
+            type: 'GET',
+            url: '/active_proposals',
+            success: function(data) {
+                // Populate active proposals section
+                const activeProposalsTable = document.getElementById('active_proposals_table').getElementsByTagName('tbody')[0];
+                // clear all the old rows first
+                const activeProposalsTableRowCount = activeProposalsTable.rows.length;
+
+                // Start from the last row and go backwards to avoid index shift
+                for (let i = activeProposalsTableRowCount - 1; i >= 0; i--) {
+                    activeProposalsTable.deleteRow(i);
+                }
+
+                activeProposalsTotalAmount = 0;
+                // Repopulate the table
+                for (const [entry, values] of Object.entries(data)) {
+                        const row = activeProposalsTable.insertRow();
+                        row.setAttribute('data-row-id', values.id);
+                        let cell1 = row.insertCell(0);
+                        let cell2 = row.insertCell(1);
+                        let cell3 = row.insertCell(2);
+                        let cell4 = row.insertCell(3);
+                        let cell5 = row.insertCell(4);
+                        let cell6 = row.insertCell(5);
+                        let cell7 = row.insertCell(6);
+                        let cell8 = row.insertCell(7);
+
+                        cell1.textContent = values.proposal_number;
+                        cell2.textContent = values.proposal_date;
+                        cell3.textContent = values.due_date;
+                        cell4.classList.add('text-truncate');
+                        cell4.style.maxWidth = "80px";
+                        cell4.textContent = values.reference_number;
+                        cell5.classList.add('text-truncate');
+                        cell5.style.maxWidth = "100px";
+                        cell5.textContent = values.customer_name;
+                        cell6.classList.add('text-truncate');
+                        cell6.style.maxWidth = "250px";
+                        cell6.textContent = values.description;
+                        cell7.textContent = values.total_amount + ' ' + values.currency_symbol;
+                        cell8.innerHTML = `<div style="display: flex; flex-wrap: nowrap; overflow-x: auto;"><button type="button" class="btn btn-danger mark-rejected-button m-1" data-toggle="tooltip" data-placement="top" title="Mark proposal as rejected" data-proposal-number="${values.proposal_number}" data-customer-name="${values.customer_name}"><i class="bi bi-x-square"></i></button><button type="button" class="btn btn-success mark-accepted-button m-1" data-toggle="tooltip" data-placement="top" title="Mark proposal as accepted" data-proposal-number="${values.proposal_number}" data-customer-name="${values.customer_name}"><i class="bi bi-check2-square"></i></button></button><button type="button" class="btn btn-warning edit-proposal-button m-1" data-toggle="tooltip" data-placement="top" title="Edit Proposal" data-proposal-id="${values.id}"><i class="bi bi-pencil-square"></i></button><button type="button" class="btn btn-primary view-proposal-button m-1" data-toggle="tooltip" data-placement="top" title="View proposal" data-id="${values.id}" data-proposal-number="${values.proposal_number}"><i class="bi bi-zoom-in"></i></button><button type="button" class="btn btn-primary print-proposal-button m-1" data-toggle="tooltip" data-placement="top" title="Print proposal" data-id="${values.id}"><i class="bi bi-printer"></i></button><button type="button" class="btn btn-secondary duplicate-proposal-button m-1" data-toggle="tooltip" data-placement="top" title="Duplicate proposal" data-id="${values.id}"><i class="bi bi-copy"></i></button></div>`;
+
+                        activeProposalsTotalAmount += values.total_amount;
+                }
+
+                document.getElementById('active_proposals_count_value').innerHTML = Object.entries(data).length;
+                document.getElementById('active_proposals_total_amount_value').innerHTML = activeProposalsTotalAmount + ' {{ currency_name }}';
+
+                // Handle mark as rejected button clicks
+                $('.mark-rejected-button').on('click', function () {
+                    const proposal_number = $(this).data('proposal-number');
+                    const customer_name = $(this).data('customer-name');
+
+                    // Set the value in the modal's prompt text
+                    $('.mark-proposal-rejected-number').text(proposal_number);
+                    $('.mark-proposal-rejected-customer-name').text(customer_name);
+
+                    $('#mark_proposal_as_rejected_modal').data["proposal-number"] = proposal_number;
+                    $('#mark_proposal_as_rejected_modal').modal('show');
+                });
+
+                // Handle mark as accepted button clicks
+                $('.mark-accepted-button').on('click', function () {
+                    const proposal_number = $(this).data('proposal-number');
+                    const customer_name = $(this).data('customer-name');
+
+                    // Set the value in the modal's prompt text
+                    $('.mark-proposal-accepted-number').text(proposal_number);
+                    $('.mark-proposal-accepted-customer-name').text(customer_name);
+
+                    $('#mark_proposal_as_accepted_modal').data["proposal-number"] = proposal_number;
+                    $('#mark_proposal_as_accepted_modal').modal('show');
+                });
+
+                // Handle edit proposal button clicks
+                $('.edit-proposal-button').on('click', function () {
+                    const proposal_id = $(this).data('proposal-id');
+
+                    showEditProposalModal(proposal_id);
+                });
+
+                // Handle row clicks events
+                $('#active_proposals_table tr').click(function(event) {
+                    if (event.target instanceof HTMLTableCellElement) {
+                        // Prevent default link behavior
+                        event.preventDefault();
+
+                        if (event.currentTarget.getAttribute("data-row-id")) {
+                            loadNewTabWithProposalID(event.currentTarget.getAttribute("data-row-id"), false);
+                        }
+                    }
+                });
+
+                // Handle view proposal button clicks
+                $('.view-proposal-button').on('click', function () {
+                    const proposal_id = $(this).data('id');
+
+                    loadNewTabWithProposalID(proposal_id, false);
+                });
+
+                // Handle print proposal button clicks
+                $('.print-proposal-button').on('click', function () {
+                    const proposal_id = $(this).data('id');
+
+                    loadNewTabWithProposalID(proposal_id, true);
+                });
+
+                // Handle duplicate proposal button clicks
+                $('.duplicate-proposal-button').on('click', function () {
+                    const proposal_id = $(this).data('id');
+
+                    duplicateProposalWithProposalID(proposal_id);
+                });
+            },
+            error: function (error) {
+                $('#loading_modal').modal('hide');
+
+                if (!connection_lost_dialog_shown) {
+                    notify_warning('Error refreshing active proposals: ' + error);
+                }
+                return;
+            }
+        });
+
+        $('#loading_modal').modal('hide');
+    }
+
+    $(document).ready(function() {
+        $('#loading_modal').modal('show');
+
+        refreshData();
+    });
+
+    function showEditProposalModal(proposal_id) {
+        $('#loading_modal').modal('show');
+
+        clearFormValidation('edit_proposal_form');
+
+        $('#editProposalItemsContainer tr:not(:first)').remove();
+
+        // Clear the inputs of the first row
+        var firstRow = $('#editProposalItemsContainer tr:first');
+        firstRow.find('input[name="title[]"]').val('');
+        firstRow.find('textarea[name="description[]"]').val('');
+        firstRow.find('input[name="quantity[]"]').val('1');
+        firstRow.find('input[name="price[]"]').val('0');
+
+        $.ajax({
+            type: 'GET',
+            url: '/get_items_data',
+            success: function(data) {
+                const datalist = document.getElementById('predefinedItems');
+
+                // Clear existing options
+                datalist.innerHTML = '';
+
+                // Add new options from the API response
+                data.forEach(item => {
+                  const option = document.createElement('option');
+                  option.id = item.id;
+                  option.value = item.title;
+                  option.description = item.description;
+                  option.price = item.selling_price;
+                  datalist.appendChild(option);
+                });
+            },
+            error: function (error) {
+                notify_warning('Error while populating predefined items! Reason: ' + error);
+            }
+        });
+
+        $.ajax({
+            type: 'GET',
+            url: '/get_customers_data',
+            success: function(data) {
+                const datalist = document.getElementById('predefinedCustomers');
+
+                // Clear existing options
+                datalist.innerHTML = '';
+
+                // Add new options from the API response
+                data.forEach(customer => {
+                  const option = document.createElement('option');
+                  option.id = customer.id;
+                  option.value = customer.customer_name;
+                  datalist.appendChild(option);
+                });
+            },
+            error: function (error) {
+                notify_warning('Error while populating predefined customers! Reason: ' + error);
+            }
+        });
+
+        // fill up the form fields
+        $.ajax({
+            type: 'POST',
+            url: '/get_proposal',
+            data: {
+                proposal_id: proposal_id
+            },
+            success: function(response) {
+                if (!response) {
+                    notify_warning('Error while populating proposal data. Please try again!');
+                    return;
+                }
+
+                $('#edit_proposal_number').val(response['proposal_number']);
+                $('#edit_proposal_date').val(response['proposal_date'].replace(/\//g, '-'));
+                $('#edit_proposal_due_date').val(response['due_date'].replace(/\//g, '-'));
+                $('#edit_proposal_customer_name').val(response['customer_name']);
+                $('#edit_proposal_reference_number').val(response['reference_number']);
+                $('#edit_proposal_description').val(response['description']);
+
+                for (let i = 0; i < response.items.length; i++) {
+                    if (i > 0) {
+                        // create a new row in the table first
+                        addEditProposalItem();
+                    }
+
+                    // find the last added row and populate it
+                    var lastRow = $('#editProposalItemsContainer tr:last');
+                    lastRow.find('input[name="title[]"]').val(response.items[i]['title']);
+                    lastRow.find('textarea[name="description[]"]').val(response.items[i]['description']);
+                    lastRow.find('input[name="quantity[]"]').val(response.items[i]['quantity']);
+                    lastRow.find('input[name="price[]"]').val(response.items[i]['price']);
+                }
+
+                computeEditProposalTotal();
+
+                $('#loading_modal').modal('hide');
+
+                $('#edit_proposal_modal').modal('show');
+            },
+            error: function (error) {
+                notify_warning('Error while populating proposal data! Reason: ' + error);
+            }
+        });
+    }
+
+    function updateProposal() {
+        form = document.getElementById('edit_proposal_form');
+        if (!form.checkValidity())
+            return;
+
+        $('#loading_modal').modal('show');
+
+        var items = [];
+        $('.edit-proposal-item').each(function() {
+            var item = {
+                title: $(this).find('input[name="title[]"]').val(),
+                description: $(this).find('textarea[name="description[]"]').val(),
+                quantity: parseFloat($(this).find('input[name="quantity[]"]').val()),
+                price: parseFloat($(this).find('input[name="price[]"]').val()),
+                amount: parseFloat($(this).find('input[name="quantity[]"]').val()) * parseFloat($(this).find('input[name="price[]"]').val())
+            };
+            items.push(item);
+        });
+
+        $.ajax({
+            url: '/update_proposal',
+            method: 'POST',
+            data: {
+                proposal_number: $('#edit_proposal_number').val(),
+                proposal_date: $('#edit_proposal_date').val(),
+                due_date: $('#edit_proposal_due_date').val(),
+                customer_name: $('#edit_proposal_customer_name').val(),
+                reference_number: $('#edit_proposal_reference_number').val(),
+                description: $('#edit_proposal_description').val(),
+                items: JSON.stringify(items)
+            },
+            success: function(proposal_id) {
+                $('#loading_modal').modal('hide');
+                if (!proposal_id)
+                    notify_warning('Error while updating proposal');
+                else {
+                    notify_success('Proposal successfully updated!');
+
+                    // hide the proposal form
+                    $('#edit_proposal_modal').modal('hide');
+
+                    // show the newly updated proposal
+                    loadNewTabWithProposalID(proposal_id, true);
+
+                    if (typeof refreshData === 'function') {
+                        // refresh the data on the page
+                        refreshData(1);
+                    }
+                }
+            },
+            error: function (error) {
+                $('#loading_modal').modal('hide');
+                notify_warning('Error while updating proposal! Reason: ' + error);
+            }
+        });
+    }
+
+    function markInvoiceAsCanceled() {
+        $('#loading_modal').modal('show');
+        $.ajax({
+            url: '/mark_invoice_canceled',
+            method: 'POST',
+            data: {
+                invoice_number: $('#mark_invoice_as_canceled_modal').data["invoice-number"],
+            },
+            success: function(response) {
+                $('#loading_modal').modal('hide');
+                if (!response)
+                    notify_warning('Error while trying to mark invoice as canceled. Please try again!');
+                else {
+                    notify_success('Invoice successfully marked as canceled!');
+
+                    $('#mark_invoice_as_canceled_modal').modal('hide');
+
+                    refreshData();
+                }
+            },
+            error: function (error) {
+                $('#loading_modal').modal('hide');
+                notify_warning('Error while trying to mark invoice as canceled! Reason: ' + error);
+            }
+        });
+    }
+
+    function markInvoiceAsPaid() {
+        $('#loading_modal').modal('show');
+        $.ajax({
+            url: '/mark_invoice_paid',
+            method: 'POST',
+            data: {
+                invoice_number: $('#mark_invoice_as_paid_modal').data["invoice-number"],
+            },
+            success: function(response) {
+                $('#loading_modal').modal('hide');
+                if (!response)
+                    notify_warning('Error while trying to mark invoice as paid. Please try again!');
+                else {
+                    notify_success('Invoice successfully marked as paid!');
+
+                    $('#mark_invoice_as_paid_modal').modal('hide');
+
+                    refreshData();
+                }
+            },
+            error: function (error) {
+                $('#loading_modal').modal('hide');
+                notify_warning('Error while trying to mark invoice as paid! Reason: ' + error);
+            }
+        });
+    }
+
+    function duplicateInvoiceWithInvoiceID(invoice_id) {
+        $('#loading_modal').modal('show');
+        $.ajax({
+            url: '/get_invoice',
+            method: 'POST',
+            data: {
+                invoice_id: invoice_id,
+            },
+            success: function(data) {
+                $('#loading_modal').modal('hide');
+                if (!data)
+                    notify_warning('Error while trying to duplicate invoice. Please try again!');
+                else {
+                    showNewInvoiceModal();
+
+                    // populate invoice form with the data retrieved
+                    $('#new_invoice_customer_name').val(data['customer_name']);
+                    $('#new_invoice_reference_number').val(data['reference_number']);
+                    $('#new_invoice_description').val(data['description']);
+
+                    if (data['items'] && data['items'].length > 0) {
+                        var firstRow = $('#invoiceItemsContainer tr:first');
+                        if (firstRow.length == 0) {
+                            var newItem = $('<tr class="new-invoice-item">' +
+                                    '<td class="col-4"><input type="text" class="form-control itemTitleInput new-invoice-amount-compute" list="predefinedItems" name="title[]" required></td>' +
+                                    '<td class="col-5"><textarea class="form-control new-invoice-amount-compute" name="description[]" rows="3"></textarea></td>' +
+                                    '<td class="col-1"><input type="number" class="form-control new-invoice-amount-compute" name="quantity[]" min="1" step="0.1" value="1" pattern="^\d*(\.\d{0,2})?$" required></td>' +
+                                    '<td class="col-1"><input type="number" class="form-control new-invoice-amount-compute" name="price[]" step="0.1" pattern="^[-+]?\d*(\.\d{0,2})?$" value="0" required></td>' +
+                                    '<td class="col-1" style="text-align: center;"><button type="button" class="btn btn-danger btn-sm remove-new-invoice-item"><span><i class="bi bi-trash"></i></span></button></td>' +
+                                    '</tr>');
+                            $('#invoiceItemsContainer').append(newItem);
+                            firstRow = $('#invoiceItemsContainer tr:first');
+                        }
+                        firstRow.find('input[name="title[]"]').val(data['items'][0]['title']);
+                        firstRow.find('textarea[name="description[]"]').val(data['items'][0]['description']);
+                        firstRow.find('input[name="quantity[]"]').val(data['items'][0]['quantity']);
+                        firstRow.find('input[name="price[]"]').val(data['items'][0]['price']);
+
+                        if (data['items'].length > 1) {
+                            for(let i=1; i<data['items'].length; i++){
+                                var newItem = $('<tr class="new-invoice-item">' +
+                                    '<td class="col-4"><input type="text" class="form-control itemTitleInput new-invoice-amount-compute" list="predefinedItems" name="title[]" required></td>' +
+                                    '<td class="col-5"><textarea class="form-control new-invoice-amount-compute" name="description[]" rows="3"></textarea></td>' +
+                                    '<td class="col-1"><input type="number" class="form-control new-invoice-amount-compute" name="quantity[]" min="1" step="0.1" value="1" pattern="^\d*(\.\d{0,2})?$" required></td>' +
+                                    '<td class="col-1"><input type="number" class="form-control new-invoice-amount-compute" name="price[]" step="0.1" pattern="^[-+]?\d*(\.\d{0,2})?$" value="0" required></td>' +
+                                    '<td class="col-1" style="text-align: center;"><button type="button" class="btn btn-danger btn-sm remove-new-invoice-item"><span><i class="bi bi-trash"></i></span></button></td>' +
+                                    '</tr>');
+                                $('#invoiceItemsContainer').append(newItem);
+
+                                var lastRow = $('#invoiceItemsContainer tr:last');
+                                lastRow.find('input[name="title[]"]').val(data['items'][i]['title']);
+                                lastRow.find('textarea[name="description[]"]').val(data['items'][i]['description']);
+                                lastRow.find('input[name="quantity[]"]').val(data['items'][i]['quantity']);
+                                lastRow.find('input[name="price[]"]').val(data['items'][i]['price']);
+                            }
+                        }
+
+                        // Select all elements with the classname using querySelectorAll.
+                        let elements = document.querySelectorAll('.itemTitleInput');
+
+                        for(let i=0; i<elements.length; i++) {
+                            // Add an event listener to each selected element.
+                            elements[i].addEventListener('input', populateItemFields);
+                        }
+
+                        document.querySelectorAll('.new-invoice-amount-compute').forEach(element => {
+                          element.addEventListener('input', () => {
+                            computeNewInvoiceTotal();
+                          });
+                          element.addEventListener('change', () => {
+                            computeNewInvoiceTotal();
+                          });
+                        });
+
+                        computeNewInvoiceTotal();
+                    }
+
+                }
+            },
+            error: function (error) {
+                $('#loading_modal').modal('hide');
+                notify_warning('Error while trying to duplicate selected invoice! Reason: ' + error);
+            }
+        });
+    }
+
+    function markProposalAsRejected() {
+        $('#loading_modal').modal('show');
+        $.ajax({
+            url: '/mark_proposal_rejected',
+            method: 'POST',
+            data: {
+                proposal_number: $('#mark_proposal_as_rejected_modal').data["proposal-number"],
+            },
+            success: function(response) {
+                $('#loading_modal').modal('hide');
+                if (!response)
+                    notify_warning('Error while trying to mark proposal as rejected. Please try again!');
+                else {
+                    notify_success('Proposal successfully marked as rejected!');
+
+                    $('#mark_proposal_as_rejected_modal').modal('hide');
+
+                    refreshData();
+                }
+            },
+            error: function (error) {
+                $('#loading_modal').modal('hide');
+                notify_warning('Error while trying to mark proposal as rejected! Reason: ' + error);
+            }
+        });
+    }
+
+    function markProposalAsAccepted() {
+        $('#loading_modal').modal('show');
+        $.ajax({
+            url: '/mark_proposal_accepted',
+            method: 'POST',
+            data: {
+                proposal_number: $('#mark_proposal_as_accepted_modal').data["proposal-number"],
+            },
+            success: function(response) {
+                $('#loading_modal').modal('hide');
+                if (!response)
+                    notify_warning('Error while trying to mark proposal as accepted. Please try again!');
+                else {
+                    notify_success('Proposal successfully marked as accepted!');
+
+                    $('#mark_proposal_as_accepted_modal').modal('hide');
+
+                    refreshData();
+                }
+            },
+            error: function (error) {
+                $('#loading_modal').modal('hide');
+                notify_warning('Error while trying to mark proposal as accepted! Reason: ' + error);
+            }
+        });
+    }
+
+    function duplicateProposalWithProposalID(proposal_id) {
+        $('#loading_modal').modal('show');
+        $.ajax({
+            url: '/get_proposal',
+            method: 'POST',
+            data: {
+                proposal_id: proposal_id,
+            },
+            success: function(data) {
+                $('#loading_modal').modal('hide');
+                if (!data)
+                    notify_warning('Error while trying to duplicate proposal. Please try again!');
+                else {
+                    showNewProposalModal();
+
+                    // populate proposal form with the data retrieved
+                    $('#new_proposal_customer_name').val(data['customer_name']);
+                    $('#new_proposal_reference_number').val(data['reference_number']);
+                    $('#new_proposal_description').val(data['description']);
+
+                    if (data['items'] && data['items'].length > 0) {
+                        var firstRow = $('#proposalItemsContainer tr:first');
+                        if (firstRow.length == 0) {
+                            var newItem = $('<tr class="new-proposal-item">' +
+                                    '<td class="col-4"><input type="text" class="form-control itemTitleInput new-proposal-amount-compute" list="predefinedItems" name="title[]" required></td>' +
+                                    '<td class="col-5"><textarea class="form-control" name="description[]" rows="3"></textarea></td>' +
+                                    '<td class="col-1"><input type="number" class="form-control new-proposal-amount-compute" name="quantity[]" min="1" step="0.1" value="1" pattern="^\d*(\.\d{0,2})?$" required></td>' +
+                                    '<td class="col-1"><input type="number" class="form-control new-proposal-amount-compute" name="price[]" step="0.1" pattern="^[-+]?\d*(\.\d{0,2})?$" value="0" required></td>' +
+                                    '<td class="col-1" style="text-align: center;"><button type="button" class="btn btn-danger btn-sm remove-new-proposal-item"><span><i class="bi bi-trash"></i></span></button></td>' +
+                                    '</tr>');
+                            $('#proposalItemsContainer').append(newItem);
+                            firstRow = $('#proposalItemsContainer tr:first');
+                        }
+                        firstRow.find('input[name="title[]"]').val(data['items'][0]['title']);
+                        firstRow.find('textarea[name="description[]"]').val(data['items'][0]['description']);
+                        firstRow.find('input[name="quantity[]"]').val(data['items'][0]['quantity']);
+                        firstRow.find('input[name="price[]"]').val(data['items'][0]['price']);
+
+                        if (data['items'].length > 1) {
+                            for(let i=1; i<data['items'].length; i++){
+                                var newItem = $('<tr class="new-proposal-item">' +
+                                    '<td class="col-4"><input type="text" class="form-control itemTitleInput new-proposal-amount-compute" list="predefinedItems" name="title[]" required></td>' +
+                                    '<td class="col-5"><textarea class="form-control" name="description[]" rows="3"></textarea></td>' +
+                                    '<td class="col-1"><input type="number" class="form-control new-proposal-amount-compute" name="quantity[]" min="1" step="0.1" value="1" pattern="^\d*(\.\d{0,2})?$" required></td>' +
+                                    '<td class="col-1"><input type="number" class="form-control new-proposal-amount-compute" name="price[]" step="0.1" value="0" pattern="^[-+]?\d*(\.\d{0,2})?$" required></td>' +
+                                    '<td class="col-1" style="text-align: center;"><button type="button" class="btn btn-danger btn-sm remove-new-proposal-item"><span><i class="bi bi-trash"></i></span></button></td>' +
+                                    '</tr>');
+                                $('#proposalItemsContainer').append(newItem);
+
+                                var lastRow = $('#proposalItemsContainer tr:last');
+                                lastRow.find('input[name="title[]"]').val(data['items'][i]['title']);
+                                lastRow.find('textarea[name="description[]"]').val(data['items'][i]['description']);
+                                lastRow.find('input[name="quantity[]"]').val(data['items'][i]['quantity']);
+                                lastRow.find('input[name="price[]"]').val(data['items'][i]['price']);
+                            }
+                        }
+
+                        // Select all elements with the classname using querySelectorAll.
+                        let elements = document.querySelectorAll('.itemTitleInput');
+
+                        for(let i=0; i<elements.length; i++) {
+                            // Add an event listener to each selected element.
+                            elements[i].addEventListener('input', populateItemFields);
+                        }
+
+                        document.querySelectorAll('.new-proposal-amount-compute').forEach(element => {
+                          element.addEventListener('input', () => {
+                            computeNewProposalTotal();
+                          });
+                          element.addEventListener('change', () => {
+                            computeNewProposalTotal();
+                          });
+                        });
+
+                        computeNewProposalTotal();
+                    }
+
+                }
+            },
+            error: function (error) {
+                $('#loading_modal').modal('hide');
+                notify_warning('Error while trying to duplicate selected proposal! Reason: ' + error);
+            }
+        });
+    }
+</script>
+
+{% endblock %}
