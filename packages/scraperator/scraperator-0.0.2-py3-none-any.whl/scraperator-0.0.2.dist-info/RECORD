@@ -1,0 +1,10 @@
+scraperator/__init__.py,sha256=GRGC92GpTEHIasU-N0UXNpn5sekST-RjMrA6N21rsXU,342
+scraperator/base_scraper.py,sha256=blCjbUaPyhhU9n3khS_xg6tsXwA5du3AVpM6NagCw-I,273
+scraperator/markdown_converter.py,sha256=ZgkFNnZL9nZMCcJEmvIA_LpVZGH4xVR5zxQsUdcgEac,10076
+scraperator/playwright_scraper.py,sha256=RQUp79y0jE1o46iEbTrGe5WwwTxZH-FXsMFXoZLqiCQ,8966
+scraperator/request_scraper.py,sha256=BkndJxyOrmAs3PnN0ffPujVWN96Lyn7Fvc2DCEaBTFg,2639
+scraperator/scraper.py,sha256=eGH9EO4iu9SnrjXsiAW2mOQ357hRrqALsNCpeIac8LI,7669
+scraperator-0.0.2.dist-info/METADATA,sha256=k6JOAeWix-CLKs2g5nx6mBqoeeICAoEpSMuQUC8awlI,4008
+scraperator-0.0.2.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+scraperator-0.0.2.dist-info/top_level.txt,sha256=ktQvRzNEgav6B9E8ffGi2NhUYWbudNCeH8fuYASkeuY,12
+scraperator-0.0.2.dist-info/RECORD,,
