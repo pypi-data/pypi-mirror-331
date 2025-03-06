@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: mabu
+Version: 0.0.2
+Summary: Python package to control Mabu's animatronic head. this is a robot from Catalia Health
+Project-URL: Homepage, https://github.com/electronick-co/mabu
+Project-URL: Issues, https://github.com/electronick-co/mabu/issues
+Author-email: ElectroNick <nick@dsd.dev>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# mabu
+Python library for controlling the robotic head of Mabu, a robot by CataliaH ealth
