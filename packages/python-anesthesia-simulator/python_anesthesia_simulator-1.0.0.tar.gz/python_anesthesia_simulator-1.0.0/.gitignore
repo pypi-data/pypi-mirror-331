@@ -1,0 +1,14 @@
+# Python Cache
+*__pycache__*
+# Obsidian cache
+paper/.obsidian/
+# Jupiter Cache
+.ipynb_checkpoints
+# backup files
+*.back
+# docs folder
+docs/build/
+# vscode
+.vscode/
+# python env
+.venv/
