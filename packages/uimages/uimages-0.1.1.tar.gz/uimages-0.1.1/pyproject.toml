@@ -1,0 +1,52 @@
+[project]
+name = "uimages"
+version = "0.1.1"
+description = "An Images helper for markdown"
+authors = [{ name = "uiolee" }]
+maintainers = [{ name = "uiolee" }]
+keywords = ["images-helper", "blog", "markdown", "hugo"]
+license = { text = "MPL 2.0" }
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "tinify (>=1.6.0,<2.0.0)"
+]
+
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: End Users/Desktop",
+    "Topic :: Utilities",
+    "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)",
+    "Natural Language :: English",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: MacOS",
+    "Programming Language :: Python :: 3.11",
+]
+
+[project.urls]
+Homepage = "https://github.com/uiolee/uimages"
+Repository = "https://github.com/uiolee/uimages.git"
+Issues = "https://github.com/uiolee/uimages/issues"
+
+[project.scripts]
+uimages = "uimages:cli.cli"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+packages = [{ include = "uimages", from = "src" }]
+
+[[tool.poetry.source]]
+name = "mirrors"
+url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/"
+priority = "primary"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+
