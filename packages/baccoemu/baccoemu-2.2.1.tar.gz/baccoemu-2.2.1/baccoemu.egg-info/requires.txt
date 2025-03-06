@@ -1,0 +1,10 @@
+numpy
+matplotlib
+scipy
+packaging
+scikit-learn>=1.0.0
+tensorflow
+setuptools
+deepdish
+progressbar2
+sphinx_rtd_theme
