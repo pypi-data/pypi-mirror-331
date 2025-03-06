@@ -1,0 +1,6 @@
+besmarts/core/array_numpy.py,sha256=PN131whc4bebjFFCGEglcSbIzINIA4InQn3FWaoTvpY,4090
+besmarts/mechanics/optimizers_scipy.py,sha256=rck9Lhj1qj0_1Z7QV79Fobg0e3TZOk8nciozjjklxl0,42352
+besmarts_scipy-0.1.0.dist-info/METADATA,sha256=22BnCpaW-a5AH4B2VMZoZJHmO4x-vHs925kbgacAUr4,1050
+besmarts_scipy-0.1.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+besmarts_scipy-0.1.0.dist-info/top_level.txt,sha256=xvZWsXW5IpoamEC54uWvOcq3C_IROZ_90ak00Yqq9Yk,9
+besmarts_scipy-0.1.0.dist-info/RECORD,,
