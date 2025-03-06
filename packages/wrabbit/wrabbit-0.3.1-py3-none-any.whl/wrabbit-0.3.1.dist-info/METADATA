@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: wrabbit
+Version: 0.3.1
+Summary: Package that helps convert prepare Nextflow to be run on SevenBridges supported platforms.
+Home-page: UNKNOWN
+Author: Velsera
+Author-email: pavle.marinkovic@velsera.com
+Maintainer: Velsera
+Maintainer-email: pavle.marinkovic@velsera.com
+License: UNKNOWN
+Keywords: seven bridges velsera cwl common workflow language nextflow
+Platform: POSIX
+Platform: MacOS
+Platform: Windows
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: PyYAML (<7.0.0)
+Requires-Dist: packaging
+Requires-Dist: pillow (>=11.0.0)
+Requires-Dist: beautifulsoup4 (>=4.11.2)
+
+# wrabbit
+
+![](https://github.com/rabix/wrabbit/workflows/Tests/badge.svg)
+[![PyPI version](https://badge.fury.io/py/wrabbit.svg)](https://pypi.org/project/wrabbit/)
+
+Library for creating wrapper applications for Nextflow apps compatible with any Seven Bridges powered platform.
+
+## Installation
+`wrabbit` needs Python 3.7 or later
+
+### Install latest release on pypi
+```bash
+pip install wrabbit
+```
+
+### Install latest (unreleased) code
+```bash
+pip install git+https://github.com/rabix/wrabbit.git
+```
+
+# Nextflow parser
+```python
+from wrabbit.parser.nextflow import NextflowParser
+
+workflow_path = '/path/to/app-directory'
+parsed_nextflow = NextflowParser(workflow_path)
+```
+
+
