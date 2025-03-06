@@ -1,0 +1,2 @@
+[console_scripts]
+ios = py_ios.execute_cmd:main
