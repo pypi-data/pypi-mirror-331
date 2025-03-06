@@ -1,0 +1,412 @@
+Metadata-Version: 2.2
+Name: meno
+Version: 0.5.0
+Summary: Topic modeling toolkit for messy text data
+Author-email: Stephen Oates <stephen.oates@example.com>
+License: MIT License
+        
+        Copyright (c) 2025 Stephen Oates
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/srepho/meno
+Project-URL: Bug Tracker, https://github.com/srepho/meno/issues
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Text Processing :: Linguistic
+Requires-Python: <3.13,>=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas<3.0.0,>=2.0.0
+Requires-Dist: pyarrow<15.0.0,>=11.0.0
+Requires-Dist: scikit-learn<2.0.0,>=1.2.0
+Requires-Dist: pydantic<3.0.0,>=2.0.0
+Requires-Dist: pyyaml<7.0,>=6.0
+Requires-Dist: jinja2<4.0.0,>=3.1.2
+Requires-Dist: thefuzz<0.21.0,>=0.20.0
+Provides-Extra: embeddings
+Requires-Dist: sentence-transformers<3.0.0,>=2.2.2; extra == "embeddings"
+Requires-Dist: transformers<5.0.0,>=4.28.0; extra == "embeddings"
+Requires-Dist: torch<3.0.0,>=2.0.0; extra == "embeddings"
+Provides-Extra: embeddings-gpu
+Requires-Dist: sentence-transformers<3.0.0,>=2.2.2; extra == "embeddings-gpu"
+Requires-Dist: transformers<5.0.0,>=4.28.0; extra == "embeddings-gpu"
+Requires-Dist: torch<3.0.0,>=2.0.0; extra == "embeddings-gpu"
+Requires-Dist: accelerate<1.0.0,>=0.20.0; extra == "embeddings-gpu"
+Requires-Dist: bitsandbytes<1.0.0,>=0.41.0; extra == "embeddings-gpu"
+Provides-Extra: lda
+Requires-Dist: gensim<5.0.0,>=4.3.0; extra == "lda"
+Provides-Extra: viz
+Requires-Dist: plotly<6.0.0,>=5.14.0; extra == "viz"
+Requires-Dist: umap-learn<0.6.0,>=0.5.3; extra == "viz"
+Provides-Extra: clustering
+Requires-Dist: hdbscan<0.9.0,>=0.8.29; extra == "clustering"
+Provides-Extra: nlp
+Requires-Dist: spacy<4.0.0,>=3.5.0; extra == "nlp"
+Provides-Extra: active
+Requires-Dist: cleanlab<3.0.0,>=2.3.0; extra == "active"
+Provides-Extra: additional-models
+Requires-Dist: bertopic<0.16.0,>=0.15.0; extra == "additional-models"
+Requires-Dist: top2vec<2.0.0,>=1.0.27; extra == "additional-models"
+Requires-Dist: nmf-topic-modeling<0.3.0,>=0.2.0; extra == "additional-models"
+Requires-Dist: contextualized-topic-models<3.0.0,>=2.5.0; extra == "additional-models"
+Provides-Extra: optimization
+Requires-Dist: polars<1.15.0,>=1.11.0; extra == "optimization"
+Provides-Extra: full
+Requires-Dist: sentence-transformers<3.0.0,>=2.2.2; extra == "full"
+Requires-Dist: transformers<5.0.0,>=4.28.0; extra == "full"
+Requires-Dist: torch<3.0.0,>=2.0.0; extra == "full"
+Requires-Dist: gensim<5.0.0,>=4.3.0; extra == "full"
+Requires-Dist: plotly<6.0.0,>=5.14.0; extra == "full"
+Requires-Dist: umap-learn<0.6.0,>=0.5.3; extra == "full"
+Requires-Dist: hdbscan<0.9.0,>=0.8.29; extra == "full"
+Requires-Dist: spacy<4.0.0,>=3.5.0; extra == "full"
+Requires-Dist: cleanlab<3.0.0,>=2.3.0; extra == "full"
+Requires-Dist: polars<1.15.0,>=1.11.0; extra == "full"
+Requires-Dist: bertopic<0.16.0,>=0.15.0; extra == "full"
+Requires-Dist: top2vec<2.0.0,>=1.0.27; extra == "full"
+Provides-Extra: full-gpu
+Requires-Dist: sentence-transformers<3.0.0,>=2.2.2; extra == "full-gpu"
+Requires-Dist: transformers<5.0.0,>=4.28.0; extra == "full-gpu"
+Requires-Dist: torch<3.0.0,>=2.0.0; extra == "full-gpu"
+Requires-Dist: accelerate<1.0.0,>=0.20.0; extra == "full-gpu"
+Requires-Dist: bitsandbytes<1.0.0,>=0.41.0; extra == "full-gpu"
+Requires-Dist: gensim<5.0.0,>=4.3.0; extra == "full-gpu"
+Requires-Dist: plotly<6.0.0,>=5.14.0; extra == "full-gpu"
+Requires-Dist: umap-learn<0.6.0,>=0.5.3; extra == "full-gpu"
+Requires-Dist: hdbscan<0.9.0,>=0.8.29; extra == "full-gpu"
+Requires-Dist: spacy<4.0.0,>=3.5.0; extra == "full-gpu"
+Requires-Dist: cleanlab<3.0.0,>=2.3.0; extra == "full-gpu"
+Requires-Dist: polars<1.15.0,>=1.11.0; extra == "full-gpu"
+Requires-Dist: bertopic<0.16.0,>=0.15.0; extra == "full-gpu"
+Requires-Dist: top2vec<2.0.0,>=1.0.27; extra == "full-gpu"
+Provides-Extra: dev
+Requires-Dist: black<24.0.0,>=23.3.0; extra == "dev"
+Requires-Dist: ruff<0.1.0,>=0.0.265; extra == "dev"
+Requires-Dist: mypy<2.0.0,>=1.3.0; extra == "dev"
+Provides-Extra: test
+Requires-Dist: pytest<8.0.0,>=7.3.1; extra == "test"
+Requires-Dist: pytest-cov<5.0.0,>=4.1.0; extra == "test"
+Requires-Dist: hypothesis<7.0.0,>=6.75.0; extra == "test"
+Provides-Extra: docs
+Requires-Dist: sphinx<8.0.0,>=7.0.0; extra == "docs"
+Requires-Dist: sphinx-rtd-theme<2.0.0,>=1.2.0; extra == "docs"
+Requires-Dist: jupyter<2.0.0,>=1.0.0; extra == "docs"
+
+# Meno: Topic Modeling Toolkit
+
+[![PyPI version](https://img.shields.io/pypi/v/meno.svg)](https://pypi.org/project/meno/)
+[![Python Version](https://img.shields.io/pypi/pyversions/meno.svg)](https://pypi.org/project/meno/)
+[![License](https://img.shields.io/github/license/srepho/meno.svg)](https://github.com/srepho/meno/blob/main/LICENSE)
+[![Tests](https://github.com/srepho/meno/workflows/tests/badge.svg)](https://github.com/srepho/meno/actions?query=workflow%3Atests)
+[![Downloads](https://img.shields.io/pypi/dm/meno.svg)](https://pypi.org/project/meno/)
+
+## Installation
+
+### Basic Installation
+
+Install the basic package with core dependencies:
+
+```bash
+pip install meno
+```
+
+### CPU-Optimized Installation (Recommended)
+
+Install with embeddings for CPU-only operation (recommended for most users):
+
+```bash
+pip install meno[embeddings]
+```
+
+For a truly CPU-only version with no NVIDIA packages:
+
+```bash
+pip install meno[embeddings] -f https://download.pytorch.org/whl/torch_stable.html
+```
+
+### Installation with Optional Components
+
+```bash
+# For additional topic modeling approaches (BERTopic, Top2Vec)
+pip install meno[additional_models]
+
+# For embeddings with GPU acceleration (only if needed)
+pip install meno[embeddings-gpu]
+
+# For LDA topic modeling
+pip install meno[lda]
+
+# For visualization capabilities
+pip install meno[viz]
+
+# For NLP processing capabilities
+pip install meno[nlp]
+
+# For large dataset optimization using Polars
+pip install meno[optimization]
+
+# For developers
+pip install meno[dev,test]
+
+# For all features (full installation, CPU only)
+pip install meno[full]
+
+# For all features with GPU acceleration
+pip install meno[full-gpu]
+```
+
+### Development Installation
+
+For development work, clone the repository and install in editable mode:
+
+```bash
+git clone https://github.com/srepho/meno.git
+cd meno
+pip install -e ".[dev,test]"
+```
+
+## Quick Start
+
+```python
+from meno import MenoTopicModeler
+import pandas as pd
+
+# Load your data
+data = pd.DataFrame({
+    "text": [
+        "Customer's vehicle was damaged in a parking lot by a shopping cart.",
+        "Claimant's home flooded due to heavy rain. Water damage to first floor.",
+        "Vehicle collided with another car at an intersection. Front-end damage.",
+        "Tree fell on roof during storm causing damage to shingles and gutters.",
+        "Insured slipped on ice in parking lot and broke wrist requiring treatment."
+    ]
+})
+
+# Initialize topic modeler
+modeler = MenoTopicModeler()
+
+# Preprocess documents
+processed_docs = modeler.preprocess(data, text_column="text")
+
+# Generate embeddings
+embeddings = modeler.embed_documents()
+
+# Discover topics
+topics_df = modeler.discover_topics(method="embedding_cluster", num_topics=3)
+
+# Visualize results
+fig = modeler.visualize_embeddings()
+fig.show()
+
+# Generate HTML report
+report_path = modeler.generate_report(output_path="topics_report.html")
+```
+
+## Overview
+
+Meno is designed to streamline topic modeling on free text data, with a special focus on messy datasets such as insurance claims notes and customer correspondence. The package combines classical methods like Latent Dirichlet Allocation (LDA) with modern techniques leveraging large language models (LLMs) via Hugging Face, dimensionality reduction with UMAP, and advanced visualizations. It is built to be primarily used in Jupyter environments while also being flexible enough for other settings.
+
+## Key Features
+
+*   **Unsupervised Topic Modeling:**
+    *   Automatically discover topics when no pre-existing topics are available using LDA and LLM-based embedding and clustering techniques.
+*   **Supervised Topic Matching:**
+    *   Match free text against a user-provided list of topics using semantic similarity and classification techniques.
+*   **Advanced Visualization:**
+    *   Create interactive and static visualizations including topic distributions, embeddings (UMAP projections), cluster analyses, and topic coherence metrics (e.g., word clouds per topic).
+*   **Interactive HTML Reports:**
+    *   Generate standalone, interactive HTML reports to present topic analysis to less technical stakeholders, with options for customization and data export.
+*   **Robust Data Preprocessing:**
+    *   Tackle messy data challenges (misspellings, unknown acronyms) with integrated cleaning functionalities using NLP libraries (spaCy, fuzzy matching, context-aware spelling correction, and customizable stop words/lemmatization rules).
+*   **Active Learning with Cleanlab:**
+    *   Incorporate active learning loops and fine-tuning of labels using Cleanlab, facilitating hand-labeling and iterative improvements, with multiple sampling strategies (e.g., uncertainty sampling).
+*   **Flexible Deployment Options:**
+    *   CPU-first design with optional GPU acceleration through separate installation options.
+    *   Load models from local files for use in environments without internet access or behind firewalls.
+*   **Extensibility & Ease of Use:**
+    *   Designed with modularity in mind so that users can plug in new cleaning, modeling, or visualization techniques without deep customization while still maintaining a simple interface.
+
+## Example Usage
+
+### Basic Topic Discovery
+
+```python
+from meno import MenoTopicModeler
+
+# Initialize modeler
+modeler = MenoTopicModeler()
+
+# Load and preprocess data
+df = pd.read_csv("my_documents.csv")
+processed_docs = modeler.preprocess(df, text_column="document_text")
+
+# Discover topics
+topics_df = modeler.discover_topics(method="embedding_cluster", num_topics=10)
+
+# Visualize results
+fig = modeler.visualize_embeddings()
+fig.show()
+```
+
+### Matching Documents to Predefined Topics
+
+```python
+# Define topics and descriptions
+predefined_topics = [
+    "Vehicle Damage",
+    "Water Damage",
+    "Personal Injury",
+    "Property Damage"
+]
+
+topic_descriptions = [
+    "Damage to vehicles from collisions, parking incidents, or natural events",
+    "Damage from water including floods, leaks, and burst pipes",
+    "Injuries to people including slips, falls, and accidents",
+    "Damage to property from fire, storms, or other causes"
+]
+
+# Match documents to topics
+matched_df = modeler.match_topics(
+    topics=predefined_topics,
+    descriptions=topic_descriptions,
+    threshold=0.5
+)
+
+# View the topic assignments
+print(matched_df[["text", "topic", "topic_probability"]].head())
+```
+
+### Generating Reports
+
+```python
+# Generate an interactive HTML report
+report_path = modeler.generate_report(
+    output_path="topic_analysis.html",
+    include_interactive=True,
+    title="Document Topic Analysis"
+)
+```
+
+## Documentation
+
+For detailed usage information, see the [full documentation](https://github.com/srepho/meno/wiki).
+
+## Examples
+
+The package includes several example notebooks and scripts:
+
+- `examples/basic_workflow.ipynb`: Basic topic modeling workflow in a Jupyter notebook
+- `examples/cpu_only_example.py`: Demonstrates CPU-optimized topic modeling
+- `examples/insurance_topic_modeling.py`: Topic modeling on insurance complaint dataset
+- `examples/minimal_sample.py`: Simple script to generate visualizations
+- `examples/sample_reports/`: Directory with pre-generated sample visualizations
+
+### Insurance Complaint Analysis
+
+The package includes an example that demonstrates topic modeling on the Australian Insurance PII Dataset from Hugging Face. This dataset contains over 1,500 insurance complaint letters with various types of insurance issues.
+
+To run the insurance example:
+
+```bash
+# Install required dependencies
+pip install -r requirements_insurance_example.txt
+
+# Run the example script
+python examples/insurance_topic_modeling.py
+```
+
+The results will be saved in the `output` directory.
+
+## Architecture & Design
+
+The package follows a modular design with clear separation of concerns:
+
+### Data Preprocessing Module:
+- Spelling correction using thefuzz
+- Acronym resolution 
+- Text normalization (lowercasing, punctuation removal, stemming/lemmatization)
+- Customizable stop words and lemmatization
+
+### Topic Modeling Module:
+- Unsupervised modeling with LDA or LLM-based embeddings + clustering
+- Supervised topic matching using semantic similarity
+- CPU-first design with optional GPU acceleration
+
+### Visualization Module:
+- Static plots (topic distributions)
+- Interactive embedding plots with UMAP projections
+- Topic coherence visualizations
+
+### Report Generation Module:
+- Interactive HTML reports using Plotly and Jinja2
+- Customizable appearance and content
+- Data export options
+
+## Dependencies & Requirements
+
+*   **Python:** 3.8, 3.9, 3.10, 3.11, 3.12 (primary target: 3.10)
+*   **Core Libraries** (always installed):
+    *   Data Processing: `pandas`, `pyarrow`
+    *   Machine Learning: `scikit-learn`
+    *   Text Processing: `thefuzz`
+    *   Configuration: `pydantic`, `PyYAML`, `jinja2`
+*   **Optional Libraries** (install based on needs):
+    *   Topic Modeling: `gensim` (for LDA)
+    *   Additional Topic Models: `bertopic`, `top2vec`
+    *   Embeddings (CPU): `transformers`, `sentence-transformers`, `torch`
+    *   Embeddings (GPU): Additional `accelerate`, `bitsandbytes` 
+    *   Dimensionality Reduction: `umap-learn`
+    *   Clustering: `hdbscan`
+    *   Data Cleaning & NLP: `spaCy`
+    *   Visualization: `plotly`
+    *   Active Learning: `cleanlab`
+    *   Large Dataset Optimization: `polars` (for streaming and memory efficiency)
+
+## Testing & Contribution
+
+### Running Tests
+
+```bash
+# Run basic tests
+python -m pytest -xvs tests/
+
+# Run full tests including embedding model tests
+python -m pytest -xvs tests/ --run-functional
+
+# Run with coverage reporting
+python -m pytest --cov=meno
+```
+
+## Contribution Guidelines
+
+Contributions are welcome! Please see [CONTRIBUTING.md](https://github.com/srepho/meno/blob/main/CONTRIBUTING.md) for details.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
