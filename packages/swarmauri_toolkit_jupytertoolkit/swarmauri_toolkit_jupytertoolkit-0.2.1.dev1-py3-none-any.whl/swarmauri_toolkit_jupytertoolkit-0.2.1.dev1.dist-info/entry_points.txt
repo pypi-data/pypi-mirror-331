@@ -1,0 +1,3 @@
+[swarmauri.toolkits]
+jupytertoolkit=swarmauri_toolkit_jupytertoolkit:JupyterToolkit
+
