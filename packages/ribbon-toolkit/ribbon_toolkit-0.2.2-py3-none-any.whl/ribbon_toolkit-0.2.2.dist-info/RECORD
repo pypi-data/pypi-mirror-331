@@ -1,0 +1,14 @@
+ribbon/__init__.py,sha256=wdH-maBQOkS4qkm1PvXLHZM2fWR7GJMIgeWPzmOZsXw,1544
+ribbon/config.py,sha256=l0wWyUPlLCpJWiJ4KoMRNAVu77R-aARAPFRFDfQlayE,878
+ribbon/deserialize_and_run.py,sha256=LQggIwcNtOW_5g3-PudnQfRIoXXXT90npv0H54lyT44,1236
+ribbon/runner.py,sha256=vM1xZXpHGZVuztlLkqIpjeDgcAEgOSO2a57ns-hSK3M,9875
+ribbon/utils.py,sha256=vID7O4zMBitawkCTnhm5V1jGVv-4SNvbt7uxBXM2KTw,7402
+ribbon/batch/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ribbon/batch/queue_utils.py,sha256=qUNY9f045go4oMXjbYjTK_29EdQHcWNqrImRgRnXd7g,8148
+ribbon/batch/batch_scripts/sge_submit.sh,sha256=bJgD_1tNQtp-tnFTy3WtmRjE-HT-BeNfxcxf9rIoZCE,1077
+ribbon/batch/batch_scripts/slurm_submit.sh,sha256=8S_Rb5tpml31gFyLybZN3_8YwMvVnJCmOBOjReGGPv8,853
+ribbon_toolkit-0.2.2.dist-info/LICENSE,sha256=kHGDl1VTiMNJC5i8vLVr6CqHglor4TQ7FUCKDEi8u2U,1077
+ribbon_toolkit-0.2.2.dist-info/METADATA,sha256=ddPXi2FIc75tR1daqUFfAZyKX6o4w-N4WU6mFaxPeTI,473
+ribbon_toolkit-0.2.2.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+ribbon_toolkit-0.2.2.dist-info/top_level.txt,sha256=8w3scrRduZIksGUWQdDKwx_U93wajiTC1igXP0o68bQ,7
+ribbon_toolkit-0.2.2.dist-info/RECORD,,
