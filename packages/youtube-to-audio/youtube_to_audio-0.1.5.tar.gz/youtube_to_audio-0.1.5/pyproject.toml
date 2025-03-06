@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "youtube-to-audio"
+version = "0.1.5"
+description = "A lightweight Python package and CLI tool that extracts audio from YouTube videos in multiple formats."
+readme = "README.md"
+authors = [{ name = "Jack Tol", email = "contact@jacktol.net" }]
+license = { text = "MIT" }
+requires-python = ">=3.6"
+dependencies = [
+    "yt-dlp",
+    "click"
+]
+
+[project.scripts]
+youtube-to-audio = "youtube_to_audio.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/jack-tol/youtube-to-audio"
+Repository = "https://github.com/jack-tol/youtube-to-audio"
+
+[tool.setuptools.packages.find]
+where = ["."]
