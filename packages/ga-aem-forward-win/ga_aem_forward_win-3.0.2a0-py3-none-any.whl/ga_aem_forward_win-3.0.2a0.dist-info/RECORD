@@ -1,0 +1,9 @@
+examples/skytem_example.py,sha256=386nBy8XVy0I48deHADPdTljPcqHEMLTHcEZL9c7cts,4161
+gatdaem1d/__init__.py,sha256=uv3YBlvac6vYVoWeWnwWeU-xMCu_QugDOqY92UX7XoM,10885
+gatdaem1d/gatdaem1d.dll,sha256=4YzKjbpKHCVTOIJ-OREsm-Ndi0rrhW4afGgtq_V-mQ0,182272
+gatdaem1d/libfftw3-3.dll,sha256=ABqDXS8lrAZhWA1n21YiFXwoSBwGp_PvRa2TmDm_VKE,2712765
+gatdaem1d/libfftw3f-3.dll,sha256=QsoY__Nd0SiQ4ER4vJkABbOWnLdE9oQ5dr1DbM1_Ckw,2772692
+ga_aem_forward_win-3.0.2a0.dist-info/METADATA,sha256=wLyQxyDFqb9h6ju2CZnH4lei7rkqT9RUiPno1Ecq8JI,1529
+ga_aem_forward_win-3.0.2a0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+ga_aem_forward_win-3.0.2a0.dist-info/top_level.txt,sha256=LEZABwqW29MNbTpVQ1kgWFkAOW-60Br5u3PCEtzIFAI,19
+ga_aem_forward_win-3.0.2a0.dist-info/RECORD,,

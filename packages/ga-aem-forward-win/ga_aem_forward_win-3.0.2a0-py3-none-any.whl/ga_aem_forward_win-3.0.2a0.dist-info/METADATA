@@ -1,0 +1,37 @@
+Metadata-Version: 2.2
+Name: ga-aem-forward-win
+Version: 3.0.2a0
+Summary: Time-domain airborne electromagnetic forward modelling for Windows. Corresponds to v2.0.3 of the GA-AEM code
+Author-email: Ross C Brodie <ross.c.brodie@ga.gov.au>
+Keywords: electromagnetic,geophysics
+Classifier: License :: OSI Approved
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Operating System :: Microsoft :: Windows :: Windows 11
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+
+# GA-AEM Python forward modelling interface
+
+## Description
+This a simple pipy packaging of the 'gatdaem1d' 1D EM forward modeling code for Windows. 
+For OSX and Linux see https://github.com/GeoscienceAustralia/ga-aem fro detail on compilation of the python module.  
+
+The Source code for GA-AEM can be found at https://github.com/GeoscienceAustralia/ga-aem
+
+The precompiled gatdaem1d.dll can be downloaded https://github.com/GeoscienceAustralia/ga-aem/releases 
+
+The precompiled source and binaries for the included FFTW3 can be downloaded 
+https://github.com/FFTW/fftw3 and https://www.fftw.org/download.html
+
+
+
+The code for packaging the module for pypi is available at https://github.com/GeoscienceAustralia/ga-aem/tree/master/python
+
+
+
