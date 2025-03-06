@@ -1,0 +1,6 @@
+torch
+numpy
+thefuzz
+scipy
+selenium
+matplotlib

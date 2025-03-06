@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rotaeno"
+version = "0.1.1"
+authors = [
+  { name="None1145", email="none@nonewiki.top" },
+]
+description = "A Rotaeno Official Python Package"
+readme = "README.md"
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: MIT License",
+]
+dependencies = [
+    "torch",
+    "numpy",
+    "thefuzz",
+    "scipy",
+    "selenium",
+    "matplotlib"
+]
+
+[project.urls]
+Homepage = "https://rotaeno.nonewiki.top/info"
+Issues = "https://github.com/None1145"

@@ -1,0 +1,40 @@
+Metadata-Version: 2.2
+Name: rotaeno
+Version: 0.1.1
+Summary: A Rotaeno Official Python Package
+Author-email: None1145 <none@nonewiki.top>
+Project-URL: Homepage, https://rotaeno.nonewiki.top/info
+Project-URL: Issues, https://github.com/None1145
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: torch
+Requires-Dist: numpy
+Requires-Dist: thefuzz
+Requires-Dist: scipy
+Requires-Dist: selenium
+Requires-Dist: matplotlib
+
+# 一个非官方的Rotaeno Python库
+## 安装
+```bash
+pip install rotaeno
+```
+## 使用
+> 请自行修改getInfo.py的代码并添加assets文件夹的内容
+```python
+import rotaeno
+
+userProfile = {
+    "server": "history",
+    "historyFilePath": "history.json"
+}
+
+# 获取Best40
+rotaeno.getProcessedData.getBest40(userProfile) # 返回图像地址
+rotaeno.getProcessedData.getBest40(userProfile, justDATA=True) # 返回数据
+rotaeno.getProcessedData.getBest40(userProfile, justHTML=True) # 返回HTML格式数据
+```

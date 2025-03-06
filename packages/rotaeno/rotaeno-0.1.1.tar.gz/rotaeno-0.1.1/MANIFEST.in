@@ -1,0 +1,6 @@
+include LICENSE README.md
+#recursive-include src/rotaeno/assets *
+recursive-include src/rotaeno/db *
+recursive-include src/rotaeno/saves *
+recursive-include src/rotaeno/tmp *
+recursive-include src/rotaeno/model *
