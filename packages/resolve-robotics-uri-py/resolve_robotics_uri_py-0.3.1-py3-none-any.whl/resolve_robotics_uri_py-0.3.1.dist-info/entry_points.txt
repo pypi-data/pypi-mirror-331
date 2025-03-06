@@ -1,0 +1,2 @@
+[console_scripts]
+resolve-robotics-uri-py = resolve_robotics_uri_py.resolve_robotics_uri_py:main
