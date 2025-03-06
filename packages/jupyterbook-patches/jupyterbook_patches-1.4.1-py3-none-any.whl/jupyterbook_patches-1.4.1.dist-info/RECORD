@@ -1,0 +1,13 @@
+jupyterbook_patches/__init__.py,sha256=l2pabsa_Jn9DoQflrHeRk-hvS5isuULkXf9-4Cfp4W8,1764
+jupyterbook_patches/_version.py,sha256=2wP77AlenYjrtKg1nXf5noV1SfpanFafZAGSe7wvBys,511
+jupyterbook_patches/utils.py,sha256=rzOhJr26nyn6j2Y6g-GKV-VxgftRMkcKDhSkPgMuRGI,630
+jupyterbook_patches/patches/__init__.py,sha256=dxa2BD-XfaVbC9pWB19HY1WAkQLDgX5iNxGawmbAojw,322
+jupyterbook_patches/patches/button.py,sha256=c1MRcJhx0TnWJHKTdAizy4Q6CDVugH88FPDEU9cPlXk,3015
+jupyterbook_patches/patches/layout.py,sha256=MTU2m6j6Qf8boASgyjhag57R5xCjmtgkuy7b81cul-M,378
+jupyterbook_patches/patches/_static/fix_admonition_style.css,sha256=-dpVSdr-IcALAaXWZ5RBp9QK-5npJrL3GNTbECo6D6A,69
+jupyterbook_patches/patches/_static/fix_code_header_style.css,sha256=xLJ-5NLepJlIHlFHQ16ATXzmkfHqlToG5ViebjP8GJI,80
+jupyterbook_patches/patches/_static/fix_dropdown_style.css,sha256=o88JUgG3OHLU1YfmGsr5dC5XNPzteuelwnEI9OPGaMY,68
+jupyterbook_patches-1.4.1.dist-info/METADATA,sha256=hEQ-A8IKu2fe1Au0fUGBZXfynxNd-XKLvCnQ_QmNm9I,2094
+jupyterbook_patches-1.4.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+jupyterbook_patches-1.4.1.dist-info/licenses/LICENSE,sha256=BbPh4Jk9NzKJPTxtJ1sJvrgO07PY4zOUcvjRT7bo97Y,1497
+jupyterbook_patches-1.4.1.dist-info/RECORD,,
