@@ -1,0 +1,106 @@
+import pytest
+from unittest.mock import Mock, patch
+import smtplib
+from email.mime.text import MIMEText
+from smtp_email_notifier_utils.notifier import send_notification
+
+# Test fixtures
+@pytest.fixture
+def mock_smtp():
+    with patch('smtplib.SMTP') as mock_smtp_class:
+        mock_server = Mock()
+        mock_smtp_class.return_value = mock_server
+        yield mock_server
+
+@pytest.fixture
+def valid_email_params():
+    return {
+        'to_address': 'recipient@example.com',
+        'subject': 'Test Subject',
+        'message': 'Test Message Body'
+    }
+
+# Test cases
+def test_successful_email_send(mock_smtp, valid_email_params):
+    """Test successful email sending"""
+    result = send_notification(
+        valid_email_params['to_address'],
+        valid_email_params['subject'],
+        valid_email_params['message']
+    )
+
+    assert result is True
+    mock_smtp.starttls.assert_called_once()
+    mock_smtp.login.assert_called_once()
+    mock_smtp.send_message.assert_called_once()
+    assert mock_smtp.close.called  # Verifies the context manager worked
+
+def test_invalid_smtp_connection(mock_smtp, valid_email_params):
+    """Test handling of SMTP connection failure"""
+    mock_smtp.side_effect = smtplib.SMTPException("Connection failed")
+
+    with patch('builtins.print') as mock_print:
+        result = send_notification(
+            valid_email_params['to_address'],
+            valid_email_params['subject'],
+            valid_email_params['message']
+        )
+
+    assert result is False
+    mock_print.assert_called_once()
+    assert "Failed to send email" in mock_print.call_args[0][0]
+
+def test_authentication_failure(mock_smtp, valid_email_params):
+    """Test handling of authentication failure"""
+    mock_smtp.login.side_effect = smtplib.SMTPAuthenticationError(535, "Auth failed")
+
+    with patch('builtins.print') as mock_print:
+        result = send_notification(
+            valid_email_params['to_address'],
+            valid_email_params['subject'],
+            valid_email_params['message']
+        )
+
+    assert result is False
+    mock_print.assert_called_once()
+    assert "Failed to send email" in mock_print.call_args[0][0]
+
+def test_invalid_email_params(mock_smtp):
+    """Test handling of invalid email parameters"""
+    # Test with None values
+    result = send_notification(None, "Subject", "Message")
+    assert result is False
+
+    # Test with empty strings
+    result = send_notification("", "", "")
+    assert result is False
+
+def test_mimetext_creation(mock_smtp, valid_email_params):
+    """Test that MIMEText object is created correctly"""
+    with patch('email.mime.text.MIMEText') as mock_mimetext:
+        send_notification(
+            valid_email_params['to_address'],
+            valid_email_params['subject'],
+            valid_email_params['message']
+        )
+
+        mock_mimetext.assert_called_once_with(valid_email_params['message'])
+        instance = mock_mimetext.return_value
+        assert instance.__setitem__.call_args_list == [
+            (('Subject', valid_email_params['subject']), {}),
+            (('From', pytest.any), {}),
+            (('To', valid_email_params['to_address']), {})
+        ]
+
+# Configuration test
+def test_environment_variables_loaded():
+    """Test that environment variables are loaded correctly"""
+    from smtp_email_notifier_utils.notifier import SMTP_ADDRESS, SMTP_PORT, EMAIL_ID, EMAIL_PASSWORD
+
+    assert SMTP_ADDRESS is not None
+    assert isinstance(SMTP_PORT, int)
+    assert EMAIL_ID is not None
+    assert EMAIL_PASSWORD is not None
+
+if __name__ == "__main__":
+    pytest.main(["-v"])

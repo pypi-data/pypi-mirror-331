@@ -1,0 +1,10 @@
+Click>=7.0
+PyYAML
+Rich
+singleton-decorator
+python-dotenv
+
+[dev]
+pytest>=6.2
+pytest-mock>=3.6
+coverage>=5.5
