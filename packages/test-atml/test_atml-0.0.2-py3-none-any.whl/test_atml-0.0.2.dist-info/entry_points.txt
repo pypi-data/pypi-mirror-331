@@ -1,0 +1,3 @@
+[console_scripts]
+fuck-world = fuck_world
+hello-world = timmins:hello_world
