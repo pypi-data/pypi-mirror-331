@@ -1,0 +1,67 @@
+Metadata-Version: 2.2
+Name: kis_uid_generator_utils
+Version: 0.1.1
+Summary: Collection of Python modules for generating unique identifiers.
+Author-email: Jaideep Sundaram <jai.python3@gmail.com>
+Maintainer-email: Jaideep Sundaram <jai.python3@gmail.com>
+License: Not open source
+Project-URL: Homepage, https://github.com/jai-python3/kis-uid-generator-utils
+Keywords: kis_uid_generator_utils
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.10
+Description-Content-Type: text/x-rst
+License-File: AUTHORS.rst
+Requires-Dist: Click>=7.0
+Requires-Dist: PyYAML
+Requires-Dist: Rich
+Requires-Dist: singleton-decorator
+Provides-Extra: dev
+Requires-Dist: pytest>=6.2; extra == "dev"
+Requires-Dist: pytest-mock>=3.6; extra == "dev"
+Requires-Dist: coverage>=5.5; extra == "dev"
+
+=======================================================
+Knowledge Informatics Unique Identifier Generator Utils
+=======================================================
+
+Collection of Python modules for generating unique identifiers.
+
+
+Installation
+------------
+
+.. code-block:: shell
+
+    pip install kis-uid-generator-utils
+
+Usage
+-----
+Example Python script:
+
+.. code-block:: python
+
+    from kis_uid_generator_utils import constants
+    from kis_uid_generator_utils.generator import Generator
+
+    config_file = constants.DEFAULT_CONFIG_FILE
+
+    # Example usage
+    if __name__ == "__main__":
+        generator = Generator(config_file=config_file)
+
+        # Generate some example IDs
+        print(generator.generate_id("gene"))  # e.g., "GN-5f8b3a2e-20250304"
+        print(generator.generate_id("protein", "BRCA1"))  # e.g., "PR-BRCA1-7a9c2d1f-20250304"
+        print(generator.generate_id("variant"))  # e.g., "VR-8b3e4f5a-20250304"
+
+Invocation:
+
+.. code-block:: shell
+
+    python example.py
+    GN-192f63b6-20250305
+    PR-BRCA1-0ed3e01b-20250305
+    VR-6e2bf02e-20250305
