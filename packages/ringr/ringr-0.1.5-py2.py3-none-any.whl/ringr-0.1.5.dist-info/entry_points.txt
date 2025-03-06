@@ -1,0 +1,2 @@
+[console_scripts]
+ringr = ringr.__main__:main
