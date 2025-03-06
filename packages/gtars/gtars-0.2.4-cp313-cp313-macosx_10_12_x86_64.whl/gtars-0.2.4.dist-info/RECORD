@@ -1,0 +1,15 @@
+gtars-0.2.4.dist-info/METADATA,sha256=iBc0tgkZTL9tPiymX8SRRM2kWx7KZOODZdk4eh_qCj4,1176
+gtars-0.2.4.dist-info/WHEEL,sha256=u9us9wDOMuv-SAcU5xBwcSEz9IBIlPKBMDdSNCJgTRs,106
+gtars/ailist/__init__.pyi,sha256=a1y-VGPZYFfSAUwdNkvD5wn9OWxRb7XrcYb363AZ5W0,1172
+gtars/ailist/__init__.py,sha256=evBGUY68DfrR8HFvk_EfL4c4_SPTp8zSr1dyRIBQL00,42
+gtars/tokenizers/__init__.pyi,sha256=2QpCvLdrf7A7gYwtJlLxVCfZez5k-jaEmpV6bSKQBQw,13157
+gtars/tokenizers/__init__.py,sha256=SexXrS9CQ8ed1ddYoNOkI0N-xZ7o-XJ1lFP51pBdCqI,46
+gtars/__init__.pyi,sha256=Y25n44pyE3vp92MiABKrcK3IWRyQ1JG1rZ4Ufqy2nC0,17
+gtars/__init__.py,sha256=nYILq2Ta-_YkWyQpXaQyQSyfn4vJkn3TDM3LwMzuf6E,35
+gtars/utils/__init__.pyi,sha256=riB1-aU2HV4bhMc_qtVeFiUlN2hidDd_zrRLbdACNck,404
+gtars/utils/__init__.py,sha256=kDVALMLI0wSCxgdUTZgnlq1bQuO3zHA35aSSrN8L8yk,41
+gtars/models/__init__.pyi,sha256=h_afWa1gwS4Q0MBWN052NyWkm6k1DqfYoQ-KFWffu5I,1775
+gtars/models/__init__.py,sha256=jXmMsLhxTjh64GevAt6qwJqcT0YUcu1iYYw6w56mzwU,42
+gtars/digests/__init__.py,sha256=zVY0ps_Lb384esUnSHAy1ovf57jxClG_arNcI227a9g,43
+gtars/gtars.cpython-313-darwin.so,sha256=gRpBq_GSAEXB8KX59SSr6WS2UGKYQnvP2zvGmB-qhu8,2790624
+gtars-0.2.4.dist-info/RECORD,,
