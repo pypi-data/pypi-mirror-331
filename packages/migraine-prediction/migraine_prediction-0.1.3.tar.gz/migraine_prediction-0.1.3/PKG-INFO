@@ -1,0 +1,39 @@
+Metadata-Version: 2.2
+Name: migraine_prediction
+Version: 0.1.3
+Summary: Migraine prediction model using optimization framework
+Author: MDT Team
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.8
+Requires-Dist: numpy>=1.19.0
+Requires-Dist: pandas>=1.3.0
+Requires-Dist: scikit-learn>=1.0.0
+Requires-Dist: matplotlib>=3.4.0
+Requires-Dist: seaborn>=0.11.0
+Requires-Dist: scipy>=1.7.0
+Requires-Dist: joblib>=1.1.0
+Requires-Dist: meta_optimizer>=0.1.0
+Provides-Extra: explainability
+Requires-Dist: shap>=0.40.0; extra == "explainability"
+Requires-Dist: lime>=0.2.0; extra == "explainability"
+Requires-Dist: eli5>=0.11.0; extra == "explainability"
+Provides-Extra: optimization
+Requires-Dist: deap>=1.3.1; extra == "optimization"
+Requires-Dist: hyperopt>=0.2.7; extra == "optimization"
+Requires-Dist: optuna>=3.0.0; extra == "optimization"
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.0.0; extra == "dev"
+Requires-Dist: black>=22.0.0; extra == "dev"
+Requires-Dist: flake8>=5.0.0; extra == "dev"
+Dynamic: author
+Dynamic: classifier
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
