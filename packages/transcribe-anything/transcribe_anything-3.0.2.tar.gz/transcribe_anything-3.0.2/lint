@@ -1,0 +1,31 @@
+#! /bin/bash
+
+
+echo activating venv...
+. ./activate
+
+set -e
+
+echo installing pip dependencies
+
+
+echo running black...
+uv run black src tests --exclude 'src/transcribe_anything/venv'
+
+echo running isort...
+uv run isort src tests
+
+echo re-running black now
+uv run black src tests  --exclude 'src/transcribe_anything/venv'
+
+# does --clean exist
+if [[ $* == *--no-ruff* ]]; then
+    echo skipping ruff...
+else
+    echo running ruff...
+    uv run ruff check --fix src tests
+fi
+
+
+echo running mypy...
+uv run mypy src tests --exclude 'src/transcribe_anything/venv'

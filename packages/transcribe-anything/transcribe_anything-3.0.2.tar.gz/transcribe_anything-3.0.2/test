@@ -1,0 +1,5 @@
+#!/bin/bash
+. ./activate
+set -e
+# uv run python -m unittest discover tests
+pytest --tb=long -v
