@@ -1,0 +1,5 @@
+---
+download_dir:
+remove_servers:
+  - server1
+  - server2
