@@ -1,0 +1,10 @@
+pandas
+numpy
+matplotlib
+requests
+seaborn
+statsmodels
+scipy
+langchain
+tqdm
+python-dotenv

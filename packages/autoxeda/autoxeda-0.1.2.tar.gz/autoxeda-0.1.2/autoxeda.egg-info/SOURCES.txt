@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+autoxeda/__init__.py
+autoxeda/core.py
+autoxeda.egg-info/PKG-INFO
+autoxeda.egg-info/SOURCES.txt
+autoxeda.egg-info/dependency_links.txt
+autoxeda.egg-info/requires.txt
+autoxeda.egg-info/top_level.txt
+tests/test_core.py
