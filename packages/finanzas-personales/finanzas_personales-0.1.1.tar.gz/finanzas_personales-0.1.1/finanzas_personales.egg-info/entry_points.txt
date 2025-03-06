@@ -1,0 +1,2 @@
+[console_scripts]
+finanzas_personales = finanzas_personales.main:run_main
