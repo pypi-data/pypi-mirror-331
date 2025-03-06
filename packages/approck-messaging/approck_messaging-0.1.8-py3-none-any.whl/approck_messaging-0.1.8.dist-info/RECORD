@@ -1,0 +1,8 @@
+approck_messaging/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+approck_messaging/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+approck_messaging/models/message.py,sha256=cfM7xMSEPLUX_O0F8gi1NWPM2s1s71IeV2_3uj5U59Y,933
+approck_messaging/publisher.py,sha256=V1H4qHTwUQ2DU62oMx1pjykeFeWPKVtKPDzP6iaQ_GI,743
+approck_messaging/subscriber.py,sha256=vO5oOfdWeurGAqRJcG6jU4ierQTOwzXB0k1VuabaHGM,648
+approck_messaging-0.1.8.dist-info/METADATA,sha256=cmWS0z-_nfzx0AaRnV49794GJnGDPlt6G-mFQv7CjE4,621
+approck_messaging-0.1.8.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+approck_messaging-0.1.8.dist-info/RECORD,,
