@@ -1,0 +1,8 @@
+text_to_sidc/__init__.py,sha256=swHzmecDn1ZiL2kKqG-A8lC_YGaMoi87UP82O85_WoM,48
+text_to_sidc/austrian.py,sha256=e4J0uQbkrhrn0o4yvnLW7ML9qYTWOMnTzIplnvdZMGs,8214
+text_to_sidc/patterns.py,sha256=HlIFjD_r7H1s-iWjwKvbZVtdmxxQ3b4EkEdU1hlMWlQ,41174
+text_to_sidc/patterns_data.csv,sha256=zhbaH4vJEo8xwh1ilWBNBCv6yvc8rpc8AY7yX-jOdr8,31748
+text_to_sidc-0.0.20.dist-info/METADATA,sha256=FY-1BBsFlYlgZgGVCHwWmzq6i8nJEDAhPC9jB7i1EbM,831
+text_to_sidc-0.0.20.dist-info/WHEEL,sha256=y4mX-SOX4fYIkonsAGA5N0Oy-8_gI4FXw5HNI1xqvWg,91
+text_to_sidc-0.0.20.dist-info/top_level.txt,sha256=sPXfXW6P50dKZ0L7gW-vZsJHnAnrOainb6XZRaOsoTM,13
+text_to_sidc-0.0.20.dist-info/RECORD,,
