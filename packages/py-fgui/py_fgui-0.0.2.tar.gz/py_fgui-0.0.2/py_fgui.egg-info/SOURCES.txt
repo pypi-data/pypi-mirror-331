@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+py_fgui/__init__.py
+py_fgui/fairy_gui.py
+py_fgui.egg-info/PKG-INFO
+py_fgui.egg-info/SOURCES.txt
+py_fgui.egg-info/dependency_links.txt
+py_fgui.egg-info/top_level.txt
