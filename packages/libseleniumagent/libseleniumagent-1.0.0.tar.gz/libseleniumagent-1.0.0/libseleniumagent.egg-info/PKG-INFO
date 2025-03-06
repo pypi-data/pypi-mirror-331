@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: libseleniumagent
+Version: 1.0.0
+Summary: Library for building Infrasonar selenium agents
+Home-page: https://github.com/infrasonar/selenium-agent
+Download-URL: https://github.com/infrasonar/selenium-agent/tarball/v1.0.0
+Author: Cesbit
+Author-email: info@cesbit.com
+Keywords: monitoring,infrasonar,agent,selenium
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Text Processing :: Linguistic
+Description-Content-Type: text/markdown
+Requires-Dist: selenium
+
+[![CI](https://github.com/infrasonar/selenium-agent/workflows/CI/badge.svg)](https://github.com/infrasonar/selenium-agent/actions)
+[![Release Version](https://img.shields.io/github/release/infrasonar/selenium-agent)](https://github.com/infrasonar/selenium-agent/releases)
+
+# InfraSonar Selenium agent
+
+Documentation: https://docs.infrasonar.com/collectors/agents/selenium/
+
+## Environment variables
+
+Environment                 | Default                       | Description
+----------------------------|-------------------------------|-------------------
+`TOKEN`                     | _required_                    | Token to connect to.
+`ASSET_ID`                  | `/data/.asset.json`           | Asset Id _or_ file where the Agent asset Id is stored _(must be a volume mount)_.
+`API_URI`                   | https://api.infrasonar.com    | InfraSonar API.
+`CHECK_INTERVAL`            | `300`                         | Interval for the selenium check in seconds.
+`TESTS_DIR`                 | `/data/tests`                 |
+`LOG_LEVEL`                 | `warning`                     | Log level _(error, warning, info, debug)_.
+`LOG_COLORIZED`             | `0`                           | Log colorized, 0 _(=disabled)_ or 1 _(=enabled)_.
+`LOG_FMT`                   | `%y%m...`                     | Default format is `%y%m%d %H:%M:%S`.
