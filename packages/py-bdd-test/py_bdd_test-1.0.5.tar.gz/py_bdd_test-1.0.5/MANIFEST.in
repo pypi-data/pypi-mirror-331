@@ -1,0 +1,4 @@
+include readme.md
+include behave.ini
+recursive-include bdd-test *
+
