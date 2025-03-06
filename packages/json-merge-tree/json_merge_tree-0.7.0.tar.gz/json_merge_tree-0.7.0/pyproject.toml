@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "json-merge-tree"
+version = "0.7.0"
+description = "JSON Merge Tree (built on top of json-multi-merge) merges JSON objects in a hierarchy, allowing customization of how objects are merged."
+readme = "README.md"
+license = "MIT"
+authors = ["Marcy Buccellato <mbuccellato@hearst.com>", "Nic Wolff <nwolff@hearst.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<4.0"
+json-multi-merge = ">=0.3.0"
+sqlalchemy = ">=2.0.0"
+
+[tool.poetry.dev-dependencies]
+coverage = "~=7.3"
+flake8 = "~=5.0.4"
+isort = "~=5.12"
+mypy = "~=1.5"
+pytest = "~=7.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
