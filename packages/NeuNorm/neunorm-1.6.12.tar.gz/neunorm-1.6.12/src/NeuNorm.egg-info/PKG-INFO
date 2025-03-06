@@ -1,0 +1,16 @@
+Metadata-Version: 2.2
+Name: NeuNorm
+Version: 1.6.12
+Summary: neutron normalization data
+Author-email: Jean Bilheux <bilheuxjm@ornl.gov>
+Maintainer-email: Jean Bilheux <bilheuxjm@ornl.gov>, Chen Zhang <zhangc@ornl.gov>
+License: BSD-3-Clause license
+Project-URL: homepage, https://github.com/neutrons/python_project_template/
+Keywords: neutron,normalization,imaging
+Requires-Python: >=3.10
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pillow
+Requires-Dist: pathlib
+Requires-Dist: astropy
+Requires-Dist: scipy
