@@ -1,0 +1,6 @@
+validators
+fuzzywuzzy
+cryptography
+pysignalr>=1.1.0
+websockets
+python-Levenshtein
