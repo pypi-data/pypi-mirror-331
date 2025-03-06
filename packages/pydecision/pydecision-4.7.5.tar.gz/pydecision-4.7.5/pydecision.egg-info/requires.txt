@@ -1,0 +1,7 @@
+matplotlib
+numpy
+llmx
+openai
+pandas
+scikit-learn
+scipy
