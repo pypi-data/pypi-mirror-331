@@ -1,0 +1,21 @@
+Metadata-Version: 2.2
+Name: ml4h_lse
+Version: 0.1.0
+Summary: A library for evaluating self-supervised representations in ML
+Author: Yoanna Turura
+Author-email: yturura@broadinstitute.org
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.7
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+Requires-Dist: scikit-learn
+Requires-Dist: pandas
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
