@@ -1,0 +1,10 @@
+rsstail/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rsstail/__main__.py,sha256=qs6kN4rXgXytzVlo9nDeC8tm5daCP8xPL2lhUABzuiM,63
+rsstail/formatter.py,sha256=LCJgcyJFcRGWcVP0ZcXdxTjIwj7fS3U6hLvTS6NL2fY,2515
+rsstail/main.py,sha256=-L543Qvk6TgNsngBwE-MtvKJiizfD8zM9IClBrz5O6c,12730
+rsstail-0.6.0.dist-info/LICENSE.txt,sha256=w4qHQ_SMeDSB2Z3GqQ_Cp57M3qVObb1ZFQBsOg3yOvE,1488
+rsstail-0.6.0.dist-info/METADATA,sha256=N-zC_O1KKOW9gEcbpp02CJNpUQk59lzWAB6BTDfdqOA,8413
+rsstail-0.6.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+rsstail-0.6.0.dist-info/entry_points.txt,sha256=WTJ7UqYR1iPG6Ao61HNdL0nboW7As--amOMdK3ebLus,46
+rsstail-0.6.0.dist-info/top_level.txt,sha256=vipkSMLqUQh-AAjI-M_1ghZJDl9T4KzmSHuv_yUR7TI,8
+rsstail-0.6.0.dist-info/RECORD,,
