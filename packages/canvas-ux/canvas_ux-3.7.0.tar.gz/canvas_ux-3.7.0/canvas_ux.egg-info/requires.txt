@@ -1,0 +1,16 @@
+ipywidgets>=7.0.0
+jupyter_packaging>=0.7.9
+jupyterlab>=3.6.8
+
+[examples]
+tensorflow
+opencv-python
+gitpython
+
+[widgets]
+canvas_data_map
+canvas_list
+canvas_scatterplot
+canvas_summary
+canvas_familiarity
+canvas_duplicates
