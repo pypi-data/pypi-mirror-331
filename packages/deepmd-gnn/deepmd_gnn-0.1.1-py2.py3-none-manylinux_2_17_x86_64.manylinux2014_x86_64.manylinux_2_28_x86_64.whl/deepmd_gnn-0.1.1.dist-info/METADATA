@@ -1,0 +1,382 @@
+Metadata-Version: 2.2
+Name: deepmd-gnn
+Version: 0.1.1
+Summary: DeePMD-kit plugin for graph neural network models.
+Author-Email: Jinzhe Zeng <jinzhe.zeng@rutgers.edu>
+License:                    GNU LESSER GENERAL PUBLIC LICENSE
+                                Version 3, 29 June 2007
+         
+          Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
+          Everyone is permitted to copy and distribute verbatim copies
+          of this license document, but changing it is not allowed.
+         
+         
+           This version of the GNU Lesser General Public License incorporates
+         the terms and conditions of version 3 of the GNU General Public
+         License, supplemented by the additional permissions listed below.
+         
+           0. Additional Definitions.
+         
+           As used herein, "this License" refers to version 3 of the GNU Lesser
+         General Public License, and the "GNU GPL" refers to version 3 of the GNU
+         General Public License.
+         
+           "The Library" refers to a covered work governed by this License,
+         other than an Application or a Combined Work as defined below.
+         
+           An "Application" is any work that makes use of an interface provided
+         by the Library, but which is not otherwise based on the Library.
+         Defining a subclass of a class defined by the Library is deemed a mode
+         of using an interface provided by the Library.
+         
+           A "Combined Work" is a work produced by combining or linking an
+         Application with the Library.  The particular version of the Library
+         with which the Combined Work was made is also called the "Linked
+         Version".
+         
+           The "Minimal Corresponding Source" for a Combined Work means the
+         Corresponding Source for the Combined Work, excluding any source code
+         for portions of the Combined Work that, considered in isolation, are
+         based on the Application, and not on the Linked Version.
+         
+           The "Corresponding Application Code" for a Combined Work means the
+         object code and/or source code for the Application, including any data
+         and utility programs needed for reproducing the Combined Work from the
+         Application, but excluding the System Libraries of the Combined Work.
+         
+           1. Exception to Section 3 of the GNU GPL.
+         
+           You may convey a covered work under sections 3 and 4 of this License
+         without being bound by section 3 of the GNU GPL.
+         
+           2. Conveying Modified Versions.
+         
+           If you modify a copy of the Library, and, in your modifications, a
+         facility refers to a function or data to be supplied by an Application
+         that uses the facility (other than as an argument passed when the
+         facility is invoked), then you may convey a copy of the modified
+         version:
+         
+            a) under this License, provided that you make a good faith effort to
+            ensure that, in the event an Application does not supply the
+            function or data, the facility still operates, and performs
+            whatever part of its purpose remains meaningful, or
+         
+            b) under the GNU GPL, with none of the additional permissions of
+            this License applicable to that copy.
+         
+           3. Object Code Incorporating Material from Library Header Files.
+         
+           The object code form of an Application may incorporate material from
+         a header file that is part of the Library.  You may convey such object
+         code under terms of your choice, provided that, if the incorporated
+         material is not limited to numerical parameters, data structure
+         layouts and accessors, or small macros, inline functions and templates
+         (ten or fewer lines in length), you do both of the following:
+         
+            a) Give prominent notice with each copy of the object code that the
+            Library is used in it and that the Library and its use are
+            covered by this License.
+         
+            b) Accompany the object code with a copy of the GNU GPL and this license
+            document.
+         
+           4. Combined Works.
+         
+           You may convey a Combined Work under terms of your choice that,
+         taken together, effectively do not restrict modification of the
+         portions of the Library contained in the Combined Work and reverse
+         engineering for debugging such modifications, if you also do each of
+         the following:
+         
+            a) Give prominent notice with each copy of the Combined Work that
+            the Library is used in it and that the Library and its use are
+            covered by this License.
+         
+            b) Accompany the Combined Work with a copy of the GNU GPL and this license
+            document.
+         
+            c) For a Combined Work that displays copyright notices during
+            execution, include the copyright notice for the Library among
+            these notices, as well as a reference directing the user to the
+            copies of the GNU GPL and this license document.
+         
+            d) Do one of the following:
+         
+                0) Convey the Minimal Corresponding Source under the terms of this
+                License, and the Corresponding Application Code in a form
+                suitable for, and under terms that permit, the user to
+                recombine or relink the Application with a modified version of
+                the Linked Version to produce a modified Combined Work, in the
+                manner specified by section 6 of the GNU GPL for conveying
+                Corresponding Source.
+         
+                1) Use a suitable shared library mechanism for linking with the
+                Library.  A suitable mechanism is one that (a) uses at run time
+                a copy of the Library already present on the user's computer
+                system, and (b) will operate properly with a modified version
+                of the Library that is interface-compatible with the Linked
+                Version.
+         
+            e) Provide Installation Information, but only if you would otherwise
+            be required to provide such information under section 6 of the
+            GNU GPL, and only to the extent that such information is
+            necessary to install and execute a modified version of the
+            Combined Work produced by recombining or relinking the
+            Application with a modified version of the Linked Version. (If
+            you use option 4d0, the Installation Information must accompany
+            the Minimal Corresponding Source and Corresponding Application
+            Code. If you use option 4d1, you must provide the Installation
+            Information in the manner specified by section 6 of the GNU GPL
+            for conveying Corresponding Source.)
+         
+           5. Combined Libraries.
+         
+           You may place library facilities that are a work based on the
+         Library side by side in a single library together with other library
+         facilities that are not Applications and are not covered by this
+         License, and convey such a combined library under terms of your
+         choice, if you do both of the following:
+         
+            a) Accompany the combined library with a copy of the same work based
+            on the Library, uncombined with any other library facilities,
+            conveyed under the terms of this License.
+         
+            b) Give prominent notice with the combined library that part of it
+            is a work based on the Library, and explaining where to find the
+            accompanying uncombined form of the same work.
+         
+           6. Revised Versions of the GNU Lesser General Public License.
+         
+           The Free Software Foundation may publish revised and/or new versions
+         of the GNU Lesser General Public License from time to time. Such new
+         versions will be similar in spirit to the present version, but may
+         differ in detail to address new problems or concerns.
+         
+           Each version is given a distinguishing version number. If the
+         Library as you received it specifies that a certain numbered version
+         of the GNU Lesser General Public License "or any later version"
+         applies to it, you have the option of following the terms and
+         conditions either of that published version or of any later version
+         published by the Free Software Foundation. If the Library as you
+         received it does not specify a version number of the GNU Lesser
+         General Public License, you may choose any version of the GNU Lesser
+         General Public License ever published by the Free Software Foundation.
+         
+           If the Library as you received it specifies that a proxy can decide
+         whether future versions of the GNU Lesser General Public License shall
+         apply, that proxy's public statement of acceptance of any version is
+         permanent authorization for you to choose that version for the
+         Library.
+         
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Project-URL: repository, https://gitlab.com/RutgersLBSR/deepmd-gnn
+Requires-Python: >=3.9
+Requires-Dist: torch
+Requires-Dist: deepmd-kit[torch]>=3.0.0b2
+Requires-Dist: mace-torch>=0.3.5
+Requires-Dist: nequip
+Requires-Dist: e3nn
+Requires-Dist: dargs
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-cov; extra == "test"
+Requires-Dist: dargs>=0.4.8; extra == "test"
+Provides-Extra: docs
+Requires-Dist: sphinx; extra == "docs"
+Requires-Dist: sphinx-autoapi; extra == "docs"
+Requires-Dist: myst-parser; extra == "docs"
+Requires-Dist: deepmodeling-sphinx>=0.3.0; extra == "docs"
+Requires-Dist: sphinx-book-theme; extra == "docs"
+Requires-Dist: dargs; extra == "docs"
+Description-Content-Type: text/markdown
+
+# DeePMD-kit plugin for various graph neural network models
+
+<!-- [![PyPI - Version](https://img.shields.io/pypi/v/python-template)](https://pypi.org/p/python-template) -->
+
+`deepmd-gnn` is a [DeePMD-kit](https://github.com/deepmodeling/deepmd-kit) plugin for various graph neural network (GNN) models, which connects DeePMD-kit and atomistic GNN packages by enabling GNN models in DeePMD-kit.
+
+Supported packages and models include:
+
+- [MACE](https://github.com/ACEsuit/mace) (PyTorch version)
+- [NequIP](https://github.com/mir-group/nequip) (PyTorch version)
+
+After [installing the plugin](#installation), you can train the GNN models using DeePMD-kit, run active learning cycles for the GNN models using [DP-GEN](https://github.com/deepmodeling/dpgen), perform simulations with the MACE model using molecular dynamic packages supported by DeePMD-kit, such as [LAMMPS](https://github.com/lammps/lammps) and [AMBER](https://ambermd.org/).
+You can follow [DeePMD-kit documentation](https://docs.deepmodeling.com/projects/deepmd/en/latest/) to train the GNN models using its PyTorch backend, after using the specific [model parameters](#parameters).
+
+## Credits
+
+If you use this software, please cite the following unpublish paper:
+
+- Jinzhe Zeng, Timothy J. Giese, Duo Zhang, Han Wang, Darrin M. York, DeePMD-GNN: A DeePMD-kit Plugin for External Graph Neural Network Potentials, unpublished.
+
+We will update the credit information once it is published.
+
+## Installation
+
+First, clone this repository:
+
+```sh
+git clone https://gitlab.com/RutgersLBSR/deepmd-gnn
+cd deepmd-gnn
+```
+
+### Python interface plugin
+
+Python 3.9 or above is required. A C++ compiler that supports C++ 14 (for PyTorch 2.0) or C++ 17 (for PyTorch 2.1 or above) is required.
+
+Assume you have installed [DeePMD-kit](https://github.com/deepmodeling/deepmd-kit) (v3.0.0b2 or above) and [PyTorch](https://github.com/pytorch/pytorch) in an environment, then execute
+
+```sh
+# expose PyTorch CMake modules
+export CMAKE_PREFIX_PATH=$(python -c "import torch;print(torch.utils.cmake_prefix_path)")
+
+pip install .
+```
+
+### C++ interface plugin
+
+DeePMD-kit version should be v3.0.0b4 or later.
+
+Follow [DeePMD-kit documentation](https://docs.deepmodeling.com/projects/deepmd/en/latest/install/install-from-source.html#install-the-c-interface) to install DeePMD-kit C++ interface with PyTorch backend support and other related MD packages.
+After that, you can build the plugin
+
+```sh
+# Assume libtorch has been contained in CMAKE_PREFIX_PATH
+mkdir -p build
+cd build
+cmake .. -D CMAKE_INSTALL_PREFIX=/prefix/to/install
+cmake --build . -j8
+cmake --install .
+```
+
+`libdeepmd_gnn.so` will be installed into the directory you assign.
+When using any DeePMD-kit C++ interface, set the following environment variable in advance:
+
+```sh
+export DP_PLUGIN_PATH=/prefix/to/install/lib/libdeepmd_gnn.so
+```
+
+## Usage
+
+Follow [Parameters section](#parameters) to prepare a DeePMD-kit input file.
+
+```sh
+dp --pt train input.json
+dp --pt freeze
+```
+
+A frozen model file named `frozen_model.pth` will be generated. You can use it in the MD packages or other interfaces.
+For details, follow [DeePMD-kit documentation](https://docs.deepmodeling.com/projects/deepmd/en/latest/).
+
+### Running LAMMPS + MACE with period boundary conditions
+
+GNN models use message passing neural networks,
+so the neighbor list built with traditional cutoff radius will not work,
+since the ghost atoms also need to build neighbor list.
+By default, the model requests the neighbor list with a cutoff radius of $r_c \times N_{L}$,
+where $r_c$ is set by `r_max` and $N_L$ is set by `num_interactions` (MACE) / `num_layers` (NequIP),
+and rebuilds the neighbor list for ghost atoms.
+However, this approach is very inefficient.
+
+The alternative approach for the MACE model (note: NequIP doesn't support such approach) is to use the mapping passed from LAMMPS, which does not support MPI.
+One needs to set `DP_GNN_USE_MAPPING` when freezing the models,
+
+```sh
+DP_GNN_USE_MAPPING=1 dp --pt freeze
+```
+
+and request the mapping when using LAMMPS (also requires DeePMD-kit v3.0.0rc0 or above).
+By using the mapping, the ghost atoms will be mapped to the real atoms,
+so the regular neighbor list with a cutoff radius of $r_c$ can be used.
+
+```lammps
+atom_modify map array
+```
+
+In the future, we will explore utilizing the MPI to communicate the neighbor list,
+while this approach requires a deep hack for external packages.
+
+## Parameters
+
+### MACE
+
+To use the MACE model, set `"type": "mace"` in the `model` section of the training script.
+Below is default values for the MACE model, most of which follows default values in the MACE package:
+
+```json
+"model": {
+  "type": "mace",
+  "type_map": [
+    "O",
+    "H"
+  ],
+  "r_max": 5.0,
+  "sel": "auto",
+  "num_radial_basis": 8,
+  "num_cutoff_basis": 5,
+  "max_ell": 3,
+  "interaction": "RealAgnosticResidualInteractionBlock",
+  "num_interactions": 2,
+  "hidden_irreps": "128x0e + 128x1o",
+  "pair_repulsion": false,
+  "distance_transform": "None",
+  "correlation": 3,
+  "gate": "silu",
+  "MLP_irreps": "16x0e",
+  "radial_type": "bessel",
+  "radial_MLP": [64, 64, 64],
+  "std": 1.0,
+  "precision": "float32"
+}
+```
+
+### NequIP
+
+```json
+"model": {
+  "type": "nequip",
+  "type_map": [
+    "O",
+    "H"
+  ],
+  "r_max": 5.0,
+  "sel": "auto",
+  "num_layers": 4,
+  "l_max": 2,
+  "num_features": 32,
+  "nonlinearity_type": "gate",
+  "parity": true,
+  "num_basis": 8,
+  "BesselBasis_trainable": true,
+  "PolynomialCutoff_p": 6,
+  "invariant_layers": 2,
+  "invariant_neurons": 64,
+  "use_sc": true,
+  "irreps_edge_sh": "0e + 1e",
+  "feature_irreps_hidden": "32x0o + 32x0e + 32x1o + 32x1e",
+  "chemical_embedding_irreps_out": "32x0e",
+  "conv_to_output_hidden_irreps_out": "16x0e",
+  "precision": "float32"
+}
+```
+
+## DPRc support
+
+In `deepmd-gnn`, the GNN model can be used in a [DPRc](https://docs.deepmodeling.com/projects/deepmd/en/latest/model/dprc.html) way.
+Type maps that starts with `m` (such as `mH`) or `OW` or `HW` will be recognized as MM types.
+Two MM atoms will not build edges with each other.
+Such GNN+DPRc model can be directly used in AmberTools24.
+
+## Examples
+
+- [examples/water](examples/water)
+- [examples/dprc](examples/dprc)

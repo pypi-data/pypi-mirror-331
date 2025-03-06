@@ -1,0 +1,16 @@
+deepmd_gnn/__init__.py,sha256=YzqdAcaAvTq8hRocoqnyVFEVxPRk5GvYG0zsOgytTBs,317
+deepmd_gnn/__main__.py,sha256=utvqtL3FjnPO4Q_H7vm-RfDbMQIB25mNubLQOnZjGac,180
+deepmd_gnn/_version.py,sha256=Mmxse1R0ki5tjz9qzU8AQyqUsLt8nTyCAbYQp8R87PU,511
+deepmd_gnn/argcheck.py,sha256=IHjWiwXfVfzRtXMgzJM3i6qd9KtjN8jtSxHQLnRTVrY,9612
+deepmd_gnn/env.py,sha256=7M0LF8YgzO6yc9_J2u-4rQ3T8anLFQV0wGrKrDPAHEA,136
+deepmd_gnn/mace.py,sha256=ippZnK25vlObFGvulnTKZvtBjnoeKi83vbsC9Hqs2po,26750
+deepmd_gnn/nequip.py,sha256=krm2SGzbETmWeEefB8w5smPW7Q2SWfBhnDVdujnFGFg,24619
+deepmd_gnn/op.py,sha256=NLbmEm9VGAEcz32seuXz6eXR9vTYmxVSIIyVACnkzPI,768
+deepmd_gnn/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+deepmd_gnn/lib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+deepmd_gnn/lib/libdeepmd_gnn.so,sha256=xpzSdBFcsgi9594NB3-XGmcoi3ViqnSGoXcF_beJc2Y,60192
+deepmd_gnn-0.1.1.dist-info/METADATA,sha256=yX-cXoXBlsqnX8doxubQlToHEKomxiarVAI-y3hjacM,16679
+deepmd_gnn-0.1.1.dist-info/WHEEL,sha256=fJse7bb26hqqpZgK5BCWP9_cED1DS2wBSvapjQ5DyYI,293
+deepmd_gnn-0.1.1.dist-info/entry_points.txt,sha256=tzBkIqyqP_nD-AZxTffUaJo77yBLtlLbI-XMeV8q_1A,85
+deepmd_gnn-0.1.1.dist-info/RECORD,,
+deepmd_gnn-0.1.1.dist-info/licenses/LICENSE,sha256=46mU2C5kSwOnkqkw9XQAJlhBL2JAf1_uCD8lVcXyMRg,7652
