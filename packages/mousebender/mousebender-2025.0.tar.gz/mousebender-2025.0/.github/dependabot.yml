@@ -1,0 +1,14 @@
+version: 2
+updates:
+  - package-ecosystem: pip
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "friday"
+
+  - package-ecosystem: github-actions
+    directory: "/"
+    labels: ["impact-project"]
+    schedule:
+      interval: "weekly"
+      day: "friday"

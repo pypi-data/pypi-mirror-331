@@ -1,0 +1,52 @@
+name: CI
+
+on: [pull_request, workflow_dispatch]
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Lint code
+        run: |
+          pipx run nox -s check_code
+
+      - name: Check format
+        run: |
+          pipx run nox -s check_format
+
+      - name: Type check
+        run: |
+          pipx run nox -s check_types
+
+      - name: Build docs
+        run: |
+          pipx run nox -s docs
+
+      - name: Build wheel
+        run: |
+          pipx run nox -s build
+
+  tests:
+    name: Test Python ${{ matrix.python_version }}
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python_version: ["3.8", "3.9", "3.10", "3.11", "3.12", "3.13"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python_version }}
+          cache: "pip"
+          cache-dependency-path: "pyproject.toml"
+
+      - name: Test
+        run: |
+          pipx run nox -s coverage --python ${{ matrix.python_version }}
