@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+src/ollama_ocr/__init__.py
+src/ollama_ocr/app.py
+src/ollama_ocr/ocr_processor.py
+src/ollama_ocr.egg-info/PKG-INFO
+src/ollama_ocr.egg-info/SOURCES.txt
+src/ollama_ocr.egg-info/dependency_links.txt
+src/ollama_ocr.egg-info/requires.txt
+src/ollama_ocr.egg-info/top_level.txt
