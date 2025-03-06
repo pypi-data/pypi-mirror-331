@@ -1,0 +1,13 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+gitsnitch/__init__.py
+gitsnitch/__version__.py
+gitsnitch/cli.py
+gitsnitch.egg-info/PKG-INFO
+gitsnitch.egg-info/SOURCES.txt
+gitsnitch.egg-info/dependency_links.txt
+gitsnitch.egg-info/entry_points.txt
+gitsnitch.egg-info/requires.txt
+gitsnitch.egg-info/top_level.txt
