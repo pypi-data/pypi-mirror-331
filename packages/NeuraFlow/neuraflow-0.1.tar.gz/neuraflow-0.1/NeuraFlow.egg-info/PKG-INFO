@@ -1,0 +1,38 @@
+Metadata-Version: 2.2
+Name: NeuraFlow
+Version: 0.1
+Summary: Pacote para redes neurais e aprendizado de máquina
+Home-page: https://github.com/Davizoca123312
+Author: Davi VilasBoas Ranci
+Author-email: rancidavi@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: joblib
+Requires-Dist: matplotlib
+Requires-Dist: scikit-learn
+Requires-Dist: imblearn
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# NeuraFlow
+
+**NeuraFlow** Ã© um pacote para redes neurais e aprendizado de mÃ¡quina, com funcionalidades para treinamento, teste e anÃ¡lise de modelos.
+
+## InstalaÃ§Ã£o
+
+Para instalar o pacote, execute:
+
+```bash
+pip install NeuraFlow
