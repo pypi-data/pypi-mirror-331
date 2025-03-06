@@ -1,0 +1,9 @@
+gamspy_sbb/__init__.py,sha256=y2wuczxZ5Z3q99nmivWQ2cmPd8mMhOoBsYqv7O5_FKk,317
+gamspy_sbb/gmssb_nt.cmd,sha256=zAsilo-NSHi4xLf5DiMAZam85Gcc1YJ6zDmNw5PRuAc,92
+gamspy_sbb/gmssb_nx.exe,sha256=EAjLiduTqF5XAYfNFrLqw_27-JTHcn-qR5nk6BiaS1U,557568
+gamspy_sbb/optsbb.def,sha256=hema6yiNepZvQV6UCBcBqTDxacAxVHu6mvu7UBfc50M,5115
+gamspy_sbb/version.py,sha256=4S-Vc2IxdmxmpWbenrCDrok7pDkv8_-nDFxiGe-I1Tc,22
+gamspy_sbb-49.2.0.dist-info/METADATA,sha256=9Eg_o9I4F5Sfmnai6W4pYBVXo633E_4GjKEDxjbJsl4,58
+gamspy_sbb-49.2.0.dist-info/WHEEL,sha256=Y1tIGiDkNxir7eBVqg1FOI6vN82QG6JWMAcEHcW8HpY,103
+gamspy_sbb-49.2.0.dist-info/top_level.txt,sha256=FTTI1e0--vYi9-d7VgNOsxLhRpuBkQYhcNP0bp_eJVc,11
+gamspy_sbb-49.2.0.dist-info/RECORD,,
