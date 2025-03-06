@@ -1,0 +1,11 @@
+upgrade_dependencies/__init__.py,sha256=Fm3LrLge2jH6Nw1jq-ZMEpCdPajBy_UwoWGzwr5VNVs,84
+upgrade_dependencies/__main__.py,sha256=40cej2R1ciBn-rK3olxFZ5uv-ZQfe21ohq-UtYUEyvc,105
+upgrade_dependencies/dependency.py,sha256=CgjuZOZkJwsCanCTKw1wlso31L1ftArHh4J7x9Yh9Lg,7695
+upgrade_dependencies/main.py,sha256=sZXjWXFKclNyrWVdySd2mGyBTd9ORUJrmijKlrLR9ow,14126
+upgrade_dependencies/project.py,sha256=R834LY6luIXKULjRx9GprJWVuoIH9HN_3OS1xvkYWWI,15798
+upgrade_dependencies/utils.py,sha256=SmgENr-xj6jhHynnmvLuYZn5Kx6f1SBbtO6DTSM_o5c,9497
+upgrade_dependencies-0.2.1.dist-info/METADATA,sha256=uu8NxOBCuFoAf7uRCD3rWXrsGCA5ykY7zT3qmCosHwg,3552
+upgrade_dependencies-0.2.1.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+upgrade_dependencies-0.2.1.dist-info/entry_points.txt,sha256=vW2dPjdHRTUOPsxogUU0-YUjiQyw5AKEjKlNeEC4Y-Y,71
+upgrade_dependencies-0.2.1.dist-info/licenses/LICENSE,sha256=jrHkC5Tzjq_Han6dgyxCYJ0yXL0AlcDz6AzSxJT0xUk,1075
+upgrade_dependencies-0.2.1.dist-info/RECORD,,

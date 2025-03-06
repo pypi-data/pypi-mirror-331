@@ -1,0 +1,2 @@
+[console_scripts]
+upgrade-dependencies = upgrade_dependencies.main:app
