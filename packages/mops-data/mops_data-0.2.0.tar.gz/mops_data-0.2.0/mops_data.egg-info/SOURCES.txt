@@ -1,0 +1,6 @@
+mops_data.py
+setup.py
+mops_data.egg-info/PKG-INFO
+mops_data.egg-info/SOURCES.txt
+mops_data.egg-info/dependency_links.txt
+mops_data.egg-info/top_level.txt
