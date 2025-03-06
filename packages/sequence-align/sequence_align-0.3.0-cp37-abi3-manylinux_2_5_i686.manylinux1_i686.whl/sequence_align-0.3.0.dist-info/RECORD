@@ -1,0 +1,9 @@
+sequence_align-0.3.0.dist-info/METADATA,sha256=v9AWoLCN6Jh_JM-m2GOcrmKgPh0bMqLX00RtCCBGjKw,7996
+sequence_align-0.3.0.dist-info/WHEEL,sha256=z_pMG7NSmttAV_s3Q4SW6YKjrKCVOq2p6_DguVH8X_I,119
+sequence_align-0.3.0.dist-info/licenses/LICENSE,sha256=KGoiyN7iKIcgCpwJmnMYn383EDyHDbK30tftOpV3wDc,11364
+sequence_align-0.3.0.dist-info/licenses/AUTHORS.md,sha256=dAcY7T9ufKSIMGQhAY3OWNkHGcKSTxXO-VR8lsyJ5Eo,56
+sequence_align/pairwise.py,sha256=47_kkdKCM6h60XYYqOupUho_vc-Q5dYuu2nrYuPUPTw,8689
+sequence_align/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sequence_align/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sequence_align/_sequence_align.abi3.so,sha256=QTXfMYqqY2Dvyz7g7STG--40didTrPspKQ_XKE-MH5o,458112
+sequence_align-0.3.0.dist-info/RECORD,,
