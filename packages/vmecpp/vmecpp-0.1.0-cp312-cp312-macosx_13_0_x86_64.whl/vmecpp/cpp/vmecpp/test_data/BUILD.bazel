@@ -1,0 +1,76 @@
+# SPDX-FileCopyrightText: 2024-present Proxima Fusion GmbH <info@proximafusion.com>
+#
+# SPDX-License-Identifier: MIT
+filegroup(
+    name = "solovev",
+    visibility = ["//visibility:public"],
+    srcs = [
+        "solovev.json",
+        "input.solovev",
+        "wout_solovev.nc",
+    ],
+)
+
+filegroup(
+    name = "solovev_analytical",
+    visibility = ["//visibility:public"],
+    srcs = [
+        "solovev_analytical.json",
+        "input.solovev_analytical",
+        "wout_solovev_analytical.nc",
+    ],
+)
+
+filegroup(
+    name = "solovev_no_axis",
+    visibility = ["//visibility:public"],
+    srcs = [
+        "solovev_no_axis.json",
+        "input.solovev_no_axis",
+        "wout_solovev_no_axis.nc",
+    ],
+)
+
+filegroup(
+    name = "cth_like_fixed_bdy",
+    visibility = ["//visibility:public"],
+    srcs = [
+        "cth_like_fixed_bdy.json",
+        "input.cth_like_fixed_bdy",
+        "wout_cth_like_fixed_bdy.nc",
+    ],
+)
+
+filegroup(
+    name = "cth_like_fixed_bdy_nzeta_37",
+    visibility = ["//visibility:public"],
+    srcs = [
+        "cth_like_fixed_bdy_nzeta_37.json",
+        "input.cth_like_fixed_bdy_nzeta_37",
+        "wout_cth_like_fixed_bdy_nzeta_37.nc",
+    ],
+)
+
+filegroup(
+    name = "cma",
+    visibility = ["//visibility:public"],
+    srcs = [
+        "cma.json",
+        "input.cma",
+        "jxbout_cma.nc",
+        "wout_cma.nc",
+    ],
+)
+
+filegroup(
+    name = "cth_like_free_bdy",
+    visibility = ["//visibility:public"],
+    srcs = [
+        "coils.cth_like",
+        "makegrid_parameters_cth_like.json",
+        "mgrid_cth_like.nc",
+        "cth_like_free_bdy.json",
+        "input.cth_like_free_bdy",
+        "wout_cth_like_free_bdy.nc",
+    ],
+)
