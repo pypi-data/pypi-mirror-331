@@ -1,0 +1,3 @@
+[console_scripts]
+github-scrapper=github_scrapper.app.main:main
+
