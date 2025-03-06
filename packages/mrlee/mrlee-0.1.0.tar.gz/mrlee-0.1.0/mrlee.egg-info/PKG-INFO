@@ -1,0 +1,64 @@
+Metadata-Version: 2.2
+Name: mrlee
+Version: 0.1.0
+Summary: A collection of simple and useful utilities for file and string operations.
+Home-page: https://github.com/kevinlulee/mrlee
+Author: Kevin Lee
+Author-email: kevinlulee1@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: pytest>=6.0; extra == "dev"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: provides-extra
+Dynamic: requires-python
+Dynamic: summary
+
+# Introduction
+
+Hi everyone. This is Mr. Lee and this is my first python project!
+
+It is a collection of simple and useful utilities for file and string operations. It provides easy-to-use functions for common tasks like reading/writing files, grouping data, and regex-based string manipulation.
+
+---
+
+## Features
+
+- **File Utilities**:
+  - Read and write files in various formats (JSON, YAML, TOML, raw text).
+  - Extract file extensions.
+  - Automatically create directories for file paths.
+
+- **String Utilities**:
+  - Group items by keys.
+  - Extract regex matches from strings.
+  - Modify strings by removing matched patterns.
+
+---
+
+## Installation
+
+You can install mrlee using `pip`:
+
+```bash
+pip install mrlee
+```
+
+Or clone from `github`:
+
+```bash
+git clone https://github.com/kevinlulee/mrlee.git
+cd mrlee
+pip install
+```
+
+Have fun! I can't wait to see your own python packages.

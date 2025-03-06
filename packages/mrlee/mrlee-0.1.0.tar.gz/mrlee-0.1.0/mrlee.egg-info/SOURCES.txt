@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+mrlee.egg-info/PKG-INFO
+mrlee.egg-info/SOURCES.txt
+mrlee.egg-info/dependency_links.txt
+mrlee.egg-info/requires.txt
+mrlee.egg-info/top_level.txt
+simplekit/__init__.py
+simplekit/file_utils.py
+simplekit/string_utils.py
+simplekit/text_tools.py
+simplekit/ts.py
+tests/test_file_utils.py
+tests/test_string_utils.py
+tests/test_text_tools.py
