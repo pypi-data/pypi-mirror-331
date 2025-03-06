@@ -1,0 +1,2 @@
+[console_scripts]
+Latex_toolkit = Latex_toolkit.main:main

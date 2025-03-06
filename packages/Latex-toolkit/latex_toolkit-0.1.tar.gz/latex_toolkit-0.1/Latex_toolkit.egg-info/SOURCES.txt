@@ -1,0 +1,9 @@
+README.md
+setup.py
+Latex_toolkit/__init__.py
+Latex_toolkit/main.py
+Latex_toolkit.egg-info/PKG-INFO
+Latex_toolkit.egg-info/SOURCES.txt
+Latex_toolkit.egg-info/dependency_links.txt
+Latex_toolkit.egg-info/entry_points.txt
+Latex_toolkit.egg-info/top_level.txt
