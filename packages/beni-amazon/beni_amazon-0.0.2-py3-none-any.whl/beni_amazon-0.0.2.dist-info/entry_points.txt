@@ -1,0 +1,2 @@
+[console_scripts]
+bamazon = bamazon.main:run
