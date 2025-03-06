@@ -1,0 +1,54 @@
+Metadata-Version: 2.3
+Name: acousticdistance
+Version: 0.1.0
+Summary: implements acoustic distance measures between two audio snippets with a MFCC-features and an ANN-features
+License: GPLv3+
+Author: Konstantin Sering
+Author-email: konstantin.sering@uni-tuebingen.de
+Requires-Python: >=3.9,<3.13
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Requires-Dist: dtw-python (>=1.5.3)
+Requires-Dist: librosa (>=0.10.2)
+Requires-Dist: numpy (>=2.1.3)
+Requires-Dist: torch (>=2.4.1)
+Requires-Dist: transformers (>=4.48.1)
+Project-URL: Repository, https://github.com/quantling/acousticdistance
+Description-Content-Type: text/x-rst
+
+================
+Acousticdistance
+================
+
+At the moment this is supplementary material for the presentation of "Phonetic
+distances in L3-speech" of the ESSV2025 (https://www.essv.de/essv2025/).
+
+This is a loose reimplementation of the ideas in 
+
+https://github.com/Bartelds/neural-acoustic-distance
+
+and
+
+https://github.com/Bartelds/acoustic-distance-measure
+
+as a python module with a minimal set of additional software needed.
+
+Furthermore, it includes all the additional scripts to re-run the distance
+calculations and the data analysis.
+
+Due to privacy reasons the data is not included in the repository.
+
+
