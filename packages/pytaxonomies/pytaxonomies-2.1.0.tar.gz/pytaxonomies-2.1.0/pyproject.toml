@@ -1,0 +1,45 @@
+[project]
+name = "pytaxonomies"
+version = "2.1.0"
+description = "Python API for the taxonomies."
+authors = [{name="Raphaël Vinot", email="raphael.vinot@circl.lu"}]
+license = "BSD-3-Clause"
+repository = "https://github.com/MISP/PyTaxonomies"
+readme = "README.md"
+requires-python = ">=3.9"
+
+dynamic = ["classifiers"]
+
+[tool.poetry]
+classifiers=[
+    'Development Status :: 5 - Production/Stable',
+    'Environment :: Console',
+    'Intended Audience :: Science/Research',
+    'Intended Audience :: Telecommunications Industry',
+    'Topic :: Security',
+    'Topic :: Internet',
+]
+
+exclude = ["pytaxonomies/data/misp-taxonomies"]
+include = [
+    { path = "pytaxonomies/data/misp-taxonomies/MANIFEST.json", format = ["sdist", "wheel"] },
+    { path = "pytaxonomies/data/misp-taxonomies/schema.json", format = ["sdist", "wheel"] },
+    { path = "pytaxonomies/data/misp-taxonomies/*/machinetag.json", format = ["sdist", "wheel"] }
+]
+
+[project.scripts]
+pytaxonomies = 'pytaxonomies.script:main'
+
+[project.optional-dependencies]
+webui = ["flask-nav (>=0.6)", "Flask (>=3.1.0)",  "Flask-Bootstrap (>=3.3.7.1)", "Flask-WTF (>=1.2.2)"]
+remote = ["requests (>=2.32.3)"]
+
+[tool.poetry.group.dev.dependencies]
+jsonschema = "^4.23.0"
+mypy = "^1.15.0"
+types-requests = "^2.32.0.20250301"
+pytest-cov = "^6.0.0"
+
+[build-system]
+requires = ["poetry_core>=2.0"]
+build-backend = "poetry.core.masonry.api"
