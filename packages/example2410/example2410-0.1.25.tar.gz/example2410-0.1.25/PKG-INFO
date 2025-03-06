@@ -1,0 +1,18 @@
+Metadata-Version: 2.3
+Name: example2410
+Version: 0.1.25
+Summary: Moneybird SDK for example2024
+License: MIT
+Author: BPro2410
+Requires-Python: >=3.10,<3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: httpx (>=0.27.2,<0.28.0)
+Requires-Dist: pydantic (>=2.10.6,<3.0.0)
+Requires-Dist: tensorflow (==2.12)
+Description-Content-Type: text/markdown
+
+# test
+
+test
