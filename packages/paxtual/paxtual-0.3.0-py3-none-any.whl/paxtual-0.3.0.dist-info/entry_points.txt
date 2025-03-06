@@ -1,0 +1,4 @@
+[console_scripts]
+e7labels = paxtual.entry_points:e7labels
+paxtui = paxtual.entry_points:paxtui
+welcome = paxtual.entry_points:welcome
