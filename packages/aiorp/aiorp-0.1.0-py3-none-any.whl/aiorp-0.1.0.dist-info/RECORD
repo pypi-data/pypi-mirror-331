@@ -1,0 +1,9 @@
+aiorp/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aiorp/context.py,sha256=mndtUvGWQwxI6aCHc2c_TqRDj1YcwL-yosL6ku_51-c,923
+aiorp/handler.py,sha256=N00GTL5bczNPf0KmUaYMw1l3XiTfQcta9XNsPjuLN8w,10968
+aiorp/request.py,sha256=i0AZVs58uuXTMdfGZKM-gu4ALp9w8fBkzKjQJoPg-70,3346
+aiorp/response.py,sha256=j9tDXQSqtFFwzFXijnlS0sQlynK_C6bLDk9IoqxEjv4,2037
+aiorp-0.1.0.dist-info/METADATA,sha256=ZlvD9ZU8-grrg6ZDgrsHb2_0fMQ1H_WNtRdK65U6jn0,211
+aiorp-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+aiorp-0.1.0.dist-info/licenses/LICENSE,sha256=KuZX_PE7PRDffyUsaEmxLOZBecfheJ-tNfD5zaCMZ0U,1073
+aiorp-0.1.0.dist-info/RECORD,,
