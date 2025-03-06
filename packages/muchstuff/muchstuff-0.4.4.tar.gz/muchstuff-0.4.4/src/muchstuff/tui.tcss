@@ -1,0 +1,161 @@
+$contenttabborder: round $primary-lighten-3;
+
+Collapsible {
+    border: none;
+    padding-left: 1;
+    &:focus-within {
+        outline-left: solid $primary-lighten-3;
+    }
+}
+
+CollapsibleTitle:focus {
+    background: $surface;
+    background-tint: $foreground 5%;
+    color: $primary-lighten-3;
+}
+
+ContentTabs {
+    height: 4;
+}
+
+#tabs-list {
+    height: 3;
+}
+
+ContentTab {
+    border: $contenttabborder 20%;
+    padding: 0;
+    height: 3;
+    min-width: 10;
+    border-title-align: right;
+    border-subtitle-align: right;
+}
+
+ContentTab.active {
+    border: $contenttabborder 80%;
+}
+
+ContentTab.hidden {
+    visibility: hidden;
+}
+
+ContentTab#--content-tab-__empty {
+    width: 100%;
+    border: solid $accent-lighten-3;
+}
+
+SearchScreen {
+    align: center middle;
+}
+
+SearchScreen .searchbackground {
+    width: auto;
+    height: auto;
+    visibility: hidden;
+}
+
+SearchScreen .candidatesbackground {
+    width: auto;
+    height: auto;
+    visibility: visible;
+}
+
+SearchScreen OptionList {
+    height: auto;
+    width: auto;
+}
+
+SearchScreen SearchIcon {
+    visibility: visible;
+    width: auto;
+    height: auto;
+    color: green;
+    background: $surface;
+    margin: 0;
+}
+
+SearchScreen Input {
+    visibility: visible;
+    /* align: center middle; */
+    /* align-horizontal: right; */
+    border: none;
+    min-width: 20;
+    padding-left: 0;
+    /* margin-bottom: 2; */
+    /* margin-right: 1; */
+    width: auto;
+    /* dock: bottom; */
+    height: auto;
+    /* padding: 1; */
+    /* outline: solid; */
+}
+
+Errors {
+    align: center middle;
+    #errorscontainer {
+        width: auto;
+        height: auto;
+        align: center middle;
+        .error {
+            min-width: 105;
+            width: auto;
+            height: auto;
+        }
+    }
+}
+
+DefaultScreen {
+    layers: default counter;
+}
+
+#donecounter {
+    layer: counter;
+    offset-y: 3;
+    /* background: $secondary; */
+    width: auto;
+    dock: right;
+    /* foreground: $primary; */
+    &.finished {
+        /* visibility: hidden; */
+    }
+}
+
+.log {
+    min-height: 100%;
+    height: auto;
+    overflow: auto auto;
+}
+
+.error-output {
+    margin-top: 1;
+}
+
+CriticalError {
+    align: center middle;
+    #error {
+        border: panel red;
+        border-title-align: center;
+        align: center middle;
+        text-align: center;
+        min-width: 25%;
+        width: auto;
+        height: auto;
+        #error-content {
+            min-width: 100;
+        }
+        #error-label {
+            align: center middle;
+            /* text-align: center; */
+            width: 100%;
+            color: $error;
+            margin: 1;
+        }
+        #error-collapsible {
+            width: auto;
+            min-width: 105;
+        }
+        Center {
+            width: 100%;
+        }
+    }
+}
