@@ -1,0 +1,15 @@
+README.md
+setup.py
+pymeshoptimizer/__init__.py
+pymeshoptimizer/arrayutils.py
+pymeshoptimizer/io.py
+pymeshoptimizer/mesh.py
+pymeshoptimizer.egg-info/PKG-INFO
+pymeshoptimizer.egg-info/SOURCES.txt
+pymeshoptimizer.egg-info/dependency_links.txt
+pymeshoptimizer.egg-info/requires.txt
+pymeshoptimizer.egg-info/top_level.txt
+tests/test_array_utils.py
+tests/test_encoded_mesh.py
+tests/test_io.py
+tests/test_mesh_integrity.py
