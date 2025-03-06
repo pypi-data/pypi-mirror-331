@@ -1,0 +1,49 @@
+[tool.poetry]
+name = "languagetools"
+version = "0.1.12"
+description = "Tools for language models"
+authors = ["Open Interpreter Inc."]
+license = "All Rights Reserved"
+readme = "README.md"
+packages = [{include = "computer"}]
+
+[tool.poetry.dependencies]
+python = "~3.12"
+openai = "^1.46.0"
+requests = "^2.32.3"
+html2text = "^2024.2.26"
+webdriver-manager = "^4.0.2"
+ipython = "^8.27.0"
+pillow = ">=10.3.0,<11.0.0"
+html2image = "^2.0.5"
+pyperclip = "^1.9.0"
+pyautogui = "^0.9.54"
+pytz = "^2024.2"
+yt-dlp = {extras = ["default"], version = "^2024.11.4"}
+pypdf2 = "^3.0.1"
+pandas = "2.2.0"
+pyobjc = {version = "^10.3.2", platform = "darwin"}
+typer = "^0.15.1"
+pdf2image = "^1.17.0"
+pdftotext = "^3.0.0"
+weasyprint = "^63.1"
+pypandoc = "^1.15"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+pytest-asyncio = "^0.24.0"
+
+[tool.poetry.scripts]
+lt = "computer.cli:main"
+tools = "computer.cli:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.pyright]
+venvPath = ".venv"
+reportMissingTypeStubs = false
+# https://github.com/microsoft/pyright/blob/main/docs/configuration.md
+useLibraryCodeForTypes = true
