@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fabulous-cli"
+version = "0.1.0"
+description = "Fabulous CLI - A basic Python CLI example"
+authors = [{ name = "Your Name", email = "your.email@example.com" }]
+urls = { "Homepage" = "https://github.com/yourusername/fabulous-cli" }
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.scripts]
+fabulous = "fabulous_cli.cli:main"

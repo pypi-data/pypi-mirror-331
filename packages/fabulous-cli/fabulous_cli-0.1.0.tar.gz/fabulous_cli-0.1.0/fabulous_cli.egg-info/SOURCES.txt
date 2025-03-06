@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+fabulous_cli/__init__.py
+fabulous_cli/cli.py
+fabulous_cli.egg-info/PKG-INFO
+fabulous_cli.egg-info/SOURCES.txt
+fabulous_cli.egg-info/dependency_links.txt
+fabulous_cli.egg-info/entry_points.txt
+fabulous_cli.egg-info/top_level.txt
