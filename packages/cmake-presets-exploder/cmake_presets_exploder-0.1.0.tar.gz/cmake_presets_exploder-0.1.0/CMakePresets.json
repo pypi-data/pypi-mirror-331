@@ -1,0 +1,78 @@
+{
+  "version": 5,
+  "configurePresets": [
+    {
+      "name": "base-config",
+      "generator": "Ninja",
+      "hidden": true
+    },
+    {
+      "name": "configure-gcc",
+      "hidden": true,
+      "inherits": [
+        "base-config"
+      ],
+      "toolchainFile": "gcc"
+    },
+    {
+      "name": "configure-clang",
+      "hidden": true,
+      "inherits": [
+        "base-config"
+      ],
+      "toolchainFile": "clang"
+    },
+    {
+      "name": "configure-feature-x-on",
+      "hidden": true,
+      "inherits": [
+        "base-config"
+      ],
+      "cacheVariables": {
+        "ENABLE_FEATURE_X": "on"
+      }
+    },
+    {
+      "name": "configure-feature-x-off",
+      "hidden": true,
+      "inherits": [
+        "base-config"
+      ],
+      "cacheVariables": {
+        "ENABLE_FEATURE_X": "off"
+      }
+    },
+    {
+      "name": "configure-gcc-feature-x-on",
+      "inherits": [
+        "base-config",
+        "configure-gcc",
+        "configure-feature-x-on"
+      ]
+    },
+    {
+      "name": "configure-gcc-feature-x-off",
+      "inherits": [
+        "base-config",
+        "configure-gcc",
+        "configure-feature-x-off"
+      ]
+    },
+    {
+      "name": "configure-clang-feature-x-on",
+      "inherits": [
+        "base-config",
+        "configure-clang",
+        "configure-feature-x-on"
+      ]
+    },
+    {
+      "name": "configure-clang-feature-x-off",
+      "inherits": [
+        "base-config",
+        "configure-clang",
+        "configure-feature-x-off"
+      ]
+    }
+  ]
+}

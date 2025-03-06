@@ -1,0 +1,46 @@
+version: 5
+configurePresets:
+  - name: windows-static
+    binaryDir: "${sourceDir}/build"
+    toolchainFile: "${sourceDir}/vcpkg/scripts/buildsystems/vcpkg.cmake"
+    cacheVariables:
+      VCPKG_TARGET_TRIPLET: "x64-windows-static"
+      BUILD_SHARED_LIBS: "OFF"
+      ZLIB_USE_STATIC_LIBS: "ON"
+      FETCH_VENDORED: "OFF"
+      BUILD_TESTS: "ON"
+    condition:
+      type: equals
+      lhs: "${hostSystemName}"
+      rhs: Windows
+buildPresets:
+  - name: build-windows
+    hidden: true
+    condition:
+      type: equals
+      lhs: "${hostSystemName}"
+      rhs: Windows
+vendor:
+  exploder:
+    version: 0
+    presetGroups:
+      windows-static:
+        type: configure
+        inherits: [windows-static]
+        parameters:
+          generator:
+            msbuild: Visual Studio 17 2022
+            ninja: Ninja
+            ninja-multi: Ninja Multi-Config
+      build:
+        type: build
+        parameters:
+          configurePreset:
+            - msbuild
+            - ninja-multi
+          configuration:
+            - Debug
+            - Release
+            - RelWithDebInfo
+        templates:
+          configurePreset: "windows-static-{value}"

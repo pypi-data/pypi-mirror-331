@@ -1,0 +1,35 @@
+{
+  "version": 5,
+  "configurePresets": [
+    {
+      "name": "base-config",
+      "generator": "Ninja",
+      "hidden": true
+    }
+  ],
+  "vendor": {
+    "exploder": {
+      "version": 0,
+      "presetGroups": {
+        "configure": {
+          "type": "configure",
+          "inherits": ["base-config"],
+          "parameters": {
+            "toolchainFile": ["gcc", "clang"],
+            "feature-x": {
+              "feature-x-on": "on",
+              "feature-x-off": "off"
+            }
+          },
+          "templates": {
+            "feature-x": {
+              "cacheVariables": {
+                "ENABLE_FEATURE_X": "{value}"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
