@@ -1,0 +1,4 @@
+[console_scripts]
+lt=computer.cli:main
+tools=computer.cli:main
+
