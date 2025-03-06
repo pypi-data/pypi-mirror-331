@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mini_version_manager"
+version = "0.0.6"
+description = "A simple version management tool"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+    { name="bjk", email="228558063@qq.com" }
+]
+dependencies = [
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/bjkjy/UART-analysis-scheme-based-on-RT-Thread-operating-system.git"

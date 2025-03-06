@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+mini_version_manager/__init__.py
+mini_version_manager/mini_version_manager.py
+mini_version_manager.egg-info/PKG-INFO
+mini_version_manager.egg-info/SOURCES.txt
+mini_version_manager.egg-info/dependency_links.txt
+mini_version_manager.egg-info/top_level.txt
