@@ -1,0 +1,10 @@
+pycloudshare/__init__.py,sha256=HXuMXdgxof_jJVIR2gYAXDalm69_KrUAW78f6ylZT9o,354
+pycloudshare/accelerate.py,sha256=jU20KSiTx68UfF_bxP1BmCSd8aMJ8cYuGkOj2aOtpoo,4489
+pycloudshare/classic.py,sha256=k8ZXd14wD9V-dbaw2M15bhOPEdO0kEauvQemlnJJ34Y,12550
+pycloudshare/infrastructure.py,sha256=gOVZcIKCrZYQ2injgLWMDy9VvlWsQoRtYmbN-lWaioE,2534
+pycloudshare/utils.py,sha256=RLjTcoKUYF8WXYoMH7vBanoMaqYb8vaG_iPyokR2mMM,573
+pycloudshare-1.0.data/scripts/manage-cloudshare.py,sha256=Wu1Rfwo7m4Ro-XXeTvuiUqEA87b3D9bMLNMqhX6BLSA,633
+pycloudshare-1.0.dist-info/METADATA,sha256=7386TsrDuOq9OidVp5ZESX_1T2HO4YeZlAmJq3jHfuE,965
+pycloudshare-1.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+pycloudshare-1.0.dist-info/top_level.txt,sha256=cwOFu0KNdgTcFW6O1o_wE4d1asnDrmAJscqeR6S1hLI,13
+pycloudshare-1.0.dist-info/RECORD,,
