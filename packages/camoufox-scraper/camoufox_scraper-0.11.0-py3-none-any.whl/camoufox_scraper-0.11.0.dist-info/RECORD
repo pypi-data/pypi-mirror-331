@@ -1,0 +1,14 @@
+camoufox_scraper-0.11.0.dist-info/METADATA,sha256=Spj0J99jb849cYzgc_o9Pd7kXBSnPQ_3jotoY4ck8vk,3493
+camoufox_scraper-0.11.0.dist-info/WHEEL,sha256=thaaA2w1JzcGC48WYufAs8nrYZjJm8LqNfnXFOFyCC4,90
+camoufox_scraper-0.11.0.dist-info/entry_points.txt,sha256=YN3aU4_MRj0ugnnz1FilAUYglrt_ysUReuQFIW8JxlE,83
+camoufox_scraper-0.11.0.dist-info/licenses/LICENSE.txt,sha256=IDwQri-SNW1lhSLuYduX5dqtY0xdxBkLwL0joVEaM7Q,34675
+camoufox_scraper/__init__.py,sha256=SEJOjvVbxVsYc7Ot_s4VGewZVPmhuk7OlHMpopCK7ts,124
+camoufox_scraper/lib/__init__.py,sha256=YMVWdvEWv4YP9wrx9wAZI1WI2yV0Y8UloCPUplXBz1Q,37
+camoufox_scraper/lib/base.py,sha256=bNO1Kbo9hTbjeHf1TSjyJN9uZE8DbcC1AsOp8w74nkU,7804
+camoufox_scraper/lib/factory.py,sha256=vWYKhiZFZZbdxG12Xu7p8dSrT4nxR7X6PoQKTd0OWmQ,1459
+camoufox_scraper/lib/scrapers/__init__.py,sha256=EO8VP2PTtc4uitSNI6LhIdqjS6zFdJRXP8J7pR3-rzU,46
+camoufox_scraper/lib/scrapers/freevideos.py,sha256=cKOUYFx6AakbAiK2lgptFFjmpb3XlWze0iBWyksM6rs,13424
+camoufox_scraper/lib/utils/__init__.py,sha256=WTaiKoFiPma4zNOVGB5MYNiSJ4MftLDIrpn2ge1-A5I,38
+camoufox_scraper/lib/utils/camoufox_handler.py,sha256=8RYZfxXqIsFzvFa8WEv9mjC6grE_LhBleCgIT7WfVm0,2170
+camoufox_scraper/scraper.py,sha256=xdnQzxqY2Ksza5BGFxPwM0DrKj6tg0SVdfE60MX0sJ0,6591
+camoufox_scraper-0.11.0.dist-info/RECORD,,
