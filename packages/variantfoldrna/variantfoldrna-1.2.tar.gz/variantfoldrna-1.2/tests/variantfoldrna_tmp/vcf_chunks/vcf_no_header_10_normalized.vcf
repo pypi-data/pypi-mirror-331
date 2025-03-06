@@ -1,0 +1,120 @@
+##fileformat=VCFv4.1
+##FILTER=<ID=PASS,Description="All filters passed">
+##fileDate=20230414
+##source=ensembl;version=110;url=https://e110.ensembl.org/saccharomyces_cerevisiae_s288c
+##reference=https://ftp.ensembl.org/pub/release-110/fasta/saccharomyces_cerevisiae_s288c/dna/
+##INFO=<ID=SGRP,Number=0,Type=Flag,Description="Variation features from SGRP, with Ensembl identifiers">
+##INFO=<ID=TSA,Number=1,Type=String,Description="Type of sequence alteration. Child of term sequence_alteration as defined by the sequence ontology project.">
+##INFO=<ID=E_Cited,Number=0,Type=Flag,Description="Cited.https://www.ensembl.org/info/genome/variation/prediction/variant_quality.html#evidence_status">
+##INFO=<ID=E_Multiple_observations,Number=0,Type=Flag,Description="Multiple_observations.https://www.ensembl.org/info/genome/variation/prediction/variant_quality.html#evidence_status">
+##INFO=<ID=E_Freq,Number=0,Type=Flag,Description="Frequency.https://www.ensembl.org/info/genome/variation/prediction/variant_quality.html#evidence_status">
+##INFO=<ID=E_TOPMed,Number=0,Type=Flag,Description="TOPMed.https://www.ensembl.org/info/genome/variation/prediction/variant_quality.html#evidence_status">
+##INFO=<ID=E_Hapmap,Number=0,Type=Flag,Description="HapMap.https://www.ensembl.org/info/genome/variation/prediction/variant_quality.html#evidence_status">
+##INFO=<ID=E_Phenotype_or_Disease,Number=0,Type=Flag,Description="Phenotype_or_Disease.https://www.ensembl.org/info/genome/variation/prediction/variant_quality.html#evidence_status">
+##INFO=<ID=E_ESP,Number=0,Type=Flag,Description="ESP.https://www.ensembl.org/info/genome/variation/prediction/variant_quality.html#evidence_status">
+##INFO=<ID=E_gnomAD,Number=0,Type=Flag,Description="gnomAD.https://www.ensembl.org/info/genome/variation/prediction/variant_quality.html#evidence_status">
+##INFO=<ID=E_1000G,Number=0,Type=Flag,Description="1000Genomes.https://www.ensembl.org/info/genome/variation/prediction/variant_quality.html#evidence_status">
+##INFO=<ID=E_ExAC,Number=0,Type=Flag,Description="ExAC.https://www.ensembl.org/info/genome/variation/prediction/variant_quality.html#evidence_status">
+##INFO=<ID=OLD_MULTIALLELIC,Number=1,Type=String,Description="Original chr:pos:ref:alt encoding">
+##contig=<ID=I>
+##bcftools_normVersion=1.10.2+htslib-1.20
+##bcftools_normCommand=norm --check-ref s --fasta-ref /storage/home/kjk6173/group/kjk6173/variantfoldrna/tests/test_data/pipeline_input/yeast_ref_genome.fa --output-type v -o /storage/group/pcb5/default/kjk6173/variantfoldrna/tests/variantfoldrna_tmp/vcf_chunks/vcf_no_header_10_normalized.vcf /storage/group/pcb5/default/kjk6173/variantfoldrna/tests/variantfoldrna_tmp/vcf_chunks/vcf_no_header_10_seperated.vcf.gz; Date=Fri Nov  1 02:46:23 2024
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO
+I	13872	s01-13873	C	T	.	.	SGRP;TSA=SNV
+I	13942	s01-13943	A	G	.	.	SGRP;TSA=SNV
+I	13965	s01-13966	G	A	.	.	SGRP;TSA=SNV
+I	14002	s01-14003	G	A	.	.	SGRP;TSA=SNV
+I	14012	s01-14013	T	C	.	.	SGRP;TSA=SNV
+I	14025	s01-14026	C	T	.	.	SGRP;TSA=SNV
+I	14058	s01-14059	T	C	.	.	SGRP;TSA=SNV
+I	14062	s01-14063	T	C	.	.	SGRP;TSA=SNV
+I	14100	s01-14101	G	A	.	.	SGRP;TSA=SNV
+I	14195	s01-14196	A	T	.	.	SGRP;TSA=SNV
+I	14196	s01-14197	A	G	.	.	SGRP;TSA=SNV
+I	14207	s01-14208	T	C	.	.	SGRP;TSA=SNV
+I	14221	s01-14222	C	T	.	.	SGRP;TSA=SNV
+I	14262	s01-14263	C	T	.	.	SGRP;TSA=SNV
+I	14312	s01-14313	C	G	.	.	SGRP;TSA=SNV
+I	14314	s01-14315	C	T	.	.	SGRP;TSA=SNV
+I	14343	s01-14344	A	G	.	.	SGRP;TSA=SNV
+I	14385	s01-14386	T	C	.	.	SGRP;TSA=SNV
+I	14395	s01-14396	A	C	.	.	SGRP;TSA=SNV
+I	14405	s01-14406	G	A	.	.	SGRP;TSA=SNV
+I	14420	s01-14421	C	A	.	.	SGRP;TSA=SNV
+I	14478	s01-14479	A	G	.	.	SGRP;TSA=SNV
+I	14634	s01-14635	C	T	.	.	SGRP;TSA=SNV
+I	14667	s01-14668	T	C	.	.	SGRP;TSA=SNV
+I	14689	s01-14690	A	G	.	.	SGRP;TSA=SNV
+I	14718	s01-14719	A	C	.	.	SGRP;TSA=SNV
+I	14723	s01-14724	T	C	.	.	SGRP;TSA=SNV
+I	14753	s01-14754	T	C	.	.	SGRP;TSA=SNV
+I	14760	s01-14761	T	C	.	.	SGRP;TSA=SNV
+I	14765	s01-14766	G	A	.	.	SGRP;TSA=SNV
+I	14788	s01-14789	G	A	.	.	SGRP;TSA=SNV
+I	14795	s01-14796	T	G	.	.	SGRP;TSA=SNV
+I	14888	s01-14889	C	T	.	.	SGRP;TSA=SNV
+I	15045	s01-15046	T	C	.	.	SGRP;TSA=SNV
+I	15054	s01-15055	G	A	.	.	SGRP;TSA=SNV
+I	15060	s01-15061	G	A	.	.	SGRP;TSA=SNV
+I	15074	s01-15075	A	G	.	.	SGRP;TSA=SNV
+I	15098	s01-15099	A	C	.	.	SGRP;TSA=SNV;OLD_MULTIALLELIC=I:15098:A/C/T
+I	15098	s01-15099	A	T	.	.	SGRP;TSA=SNV;OLD_MULTIALLELIC=I:15098:A/C/T
+I	15101	s01-15102	A	T	.	.	SGRP;TSA=SNV
+I	15106	s01-15107	C	T	.	.	SGRP;TSA=SNV
+I	15116	s01-15117	C	A	.	.	SGRP;TSA=SNV
+I	15131	s01-15132	A	C	.	.	SGRP;TSA=SNV
+I	15153	s01-15154	T	C	.	.	SGRP;TSA=SNV
+I	15200	s01-15201	C	G	.	.	SGRP;TSA=SNV
+I	15236	s01-15237	T	C	.	.	SGRP;TSA=SNV
+I	15247	s01-15248	A	G	.	.	SGRP;TSA=SNV
+I	15250	s01-15251	C	T	.	.	SGRP;TSA=SNV
+I	15274	s01-15275	A	G	.	.	SGRP;TSA=SNV
+I	15284	s01-15285	G	A	.	.	SGRP;TSA=SNV
+I	15289	s01-15290	A	T	.	.	SGRP;TSA=SNV
+I	15315	s01-15316	A	C	.	.	SGRP;TSA=SNV
+I	15330	s01-15331	C	G	.	.	SGRP;TSA=SNV
+I	15331	s01-15332	T	G	.	.	SGRP;TSA=SNV
+I	15337	s01-15338	T	C	.	.	SGRP;TSA=SNV
+I	15347	s01-15348	C	A	.	.	SGRP;TSA=SNV
+I	15349	s01-15350	G	T	.	.	SGRP;TSA=SNV
+I	15352	s01-15353	A	T	.	.	SGRP;TSA=SNV
+I	15353	s01-15354	G	A	.	.	SGRP;TSA=SNV
+I	15358	s01-15359	C	T	.	.	SGRP;TSA=SNV
+I	15364	s01-15365	C	G	.	.	SGRP;TSA=SNV
+I	15388	s01-15389	G	A	.	.	SGRP;TSA=SNV
+I	15426	s01-15427	G	A	.	.	SGRP;TSA=SNV
+I	15460	s01-15461	T	C	.	.	SGRP;TSA=SNV
+I	15472	s01-15473	A	G	.	.	SGRP;TSA=SNV
+I	15475	s01-15476	T	C	.	.	SGRP;TSA=SNV
+I	15477	s01-15478	C	A	.	.	SGRP;TSA=SNV
+I	15502	s01-15503	T	A	.	.	SGRP;TSA=SNV
+I	15504	s01-15505	A	T	.	.	SGRP;TSA=SNV
+I	15538	s01-15539	G	A	.	.	SGRP;TSA=SNV
+I	15549	s01-15550	C	T	.	.	SGRP;TSA=SNV
+I	15592	s01-15593	G	C	.	.	SGRP;TSA=SNV
+I	15615	s01-15616	T	A	.	.	SGRP;TSA=SNV
+I	15673	s01-15674	A	G	.	.	SGRP;TSA=SNV
+I	15730	s01-15731	C	T	.	.	SGRP;TSA=SNV
+I	15752	s01-15753	G	C	.	.	SGRP;TSA=SNV
+I	15772	s01-15773	C	T	.	.	SGRP;TSA=SNV
+I	15816	s01-15817	T	C	.	.	SGRP;TSA=SNV
+I	15843	s01-15844	A	T	.	.	SGRP;TSA=SNV
+I	15869	s01-15870	A	T	.	.	SGRP;TSA=SNV
+I	15870	s01-15871	A	T	.	.	SGRP;TSA=SNV
+I	15871	s01-15872	T	A	.	.	SGRP;TSA=SNV
+I	15876	s01-15877	A	G	.	.	SGRP;TSA=SNV
+I	15880	s01-15881	A	G	.	.	SGRP;TSA=SNV
+I	15896	s01-15897	A	T	.	.	SGRP;TSA=SNV
+I	15904	s01-15905	G	A	.	.	SGRP;TSA=SNV
+I	15916	s01-15917	A	G	.	.	SGRP;TSA=SNV
+I	15917	s01-15918	G	C	.	.	SGRP;TSA=SNV
+I	15921	s01-15922	C	T	.	.	SGRP;TSA=SNV
+I	15957	s01-15958	G	A	.	.	SGRP;TSA=SNV
+I	15958	s01-15959	C	T	.	.	SGRP;TSA=SNV
+I	16007	s01-16008	G	T	.	.	SGRP;TSA=SNV
+I	16034	s01-16035	G	A	.	.	SGRP;TSA=SNV
+I	16039	s01-16040	C	G	.	.	SGRP;TSA=SNV
+I	16046	s01-16047	T	C	.	.	SGRP;TSA=SNV
+I	16055	s01-16056	A	T	.	.	SGRP;TSA=SNV
+I	16061	s01-16062	G	A	.	.	SGRP;TSA=SNV
+I	16080	s01-16081	C	T	.	.	SGRP;TSA=SNV
