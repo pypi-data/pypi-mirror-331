@@ -1,0 +1,29 @@
+Metadata-Version: 2.2
+Name: feature-lists
+Version: 0.1.2
+Summary: A simple video bookmarking and rating system for Django.
+Home-page: https://github.com/omkar130/feature_lists.git
+Author: Omkar Mahajan
+Author-email: mahajanomkar86@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: summary
+
+# Feature Lists
+
+Save Video, Liked Video, Video Delete and Channel Delete for Django projects.
+
+## Installation
+
+```bash
+pip install feature_lists
