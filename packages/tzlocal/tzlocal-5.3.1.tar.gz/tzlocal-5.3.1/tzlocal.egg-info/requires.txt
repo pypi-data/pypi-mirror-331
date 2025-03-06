@@ -1,0 +1,10 @@
+
+[:platform_system == "Windows"]
+tzdata
+
+[devenv]
+pytest>=4.3
+pytest-mock>=3.3
+pytest-cov
+check_manifest
+zest.releaser
