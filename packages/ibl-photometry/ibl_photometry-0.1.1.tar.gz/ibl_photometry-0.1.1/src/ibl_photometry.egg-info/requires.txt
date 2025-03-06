@@ -1,0 +1,8 @@
+ibllib
+numpy
+matplotlib
+pytest
+scipy
+pandera
+pywavelets
+pandas
