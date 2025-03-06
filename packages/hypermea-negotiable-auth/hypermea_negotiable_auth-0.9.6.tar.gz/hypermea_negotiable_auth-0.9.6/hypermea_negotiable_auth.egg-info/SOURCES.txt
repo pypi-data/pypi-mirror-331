@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+hypermea_negotiable_auth/__init__.py
+hypermea_negotiable_auth/negotiable_auth.py
+hypermea_negotiable_auth.egg-info/PKG-INFO
+hypermea_negotiable_auth.egg-info/SOURCES.txt
+hypermea_negotiable_auth.egg-info/dependency_links.txt
+hypermea_negotiable_auth.egg-info/requires.txt
+hypermea_negotiable_auth.egg-info/top_level.txt
