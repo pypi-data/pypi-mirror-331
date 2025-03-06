@@ -1,0 +1,13 @@
+[tool.poetry]
+name = "find-city"
+version = "0.1.4"
+description = ""
+authors = ["Jeferson Dalarmi"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
