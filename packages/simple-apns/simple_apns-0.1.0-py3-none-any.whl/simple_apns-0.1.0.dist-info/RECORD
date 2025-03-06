@@ -1,0 +1,13 @@
+simple_apns/__init__.py,sha256=9H11atsHc3o9WO5fkure48J3MiXRVKQUNXxC5JrrTi0,577
+simple_apns/auth.py,sha256=qvqTBty84AMuG3afWgEw4O5muFRQz5uaHlPDYOE4ZPw,2110
+simple_apns/client.py,sha256=MMLnoEZA4ISA06XDwYKnTKYpyjC480fM1sLcjsD8KRo,9201
+simple_apns/exceptions.py,sha256=Bc7Q6Rljv13-IdWzCC3BJWbGDSmJpCXL8xdM8Libryo,553
+simple_apns/payload.py,sha256=iU98v4oEfvEgt9ppUTOfTwDaZjwd3FlOpD5ooC7LMrY,8204
+simple_apns/django/__init__.py,sha256=WnpUorch8TgBUXu09aEo1oD0M1eShcMkRKKRJ3uEbVE,370
+simple_apns/django/apps.py,sha256=R761leKYzYyPnVePLbk0vHq1XDv_FxQqcZEqvO1JzoQ,245
+simple_apns/django/integration.py,sha256=Fn3vC3Y4m5K1lW0NoRKeb39CdXTjC4qgqD5P7DUsgbQ,8251
+simple_apns-0.1.0.dist-info/LICENSE,sha256=dKWtDMXhBdJHqUxc8k1yIiDvH89JxHqqWmBsRxsrqKQ,1089
+simple_apns-0.1.0.dist-info/METADATA,sha256=v37uVUsPJFDIEZJOyd4Wby4CXVWwwX6suXfblbe3ulU,7526
+simple_apns-0.1.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+simple_apns-0.1.0.dist-info/top_level.txt,sha256=g5aKeLthEDE0BMYERABWIH-BDkswGowSy6apDqrZHJ8,12
+simple_apns-0.1.0.dist-info/RECORD,,
