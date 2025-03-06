@@ -1,0 +1,10 @@
+realm_ucp_bootstrap/__init__.py,sha256=m_rvEAIBZnvk6FZ24a6k3JJ_W3XaBaYdONCr-JnfdW4,137
+realm_ucp_bootstrap/bootstrap.h,sha256=MeGMG84D2D0Hsn7CROJfak316lf8cUl9yjUOIzQK4nw,2071
+realm_ucp_bootstrap/bootstrap_mpi.c,sha256=4Y50Ib4vpb3MziB13MIbkHA2k8hlDooTMTZM32w7i3I,9641
+realm_ucp_bootstrap/bootstrap_util.h,sha256=vxyPXGyXclgBRXgniQcOVHnLOE1tigH9USIN7OremtA,2903
+realm_ucp_bootstrap/realm_ucp_bootstrap_mpi.so,sha256=8X6V_uUETTMqaQkkiClYHv7n9fyo2gE0ndYMSrw_3n8,21664
+realm_ucp_bootstrap-0.1.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+realm_ucp_bootstrap-0.1.dist-info/METADATA,sha256=JxIMfJyUaMVcxGCmUhej5xAYSyWtZYJNZs3zWHkledM,83
+realm_ucp_bootstrap-0.1.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+realm_ucp_bootstrap-0.1.dist-info/top_level.txt,sha256=_v1OEO1UMFr113X8oPwSSPIha0e4HalQjqSf12gwd7c,20
+realm_ucp_bootstrap-0.1.dist-info/RECORD,,
