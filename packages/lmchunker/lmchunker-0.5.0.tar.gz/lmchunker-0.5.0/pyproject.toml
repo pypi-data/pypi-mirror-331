@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "lmchunker"
+version = "0.5.0"
+description = "We intend to develop this project into a plug-and-play chunking library that incorporates various cutting-edge chunking strategies for LLMs."
+authors = ["Robot2050"]
+license = "Apache License 2.0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+jieba = "^0.42.1"
+torch = "^2.5.1"
+transformers = "^4.46.3"
+ipykernel = "^6.29.5"
+pandas = "^2.2.3"
+zhipuai = "^2.1.5.20230904"
+tiktoken = "^0.8.0"
+protobuf = "^5.28.3"
+sentencepiece = "^0.2.0"
+nltk = "3.8.1"
+
+[[tool.poetry.source]]
+name = "mirrors"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple/"
+priority = "primary"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
