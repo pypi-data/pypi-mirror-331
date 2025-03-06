@@ -1,0 +1,10 @@
+Metadata-Version: 2.2
+Name: fin-common
+Version: 0.2.4
+Summary: A shared common module for FinForAll services.
+Author-email: Tommy Pang <tommypang04@gmail.com>
+License: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+﻿# FinForAll Common Package
