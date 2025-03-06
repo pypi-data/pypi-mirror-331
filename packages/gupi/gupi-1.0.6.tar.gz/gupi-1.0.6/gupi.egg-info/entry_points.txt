@@ -1,0 +1,2 @@
+[console_scripts]
+gupi = gupi.cli:main
