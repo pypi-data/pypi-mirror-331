@@ -1,0 +1,10 @@
+
+[all]
+black
+isort
+
+[style]
+black
+isort
+
+[testing]
