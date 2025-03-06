@@ -1,0 +1,6 @@
+setup.py
+evil_pkg2/__init__.py
+evil_pkg2.egg-info/PKG-INFO
+evil_pkg2.egg-info/SOURCES.txt
+evil_pkg2.egg-info/dependency_links.txt
+evil_pkg2.egg-info/top_level.txt
