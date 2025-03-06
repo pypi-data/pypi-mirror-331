@@ -1,0 +1,7 @@
+README.md
+setup.py
+pyvconn.egg-info/PKG-INFO
+pyvconn.egg-info/SOURCES.txt
+pyvconn.egg-info/dependency_links.txt
+pyvconn.egg-info/requires.txt
+pyvconn.egg-info/top_level.txt
