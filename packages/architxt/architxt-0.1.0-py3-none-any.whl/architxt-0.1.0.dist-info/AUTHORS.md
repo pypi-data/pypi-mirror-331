@@ -1,0 +1,3 @@
+- Nicolas Hiot <nicolas.hiot@univ-orleans.fr>
+- Mirian Halfeld-Ferrari <mirian@univ-orleans.fr>
+- Jacques Chabin <jchabin@univ-orleans.fr>
