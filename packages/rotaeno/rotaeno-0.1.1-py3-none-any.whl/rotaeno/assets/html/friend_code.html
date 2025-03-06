@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Complete Image Recreation with JS Modification</title>
+    <style>
+    body {
+        background-color: #2b2d42;
+        color: #fff;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+    
+    .container {
+        position: relative;
+        width: 800px;
+        height: 500px;
+        background: linear-gradient(to bottom, #2a3a4e, #121a24); /* Gradient background */
+        border-radius: 10px;
+        overflow: hidden; /* Important for rounded corners */
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); /* Subtle shadow */
+    }
+    
+    /* Remove Top Sections */
+    .top-left, .top-right {
+        display: none;
+    }
+    
+    /* Adjusted Player Info Section */
+    .player-info {
+        position: absolute;
+        top: 20px; /* Adjusted position */
+        left: 15px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .player-info img {
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        margin-right: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+    }
+    
+    .player-name {
+        font-size: 18px;
+        font-weight: bold;
+        color: #eee;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+    
+    /* Level/Rating Boxes */
+    .level-box, .rating-box {
+        background-color: rgba(0, 0, 0, 0.4);
+        padding: 4px 8px;
+        border-radius: 4px;
+        display: inline-block;
+        font-size: 11px;
+        color: #ddd;
+        margin-right: 5px; /* Space between Level and Rating */
+    }
+    
+    .rating-info {
+        display: flex;
+        flex-direction: row; /* Display level and rating horizontally */
+        align-items: center;
+        z-index: 9999;
+    }
+    
+    .rating-info div {
+        margin-bottom: 0; /* Remove default bottom margin */
+        z-index: 9999;
+    }
+    
+    .icon {
+        margin-right: 3px;
+        color: #9067c6; /* Match the icon color */
+    }
+    
+    /* Stats Section */
+    .player-stats {
+        position: absolute;
+        bottom: 55px;
+        left: 15px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .stat {
+        margin-right: 15px;
+        font-size: 12px;
+        color: #bbb;
+        display: flex;
+        align-items: center;
+    }
+    
+    .stat::before {
+      content: '\25CF'; /* Unicode circle bullet */
+      color: #00BCD4; /* Cyan color, adjust if needed */
+      font-size: 8px;
+      margin-right: 4px;
+    }
+    
+    .stat span {
+        margin-left: 3px;
+    }
+    
+    /* Bottom Sections */
+    .bottom-left, .bottom-right {
+        display: none;
+    }
+    
+    /* Image Area */
+    .image-area {
+        position: absolute;
+        top: 30px;
+        left: 10px;
+        width: 780px;
+        height: 340px;
+        background-image: url('https://i.imgur.com/U67K6vP.png');
+        background-size: cover;
+        background-position: center;
+        border-radius: 5px;
+        opacity: 0.5; /* Soften the background */
+        pointer-events: none; /* Ensure it doesn't interfere with clicks */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    }
+    
+    .bottom-middle {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 12px;
+        color: #bbb;
+    }
+    footer {
+        text-align: center;
+        font-size: 14px;
+        color: #777;
+        padding: 20px 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        position: fixed;
+    }
+
+    footer p {
+        margin: 5px 0;
+    }
+
+    .kanban-musu {
+        position: absolute;
+        bottom: -2px;
+        right: 20px;
+        width: auto;
+        height: 490px;
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .kanban-musu:hover {
+        transform: scale(1.1);
+    }
+    
+    </style>
+    </head>
+    <body>
+    
+    <div class="container">
+        <div class="image-area" id="bgImageArea" style="background-image: url(&quot;https://i.imgur.com/newBackground.jpg&quot;);"></div>
+    
+        <div class="player-info">
+            <img src="https://i.imgur.com/newAvatar.png" alt="Player Avatar" id="playerAvatar">
+            <div id="player-info-maybe"></div>
+        </div>
+
+        <img src="https://i.imgur.com/sample.png" alt="kanban-musu" class="kanban-musu" id="kanbanMusu">
+    
+        <div class="player-stats" id="player-stats-1"></div><br>
+        <div class="player-stats" id="player-stats-2"></div>
+    </div>
+    <footer>
+        <p>图片资源来源: Dream Engine Games</p>
+        <p>好友详细信息模板: None1145 / Terlity</p> 
+        <p>好友详细信息提供: o.O 人力统计(VSCode能不能自动填啊)</p>
+    </footer>
+    
+    <script>
+        const data = /{{{data}}}/
+        const imgp = "../assets/img";
+        const stats = data.isFriend ? "🔄" : "👀";
+
+        const bgImg = `${imgp}/background/${data.backgroundID}.png`;
+        const avatarImg = `${imgp}/avatar/${data.avatarID}.png`;
+        const characterImg = `${imgp}/character/${data.characterID}.png`;
+
+        function changeBackgroundImage(newImageUrl) {
+            const bgImageArea = document.getElementById('bgImageArea');
+            bgImageArea.style.backgroundImage = `url('${newImageUrl}')`;
+        }
+        function changePlayerAvatar(newAvatarUrl) {
+            const playerAvatar = document.getElementById('playerAvatar');
+            playerAvatar.src = newAvatarUrl;
+        }
+        function changeKanbanMusuImage(newImageUrl) {
+            document.getElementById('kanbanMusu').src = newImageUrl;
+        }
+        changeBackgroundImage(bgImg);
+        changePlayerAvatar(avatarImg);
+        changeKanbanMusuImage(characterImg);
+        document.getElementById('player-info-maybe').innerHTML = `
+            <div class="player-name">${data.playerName}</div>
+            <div class="rating-info">
+                <div class="level-box">Level ${(+data.level).toFixed(0)}</div>
+                <div class="rating-box"><span class="icon">${stats}</span>Rating ${data.playerRating}</div>
+            </div>
+        `
+        document.getElementById('player-stats-1').innerHTML = `
+            <div class="stat">Clear ${data.playerPlayStats.all.clearCount}/1048</div>
+            <div class="stat">Full Combo ${data.playerPlayStats.all.fcCount}/1048</div>
+            <div class="stat">All Perfect ${data.playerPlayStats.all.apCount}/1048</div>
+        `
+        document.getElementById('player-stats-2').innerHTML = `
+            <div class="stat">I: ${data.playerPlayStats.i.scores}</div>
+            <div class="stat">II: ${data.playerPlayStats.ii.scores}</div>
+            <div class="stat">III: ${data.playerPlayStats.iii.scores}</div>
+            <div class="stat">IV: ${data.playerPlayStats.iv.scores}</div>
+        `
+        document.getElementById('player-stats-1').style.top = '400px';
+        document.getElementById('player-stats-2').style.top = '440px';
+    </script>
+    </body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2b2d42;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+        footer {
+            text-align: center;
+            font-size: 14px;
+            color: #777;
+            padding: 20px 0;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+        span {
+            filter:drop-shadow(0 3px 8px rgba(0,0,0,.2509803922));
+            -webkit-filter:drop-shadow(0 3px 8px rgba(0,0,0,.2509803922));
+            transform:translateZ(0);
+            -webkit-transform:translateZ(0)
+        }
+        .gold {
+            background:url("data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20width='262.382'%20height='54.248'%20viewBox='0%200%20262.382%2054.248'%3e%3cdefs%3e%3clinearGradient%20id='a'%20y1='0.5'%20x2='1'%20y2='0.5'%20gradientUnits='objectBoundingBox'%3e%3cstop%20offset='0'%20stop-color='%23c9985e'/%3e%3cstop%20offset='0.528'%20stop-color='%23dbbb7f'/%3e%3cstop%20offset='1'%20stop-color='%23cdc755'/%3e%3c/linearGradient%3e%3clinearGradient%20id='b'%20y1='0.5'%20x2='1'%20y2='0.5'%20gradientUnits='objectBoundingBox'%3e%3cstop%20offset='0'%20stop-color='%23ffce00'/%3e%3cstop%20offset='1'%20stop-color='%23d89a2c'/%3e%3c/linearGradient%3e%3c/defs%3e%3cg%20transform='translate(0%200)'%3e%3cpath%20d='M2045.806,696.041l-208.564-.43-26.974,26.843,26.844,26.975,208.564.43,26.975-26.844Z'%20transform='translate(-1810.267%20-695.611)'%20fill='url(%23a)'/%3e%3cpath%20d='M1815.246,722.425l11.283-15.925-16.261,16.182,26.844,26.975,107.631.262-103.991-5.366Z'%20transform='translate(-1810.267%20-695.839)'%20fill='url(%23b)'/%3e%3c/g%3e%3c/svg%3e");
+            color:#fff
+        }
+        .silver {
+            background:url("data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20width='262.382'%20height='54.248'%20viewBox='0%200%20262.382%2054.248'%3e%3cdefs%3e%3clinearGradient%20id='a'%20y1='0.5'%20x2='1'%20y2='0.5'%20gradientUnits='objectBoundingBox'%3e%3cstop%20offset='0'%20stop-color='%237e7a7c'/%3e%3cstop%20offset='0.472'%20stop-color='%2381849a'/%3e%3cstop%20offset='1'%20stop-color='%23ccd9e5'/%3e%3c/linearGradient%3e%3c/defs%3e%3cg%20transform='translate(0%200)'%3e%3cpath%20d='M2045.806,789.041l-208.564-.43-26.974,26.844,26.844,26.975,208.564.43,26.975-26.844Z'%20transform='translate(-1810.267%20-788.611)'%20fill='url(%23a)'/%3e%3cpath%20d='M1815.246,815.425l11.283-15.925-16.261,16.182,26.844,26.975,107.631.262-103.991-5.366Z'%20transform='translate(-1810.267%20-788.839)'%20fill='%23d1d4e2'/%3e%3c/g%3e%3c/svg%3e");
+            color:#fff
+        }
+        .bronze {
+            background:url("data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20width='262.382'%20height='54.248'%20viewBox='0%200%20262.382%2054.248'%3e%3cdefs%3e%3clinearGradient%20id='a'%20y1='0.5'%20x2='1'%20y2='0.5'%20gradientUnits='objectBoundingBox'%3e%3cstop%20offset='0'%20stop-color='%23884364'/%3e%3cstop%20offset='1'%20stop-color='%23cf7540'/%3e%3c/linearGradient%3e%3c/defs%3e%3cg%20transform='translate(0%200)'%3e%3cpath%20d='M2045.806,882.041l-208.564-.43-26.974,26.844,26.844,26.975,208.564.43,26.975-26.844Z'%20transform='translate(-1810.267%20-881.611)'%20fill='url(%23a)'/%3e%3cpath%20d='M1815.246,908.425l11.283-15.925-16.261,16.182,26.844,26.975,107.631.262-103.991-5.366Z'%20transform='translate(-1810.267%20-881.839)'%20fill='%23f39b77'/%3e%3c/g%3e%3c/svg%3e");
+            color:#fff
+        }
+        .default {
+            background:url("data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='267.996'%20height='55.409'%20viewBox='0%200%20267.996%2055.409'%3e%3cg%20transform='translate(-1031.185%20-693.869)'%3e%3cpath%20d='M1271.763,694.308l-213.026-.439-27.552,27.418,27.418,27.552,213.026.439,27.552-27.418Z'%20fill='%23fff'/%3e%3cpath%20d='M1036.271,721.024l11.523-16.266-16.608,16.528,27.418,27.552,109.934.268-106.216-5.481Z'%20fill='%23ccc'%20style='isolation:isolate'/%3e%3c/g%3e%3c/svg%3e")
+        }
+        .rank-information {
+            filter:drop-shadow(0 3px 8px rgba(0,0,0,.2509803922));
+            -webkit-filter:drop-shadow(0 3px 8px rgba(0,0,0,.2509803922));
+            transform:translateZ(0);
+            -webkit-transform:translateZ(0);
+            background-repeat:no-repeat;
+            background-size:contain;
+            background-position:center center;
+            width:90%;
+            display:grid;
+            grid-template-columns:1fr 1fr 1fr;
+            align-items:center;
+            justify-content:space-between
+        }
+        .rank-information .user-detail {
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            width:150px
+        }
+        .rank-information .user-detail .username {
+            font-size:21px;
+            font-weight:700
+        }
+        @media screen and (max-width:768px) and (orientation:portrait) {
+            .rank-information .user-detail .username {
+            max-width:190px;
+            text-overflow:ellipsis;
+            overflow:hidden;
+            white-space:nowrap
+        }
+        }.rank-information .user-detail .score {
+            margin-top:-4px;
+            font-size:16px
+        }
+        .rank-information .rank-number {
+            width:50px;
+            margin:0 auto;
+            font-weight:700;
+            font-size:18px;
+            text-align:center
+        }
+        .rank-information .user-detail {
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center
+        }
+        .rank-information .user-image {
+            position:relative;
+            background-repeat:no-repeat;
+            background-size:contain;
+            display:flex;
+            align-items:flex-end;
+            justify-content:flex-end
+        }
+        .rank-information .user-image img {
+            aspect-ratio:1/1;
+            width:80%;
+            filter:drop-shadow(1px 0 0 #707070) drop-shadow(-1px 0 #707070) drop-shadow(0 1px 0 #707070) drop-shadow(0 -1px 0 #707070) drop-shadow(1px 1px 0 #707070) drop-shadow(1px -1px 0 #707070) drop-shadow(-1px 1px 0 #707070) drop-shadow(-1px -1px 0 #707070);
+            -webkit-filter:drop-shadow(1px 0 0 #707070) drop-shadow(-1px 0 #707070) drop-shadow(0 1px 0 #707070) drop-shadow(0 -1px 0 #707070) drop-shadow(1px 1px 0 #707070) drop-shadow(1px -1px 0 #707070) drop-shadow(-1px 1px 0 #707070) drop-shadow(-1px -1px 0 #707070);
+            transform:translateZ(0);
+            -webkit-transform:translateZ(0)
+        }
+        .profile-image {
+            position:relative;
+            background-repeat:no-repeat;
+            background-size:contain;
+            width:80%;
+            aspect-ratio:1/1;
+            display:flex;
+            align-items:flex-end;
+            justify-content:flex-end;
+        }
+        .profile-image:before {
+            width:70%;
+            height:70%;
+            position:absolute;
+            top:15%;
+            left:15%;
+            right:0;
+            bottom:0;
+            box-shadow:0 0 12px 1px #707070
+        }
+        .container {
+            justify-content: center;
+            align-items: center;
+        }
+        .rank-user {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div style="font-size: 20px; font-weight: bold; text-align: center; gap: 10px;" id="ranking-title"></div>
+    <div class="leaderboards" id="leaderboards"></div>
+    <footer>
+        <p>图片资源来源: Dream Engine Games / Lowiro</p>
+        <p>用户排行模板: None1145 / Terlity</p> 
+        <p>用户排行信息提供: o.O 人力统计(VSCode能不能自动填啊)</p>
+    </footer>
+
+    <script>
+        const imgp = "../assets/img"
+        const data = /{{{data}}}/
+
+        function createCard(cardData) {
+            var num = cardData.rank;
+
+            var medal = "default";
+            var font = "";
+            if (num == 1) {
+                medal = "gold";
+            } else if (num == 2) {
+                medal = "silver";
+            } else if (num == 3) {
+                medal = "bronze";
+            } else {
+                font = "black";
+            }
+            return `
+                <div class="rank-user">
+                    <div class="rank-information no-select ${medal}">
+                        <div class="rank-number" style="color: ${font}">
+                            <span>#${num}</span>
+                        </div>
+                        <div class="user-detail" style="color: ${font}">
+                            <span class="username">${cardData.playerName}</span>
+                            <span class="score">${cardData.sorting}</span>
+                            </div>
+                        <div class="user-image">
+                            <div class="profile-image">
+                                <img src="${imgp}/avatar/${cardData.playerAvatar}.png"></img>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `
+        }
+
+        var html = "";
+        data.data.forEach(player => {
+            html += createCard(player);
+        });
+        document.getElementById('leaderboards').innerHTML = html;
+        document.getElementById('ranking-title').innerHTML = data.title;
+    </script>
+</body>
+</html>
