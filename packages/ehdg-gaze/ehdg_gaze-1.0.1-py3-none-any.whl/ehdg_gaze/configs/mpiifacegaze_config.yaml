@@ -1,0 +1,46 @@
+mode: MPIIFaceGaze
+device: cpu
+model:
+  name: resnet_simple
+  backbone:
+    name: resnet_simple
+    pretrained: resnet18
+    resnet_block: basic
+    resnet_layers: [2, 2, 2]
+face_detector:
+  mode: mediapipe
+  dlib_model_path: ${package_dir}/models/shape_predictor_68_face_landmarks.dat
+  mediapipe_max_num_faces: 3
+  mediapipe_static_image_mode: false
+gaze_estimator:
+  checkpoint: ${package_dir}/models/mpiifacegaze_resnet_simple.pth
+  camera_params: ${package_dir}/configs/camera_config.yaml
+  use_dummy_camera_params: false
+  normalized_camera_params: ${package_dir}/ehdg_gaze/configs/mpiifacegaze_config.yaml
+  normalized_camera_distance: 1.0
+  image_size: [224, 224]
+demo:
+  use_camera: false
+  display_on_screen: false
+  wait_time: 1
+  image_path: null
+  video_path: null
+  head_pose_axis_length: 0.05
+  gaze_visualization_length: 0.05
+  show_bbox: true
+  show_head_pose: false
+  show_landmarks: false
+  show_normalized_image: false
+  show_template_model: false
+image_width: 224
+image_height: 224
+camera_matrix:
+    rows: 3
+    cols: 3
+    data: [1600., 0., 112.,
+           0., 1600., 112.,
+           0., 0., 1.]
+distortion_coefficients:
+    rows: 1
+    cols: 5
+    data: [0., 0., 0., 0., 0.]
