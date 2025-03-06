@@ -1,0 +1,13 @@
+data_model_router/__init__.py,sha256=nWd8CM1ZQwKmhFr47cpo0Lh4c15ZBcrQHAQOzvBa3lA,34
+data_model_router/main.py,sha256=vZY8kKUfnyRiy5pueYSwF7uX_jbd8V2b6F3cp9-y-N8,775
+data_model_router/utils.py,sha256=7-ZydmUhTHIJCbYR74kJIx6YVGJH7TOBzLlIJ05_FD4,2590
+data_model_router/router/__init__.py,sha256=6J8KX1pxDSW9qGPOwqQMc9fw_aqZvQpkIuoeBJR0Nj0,279
+data_model_router/router/create.py,sha256=J1wJ9HNHS9jIrvckTYHIvZPu0ia1CiZtSsJg_L6ZwfM,1468
+data_model_router/router/delete.py,sha256=qa04If_REKqpdbSmg0aHpriEJSseS4V2RRinOzQSCsw,1611
+data_model_router/router/get_by_id.py,sha256=p5BCsecT835o6VTi5ZNWhnt6tl7SR7OIKGzdt57gOFs,1775
+data_model_router/router/save.py,sha256=MIXzXkxp25486ml5AwhIoS6wztP44lRXwl0aUpXO0I8,2375
+data_model_router/router/search.py,sha256=Ul-BA3gR2nKD93dB2XbqV6sFXiNNsTehlrypsDeiKIE,1996
+datamodel_router-2.1.0.dist-info/METADATA,sha256=z7GzL5jxcntULLQYpoOGsivbUDinTRrLC4uTmil6S4c,1759
+datamodel_router-2.1.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+datamodel_router-2.1.0.dist-info/top_level.txt,sha256=lzXkxNcGpONH6QHYXKLXJpPWlmp-2TrHKpx_ZeiizUI,18
+datamodel_router-2.1.0.dist-info/RECORD,,
