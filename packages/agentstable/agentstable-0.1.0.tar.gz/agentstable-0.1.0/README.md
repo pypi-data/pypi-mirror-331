@@ -1,0 +1,187 @@
+# AgentsTable SDK
+
+A Python SDK for working with agents.json files and integrating with LLM tools, with a focus on Anthropic's Claude.
+
+## Installation
+
+### Local Development Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/agentstable-sdk
+cd agentstable-sdk
+
+# Install in development mode
+pip install -e .
+```
+
+### Requirements
+
+- Python 3.7+
+- anthropic (for Claude integration)
+- requests
+- pydantic
+
+## Features
+
+- Load and parse agents.json files
+- Convert tool definitions to Anthropic and OpenAI formats
+- Parse responses from LLMs to extract tool call parameters
+- Seamless integration with Claude and other LLMs
+- Multi-tool flow execution with data passing between tools
+- Tool discovery using natural language queries
+- Wikipedia and Memory providers for common agent tasks
+
+## Quick Start
+
+### Loading and parsing agents.json
+
+```python
+from agentstable import AgentsClient
+
+# Initialize the client
+client = AgentsClient()
+
+# Load agents.json from a file
+agents_json = client.load_agents_json("path/to/agents.json", provider_id="my-provider")
+
+# Access flows and tools
+for flow in agents_json.flows:
+    print(f"Flow: {flow.name} ({flow.id})")
+    for tool in flow.tools:
+        print(f"  Tool: {tool.name}")
+```
+
+### Converting to Anthropic Tools Format
+
+```python
+from agentstable import AgentsClient
+
+# Initialize the client
+client = AgentsClient()
+
+# Load agents.json
+agents_json = client.load_agents_json("examples/sample_agents.json", provider_id="my-provider")
+
+# Get a specific flow
+flow = next((f for f in agents_json.flows if f.id == "my-flow-id"), None)
+
+if flow:
+    # Convert to Anthropic tools format
+    anthropic_tools = client.parser.to_anthropic_tools(flow)
+    print(anthropic_tools)
+```
+
+### Making Requests to Claude with Tools
+
+```python
+import os
+from anthropic import Anthropic
+from agentstable import AgentsClient, parse_llm_response
+
+# Initialize the clients
+client = AgentsClient()
+anthropic_client = Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
+
+# Load agents.json and get a flow
+agents_json = client.load_agents_json("examples/sample_agents.json", provider_id="my-provider")
+flow = next((f for f in agents_json.flows if f.id == "my-flow-id"), None)
+
+if flow:
+    # Convert to Anthropic tools format
+    anthropic_tools = client.parser.to_anthropic_tools(flow)
+
+    # Make a request to Claude
+    response = anthropic_client.messages.create(
+        model="claude-3-opus-20240229",
+        max_tokens=1000,
+        messages=[{"role": "user", "content": "What's the weather like in San Francisco?"}],
+        tools=anthropic_tools,
+        system="Use the provided tools to respond to user requests."
+    )
+
+    # Parse the response to extract tool call parameters
+    try:
+        parameters = parse_llm_response(response)
+        print(f"Extracted parameters: {parameters}")
+    except ValueError as e:
+        print(f"Error parsing response: {e}")
+```
+
+### Discovering and Executing Multi-Tool Flows
+
+```python
+from agentstable import search, get_flow, get_and_execute_flow
+
+# Search for flows using natural language
+results = search("find information on Wikipedia", limit=5)
+
+# Get the first flow
+flow = get_flow(results.flows[0].id)
+
+# Execute the flow with parameters
+parameters = {
+    "query": "Artificial Intelligence",
+    "limit": 3
+}
+results = get_and_execute_flow(flow.id, parameters)
+
+# Access the results
+for tool_id, result in results.items():
+    print(f"Result from {tool_id}: {result}")
+```
+
+### Using the Wikipedia Provider
+
+```python
+from agentstable import WikipediaProvider
+
+# Create a Wikipedia provider
+wikipedia = WikipediaProvider()
+
+# Search for articles
+results = wikipedia.search("Artificial Intelligence", limit=3)
+
+# Get a specific article
+article = wikipedia.get_article("Artificial Intelligence")
+
+# Stream article content
+for chunk in wikipedia.stream_article_content("Artificial Intelligence"):
+    print(chunk, end="")
+```
+
+### Using the Memory Provider
+
+```python
+from agentstable import MemoryProvider
+
+# Create a memory provider (uses Redis by default)
+memory = MemoryProvider()
+
+# Store a key-value pair
+memory.store("user_preference", {"theme": "dark", "language": "en"})
+
+# Retrieve a value
+preference = memory.retrieve("user_preference")
+
+# Store a message in a conversation
+memory.store_message("user123", {"role": "user", "content": "Hello!"})
+
+# Get the conversation history
+conversation = memory.get_conversation("user123")
+```
+
+## Examples
+
+Check out the `examples/` directory for complete working examples:
+
+- `examples/test_anthropic_format.py`: Simple test of Anthropic tools conversion
+- `examples/anthropic_integration.py`: Complete example of Anthropic integration
+- `examples/e2e_demo.py`: End-to-end demo with mock and live API calls
+- `examples/flow_example.py`: Multi-tool flow execution example
+- `examples/wikipedia_sdk_example.py`: Wikipedia provider example
+- `examples/memory_example.py`: Memory provider example
+
+## License
+
+MIT
