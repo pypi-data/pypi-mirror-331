@@ -1,0 +1,14 @@
+Metadata-Version: 2.2
+Name: durabletask.azuremanaged
+Version: 0.1.1
+Summary: Extensions for the Durable Task Python SDK for integrating with the Durable Task Scheduler in Azure
+Project-URL: repository, https://github.com/microsoft/durabletask-python
+Project-URL: changelog, https://github.com/microsoft/durabletask-python/blob/main/CHANGELOG.md
+Keywords: durable,task,workflow,azure
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: durabletask>=0.2.0b1
+Requires-Dist: azure-identity>=1.19.0
