@@ -1,0 +1,2 @@
+[console_scripts]
+handtex = handtex.main:main

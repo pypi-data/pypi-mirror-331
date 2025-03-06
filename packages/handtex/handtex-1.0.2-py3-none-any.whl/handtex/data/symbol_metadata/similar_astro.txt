@@ -1,0 +1,17 @@
+wasysym-_taurus marvosym-_Taurus
+wasysym-_gemini marvosym-_Gemini
+wasysym-_cancer marvosym-_Cancer
+wasysym-_leo wasysym-_ascnode
+wasysym-_virgo marvosym-_Virgo
+wasysym-_libra amssymb-_bumpeq MnSymbol-_bumpeq fdsymbol-_bumpeq stix-_bumpeq mathabx-_bumpedeq
+wasysym-_scorpio marvosym-_Scorpio
+wasysym-_sagittarius marvosym-_Sagittarius
+wasysym-_capricornus marvosym-_Capricorn
+wasysym-_aquarius marvosym-_Aquarius
+wasysym-_pisces marvosym-_Pisces
+wasysym-_mercury marvosym-_Mercury
+wasysym-_earth marvosym-_Earth
+wasysym-_female marvosym-_Venus wasysym-_venus
+wasysym-_male marvosym-_Mars wasysym-_mars
+wasysym-_jupiter marvosym-_Jupiter
+wasysym-_saturn marvosym-_Saturn
