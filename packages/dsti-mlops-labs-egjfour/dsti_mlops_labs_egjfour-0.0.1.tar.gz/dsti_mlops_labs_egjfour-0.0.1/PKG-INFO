@@ -1,0 +1,14 @@
+Metadata-Version: 2.2
+Name: dsti_mlops_labs_egjfour
+Version: 0.0.1
+Summary: A package to practice concepts related to DevOps and MLOps
+Author-email: Eddie Jenkins <eddie.jenkins@edu.dsti.institute>
+Project-URL: Homepage, https://github.com/Egjfour/dsti_mlops_labs
+Project-URL: Issues, https://github.com/Egjfour/dsti_mlops_labs/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# dsti_mlops_labs

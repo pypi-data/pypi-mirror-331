@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/dsti_mlops_labs_egjfour.egg-info/PKG-INFO
+src/dsti_mlops_labs_egjfour.egg-info/SOURCES.txt
+src/dsti_mlops_labs_egjfour.egg-info/dependency_links.txt
+src/dsti_mlops_labs_egjfour.egg-info/top_level.txt
+src/registration/__init__.py
+src/registration/registration.py
+src/unit_testing_best_practice/__init__.py
+src/unit_testing_best_practice/sample.py
