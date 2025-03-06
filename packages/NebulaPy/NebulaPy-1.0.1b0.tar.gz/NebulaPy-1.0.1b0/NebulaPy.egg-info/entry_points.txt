@@ -1,0 +1,3 @@
+[console_scripts]
+download-database = NebulaPy.src.Database:DownloadDatabase.run
+
