@@ -1,0 +1,16 @@
+Metadata-Version: 2.2
+Name: ribbon-toolkit
+Version: 0.2.1
+Summary: A python API for running enzyme design pipelines.
+Author: Nicholas Freitas
+Author-email: nicholas.freitas@ucsf.edu
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: requires-python
+Dynamic: summary
