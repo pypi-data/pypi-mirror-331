@@ -1,0 +1,14 @@
+napari_dinosim/__init__.py,sha256=aAAKxc03sjEByAE4QOg8smqmjbdkSpGnVAfPMJhQccA,89
+napari_dinosim/_widget.py,sha256=7mFyMcb_Ih_7yCIm7DnvXbCDaO6s2wymLRBg-xNNU3Q,33713
+napari_dinosim/data_utils_biapy.py,sha256=-Mqou3TyGyFrtgBWvbSRXyiZ-4B5Sg2nxiwip2lUDW8,22372
+napari_dinosim/dinoSim_pipeline.py,sha256=egEqtZbyPwPB1gsFnkAtcWX00GYiO8PytYruRnGHgt8,18563
+napari_dinosim/napari.yaml,sha256=XRDqm447jeKFGIPaNCjy21HX4iq-nha50tOUOGXGsYs,825
+napari_dinosim/utils.py,sha256=cOuVXUGoMT210Eqo7mt-xt3zPJRC8unpcswQs5wqfuM,4789
+napari_dinosim/_tests/__init__.py,sha256=XUVEyXjBNg6_DIPKQ3mC8qg6KDSo-DCa-NGu7pbA63k,367
+napari_dinosim/_tests/test_pipeline.py,sha256=xkez5gMqtHPSZaDbkoIAX8ZLh_8ZZj4k9sESRYTbI2c,8448
+napari_dinosim-0.0.5.dist-info/LICENSE,sha256=alhhkleHULJDkpKuH2fT_MjuylQTywMBjeTp5J5uZTo,1079
+napari_dinosim-0.0.5.dist-info/METADATA,sha256=pBbTqd9getmd2xchcb6y1JOrEDea0Hj5UMdmBwKxWto,8729
+napari_dinosim-0.0.5.dist-info/WHEEL,sha256=rF4EZyR2XVS6irmOHQIJx2SUqXLZKRMUrjsg8UwN-XQ,109
+napari_dinosim-0.0.5.dist-info/entry_points.txt,sha256=-UbqoFe1vv3AoeeJAPqUpf1PZjvqHeRGx2yJdHxXDUo,62
+napari_dinosim-0.0.5.dist-info/top_level.txt,sha256=72AcfBx4liTfYg6Q7H4NiFe9CGaikcoxNR0-bOXCfLA,15
+napari_dinosim-0.0.5.dist-info/RECORD,,
