@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: pp_onnx
+Version: 0.1.3
+Summary: A package with ONNX models and configs
+Author: cxb
+Requires-Dist: onnxruntime-gpu
+Requires-Dist: opencv-python
+Requires-Dist: numpy
+Requires-Dist: shapely
+Requires-Dist: pillow
+Requires-Dist: pyclipper
+Requires-Dist: importlib-resources
+
