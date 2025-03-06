@@ -1,0 +1,9 @@
+xyzToPdb/__init__.py,sha256=Pru0BlFBASFCFo7McHdohtKkUtgMPDwbGfyUZlE2_Vw,21
+xyzToPdb/__main__.py,sha256=E8Qf_vy0pfM_jSTN5Ijhmd4R-cbuTIvdcw0fF0stGIQ,7772
+xyzToPdb/model.py,sha256=0G_1wRJMpZdQOG39I-_c-tzZindkttHeJ6ug-HPGV34,3462
+xyztopdb-0.1.0.dist-info/LICENSE,sha256=hi2z9LovD_kl-rWQztP3WWhELJT1EKK-Sh4WYzK-ilc,1063
+xyztopdb-0.1.0.dist-info/METADATA,sha256=SUK3QGJZhiF083PyiZAOZwS3W36UyCWNNta5kqn7jTU,1106
+xyztopdb-0.1.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+xyztopdb-0.1.0.dist-info/entry_points.txt,sha256=JMemvW2pHzgdY0HvLsq6p72ku7n93ULnlyCq70r6qxc,52
+xyztopdb-0.1.0.dist-info/top_level.txt,sha256=crT_FnwmxQC5uoJNRQSVVRSiZnLn3aK9fxwoJ4WJWMs,9
+xyztopdb-0.1.0.dist-info/RECORD,,
