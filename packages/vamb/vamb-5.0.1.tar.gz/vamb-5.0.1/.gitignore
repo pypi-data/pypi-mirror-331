@@ -1,0 +1,19 @@
+*.so
+__pycache__
+.coverage
+*.o
+src/_vambtools.cpp
+**.c
+.eggs
+*~
+vamb.egg-info
+changelog
+.DS_Store
+.ipynb_checkpoints
+TODO.md
+build/
+dist/
+**.vscode
+# doc
+doc/_build
+doc/reference
