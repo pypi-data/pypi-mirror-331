@@ -1,0 +1,102 @@
+Metadata-Version: 2.1
+Name: sphinxcontrib-d2lang
+Version: 0.0.4
+Summary: an extension for sphinx to render d2lang diagrams in sphinx documents
+Home-page: https://git.0w.tf/Milka64/sphinx-d2lang/
+Author: Milka64
+Author-email: Milka64 <michael.ricart@0w.tf>
+Project-URL: Homepage, https://git.0w.tf/Milka64/sphinx-d2lang/
+Project-URL: Issues, https://git.0w.tf/Milka64/sphinx-d2lang/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: docutils ==0.20.1
+Requires-Dist: setuptools ==67.7.2
+Requires-Dist: Sphinx ==7.2.6
+Requires-Dist: wheel ==0.42.0
+
+# sphinxcontrib-d2lang
+
+This is a Sphinx extension for [d2lang](https://d2lang.com/). 
+
+## Usage
+
+### Install
+
+```bash
+$ pip install sphinxcontrib-d2lang
+```
+
+### Adding the extension
+
+`conf.py`
+
+```python
+extensions = [
+    "sphinxcontrib.d2lang",
+]
+```
+
+### Adding a diagram (inline)
+
+You can use d2lang in sphinx directive
+
+`source/index.rst`
+
+```
+Hello World
+===========
+
+.. d2lang::
+
+    hello -> world
+```
+
+
+### Adding a diagram (external file)
+
+You can use an external file like this
+
+```
+Hello World
+===========
+
+.. d2lang:: helloworld.d2
+
+```
+
+### Options
+
+There is two options you can use
+
+- layout
+- filename
+
+#### Layout engine
+
+You can specify layout engine to use
+
+```rest
+Hello World
+===========
+
+.. d2lang::
+   :layout: elk
+
+    hello -> world
+```
+
+#### Output filename
+
+```rest
+Hello World
+===========
+
+.. d2lang::
+   :filename: d2lang_files/helloworld.svg
+
+    hello -> world
+```
+
