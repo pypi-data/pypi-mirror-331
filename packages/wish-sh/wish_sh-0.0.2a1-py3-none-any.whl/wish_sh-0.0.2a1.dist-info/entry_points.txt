@@ -1,0 +1,5 @@
+[console_scripts]
+wish = wish_sh.wish:main
+
+[gui_scripts]
+
