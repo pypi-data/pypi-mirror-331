@@ -1,0 +1,12 @@
+tests/__init__.py,sha256=-zbBGQY_FmlsLbzxO5eKxh5yN0UMVwrFip6We1jiyyY,67
+tests/test_cli.py,sha256=CzrtpbKz7X9xUk1SiEY4usypNl14qC3qUTQylx4_OPY,45
+typesnatch/__init__.py,sha256=qW5ggdN29r4j4bj8fryqcTMVFzAbh4gLHmEpXwjpUk8,68
+typesnatch/cli.py,sha256=IBWWCka4VughnI_3bQGOAEVi6G433IWeMZUbXhKnZkA,1835
+typesnatch/core.py,sha256=sJSei8enIxHjbzTKMYHglgqoBvZr3-BeeQ9RyCIeCyk,5930
+typesnatch/utils.py,sha256=ryiJ-R86qpQ9YlmCZGshCjZUHX6vMTlhMXRwb8qZ6_U,91
+typesnatch-0.1.1.dist-info/LICENSE,sha256=WsXQBgVYcNtm9E3vobqVp2139U1l2ugCqEGhGzozCPE,38
+typesnatch-0.1.1.dist-info/METADATA,sha256=-U1zIECtSoFL7BpiGhogbnQVfu14zS8om_l6SyzT-Lg,2535
+typesnatch-0.1.1.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+typesnatch-0.1.1.dist-info/entry_points.txt,sha256=XlPULS1OmaJGGDnLrVelZ7Uh8zmC3S0EfDDYEIbHyss,50
+typesnatch-0.1.1.dist-info/top_level.txt,sha256=H98t1LTctNJUOKsaEQPY37Ef4-Jdq5KUAcEIAyyms1k,17
+typesnatch-0.1.1.dist-info/RECORD,,
