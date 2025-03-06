@@ -1,0 +1,22 @@
+Metadata-Version: 2.2
+Name: qcfinancial
+Version: 1.6.0
+Summary: A Library for Valuation of Linear Interest Rate and FX Derivatives
+Author: Alvaro Diaz V.
+Author-email: alvaro@efaa.cl
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Provides-Extra: test
+Requires-Dist: pytest>=6.0; extra == "test"
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: provides-extra
+Dynamic: requires-python
+Dynamic: summary
+
+# Derivative Valuation Engine
+Librería para la valorización de derivados lineales de tasa de interés y tipo de cambio.
+
+Library for the valuation of linear interest rate and fx rate derivatives.
