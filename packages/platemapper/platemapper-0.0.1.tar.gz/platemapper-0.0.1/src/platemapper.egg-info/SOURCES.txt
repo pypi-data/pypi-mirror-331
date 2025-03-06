@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+src/platemapper/__init__.py
+src/platemapper/napari.yaml
+src/platemapper/platemapper.py
+src/platemapper.egg-info/PKG-INFO
+src/platemapper.egg-info/SOURCES.txt
+src/platemapper.egg-info/dependency_links.txt
+src/platemapper.egg-info/entry_points.txt
+src/platemapper.egg-info/requires.txt
+src/platemapper.egg-info/top_level.txt
+src/platemapper/_tests/__init__.py
+src/platemapper/_tests/test_plate_mapper.py

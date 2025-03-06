@@ -1,0 +1,8 @@
+numpy
+pandas[output-formatting]
+seaborn
+
+[testing]
+tox
+pytest
+pytest-cov
