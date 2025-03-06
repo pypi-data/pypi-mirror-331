@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["dcalerts"]
+license-files = ["LICENSE"]
+
+[project]
+name = "dcalerts"
+version = "1.0.1"
+authors = [
+    { name = "WoolyMamooth" }
+]
+description = "Utilities that let you send Discord messages from code."
+readme = "README.md"
+requires-python = ">=3.6"
+license = {text="GPLv3"}
+dependencies = [
+    "requests==2.31.0"
+]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Development Status :: 5 - Production/Stable",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11"
+]
+keywords = ["discord","alert","notification","decorator","wrapper","context manager","message"]
+
+[project.urls]
+Homepage = "https://github.com/WoolyMamooth/dcalerts"
