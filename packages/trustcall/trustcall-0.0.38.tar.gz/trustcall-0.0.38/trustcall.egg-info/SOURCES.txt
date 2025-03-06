@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+trustcall/__init__.py
+trustcall/_base.py
+trustcall/py.typed
+trustcall.egg-info/PKG-INFO
+trustcall.egg-info/SOURCES.txt
+trustcall.egg-info/dependency_links.txt
+trustcall.egg-info/requires.txt
+trustcall.egg-info/top_level.txt
