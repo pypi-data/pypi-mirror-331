@@ -1,0 +1,5 @@
+[console_scripts]
+fuck-world = test_atml:fuck_world
+
+[test_atml.display]
+excl = test_atml.timmins:excl_display
