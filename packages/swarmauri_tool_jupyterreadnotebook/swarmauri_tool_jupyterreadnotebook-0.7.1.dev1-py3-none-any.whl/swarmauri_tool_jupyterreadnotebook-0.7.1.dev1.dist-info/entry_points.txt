@@ -1,0 +1,3 @@
+[swarmauri.tools]
+jupyterreadnotebooktool=swarmauri_tool_jupyterreadnotebook:JupyterReadNotebookTool
+
