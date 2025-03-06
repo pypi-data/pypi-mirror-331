@@ -1,0 +1,6 @@
+LICENSE
+setup.py
+EasyCryptographer.egg-info/PKG-INFO
+EasyCryptographer.egg-info/SOURCES.txt
+EasyCryptographer.egg-info/dependency_links.txt
+EasyCryptographer.egg-info/top_level.txt
