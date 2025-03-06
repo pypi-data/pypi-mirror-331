@@ -1,0 +1,93 @@
+Metadata-Version: 2.4
+Name: InvoiceBuddy
+Version: 0.4.1
+Summary: A tool to help with generating invoices and proposals for freelancers or small businesses.
+Project-URL: Homepage, https://invoicebuddy.site
+Project-URL: Bug Tracker, https://github.com/joezeitouny/InvoiceBuddy/issues
+Author-email: Joe Zeitouny <joezeitouny@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2023 Joe Zeitouny
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Requires-Dist: events~=0.4
+Requires-Dist: flask-sqlalchemy~=3.1.1
+Requires-Dist: flask~=3.0.3
+Requires-Dist: pandas~=2.2.2
+Requires-Dist: plotly~=5.23.0
+Requires-Dist: qrcode[pil]~=7.4.2
+Requires-Dist: rich~=13.3.1
+Requires-Dist: sqlalchemy~=2.0.31
+Description-Content-Type: text/markdown
+
+# InvoiceBuddy
+
+[![Alt text](https://img.shields.io/pypi/v/invoicebuddy.svg?style=flat-square)](https://pypi.python.org/pypi/invoicebuddy/) [![Alt text](https://img.shields.io/github/license/joezeitouny/invoicebuddy)](https://pypi.python.org/pypi/invoicebuddy/)
+
+A tool to help with generating invoices and proposals for freelancers or small businesses.
+
+### Installation
+
+**Requirements:	Python 3.x >= 3.5**
+
+`InvoiceBuddy` can be installed via `pip` or an equivalent via:
+
+```console
+$ pip install InvoiceBuddy
+```
+
+#### From Source
+
+You can install `InvoiceBuddy` from source just as you would install any other Python package:
+
+```console
+$ pip install git+https://github.com/joezeitouny/InvoiceBuddy.git
+```
+
+This will allow you to keep up to date with development on GitHub:
+
+```console
+$ pip install -U git+https://github.com/joezeitouny/InvoiceBuddy.git
+```
+
+### Features
+
+- Ability to generate invoices and estimates from any browser, desktop or mobile
+- Estimates can be turned into invoices
+- Ability to setup items templates to be used in invoices or estimates
+- Support for IBAN and Paypal payment methods
+
+### Usage
+
+```console
+$ python -m InvoiceBuddy --config=CONFIGURATION_FILENAME
+```
+
+Where CONFIGURATION_FILENAME points to the file where the JSON configuration file is located on your system.
+
+For the full list of available options
+
+```console
+$ python -m InvoiceBuddy --help
+```

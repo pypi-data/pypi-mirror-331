@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-sm-6">
+            <div id="graph1"></div>
+        </div>
+        <div class="col-12 col-sm-6">
+            <div id="graph2"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-sm-6">
+            <div id="graph3"></div>
+        </div>
+        <div class="col-12 col-sm-6">
+            <div id="graph4"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div id="graph5"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function createGraph(graphData, elementId) {
+        var config = {
+            modeBarButtonsToRemove: ['zoom2d', 'pan2d', 'select2d', 'lasso2d', 'zoomIn2d', 'zoomOut2d', 'autoScale2d', 'resetScale2d', 'toggleSpikelines'],
+            displaylogo: false,
+            showLink: false,
+            responsive: true
+        };
+        const data = JSON.parse(graphData);
+        Plotly.newPlot(elementId, data.data, data.layout, config);
+    }
+
+    function refreshData() {
+        $.ajax({
+        url: '/get_stats',
+            method: 'GET',
+            dataType: 'json',
+            success: function(data) {
+                createGraph(data.fig1, 'graph1');
+                createGraph(data.fig2, 'graph2');
+                createGraph(data.fig3, 'graph3');
+                createGraph(data.fig4, 'graph4');
+                createGraph(data.fig5, 'graph5');
+
+                // hide the loading modal
+                $('#loading_modal').modal('hide');
+            },
+            error: function(error) {
+                $('#loading_modal').modal('hide');
+                notify_warning('Error while trying to get the stats! Reason: ' + error);
+            }
+        });
+    }
+
+    $(document).ready(function() {
+        $('#loading_modal').modal('show');
+
+        setTimeout(() => {
+            refreshData();
+        }, 500);
+    });
+</script>
+
+{% endblock %}

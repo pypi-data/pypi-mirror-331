@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/bootstrap-icons/bootstrap-icons.css">
+    <script src="/static/jquery-3.7.1.min.js"></script>
+    <script src="/static/popper.min.js"></script>
+    <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/static/plotly-2.34.0.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/main.css" type="text/css">
+    <link rel="shortcut icon" href="/static/favicon.ico">
+    <title>{{application_name}}</title>
+</head>
+<body id="body-element-id" class="container-fluid d-flex position-absolute m-0 p-0">
+<div class="container-fluid p-0 m-0">
+    {% include 'modals/about_us_modal.html' %}
+    {% include 'modals/connection_lost_modal.html' %}
+    {% include 'modals/loading_modal.html' %}
+    {% include 'modals/new_customer_modal.html' %}
+    {% include 'modals/new_item_modal.html' %}
+    {% include 'modals/new_invoice_modal.html' %}
+    {% include 'modals/new_proposal_modal.html' %}
+
+    <div class="row px-0 mx-0">
+        {% include 'navbar.html' %}
+    </div>
+
+    <div class="row px-0 mx-0">
+        <datalist id="predefinedCustomers">
+        </datalist>
+
+        <datalist id="predefinedItems">
+        </datalist>
+
+        <div class="container p-0 mt-1">
+            {% include 'notifications.html' %}
+        </div>
+
+        {% block content %}
+        {% endblock %}
+    </div>
+
+</div>
+
+<script type="text/javascript">
+    let connectionLostDialogShown = false;
+    const aboutUsModal = new bootstrap.Modal(document.getElementById('about_us_modal'), {backdrop: 'static'});
+
+    function hideAboutUsModal() {
+        aboutUsModal.hide();
+    }
+
+    function showAboutUsModal() {
+        aboutUsModal.show();
+    }
+
+    function addEditProposalItem() {
+        var newItem = $('<tr class="edit-proposal-item">' +
+            '<td class="col-4"><input type="text" class="form-control itemTitleInput edit-proposal-amount-compute" list="predefinedItems" name="title[]" required></td>' +
+            '<td class="col-5"><textarea class="form-control" name="description[]" rows="3"></textarea></td>' +
+            '<td class="col-1"><input type="number" class="form-control edit-proposal-amount-compute" name="quantity[]" min="0.01" step="0.01" pattern="^\d*(\.\d{0,2})?$" value="1" required></td>' +
+            '<td class="col-1"><input type="number" class="form-control edit-proposal-amount-compute" name="price[]" min="0.00" step="0.01" pattern="^\d*(\.\d{0,2})?$" value="0" required></td>' +
+            '<td class="col-1" style="text-align: center;"><button type="button" class="btn btn-danger btn-sm remove-edit-proposal-item"><span><i class="bi bi-trash"></i></span></button></td>' +
+            '</tr>');
+        $('#editProposalItemsContainer').append(newItem);
+
+        // Select all elements with the classname using querySelectorAll.
+        let elements = document.querySelectorAll('.itemTitleInput');
+
+        for(let i=0; i<elements.length; i++) {
+            // Add an event listener to each selected element.
+            elements[i].addEventListener('input', populateItemFields);
+        }
+
+        document.querySelectorAll('.edit-proposal-amount-compute').forEach(element => {
+          element.addEventListener('input', () => {
+            computeEditProposalTotal();
+          });
+          element.addEventListener('change', () => {
+            computeEditProposalTotal();
+          });
+        });
+    }
+
+    function computeNewInvoiceTotal() {
+        var totalAmount = 0.0;
+        $('.new-invoice-item').each(function() {
+            let qty = isNaN($(this).find('input[name="quantity[]"]').val()) || $(this).find('input[name="quantity[]"]').val() === '' ? 0 : $(this).find('input[name="quantity[]"]').val();
+            let price = isNaN($(this).find('input[name="price[]"]').val()) || $(this).find('input[name="price[]"]').val() === '' ? 0 : $(this).find('input[name="price[]"]').val();
+            totalAmount += parseFloat(qty) * parseFloat(price);
+        });
+        document.getElementById('newInvoiceTotalAmount').textContent = totalAmount;
+    }
+
+    function computeNewProposalTotal() {
+        var totalAmount = 0.0;
+        $('.new-proposal-item').each(function() {
+            let qty = isNaN($(this).find('input[name="quantity[]"]').val()) || $(this).find('input[name="quantity[]"]').val() === '' ? 0 : $(this).find('input[name="quantity[]"]').val();
+            let price = isNaN($(this).find('input[name="price[]"]').val()) || $(this).find('input[name="price[]"]').val() === '' ? 0 : $(this).find('input[name="price[]"]').val();
+            totalAmount += parseFloat(qty) * parseFloat(price);
+        });
+        document.getElementById('newProposalTotalAmount').textContent = totalAmount;
+    }
+
+    function computeEditProposalTotal() {
+        var totalAmount = 0.0;
+        $('.edit-proposal-item').each(function() {
+            let qty = isNaN($(this).find('input[name="quantity[]"]').val()) || $(this).find('input[name="quantity[]"]').val() === '' ? 0 : $(this).find('input[name="quantity[]"]').val();
+            let price = isNaN($(this).find('input[name="price[]"]').val()) || $(this).find('input[name="price[]"]').val() === '' ? 0 : $(this).find('input[name="price[]"]').val();
+            totalAmount += parseFloat(qty) * parseFloat(price);
+        });
+        document.getElementById('editProposalTotalAmount').textContent = totalAmount;
+    }
+
+    $(document).ready(function() {
+        $('#addInvoiceItem').click(function() {
+                var newItem = $('<tr class="new-invoice-item">' +
+                    '<td class="col-4"><input type="text" class="form-control itemTitleInput new-invoice-amount-compute" list="predefinedItems" name="title[]" required></td>' +
+                    '<td class="col-5"><textarea class="form-control new-invoice-amount-compute" name="description[]" rows="3"></textarea></td>' +
+                    '<td class="col-1"><input type="number" class="form-control new-invoice-amount-compute" name="quantity[]" min="1" step="0.1" pattern="^\d*(\.\d{0,2})?$" value="1" required></td>' +
+                    '<td class="col-1"><input type="number" class="form-control new-invoice-amount-compute" name="price[]" step="0.1" pattern="^[-+]?\d*(\.\d{0,2})?$" value="0" required></td>' +
+                    '<td class="col-1" style="text-align: center;"><button type="button" class="btn btn-danger btn-sm remove-new-invoice-item"><span><i class="bi bi-trash"></i></span></button></td>' +
+                    '</tr>');
+                $('#invoiceItemsContainer').append(newItem);
+
+                // Select all elements with the classname using querySelectorAll.
+                let elements = document.querySelectorAll('.itemTitleInput');
+
+                for(let i=0; i<elements.length; i++) {
+                    // Add an event listener to each selected element.
+                    elements[i].addEventListener('input', populateItemFields);
+                }
+
+                document.querySelectorAll('.new-invoice-amount-compute').forEach(element => {
+                  element.addEventListener('input', () => {
+                    computeNewInvoiceTotal();
+                  });
+                  element.addEventListener('change', () => {
+                    computeNewInvoiceTotal();
+                  });
+                });
+        });
+
+        $('#addProposalItem').click(function() {
+                var newItem = $('<tr class="new-proposal-item">' +
+                    '<td class="col-4"><input type="text" class="form-control itemTitleInput new-proposal-amount-compute" list="predefinedItems" name="title[]" required></td>' +
+                    '<td class="col-5"><textarea class="form-control" name="description[]" rows="3"></textarea></td>' +
+                    '<td class="col-1"><input type="number" class="form-control new-proposal-amount-compute" name="quantity[]" min="1" step="0.1" pattern="^\d*(\.\d{0,2})?$" value="1" required></td>' +
+                    '<td class="col-1"><input type="number" class="form-control new-proposal-amount-compute" name="price[]" step="0.1" pattern="^[-+]?\d*(\.\d{0,2})?$" value="0" required></td>' +
+                    '<td class="col-1" style="text-align: center;"><button type="button" class="btn btn-danger btn-sm remove-new-proposal-item"><span><i class="bi bi-trash"></i></span></button></td>' +
+                    '</tr>');
+                $('#proposalItemsContainer').append(newItem);
+
+                let elements = document.querySelectorAll('.itemTitleInput');
+                for(let i=0; i<elements.length; i++) {
+                    // Add an event listener to each selected element.
+                    elements[i].addEventListener('input', populateItemFields);
+                }
+
+                document.querySelectorAll('.new-proposal-amount-compute').forEach(element => {
+                  element.addEventListener('input', () => {
+                    computeNewProposalTotal();
+                  });
+                  element.addEventListener('change', () => {
+                    computeNewProposalTotal();
+                  });
+                });
+        });
+
+        $(document).on('click', '.removeItem', function() {
+            $(this).closest('tr').remove();
+        });
+
+        $(document).on('click', '.remove-new-invoice-item', function() {
+            $(this).closest('tr').remove();
+            computeNewInvoiceTotal();
+        });
+
+        $(document).on('click', '.remove-new-proposal-item', function() {
+            $(this).closest('tr').remove();
+            computeNewProposalTotal();
+        });
+
+        $(document).on('click', '.remove-edit-proposal-item', function() {
+            $(this).closest('tr').remove();
+            computeEditProposalTotal();
+        });
+
+        let elements = document.querySelectorAll('.itemTitleInput');
+        for(let i=0; i<elements.length; i++) {
+            // Add an event listener to each selected element.
+            elements[i].addEventListener('input', populateItemFields);
+        }
+
+        document.querySelectorAll('.new-proposal-amount-compute').forEach(element => {
+          element.addEventListener('input', () => {
+            computeNewProposalTotal();
+          });
+          element.addEventListener('change', () => {
+            computeNewProposalTotal();
+          });
+        });
+
+        document.querySelectorAll('.new-invoice-amount-compute').forEach(element => {
+          element.addEventListener('input', () => {
+            computeNewInvoiceTotal();
+          });
+          element.addEventListener('change', () => {
+            computeNewInvoiceTotal();
+          });
+        });
+
+        document.getElementById('upload_seller_logo_form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            var formData = new FormData(this);
+
+            fetch('/upload_seller_logo', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data) {
+                    alert('Seller logo successfully uploaded!');
+                } else {
+                    alert('Upload of the specified seller logo failed. Please try again.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred. Please try again.');
+            });
+        });
+
+        document.getElementById('upload_config_form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            var formData = new FormData(this);
+
+            fetch('/upload_config', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data) {
+                    alert('Configuration file successfully uploaded and will be applied on the next run!');
+                } else {
+                    alert('Upload of the specified configuration file failed. Please try again.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred. Please try again.');
+            });
+        });
+
+        document.getElementById('download_configuration').addEventListener('click', function(event) {
+          event.preventDefault();
+
+          downloadConfiguration();
+        });
+    });
+
+    $(document).ajaxError(function( event, request, settings ) {
+        //When XHR Status code is 0 there is no connection with the server
+        if (request.status == 0){
+            if (!connectionLostDialogShown) {
+                $('#connection_lost_modal').modal('show');
+                connectionLostDialogShown = true;
+            }
+        }
+    });
+
+    function populateItemFields(e) {
+        const selectedValue = e.target.value;
+        if (selectedValue.trim() !== '') {
+          const options = document.getElementById('predefinedItems').options;
+          for (let i = 0; i < options.length; i++) {
+            if (options[i].value === selectedValue) {
+                trElement = e.target.parentNode.parentNode;
+                descriptionElement = trElement.querySelector('[name="description[]"]');
+                priceElement = trElement.querySelector('[name="price[]"]');
+
+                descriptionElement.value = options[i].description;
+                priceElement.value = options[i].price;
+
+                break;
+            }
+          }
+        }
+    }
+
+    function loadNewTabWithInvoiceID(invoice_id, show_print_dialog) {
+        var url = '/view_invoice?invoice_id=' + encodeURIComponent(invoice_id);
+
+        if (show_print_dialog) {
+            url += '&show_print_dialog'
+        }
+
+        // Load the invoice with the specified number in a new tab
+        let newTab = window.open(url, '_blank');
+
+        // Check if the new tab was successfully opened and focus on it.
+        if (newTab) {
+            newTab.focus();
+        }
+    }
+
+    function loadNewTabWithProposalID(proposal_id, show_print_dialog) {
+        var url = '/view_proposal?proposal_id=' + encodeURIComponent(proposal_id);
+
+        if (show_print_dialog) {
+            url += '&show_print_dialog'
+        }
+
+        // Load the invoice with the specified number in a new tab
+        let newTab = window.open(url, '_blank');
+
+        // Check if the new tab was successfully opened and focus on it.
+        if (newTab) {
+            newTab.focus();
+        }
+    }
+
+    function showNewCustomerModal() {
+        $('#new_customer_modal').modal('show');
+
+        clearFormValidation('add_customer_form');
+
+        // clear up the form fields
+        $('#new_customer_name').val('');
+        $('#new_customer_email').val('');
+        $('#new_customer_phone').val('');
+        $('#new_customer_address').val('');
+        $('#new_customer_country').val('');
+        $('#new_item_description').val('');
+        $('#new_item_notes').val('');
+        $('#new_item_purchase_price').val('');
+        $('#new_item_selling_price').val('');
+    }
+
+    function showNewItemModal() {
+        $('#new_item_modal').modal('show');
+
+        clearFormValidation('add_item_form');
+
+        // clear up the form fields
+        $('#new_item_title').val('');
+        $('#new_item_description').val('');
+        $('#new_item_notes').val('');
+        $('#new_item_purchase_price').val('');
+        $('#new_item_selling_price').val('');
+    }
+
+    function showNewInvoiceModal() {
+        $('#loading_modal').modal('show');
+
+        clearFormValidation('new_invoice_form');
+
+        // clear up the form fields
+        $('#new_invoice_number').val('');
+        $('#new_invoice_date').val('');
+        $('#new_invoice_due_date').val('');
+        $('#new_invoice_customer_name').val('');
+        $('#new_invoice_reference_number').val('');
+        $('#new_invoice_description').val('');
+
+        setNewInvoiceDate();
+        computeNewInvoiceTotal();
+
+        $.ajax({
+            type: 'GET',
+            url: '/new_invoice_number',
+            success: function(data) {
+                $('#loading_modal').modal('hide');
+                $('#new_invoice_number').val(data);
+
+                $('#new_invoice_modal').modal('show');
+            },
+            error: function (error) {
+                $('#loading_modal').modal('hide');
+                notify_warning('Error while retrieving a new invoice number! Reason: ' + error);
+            }
+        });
+
+        $('#invoiceItemsContainer tr:not(:first)').remove();
+
+        // Clear the inputs of the first row
+        var firstRow = $('#invoiceItemsContainer tr:first');
+        firstRow.find('input[name="title[]"]').val('');
+        firstRow.find('textarea[name="description[]"]').val('');
+        firstRow.find('input[name="quantity[]"]').val('1');
+        firstRow.find('input[name="price[]"]').val('0');
+
+        $.ajax({
+            type: 'GET',
+            url: '/get_items_data',
+            success: function(data) {
+                const datalist = document.getElementById('predefinedItems');
+
+                // Clear existing options
+                datalist.innerHTML = '';
+
+                // Add new options from the API response
+                data.forEach(item => {
+                  const option = document.createElement('option');
+                  option.id = item.id;
+                  option.value = item.title;
+                  option.description = item.description;
+                  option.price = item.selling_price;
+                  datalist.appendChild(option);
+                });
+            },
+            error: function (error) {
+                notify_warning('Error while populating predefined items! Reason: ' + error);
+            }
+        });
+
+        $.ajax({
+            type: 'GET',
+            url: '/get_customers_data',
+            success: function(data) {
+                const datalist = document.getElementById('predefinedCustomers');
+
+                // Clear existing options
+                datalist.innerHTML = '';
+
+                // Add new options from the API response
+                data.forEach(customer => {
+                  const option = document.createElement('option');
+                  option.id = customer.id;
+                  option.value = customer.customer_name;
+                  datalist.appendChild(option);
+                });
+            },
+            error: function (error) {
+                notify_warning('Error while populating predefined customers! Reason: ' + error);
+            }
+        });
+    }
+
+    function showNewProposalModal() {
+        $('#loading_modal').modal('show');
+
+        clearFormValidation('new_proposal_form');
+
+        // clear up the form fields
+        $('#new_proposal_number').val('');
+        $('#new_proposal_date').val('');
+        $('#new_proposal_due_date').val('');
+        $('#new_proposal_customer_name').val('');
+        $('#new_proposal_reference_number').val('');
+        $('#new_proposal_description').val('');
+
+        setNewProposalDate();
+        computeNewProposalTotal();
+
+        $.ajax({
+            type: 'GET',
+            url: '/new_proposal_number',
+            success: function(data) {
+                $('#loading_modal').modal('hide');
+                $('#new_proposal_number').val(data);
+
+                $('#new_proposal_modal').modal('show');
+            },
+            error: function (error) {
+                $('#loading_modal').modal('hide');
+                notify_warning('Error while retrieving a new proposal number! Reason: ' + error);
+            }
+        });
+
+        $('#proposalItemsContainer tr:not(:first)').remove();
+
+        // Clear the inputs of the first row
+        var firstRow = $('#proposalItemsContainer tr:first');
+        firstRow.find('input[name="title[]"]').val('');
+        firstRow.find('textarea[name="description[]"]').val('');
+        firstRow.find('input[name="quantity[]"]').val('1');
+        firstRow.find('input[name="price[]"]').val('0');
+
+        $.ajax({
+            type: 'GET',
+            url: '/get_items_data',
+            success: function(data) {
+                const datalist = document.getElementById('predefinedItems');
+
+                // Clear existing options
+                datalist.innerHTML = '';
+
+                // Add new options from the API response
+                data.forEach(item => {
+                  const option = document.createElement('option');
+                  option.id = item.id;
+                  option.value = item.title;
+                  option.description = item.description;
+                  option.price = item.selling_price;
+                  datalist.appendChild(option);
+                });
+            },
+            error: function (error) {
+                notify_warning('Error while populating predefined items! Reason: ' + error);
+            }
+        });
+
+        $.ajax({
+            type: 'GET',
+            url: '/get_customers_data',
+            success: function(data) {
+                const datalist = document.getElementById('predefinedCustomers');
+
+                // Clear existing options
+                datalist.innerHTML = '';
+
+                // Add new options from the API response
+                data.forEach(customer => {
+                  const option = document.createElement('option');
+                  option.id = customer.id;
+                  option.value = customer.customer_name;
+                  datalist.appendChild(option);
+                });
+            },
+            error: function (error) {
+                notify_warning('Error while populating predefined customers! Reason: ' + error);
+            }
+        });
+    }
+
+    function addCustomer() {
+        form = document.getElementById('add_customer_form');
+        if (!form.checkValidity())
+            return;
+
+        $('#loading_modal').modal('show');
+
+        $.ajax({
+            url: '/add_customer',
+            method: 'POST',
+            data: {
+                customer_name: $('#new_customer_name').val(),
+                customer_email: $('#new_customer_email').val(),
+                customer_phone: $('#new_customer_phone').val(),
+                customer_address: $('#new_customer_address').val(),
+                customer_country: $('#new_customer_country').val(),
+                description: $('#new_customer_description').val()
+            },
+            success: function(customer_id) {
+                $('#loading_modal').modal('hide');
+                if (!customer_id)
+                    notify_warning('Error while creating a new customer');
+                else {
+                    notify_success('New customer successfully created!');
+
+                    // hide the create customer form
+                    $('#new_customer_modal').modal('hide');
+
+                    if (typeof refreshData === 'function') {
+                        // refresh the data on the page
+                        refreshData(1);
+                    }
+                }
+            },
+            error: function (error) {
+                $('#loading_modal').modal('hide');
+                notify_warning('Error while creating a new customer! Reason: ' + error);
+            }
+        });
+    }
+
+    function addItem() {
+        form = document.getElementById('add_item_form');
+        if (!form.checkValidity())
+            return;
+
+        $('#loading_modal').modal('show');
+
+        $.ajax({
+            url: '/add_item',
+            method: 'POST',
+            data: {
+                title: $('#new_item_title').val(),
+                description: $('#new_item_description').val(),
+                notes: $('#new_item_notes').val(),
+                purchase_price: $('#new_item_purchase_price').val(),
+                selling_price: $('#new_item_selling_price').val(),
+            },
+            success: function(item_id) {
+                $('#loading_modal').modal('hide');
+                if (!item_id)
+                    notify_warning('Error while creating a new item');
+                else {
+                    notify_success('New item successfully created!');
+
+                    // hide the create item form
+                    $('#new_item_modal').modal('hide');
+
+                    if (typeof refreshData === 'function') {
+                        // refresh the data on the page
+                        refreshData(1);
+                    }
+                }
+            },
+            error: function (error) {
+                $('#loading_modal').modal('hide');
+                notify_warning('Error while creating a new item! Reason: ' + error);
+            }
+        });
+    }
+
+    function generateInvoice() {
+        form = document.getElementById('new_invoice_form');
+        if (!form.checkValidity())
+            return;
+
+        $('#loading_modal').modal('show');
+
+        var items = [];
+        $('.new-invoice-item').each(function() {
+            var item = {
+                title: $(this).find('input[name="title[]"]').val(),
+                description: $(this).find('textarea[name="description[]"]').val(),
+                quantity: parseFloat($(this).find('input[name="quantity[]"]').val()),
+                price: parseFloat($(this).find('input[name="price[]"]').val()),
+                amount: parseFloat($(this).find('input[name="quantity[]"]').val()) * parseFloat($(this).find('input[name="price[]"]').val())
+            };
+            items.push(item);
+        });
+
+        $.ajax({
+            url: '/generate_invoice',
+            method: 'POST',
+            data: {
+                invoice_number: $('#new_invoice_number').val(),
+                invoice_date: $('#new_invoice_date').val(),
+                due_date: $('#new_invoice_due_date').val(),
+                customer_name: $('#new_invoice_customer_name').val(),
+                reference_number: $('#new_invoice_reference_number').val(),
+                description: $('#new_invoice_description').val(),
+                items: JSON.stringify(items)
+            },
+            success: function(invoice_id) {
+                $('#loading_modal').modal('hide');
+                if (!invoice_id)
+                    notify_warning('Error while creating a new invoice');
+                else {
+                    notify_success('New invoice successfully created!');
+
+                    // hide the create invoice form
+                    $('#new_invoice_modal').modal('hide');
+
+                    // show the newly created invoice
+                    loadNewTabWithInvoiceID(invoice_id, true);
+
+                    if (typeof refreshData === 'function') {
+                        // refresh the data on the page
+                        refreshData(1);
+                    }
+                }
+            },
+            error: function (error) {
+                $('#loading_modal').modal('hide');
+                notify_warning('Error while creating a new invoice! Reason: ' + error);
+            }
+        });
+    }
+
+    function generateProposal() {
+        form = document.getElementById('new_proposal_form');
+        if (!form.checkValidity())
+            return;
+
+        $('#loading_modal').modal('show');
+
+        var items = [];
+        $('.new-proposal-item').each(function() {
+            var item = {
+                title: $(this).find('input[name="title[]"]').val(),
+                description: $(this).find('textarea[name="description[]"]').val(),
+                quantity: parseFloat($(this).find('input[name="quantity[]"]').val()),
+                price: parseFloat($(this).find('input[name="price[]"]').val()),
+                amount: parseFloat($(this).find('input[name="quantity[]"]').val()) * parseFloat($(this).find('input[name="price[]"]').val())
+            };
+            items.push(item);
+        });
+
+        $.ajax({
+            url: '/generate_proposal',
+            method: 'POST',
+            data: {
+                proposal_number: $('#new_proposal_number').val(),
+                proposal_date: $('#new_proposal_date').val(),
+                due_date: $('#new_proposal_due_date').val(),
+                customer_name: $('#new_proposal_customer_name').val(),
+                reference_number: $('#new_proposal_reference_number').val(),
+                description: $('#new_proposal_description').val(),
+                items: JSON.stringify(items)
+            },
+            success: function(proposal_id) {
+                $('#loading_modal').modal('hide');
+                if (!proposal_id)
+                    notify_warning('Error while creating a new proposal');
+                else {
+                    notify_success('New proposal successfully created!');
+
+                    // hide the create proposal form
+                    $('#new_proposal_modal').modal('hide');
+
+                    // show the newly created proposal
+                    loadNewTabWithProposalID(proposal_id, true);
+
+                    if (typeof refreshData === 'function') {
+                        // refresh the data on the page
+                        refreshData(1);
+                    }
+                }
+            },
+            error: function (error) {
+                $('#loading_modal').modal('hide');
+                notify_warning('Error while creating a new proposal! Reason: ' + error);
+            }
+        });
+    }
+
+    // Function to set today's date
+    function setNewInvoiceDate() {
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+        var yyyy = today.getFullYear();
+
+        today = yyyy + '-' + mm + '-' + dd;
+        $('#new_invoice_date').val(today);
+
+        // Compute the due date
+        var dueDate = new Date();
+        dueDate.setDate(dueDate.getDate() + {{ invoice_valid_for_days }});
+        var dd = String(dueDate.getDate()).padStart(2, '0');
+        var mm = String(dueDate.getMonth() + 1).padStart(2, '0'); //January is 0!
+        var yyyy = dueDate.getFullYear();
+
+        dueDate = yyyy + '-' + mm + '-' + dd;
+        $('#new_invoice_due_date').val(dueDate);
+    }
+
+    // Function to set today's date
+    function setNewProposalDate() {
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+        var yyyy = today.getFullYear();
+
+        today = yyyy + '-' + mm + '-' + dd;
+        $('#new_proposal_date').val(today);
+
+        // Compute the due date
+        var dueDate = new Date();
+        dueDate.setDate(dueDate.getDate() + {{ invoice_valid_for_days }});
+        var dd = String(dueDate.getDate()).padStart(2, '0');
+        var mm = String(dueDate.getMonth() + 1).padStart(2, '0'); //January is 0!
+        var yyyy = dueDate.getFullYear();
+
+        dueDate = yyyy + '-' + mm + '-' + dd;
+        $('#new_proposal_due_date').val(dueDate);
+    }
+
+    function notify_success(message) {
+        $('#success_notification_message').html(message);
+        $("#success_notification").fadeIn();
+        setTimeout(function () {
+            $("#success_notification").fadeOut();
+        }, 5000);
+    }
+
+    function notify_warning(message) {
+        $('#warning_notification_message').html(message);
+        $("#warning_notification").fadeIn();
+        setTimeout(function () {
+            $("#warning_notification").fadeOut();
+        }, 5000);
+    }
+
+    (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        var forms = document.getElementsByClassName('needs-validation');
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            event.stopPropagation();
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+
+    function clearFormValidation(formId) {
+        // Get the form element
+        const form = document.getElementById(formId);
+
+        // Reset the form
+        form.reset();
+
+        // Remove validation classes from the form itself
+        form.classList.remove('was-validated');
+
+        // Remove validation classes from all form elements
+        form.querySelectorAll('.is-invalid, .is-valid').forEach(element => {
+            element.classList.remove('is-invalid', 'is-valid');
+        });
+
+        // Clear any error messages
+        form.querySelectorAll('.invalid-feedback').forEach(element => {
+            element.textContent = '';
+        });
+
+        // If you're using Bootstrap's form validation plugin
+        if (typeof form.validate === 'function') {
+            form.validate().resetForm();
+        }
+    }
+
+    function downloadConfiguration(){
+        $('#loading_modal').modal('show');
+        $.ajax({
+            url: '/download_config',
+            method: 'GET',
+            success: function(data) {
+                $('#loading_modal').modal('hide');
+                if (!data)
+                    notify_warning('Error while downloading the current configuration');
+                else {
+                    // Create a Blob with the string content
+                    const blob = new Blob([data], { type: 'text/plain' });
+
+                    // Create a temporary URL for the Blob
+                    const url = URL.createObjectURL(blob);
+
+                    // Create a temporary anchor element
+                    const link = document.createElement('a');
+                    link.href = url;
+                    link.download = "config.json";
+
+                    // Append the link to the body (required for Firefox)
+                    document.body.appendChild(link);
+
+                    // Programmatically click the link to trigger the download
+                    link.click();
+
+                    // Clean up by removing the link and revoking the URL
+                    document.body.removeChild(link);
+                    URL.revokeObjectURL(url);
+                }
+            },
+            error: function (error) {
+                $('#loading_modal').modal('hide');
+                notify_warning('Error while downloading the current configuration! Reason: ' + error);
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
