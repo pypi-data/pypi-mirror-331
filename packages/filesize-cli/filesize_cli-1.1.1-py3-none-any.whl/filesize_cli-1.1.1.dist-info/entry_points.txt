@@ -1,0 +1,2 @@
+[console_scripts]
+filesize-cli = filesize_cli.main:main
