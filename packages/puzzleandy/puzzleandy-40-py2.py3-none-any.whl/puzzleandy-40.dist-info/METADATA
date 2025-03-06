@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: puzzleandy
+Version: 40
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Multimedia :: Graphics
+Requires-Dist: moderngl
+Requires-Dist: numpy
+Requires-Dist: opencv-python
+Requires-Dist: scikit-image
+Description-Content-Type: text/markdown
+
+[documentation](https://puzzleandy.com)
