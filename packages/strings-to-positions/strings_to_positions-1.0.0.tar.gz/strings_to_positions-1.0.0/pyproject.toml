@@ -1,0 +1,21 @@
+[project]
+name = "strings-to-positions"
+version = "1.0.0"
+description = "A Python package to convert strings to positions in a source text"
+readme = "README.md"
+authors = [
+    { name = "Hao Luo", email = "338265+howlowck@users.noreply.github.com" }
+]
+requires-python = ">=3.8"
+dependencies = []
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.5",
+    "pytest-benchmark>=4.0.0",
+    "ruff>=0.9.9",
+]
