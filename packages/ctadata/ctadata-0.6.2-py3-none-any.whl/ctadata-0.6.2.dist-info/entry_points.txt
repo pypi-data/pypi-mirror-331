@@ -1,0 +1,4 @@
+[console_scripts]
+cta-data=ctadata.cli:main
+cta-data-direct=ctadata.direct.cli:main
+
