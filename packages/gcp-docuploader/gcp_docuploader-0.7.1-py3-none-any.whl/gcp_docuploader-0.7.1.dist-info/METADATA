@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: gcp-docuploader
+Version: 0.7.1
+Home-page: 
+Author: Google LLC
+Author-email: theaflowers@google.com
+License: Apache 2.0
+Platform: Posix; MacOS X; Windows
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Internet
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: click
+Requires-Dist: colorlog
+Requires-Dist: google-cloud-storage<4.0.0dev
+Requires-Dist: protobuf!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,<6.0.0dev,>=3.20.2
+
