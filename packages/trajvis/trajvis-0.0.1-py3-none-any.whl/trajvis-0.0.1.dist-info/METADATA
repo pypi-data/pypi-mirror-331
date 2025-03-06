@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: trajvis
+Version: 0.0.1
+Summary: Toolbox to visualize trajectories
+Project-URL: Homepage, https://github.com/kylekam/trajectoryvis
+Project-URL: Issues, https://github.com/kylekam/trajectoryvis/issues
+Author-email: Kyle Kam <kamkyl196@gmail.com>
+License: MIT
+License-File: LICENSE
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Requires-Dist: imageio>=2.37.0
+Requires-Dist: matplotlib>=3.10.1
+Requires-Dist: numpy>=2.2.3
+Requires-Dist: tilemapbase>=0.4.7
+Requires-Dist: tqdm>=4.67.1
+Description-Content-Type: text/markdown
+
+Toolbox for visualizing trajectories on a map using GPS data. Uses [TileMapBase](https://github.com/MatthewDaws/TileMapBase) as the backend for create map tiles.
+
+# OpenStreetMaps
+OpenStreetMaps data usage: https://www.openstreetmap.org/copyright
+Tile usage is subject to constraints: https://operations.osmfoundation.org/policies/tiles/
