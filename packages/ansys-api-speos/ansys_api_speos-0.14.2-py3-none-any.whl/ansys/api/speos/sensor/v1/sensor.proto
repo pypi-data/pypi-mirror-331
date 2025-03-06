@@ -1,0 +1,79 @@
+// (c) 2025 ANSYS, Inc. Unauthorized use, distribution, or duplication is prohibited.
+syntax = "proto3";
+
+import "ansys/api/speos/sensor/v1/camera_sensor.proto";
+import "ansys/api/speos/sensor/v1/irradiance_sensor.proto";
+import "ansys/api/speos/sensor/v1/common.proto";
+
+package ansys.api.speos.sensor.v1;
+
+
+service SensorTemplatesManager {
+	// Create a SensorTemplate
+	rpc Create(Create_Request) returns (Create_Response) {}
+	// Read a SensorTemplate
+	rpc Read(Read_Request) returns (Read_Response) {}
+	// Update a SensorTemplate
+	rpc Update(Update_Request) returns (Update_Response) {}
+	// Delete a SensorTemplate
+	rpc Delete(Delete_Request) returns (Delete_Response) {}
+	// List all SensorTemplates in manager
+	rpc List(List_Request) returns (List_Response) {}
+}
+
+// Sensor template with its basic characteristics
+message SensorTemplate {
+	string name = 4; // SensorTemplate name
+	string description = 5; // SensorTemplate description
+	map<string, string> metadata = 6; // User defined metadata
+	oneof sensor_template {
+		CameraSensorTemplate camera_sensor_template = 1;
+		IrradianceSensorTemplate irradiance_sensor_template = 2;
+		Radiance radiance_sensor_template = 3;
+	}
+	message Radiance {
+		oneof sensor_type {
+			ansys.api.speos.sensor.v1.SensorTypePhotometric sensor_type_photometric = 2; // Sensor type : Photometric
+			ansys.api.speos.sensor.v1.SensorTypeColorimetric sensor_type_colorimetric = 3; //  Sensor type : Colorimetric
+			ansys.api.speos.sensor.v1.SensorTypeRadiometric sensor_type_radiometric = 4; //  Sensor type : Radiometric
+			ansys.api.speos.sensor.v1.SensorTypeSpectral sensor_type_spectral = 5; // Sensor type : Spectral
+		}		
+		double focal = 6; // Observer type : focal (mm)
+		double integration_angle = 7; // Integration angle, in degree
+		ansys.api.speos.sensor.v1.SensorDimensions dimensions = 8; // Dimensions of the sensor
+	}
+}
+
+// Request to create a SensorTemplate in SensorTemplatesManager
+message Create_Request {
+	SensorTemplate sensor_template = 1; // SensorTemplate containing its basic characteristics
+}
+message Create_Response {
+	string guid = 1; // Guid of the SensorTemplate created in SensorTemplatesManager
+}
+// Request to read a SensorTemplate in SensorTemplatesManager
+message Read_Request {
+	string guid = 1; // Guid of the SensorTemplate to be read
+}
+message Read_Response {
+	SensorTemplate sensor_template = 1; // SensorTemplate corresponding to the guid given in Read_Request
+}
+// Request to update a SensorTemplate in SensorTemplatesManager
+message Update_Request {
+	string guid = 1; // Guid of the SensorTemplate to be updated
+	SensorTemplate sensor_template = 2; // SensorTemplate that will be used for the update
+}
+message Update_Response {
+}
+// Request to delete a SensorTemplate in SensorTemplatesManager
+message Delete_Request {
+	string guid = 1; // Guid of the SensorTemplate to be deleted
+}
+message Delete_Response {}
+
+message List_Request {
+}
+message List_Response {
+	repeated string guids = 1; // Guids of the SensorTemplates in SensorTemplatesManager
+}
+
