@@ -1,0 +1,14 @@
+ximu3csv/__init__.py,sha256=xEreT2jYOJI_f3Rah6gANy-liI6nxV7Lg02_hNLycio,302
+ximu3csv/convert_to_euler_angles.py,sha256=d9ghztBDzsfpb3Z3uffG4CnzBQNFCM6VM-LYEP9mSL0,1562
+ximu3csv/crop.py,sha256=lrYD9j_iyVicKfk1M7yO3zV9Ib2mgBW-7YQpFVYppUA,2159
+ximu3csv/data_messages.py,sha256=KEgQDYFhsH3PUdYZzuq_uV6i4eFqxl8pBoh_dTtWmME,7068
+ximu3csv/device.py,sha256=SlVeK_crxiXX8zd9T8GQOuPyaktLYIW_U6EJMa3U2Lo,2059
+ximu3csv/read.py,sha256=8KGPZyFrmleRKGrfpiGI6v-QRiODJGb4wCEVyN4AvZM,4638
+ximu3csv/resample.py,sha256=drg-g-XkyEN5jb7l8TBzYgFZFdWmaBMN_XFOavt9lxQ,4834
+ximu3csv/zero_first_timestamp.py,sha256=-YeKNeEJzc87JtpfoclfWlDM2TfsEtL7KQxa1Ny1cVc,2201
+ximu3csv/zero_heading.py,sha256=1ddTNNmxY0OoPA5H0d-R7uZijhHly3BKbRZajxCkkrc,2733
+ximu3csv-1.0.1.dist-info/LICENSE.md,sha256=iHzMo1y7_XNsAXI9KA7O7qBqqVdj2c5b5lAEYyJDb-o,1085
+ximu3csv-1.0.1.dist-info/METADATA,sha256=im77g1S-rQGqmgYWK94eMd9o2LFX-3uX8ZflCV6YYoQ,1630
+ximu3csv-1.0.1.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+ximu3csv-1.0.1.dist-info/top_level.txt,sha256=-NZ9oJBJXKAqzWJOkiG6Pt7qqknTAV7qP6bhD9zBg7A,9
+ximu3csv-1.0.1.dist-info/RECORD,,
