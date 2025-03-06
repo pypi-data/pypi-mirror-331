@@ -1,0 +1,8 @@
+README.md
+setup.py
+JavaCompilerLib.egg-info/PKG-INFO
+JavaCompilerLib.egg-info/SOURCES.txt
+JavaCompilerLib.egg-info/dependency_links.txt
+JavaCompilerLib.egg-info/entry_points.txt
+JavaCompilerLib.egg-info/requires.txt
+JavaCompilerLib.egg-info/top_level.txt
