@@ -1,0 +1,18 @@
+Metadata-Version: 2.2
+Name: alpha_mini_rug
+Version: 0.6.0
+Summary: Alpha Mini Robot wrapper for the RUG Social Robotics Lab
+Author: RUG Social Robotics Lab
+Requires-Dist: txaio
+Requires-Dist: autobahn
+Requires-Dist: numpy
+Requires-Dist: opencv-python
+Requires-Dist: opencv-contrib-python
+Requires-Dist: service_identity
+Requires-Dist: SpeechRecognition
+Requires-Dist: matplotlib
+Requires-Dist: wave
+Requires-Dist: msgpack
+Dynamic: author
+Dynamic: requires-dist
+Dynamic: summary
