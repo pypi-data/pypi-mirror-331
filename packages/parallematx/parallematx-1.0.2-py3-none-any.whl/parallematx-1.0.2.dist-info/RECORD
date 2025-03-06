@@ -1,0 +1,10 @@
+parallelmatx/__init__.py,sha256=JaXn_B7sfP4o10WWgWW04XC07m95B67LH5lxjfwk8Tk,64
+parallelmatx/build.py,sha256=gKojTr-Va1MiKviMA19Ol11ubO0vBM-P2m6evvDfDZI,3243
+parallelmatx/normal.py,sha256=7NsBDd0BR1htt7zBwljOQu2zAsd0uC6sUwREGGyQbAA,1229
+parallelmatx/parallel.py,sha256=y3BNwSTz86WSNZlvexDj1loRK9n3LAIfj-if3qeHQ8Y,2194
+parallelmatx/performance.py,sha256=QoadvV28a0BG0A-llNUXvl-uEDr8WaZqe_nxQFUWVzo,5280
+parallematx-1.0.2.dist-info/LICENSE,sha256=qUw3jehGVhTePwpsUAz33kEIgYQjwygnAxu4vN7GZZE,1086
+parallematx-1.0.2.dist-info/METADATA,sha256=xn34EfIsl-L0NK1R5891inDx_O1J7WRSXcn_18eTO_Y,1706
+parallematx-1.0.2.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+parallematx-1.0.2.dist-info/top_level.txt,sha256=i9PqWPQ-_lxgAKNpWW0QuJXw6I4OcmR3tdrinLDcL94,13
+parallematx-1.0.2.dist-info/RECORD,,
