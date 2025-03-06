@@ -1,0 +1,2 @@
+[console_scripts]
+superfork = superfork.fork:main
