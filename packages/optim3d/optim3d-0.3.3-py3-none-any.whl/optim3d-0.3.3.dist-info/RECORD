@@ -1,0 +1,12 @@
+optim3d/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+optim3d/main.py,sha256=_U1tO8SjhxZ-PeMqdzy7e2PCh2dBBT00OnfdQqaJVXI,12282
+optim3d/utils.py,sha256=rqLY6fvAtKJNXEvNMcnR2dhc7dVfwjTk4ukQeZGk2aw,11171
+optim3d/config/reconstruct.json,sha256=Z5NXHyIbLsKIh9WiwLcxQeF9MQjzdTv5_7k9rvfv5GM,20163
+optim3d/config/reconstruct_.json,sha256=GaMDlxlEV0ClRBo8Jj1PUxx-dNGcTauFzpMxE53juEg,43428
+optim3d-0.3.3.dist-info/COPYING,sha256=8iXlLAMJVUBdCjeoQmFkUFsqLpVaphg8K5lygmMT5ow,1243
+optim3d-0.3.3.dist-info/LICENSE,sha256=_2GAmhyPFMAaC6DUK14ahJiE_wf1rkTayxH2hcg08Pw,1613
+optim3d-0.3.3.dist-info/METADATA,sha256=9OHr1BicTmHcEIyxQKqV59Hm-altyxQyk6G9PtVZAPM,15256
+optim3d-0.3.3.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+optim3d-0.3.3.dist-info/entry_points.txt,sha256=f6BE6LfOXu8g99gldjDxslSM7qW1-rX6e-DXtMiG93w,45
+optim3d-0.3.3.dist-info/top_level.txt,sha256=TfE8QPRl7LM5vtRjjS0mwO5c_03YxCbIeuSUb3fdxgQ,8
+optim3d-0.3.3.dist-info/RECORD,,
