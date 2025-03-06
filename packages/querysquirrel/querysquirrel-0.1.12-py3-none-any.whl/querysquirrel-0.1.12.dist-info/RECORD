@@ -1,0 +1,9 @@
+querysquirrel/__init__.py,sha256=lSti1ZN52MYBGQa6y92A_onRNF7i8JgbnJx_YraPxrc,26
+querysquirrel/myfunctions.py,sha256=j1s59GUMBBK3X0x1u8bjm6203-JFCSrUCQDwxRXU0t8,14510
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_myfunctions.py,sha256=0xZf35xtQh9RQUhWbxKZ77t6UKK6gTq_HjMmdn3LCdE,4933
+querysquirrel-0.1.12.dist-info/LICENSE,sha256=jiVVtmpdOKrg9KJxCXNeuIGFVqlMOD8NdZgKvOO3ffk,1116
+querysquirrel-0.1.12.dist-info/METADATA,sha256=FYolHACCh4nZcJff94AeE_HXr-67pKMpya-aEXyQh-E,3740
+querysquirrel-0.1.12.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+querysquirrel-0.1.12.dist-info/top_level.txt,sha256=Iwb8iYOYRpjnIczcS6scD0fY1uCz3NdvnHhQyrOSD3c,20
+querysquirrel-0.1.12.dist-info/RECORD,,
