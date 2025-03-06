@@ -1,0 +1,17 @@
+etformat/__init__.py,sha256=vJgOBNaMmu4XNYRIXrkANV_lQZ5BKCvPenUyV6zBYmo,616
+etformat/_version.py,sha256=UNO7UaKPam6Zugzw6NMt_RQBnRzrv9GVeKUjWt-tl6I,511
+etformat/calibration.py,sha256=tms1B7EVn83Rjd6_vv7P9A_rahy8iWgjgRtiRMmgqss,4670
+etformat/channels.py,sha256=Gq2JS6DR0Mhl3ooL0QkN606hHh6FLb5kHHd6Lx-8RmY,1879
+etformat/describe.py,sha256=xRU4gFzpTi_CaX3GbfYMpKXcRdcFYlH5vuIpmttOEgM,5036
+etformat/edfdata.py,sha256=HVJGc-dD0CUS2GOolDbsjnEv5nLfK5nRMEoaRrvo5RM,20468
+etformat/edfdata_containers.py,sha256=r3k3KBTbZNBslf99_QBtGSIl7oEX6RiXyMFAX3u5mZA,7858
+etformat/edffile.py,sha256=dT9AMV_ZwmOUDBVJkMtR3XaMZ7VCxioZKmvIiB-GJ1o,20543
+etformat/edfinfo.py,sha256=0VO7qUP4DLKwiiCKSHMo-6aEtxBJjJdwj71f17Yd4Vs,4396
+etformat/export.py,sha256=1VCie5HaMrWUH5Gt3ukGuylCo0PkPUHFj9WVIRXJgxw,3482
+etformat/plot_gaze.py,sha256=Xur0BnOdon1-ks7BfF6Vw0_RE3et5aPiMQ5eAjiIyLw,2852
+etformat/plot_saccades.py,sha256=2ypeHY56CKl79EFy2iED5h3TLdeNkabMzW-8eitMF7g,2483
+etformat-1.1.0.dist-info/LICENSE,sha256=URFzbh_s5GKy06nyI83cZmgAnwjKUpbrq5HbvYuKoLo,1069
+etformat-1.1.0.dist-info/METADATA,sha256=PzMDcuPn_ci5Gue56Hh5GnXkFaGLZSmHicBFL1MKqRY,2644
+etformat-1.1.0.dist-info/WHEEL,sha256=P9jw-gEje8ByB7_hXoICnHtVCrEwMQh-630tKvQWehc,91
+etformat-1.1.0.dist-info/top_level.txt,sha256=eHcic5ts7uiFTTVGaqcNviD1mH8hCIJkl0dsRz5zfDk,9
+etformat-1.1.0.dist-info/RECORD,,
