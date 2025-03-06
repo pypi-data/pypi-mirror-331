@@ -1,0 +1,2 @@
+[console_scripts]
+fab = fab_cli.cli:main
