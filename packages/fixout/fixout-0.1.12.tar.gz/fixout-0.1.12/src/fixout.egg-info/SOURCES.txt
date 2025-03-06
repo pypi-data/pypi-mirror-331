@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+src/fixout.egg-info/PKG-INFO
+src/fixout.egg-info/SOURCES.txt
+src/fixout.egg-info/dependency_links.txt
+src/fixout.egg-info/top_level.txt
+src/interface/FixOut.py
+src/interface/__init__.py
+src/interface/constants.py
+src/interface/ttypes.py
+src/web/__init__.py
+src/web/dataset.py
+src/web/fair_exp.py
+src/web/webapp.py
