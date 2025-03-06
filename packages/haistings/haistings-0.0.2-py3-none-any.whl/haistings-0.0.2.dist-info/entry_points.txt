@@ -1,0 +1,3 @@
+[console_scripts]
+haistings=haistings.haistings:main
+
