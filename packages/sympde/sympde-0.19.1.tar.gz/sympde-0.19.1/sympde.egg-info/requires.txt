@@ -1,0 +1,6 @@
+sympy<1.10,>=1.5
+h5py
+pytest
+pyyaml
+numpy
+matplotlib
