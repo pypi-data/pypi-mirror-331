@@ -1,0 +1,17 @@
+cosmologix/__init__.py,sha256=1N35DilBKhBGozudEwl0ZoBgnEc1jTrEfZfpB51KeVY,185
+cosmologix/acoustic_scale.py,sha256=m1rlU2DmiQY8_yHbuXUwNWVt-VeIOWWWJnLHcErzoDE,3572
+cosmologix/cli.py,sha256=myanIdujZHjRjIGetbN61_oIxN9FhpLM272AuEhFdoc,10944
+cosmologix/contours.py,sha256=JgBBGvyOEQabbcnbRYlrd2CBa6f9xYX34uEr23bltAc,11791
+cosmologix/densities.py,sha256=A-5RxmAwnG2GoWsXaSvpANhwIz-Fzpiuw73pFKslXSw,6358
+cosmologix/distances.py,sha256=xG_dWZBmPPvesRct0aZWzBhf-Rhu-bp42jGHyR0MeJE,3855
+cosmologix/fitter.py,sha256=1xLXqPpeA4hmVwJdpfkpnRVmbSGBfBjcesMlAhtZnpA,14606
+cosmologix/interpolation.py,sha256=rTt2gcrF2ytPB2ttMtFAx_RQGYtMBnvSi0vABoV0948,5151
+cosmologix/likelihoods.py,sha256=0z-T74ARViJvXkQW4QwjnIqOFFTknh_so17YflW9Kb4,13460
+cosmologix/neutrinos.py,sha256=Km0w01J9zrwbEpQb5u7zK8eZLu4D8GGWafIPNqVbp90,8366
+cosmologix/tools.py,sha256=1_hm-H4QbTgca3Eq2kMjPFYG2Ip-toV7T9ok4cuxuzY,9477
+cosmologix-0.9.1.dist-info/LICENSE,sha256=gXf5dRMhNSbfLPYYTY_5hsZ1r7UU1OaKQEAQUhuIBkM,18092
+cosmologix-0.9.1.dist-info/METADATA,sha256=P1rQQwZgTHtF0_BoepJ3RlcygnbVeZQK1c_pTtRGxxk,28612
+cosmologix-0.9.1.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+cosmologix-0.9.1.dist-info/entry_points.txt,sha256=8g8xFfOzGWPucjTRBg8a_TpwEvylGuqgEush1RS8ES4,51
+cosmologix-0.9.1.dist-info/top_level.txt,sha256=bjXPVA6KCdb5jwfSnoRuOjBOjSOnfk1kUwO8X4RADew,11
+cosmologix-0.9.1.dist-info/RECORD,,
