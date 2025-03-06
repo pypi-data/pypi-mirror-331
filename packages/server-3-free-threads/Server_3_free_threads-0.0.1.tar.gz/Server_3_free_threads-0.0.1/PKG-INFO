@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: Server_3_free_threads
+Version: 0.0.1
+Summary: My first server
+Home-page: UNKNOWN
+Author: Vadim Kazakov
+Author-email: skolkovoinovations@gmail.com
+License: UNKNOWN
+Keywords: server
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+
+Server_3_free_threads
+1. python setup.py sdist bdist_wheel
+
