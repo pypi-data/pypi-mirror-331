@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: xortils
+Version: 0.0.1
+Summary: A collection of useful utilities.
+Author-email: Elijah Andrews <elijahan@umich.edu>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
