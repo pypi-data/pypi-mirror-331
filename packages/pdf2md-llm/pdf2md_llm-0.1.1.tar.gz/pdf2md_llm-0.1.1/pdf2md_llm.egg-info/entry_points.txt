@@ -1,0 +1,2 @@
+[console_scripts]
+pdf2md_llm = pdf2md_llm.cli:main
