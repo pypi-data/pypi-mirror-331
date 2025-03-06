@@ -1,0 +1,13 @@
+<form
+    class="{{ class }}"
+    action="{% url 'delete file' %}"
+    method="post"
+    hx-post="{% url 'delete file' %}"
+    hx-confirm="Are you sure you want to delete '{{ source_file }}'?"
+    hx-swap="delete"
+    hx-target="this"
+>
+    {% csrf_token %}
+    {{ form }}
+    <input class="block w-full bg-red-500 p-2 hover:bg-red-300 text-white" hx-trigger="click" type="button" value="Delete">
+</form>

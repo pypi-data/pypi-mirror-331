@@ -1,0 +1,36 @@
+<div class="absolute inset-0 bg-gray-300/80">
+    <div class="flex h-screen flex-col items-center justify-center">
+        <div class="relative">
+            <table class="w-full overflow-x-auto text-left text-sm text-gray-500 dark:text-gray-400">
+                <thead class="bg-gray-50 text-xs uppercase text-gray-700 dark:bg-gray-700 dark:text-gray-400">
+                    <tr>
+                        <th scope="col" class="p-2">#</th>
+                        <th scope="col" class="p-2">Name</th>
+                        <th scope="col" class="p-2">Size</th>
+                        <th scope="col" class="p-2">Status</th>
+                        <th scope="col" class="p-2">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="files-table">
+                    {% for file in source_files %}
+                    {% include "portfolio/files/partials/_listitem.html" with file=file %}
+                    {% empty %}
+                    <tr
+                        class="bg-gray-300 odd:bg-gray-600"
+                        hx-trigger="load"
+                        hx-get="{% url 'create file' %}"
+                        hx-target="this"
+                        hx-swap="outerHTML"
+                    >Loading...</tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <div class="flex-inline group mt-4 flex cursor-pointer items-center gap-2 rounded bg-blue-500 px-6 py-4 hover:scale-105 hover:bg-blue-300" hx-get="{% url 'create file' %}" hx-trigger="click" hx-target="#files-table" hx-swap="beforeend">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8 text-gray-200 group-hover:animate-pulse">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5m-13.5-9L12 3m0 0 4.5 4.5M12 3v13.5" />
+                </svg>
+                <h2 class="text-xl text-gray-200">upload new file</h2>
+            </div>
+        </div>
+    </div>
+</div>

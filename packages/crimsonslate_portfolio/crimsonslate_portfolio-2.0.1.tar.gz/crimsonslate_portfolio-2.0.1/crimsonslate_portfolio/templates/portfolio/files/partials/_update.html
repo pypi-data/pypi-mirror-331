@@ -1,0 +1,20 @@
+<form
+    class="{{ class }}"
+    hx-post="{% url 'update file' %}"
+    hx-encoding="multipart/form-data"
+    hx-swap="outerHTML"
+    hx-target="this"
+>
+    <tr class="bg-gray-300 odd:bg-gray-200" id="{{ file.pk }}">
+        <td class="p-2">
+            {{ file.pk }}
+        </td>
+        <td class="p-2">
+            {{ file }}
+        </td>
+        <td class="p-2 flex gap-2">
+            <input hx-get="{% url 'detail file' file.pk %}" hx-swap="outerHTML" hx-target="{{ file.pk }}" type="button" class="cursor-pointer rounded bg-blue-500 p-2 text-gray-100 hover:bg-blue-300" value="Save">
+            <input hx-post="{% url 'update file' file.pk %}" hx-swap="outerHTML" hx-target="{{ file.pk }}" type="button" class="cursor-pointer rounded bg-blue-500 p-2 text-gray-100 hover:bg-blue-300" value="Save">
+        </td>
+    </tr>
+</form>
