@@ -1,0 +1,7 @@
+sphn-0.1.7.dist-info/METADATA,sha256=KKJ9Mt1ZfUBdnbWHv9oZjYxExfrHIHkToLVp580sE3c,1236
+sphn-0.1.7.dist-info/WHEEL,sha256=A8H96M6MENZ0DNfNG1JG86k1TsEQFWNZpYpf8d_KruU,90
+sphn-0.1.7.dist-info/licenses/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+sphn/__init__.py,sha256=pjegzU3MQGzXz3ls0vmFlexvauqFYCAK0WfCUj1fRyw,21
+sphn/__init__.pyi,sha256=ih03MYaw2MgukYKy0VFM-0HM3X8ZUoZkbAItDS0kAnk,4840
+sphn/sphn.cp39-win32.pyd,sha256=_NCCOqflvkLh6tBUUOMpAZgcyuPeH-CGVx6JoNz9T-M,2635264
+sphn-0.1.7.dist-info/RECORD,,
