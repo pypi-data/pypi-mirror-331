@@ -1,0 +1,11 @@
+liblzcore.dylib,sha256=AV6xZNVw2err8VHtX7Ac9jt35y_VZNNuaqlHmVXgg9A,559744
+liblzcore.0.9.dylib,sha256=STvXdEG1264DNfsQvosCtghDJcymonj8Fs9yGLCBXtc,559696
+lzcomplexity.cpython-313-darwin.so,sha256=e5YYAiEOUY2Lg7bIww6GNk4IW5oCENc5ko7huH20sZE,451376
+liblzcore.0.dylib,sha256=STvXdEG1264DNfsQvosCtghDJcymonj8Fs9yGLCBXtc,559696
+lzcomplexity-0.9.3.dist-info/RECORD,,
+lzcomplexity-0.9.3.dist-info/LICENSE,sha256=kE4G5tFqOiCTDH3hKH3buqjEROv5co_7hmw_f-OmB6E,1075
+lzcomplexity-0.9.3.dist-info/WHEEL,sha256=yG9BMxLSlfc7sLJzW6pYR06np5fAnC74FsWxN8ytOhg,110
+lzcomplexity-0.9.3.dist-info/top_level.txt,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+lzcomplexity-0.9.3.dist-info/METADATA,sha256=8bCjMcszvKR-kwI0SgUwCFVumLjhqFqw_ksULyUwWh8,5095
+lzcomplexity.dylibs/liblzcore.0.9.dylib,sha256=nI-V_kkDJoVNWKVbUtnLhd87lF75kO3CnoALC516N-A,559696
+lzcomplexity.dylibs/libtbb.12.10.dylib,sha256=nxAVMpBE2RB2fdnOqxsDed53ISSjtz418dkV1PqbSj8,462816
