@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+paid_client/__init__.py
+paid_client/core.py
+paid_client.egg-info/PKG-INFO
+paid_client.egg-info/SOURCES.txt
+paid_client.egg-info/dependency_links.txt
+paid_client.egg-info/requires.txt
+paid_client.egg-info/top_level.txt
