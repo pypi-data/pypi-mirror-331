@@ -1,0 +1,10 @@
+fogis_api_client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fogis_api_client/fogis_api_client.py,sha256=8Xiu-pWgxSDPhsutltDoEzoH-TgT68LqimPpv-DNqDg,23831
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_fogis_api_client.py,sha256=w-D3cL6VCJmSh0Friksm4Gphc_netB_Im93m2EMh2Vk,40282
+tests/test_fogis_api_client_ai_generated.py,sha256=EyoDvG3TeJOchp8ZvMtAQ3UiEbJjYszjDlpJ_IZ3UEM,17754
+fogis_api_client_timmybird-0.0.4.dist-info/LICENSE.txt,sha256=Px6uSbkqLczJTCU28YNErBO39iWLdoimo06mRr40u64,1070
+fogis_api_client_timmybird-0.0.4.dist-info/METADATA,sha256=NXcV_l4dyjpNwKkt5bGGIB-O5uK8NeeBQqUcxHZbGKo,2325
+fogis_api_client_timmybird-0.0.4.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+fogis_api_client_timmybird-0.0.4.dist-info/top_level.txt,sha256=vowBJNR_pmZOpUiwE_ZaMbgxY8jIFqJ5IfilRsUcYf4,23
+fogis_api_client_timmybird-0.0.4.dist-info/RECORD,,
