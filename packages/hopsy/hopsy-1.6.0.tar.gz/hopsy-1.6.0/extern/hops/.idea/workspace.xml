@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="hops" targetName="DegenerateMultivariateGaussianTestSuite" />
+      <config projectName="hops" targetName="IsClearRecordsAvailableTestSuite" />
+      <config projectName="hops" targetName="ModelMixinTestSuite" />
+      <config projectName="hops" targetName="ReflectorTestSuite" />
+      <config projectName="hops" targetName="ModelWrapperTestSuite" />
+      <config projectName="hops" targetName="CoordinateHitAndRunTestSuite" />
+      <config projectName="hops" targetName="IsAddMessageAvailableTestSuite" />
+      <config projectName="hops" targetName="DikinTestSuite" />
+      <config projectName="hops" targetName="SimplexFactoryTestSuite" />
+      <config projectName="hops" targetName="IsStoreRecordAvailableTestSuite" />
+      <config projectName="hops" targetName="RosenbrockTestSuite" />
+      <config projectName="hops" targetName="BilliardMALATestSuite" />
+      <config projectName="hops" targetName="IsSetStepSizeAvailableTestSuite" />
+      <config projectName="hops" targetName="AcceptanceRateTunerTestSuite" />
+      <config projectName="hops" targetName="MaximumVolumeEllipsoidTestSuite" />
+      <config projectName="hops" targetName="ThompsonSamplingTestSuite" />
+      <config projectName="hops" targetName="hops" />
+      <config projectName="hops" targetName="TruncatedGaussianDemo" />
+      <config projectName="hops" targetName="CovarianceTestSuite" />
+      <config projectName="hops" targetName="ChordStepDistributionsTestSuite" />
+      <config projectName="hops" targetName="DikinEllipsoidCalculatorTestSuite" />
+      <config projectName="hops" targetName="NormalizePolytopeTestSuite" />
+      <config projectName="hops" targetName="BilliardWalkTestSuite" />
+      <config projectName="hops" targetName="ExpectedSquaredJumpDistanceTestSuite" />
+      <config projectName="hops" targetName="CsvReaderTestSuite" />
+      <config projectName="hops" targetName="ReversibleJumpProposalTestSuite" />
+      <config projectName="hops" targetName="LinearProgramFactoryTestSuite" />
+      <config projectName="hops" targetName="SamplingGaussianTarget" />
+      <config projectName="hops" targetName="docs" />
+      <config projectName="hops" targetName="HitAndRunTestSuite" />
+      <config projectName="hops" targetName="MarkovChainFactoryTestSuite" />
+      <config projectName="hops" targetName="SamplingGaussianSignificanceTarget" />
+      <config projectName="hops" targetName="BinarySearchAcceptanceRateTunerTestSuite" />
+      <config projectName="hops" targetName="GaussianProcessTestSuite" />
+      <config projectName="hops" targetName="IsWriteRecordsToFileAvailableTestSuite" />
+      <config projectName="hops" targetName="CsvWriterImplTestSuite" />
+      <config projectName="hops" targetName="CSmMALATestSuite" />
+      <config projectName="hops" targetName="TrunatedGaussianProposalTestSuite" />
+      <config projectName="hops" targetName="GaussianTestSuite" />
+      <config projectName="hops" targetName="MixtureTestSuite" />
+      <config projectName="hops" targetName="ExpectedSquaredJumpDistanceTunerTestSuite" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" GENERATION_OPTIONS="-DHOPS_GUROBI=OFF" />
+      <configuration PROFILE_NAME="Release" ENABLED="true" CONFIG_NAME="Release" GENERATION_OPTIONS="-DHOPS_GUROBI=OFF" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a7466c7d-4da6-4fb8-83be-bb5532419cd8" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2fMlisoXlNzzIekUPJ4juhYl7NC" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Boost.Test.BilliardMALAProposal.executor": "Run",
+    "Boost.Test.ColdnessGaussianInCube.executor": "Run",
+    "Boost.Test.GaussianInCube.executor": "Run",
+    "Boost.Test.GaussianInWideCubeHasCorrectStd.executor": "Run",
+    "Boost.Test.ReversibleJumpProposal.executor": "Run",
+    "Boost.Test.RosenBrockInCube.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.advertisement.text.has.clang-format": "true",
+    "cf.advertisement.text.overridden": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "ctest.advertisement.all.test.configuration.is.created": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/jadebeck/repos/hops/src/hops/extern/DNest4",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "CMakeSettings",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Boost.Test.ColdnessGaussianInCube">
+    <configuration name="AcceptanceRateTunerTestSuite" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hops" TARGET_NAME="AcceptanceRateTunerTestSuite" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="hops" RUN_TARGET_NAME="AcceptanceRateTunerTestSuite" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BilliardMALAProposal" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hops" TARGET_NAME="BilliardMALATestSuite" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="hops" RUN_TARGET_NAME="BilliardMALATestSuite" TEST_CLASS="BilliardMALAProposal" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BilliardMALATestSuite" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hops" TARGET_NAME="BilliardMALATestSuite" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="hops" RUN_TARGET_NAME="BilliardMALATestSuite" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BilliardWalkTestSuite" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hops" TARGET_NAME="BilliardWalkTestSuite" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="hops" RUN_TARGET_NAME="BilliardWalkTestSuite" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BinarySearchAcceptanceRateTunerTestSuite" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hops" TARGET_NAME="BinarySearchAcceptanceRateTunerTestSuite" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="hops" RUN_TARGET_NAME="BinarySearchAcceptanceRateTunerTestSuite" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CSmMALATestSuite" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hops" TARGET_NAME="CSmMALATestSuite" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="hops" RUN_TARGET_NAME="CSmMALATestSuite" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ChordStepDistributionsTestSuite" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hops" TARGET_NAME="ChordStepDistributionsTestSuite" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="hops" RUN_TARGET_NAME="ChordStepDistributionsTestSuite" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ColdnessGaussianInCube" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hops" TARGET_NAME="BilliardMALATestSuite" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="hops" RUN_TARGET_NAME="BilliardMALATestSuite" TEST_CLASS="BilliardMALAProposal" TEST_METHOD="ColdnessGaussianInCube" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CoordinateHitAndRunTestSuite" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hops" TARGET_NAME="CoordinateHitAndRunTestSuite" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="hops" RUN_TARGET_NAME="CoordinateHitAndRunTestSuite" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CovarianceTestSuite" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hops" TARGET_NAME="CovarianceTestSuite" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="hops" RUN_TARGET_NAME="CovarianceTestSuite" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CsvReaderTestSuite" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hops" TARGET_NAME="CsvReaderTestSuite" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="hops" RUN_TARGET_NAME="CsvReaderTestSuite" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CsvWriterImplTestSuite" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hops" TARGET_NAME="CsvWriterImplTestSuite" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="hops" RUN_TARGET_NAME="CsvWriterImplTestSuite" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DegenerateMultivariateGaussianTestSuite" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hops" TARGET_NAME="DegenerateMultivariateGaussianTestSuite" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="hops" RUN_TARGET_NAME="DegenerateMultivariateGaussianTestSuite" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DikinEllipsoidCalculatorTestSuite" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hops" TARGET_NAME="DikinEllipsoidCalculatorTestSuite" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="hops" RUN_TARGET_NAME="DikinEllipsoidCalculatorTestSuite" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DikinTestSuite" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hops" TARGET_NAME="DikinTestSuite" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="hops" RUN_TARGET_NAME="DikinTestSuite" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExpectedSquaredJumpDistanceTestSuite" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hops" TARGET_NAME="ExpectedSquaredJumpDistanceTestSuite" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="hops" RUN_TARGET_NAME="ExpectedSquaredJumpDistanceTestSuite" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExpectedSquaredJumpDistanceTunerTestSuite" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hops" TARGET_NAME="ExpectedSquaredJumpDistanceTunerTestSuite" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="hops" RUN_TARGET_NAME="ExpectedSquaredJumpDistanceTunerTestSuite" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GaussianInCube" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hops" TARGET_NAME="BilliardMALATestSuite" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="hops" RUN_TARGET_NAME="BilliardMALATestSuite" TEST_CLASS="BilliardMALAProposal" TEST_METHOD="GaussianInCube" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GaussianInWideCubeHasCorrectStd" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hops" TARGET_NAME="BilliardMALATestSuite" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="hops" RUN_TARGET_NAME="BilliardMALATestSuite" TEST_CLASS="BilliardMALAProposal" TEST_METHOD="GaussianInWideCubeHasCorrectStd" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GaussianProcessTestSuite" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hops" TARGET_NAME="GaussianProcessTestSuite" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="hops" RUN_TARGET_NAME="GaussianProcessTestSuite" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GaussianTestSuite" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hops" TARGET_NAME="GaussianTestSuite" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="hops" RUN_TARGET_NAME="GaussianTestSuite" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HitAndRunTestSuite" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hops" TARGET_NAME="HitAndRunTestSuite" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="hops" RUN_TARGET_NAME="HitAndRunTestSuite" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IsAddMessageAvailableTestSuite" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hops" TARGET_NAME="IsAddMessageAvailableTestSuite" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="hops" RUN_TARGET_NAME="IsAddMessageAvailableTestSuite" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IsClearRecordsAvailableTestSuite" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hops" TARGET_NAME="IsClearRecordsAvailableTestSuite" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="hops" RUN_TARGET_NAME="IsClearRecordsAvailableTestSuite" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IsSetStepSizeAvailableTestSuite" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hops" TARGET_NAME="IsSetStepSizeAvailableTestSuite" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="hops" RUN_TARGET_NAME="IsSetStepSizeAvailableTestSuite" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IsStoreRecordAvailableTestSuite" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hops" TARGET_NAME="IsStoreRecordAvailableTestSuite" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="hops" RUN_TARGET_NAME="IsStoreRecordAvailableTestSuite" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IsWriteRecordsToFileAvailableTestSuite" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hops" TARGET_NAME="IsWriteRecordsToFileAvailableTestSuite" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="hops" RUN_TARGET_NAME="IsWriteRecordsToFileAvailableTestSuite" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LinearProgramFactoryTestSuite" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hops" TARGET_NAME="LinearProgramFactoryTestSuite" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="hops" RUN_TARGET_NAME="LinearProgramFactoryTestSuite" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MarkovChainFactoryTestSuite" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hops" TARGET_NAME="MarkovChainFactoryTestSuite" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="hops" RUN_TARGET_NAME="MarkovChainFactoryTestSuite" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MaximumVolumeEllipsoidTestSuite" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hops" TARGET_NAME="MaximumVolumeEllipsoidTestSuite" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="hops" RUN_TARGET_NAME="MaximumVolumeEllipsoidTestSuite" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MixtureTestSuite" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hops" TARGET_NAME="MixtureTestSuite" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="hops" RUN_TARGET_NAME="MixtureTestSuite" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ModelMixinTestSuite" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hops" TARGET_NAME="ModelMixinTestSuite" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="hops" RUN_TARGET_NAME="ModelMixinTestSuite" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ModelWrapperTestSuite" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hops" TARGET_NAME="ModelWrapperTestSuite" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="hops" RUN_TARGET_NAME="ModelWrapperTestSuite" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NormalizePolytopeTestSuite" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hops" TARGET_NAME="NormalizePolytopeTestSuite" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="hops" RUN_TARGET_NAME="NormalizePolytopeTestSuite" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReflectorTestSuite" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hops" TARGET_NAME="ReflectorTestSuite" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="hops" RUN_TARGET_NAME="ReflectorTestSuite" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RosenBrockInCube" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hops" TARGET_NAME="BilliardMALATestSuite" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="hops" RUN_TARGET_NAME="BilliardMALATestSuite" TEST_CLASS="BilliardMALAProposal" TEST_METHOD="RosenBrockInCube" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RosenbrockTestSuite" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hops" TARGET_NAME="RosenbrockTestSuite" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="hops" RUN_TARGET_NAME="RosenbrockTestSuite" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimplexFactoryTestSuite" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hops" TARGET_NAME="SimplexFactoryTestSuite" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="hops" RUN_TARGET_NAME="SimplexFactoryTestSuite" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ThompsonSamplingTestSuite" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hops" TARGET_NAME="ThompsonSamplingTestSuite" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="hops" RUN_TARGET_NAME="ThompsonSamplingTestSuite" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TrunatedGaussianProposalTestSuite" type="CMakeBoostTestRunConfigurationType" factoryName="Boost Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hops" TARGET_NAME="TrunatedGaussianProposalTestSuite" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="hops" RUN_TARGET_NAME="TrunatedGaussianProposalTestSuite" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReversibleJumpProposalTestSuite" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hops" TARGET_NAME="ReversibleJumpProposalTestSuite" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="hops" RUN_TARGET_NAME="ReversibleJumpProposalTestSuite">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SamplingGaussianSignificanceTarget" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hops" TARGET_NAME="SamplingGaussianSignificanceTarget" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="hops" RUN_TARGET_NAME="SamplingGaussianSignificanceTarget">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SamplingGaussianTarget" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hops" TARGET_NAME="SamplingGaussianTarget" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="hops" RUN_TARGET_NAME="SamplingGaussianTarget">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TruncatedGaussianDemo" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hops" TARGET_NAME="TruncatedGaussianDemo" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="hops" RUN_TARGET_NAME="TruncatedGaussianDemo">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="docs" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hops" TARGET_NAME="docs" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="hops" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hops" TARGET_NAME="hops" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All CTest" type="CTestRunConfiguration" factoryName="CTestRun" PROGRAM_PARAMS="--extra-verbose" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" WORKING_DIR="file://$CMakeCurrentLocalGenerationDir$" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_PATH="$CTestCurrentExecutableName$" EXPLICIT_BUILD_TARGET_NAME="all" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="hops" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <module name="hops" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Autodetect">
+      <module name="hops" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <module name="hops" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <module name="hops" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Twisted Trial">
+      <module name="hops" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <module name="hops" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <module name="hops" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Boost.Test.CsvReaderTestSuite" />
+      <item itemvalue="Boost.Test.CsvWriterImplTestSuite" />
+      <item itemvalue="Boost.Test.LinearProgramFactoryTestSuite" />
+      <item itemvalue="Boost.Test.MarkovChainFactoryTestSuite" />
+      <item itemvalue="Boost.Test.ModelMixinTestSuite" />
+      <item itemvalue="Boost.Test.ModelWrapperTestSuite" />
+      <item itemvalue="Boost.Test.BilliardMALATestSuite" />
+      <item itemvalue="Boost.Test.BilliardWalkTestSuite" />
+      <item itemvalue="Boost.Test.ChordStepDistributionsTestSuite" />
+      <item itemvalue="Boost.Test.CoordinateHitAndRunTestSuite" />
+      <item itemvalue="Boost.Test.CSmMALATestSuite" />
+      <item itemvalue="Boost.Test.DikinEllipsoidCalculatorTestSuite" />
+      <item itemvalue="Boost.Test.DikinTestSuite" />
+      <item itemvalue="Boost.Test.HitAndRunTestSuite" />
+      <item itemvalue="Boost.Test.IsSetStepSizeAvailableTestSuite" />
+      <item itemvalue="Boost.Test.ReflectorTestSuite" />
+      <item itemvalue="Boost.Test.TrunatedGaussianProposalTestSuite" />
+      <item itemvalue="Boost.Test.IsAddMessageAvailableTestSuite" />
+      <item itemvalue="Boost.Test.IsClearRecordsAvailableTestSuite" />
+      <item itemvalue="Boost.Test.IsStoreRecordAvailableTestSuite" />
+      <item itemvalue="Boost.Test.IsWriteRecordsToFileAvailableTestSuite" />
+      <item itemvalue="Boost.Test.AcceptanceRateTunerTestSuite" />
+      <item itemvalue="Boost.Test.BinarySearchAcceptanceRateTunerTestSuite" />
+      <item itemvalue="Boost.Test.ExpectedSquaredJumpDistanceTunerTestSuite" />
+      <item itemvalue="Boost.Test.DegenerateMultivariateGaussianTestSuite" />
+      <item itemvalue="Boost.Test.GaussianTestSuite" />
+      <item itemvalue="Boost.Test.MixtureTestSuite" />
+      <item itemvalue="Boost.Test.RosenbrockTestSuite" />
+      <item itemvalue="Boost.Test.GaussianProcessTestSuite" />
+      <item itemvalue="Boost.Test.ThompsonSamplingTestSuite" />
+      <item itemvalue="Boost.Test.MaximumVolumeEllipsoidTestSuite" />
+      <item itemvalue="Boost.Test.NormalizePolytopeTestSuite" />
+      <item itemvalue="Boost.Test.SimplexFactoryTestSuite" />
+      <item itemvalue="Boost.Test.CovarianceTestSuite" />
+      <item itemvalue="Boost.Test.ExpectedSquaredJumpDistanceTestSuite" />
+      <item itemvalue="Boost.Test.GaussianInWideCubeHasCorrectStd" />
+      <item itemvalue="Boost.Test.ColdnessGaussianInCube" />
+      <item itemvalue="Boost.Test.GaussianInCube" />
+      <item itemvalue="Boost.Test.RosenBrockInCube" />
+      <item itemvalue="Boost.Test.BilliardMALAProposal" />
+      <item itemvalue="CMake Application.ReversibleJumpProposalTestSuite" />
+      <item itemvalue="CMake Application.docs" />
+      <item itemvalue="CMake Application.hops" />
+      <item itemvalue="CMake Application.SamplingGaussianSignificanceTarget" />
+      <item itemvalue="CMake Application.SamplingGaussianTarget" />
+      <item itemvalue="CMake Application.TruncatedGaussianDemo" />
+      <item itemvalue="CTest Application.All CTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Boost.Test.ColdnessGaussianInCube" />
+        <item itemvalue="Boost.Test.BilliardMALAProposal" />
+        <item itemvalue="Boost.Test.RosenBrockInCube" />
+        <item itemvalue="Boost.Test.GaussianInCube" />
+        <item itemvalue="Boost.Test.GaussianInWideCubeHasCorrectStd" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a7466c7d-4da6-4fb8-83be-bb5532419cd8" name="Changes" comment="" />
+      <created>1713618958958</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1713618958958</updated>
+      <workItem from="1713618961164" duration="44000" />
+      <workItem from="1713863981715" duration="29021000" />
+      <workItem from="1716628015548" duration="20000" />
+      <workItem from="1723985745400" duration="594000" />
+      <workItem from="1724004280475" duration="71000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticReloadCMake value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/hops/MarkovChain/Proposal/BilliardMALAProposal.hpp</url>
+          <line>252</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/hops/MarkovChain/Proposal/BilliardMALAProposal.hpp</url>
+          <line>339</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
