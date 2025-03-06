@@ -1,0 +1,10 @@
+gnnwr/__init__.py,sha256=mzkTqpmLCDBZydcHi7c75dOvNK9UWPlnMpYDKY5w9oc,93
+gnnwr/datasets.py,sha256=9BXGkCUprktjOOJbTd4nIfAIE6-MBeem3u57G5Q5yCY,48434
+gnnwr/models.py,sha256=axVU3o5VA6l2vTMA_jzEdEwsgvlqBzajoWwh1Jx6QU4,48621
+gnnwr/networks.py,sha256=TuuGKcDPgd_BJrNWstcErm33qN_n06fV0oOsaD5Is-w,8816
+gnnwr/utils.py,sha256=VTcRZBVIoDSZkZbjsrMwbZM-EcL-LLs25TVhE4smHVE,15116
+gnnwr-0.1.15.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+gnnwr-0.1.15.dist-info/METADATA,sha256=f8qcIp3ZzRp5owElxQ0BTA67IPWUD-Jeb7fItLCYCF4,19528
+gnnwr-0.1.15.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+gnnwr-0.1.15.dist-info/top_level.txt,sha256=SHvor39OriX3YzHgKfCb7p5JBapRB46NoU6xO9iML7g,6
+gnnwr-0.1.15.dist-info/RECORD,,
