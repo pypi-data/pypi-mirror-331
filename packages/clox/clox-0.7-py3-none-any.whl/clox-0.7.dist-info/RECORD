@@ -1,0 +1,12 @@
+clox/__init__.py,sha256=gErclFSjUDschQpngWqOBGkBKt1jwd-Ww8B9iJmlU5s,108
+clox/__main__.py,sha256=9oJYc1WXu4ZMrjKny_2-4Cgu46-VWHuE9xOqD1iJY0E,109
+clox/functions.py,sha256=hOXLuSMljzOMaHXJtiyxGas6XkFE9lQ51TMSC56Yq2M,8049
+clox/jcalendar.py,sha256=yAzuyXq6h8D5aJG_He_WuPR8Xy411W_l7pl8mtPJa5U,12296
+clox/params.py,sha256=Zd4AO6ufxpJFnXnwW3_xwzusyU4WIKS-JS29CVh2KZo,1542
+clox-0.7.dist-info/AUTHORS.md,sha256=lmtnd18MnfgB57jdvfJbC0JHN3iARf2Ov4pY5kPGJC8,242
+clox-0.7.dist-info/LICENSE,sha256=WoAsqqZ_lNVBGdyxjwh7YnVNXKfOB-qYVrRhrn-e-_4,1072
+clox-0.7.dist-info/METADATA,sha256=yUonus_iE_mfLDldjTFwOSt19Fkk6Mseu6YMy9blUwk,8799
+clox-0.7.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+clox-0.7.dist-info/entry_points.txt,sha256=sP4Rmoe-DxYGjlF_Tld6nghbt_u-fK8h9ZUQFmO8TJs,45
+clox-0.7.dist-info/top_level.txt,sha256=5DxGH-4VNfYkM8vbfngObh6-jpFEoSW4M90EvDGfhSw,5
+clox-0.7.dist-info/RECORD,,
