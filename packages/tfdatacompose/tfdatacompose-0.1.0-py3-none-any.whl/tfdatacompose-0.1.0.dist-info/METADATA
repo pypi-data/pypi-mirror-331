@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: tfdatacompose
+Version: 0.1.0
+Summary: Create composable data transformation pipelines using Tensorflow Datasets
+Author-Email: =?utf-8?q?Fran=C3=A7ois_LaBerge?= <fgrclaberge@gmail.com>
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 1 - Planning
+Project-URL: Homepage, https://github.com/FGRCL/tf-data-compose
+Project-URL: Bug Tracker, https://github.com/FGRCL/tf-data-compose
+Requires-Python: <3.11,>=3.8
+Requires-Dist: tensorflow>=2.12.0
+Description-Content-Type: text/markdown
+
+# TF Data Compose
+Create composable data transformation pipelines using Tensorflow Datasets
+
+View the [docs](https://fgrcl.github.io/tf-data-compose/index.html)
