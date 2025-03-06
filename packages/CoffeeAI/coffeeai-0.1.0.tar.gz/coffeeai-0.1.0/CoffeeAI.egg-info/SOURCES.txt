@@ -1,0 +1,10 @@
+README.md
+setup.py
+CoffeeAI/CoffeeAI.py
+CoffeeAI/__init__.py
+CoffeeAI/coffeeai.py
+CoffeeAI.egg-info/PKG-INFO
+CoffeeAI.egg-info/SOURCES.txt
+CoffeeAI.egg-info/dependency_links.txt
+CoffeeAI.egg-info/requires.txt
+CoffeeAI.egg-info/top_level.txt
