@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+aiaf/__init__.py
+aiaf/aiaf.py
+aiaf.egg-info/PKG-INFO
+aiaf.egg-info/SOURCES.txt
+aiaf.egg-info/dependency_links.txt
+aiaf.egg-info/requires.txt
+aiaf.egg-info/top_level.txt
