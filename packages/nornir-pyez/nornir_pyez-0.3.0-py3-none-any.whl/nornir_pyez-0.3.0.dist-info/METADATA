@@ -1,0 +1,18 @@
+Metadata-Version: 2.3
+Name: nornir_pyez
+Version: 0.3.0
+Summary: PyEZ Plugin for Nornir
+License: Apache-2.0
+Author: Knox Hutchinson
+Author-email: knox@knoxsdata.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: junos-eznc (>=2.7.3,<3.0.0)
+Requires-Dist: nornir (>=3.5.0)
+Requires-Dist: xmltodict (==0.14.2)
