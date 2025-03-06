@@ -1,0 +1,8 @@
+langgraph_supervisor-0.0.7.dist-info/METADATA,sha256=l958GrwnwVRQGAnzcAAapfqWz0AxZrULW8nqF-3DuGs,8167
+langgraph_supervisor-0.0.7.dist-info/WHEEL,sha256=thaaA2w1JzcGC48WYufAs8nrYZjJm8LqNfnXFOFyCC4,90
+langgraph_supervisor-0.0.7.dist-info/entry_points.txt,sha256=6OYgBcLyFCUgeqLgnvMyOJxPCWzgy7se4rLPKtNonMs,34
+langgraph_supervisor-0.0.7.dist-info/licenses/LICENSE,sha256=MUmbFEsk2OiYaBBp082zKqUJ9BF_Odm1k_VrWpTir0A,1072
+langgraph_supervisor/__init__.py,sha256=jnhfMZ2BNhZ9QvQEPh8YEQG4yQaOJtMXQUgzWbR45Vg,95
+langgraph_supervisor/handoff.py,sha256=9zH6ErwW2zvB63ddB-SjbkgXvur7G-V4ICXmFofe25E,2506
+langgraph_supervisor/supervisor.py,sha256=yVv5Go2wnsA-IncRFK_aLgto8Rrr65ewwJoSB-6_BXc,5588
+langgraph_supervisor-0.0.7.dist-info/RECORD,,
