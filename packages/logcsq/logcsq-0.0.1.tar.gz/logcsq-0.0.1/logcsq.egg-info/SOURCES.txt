@@ -1,0 +1,7 @@
+setup.py
+logcsq/__init__.py
+logcsq/test.py
+logcsq.egg-info/PKG-INFO
+logcsq.egg-info/SOURCES.txt
+logcsq.egg-info/dependency_links.txt
+logcsq.egg-info/top_level.txt
