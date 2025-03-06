@@ -1,0 +1,2 @@
+[beamlime.workflow_plugin]
+dummy = beamlime.workflow_protocols:DummyLiveWorkflow

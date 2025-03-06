@@ -1,0 +1,6 @@
+name: lime-dev
+channels:
+  - conda-forge
+dependencies:
+  - tox
+  - python=3.9
