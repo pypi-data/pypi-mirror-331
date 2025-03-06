@@ -1,0 +1,11 @@
+picklescan/__init__.py,sha256=AbLtXPaJZTIRXct9IMEiNKjhv-nOlCHFo_aeKHOXzfw,82
+picklescan/__main__.py,sha256=bYt9eEaoRQWdejEHFD8REx9jxVEdZptECFsV7F49Ink,30
+picklescan/cli.py,sha256=IrBnvlQbGZMHKpBWP1kVmVSFcCAF8EfsTupSQ6wGuKM,2879
+picklescan/scanner.py,sha256=eZ8JF1fb3lAnNO6ui70gsdlCwpUz8MS3VY__3PEfADc,18154
+picklescan/torch.py,sha256=NbCCzks1aHacbxwbE464RZj3F-C1w0IEai-g_-DN8BU,2687
+picklescan-0.0.22.dist-info/LICENSE,sha256=FBgUa197g30KfCSQaicvL2rbaOuyWOl1YOyRrmY_84o,1072
+picklescan-0.0.22.dist-info/METADATA,sha256=Uy2UsTitDiyXInORmzKNDtAD3Po_8ur0DCmoPGncsmw,6238
+picklescan-0.0.22.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+picklescan-0.0.22.dist-info/entry_points.txt,sha256=GIviGuXJneir552CaQWG371SyeeC45pv-cmxOnGELbw,51
+picklescan-0.0.22.dist-info/top_level.txt,sha256=vQStlc_acoDjaOUPtktWWk3OLDxpsc8Xh8sty0T91iA,11
+picklescan-0.0.22.dist-info/RECORD,,
