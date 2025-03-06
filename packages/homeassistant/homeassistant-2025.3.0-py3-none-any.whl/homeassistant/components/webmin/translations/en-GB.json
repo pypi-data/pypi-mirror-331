@@ -1,0 +1,21 @@
+{
+    "entity": {
+        "sensor": {
+            "disk_fs_total": {
+                "name": "Disk total space {mountpoint}"
+            },
+            "disk_fs_used": {
+                "name": "Disk used space {mountpoint}"
+            },
+            "disk_fs_used_percent": {
+                "name": "Disk usage {mountpoint}"
+            },
+            "disk_total": {
+                "name": "Disks total space"
+            },
+            "disk_used": {
+                "name": "Disks used space"
+            }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "data": {
+                    "device_class": "Device class",
+                    "dry_tolerance": "Dry tolerance",
+                    "humidifier": "Switch",
+                    "min_cycle_duration": "Minimum cycle duration",
+                    "target_sensor": "Humidity sensor"
+                }
+            }
+        }
+    },
+    "selector": {
+        "device_class": {
+            "options": {
+                "dehumidifier": "Dehumidifier",
+                "humidifier": "Humidifier"
+            }
+        }
+    },
+    "title": "Generic hygrostat"
+}

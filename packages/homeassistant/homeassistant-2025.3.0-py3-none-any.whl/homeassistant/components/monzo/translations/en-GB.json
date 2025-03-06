@@ -1,0 +1,13 @@
+{
+    "config": {
+        "abort": {
+            "authorize_url_timeout": "Timeout generating authorise URL.",
+            "user_rejected_authorize": "Account linking rejected: {error}"
+        },
+        "step": {
+            "reauth_confirm": {
+                "description": "The Monzo integration needs to re-authenticate your account"
+            }
+        }
+    }
+}

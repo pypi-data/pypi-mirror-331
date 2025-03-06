@@ -1,0 +1,12 @@
+{
+    "entity": {
+        "sensor": {
+            "canceled_missions": {
+                "name": "Cancelled missions"
+            },
+            "last_mission": {
+                "name": "Last mission start time"
+            }
+        }
+    }
+}

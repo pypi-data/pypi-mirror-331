@@ -1,0 +1,109 @@
+{
+    "entity": {
+        "sensor": {
+            "apparmor_version": {
+                "name": "Apparmor version"
+            }
+        }
+    },
+    "issues": {
+        "issue_addon_boot_fail": {
+            "fix_flow": {
+                "abort": {
+                    "apply_suggestion_fail": "Could not apply the fix. Check the Supervisor logs for more details."
+                },
+                "step": {
+                    "fix_menu": {
+                        "description": "Add-on {addon} is set to start at boot but failed to start. Usually this occurs when the configuration is incorrect or the same port is used in multiple add-ons. Check the configuration as well as logs for {addon} and Supervisor.\n\nUse Start to try again or Disable to turn off the start at boot option.",
+                        "menu_options": {
+                            "addon_disable_boot": "Disable",
+                            "addon_execute_start": "Start"
+                        }
+                    }
+                }
+            },
+            "title": "Add-on failed to start at boot"
+        },
+        "issue_addon_detached_addon_removed": {
+            "fix_flow": {
+                "step": {
+                    "addon_execute_remove": {
+                        "description": "Add-on {addon} has been removed from the repository it was installed from. This means it will not get updates, and backups may not be restored correctly as the supervisor may not be able to build/download the resources required.\n\nSelecting **Submit** will uninstall this deprecated add-on. Alternatively, you can check [Home Assistant help]({help_url}) and the [community forum]({community_url}) for alternatives to migrate to."
+                    }
+                }
+            },
+            "title": "Installed add-on has been removed from repository"
+        },
+        "unsupported_apparmor": {
+            "description": "System is unsupported because AppArmor is working incorrectly and add-ons are running in an unprotected and insecure way. Use the link to learn more and how to fix this.",
+            "title": "Unsupported system - AppArmor issues"
+        },
+        "update_service_deprecated": {
+            "description": "The update add-on action has been deprecated and will be removed in 2025.5. Please use the update entity and the respective action to update the add-on instead.",
+            "title": "Deprecated update add-on action"
+        }
+    },
+    "services": {
+        "addon_restart": {
+            "description": "Restarts an add-on.",
+            "fields": {
+                "addon": {
+                    "name": "Add-on"
+                }
+            }
+        },
+        "addon_start": {
+            "description": "Starts an add-on.",
+            "fields": {
+                "addon": {
+                    "name": "Add-on"
+                }
+            },
+            "name": "Start add-on"
+        },
+        "addon_stdin": {
+            "fields": {
+                "addon": {
+                    "name": "Add-on"
+                }
+            }
+        },
+        "addon_stop": {
+            "description": "Stops an add-on.",
+            "fields": {
+                "addon": {
+                    "name": "Add-on"
+                }
+            }
+        },
+        "addon_update": {
+            "fields": {
+                "addon": {
+                    "name": "Add-on"
+                }
+            }
+        },
+        "backup_full": {
+            "description": "Creates a full backup.",
+            "fields": {
+                "compressed": {
+                    "description": "Compresses the backup files.",
+                    "name": "Compressed"
+                },
+                "location": {
+                    "description": "Name of a backup network storage to host backups."
+                },
+                "name": {
+                    "description": "Optional (default = current date and time)."
+                }
+            }
+        },
+        "restore_partial": {
+            "fields": {
+                "homeassistant": {
+                    "description": "Restores Home Assistant."
+                }
+            }
+        }
+    }
+}

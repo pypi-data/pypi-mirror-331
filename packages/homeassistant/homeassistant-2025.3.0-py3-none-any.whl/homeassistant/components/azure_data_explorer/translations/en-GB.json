@@ -1,0 +1,19 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "data": {
+                    "authority_id": "Authority ID",
+                    "client_id": "Client ID",
+                    "client_secret": "Client secret",
+                    "cluster_ingest_uri": "Cluster ingestion URI",
+                    "use_queued_ingestion": "Use queued ingestion"
+                },
+                "data_description": {
+                    "cluster_ingest_uri": "Ingestion URI of the cluster",
+                    "use_queued_ingestion": "Must be enabled when using ADX free cluster"
+                }
+            }
+        }
+    }
+}

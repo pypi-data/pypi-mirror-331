@@ -1,0 +1,114 @@
+{
+    "config": {
+        "abort": {
+            "no_mower_connected": "No mowers connected to this account."
+        }
+    },
+    "entity": {
+        "button": {
+            "sync_clock": {
+                "name": "Sync clock"
+            }
+        },
+        "number": {
+            "my_lawn_cutting_height_work_area": {
+                "name": "My lawn cutting height"
+            },
+            "work_area_cutting_height_work_area": {
+                "name": "{work_area} cutting height"
+            }
+        },
+        "sensor": {
+            "error": {
+                "state": {
+                    "error": "Error",
+                    "error_at_power_up": "Error at power up",
+                    "fatal_error": "Fatal error"
+                }
+            },
+            "my_lawn_last_time_completed": {
+                "name": "My lawn last time completed"
+            },
+            "my_lawn_progress": {
+                "name": "My lawn progress"
+            },
+            "work_area": {
+                "name": "Work area",
+                "state": {
+                    "my_lawn": "My lawn",
+                    "no_work_area_active": "No work area active"
+                },
+                "state_attributes": {
+                    "work_area_id_assignment": {
+                        "name": "Work area ID assignment"
+                    }
+                }
+            },
+            "work_area_last_time_completed": {
+                "name": "{work_area} last time completed"
+            },
+            "work_area_progress": {
+                "name": "{work_area} progress"
+            }
+        },
+        "switch": {
+            "my_lawn_work_area": {
+                "name": "My lawn"
+            },
+            "stay_out_zones": {
+                "name": "Avoid {stay_out_zone}"
+            }
+        }
+    },
+    "exceptions": {
+        "work_area_not_existing": {
+            "message": "The selected work area does not exist."
+        },
+        "work_areas_not_supported": {
+            "message": "This mower does not support work areas."
+        }
+    },
+    "issues": {
+        "deprecated_entity": {
+            "description": "The Husqvarna Automower entity `{entity}` is deprecated and will be removed in a future release.\nYou can use the new returning state of the lawn mower entity instead.\nPlease update your automations and scripts to replace the sensor entity with the newly added lawn mower entity.\nWhen you are done migrating you can disable `{entity}`.",
+            "title": "The Husqvarna Automower {entity_name} sensor is deprecated"
+        }
+    },
+    "selector": {
+        "override_modes": {
+            "options": {
+                "mow": "Mow",
+                "park": "Park"
+            }
+        }
+    },
+    "services": {
+        "override_schedule": {
+            "description": "Lets the mower either mow or park for a given duration, overriding all schedules.",
+            "fields": {
+                "duration": {
+                    "description": "Minimum: 1 minute, maximum: 42 days, seconds will be ignored.",
+                    "name": "Duration"
+                },
+                "override_mode": {
+                    "description": "With which action the schedule should be overridden.",
+                    "name": "Override mode"
+                }
+            }
+        },
+        "override_schedule_work_area": {
+            "description": "Lets the mower mow for a given duration in a specified work area, overriding all schedules.",
+            "fields": {
+                "duration": {
+                    "description": "Minimum: 1 minute, maximum: 42 days, seconds will be ignored.",
+                    "name": "Duration"
+                },
+                "work_area_id": {
+                    "description": "In which work area the mower should mow.",
+                    "name": "Work area ID"
+                }
+            },
+            "name": "Override schedule work area"
+        }
+    }
+}

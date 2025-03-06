@@ -1,0 +1,112 @@
+{
+    "config": {
+        "step": {
+            "bluetooth_selection": {
+                "data_description": {
+                    "mac": "Select the Bluetooth device that is your machine"
+                },
+                "description": "Select your device from available Bluetooth devices."
+            },
+            "machine_selection": {
+                "data_description": {
+                    "machine": "Select the machine you want to integrate"
+                }
+            }
+        }
+    },
+    "entity": {
+        "binary_sensor": {
+            "backflush_enabled": {
+                "name": "Backflush active"
+            }
+        },
+        "number": {
+            "scale_target_key": {
+                "name": "Brew by weight target {key}"
+            },
+            "smart_standby_time": {
+                "name": "Smart standby time"
+            }
+        },
+        "select": {
+            "active_bbw": {
+                "name": "Active brew by weight recipe",
+                "state": {
+                    "a": "Recipe A",
+                    "b": "Recipe B"
+                }
+            },
+            "smart_standby_mode": {
+                "name": "Smart standby mode",
+                "state": {
+                    "last_brewing": "Last brewing",
+                    "power_on": "Power on"
+                }
+            }
+        },
+        "sensor": {
+            "drink_stats_coffee": {
+                "unit_of_measurement": "coffees"
+            },
+            "drink_stats_coffee_key": {
+                "name": "Coffees made Key {key}",
+                "unit_of_measurement": "coffees"
+            },
+            "drink_stats_flushing": {
+                "unit_of_measurement": "flushes"
+            }
+        },
+        "switch": {
+            "smart_standby_enabled": {
+                "name": "Smart standby enabled"
+            }
+        }
+    },
+    "exceptions": {
+        "api_error": {
+            "message": "Error while communicating with the API"
+        },
+        "authentication_failed": {
+            "message": "Authentication failed"
+        },
+        "auto_on_off_error": {
+            "message": "Error whilst setting auto on/off to {state} for {id}"
+        },
+        "button_error": {
+            "message": "Error whilst executing button {key}"
+        },
+        "number_exception": {
+            "message": "Error whilst setting value {value} for number {key}"
+        },
+        "number_exception_key": {
+            "message": "Error whilst setting value {value} for number {key}, key {physical_key}"
+        },
+        "select_option_error": {
+            "message": "Error whilst setting select option {option} for {key}"
+        },
+        "switch_off_error": {
+            "message": "Error whilst turning off switch {key}"
+        },
+        "switch_on_error": {
+            "message": "Error whilst turning on switch {key}"
+        },
+        "update_failed": {
+            "message": "Error whilst updating {key}"
+        }
+    },
+    "issues": {
+        "unsupported_gateway_firmware": {
+            "description": "Gateway firmware {gateway_version} is no longer supported by this integration, please update.",
+            "title": "Unsupported gateway firmware"
+        }
+    },
+    "options": {
+        "step": {
+            "init": {
+                "data_description": {
+                    "use_bluetooth": "Should the integration try to use Bluetooth to control the machine?"
+                }
+            }
+        }
+    }
+}
