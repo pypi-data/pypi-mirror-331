@@ -1,0 +1,5 @@
+normalize: first #first last
+model: exp #quad, exp in form of y=At^2+Bt+C or y=Ae^(Bt)+C
+A: 1.2919 #constant float values
+B: 0.2723
+C: 0
