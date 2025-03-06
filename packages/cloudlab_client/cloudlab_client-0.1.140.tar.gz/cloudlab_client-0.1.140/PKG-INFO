@@ -1,0 +1,51 @@
+Metadata-Version: 2.3
+Name: cloudlab_client
+Version: 0.1.140
+Summary: Client for the cloudlab academic cloud environment.
+Author: Yannis Zarkadas
+Author-email: yanniszark@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Requires-Dist: selenium (>=4.1.3,<5.0.0)
+Description-Content-Type: text/markdown
+
+# Cloudlab Client
+
+This package is a client for the Cloudlab service. Cloudlab is a cloud for
+academic institutions. Because I could not (yet) find any working API for
+Cloudlab, the current client relies on username / password authentication and
+web scraping.
+
+
+## Usage
+
+
+```python
+# Create new client and login
+username = os.environ.get("CLOUDLAB_USERNAME")
+password = os.environ.get("CLOUDLAB_PASSWORD")
+cloudlab_client = CloudlabClient()
+cloudlab_client.login(username, password)
+
+# List experiments
+experiments = cloudlab_client.experiment_list()
+print(experiments)
+
+# List an experiment's nodes
+nodes = cloudlab_client.experiment_list_nodes("my-experiment")
+print(nodes)
+
+# Request an extension (e.g., for 6 days). Reason must be at least 120 characters.
+reason = ("Important experiment needed for research, conducted under advisor"
+          " <fill_your_advisor>. Particular machines are needed because"
+          " <fill_your_reasons>.")
+cloudlab_client.experiment_extend("my-experiment", reason, hours=6*24)
+```
+
