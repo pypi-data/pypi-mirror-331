@@ -1,0 +1,10 @@
+chessminal/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+chessminal/classifymoves.py,sha256=RbFmL7WiDKIlR1bB3n0QduAGT02cRH8ZAfWk4Ua3TTA,8170
+chessminal/gamereview.py,sha256=5JFg2LXpS62gM2RA5LvtT0OMBc78f4oR2Wx0cxVRyPU,2447
+chessminal/main.py,sha256=N8oMR4QCdO5TrirvVpMlqvR9CC-VGXEZef3s7KQ3ubg,5470
+chessminal-1.dist-info/LICENSE,sha256=_1vbTxASqq9QAvnv1Q8VmH4Yg6M_a1GiLOCCN-LD8Vo,1069
+chessminal-1.dist-info/METADATA,sha256=iJu6akBXlHF_pUgElslSlh5zVjwTpI_eJ15a0Kjx1ik,213
+chessminal-1.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+chessminal-1.dist-info/entry_points.txt,sha256=J06XYKTCmE1uCF0Q88ku0_8taIx2A4b2bQcslkKB2o0,52
+chessminal-1.dist-info/top_level.txt,sha256=nuA9nTR6m8Ol4FOZmf98KGzQGCZmRAc2hhiNm0PY5RA,11
+chessminal-1.dist-info/RECORD,,
