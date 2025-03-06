@@ -1,0 +1,32 @@
+Metadata-Version: 2.2
+Name: pycloudshare
+Version: 1.0
+Summary: A Python wrapper for the CloudShare Classic and Accelerate APIs
+Home-page: https://github.com/yourusername/MerakiLoogie
+Author: Daniel S. Robbins
+Author-email: daniel.robbins@alabama-cyber-range.org
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: cloudshare
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# pycloudshare
+A Python wrapper for the CloudShare Classic and Accelerate APIs.
+
+Install with "pip install pycloudshare"
+
+See the ".env.example" file for the environment variables that need to be set.
+
+Version 1.0

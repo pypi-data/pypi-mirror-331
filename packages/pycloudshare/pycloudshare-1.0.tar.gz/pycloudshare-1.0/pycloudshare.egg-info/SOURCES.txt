@@ -1,0 +1,13 @@
+README.md
+setup.py
+pycloudshare/__init__.py
+pycloudshare/accelerate.py
+pycloudshare/classic.py
+pycloudshare/infrastructure.py
+pycloudshare/utils.py
+pycloudshare.egg-info/PKG-INFO
+pycloudshare.egg-info/SOURCES.txt
+pycloudshare.egg-info/dependency_links.txt
+pycloudshare.egg-info/requires.txt
+pycloudshare.egg-info/top_level.txt
+scripts/manage-cloudshare.py
