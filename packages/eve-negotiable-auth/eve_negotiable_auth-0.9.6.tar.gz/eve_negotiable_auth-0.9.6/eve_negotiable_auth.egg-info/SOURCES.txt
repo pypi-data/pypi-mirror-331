@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+eve_negotiable_auth/__init__.py
+eve_negotiable_auth/negotiable_auth.py
+eve_negotiable_auth.egg-info/PKG-INFO
+eve_negotiable_auth.egg-info/SOURCES.txt
+eve_negotiable_auth.egg-info/dependency_links.txt
+eve_negotiable_auth.egg-info/requires.txt
+eve_negotiable_auth.egg-info/top_level.txt
