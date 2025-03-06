@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+autofixpy/__init__.py
+autofixpy/cli.py
+autofixpy/core.py
+autofixpy.egg-info/PKG-INFO
+autofixpy.egg-info/SOURCES.txt
+autofixpy.egg-info/dependency_links.txt
+autofixpy.egg-info/entry_points.txt
+autofixpy.egg-info/top_level.txt
+tests/test_autofixpy.py
