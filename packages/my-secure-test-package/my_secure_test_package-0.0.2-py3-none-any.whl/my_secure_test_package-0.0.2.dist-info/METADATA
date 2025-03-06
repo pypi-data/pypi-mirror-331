@@ -1,0 +1,13 @@
+Metadata-Version: 2.2
+Name: my-secure-test-package
+Version: 0.0.2
+Summary: A sample package to request
+Author: hyeonwoo
+Author-email: sonhw1611@gmail.com
+Requires-Python: >=3.10
+Requires-Dist: requests==2.25.1
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
