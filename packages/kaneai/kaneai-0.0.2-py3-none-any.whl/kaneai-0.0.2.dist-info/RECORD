@@ -1,0 +1,12 @@
+kaneai/__init__.py,sha256=sidNC--Sh5uIWSx63tL8GKHibPnclslmYgcubAlUw8Q,484
+kaneai/actions.py,sha256=NnX_jg5ifAiyK7Jg1OyZWHl7SykzIrDFcx4u4o46ygk,27544
+kaneai/config.py,sha256=_kRgjAeiLjn8hggeH6AM6yCHhILkGm4dHIUhuop2Mo4,7750
+kaneai/driver.py,sha256=gxxOG8G3dwpShy00mrWu8TGkyEkQFzaugmhOQEi1Z00,5151
+kaneai/heal.py,sha256=DaOZA1MZcwADUmFUiBrtDRxbl6hP9b4TFn_DxKv_fe4,14103
+kaneai/safari.py,sha256=_5hiYD5wy9UMKL0yBdQ1dWwzgcVaQbcC7t7DoTsnuac,397
+kaneai/utils.py,sha256=Cr1-w2FKUmiKsolSejdYRvin1S0hI-AJgZbtPreEoOU,18465
+kaneai/webdriver_utils.py,sha256=3VHQT45aC0n0eimvuq_-P0VRHxsjC02IhXbpOkSrIPo,7705
+kaneai-0.0.2.dist-info/METADATA,sha256=6NxFqWHFl9u6w5-ZtkHHxO2vLSidUhYBqxD_szo9Ic4,938
+kaneai-0.0.2.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+kaneai-0.0.2.dist-info/top_level.txt,sha256=AHRspA4Yc7SiXIUG0iDRwdjK7OnLNFGm9j_U2fFrdTs,7
+kaneai-0.0.2.dist-info/RECORD,,
