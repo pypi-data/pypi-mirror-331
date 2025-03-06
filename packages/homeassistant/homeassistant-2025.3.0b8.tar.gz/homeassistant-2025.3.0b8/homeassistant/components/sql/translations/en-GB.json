@@ -1,0 +1,10 @@
+{
+    "selector": {
+        "device_class": {
+            "options": {
+                "conductivity": "Conductivity",
+                "ph": "pH"
+            }
+        }
+    }
+}

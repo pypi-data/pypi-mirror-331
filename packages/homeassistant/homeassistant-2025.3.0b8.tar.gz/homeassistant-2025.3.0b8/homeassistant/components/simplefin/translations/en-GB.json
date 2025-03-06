@@ -1,0 +1,33 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "This Access URL is already configured."
+        },
+        "error": {
+            "url_error": "There was an issue parsing the Account URL"
+        },
+        "step": {
+            "user": {
+                "data": {
+                    "api_token": "Claim Token or Access URL"
+                },
+                "description": "Please enter either a Claim Token or an Access URL."
+            }
+        }
+    },
+    "entity": {
+        "binary_sensor": {
+            "possible_error": {
+                "name": "Possible error"
+            }
+        },
+        "sensor": {
+            "age": {
+                "name": "Data age"
+            },
+            "balance": {
+                "name": "Balance"
+            }
+        }
+    }
+}

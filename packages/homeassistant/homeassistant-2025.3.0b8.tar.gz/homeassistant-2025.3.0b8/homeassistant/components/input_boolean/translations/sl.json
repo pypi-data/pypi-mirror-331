@@ -1,0 +1,36 @@
+{
+    "entity_component": {
+        "_": {
+            "state": {
+                "off": "Izklopljeno",
+                "on": "Vklopljeno"
+            },
+            "state_attributes": {
+                "editable": {
+                    "name": "Upravlja se prek uporabni\u0161kega vmesnika",
+                    "state": {
+                        "false": "Ne",
+                        "true": "Da"
+                    }
+                }
+            }
+        }
+    },
+    "services": {
+        "reload": {
+            "description": "Ponovno nalo\u017ei pomo\u010dnike iz konfiguracije YAML.",
+            "name": "Ponovno nalo\u017ei"
+        },
+        "toggle": {
+            "name": "Preklopi"
+        },
+        "turn_off": {
+            "description": "Izklopi pomo\u010dnika.",
+            "name": "Izklopi"
+        },
+        "turn_on": {
+            "description": "Vklopi pomo\u010dnika.",
+            "name": "Vklopi"
+        }
+    }
+}

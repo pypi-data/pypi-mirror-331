@@ -1,0 +1,46 @@
+{
+    "entity": {
+        "button": {
+            "reset_lifespan_base_station_filter": {
+                "name": "Reset station filter lifespan"
+            },
+            "reset_lifespan_round_mop": {
+                "name": "Reset round mop lifespan"
+            },
+            "reset_lifespan_unit_care": {
+                "name": "Reset unit care lifespan"
+            },
+            "station_action_empty_dustbin": {
+                "name": "Empty dustbin"
+            }
+        },
+        "number": {
+            "cut_direction": {
+                "name": "Cut direction"
+            }
+        },
+        "sensor": {
+            "lifespan_base_station_filter": {
+                "name": "Station filter lifespan"
+            },
+            "lifespan_round_mop": {
+                "name": "Round mop lifespan"
+            },
+            "lifespan_unit_care": {
+                "name": "Unit care lifespan"
+            },
+            "station_state": {
+                "name": "Station state",
+                "state": {
+                    "emptying_dustbin": "Emptying dustbin"
+                }
+            }
+        }
+    },
+    "services": {
+        "raw_get_positions": {
+            "description": "Retrieves a raw response containing the positions of the chargers and the device itself.",
+            "name": "Get raw positions"
+        }
+    }
+}
