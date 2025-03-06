@@ -1,0 +1,8 @@
+twingly_pyamqp/__init__.py,sha256=2ry_rT2BitVc9EEcJ3UhI3LAITs8QCIP53B6VttWAR0,225
+twingly_pyamqp/amqp_config.py,sha256=-3dx12RB7bDJKQjSuYSER2hZBbeSK5y1tKNV5G6pH70,746
+twingly_pyamqp/amqp_connection.py,sha256=3Q9fRpo_ChvEJMDDYbmCU3lAngsCOvu6SCvjWjPQvrQ,1288
+twingly_pyamqp/publisher.py,sha256=1wtBdEOXmrkf5q3VAwh8NVU-1DNG4POmL0yf95PLHUc,1015
+twingly_pyamqp/subscription.py,sha256=kONskcYe9ZDbBFZ54wZFap5gV9d1N6kFgxY7Dm81PR0,2603
+twingly_pyamqp-0.1.2.dist-info/METADATA,sha256=VG4cVSXg-3blOgny-Hsv2YCEHTmIRbH-2ynkR5XrkVE,9804
+twingly_pyamqp-0.1.2.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+twingly_pyamqp-0.1.2.dist-info/RECORD,,
