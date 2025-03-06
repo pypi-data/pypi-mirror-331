@@ -1,0 +1,11 @@
+tags2sdists/__init__.py,sha256=UnxmjVrk-eNORsitiM48W0pB6yfsaErOak8RYh_ELt8,10
+tags2sdists/checkoutdir.py,sha256=vEyryJTsJhMbYMzqPe0N7MDcUVeVfq571bGxOm8xX6o,5548
+tags2sdists/packagedir.py,sha256=GH99uVJGYO-e_h-JUPESBsWq9_llRaekiA-lAjm_-IU,1949
+tags2sdists/script.py,sha256=lZN_nFQwyg4vjD5sHlsd4eeAkIvhlaGrWftygQcl0eE,2584
+tags2sdists/utils.py,sha256=BIXJxy5wmdfYwd7VlnDIi3gV6AQfRjWFCFchmEvUTqY,679
+tags2sdists-2.4.dist-info/LICENSE.rst,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+tags2sdists-2.4.dist-info/METADATA,sha256=_RsP2ZVtB9zhFoZFmg5JvFaR2p5jhL2iChPdlfeQF7Q,45182
+tags2sdists-2.4.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+tags2sdists-2.4.dist-info/entry_points.txt,sha256=ctv8I5WYCg4ZedXulTwEzANv51zrit2D_VtPbVIqQ-E,56
+tags2sdists-2.4.dist-info/top_level.txt,sha256=WvNDx2iwmMNX0Dw_iVpFAkyKUpNHt7gqhdA7GOgzbn0,12
+tags2sdists-2.4.dist-info/RECORD,,
