@@ -1,0 +1,14 @@
+<form
+    class="{{ class }}"
+    method="post"
+    action="{% url 'create file' %}"
+    hx-encoding="multipart/form-data"
+    hx-post="{% url 'create file' %}"
+    hx-swap="outerHTML"
+    hx-target="this"
+    hx-trigger="input"
+    hx-indicator=".htmx-indicator"
+>
+    {% csrf_token %}
+    {{ form.file }}
+</form>
