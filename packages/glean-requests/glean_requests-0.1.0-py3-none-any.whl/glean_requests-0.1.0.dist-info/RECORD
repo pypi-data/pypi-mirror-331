@@ -1,0 +1,6 @@
+glean_requests/__init__.py,sha256=7QcPcQyIQS8lFX1ez48pjlgs8_cV5FGU7Pza6l0iIUw,340
+glean_requests/glean_client.py,sha256=2ArD-VBLUelZm594yoZt4H_oBpVa0SJsILecJXflG5U,6309
+glean_requests-0.1.0.dist-info/METADATA,sha256=bkSAlecvK4sg2u9rz4A5OuZAP0ApJKJWmKiV-ja6BH8,2145
+glean_requests-0.1.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+glean_requests-0.1.0.dist-info/licenses/LICENSE,sha256=eeNbnEOHHxtUcB1McO2Ej7FrfpYjLfG9eXfH3lzyAiY,1076
+glean_requests-0.1.0.dist-info/RECORD,,
