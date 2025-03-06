@@ -1,0 +1,97 @@
+[project]
+name = "restrict-framework"
+version = "0.2.1a0"
+description = "A functional resource-oriented Web framework"
+license = "MIT"
+authors = [
+    {name = "Curtis Schlak",email = "696163-realistschuckle@users.noreply.gitlab.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12,<4.0"
+keywords = ["rest", "hateoas", "restrict"]
+dependencies = [
+    "isodate (>=0.7.2,<0.8.0)"
+]
+
+[project.urls]
+homepage = "https://restrictframework.io"
+repository = "https://gitlab.com/restrict-framework/restrict.py"
+documentation = "https://restrictframework.io"
+"Issues" = "https://gitlab.com/restrict-framework/restrict.py/-/issues"
+
+[project.optional-dependencies]
+starlette = ["starlette (>=0.46.0,<0.47.0)", "python-multipart (>=0.0.20,<0.0.21)", "itsdangerous (>=2.2.0,<3.0.0)"]
+dev = ["black (>=25.1.0,<26.0.0)", "pyclean (>=3.1.0,<4.0.0)", "pynvim (>=0.5.2,<0.6.0)", "pytest-watcher (>=0.4.3,<0.5.0)", "uvicorn[standard] (>=0.34.0,<0.35.0)"]
+docs = ["jupyter-book (>=1.0.4.post0,<2.0.0)", "pygments (>=2.19.1,<3.0.0)", "pygments-restrict (>=0.1.5,<0.2.0)", "pydata-sphinx-theme (>=0.16.1,<0.17.0)", "pydeps (>=3.0.1,<4.0.0)"]
+test = ["pytest (>=8.3.4,<9.0.0)", "pytest-cov (>=6.0.0,<7.0.0)", "pytest-asyncio (>=0.25.3,<0.26.0)"]
+
+[tool.poetry]
+packages = [{include = "restrict", from = "src"}]
+
+[tool.black]
+line-length = 80
+
+[tool.coverage.run]
+omit = [
+  "./src/restrict/compiler/ply/*",
+  "./src/restrict/compiler/exceptions/__init__.py",
+  "./tests/*",
+  "./src/restrict/__init__.py",
+  "./*.out",
+  "./htmlcov/*",
+  ".venv/*",
+]
+
+[tool.pydeps]
+no_show = true 
+pylib = false 
+verbose = 0 
+max_bacon = 3 
+cluster = true 
+rankdir = "BT"
+exclude_exact = [
+  "restrict.compiler",
+  "restrict.compiler.exceptions",
+  "restrict.types",
+  "restrict.resources",
+]
+
+[tool.pyright]
+include = [
+  "src/restrict/types/time.py",
+  "src/restrict/types/builtins.py",
+  "src/restrict/types/__init__.py",
+  "src/restrict/types/text.py",
+  "src/restrict/types/numeric.py",
+  "src/restrict/web/starlette.py",
+  "src/restrict/resources/postgresql.py",
+  "src/restrict/resources/starlette.py",
+  "src/restrict/resources/__init__.py",
+  "src/restrict/__init__.py",
+  "src/restrict/compiler/walker_utils.py",
+  "src/restrict/compiler/compiler.py",
+  "src/restrict/compiler/transformers.py",
+  "src/restrict/compiler/visitors.py",
+  "src/restrict/compiler/__init__.py",
+  "src/restrict/compiler/parsers.py",
+  "src/restrict/compiler/types.py",
+  "src/restrict/compiler/compiled.py",
+  "src/restrict/compiler/exceptions/__init__.py",
+  "src/restrict/compiler/exceptions/runtime.py",
+  "src/restrict/compiler/exceptions/compile.py",
+  "src/restrict/compiler/resolver.py",
+  "src/restrict/compiler/ast.py",
+  "src/restrict/compiler/lexers.py",
+]
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+addopts = "--cov --cov-report html --cov-report term --cov-report xml:coverage.xml"
+asyncio_default_fixture_loop_scope = "function"
+
+[tool.ruff]
+target-version = "py312"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

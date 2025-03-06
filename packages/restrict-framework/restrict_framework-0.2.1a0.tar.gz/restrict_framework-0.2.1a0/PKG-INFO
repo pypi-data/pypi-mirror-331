@@ -1,0 +1,106 @@
+Metadata-Version: 2.3
+Name: restrict-framework
+Version: 0.2.1a0
+Summary: A functional resource-oriented Web framework
+License: MIT
+Keywords: rest,hateoas,restrict
+Author: Curtis Schlak
+Author-email: 696163-realistschuckle@users.noreply.gitlab.com
+Requires-Python: >=3.12,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Provides-Extra: dev
+Provides-Extra: docs
+Provides-Extra: starlette
+Provides-Extra: test
+Requires-Dist: black (>=25.1.0,<26.0.0) ; extra == "dev"
+Requires-Dist: isodate (>=0.7.2,<0.8.0)
+Requires-Dist: itsdangerous (>=2.2.0,<3.0.0) ; extra == "starlette"
+Requires-Dist: jupyter-book (>=1.0.4.post0,<2.0.0) ; extra == "docs"
+Requires-Dist: pyclean (>=3.1.0,<4.0.0) ; extra == "dev"
+Requires-Dist: pydata-sphinx-theme (>=0.16.1,<0.17.0) ; extra == "docs"
+Requires-Dist: pydeps (>=3.0.1,<4.0.0) ; extra == "docs"
+Requires-Dist: pygments (>=2.19.1,<3.0.0) ; extra == "docs"
+Requires-Dist: pygments-restrict (>=0.1.5,<0.2.0) ; extra == "docs"
+Requires-Dist: pynvim (>=0.5.2,<0.6.0) ; extra == "dev"
+Requires-Dist: pytest (>=8.3.4,<9.0.0) ; extra == "test"
+Requires-Dist: pytest-asyncio (>=0.25.3,<0.26.0) ; extra == "test"
+Requires-Dist: pytest-cov (>=6.0.0,<7.0.0) ; extra == "test"
+Requires-Dist: pytest-watcher (>=0.4.3,<0.5.0) ; extra == "dev"
+Requires-Dist: python-multipart (>=0.0.20,<0.0.21) ; extra == "starlette"
+Requires-Dist: starlette (>=0.46.0,<0.47.0) ; extra == "starlette"
+Requires-Dist: uvicorn[standard] (>=0.34.0,<0.35.0) ; extra == "dev"
+Project-URL: Documentation, https://restrictframework.io
+Project-URL: Homepage, https://restrictframework.io
+Project-URL: Issues, https://gitlab.com/restrict-framework/restrict.py/-/issues
+Project-URL: Repository, https://gitlab.com/restrict-framework/restrict.py
+Description-Content-Type: text/markdown
+
+# RESTrict Framework
+
+Please see <https://restrictframework.io> for the most up-to-date documentation.
+
+## TODO
+
+- [X] TODO: Change Ref -> Self visitor to skip data section
+- [X] TODO: Write visitor to check Self in data section
+- [ ] TODO: Allow stars in security sections
+- [X] TODO: Update visitors.MatchRelDeclared...#visit_rel to search mods, too,
+      for built-in resources
+- [X] TODO: Update visitors.MatchOverridenResource...#visit_resource to
+      search mods, too, for built-in resources
+- [X] TODO: Consider allowing modification of restrict resources in
+      ResolveModifyTypeVisitor
+
+## NOTES
+
+Compiler pipeline steps:
+
+1. [X] Check for duplicate field and resource names
+1. [X] Replace refs with func params
+1. [X] Replace refs with selfs
+1. Resolve declared types
+   1. [X] Resolve data constrained field type (res: type)
+   1. [X] Resolve rel type (res: bridge, restrict resource, or collection)
+   1. [X] Resolve create type (res: bridge or restrict resource)
+   1. [X] Resolve base resource type (base: bridge)
+1. [X] Resolve inherited fields
+1. [X] Resolve inherited rels
+1. [X] Resolve inherited effects
+1. [X] Resolve inherited security
+1. [ ] Resolve inherited workflows
+1. [X] Resolve used resources
+1. [X] Resolve global names
+1. [X] Resolve func referenced function (res: function)
+1. Resolve computed types of expressions
+   1. [X] Resolve effect field type (res: type or bridge)
+   1. [X] Resolve value type (res: type)
+   1. [X] Resolve selves type (res: bridge)
+   1. [X] Resolve self types (path_res: [bridge, ..., type])
+   1. [X] Resolve literal types (res: type)
+   1. [X] Resolve tagged literal types (res: type)
+   1. [X] Resolve modify type (res: bridge)
+   1. [X] Resolve ref type from globals (path_res: type: bridge, ..., type)
+1. [X] Check for cycles
+1. [X] Resolve data computed field type (func_res: type)
+1. [X] Resolve remaining self values
+1. Resolve func return type and make sure it matches expected type
+   1. [X] Check data constraint (bool)
+   1. [X] Check security rule (bool)
+   1. [X] Check effect (func_res matches res for referenced field)
+1. [X] Compile funcs (compiled)
+1. [X] Compile resources
+
+### Expresison types
+
+- Data constraints can include literals, functions, self, selves, tagged
+  literals, and value
+- Data computed fields can include literals, functions, refs, self, selves,
+  and tagged literals
+- Effects can include all create, literals, functions, modify, refs, self,
+  selves, and tagged literals
+- Security can include literals, functions, refs, self, and tagged literals
+- Workflows can include literals, refs, self, selves, and tagged literals
+
