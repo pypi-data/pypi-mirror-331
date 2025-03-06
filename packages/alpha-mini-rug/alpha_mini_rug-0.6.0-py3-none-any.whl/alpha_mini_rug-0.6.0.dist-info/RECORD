@@ -1,0 +1,12 @@
+alpha_mini_rug/__init__.py,sha256=eZEdyLMszvGCS4KknvbRnuSJbgpqqcamA6EA2j332Ss,280
+alpha_mini_rug/aruco.py,sha256=gKSlZZphZrFGaJQrzsxlIr1GGHxOcfPn1KDysJSL8eg,1082
+alpha_mini_rug/camera_services.py,sha256=gJ8sR5fouB7S5Bek5R1sVSWV6sPIpkWh87vT7EIIp6Q,1126
+alpha_mini_rug/follow_face.py,sha256=30OFzYFezs1oO-nr0gZgSV0v5y0jbsaY812WWrYfRSM,3719
+alpha_mini_rug/keywords.py,sha256=szgbQxTbkTgBDcOM0hlEouaGnbUcW4r0ms14MRAraqA,3999
+alpha_mini_rug/movements.py,sha256=2Smze4R5Q_T7PqRc1v6wVkUqzBN6jVb6n1w6lg9JRCc,5825
+alpha_mini_rug/smart_q.py,sha256=WIlDnCtnADT7EZJFRFTPCQtlJto4h_0MummY-FxMckg,5390
+alpha_mini_rug/speech_to_text.py,sha256=8aV6BWYr9ccU-iZ4HFlAjqDFGqL7nMZMSrUor4DLN2Q,11621
+alpha_mini_rug-0.6.0.dist-info/METADATA,sha256=cYm4Lzvsp9eekHj1KgXGOIQXCKgFyiG37sO9lHuCxIk,478
+alpha_mini_rug-0.6.0.dist-info/WHEEL,sha256=In9FTNxeP60KnTkGw7wk6mJPYd_dQSjEZmXdBdMCI-8,91
+alpha_mini_rug-0.6.0.dist-info/top_level.txt,sha256=qDxzYqiOiY9LgByMm1F60xmz3t-9udG4yLbJnUb2vh0,15
+alpha_mini_rug-0.6.0.dist-info/RECORD,,
