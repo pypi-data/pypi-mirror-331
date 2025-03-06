@@ -1,0 +1,3 @@
+[swarmauri.tools]
+jupytergetshellmessagetool=swarmauri_tool_jupytergetshellmessage:JupyterGetShellMessageTool
+
