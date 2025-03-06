@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: tabluar-mind
+Version: 0.1.0
+Summary: Tabular-Mind is a powerful Python library designed to automate data extraction from Excel (.xlsx) and CSV files with minimal effort. It allows users to query structured data intuitively, eliminating the need for complex manual processing. With Tabular-Mind, you can simply import the library, ask a question, and get instant answers—just like querying a database!
+Author: bala1802
+Author-email: bala1802@live.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: pandas (>=2.2.3,<3.0.0)
+Description-Content-Type: text/markdown
+
+
