@@ -1,0 +1,13 @@
+example.cpython-36m-x86_64-linux-gnu.so,sha256=RMI_qwp1gjhzZ4dTWnqE73iG-u8ap9ShgFj7j4qNEPU,25304
+pyvsag/__init__.py,sha256=NYK56bwYsJ_ZitQYNKJQSwZLtSokT4-vT-CGy41dflM,171
+pyvsag/_version.py,sha256=707feB77wBMgS5HqKBLbWkqvh7NHt2ALxNBG2WGebMQ,24
+pyvsag/libgfortran.so.5,sha256=kXSW1h42lKpYY_bRuiHyNq67INZU7l8QZSfc9Cpb8vg,2723529
+pyvsag/libvsag.so,sha256=nFQ_ad_K5Uy2o2Rkkv-C8yGBDIB4dRPoeMWDdUDyVMw,288412209
+pyvsag/_version.py.in,sha256=wGW-nCbdq0Zps85_40B8-gMrncNLP15LTQvlBWWmLv4,34
+pyvsag/_pyvsag.cpython-36m-x86_64-linux-gnu.so,sha256=u5aP8LhGYcLNl5bq2rQU6T-oa7ox2SuocG5C4Yucz3Y,192905
+pyvsag-0.13.4.dist-info/WHEEL,sha256=YVAXCacQXnznQ-_lMj8Nvqrs7YPtMP1pHRCw9EcyWRQ,150
+pyvsag-0.13.4.dist-info/RECORD,,
+pyvsag-0.13.4.dist-info/METADATA,sha256=3U2HNAdZKT59-5n7Kiv_Mm4KjxmMBdS10gd9kl9q4vo,1298
+pyvsag-0.13.4.dist-info/top_level.txt,sha256=nkIPeyz2FEHRFIXv8SSvPlgDaGFT8XBWkYjIMyD3bCk,15
+pyvsag.libs/libgomp-a34b3233.so.1.0.0,sha256=On6uznIxkRvi-7Gz58tMtcLg-E4MK7c3OUcrWh_uyME,168193
+pyvsag.libs/libquadmath-96973f99.so.0.0.0,sha256=k0wi3tDn0WnE1GeIdslgUa3z2UVF2pYvYLQWWbB12js,247609
