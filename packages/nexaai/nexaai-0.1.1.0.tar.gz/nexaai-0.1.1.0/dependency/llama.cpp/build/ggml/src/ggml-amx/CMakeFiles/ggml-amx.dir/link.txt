@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -O3 -DNDEBUG -shared -Wl,-soname,libggml-amx.so -o libggml-amx.so "CMakeFiles/ggml-amx.dir/ggml-amx.cpp.o" "CMakeFiles/ggml-amx.dir/mmq.cpp.o"  -Wl,-rpath,/home/ubuntu/nexa-sdk/dependency/llama.cpp/build/ggml/src: ../libggml-base.so

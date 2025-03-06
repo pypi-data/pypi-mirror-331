@@ -1,0 +1,2 @@
+/usr/bin/ar qc libomni_vlm_static.a "CMakeFiles/omni_vlm.dir/omni-vlm.cpp.o" CMakeFiles/omni_vlm.dir/clip.cpp.o
+/usr/bin/ranlib libomni_vlm_static.a

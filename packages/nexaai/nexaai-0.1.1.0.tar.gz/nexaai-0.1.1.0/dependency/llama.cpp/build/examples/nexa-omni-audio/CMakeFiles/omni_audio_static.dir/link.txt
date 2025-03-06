@@ -1,0 +1,2 @@
+/usr/bin/ar qc libomni_audio_static.a CMakeFiles/omni_audio.dir/omni.cpp.o "CMakeFiles/omni_audio.dir/audio-projector.cpp.o"
+/usr/bin/ranlib libomni_audio_static.a

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libomni_audio.a CMakeFiles/omni_audio.dir/omni.cpp.o "CMakeFiles/omni_audio.dir/audio-projector.cpp.o" "CMakeFiles/nexa-whisper-utils.dir/whisper.cpp.o"
+/usr/bin/ranlib libomni_audio.a
