@@ -1,0 +1,9 @@
+README.md
+setup.py
+src/svg_sampler/__init__.py
+src/svg_sampler/sampler.py
+src/svg_sampler.egg-info/PKG-INFO
+src/svg_sampler.egg-info/SOURCES.txt
+src/svg_sampler.egg-info/dependency_links.txt
+src/svg_sampler.egg-info/requires.txt
+src/svg_sampler.egg-info/top_level.txt

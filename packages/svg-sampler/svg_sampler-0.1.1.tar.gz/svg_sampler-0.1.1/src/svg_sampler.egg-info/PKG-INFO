@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: svg_sampler
+Version: 0.1.1
+Summary: A package for sampling points from SVG files with overlap resolution and normalization options.
+Home-page: https://github.com/LuggiStruggi/SVGSampler
+Author: Your Name
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Requires-Dist: numpy
+Requires-Dist: shapely
+Requires-Dist: svgpathtools
+Requires-Dist: matplotlib
