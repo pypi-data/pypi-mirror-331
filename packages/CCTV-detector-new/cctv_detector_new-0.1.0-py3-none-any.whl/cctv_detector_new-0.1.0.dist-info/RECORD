@@ -1,0 +1,27 @@
+cctv_detector/README.md,sha256=_-IMAo4hOk8VdYp-AUaceJU-rBW_x4hkvGbBhjZu3Iw,7714
+cctv_detector/__init__.py,sha256=Ye-dyCARG133vqRZZvLGuQKC4icH0xM7ZJa-6Q-owLw,247
+cctv_detector/cctv_detector.py,sha256=9RPr4d8Z0rb3dWvB_gwBcSH7012XC_yUZOmQG5CZlk8,14544
+cctv_detector/cctv_server.py,sha256=9oi4-vS3KCzAB1xwQMjs8kvlWCXGQOZQ-85nQx-pQeU,7970
+cctv_detector/detect.py,sha256=hEBM0catwjIb0Xc8tKWD9sEL2EVZeM1H2Wot_W3FRkU,3613
+cctv_detector/requirements.txt,sha256=4ZyI4oIiNL_hrmvlD3tupeZIzmxFcTyFqU4MeKFW5AM,213
+cctv_detector/start_server.bat,sha256=1RaDjgeGGkT7Qvi3hYqi_BlUqFD06iaT2WsVB2Wy2U0,1843
+cctv_detector/start_server.sh,sha256=v0G7ao1LMezsnheZif4ZtYdnPA-HZR9iF1eF--9PA8Y,1595
+cctv_detector/models/segment_best228.pt,sha256=rMmUi9krWB_ZX_-ViJVP_A85iDWEy1RAXn-aIvpia70,54827541
+cctv_detector/results/1930_result_247dcd72.JPG,sha256=oK1rax30r7IRuGkUJw7GHIwTEN921bHHGw1hC0LZHE8,56683
+cctv_detector/results/23516 (2)_result_ed5d5d32.jpg,sha256=kZWJMNQWtMA508s-0AZKbBVPtpUwl5wEoHrpayj9yrQ,23276
+cctv_detector/test_images/0017.JPG,sha256=6f420LlnPK9n0pdhBuSZsFrT64pRYp3aS_xFAu31htE,19597
+cctv_detector/test_images/0018.JPG,sha256=mzJ6skdvk13Fi8tPh4RE-vIgsGGcl-gmrYKSw-gKAmA,23518
+cctv_detector/test_images/0037.JPG,sha256=W0lEzZB8AspWF7MG45prJbtE1xGzb8QMJBXiexO-AL0,21198
+cctv_detector/test_images/0507.JPG,sha256=p0b-oTVSOcVwzZx-jHnQusFd_c8nDVE5M_e5unxkZls,22326
+cctv_detector/test_images/06218.jpg,sha256=QWwBmb3KSDTQLo6J0tw8hmWrBCO4S8ra2X9u9Gh0EtY,11583
+cctv_detector/test_images/07418.jpg,sha256=y7dzoAgq9THq8uM7X_rPkVq0fxbIhGo9JmaU9GWpcKs,11407
+cctv_detector/test_images/0909.JPG,sha256=QRqgAnkjTtzDoIbaB82kzDwpGZMAuBUbdC_dVYZIwjc,20761
+cctv_detector/test_images/0910 (2).JPG,sha256=9dYKwDgEQwt1oIo64JdQD49P0rTyMQxRwa_JYxK4XmE,22768
+cctv_detector/test_images/1505.JPG,sha256=_oF3G5sI1b9zZvjPekm7ITjNxbt4RAktt5HDXfIH0KU,16172
+cctv_detector/test_images/1930.JPG,sha256=yQGK-L8KtGEO2tQgZcuGDoq-Y6gyPJDrgxx1kzAD7ts,22156
+cctv_detector/test_images/2026.JPG,sha256=7vM8v86G5bGqw8IRa3n6-dUrwkmms6HZovsmA4q3qTQ,13818
+cctv_detector/test_images/21581.jpg,sha256=WYhVhB8pelrQQBCpYrFRtDFr5BVngk1iOx14RoXH1vM,17066
+cctv_detector_new-0.1.0.dist-info/METADATA,sha256=K6tTdtEJcbTelFQcCH5hzTue6LlCgu_pvIBPs8psAbU,8429
+cctv_detector_new-0.1.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+cctv_detector_new-0.1.0.dist-info/top_level.txt,sha256=9du1rBqTPomPeYwpBPbxk54aCn7MTK5XEpwhK0MjKa4,14
+cctv_detector_new-0.1.0.dist-info/RECORD,,
