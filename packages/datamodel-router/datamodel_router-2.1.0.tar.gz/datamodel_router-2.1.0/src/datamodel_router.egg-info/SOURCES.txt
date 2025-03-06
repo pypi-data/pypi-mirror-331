@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+src/data_model_router/__init__.py
+src/data_model_router/main.py
+src/data_model_router/utils.py
+src/data_model_router/router/__init__.py
+src/data_model_router/router/create.py
+src/data_model_router/router/delete.py
+src/data_model_router/router/get_by_id.py
+src/data_model_router/router/save.py
+src/data_model_router/router/search.py
+src/datamodel_router.egg-info/PKG-INFO
+src/datamodel_router.egg-info/SOURCES.txt
+src/datamodel_router.egg-info/dependency_links.txt
+src/datamodel_router.egg-info/requires.txt
+src/datamodel_router.egg-info/top_level.txt
