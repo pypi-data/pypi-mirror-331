@@ -1,0 +1,41 @@
+# semi-colon
+semi-colon is a utility package for CV, data science, Machine Learning and Deep Learning.
+
+## functions
+
+### `semi_colon.load_boston()`
+* `scikit-learn.load_boston()`을 그대로 복원했습니다.
+
+###  `semi_colon.imshows(imgs, rows=1, cols=None, bgr=True, figsize=None, axis=False)`
+* matplotlib을 이용해서 `imgs`에 전달한 이미지를 한 번에 표시합니다.
+* `imgs` : 하나의 NumPy Array,  List 또는 Tuple에 들어 있는 NumPy Array, 제목을 key로 하는 Dict
+
+### `semi_colon.download(url, dir=None, file_name=None, extract=False)`
+* `url`에 있는 파일을 `dir`에 다운로드 합니다.
+* `url`이 github.com 이라면, `master/`를 기준으로 자동으로 경로와 파일이름을 지정합니다.
+* `extract=True` 인 경우 zip, tar 파일은 압축을 해제해 줍니다.
+
+### `semi_colon.digit_split(image, size=None, flatten=False, border=0, inverse=True)`
+* `image`에 숫자 여러개가 있다면 각각의 숫자 그림파일로 분할해서 리스트로 반환합니다.
+* `size`는 반환 이미지의 크기를 지정할 수 있습니다.
+* `flatten=True`은 (1, n) 형태로 변환해서 반환합니다.
+* `border`는 반환하는 이미지의 테두리 여백을 지정합니다.
+* `inverse`는 흰색과 검정색을 반전합니다.
+
+### `semi_colon.draw_bbox(img, x1, y1, x2, y2, text=None, txt_color=(255,255,255), bb_color=None, thickness=2)`
+* `img`에 주어진 좌표로 bounding box를 표시하고 사본을 반환합니다.
+
+### `get_iou(pred, gt)`
+* `pred`, `gt`로 IoU를 계산해서 반환합니다.
+
+
+### `semi_colon.colab.imMouseCallback(imgs, onmouse=None)`
+* 이 함수는 Google Colab에서만 동작합니다.
+* `cv2.setMouseCallBack()`함수를 Google Colab에서 사용 할 수 있게 수정했습니다.
+* `onmouse`에 지정할 callback의 parameter는 `cv2.setMouseCallback(event, x, y, flag, param)`과 동일합니다.
+* callback에 전달되는 `param`은 기능이 없고 언제나 `None`입니다.
+
+### `selectROI(img, callback)`
+* 이 함수는 Google Colab에서만 동작합니다.
+* `cv2.selectROI()`함수를 Google Colab에서 사용 할 수 있게 수정했습니다.
+* `img`를 표시하고 마우스로 ROI 영역을 선택하고 나면 `callback(x,y,w,h)`를 호출 합니다.
