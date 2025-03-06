@@ -1,0 +1,221 @@
+Metadata-Version: 2.1
+Name: cellmaps_utils
+Version: 0.7.0
+Summary: Contains utilities needed by Cell Maps tools
+Home-page: https://github.com/idekerlab/cellmaps_utils
+Author: Cell Maps team
+Author-email: tools@cm4ai.org
+License: MIT license
+Keywords: cellmaps_utils
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+License-File: AUTHORS.rst
+Requires-Dist: fairscape-cli ==1.0.2
+Requires-Dist: ndex2 <4.0.0,>=3.8.0
+Requires-Dist: scipy <1.11,>=1.10.1
+Requires-Dist: scikit-learn <1.4.0,>=0.19.0
+Requires-Dist: pandas <3.0.0,>=2.0.0
+Requires-Dist: numpy <2.0.0,>=1.24.4
+Requires-Dist: dill <0.4.0,>=0.3.8
+Requires-Dist: tqdm <5.0.0,>=4.66.6
+Requires-Dist: requests <3.0.0,>=2.31.0
+
+=============================
+Cell Maps Pipeline Utilities
+=============================
+
+
+.. image:: https://img.shields.io/pypi/v/cellmaps_utils.svg
+        :target: https://pypi.python.org/pypi/cellmaps_utils
+
+.. image:: https://app.travis-ci.com/idekerlab/cellmaps_utils.svg?branch=main
+        :target: https://app.travis-ci.com/idekerlab/cellmaps_utils
+
+.. image:: https://readthedocs.org/projects/cellmaps-utils/badge/?version=latest
+        :target: https://cellmaps-utils.readthedocs.io/en/latest/?badge=latest
+        :alt: Documentation Status
+
+.. image:: https://zenodo.org/badge/599754117.svg
+        :target: https://zenodo.org/doi/10.5281/zenodo.10607322
+        :alt: Zenodo DOI badge
+
+Contains utilities needed by various tools in the cell maps toolkit.
+
+
+* Free software: MIT license
+* Documentation: https://cellmaps-utils.readthedocs.io.
+* Source code: https://github.com/idekerlab/cellmaps_utils
+
+Dependencies
+------------
+
+* `fairscape-cli <https://pypi.org/project/fairscape-cli>`__
+* `scipy <https://pypi.org/project/scipy>`__
+* `scikit-learn <https://pypi.org/project/scikit-learn>`__
+* `pandas <https://pypi.org/project/pandas>`__
+* `numpy <https://pypi.org/project/numpy>`__
+* `dill <https://pypi.org/project/dill>`__
+
+Compatibility
+-------------
+
+* Python 3.8+
+
+Installation
+------------
+
+.. code-block::
+
+   git clone https://github.com/idekerlab/cellmaps_utils
+   cd cellmaps_utils
+   make dist
+   pip install dist/cellmaps_utils*whl
+
+
+Run **make** command with no arguments to see other build/deploy options including creation of Docker image
+
+.. code-block::
+
+   make
+
+Output:
+
+.. code-block::
+
+   clean                remove all build, test, coverage and Python artifacts
+   clean-build          remove build artifacts
+   clean-pyc            remove Python file artifacts
+   clean-test           remove test and coverage artifacts
+   lint                 check style with flake8
+   test                 run tests quickly with the default Python
+   test-all             run tests on every Python version with tox
+   coverage             check code coverage quickly with the default Python
+   docs                 generate Sphinx HTML documentation, including API docs
+   servedocs            compile the docs watching for changes
+   testrelease          package and upload a TEST release
+   release              package and upload a release
+   dist                 builds source and wheel package
+   install              install the package to the active Python's site-packages
+
+Before running tests, please install ``pip install -r requirements_dev``
+
+For developers
+-------------------------------------------
+
+To deploy development versions of this package
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Below are steps to make changes to this code base, deploy, and then run
+against those changes.
+
+#. Make changes
+
+Modify code in this repo as desired
+
+#. Build and deploy
+
+.. code-block::
+
+    # From base directory of this repo cellmaps_hierarchyeval
+    pip uninstall cellmaps_utils -y ; make clean dist; pip install dist/cellmaps_utils*whl
+
+
+
+Credits
+-------
+
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template
+
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+.. _NDEx: http://www.ndexbio.org
+
+
+
+=======
+History
+=======
+
+0.7.0 (2025-03-05)
+------------------
+
+* Add ``compute_hierarchy_robustness`` method to ``HierarchyDiff`` class to assess the robustness of a hierarchy
+  based on Jaccard similarity across multiple alternative hierarchies.
+
+
+0.6.0 (2025-02-05)
+------------------
+
+* Add ``HierarchyDiff`` class with ``compare_hierarchies`` method to compare two hierarchies in CX2 format, and output
+  a hierarchy with robustness score of each system.
+
+* Add version bounds for required packages.
+
+* Add ``convert_hierarchical_network_to_hcx`` (utility function that aids convertion of a hierarchical network in CX2 to
+  HCX) and ``add_hcx_members_annotation`` (adds 'HCX::members' attribute to nodes) to ``hcx_utils``
+
+* Fixes in IF and APMS tools
+
+0.5.0 (2024-09-05)
+------------------
+
+* Add ``HiDeFToHierarchyConverter``, a class to convert a edge list and node list
+  in HiDeF format to hierarchy in HCX.
+* Add ``InteractomeToDDOTConverter`` and ``DDOTToInteractomeConverter``, classes to convert network in
+  CX2 format to DDOT format and vice versa, ``HierarchyToDDOTConverter`` and ``DDOTToHierarchyConverter``,
+  classes to convert hierarchy network in HCX format to DDOT and vice versa.
+
+0.4.0 (2024-07-02)
+-------------------
+
+* Updated provenance utils, added checks in for missing data in input RO-Crate,
+  and allowing to continue but logging errors in the process
+
+* Add ``HierarchyToHiDeFConverter``, a class to convert a hierarchy network
+  (in CX2 format) to a HiDeF format nodes and edges lists.
+
+* Add ``NDExHierarchyUploader``, a class for uploading hierarchy and
+  its parent network to NDEx.
+
+* Updated ``cellmaps_utilscmd.py`` ``apmsconverter``, ``ifconverter``,
+  ``crisprconverter`` to support tissue as well as output
+  ``data_info.json`` file to resulting RO-Crate so subsequent tools can
+  more easily get provenance information
+
+
+* Updated ``cellmaps_utilscmd.py crisprconverter`` to consume ``.h5ad``
+  files and updated readme.txt file
+
+0.3.0 (2024-04-15)
+-------------------
+
+* Bumped fairscape-cli dependency to ``0.2.0``
+
+
+0.2.0 (2024-02-20)
+------------------
+
+* Bumped fairscape-cli dependency to ``0.1.14`` to support schemas
+
+* Added support for ``schema`` to **data_dict** parameter in ``ProvenanceUtil.register_dataset()``
+
+* Added ``--release`` flag to ``cellmaps_utilscmd.py rocratetable`` and
+  in output table renamed "Name of Computation" to "Name" as well as
+  added "Type", "Cell Line", "Treatment", "Gene set", and "Version" to
+  table output
+
+* Set default logging level to ``ERROR`` for ``cellmaps_utilscmd.py`` command
+
+0.1.0 (2024-01-01)
+------------------
+
+* First release on PyPI.
