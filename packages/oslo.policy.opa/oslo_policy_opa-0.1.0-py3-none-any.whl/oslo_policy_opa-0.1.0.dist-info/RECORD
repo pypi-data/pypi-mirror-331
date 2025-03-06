@@ -1,0 +1,13 @@
+oslo_policy_opa/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+oslo_policy_opa/generator.py,sha256=1ltoWXdfU54kKDEzXBwr9MQRG_Z7kgzuC3AXbPjk3sY,52622
+oslo_policy_opa/opa.py,sha256=4PN92labuGl95g4u6wdhfKuJriuGqW2AAbLsd47-x7k,3600
+oslo_policy_opa/opts.py,sha256=LG6cZAP80AAjBPRwyHVxhQybQ7qW8xD1jDANurshGiU,2584
+oslo_policy_opa/tests/test_generator.py,sha256=4gYxNeL_hfWvz5z2PTNPOL4PuYyjW2Dl9uWlpHXP6W0,2117
+oslo_policy_opa-0.1.0.dist-info/AUTHORS,sha256=eSsGE3JVrW2ASH7bTgIouBS7PChDMIKvwa0R8N_ZRq4,156
+oslo_policy_opa-0.1.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+oslo_policy_opa-0.1.0.dist-info/METADATA,sha256=qQ0JyuedprOgx5TiYWzpxwpMfM48oIg7YwKRQsXgzKc,13087
+oslo_policy_opa-0.1.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+oslo_policy_opa-0.1.0.dist-info/entry_points.txt,sha256=sUx5AjRJpPMmFZdjW60VwF7Cmj48jPhV6CMZuUyuhv4,236
+oslo_policy_opa-0.1.0.dist-info/pbr.json,sha256=64PTBWpqj32ZrUcz6wep1su3ouOJU5zCxw3AMleax8w,47
+oslo_policy_opa-0.1.0.dist-info/top_level.txt,sha256=6Wovv2C5jGzJn3hpFaWYX3ddz4AjAFoFwqadr_tmBU4,16
+oslo_policy_opa-0.1.0.dist-info/RECORD,,
