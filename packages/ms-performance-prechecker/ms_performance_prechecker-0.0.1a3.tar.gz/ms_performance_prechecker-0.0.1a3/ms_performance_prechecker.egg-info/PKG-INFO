@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: ms-performance-prechecker
+Version: 0.0.1a3
+Summary: MindStudio Performance Prechecker
+License: Apache-2.0
+Keywords: ms,performance,prechecker
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# MindStudio Performance Prechecker
+
+## 介绍
+- 执行 `ms_performance_prechecker`
+  ```sh
+  ms_performance_prechecker
+  ```
+- 参数
+
+  | 参数                 | 说明                                                            |
+  | -------------------- | --------------------------------------------------------------- |
+  | -t, --check_type  | 检查项类型，可选值：basic, deepseek                                  |
