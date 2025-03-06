@@ -1,0 +1,87 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "django-managerie"
+dynamic = ["version"]
+description = "Expose Django management commands in the admin"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [
+    { name = "Aarni Koskela", email = "akx@iki.fi" },
+]
+classifiers = [
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+dependencies = [
+    "Django>=4.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest-django~=4.10",
+    "pytest>=7.2",
+]
+
+[project.urls]
+Homepage = "https://github.com/akx/django-managerie"
+
+[tool.hatch.version]
+path = "django_managerie/__init__.py"
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/django_managerie",
+]
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "managerie_test_app.settings"
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+extend-select = [
+    "COM",
+    "C9",
+    "E",
+    "F",
+    "I",
+    "W",
+]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 10
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+isolated_build = true
+envlist =
+    py31{0,1}-django{42}
+    py31{2,3}-django{50,51}
+
+[testenv]
+commands = py.test {posargs}
+extras = dev
+deps =
+    django42: Django~=4.2.0
+    django50: Django~=5.0.0
+    django51: Django~=5.1.0
+
+[gh]
+python =
+    3.10 = py310
+    3.11 = py311
+    3.12 = py312
+    3.13 = py313
+"""
