@@ -1,0 +1,8 @@
+[console_scripts]
+gnl-data = genelastic.import_data.cli_gen_data:main
+gnl-import = genelastic.import_data.cli_import:main
+gnl-info = genelastic.import_data.cli_info:main
+gnl-integrity = genelastic.import_data.cli_integrity:main
+gnl-start-api = genelastic.api.cli_start_api:main
+gnl-start-ui = genelastic.ui.cli_start_ui:main
+gnl-validate = genelastic.import_data.cli_validate:main

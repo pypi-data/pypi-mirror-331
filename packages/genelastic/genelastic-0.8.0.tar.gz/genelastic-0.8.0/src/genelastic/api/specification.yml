@@ -1,0 +1,350 @@
+---
+openapi: "3.0.3"
+info:
+  description: This is the swagger file for our API
+  version: "1.0.1"
+  title: Swagger for ReST API
+servers:
+  - url: "/api"
+
+paths:
+  /ping:
+    get:
+      operationId: genelastic.api.routes.ping
+      tags:
+        - Tests
+      summary: Server status check
+      description: Test route to verify that the server is online
+      responses:
+        200:
+          description: The server is online
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: pong
+
+  /indices:
+    get:
+      operationId: genelastic.api.routes.list_indices
+      tags:
+        - Indexes
+      summary: Listing the indexes present in Elasticsearch
+      description: Listing the indexes present in Elasticsearch
+      responses:
+        200:
+          description: Success of the request
+          content:
+            application/json:
+              schema:
+                type: object
+        400:
+          description: The server could not understand the request due to invalid syntax.
+        500:
+          description: Internal server error
+
+  /indices/{index_id}/documents/{document_id}:
+    get:
+      operationId: genelastic.api.routes.retrieve_document
+      parameters:
+        - in: path
+          name: index_id
+          schema:
+            type: string
+          required: true
+          description: The index in which to search for the document
+        - in: path
+          name: document_id
+          schema:
+            type: string
+          required: true
+          description: The ID of the document to retrieve
+      tags:
+        - Document
+      summary: Retrieve a document
+      description: Retrieve a specific document from Elasticsearch
+      responses:
+        200:
+          description: Success in reading the data
+          content:
+            application/json:
+              schema:
+                type: object
+        404:
+          description: Document not found
+        500:
+          description: Internal server error
+
+  /wet_processes:
+    get:
+      operationId: genelastic.api.routes.list_wet_processes
+      summary: Retrieve a list of wet processes
+      tags:
+        - Wet processes
+      responses:
+        200:
+          description: List of wet processes
+          content:
+            application/json:
+              schema:
+                type: array
+
+  /bi_processes:
+    get:
+      operationId: genelastic.api.routes.list_bi_processes
+      summary: Retrieve a list of bi processes
+      tags:
+        - Bi processes
+      responses:
+        200:
+          description: List of bi processes
+          content:
+            application/json:
+              schema:
+                type: array
+
+  /analyses:
+    get:
+      operationId: genelastic.api.routes.list_analyses
+      summary: Retrieve a list of analyses
+      tags:
+        - Analyses
+      responses:
+        200:
+          description: List of analyses
+          content:
+            application/json:
+              schema:
+                type: string
+
+  /wet_process/{proc_id}:
+    get:
+      operationId: genelastic.api.routes.list_analyses_wet_processes
+      summary: Retrieve a list of analyses of one specific wet process
+      tags:
+        - Analyses
+      parameters:
+        - in: path
+          name: proc_id
+          schema:
+            type: string
+          required: true
+          description: Wet process ID
+      responses:
+        200:
+          description: List of wet processes
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+
+  /bi_process/{proc_id}:
+    get:
+      operationId: genelastic.api.routes.list_analyses_bi_processes
+      summary: Retrieve a list of analyses of one specific bi process
+      tags:
+        - Analyses
+      parameters:
+        - in: path
+          name: proc_id
+          schema:
+            type: string
+          required: true
+          description: Bi process ID
+      responses:
+        200:
+          description: List of bi processes
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+
+  /snvs_documents:
+    get:
+      operationId: genelastic.api.routes.list_snv_documents
+      summary: Retrieve all documents containing an insertion (INS), a deletion (DEL) or a mutation
+        at a single position (SNV)
+      tags:
+        - Documents
+      responses:
+        200:
+          description: Complete list of documents containing an insertion (INS), a deletion (DEL) or a mutation
+            at a single position (SNV)
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    type:
+                      type: string
+                    chr:
+                      type: string
+                    pos:
+                      type: integer
+                    alt:
+                      type: array
+                      items:
+                        type: string
+                    info:
+                      type: object
+                      additionalProperties:
+                        type: string
+        400:
+          description: Invalid request
+        500:
+          description: Internal server error
+
+  /snvs_insertion_documents:
+    get:
+      operationId: genelastic.api.routes.list_snv_insertion_documents
+      summary: Retrieve all documents containing an insertion (INS) at a single position (SNV)
+      tags:
+        - Documents
+      responses:
+        200:
+          description: Complete list of documents containing an insertion (INS) at a single position (SNV)
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    type:
+                      type: string
+                    chr:
+                      type: string
+                    pos:
+                      type: integer
+                    alt:
+                      type: array
+                      items:
+                        type: string
+                    info:
+                      type: object
+                      properties:
+                        SVTYPE:
+                          type: string
+                        END:
+                          type: integer
+                        SVLEN:
+                          type: array
+                          items:
+                            type: integer
+        400:
+          description: Invalid request
+        500:
+          description: Internal server error
+
+  /snvs_deletion_documents:
+    get:
+      operationId: genelastic.api.routes.list_snv_deletion_documents
+      summary: Retrieve all documents containing a deletion (DEL) at a single position (SNV)
+      tags:
+        - Documents
+      responses:
+        200:
+          description: Complete list of documents containing a deletion (DEL) at a single position (SNV)
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    type:
+                      type: string
+                    chr:
+                      type: string
+                    pos:
+                      type: integer
+                    alt:
+                      type: array
+                      items:
+                        type: string
+                    info:
+                      type: object
+                      properties:
+                        SVTYPE:
+                          type: string
+                        END:
+                          type: integer
+                        SVLEN:
+                          type: array
+                          items:
+                            type: integer
+        400:
+          description: Invalid request
+        500:
+          description: Internal server error
+
+  /snvs_mutation_documents:
+    get:
+      operationId: genelastic.api.routes.list_snv_mutation_documents
+      summary: Retrieve all documents containing a mutation at a single position (SNV)
+      tags:
+        - Documents
+      responses:
+        200:
+          description: Complete list of documents containing a mutation at a single position (SNV)
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    type:
+                      type: string
+                    chr:
+                      type: string
+                    pos:
+                      type: integer
+                    alt:
+                      type: array
+                      items:
+                        type: string
+                    info:
+                      type: object
+                      properties:
+                        SVTYPE:
+                          type: string
+                        END:
+                          type: integer
+                        SVLEN:
+                          type: array
+                          items:
+                            type: integer
+        400:
+          description: Invalid request due to incorrect parameters or format
+        500:
+          description: Internal server error
+
+
+  /version:
+    get:
+      operationId: genelastic.api.routes.get_genelastic_version
+      tags:
+        - Version
+      summary: Get the genelastic package version
+      description: Return the installed version of the genelastic package
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  version:
+                    type: string
+                    example: "1.0.0"

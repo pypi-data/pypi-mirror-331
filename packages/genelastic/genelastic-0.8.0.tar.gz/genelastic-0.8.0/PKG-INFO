@@ -1,0 +1,109 @@
+Metadata-Version: 2.2
+Name: genelastic
+Version: 0.8.0
+Summary: Generate and store genetic data into an Elasticsearch database.
+Author: CNRGH
+Author-email: Pierrick ROGER <pierrick.roger@cnrgh.fr>, Maxime BLANCHON <maxime.blanchon@cnrgh.fr>
+License: CeCILL
+Keywords: CNRGH,genelastic,generation,storage,elasticsearch,database
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: CEA CNRS Inria Logiciel Libre License, version 2.1 (CeCILL-2.1)
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: elasticsearch
+Requires-Dist: PyVCF3
+Requires-Dist: schema
+Requires-Dist: PyYAML
+Requires-Dist: biophony<1.4,>=1.3.0
+Requires-Dist: colorlog
+Provides-Extra: tests
+Requires-Dist: pytest; extra == "tests"
+Requires-Dist: mypy; extra == "tests"
+Requires-Dist: coverage; extra == "tests"
+Requires-Dist: yamllint; extra == "tests"
+Requires-Dist: types-PyYAML; extra == "tests"
+Requires-Dist: ruff<0.9,>=0.8.1; extra == "tests"
+Requires-Dist: pre-commit<4.1,>=4.0.1; extra == "tests"
+Requires-Dist: types-requests; extra == "tests"
+Requires-Dist: ansible-core>=2.17.0; extra == "tests"
+Requires-Dist: ansible-lint<25,>=24.12.2; extra == "tests"
+Provides-Extra: docs
+Requires-Dist: sphinx; extra == "docs"
+Requires-Dist: sphinx-autoapi; extra == "docs"
+Requires-Dist: furo; extra == "docs"
+Provides-Extra: api
+Requires-Dist: flask; extra == "api"
+Requires-Dist: elasticsearch; extra == "api"
+Requires-Dist: environs; extra == "api"
+Requires-Dist: connexion[flask,swagger-ui,uvicorn]; extra == "api"
+Requires-Dist: gunicorn; extra == "api"
+Provides-Extra: ui
+Requires-Dist: flask; extra == "ui"
+Requires-Dist: requests; extra == "ui"
+Requires-Dist: environs; extra == "ui"
+Requires-Dist: uvicorn; extra == "ui"
+Requires-Dist: asgiref; extra == "ui"
+Requires-Dist: gunicorn; extra == "ui"
+
+# genelastic
+
+Storing of genetics data into an Elasticsearch database.
+
+## Prerequisites
+
+- `python` >= 3.11
+- `make`
+
+## Installation
+
+To install dependencies, run the following command:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+make install.deps
+```
+
+## Configuration
+
+To start the **API server**, the following environment variables should be defined:
+
+- `GENAPI_ES_URL`: URL of the Elasticsearch server,
+- `GENAPI_ES_ENCODED_API_KEY`: Encoded API key,
+- `GENAPI_ES_INDEX_PREFIX`: Prefix to identify indices of interest,
+- `GENAPI_ES_CERT_FP`: Certificate fingerprint of the Elasticsearch server.
+
+Then, run the following command:
+
+```bash
+make start-api
+```
+
+To start the **UI server**, the following environment variables should be defined:
+
+- `GENUI_API_URL`: URL of the API server.
+
+Then, run the following command:
+
+```bash
+make start-ui
+```
+
+## Developers
+
+This project uses [pre-commit](https://pre-commit.com/) to manage Git hooks scripts. To install project hooks, run:
+
+```bash
+pre-commit install
+```
+
+After that, each commit will succeed only if all hooks (defined in `.pre-commit-config.yaml`) pass.
+
+If necessary (though not recommended),
+you can skip these hooks by using the `--no-verify` / `-n` option when committing:
+
+```bash
+git commit -m "My commit message" --no-verify # This commit will not run installed hooks.
+```
