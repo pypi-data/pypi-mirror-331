@@ -1,0 +1,13 @@
+threedi_mi_utils/__init__.py,sha256=XNB-jkA9I26Lf5N1I9XNn_p-aSavFUK5TVkDiTYB4ZI,35
+threedi_mi_utils/news/__init__.py,sha256=XNW3VXDNt1yWFkiRcfCrxmVKqQjTbPvqALf2aan8Etw,37
+threedi_mi_utils/news/news_injector.py,sha256=SK1SFJtvts1IaE_Y5HUYZmckWMkLEacUn0hS6Oa30s8,4218
+threedi_mi_utils/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+threedi_mi_utils/tests/conftest.py,sha256=48VKreot0C_Zt6RBSQPGDIqnSX3LKLTrPowD5sAa4mQ,443
+threedi_mi_utils/tests/news_test.py,sha256=1Dt5xrn-Hf-3ydLzd8sdvREJKLplcV8pgAcnw2lqjYs,3055
+threedi_mi_utils/working_dir/__init__.py,sha256=XNB-jkA9I26Lf5N1I9XNn_p-aSavFUK5TVkDiTYB4ZI,35
+threedi_mi_utils/working_dir/working_dir.py,sha256=I_PFEgYqZtT9cegEnbBu3csohEn9NJRZbcWo_Vxjo7k,14683
+threedi_mi_utils-0.1.7.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+threedi_mi_utils-0.1.7.dist-info/METADATA,sha256=lD5J5Y4ZwcTPpeVIfOVKqGGILUm3OpOmkxQ_yQeoYtM,609
+threedi_mi_utils-0.1.7.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+threedi_mi_utils-0.1.7.dist-info/top_level.txt,sha256=x26jlCHhy64270JTLWRc1ZDuyJ3A4F9SmqkMd9eIngQ,17
+threedi_mi_utils-0.1.7.dist-info/RECORD,,
