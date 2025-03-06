@@ -1,0 +1,54 @@
+Metadata-Version: 2.4
+Name: jupygrader
+Version: 0.1.1
+Summary: Grade Jupyter notebooks with Python scripts
+Project-URL: Documentation, https://github.com/subwaymatch/jupygrader#readme
+Project-URL: Issues, https://github.com/subwaymatch/jupygrader/issues
+Project-URL: Source, https://github.com/subwaymatch/jupygrader
+Author-email: Ye Joo Park <subwaymatch@gmail.com>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Requires-Dist: black
+Requires-Dist: bs4
+Requires-Dist: ipykernel
+Requires-Dist: nbclient
+Requires-Dist: nbconvert
+Requires-Dist: nbformat
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: plotly
+Requires-Dist: statsmodels
+Requires-Dist: tabulate
+Description-Content-Type: text/markdown
+
+# Jupygrader
+
+[![Hatch project](https://img.shields.io/badge/%F0%9F%A5%9A-Hatch-4051b5.svg)](https://github.com/pypa/hatch)
+
+[![PyPI - Version](https://img.shields.io/pypi/v/jupygrader.svg)](https://pypi.org/project/jupygrader)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/jupygrader.svg)](https://pypi.org/project/jupygrader)
+
+---
+
+## Table of Contents
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install jupygrader
+```
+
+## License
+
+`jupygrader` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
