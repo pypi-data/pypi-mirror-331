@@ -1,0 +1,11 @@
+AvatarFlow/__init__.py,sha256=Ln0sA6lQeuJl7PW1NWiFpTOTogKdJBOUmXJloaJa78Y,1
+AvatarFlow/gen.py,sha256=L3rQmdHd9NCLFW3LkCCgCoGYVGlaWqWf7_MeNltpDeM,5488
+AvatarFlow/gen_lip.py,sha256=JwJnhwZ2lE9nSindF-l3dgaxx2Gx-G41ECStH775r-I,30573
+AvatarFlow/reg.py,sha256=srqUn-hCCo5fL9yY64L9T6PIonwv4o3a4jeVT0bqcKg,21082
+AvatarFlow/reg_lip.py,sha256=Q2r8wWg5GV0i85Bz6bmKhJXqaGoisLb7OKEdWv4rlQ4,28038
+AvatarFlow/up.py,sha256=HBr2AUqOsl-XraEmNr32_ldg-ybPJq2lxl5r3mi3MmQ,4792
+avatarflow-1.0.0.dist-info/LICENSE,sha256=6Pg1e44N6jDEqf5v2kdfhldZYfBoQXEWi8BbsL7Xeas,1078
+avatarflow-1.0.0.dist-info/METADATA,sha256=dmp4stRwJZV6eGDuKFtblpFbJimUBaDypm0lxCIqNjI,1874
+avatarflow-1.0.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+avatarflow-1.0.0.dist-info/top_level.txt,sha256=wVHquLZazcfyt1xe-lk_LfWQa1QRAa0UgjcRyis9vjo,11
+avatarflow-1.0.0.dist-info/RECORD,,
