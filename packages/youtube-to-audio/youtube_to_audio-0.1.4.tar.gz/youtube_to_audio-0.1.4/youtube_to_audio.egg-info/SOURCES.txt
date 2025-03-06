@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+youtube_to_audio/__init__.py
+youtube_to_audio/cli.py
+youtube_to_audio/downloader.py
+youtube_to_audio.egg-info/PKG-INFO
+youtube_to_audio.egg-info/SOURCES.txt
+youtube_to_audio.egg-info/dependency_links.txt
+youtube_to_audio.egg-info/entry_points.txt
+youtube_to_audio.egg-info/requires.txt
+youtube_to_audio.egg-info/top_level.txt
