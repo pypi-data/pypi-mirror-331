@@ -1,0 +1,2 @@
+include py_bdd_test/features/steps/*.py
+
