@@ -1,0 +1,6 @@
+biopython
+bs4
+omadb
+pyfaidx
+tqdm
+greedyFAS

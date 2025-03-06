@@ -1,0 +1,6 @@
+[console_scripts]
+dcc.parseOmaById = dcc2.parseOmaById:main
+dcc.parseOmaBySpec = dcc2.parseOmaBySpec:main
+dcc.parseOrthoxml = dcc2.parseOrthoxml:main
+dcc.parseOrthoxmlCustom = dcc2.parseOrthoxmlCustom:main
+dcc.prepare = dcc2.prepareDcc:main
