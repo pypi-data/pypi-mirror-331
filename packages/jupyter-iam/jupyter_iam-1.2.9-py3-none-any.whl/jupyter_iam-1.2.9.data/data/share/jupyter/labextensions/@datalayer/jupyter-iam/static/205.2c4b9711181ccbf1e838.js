@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_datalayer_jupyter_iam=self.webpackChunk_datalayer_jupyter_iam||[]).push([[205],{205:(a,e,t)=>{t.r(e),t.d(e,{default:()=>r});const r={id:"@datalayer/jupyter-iam:placeholder",description:"Jupyter IAM Placeholder.",autoStart:!0,requires:[],activate:a=>{}}}}]);
