@@ -1,0 +1,1 @@
+print("my name is David i am sorry thes is a veri dad prodgrkt")
