@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: gupi
+Version: 1.0.5
+Summary: Dependency analyser for my future Python projects
+Home-page: https://github.com/GlowCheese/gupi
+Author: Dao Le Bao Minh
+Author-email: djnner@proton.me
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: colorama
+
+# Gupi
+
+Simple dependency analyser for Python projects.
