@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+akde/__init__.py
+akde/akde.py
+akde.egg-info/PKG-INFO
+akde.egg-info/SOURCES.txt
+akde.egg-info/dependency_links.txt
+akde.egg-info/requires.txt
+akde.egg-info/top_level.txt
