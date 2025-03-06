@@ -1,0 +1,25 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+{% block breadcrumbs %}
+    <div class="breadcrumbs">
+        <a href="{% url 'admin:index' %}">{% trans 'Home' %}</a>
+        &rsaquo; {{ title }}
+    </div>
+{% endblock %}
+{% block content %}
+    <div id="content-main">
+        {% if commands %}
+            <ul>
+                {% for command in commands %}
+                    <li>
+                        <a href="{{ command.url }}">
+                            {{ command.app_config.verbose_name }} &ndash; {{ command.title }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            No commands available.
+        {% endif %}
+    </div>
+{% endblock %}
