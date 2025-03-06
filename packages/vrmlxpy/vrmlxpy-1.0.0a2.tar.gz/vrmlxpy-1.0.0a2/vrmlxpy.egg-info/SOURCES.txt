@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+vrmlxpy/__init__.py
+vrmlxpy/libtogeom.so
+vrmlxpy/libvrmlproc.so
+vrmlxpy/togeom.dll
+vrmlxpy/vrmlproc.dll
+vrmlxpy/vrmlxpy.pyd
+vrmlxpy/vrmlxpy.so
+vrmlxpy.egg-info/PKG-INFO
+vrmlxpy.egg-info/SOURCES.txt
+vrmlxpy.egg-info/dependency_links.txt
+vrmlxpy.egg-info/not-zip-safe
+vrmlxpy.egg-info/top_level.txt
