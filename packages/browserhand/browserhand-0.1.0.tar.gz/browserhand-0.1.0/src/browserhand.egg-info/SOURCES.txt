@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+src/browserhand.egg-info/PKG-INFO
+src/browserhand.egg-info/SOURCES.txt
+src/browserhand.egg-info/dependency_links.txt
+src/browserhand.egg-info/entry_points.txt
+src/browserhand.egg-info/requires.txt
+src/browserhand.egg-info/top_level.txt
