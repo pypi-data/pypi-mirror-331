@@ -1,0 +1,4 @@
+[console_scripts]
+jsonthat=jsonthat.main:main
+jt=jsonthat.main:main
+
