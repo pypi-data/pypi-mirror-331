@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: sam2util
+Version: 1.1.3
+Summary: 
+Author: Matej Fric
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: ffmpeg-python (>=0.2.0,<0.3.0)
+Requires-Dist: numpy (>=1.26.0,<2.0.0)
+Requires-Dist: opencv-python (>=4.10.0,<5.0.0)
+Requires-Dist: pillow (>=10.4.0,<11.0.0)
+Requires-Dist: tqdm (>=4.66.0,<5.0.0)
+Description-Content-Type: text/markdown
+
+# SAM-2 Utility Functions
+
+[![PyPI version](https://badge.fury.io/py/sam2util.svg)](https://badge.fury.io/py/sam2util)
+
+Utility functions for the SAM-2 model, enabling video-to-image and image-to-video conversion, exporting SAM-2 results, and related tasks.
+
+## Install
+
+```
+pip install sam2util
+```
+
+### Verify FFmpeg Installation
+
+To ensure FFmpeg is installed on your system, run the following command to check the version:
+
+```bash
+ffmpeg --version
+```
+
+If FFmpeg is not installed, you can install it with `apt` using the following command:
+
+```bash
+sudo apt install ffmpeg
+```
+
