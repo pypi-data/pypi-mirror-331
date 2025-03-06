@@ -1,0 +1,15 @@
+README.md,sha256=PKMUFhcQcNuzXa8LTvli_HIzMcyIf3DT10XfJd3TXAI,4733
+ext/.gitkeep,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ext/darwin_aarch64/libfliptengine.dylib,sha256=K9UjFG7u5OQ3hut8cq75CO5rRGX3O-TrNUiz2J1aI3c,8595144
+ext/darwin_x86_64/libfliptengine.dylib,sha256=R2JPa48atoaLSMfdSyeqjNR-fKL9pYrLMaOz3v07fWY,8593792
+ext/flipt_engine.h,sha256=LdvuG2xUXogo8cKgRLN058wgbNyt84BVq7UA1WjYuZI,1840
+ext/linux_aarch64/libfliptengine.so,sha256=XG8ULK5X5Y22_CASJ0I5ngpKW0_Qv9k9gFNmBiBBJPw,15420504
+ext/linux_x86_64/libfliptengine.so,sha256=Tm9k9SrqATwJZm1aF8moN8Ri_8GsE9RKIdGl_qeeqHc,15674032
+ext/windows_x86_64/fliptengine.dll,sha256=S1WUiV9jtZaX3iGKAvi2qdF7On0Sa9OI0jpYROD64wo,8299520
+flipt_client/__init__.py,sha256=JffDfE2S4n7tfwIpu3JtsETAoBpjFTWvZItcCDwyxyE,7353
+flipt_client/models.py,sha256=8OXlVxkKyC6lQIW84ZVrRlt20sicdV8KTKeGukwbFMc,2638
+flipt_client-0.17.0.dist-info/LICENSE,sha256=aoh0dJDjHcrwnj1kuoW6b87HtsGwylHaCTe1xyFB3o4,1076
+flipt_client-0.17.0.dist-info/METADATA,sha256=6XtG8ao2XdaoZwl1Uh9xa1KwYeujRWp27wHZDzSjxpU,5417
+flipt_client-0.17.0.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+flipt_client-0.17.0.dist-info/entry_points.txt,sha256=d-DgzOMENNfQ2VNMOztEgFpFxFffuOcwGl6KXc-ThuA,37
+flipt_client-0.17.0.dist-info/RECORD,,
