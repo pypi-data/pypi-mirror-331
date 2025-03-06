@@ -1,0 +1,23 @@
+Metadata-Version: 2.2
+Name: paneltime
+Version: 1.2.58
+Summary: Panel regression simultainiously solving for ARIMA/GARCH and random/fixed effects.
+Home-page: https://github.com/espensirnes/paneltime
+Author: Espen Sirnes
+Author-email: espen.sirnes@uit.no
+License: GPL-3.0
+Keywords: econometrics
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.11
+Requires-Dist: pandas
+Requires-Dist: mpmath
+Requires-Dist: paneltime_mp
+Provides-Extra: linux
+Requires-Dist: gcc; extra == "linux"
