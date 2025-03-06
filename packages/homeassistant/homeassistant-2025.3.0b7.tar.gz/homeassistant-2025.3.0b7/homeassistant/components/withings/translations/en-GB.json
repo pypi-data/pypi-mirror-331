@@ -1,0 +1,25 @@
+{
+    "config": {
+        "abort": {
+            "authorize_url_timeout": "Timeout generating authorise URL.",
+            "wrong_account": "Authenticated account does not match the account to be reauthenticated. Please log in with the correct account."
+        }
+    },
+    "entity": {
+        "sensor": {
+            "battery": {
+                "state": {
+                    "high": "High",
+                    "low": "Low",
+                    "medium": "Medium"
+                }
+            },
+            "extracellular_water": {
+                "name": "Extracellular water"
+            },
+            "intracellular_water": {
+                "name": "Intracellular water"
+            }
+        }
+    }
+}

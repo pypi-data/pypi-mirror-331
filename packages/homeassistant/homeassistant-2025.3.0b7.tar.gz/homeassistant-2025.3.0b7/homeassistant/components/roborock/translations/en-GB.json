@@ -1,0 +1,114 @@
+{
+    "config": {
+        "abort": {
+            "already_configured_account": "Account is already configured"
+        },
+        "error": {
+            "too_frequent_code_requests": "You have attempted to request too many codes. Try again later."
+        }
+    },
+    "entity": {
+        "number": {
+            "volume": {
+                "name": "Volume"
+            }
+        },
+        "sensor": {
+            "a01_status": {
+                "state": {
+                    "fetch_failed": "Fetch failed",
+                    "fetching": "Fetching",
+                    "mop_washing": "Washing mop",
+                    "mop_washing_paused": "Mop washing paused",
+                    "ready": "Ready",
+                    "reserving": "Reserving",
+                    "self_clean_cleaning": "Self clean cleaning",
+                    "self_clean_deep_cleaning": "Self clean deep cleaning",
+                    "self_clean_dehydrating": "Self clean drying",
+                    "self_clean_rinsing": "Self clean rinsing",
+                    "ventilating": "Ventilating",
+                    "washing": "Washing"
+                }
+            },
+            "brush_remaining": {
+                "name": "Roller left"
+            },
+            "total_cleaning_count": {
+                "name": "Total cleaning count"
+            },
+            "zeo_error": {
+                "state": {
+                    "drying_error_e_15": "Drying error E15",
+                    "drying_error_e_16": "Drying error E16",
+                    "drying_error_restart": "Restart the washer",
+                    "drying_error_water_flow": "Check water flow",
+                    "heating_error": "Heating error",
+                    "inverter_error": "Inverter error",
+                    "refill_error": "Refill error",
+                    "spin_error": "Re-arrange clothes",
+                    "temperature_error": "Temperature error",
+                    "water_level_error": "Water level error"
+                }
+            },
+            "zeo_state": {
+                "name": "State",
+                "state": {
+                    "cooling": "Cooling",
+                    "done": "Done",
+                    "drying": "Drying",
+                    "rinsing": "Rinsing",
+                    "soaking": "Soaking",
+                    "spinning": "Spinning",
+                    "standby": "Standby",
+                    "under_delay_start": "Delayed start",
+                    "washing": "Washing",
+                    "weighing": "Weighing"
+                }
+            }
+        },
+        "switch": {
+            "off_peak_switch": {
+                "name": "Off-peak charging"
+            }
+        },
+        "time": {
+            "dnd_end_time": {
+                "name": "Do not disturb end"
+            },
+            "dnd_start_time": {
+                "name": "Do not disturb begin"
+            }
+        }
+    },
+    "exceptions": {
+        "invalid_user_agreement": {
+            "message": "User agreement must be accepted again. Open your Roborock app and accept the agreement."
+        },
+        "no_user_agreement": {
+            "message": "You have not valid user agreement. Open your Roborock app and accept the agreement."
+        },
+        "update_options_failed": {
+            "message": "Failed to update Roborock options"
+        }
+    },
+    "services": {
+        "get_vacuum_current_position": {
+            "description": "Retrieves the current position of the vacuum.",
+            "name": "Get current position"
+        },
+        "set_vacuum_goto_position": {
+            "description": "Sends the vacuum to a specific position.",
+            "fields": {
+                "x": {
+                    "description": "Coordinates are relative to the dock. x=25500,y=25500 is the dock position.",
+                    "name": "X-coordinate"
+                },
+                "y": {
+                    "description": "Coordinates are relative to the dock. x=25500,y=25500 is the dock position.",
+                    "name": "Y-coordinate"
+                }
+            },
+            "name": "Go to position"
+        }
+    }
+}

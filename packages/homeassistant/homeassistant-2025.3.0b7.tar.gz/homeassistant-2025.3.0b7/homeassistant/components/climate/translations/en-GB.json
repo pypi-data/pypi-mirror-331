@@ -1,0 +1,51 @@
+{
+    "entity_component": {
+        "_": {
+            "state_attributes": {
+                "hvac_action": {
+                    "state": {
+                        "defrosting": "Defrosting"
+                    }
+                },
+                "swing_horizontal_mode": {
+                    "name": "Horizontal swing mode"
+                },
+                "swing_horizontal_modes": {
+                    "name": "Horizontal swing modes"
+                }
+            }
+        }
+    },
+    "exceptions": {
+        "humidity_out_of_range": {
+            "message": "Provided humidity {humidity} is not valid. Accepted range is {min_humidity} to {max_humidity}."
+        },
+        "low_temp_higher_than_high_temp": {
+            "message": "Target temperature low can not be higher than Target temperature high."
+        },
+        "missing_target_temperature_entity_feature": {
+            "message": "Set temperature action was used with the target temperature parameter but the entity does not support it."
+        },
+        "missing_target_temperature_range_entity_feature": {
+            "message": "Set temperature action was used with the target temperature low/high parameter but the entity does not support it."
+        },
+        "not_valid_horizontal_swing_mode": {
+            "message": "Horizontal swing mode {mode} is not valid. Valid horizontal swing modes are: {modes}."
+        },
+        "temp_out_of_range": {
+            "message": "Provided temperature {check_temp} is not valid. Accepted range is {min_temp} to {max_temp}."
+        }
+    },
+    "services": {
+        "set_swing_horizontal_mode": {
+            "description": "Sets horizontal swing operation mode.",
+            "fields": {
+                "swing_horizontal_mode": {
+                    "description": "Horizontal swing operation mode.",
+                    "name": "Horizontal swing mode"
+                }
+            },
+            "name": "Set horizontal swing mode"
+        }
+    }
+}

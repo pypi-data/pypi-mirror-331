@@ -1,0 +1,124 @@
+{
+    "config": {
+        "step": {
+            "alarm_control_panel": {
+                "data": {
+                    "arm_away": "Arm away action",
+                    "arm_custom_bypass": "Arm custom bypass action",
+                    "arm_home": "Arm home action",
+                    "arm_night": "Arm night action",
+                    "arm_vacation": "Arm holiday action",
+                    "code_arm_required": "Code arm required",
+                    "code_format": "Code format",
+                    "disarm": "Disarm action",
+                    "trigger": "Trigger action"
+                },
+                "data_description": {
+                    "device_id": "Select a device to link to this entity."
+                },
+                "title": "Template alarm control panel"
+            },
+            "image": {
+                "data_description": {
+                    "device_id": "Select a device to link to this entity."
+                },
+                "title": "Template image"
+            },
+            "number": {
+                "data": {
+                    "max": "Maximum value",
+                    "min": "Minimum value"
+                }
+            },
+            "sensor": {
+                "data_description": {
+                    "device_id": "Select a device to link to this entity."
+                }
+            },
+            "switch": {
+                "data": {
+                    "turn_off": "Actions on turn off",
+                    "turn_on": "Actions on turn on"
+                },
+                "data_description": {
+                    "device_id": "Select a device to link to this entity.",
+                    "value_template": "Defines a template to set the state of the switch. If not defined, the switch will optimistically assume all commands are successful."
+                },
+                "title": "Template switch"
+            },
+            "user": {
+                "menu_options": {
+                    "alarm_control_panel": "Template an alarm control panel",
+                    "binary_sensor": "Template a binary sensor",
+                    "image": "Template an image",
+                    "switch": "Template a switch"
+                }
+            }
+        }
+    },
+    "options": {
+        "step": {
+            "alarm_control_panel": {
+                "data": {
+                    "arm_away": "Arm away action",
+                    "arm_custom_bypass": "Arm custom bypass action",
+                    "arm_home": "Arm home action",
+                    "arm_night": "Arm night action",
+                    "arm_vacation": "Arm holiday action",
+                    "code_arm_required": "Code arm required",
+                    "code_format": "Code format",
+                    "disarm": "Disarm action",
+                    "trigger": "Trigger action"
+                },
+                "data_description": {
+                    "device_id": "Select a device to link to this entity."
+                },
+                "title": "Template alarm control panel"
+            },
+            "binary_sensor": {
+                "data_description": {
+                    "device_id": "Select a device to link to this entity."
+                }
+            },
+            "image": {
+                "data_description": {
+                    "device_id": "Select a device to link to this entity."
+                },
+                "title": "Template image"
+            },
+            "select": {
+                "data_description": {
+                    "device_id": "Select a device to link to this entity."
+                }
+            },
+            "sensor": {
+                "data_description": {
+                    "device_id": "Select a device to link to this entity."
+                }
+            },
+            "switch": {
+                "data": {
+                    "turn_off": "Actions on turn off"
+                },
+                "data_description": {
+                    "value_template": "Defines a template to set the state of the switch. If not defined, the switch will optimistically assume all commands are successful."
+                }
+            }
+        }
+    },
+    "selector": {
+        "alarm_control_panel_code_format": {
+            "options": {
+                "no_code": "No code format",
+                "number": "Number",
+                "text": "Text"
+            }
+        }
+    },
+    "services": {
+        "reload": {
+            "description": "Reloads template entities from the YAML-configuration.",
+            "name": "Reload"
+        }
+    }
+}

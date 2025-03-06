@@ -1,0 +1,84 @@
+{
+    "entity": {
+        "binary_sensor": {
+            "storm_mode_active": {
+                "name": "Storm watch active"
+            }
+        },
+        "cover": {
+            "vehicle_state_rt": {
+                "name": "Boot"
+            },
+            "vehicle_state_sun_roof_state": {
+                "name": "Sunroof"
+            }
+        },
+        "select": {
+            "climate_state_seat_fan_front_left": {
+                "name": "Seat cooler left"
+            },
+            "climate_state_seat_fan_front_right": {
+                "name": "Seat cooler right"
+            },
+            "climate_state_seat_heater_rear_center": {
+                "name": "Seat heater rear centre"
+            },
+            "components_customer_preferred_export_rule": {
+                "name": "Allow export",
+                "state": {
+                    "battery_ok": "Battery",
+                    "never": "Never",
+                    "pv_only": "Solar only"
+                }
+            },
+            "default_real_mode": {
+                "name": "Operation mode",
+                "state": {
+                    "autonomous": "Autonomous",
+                    "backup": "Backup",
+                    "self_consumption": "Self consumption"
+                }
+            }
+        },
+        "sensor": {
+            "battery_power": {
+                "name": "Battery power"
+            },
+            "energy_left": {
+                "name": "Energy left"
+            },
+            "generator_power": {
+                "name": "Generator power"
+            },
+            "grid_power": {
+                "name": "Grid power"
+            },
+            "grid_services_power": {
+                "name": "Grid services power"
+            },
+            "load_power": {
+                "name": "Load power"
+            },
+            "percentage_charged": {
+                "name": "Percentage charged"
+            },
+            "solar_power": {
+                "name": "Solar power"
+            },
+            "total_pack_energy": {
+                "name": "Total pack energy"
+            },
+            "vin": {
+                "name": "Vehicle"
+            },
+            "vpp_backup_reserve_percent": {
+                "name": "VPP backup reserve"
+            }
+        },
+        "switch": {
+            "charge_state_charging_state": {
+                "name": "Charge"
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "config": {
+        "step": {
+            "reconfigure": {
+                "data_description": {
+                    "host": "The hostname or IP address of your FRITZ!Box router."
+                },
+                "description": "Update your configuration information for {name}."
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "config": {
+        "step": {
+            "reauth_confirm": {
+                "data_description": {
+                    "password": "The password associated with the pyLoad account.",
+                    "username": "The username used to access the pyLoad instance."
+                }
+            },
+            "reconfigure": {
+                "data_description": {
+                    "host": "The hostname or IP address of the device running your pyLoad instance.",
+                    "password": "The password associated with the pyLoad account.",
+                    "port": "pyLoad uses port 8000 by default.",
+                    "ssl": "If enabled, the connection to the pyLoad instance will use HTTPS.",
+                    "username": "The username used to access the pyLoad instance.",
+                    "verify_ssl": "If checked, the SSL certificate will be validated to ensure a secure connection."
+                }
+            },
+            "user": {
+                "data_description": {
+                    "host": "The hostname or IP address of the device running your pyLoad instance.",
+                    "password": "The password associated with the pyLoad account.",
+                    "port": "pyLoad uses port 8000 by default.",
+                    "ssl": "If enabled, the connection to the pyLoad instance will use HTTPS.",
+                    "username": "The username used to access the pyLoad instance.",
+                    "verify_ssl": "If checked, the SSL certificate will be validated to ensure a secure connection."
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "entity": {
+        "event": {
+            "touch": {
+                "state_attributes": {
+                    "event_type": {
+                        "state": {
+                            "swipe_left": "Swipe left",
+                            "swipe_right": "Swipe right",
+                            "swipe_up": "Swipe up"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
