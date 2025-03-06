@@ -1,0 +1,2 @@
+[console_scripts]
+gpvecchia = gpvecchia.app:entry_point

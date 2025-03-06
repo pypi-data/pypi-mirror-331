@@ -1,0 +1,8 @@
+numpy
+scipy
+xarray
+matplotlib
+emcee
+sklearn
+gptide
+psutil
