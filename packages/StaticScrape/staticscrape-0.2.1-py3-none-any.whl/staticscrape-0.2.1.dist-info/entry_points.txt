@@ -1,0 +1,2 @@
+[console_scripts]
+staticscrape = StaticScrape.front_clone:main
