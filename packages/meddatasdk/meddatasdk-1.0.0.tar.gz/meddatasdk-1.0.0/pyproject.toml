@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+
+[project]
+name = "meddatasdk"
+version = "1.0.0"
+description = "SDK to fetch conversation data using an API key"
+authors = [{ name = "iem-haseeb", email = "banmanlas@gmail.com" }]
+license = { text = "MIT" }
+dependencies = ["requests"]
+requires-python = ">=3.6"
+
+[project.urls]
+Homepage = "https://github.com/bilaltariq360/Med_Script"

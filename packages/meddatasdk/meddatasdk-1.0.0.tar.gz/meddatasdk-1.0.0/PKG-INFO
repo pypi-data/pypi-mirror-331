@@ -1,0 +1,9 @@
+Metadata-Version: 2.2
+Name: meddatasdk
+Version: 1.0.0
+Summary: SDK to fetch conversation data using an API key
+Author-email: iem-haseeb <banmanlas@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/bilaltariq360/Med_Script
+Requires-Python: >=3.6
+Requires-Dist: requests
