@@ -1,0 +1,13 @@
+README.md
+setup.py
+Reqv/Rconn.py
+Reqv/Rfetcher.py
+Reqv/Rparser.py
+Reqv/__init__.py
+Reqv/utils.py
+Reqv.egg-info/PKG-INFO
+Reqv.egg-info/SOURCES.txt
+Reqv.egg-info/dependency_links.txt
+Reqv.egg-info/requires.txt
+Reqv.egg-info/top_level.txt
+test/test_Reqv.py
