@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=60.0"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "test_atml"
+version = "0.0.7"
+authors = []
+description = "The test projetc."
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+
+]
+
+[tool.setuptools]
+include-package-data = true
+
+
+[project.scripts]
+hello-world = "test_atml:hello_world"
+
+
+[project.entry-points."test_atml.display"]
+excl = "test_atml.timmins:excl_display"
