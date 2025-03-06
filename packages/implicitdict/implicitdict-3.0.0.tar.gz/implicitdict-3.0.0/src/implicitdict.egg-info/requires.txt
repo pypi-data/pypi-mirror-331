@@ -1,0 +1,8 @@
+arrow
+jsonschema
+pytimeparse
+
+[dev]
+pytest==8.3.4
+pytest-cov[all]
+black==24.8.0
