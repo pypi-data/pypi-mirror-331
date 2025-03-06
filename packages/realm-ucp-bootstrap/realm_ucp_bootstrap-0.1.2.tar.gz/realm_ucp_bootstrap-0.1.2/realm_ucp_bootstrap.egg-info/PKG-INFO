@@ -1,0 +1,23 @@
+Metadata-Version: 2.2
+Name: realm-ucp-bootstrap
+Version: 0.1.2
+Summary: A Python package that builds and installs an MPI-based shared library
+Home-page: https://github.com/yourusername/realm-ucp-bootstrap
+Author: NVIDIA
+Author-email: your.email@example.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary

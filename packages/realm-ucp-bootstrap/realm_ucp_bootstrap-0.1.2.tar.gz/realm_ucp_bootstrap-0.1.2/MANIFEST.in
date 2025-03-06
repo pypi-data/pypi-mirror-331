@@ -1,0 +1,9 @@
+include realm_ucp_bootstrap/bootstrap_mpi.c
+include realm_ucp_bootstrap/bootstrap.h
+include realm_ucp_bootstrap/bootstrap_util.h
+include LICENSE
+include README.md
+include pyproject.toml
+global-exclude *.so
+global-exclude *.dll
+global-exclude *.dylib
