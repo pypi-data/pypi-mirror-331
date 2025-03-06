@@ -1,0 +1,102 @@
+Metadata-Version: 2.1
+Name: ezenc
+Version: 0.1.1
+Summary: A tool that can easily encrypt and decrypt. Utilizes the symmetric key cryptography method (AES).
+Home-page: https://github.co.jp/
+Author: bib_inf
+Author-email: contact.bibinf@gmail.com
+License: CC0 v1.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries
+Classifier: License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+Description-Content-Type: text/markdown
+
+※下の方に日本語の説明があります。
+
+# **ezenc: A Simple AES Encryption Library**
+_Easily handle AES encryption without complexity._
+
+## **Overview**
+`ezenc` is a Python library designed to simplify AES encryption. While AES encryption can be intricate and difficult to manage, `ezenc` offers a lightweight and intuitive API for encrypting and decrypting data effortlessly.
+
+## **Key Features**
+- **Easy AES Encryption**: No need to handle complex encryption steps.
+- **Flexible Key Length**: Any key length can be used. Internally, it is automatically converted to 256 bits via a hash function.
+- **Lightweight and Minimal**: Focuses on simplicity and ease of use.
+
+## **Installation**
+To install `ezenc`, simply add it to your project:
+
+```bash
+pip install ezenc
+```
+
+## **Usage**
+```python
+import ezenc
+
+# Encryption
+encrypted_data = ezenc.enc(b"hello!", b"test-key")
+print(encrypted_data)
+
+# Decryption
+decrypted_data = ezenc.dec(encrypted_data, b"test-key")
+print(decrypted_data)  # Output: b'hello!'
+```
+
+## **How It Works**
+1. The provided key is internally processed to a 256-bit value using a hash function.
+2. The encryption function (`enc`) converts plaintext into an AES-encrypted byte sequence.
+3. The decryption function (`dec`) restores the original data using the same key.
+
+## **Important Notes**
+- The key must be **consistent** for both encryption and decryption. If a different key is used, decryption will fail.
+- The library ensures a fixed 256-bit key internally, so users don't have to worry about key length.
+
+## **License**
+This project is open-source. Feel free to use and modify it.
+
+---
+
+# **ezenc: 簡単なAES暗号化ライブラリ**
+_複雑なAES暗号をシンプルに_
+
+## **概要**
+`ezenc` は、AES暗号化を簡単に扱うためのPythonライブラリです。AES暗号は通常、扱いが難しく煩雑になりがちですが、`ezenc` を使えばシンプルなAPIで簡単にデータを暗号化・復号できます。
+
+## **特徴**
+- **簡単なAES暗号化**：複雑な処理なしで暗号化可能。
+- **自由なキー長**：キーの長さは自由で、内部でハッシュ関数を用いて256ビットに統一。
+- **軽量 & 直感的**：無駄を省いたシンプルな設計。
+
+## **インストール**
+`ezenc` をプロジェクトに追加するには、以下のコマンドを実行してください。
+
+```bash
+pip install ezenc
+```
+
+## **使い方**
+```python
+import ezenc
+
+# 暗号化
+encrypted_data = ezenc.enc(b"hello!", b"test-key")
+print(encrypted_data)
+
+# 復号
+decrypted_data = ezenc.dec(encrypted_data, b"test-key")
+print(decrypted_data)  # 出力: b'hello!'
+```
+
+## **仕組み**
+1. 指定したキーは内部でハッシュ関数を用いて256ビットに変換されます。
+2. `enc` 関数で平文をAES暗号化し、バイト列として出力します。
+3. `dec` 関数を使うと、同じキーを用いて元のデータを復元できます。
+
+## **注意点**
+- 暗号化と復号で **同じキー** を使用してください。異なるキーを使うと復号できません。
+- `ezenc` は内部でキーを256ビットに統一するため、キーの長さを気にする必要はありません。
+
+## **ライセンス**
+本プロジェクトはオープンソースです。自由に使用・改変してください。
