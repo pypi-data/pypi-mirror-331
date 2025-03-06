@@ -1,0 +1,11 @@
+GPUQuantile/__init__.py,sha256=Pxr4Nzoj5ZTduNCAm1tCTZLhWKUUjhOlJkZILCsSS_Q,115
+GPUQuantile/module.py,sha256=0a36VURiibJKxfpw9PXCg0fhqEqe0oKEnikY5u3mbWo,832
+docs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+docs/conf.py,sha256=XTTf1wEcBXOAaRjxQClOp6gnBW4LyhxAlojN1WxYSI4,1928
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_example.py,sha256=5pyjj0jpiLgPMeKWzxTK30pmQKZJ6P_sCmET64werTk,286
+gpuquantile-0.0.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+gpuquantile-0.0.1.dist-info/METADATA,sha256=RpjjbhCc5Lo2HS5B7xceEyt7YXco2AW8j3j5tQLLqbk,1721
+gpuquantile-0.0.1.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+gpuquantile-0.0.1.dist-info/top_level.txt,sha256=Mg4TY7M09EuSn8iJXqMKkAsEFx7CLh7871UPvqnofVc,23
+gpuquantile-0.0.1.dist-info/RECORD,,
