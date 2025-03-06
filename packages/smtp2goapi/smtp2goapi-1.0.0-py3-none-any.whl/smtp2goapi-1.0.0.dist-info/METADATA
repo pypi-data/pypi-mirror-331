@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: smtp2goapi
+Version: 1.0.0
+Summary: Tosch Automatisering SMTP2GO libary
+Author-email: Tosch Data Solutions <data@tosch.nl>, Jelle Blom <jb@tosch.nl>
+License-File: LICENSE.txt
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: Python Software Foundation License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Requires-Dist: pandas>=2.2.2
+Requires-Dist: requests>=2.32.3
