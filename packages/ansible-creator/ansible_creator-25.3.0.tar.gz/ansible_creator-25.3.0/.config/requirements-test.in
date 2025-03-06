@@ -1,0 +1,14 @@
+ansible-lint
+argcomplete
+coverage[toml]
+mypy
+pre-commit
+pydoclint
+pylint
+pytest
+pytest-xdist
+ruff
+toml-sort
+tox
+types-PyYAML
+uv
