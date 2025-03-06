@@ -1,0 +1,92 @@
+[project]
+name = "remotemanager"
+authors = [
+    {name = "Louis Beal", email = "louis.j.beal@gmail.com"}
+]
+requires-python = ">=3.7"
+description = "remote run management tool"
+readme = "README.md"
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering",
+    "Topic :: System :: Benchmark",
+    "Topic :: System :: Distributed Computing",
+]
+dynamic = ['version']
+keywords = ["HPC", "remote", "scheduler", "workflow", "workflows", "distributed"]
+
+dependencies = [
+    'pyyaml',
+    'requests',
+    'typing_extensions'
+]
+
+[project.urls]
+Homepage = "https://gitlab.com/l_sim/remotemanager/"
+Documentation = "https://l_sim.gitlab.io/remotemanager/"
+Repository = "https://gitlab.com/l_sim/remotemanager/"
+Issues = "https://gitlab.com/l_sim/remotemanager/-/issues"
+Changelog = "https://l_sim.gitlab.io/remotemanager/versions.html"
+
+[project.optional-dependencies]
+dill = ["dill"]
+jsonpickle = ["jsonpickle"]
+all = ["dill", "jsonpickle"]
+docs = [
+    "nbsphinx",
+    "sphinx-rtd-theme",
+    "furo"
+]
+dev = [
+    "dill",
+    "jsonpickle",
+    'sphinx',
+    "nbsphinx",
+    "sphinx-rtd-theme",
+    "pytest",
+    "pytest-cov",
+    "pytest-xdist",
+    "psutil",
+    "nbval",
+    "bumpver",
+    'numpy',
+    "flake8",
+    "black",
+    "furo"
+]
+
+[build-system]
+requires = ["setuptools>=61.0.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+version = {attr = 'remotemanager.__version__'}
+
+[tool.pytest.ini_options]
+addopts = "--nbval --cov=remotemanager --cov-report term-missing --cov-report lcov:coverage.lcov --cov-append --nbval-sanitize-with ./tests/uuid_sanitise.cfg"
+
+[tool.coverage.report]
+omit = ["remotemanager/connection/computers/*"]
+
+[tool.bumpver]
+current_version = "0.13.6"
+version_pattern = "MAJOR.MINOR.PATCH"
+commit_message = "[clean] bump version {old_version} -> {new_version}"
+commit = true
+tag = false
+push = false
+
+[tool.bumpver.file_patterns]
+"pyproject.toml" = [
+    'current_version = "{version}"',
+]
+"remotemanager/__init__.py" = [
+    '^__version__ = "{version}"'
+]
