@@ -1,0 +1,15 @@
+alchemica/__init__.py,sha256=Fj6P7Dnx7SsVT5y_aKa2JCEB_KgwQwsdlcGRfU40SOk,102
+alchemica/after_execute.py,sha256=Q5WSKE0O541zePFBgz6RGX-_3DoioqHPE0VAVWMHcVQ,672
+alchemica/async_logger.py,sha256=HzrK8kXQQI98O2nwBYTJjeku4E0YOl3kQTqZmwtUAtk,4574
+alchemica/before_execute.py,sha256=n5LI02AM28l4Z8j415c04vk5chD6B7k3Dxf8_SIU-54,1273
+alchemica/log_explain_plan.py,sha256=qepI9I9CW6lGn6ZVIvTgef4gYYH7-J0MNUPy-lXPX9I,830
+alchemica/sync_logger.py,sha256=nh6ojZtSVM38m9Ql38OlljsB8DYfeGWGVhTnkrYADOY,4472
+alchemica/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+alchemica/utils/default_logger.py,sha256=M0rkbttqMtftiR9TfMatqHSH0A-18k23SAS5t10Qy6M,774
+alchemica/utils/sqlalchemy_patch.py,sha256=KZ-ThDgIS5IpnEDIFhfIJhuGq-uvykrl3bQNB4XcxyA,1173
+alchemica/utils/utils.py,sha256=Kuca8Uerc03DUkzmuA9yrzeHLcCfx_jM_B29X-d3Ghw,572
+alchemica-0.0.2.dev2.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+alchemica-0.0.2.dev2.dist-info/METADATA,sha256=L4Ie1zgiwUuh68lIMotJ8N_s1rwrf7ZyaXTyWnA7fGM,24019
+alchemica-0.0.2.dev2.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+alchemica-0.0.2.dev2.dist-info/top_level.txt,sha256=iDLbhbrZapt9o4KeOz1MD55kURHGitnRRCZmtDoZXcY,10
+alchemica-0.0.2.dev2.dist-info/RECORD,,
