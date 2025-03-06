@@ -1,0 +1,11 @@
+README.md
+setup.py
+lpar_activation/__init__.py
+lpar_activation/__main__.py
+lpar_activation/activation.py
+lpar_activation_work.egg-info/PKG-INFO
+lpar_activation_work.egg-info/SOURCES.txt
+lpar_activation_work.egg-info/dependency_links.txt
+lpar_activation_work.egg-info/entry_points.txt
+lpar_activation_work.egg-info/requires.txt
+lpar_activation_work.egg-info/top_level.txt
