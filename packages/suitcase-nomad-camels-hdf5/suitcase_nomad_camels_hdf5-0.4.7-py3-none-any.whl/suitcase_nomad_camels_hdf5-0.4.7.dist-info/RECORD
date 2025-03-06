@@ -1,0 +1,10 @@
+suitcase/nomad_camels_hdf5/__init__.py,sha256=n2NbCw8SGBKQ8dF_vMdirvvc8ikDXMatBXdM0LhZLZc,41091
+suitcase/nomad_camels_hdf5/_version.py,sha256=hRFCCinIoWCdS_0JNCrJMrGOpAEY2PrzSNDiiPz9se4,18473
+suitcase/nomad_camels_hdf5/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+suitcase/nomad_camels_hdf5/tests/conftest.py,sha256=D6uFcJJuR9q_GhIwInIeckvigNxyPbjDIhH9ApOlSaY,220
+suitcase/nomad_camels_hdf5/tests/tests.py,sha256=L69_RT3YWTTTv7TSqNoTW21PdCDen_4TKmbqDu7-8lU,551
+suitcase_nomad_camels_hdf5-0.4.7.dist-info/LICENSE,sha256=IMF9i4xIpgCADf0U-V1cuf9HBmqWQd3qtI3FSuyW4zE,26526
+suitcase_nomad_camels_hdf5-0.4.7.dist-info/METADATA,sha256=AcBJKGRfenN9hFZAyCqcjgo3MugiGci6D0JAhV57ITk,2902
+suitcase_nomad_camels_hdf5-0.4.7.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+suitcase_nomad_camels_hdf5-0.4.7.dist-info/top_level.txt,sha256=sXSuqavclz0Rr3FReaX4wdgvAx61STPGF4A1lpA8_m8,9
+suitcase_nomad_camels_hdf5-0.4.7.dist-info/RECORD,,
