@@ -1,0 +1,13 @@
+zzupy/__init__.py,sha256=WvqyJzWPTiMB4dWcJKEyR1Tu9ltpkDntMWI4m2rDBr4,183
+zzupy/api.py,sha256=nY72Wv83WuQ8HJ_Da1FPR156VlCYGYjP5ehsnTjxkEk,8491
+zzupy/ecard.py,sha256=Z3j6MsMrdcX8PUSUaF4QqkGuZJrH1XyR-yelEbLJ0OA,15505
+zzupy/exception.py,sha256=WTpMK0leTQrhN6qu4KcBW7JJdujRLgd75ioJAjWPDFs,438
+zzupy/log.py,sha256=649OlPXYJw8It-saJhYDIbacMHUxJKTmZ6YpMN2DctM,1512
+zzupy/network.py,sha256=koS7DT8PI9mId2c4Qh885hW6UuD_k_h8ecUYz9m18Oc,12737
+zzupy/supwisdom.py,sha256=vUENb6w6wkdkTit7oexfRvT--9jlqU8gRE75tW7Rlpk,2725
+zzupy/typing.py,sha256=PnuVJcApZch-ICKIPf7P30f4mXWJcEyxzbZVf0CYLmw,180
+zzupy/utils.py,sha256=V9AAQKDcUOA1cNbFnz2Pa-ekJaOVvkx6CsdnhlQ0dBk,2224
+zzupy-3.0.0.dist-info/METADATA,sha256=vwQpsGiHIFFNg1_FCdUuCIGOwNWeHPnA3pC52pxDQF8,1904
+zzupy-3.0.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+zzupy-3.0.0.dist-info/licenses/LICENSE,sha256=8AyPBXmdMTDdjnhxg08ecV51vglymI5dW9JzrceTamM,1074
+zzupy-3.0.0.dist-info/RECORD,,
