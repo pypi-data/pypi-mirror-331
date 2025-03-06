@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+transformplot3d/__init__.py
+transformplot3d.egg-info/PKG-INFO
+transformplot3d.egg-info/SOURCES.txt
+transformplot3d.egg-info/dependency_links.txt
+transformplot3d.egg-info/requires.txt
+transformplot3d.egg-info/top_level.txt
+transformplot3d/core/__init__.py
+transformplot3d/core/quiver.py
+transformplot3d/core/vectors.py
