@@ -1,0 +1,80 @@
+Metadata-Version: 2.1
+Name: groupdocs-merger-net
+Version: 25.3
+Summary: GroupDocs.Merger for Python via .NET is a powerful API to merge several documents into one, split single document to multiple documents, reorder or replace document pages, change page orientation, manage document protection, render documents as images and more.
+Home-page: https://products.groupdocs.com/merger
+Author: GroupDocs
+License: Other/Proprietary License
+Keywords: pdf-merger document-merger image-merger photo-merger zip-merger jpg-merger jpeg-merger merge-pdf merge-word-document merge-excel-files merge-images merge-jpg,combine-pdf combine-word-document combine-excel-files combine-audio combine-mp3 combine-images join-pdf join-mp3 join-images extract-pdf-pages remove-pdf-pages,rotate-pdf pdf-swap-page-order pdf-splitter split-pdf split-pdf-document page-orientation combine-to-pdf combine-jpg-to-pdf merge-word-to-pdf merge-docx-to-pdf
+Platform: macos_x86_64
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Unix
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Utilities
+Requires-Python: >=3.5,<3.14
+Description-Content-Type: text/markdown
+
+# File Merger Python API
+
+[![banner](https://raw.githubusercontent.com/Aspose/aspose.github.io/master/img/banners/aspose_slides-for-python-net-banner.png)](https://releases.groupdocs.com/merger/python-net/)
+
+[Product Page](https://products.groupdocs.com/merger/python-net/) | [Docs](https://docs.groupdocs.com/merger/python-net/) | [Demos](https://products.groupdocs.app/merger/family) | [API Reference](https://references.groupdocs.com/merger/) | [Blog](https://blog.groupdocs.com/category/merger/) | [Search](https://search.groupdocs.com/) | [Free Support](https://forum.groupdocs.com/c/merger) | [Temporary License](https://purchase.groupdocs.com/temporary-license)
+
+[GroupDocs.Merger for Python via .NET](https://products.groupdocs.com/merger/python-net/)  is a powerful API to merge several documents into one, split single document to multiple documents, reorder or replace document pages, change page orientation, manage document protection, render documents as images and more.
+
+Without having to install any 3rd party component, you can use GroupDocs.Merger to build different types applications. For example, GroupDocs, using its own APIs, developed a [free web application](https://products.groupdocs.app/merger/pdf) that allows people to merge their PDF documents online.
+
+>GroupDocs.Merger for Python requires you to use python programming language. For Python, Java and .NET languages, we recommend you get [GroupDocs.Merger for Python](https://products.groupdocs.com/merger/python-net/), [GroupDocs.Merger for Java](https://products.groupdocs.com/merger/java/) and [GroupDocs.Merger for .NET](https://products.groupdocs.com/merger/net/), respectively.
+
+## Python Merger API Features 
+- Join two or more documents into one document, join specific pages or page ranges from several source documents into single resultant document.
+- Split a source document to several resultant documents.
+- Move page to another position within a document.
+- Remove single page or a collection of specific page numbers from the source document.
+- Rotate pages within document by setting rotation angle to 90,180 or 270 degrees.
+- Swap two pages positions within the source document. The result is a new document where two pages have their positions exchanged.
+- Extract specified page or page ranges from source document. The result is a new document that contains only specified pages from the source document.
+- Change orientation operation lets to set page orientation (portrait, landscape) for specific or all pages of the document.
+- Manage document password protection: add/update/delete document password and check its existence.
+- Get the basic information about source document - file type, size, pages count, page height and width etc.
+- Document preview feature allows to generate image representations of document pages. This may be helpful for better understanding about document content and its structure. Preview can be generated for all document pages (by default) or for specific page numbers or page range.
+
+## Supported File Formats
+Merge documents of the [most popular file formats](https://docs.groupdocs.com/merger/python-net/supported-document-formats/) (PDF, DOCX, XLSX, PPTX, JPG, ZIP and more) into single resultant document.
+
+## Platform Independence
+
+GroupDocs.Merger for Python via .NET can be used to develop 32-bit and 64-bit applications for different operating systems (such as Windows, Linux and macOS) where Python 3.5 or later is installed. 
+
+## Get Started
+
+Ready to try GroupDocs.Merger for Python via .NET?
+
+Fetch the package and install **GroupDocs.Merger**. Run this command: `pip install groupdocs-merger-net`
+
+If you already have **GroupDocs.Merger** installed and want to get the latest version, 
+you have to run `pip install --upgrade groupdocs-merger-net` instead. 
+
+Check out GroupDocs.Merger for Python for .NET [documentation](http://docs.groupdocs.com/merger/python-net/).  
+
+## Merge DOCX using Python
+
+```py
+import groupdocs.merger as gv
+
+# Instantiate a Merger object and load a DOCX file
+with gv.Merger("sample1.docx") as merger:
+    # Add another DOCX file to merge
+    merger.join("sample2.docx")
+    # Merge DOCX files and save result
+    merger.save("merged.docx")
+```
+
+[Product Page](https://products.groupdocs.com/merger/python-net/) | [Docs](https://docs.groupdocs.com/merger/python-net/) | [Demos](https://products.groupdocs.app/merger/family) | [API Reference](https://references.groupdocs.com/merger/) | [Blog](https://blog.groupdocs.com/category/merger/) | [Search](https://search.groupdocs.com/) | [Free Support](https://forum.groupdocs.com/c/merger) | [Temporary License](https://purchase.groupdocs.com/temporary-license)
+
