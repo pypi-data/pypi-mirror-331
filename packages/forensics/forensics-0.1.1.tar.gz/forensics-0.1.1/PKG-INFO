@@ -1,0 +1,38 @@
+Metadata-Version: 2.4
+Name: forensics
+Version: 0.1.1
+Summary: Feedback Forensics
+Author: timokau
+Author-email: rdnfn <hi@arduin.io>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Requires-Dist: alpaca-eval
+Requires-Dist: anthropic
+Requires-Dist: datasets
+Requires-Dist: gradio
+Requires-Dist: hydra-core
+Requires-Dist: ipywidgets
+Requires-Dist: jupyter
+Requires-Dist: langchain
+Requires-Dist: langchain-anthropic
+Requires-Dist: langchain-community
+Requires-Dist: langchain-openai
+Requires-Dist: loguru
+Requires-Dist: matplotlib
+Requires-Dist: nbconvert
+Requires-Dist: pandas
+Requires-Dist: plotly
+Requires-Dist: python-dotenv
+Requires-Dist: scikit-learn
+Requires-Dist: wandb
+Provides-Extra: dev
+Requires-Dist: black==24.10.0; extra == 'dev'
+Requires-Dist: bump-my-version; extra == 'dev'
+Requires-Dist: pytest>=6.0; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# feedback-forensics
+To be added.
