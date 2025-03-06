@@ -1,0 +1,1 @@
+Convert dataclasses in the graphql model to Pydantic BaseModels for additional validation. In the RecipeRunResponse class, configuration is now returned as a dictionary. In the InputDatasetPartResponse class, inputDatasetPartDocument is now returned as a list of dictionaries.
