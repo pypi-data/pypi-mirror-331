@@ -1,0 +1,79 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+    
+[project]
+name = "widget_code_input"
+description = 'A jupyter widget which allows users to implement small python functions dynamically and interactively.'
+version = "4.0.17"
+dependencies = ["anywidget>=0.9.1"]
+authors = [{ name = "The OSSCAR team" }]    
+readme = "README.md"
+
+keywords = [
+  'jupyter',
+  'jupyterlab',
+  'widget',
+  'anywidget',
+  'osscar',
+  'code_input',
+  'code_editor'
+]    
+
+classifiers = [
+  'Development Status :: 5 - Production/Stable',
+  'Framework :: Jupyter',
+  'Framework :: Jupyter :: JupyterLab',
+  'Programming Language :: Python',
+  'Programming Language :: Python :: 3.9',
+  'Programming Language :: Python :: 3.10',
+  'Programming Language :: Python :: 3.11',
+  'Topic :: Scientific/Engineering',
+]
+license = { file = 'LICENSE.txt' }
+requires-python = '>=3.9'
+
+[project.urls]
+Home = 'https://www.osscar.org/'
+Source = 'https://github.com/osscar-org/widget-code-input/'
+    
+[project.optional-dependencies]
+dev = ["watchfiles", "jupyterlab","bumpver>=2023"]
+
+# automatically add the dev feature to the default env (e.g., hatch shell)
+[tool.hatch.envs.default]
+features = ["dev"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/widget_code_input","widget_code_input"]
+
+
+[tool.hatch.build]
+only-packages = true
+artifacts = ["src/widget_code_input/static/*"]
+
+[tool.hatch.build.hooks.jupyter-builder]
+build-function = "hatch_jupyter_builder.npm_builder"
+ensured-targets = ["src/widget_code_input/static/widget.js"]
+skip-if-exists = ["src/widget_code_input/static/widget.js"]
+dependencies = ["hatch-jupyter-builder>=0.5.0"]
+
+[tool.hatch.build.hooks.jupyter-builder.build-kwargs]
+npm = "npm"
+build_cmd = "build"
+
+
+[tool.bumpver]
+current_version = "v4.0.17"
+version_pattern = "vMAJOR.MINOR.PATCH[PYTAGNUM]"
+commit_message = "Bump version {old_version} -> {new_version}"
+commit = true
+tag = true
+push = true
+
+[tool.bumpver.file_patterns]
+"pyproject.toml" = [
+  'version = "{pep440_version}"',
+  'current_version = "{version}"',
+]    
