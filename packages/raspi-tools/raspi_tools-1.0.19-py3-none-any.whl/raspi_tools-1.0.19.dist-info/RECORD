@@ -1,0 +1,7 @@
+raspi_tools/__init__.py,sha256=ROF01Z0NeIfpLSErVerDQpCpunhIK9rfHdZqoRv3GZ0,147
+raspi_tools/default.py,sha256=uVH3_nQlSS4g3Rr34JKuDUu4eL1OFXe_XyV4oQ4o9Nw,757
+raspi_tools/gpsmanager.py,sha256=zrs6HoswAd18a9kE0Ins01r3gRBRxzyWJORe7lgWx9c,13773
+raspi_tools-1.0.19.dist-info/METADATA,sha256=M3l0iJMn2M9lwk70_nlnYKsPvqJ4c3QGoOvJIBGtklk,4637
+raspi_tools-1.0.19.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+raspi_tools-1.0.19.dist-info/top_level.txt,sha256=50T3gnOh3aBL3Ayd37MjGYJC9PYGuW2FliQAcbhbAyA,12
+raspi_tools-1.0.19.dist-info/RECORD,,
