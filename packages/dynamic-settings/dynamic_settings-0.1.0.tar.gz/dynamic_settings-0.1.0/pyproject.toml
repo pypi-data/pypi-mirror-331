@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "dynamic-settings"
+version = "0.1.0"
+description = "Client for dynamic settings service https://github.com/MarkAntipin/dynamic-settings"
+authors = ["Mark Antipin <mr.antipin@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
