@@ -1,0 +1,15 @@
+pyspark_msgraph_source/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyspark_msgraph_source/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyspark_msgraph_source/core/async_iterator.py,sha256=xfq-Isq2froAXCDO7gf710mVNUKU-vUrupv6H6_e7x4,2507
+pyspark_msgraph_source/core/base_client.py,sha256=XzQQxctfbko3ERXqhb12zsx57ZNSMjpihrRQAAcvimI,6196
+pyspark_msgraph_source/core/constants.py,sha256=kQAEffZOeNs03-XSg0vqA_SA3CAxW11zordV52Np1iQ,91
+pyspark_msgraph_source/core/models.py,sha256=m9fDGx0np8Fcngh-mtDc_rC7q3nI6L4ir_0pZZY5ve8,8504
+pyspark_msgraph_source/core/resource_provider.py,sha256=byz426LsG18FHfI-P2ZIg79hqeJeM6qhALFhzQJuO30,3397
+pyspark_msgraph_source/core/source.py,sha256=k6ESSaOpe5RdFOVU6S_cQiTdqCqgb4FJy5P5gYV9gzs,4717
+pyspark_msgraph_source/core/utils.py,sha256=xOciPxOBHoB6Zag_ps-lGrm00bUfo1R84tf4rdszLDs,4742
+pyspark_msgraph_source/resources/__init__.py,sha256=IEXYkaKC-7TErJhbCHO-a57VEE8HXYS7MS3EN7a6Mlc,40
+pyspark_msgraph_source/resources/list_items.py,sha256=o5vPmAYNZ9hYXyWbrUypD6yZ00fqGH8FOA_Y1BLicmw,1947
+pyspark_msgraph_source-0.3.0.dist-info/LICENSE,sha256=VcS7kRHvs8dEcPzqVAHujw6q4BTX2xo4tvAQmg6IMCU,1086
+pyspark_msgraph_source-0.3.0.dist-info/METADATA,sha256=06D1jeuJcUYMTyDgyb5x5LeixsZjjZHgVkYtiPebCIQ,4320
+pyspark_msgraph_source-0.3.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+pyspark_msgraph_source-0.3.0.dist-info/RECORD,,
