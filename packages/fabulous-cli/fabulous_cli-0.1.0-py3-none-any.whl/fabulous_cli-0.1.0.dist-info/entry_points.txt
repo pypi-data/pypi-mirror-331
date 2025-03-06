@@ -1,0 +1,2 @@
+[console_scripts]
+fabulous = fabulous_cli.cli:main
