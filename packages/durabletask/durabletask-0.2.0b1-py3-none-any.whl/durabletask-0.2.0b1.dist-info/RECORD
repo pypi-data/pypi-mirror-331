@@ -1,0 +1,14 @@
+durabletask/__init__.py,sha256=4gNZ89cYaJTCvWQ1wWu3-BwRD98fWWt9k7hgHSETXU4,139
+durabletask/client.py,sha256=vAm7BtVHeeWFVoiwvOGcrhrkand43oBCCVNnzbNfH6I,10011
+durabletask/task.py,sha256=Brxt-cFqFaIjU07UFLCQoRv7ioycOLcJQbRh9Je_UW4,17722
+durabletask/worker.py,sha256=YPW0XIp0z7UPh9afFaygcS3uR4jgD4FcI2KCXPp0_6M,44583
+durabletask/internal/grpc_interceptor.py,sha256=KGl8GGIbNdiEnWVLwQwkOemWvIlcEO0dh-_Tg20h5XA,2834
+durabletask/internal/helpers.py,sha256=G4nEhLnRUE1VbFHkOMX277_6LSsMH9lTh9sXUD0GdHM,7289
+durabletask/internal/orchestrator_service_pb2.py,sha256=nkADgSglhimtNjAuISJdBz1bwA8xYm1cEQdL9ZifsmU,33993
+durabletask/internal/orchestrator_service_pb2.pyi,sha256=99AIPzz4AdXrkQrN2MHkHkW9zKqmH4puSwvg9ze5IjA,50517
+durabletask/internal/orchestrator_service_pb2_grpc.py,sha256=mZXK0QtvaRr6cjm8gi9y-DjMNR2Xg2Adu79WsR22pQc,41146
+durabletask/internal/shared.py,sha256=dKRGU8z1EQM4_YA6zkKeKfiaWbiZ6-B8lP-wHy7Q_jI,4379
+durabletask-0.2.0b1.dist-info/METADATA,sha256=Mh020ccP2tO01EibjaX_Y3jg4wUAAvqBUpnPqqC41Ek,12869
+durabletask-0.2.0b1.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+durabletask-0.2.0b1.dist-info/top_level.txt,sha256=EBVyuKWnjOwq8bJI1Uvb9U3c4fzQxACWj9p83he6fik,12
+durabletask-0.2.0b1.dist-info/RECORD,,
