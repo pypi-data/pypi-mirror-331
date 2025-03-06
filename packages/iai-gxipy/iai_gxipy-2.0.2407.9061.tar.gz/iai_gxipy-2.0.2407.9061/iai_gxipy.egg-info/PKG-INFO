@@ -1,0 +1,49 @@
+Metadata-Version: 2.2
+Name: iai-gxipy
+Version: 2.0.2407.9061
+Summary: Python API to use with the Daheng Imaging Galaxy SDK
+Author: Daheng Imaging
+License: MIT
+Project-URL: Homepage, https://github.com/maximecharriere/gxipy
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+
+# Daheng Imaging Galaxy SDK - Python API
+
+> [!IMPORTANT]
+> **THIS IS AN UNOFFICIAL PUBLISH ON PYPI OF THE GXIPY API DEVELOPED BY DAHENG IMAGING !**  
+> I'm not the developer or maintainer of the Python API, nor the Galaxy SDK. For any questions or issues, **please contact Daheng Imaging directly**.
+
+This package provides Python bindings for the Daheng Imaging Galaxy SDK, allowing you to control Daheng cameras in Python applications.
+
+## Prerequisites
+
+- Galaxy SDK must be installed on your system
+  - Windows: Download from [Daheng Imaging Download Page](https://va-imaging.com/pages/customerdownloads)
+  - Linux: Download from [Daheng Imaging Download Page](https://va-imaging.com/pages/customerdownloads)
+- Python 3.6 or higher
+
+## Installation
+
+1. Install the Galaxy SDK for your operating system
+2. Run `pip install gxipy`
+
+## Documentation
+The documentation is provided by Daheng Imaging and can be found in `C:\Program Files\Daheng Imaging\GalaxySDK\Development\Doc\Python Interface Development User Manual.pdf`
+
+## Python API source files
+> [!NOTE]
+> If a new version of the Python API is offered by Daheng Imaging, please create an issue or a PR, and I will update the Package on PyPi.
+
+When you install the Galaxy SDK, the official Python API is automatically installed locally. You can found the API files here:  
+- **Windows**: In `C:\Program Files\Daheng Imaging\GalaxySDK\Development\Samples\Python\gxipy`
+- **Linux**: In `Galaxy_Linux_Python_X.X.X.X\api\gxipy`
+
+---
+
+@DahengImaging If you want me to remove this package from PyPi, please create an issue on the corresponding Github repo.
