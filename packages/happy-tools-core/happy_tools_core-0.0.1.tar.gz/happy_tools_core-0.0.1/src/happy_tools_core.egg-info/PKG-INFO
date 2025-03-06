@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: happy-tools-core
+Version: 0.0.1
+Summary: Tools for dealing with hyperspectral images (core library).
+Home-page: https://github.com/wairas/happy-tools
+Author: Dale Fletcher and Peter Reutemann
+Author-email: fracpete@waikato.ac.nz
+License: MIT License
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Scientific/Engineering
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
+
+Python tools for dealing with hyper-spectral images.
+
+Changelog
+=========
+
+0.0.1 (2025-03-06)
+------------------
+
+- initial release
+

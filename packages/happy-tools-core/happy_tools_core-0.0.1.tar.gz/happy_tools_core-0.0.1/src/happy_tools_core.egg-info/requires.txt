@@ -1,0 +1,16 @@
+fast-opex>=0.0.4
+matplotlib
+numpy<1.22
+orjson
+pandas<1.4
+pillow<10.0
+pygubu==0.31
+redis
+scikit-learn
+scipy
+seppl>=0.2.7
+shapely
+spectral==0.23.1
+tabulate
+ttkSimpleDialog==1.2.1
+wai.logging
