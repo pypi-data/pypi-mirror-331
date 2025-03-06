@@ -1,0 +1,12 @@
+pitchcontext/ComputePitchContext.py,sha256=Rafb-dULkVL0WEotjxsc47hYmJ9KM0U3f9RzF0pzexw,11796
+pitchcontext/PCParameters.py,sha256=SPsy_9YGiVzc40HqUQ1Qhdggdja6-_elmcKwZ2cTXQg,3066
+pitchcontext/__init__.py,sha256=FNNZQVrcTNz-ZETKW7UiG6ULEQGZ9pkLRLsbnmXopI4,62
+pitchcontext/base40.py,sha256=9y18eyTkhCDqixVZ7UvhBeD0SR2xdhoxZaqoLZUqgXE,852
+pitchcontext/models.py,sha256=UJQCc78-DWj8EX5iCkJeID27_9Z4xB-KyrZbND85xS0,33017
+pitchcontext/pitchcontext.py,sha256=q2lbNsQG7frZVGf4l_hAnppVlIGMR7aaaBIJPFsXtNs,16477
+pitchcontext/song.py,sha256=PP3DGFThhTced1-pNzExFrGPWh8AnPkmZ5cxM31WfG8,32896
+pitchcontext/visualize.py,sha256=vRTrdZiBmyjxz2MNGDOstVcFFaRiEWMrVX2bdsi2Ut0,2304
+pitchcontext-0.1.10.dist-info/LICENSE,sha256=nZOtJKstZEg1VF8Hawcj8jO_Snlj65TeSZZrVHfiJ1U,1072
+pitchcontext-0.1.10.dist-info/METADATA,sha256=hK8Y0PKD_Q8DLOf6u0OGibb5ViqDwXvWJPEWY1mU9g8,2731
+pitchcontext-0.1.10.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+pitchcontext-0.1.10.dist-info/RECORD,,
