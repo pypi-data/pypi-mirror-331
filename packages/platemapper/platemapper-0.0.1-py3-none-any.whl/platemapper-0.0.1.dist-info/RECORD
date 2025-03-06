@@ -1,0 +1,11 @@
+platemapper/__init__.py,sha256=kVSMZQNn8Uo5XQhCQ7QC_fuSAIUp7Jq3kXvsKjk1bPI,98
+platemapper/napari.yaml,sha256=X1mtouMIgY31MibANkYi2g6HcwkJ_DYh7hGwMwjQ4JE,287
+platemapper/platemapper.py,sha256=TK7KxjyiHSSK6tZTVOPR67li0UwUXPUgavPpIboIl90,7719
+platemapper/_tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+platemapper/_tests/test_plate_mapper.py,sha256=KwLyJ9iuWc4_OWQmyKiX6k0VyWFsbXseJmiSizRmbvI,3729
+platemapper-0.0.1.dist-info/LICENSE,sha256=iwR0zjeuiX4-7P-OWcTPlID0lpnTXMpeKX6awOP1Xqk,1484
+platemapper-0.0.1.dist-info/METADATA,sha256=MUrmEh408PXKmxBaVLA5ul5XO-j80vSCtQFZF6BA5sE,5241
+platemapper-0.0.1.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+platemapper-0.0.1.dist-info/entry_points.txt,sha256=Bdlok52ibXCbFCu8LU6Ewodb4_dcsJCBy3Fj2rwhYdM,56
+platemapper-0.0.1.dist-info/top_level.txt,sha256=dseJ6PgVvwDcaMB8fhq-y2rSdMSDw7liEKwoWJQfZAM,12
+platemapper-0.0.1.dist-info/RECORD,,
