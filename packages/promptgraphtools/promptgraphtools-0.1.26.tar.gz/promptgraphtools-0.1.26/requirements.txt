@@ -1,0 +1,4 @@
+google-genai==0.2.2
+jinja2
+twine
+build
