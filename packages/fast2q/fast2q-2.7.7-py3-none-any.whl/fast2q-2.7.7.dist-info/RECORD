@@ -1,0 +1,11 @@
+fast2q/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fast2q/__main__.py,sha256=dBDlBt6DioQ37coU54--PnjSOWfCxJCqwruS96HHO-4,76
+fast2q/fast2q.py,sha256=PU686c6rr4fNR3yH6y2Jin0m06CXfhDuHHgR34fWoKs,63897
+fast2q/data/D39V_guides.csv,sha256=_PfZtet7unFx4jaCKStetWAkSnq2jdY_HAcabBfSaig,47969
+fast2q/data/example.fastq.gz,sha256=--vGP0_eby9ao2Qn2isQsbIeLOr23kGIeSG5rnkYW7w,5544622
+fast2q-2.7.7.dist-info/LICENSE.txt,sha256=gcuuhKKc5-dwvyvHsXjlC9oM6N5gZ6umYbC8ewW1Yvg,35821
+fast2q-2.7.7.dist-info/METADATA,sha256=blGXmCqWpNd_rYeeZVPN58ua-2w5h9Dw8wWYhPT71NQ,14717
+fast2q-2.7.7.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+fast2q-2.7.7.dist-info/entry_points.txt,sha256=ZHhiTGUStKenxIGqwreote7OqCYP3yQtNvmCKEDvyCw,47
+fast2q-2.7.7.dist-info/top_level.txt,sha256=heeO5vC0JpqKA-mQYIwiqLTPLQs4gHWzl2UB8VE5zgo,7
+fast2q-2.7.7.dist-info/RECORD,,
