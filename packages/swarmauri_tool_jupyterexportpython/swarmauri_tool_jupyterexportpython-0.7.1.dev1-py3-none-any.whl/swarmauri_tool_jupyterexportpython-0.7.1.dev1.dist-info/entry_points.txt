@@ -1,0 +1,3 @@
+[swarmauri.tools]
+jupyterexportpythontool=swarmauri_tool_jupyterexportpython:JupyterExportPythonTool
+
