@@ -1,0 +1,13 @@
+[package]
+name = "rxml"
+version = "2.3.1"
+edition = "2021"
+
+[lib]
+name = "rxml"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = "0.23.5"
+quick-xml = "0.37.2"
+rayon = "1.10"
