@@ -1,0 +1,12 @@
+Metadata-Version: 2.2
+Name: gpvecchia
+Version: 0.0.1
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: xarray
+Requires-Dist: matplotlib
+Requires-Dist: emcee
+Requires-Dist: sklearn
+Requires-Dist: gptide
+Requires-Dist: psutil
