@@ -1,0 +1,111 @@
+### **📌 Updated `README.md` for `ml_project_setup`**  
+
+```markdown
+# 🚀 ml_project_setup  
+A simple Python package to **automate the creation of structured Machine Learning projects** with a single command.  
+
+## 📖 Overview  
+Setting up a clean and organized ML project can be time-consuming. **`ml_project_setup`** makes it effortless by generating the **entire project structure**, including essential files and dependencies.  
+
+---
+
+## 📂 Project Structure Created  
+When you run `mlsetup my_project`, the following structure is created:  
+```
+my_project/
+│── source/
+│   ├── components/
+│   ├── constants/
+│   ├── entity/
+│   ├── pipeline/
+│   ├── utility/
+│   ├── exception/
+│   ├── logger/
+│── data/             # Placeholder for datasets
+│── models/           # Stores trained models
+│── notebooks/        # Jupyter notebooks for experiments
+│── .gitignore        # Ignores unnecessary files
+│── config.yaml       # Configuration settings
+│── Dockerfile        # For containerization
+│── main.py           # Entry point script
+│── README.md         # Project documentation
+│── requirements.txt  # Dependencies
+│── setup.py          # Package setup
+│── setup_env.bat     # Windows environment setup
+│── setup_env.sh      # Linux/macOS environment setup
+```
+
+---
+
+## 🛠 Installation  
+Install the package using **pip**:  
+```sh
+pip install ml_project_setup
+```
+
+---
+
+## 🚀 Usage  
+To create a new Machine Learning project, run:  
+```sh
+mlsetup my_project
+```
+This will generate a structured ML project named **`my_project`** in the current directory.  
+
+### **➕ Select ML Framework During Setup**
+You'll be prompted to **choose an ML framework**, and the package will automatically **install it**:  
+```
+🚀 Welcome to ML Project Setup! 🚀
+Enter your project name: my_ml_project
+
+Select ML Framework:
+[1] scikit-learn (default)
+[2] PyTorch
+[3] TensorFlow
+Enter your choice (1/2/3): 2
+📦 Installing PyTorch... This may take a while.
+✅ PyTorch installed successfully!
+✅ Project 'my_ml_project' created with PyTorch framework!
+```
+
+---
+
+## 📦 Dependencies  
+This package installs dependencies **automatically**, depending on the framework you select:  
+
+| **Framework**      | **Installed Packages**              |
+|-------------------|-----------------------------------|
+| scikit-learn (default) | `scikit-learn`                     |
+| PyTorch          | `torch`, `torchvision`, `torchaudio` |
+| TensorFlow       | `tensorflow`                         |
+
+If needed, you can manually install dependencies:  
+```sh
+pip install -r requirements.txt
+```
+
+---
+
+## 📝 License  
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.  
+
+---
+
+## 👤 Author  
+Developed by **Amogh Pathak**  
+📧 Contact: **amogh9792@gmail.com**  
+
+---
+
+### **✨ Contribute & Improve**  
+Have suggestions or feature requests? Feel free to **open an issue** or contribute on GitHub!  
+
+🔗 **PyPI:** [https://pypi.org/project/ml-project-setup/](https://pypi.org/project/ml-project-setup/)  
+```
+
+---
+
+### **🔹 What’s Updated?**
+✅ **Includes automatic framework installation (scikit-learn, PyTorch, TensorFlow)**  
+✅ **Shows example CLI prompt when running `mlsetup`**  
+✅ **Lists dependencies based on the selected framework**  
