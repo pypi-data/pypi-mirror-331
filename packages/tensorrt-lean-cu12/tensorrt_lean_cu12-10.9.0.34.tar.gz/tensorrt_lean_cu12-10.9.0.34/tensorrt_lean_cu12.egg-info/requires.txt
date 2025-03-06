@@ -1,0 +1,5 @@
+tensorrt_lean_cu12_libs==10.9.0.34
+tensorrt_lean_cu12_bindings==10.9.0.34
+
+[numpy]
+numpy
