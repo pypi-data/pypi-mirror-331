@@ -1,0 +1,30 @@
+{
+    "entity_component": {
+        "_": {
+            "state": {
+                "off": "Izklopljeno",
+                "on": "Vklopljeno"
+            },
+            "state_attributes": {
+                "max": {
+                    "name": "Najve\u010dje \u0161tevilo zagnanih skript"
+                }
+            }
+        }
+    },
+    "services": {
+        "reload": {
+            "name": "Ponovno nalo\u017ei"
+        },
+        "toggle": {
+            "name": "Preklopi"
+        },
+        "turn_off": {
+            "name": "Izklopi"
+        },
+        "turn_on": {
+            "name": "Vklopi"
+        }
+    },
+    "title": "Skripta"
+}

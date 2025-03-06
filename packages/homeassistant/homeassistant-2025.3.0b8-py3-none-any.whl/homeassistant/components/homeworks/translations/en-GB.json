@@ -1,0 +1,23 @@
+{
+    "config": {
+        "error": {
+            "credentials_needed": "The controller needs credentials.",
+            "invalid_credentials": "The provided credentials are not valid.",
+            "need_username_with_password": "Credentials must be either a username and a password or only a username."
+        },
+        "step": {
+            "reconfigure": {
+                "data_description": {
+                    "password": "Optional password, leave blank if your system does not need credentials or only needs a single credential",
+                    "username": "Optional username, leave blank if your system does not need login credentials"
+                }
+            },
+            "user": {
+                "data_description": {
+                    "password": "Optional password, leave blank if your system does not need credentials or only needs a single credential",
+                    "username": "Optional username, leave blank if your system does not need login credentials"
+                }
+            }
+        }
+    }
+}

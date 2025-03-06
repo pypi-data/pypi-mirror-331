@@ -1,0 +1,11 @@
+{
+    "config": {
+        "step": {
+            "2fa": {
+                "data": {
+                    "pin": "Two-factor code"
+                }
+            }
+        }
+    }
+}

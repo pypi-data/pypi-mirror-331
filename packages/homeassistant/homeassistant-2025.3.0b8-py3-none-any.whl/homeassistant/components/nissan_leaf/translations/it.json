@@ -1,0 +1,22 @@
+{
+    "services": {
+        "start_charge": {
+            "description": "Avvia la ricarica del veicolo. Deve essere collegato prima!",
+            "fields": {
+                "vin": {
+                    "name": "VIN"
+                }
+            },
+            "name": "Inizia la carica"
+        },
+        "update": {
+            "fields": {
+                "vin": {
+                    "description": "Il numero di identificazione del veicolo (VIN) del veicolo, 17 caratteri\n .",
+                    "name": "VIN"
+                }
+            },
+            "name": "Aggiorna"
+        }
+    }
+}

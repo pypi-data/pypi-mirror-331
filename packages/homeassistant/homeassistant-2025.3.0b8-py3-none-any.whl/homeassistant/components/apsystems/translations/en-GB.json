@@ -1,0 +1,37 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "data_description": {
+                    "port": "The integration will default to 8050, if not set, which should be suitable for most installs"
+                }
+            }
+        }
+    },
+    "entity": {
+        "binary_sensor": {
+            "dc_1_short_circuit_error_status": {
+                "name": "DC 1 short circuit error status"
+            },
+            "dc_2_short_circuit_error_status": {
+                "name": "DC 2 short circuit error status"
+            },
+            "off_grid_status": {
+                "name": "Off grid status"
+            },
+            "output_fault_status": {
+                "name": "Output fault status"
+            }
+        },
+        "switch": {
+            "inverter_status": {
+                "name": "Inverter status"
+            }
+        }
+    },
+    "exceptions": {
+        "inverter_error": {
+            "message": "Inverter returned an error"
+        }
+    }
+}
