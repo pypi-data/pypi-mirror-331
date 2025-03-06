@@ -1,0 +1,14 @@
+coloredlogs
+dicom2nifti
+nibabel
+nilearn
+numpy
+pydicom
+pydicom_seg
+scipy
+SimpleITK
+tqdm
+pandas
+scikit_learn
+openpyxl
+mlflow
