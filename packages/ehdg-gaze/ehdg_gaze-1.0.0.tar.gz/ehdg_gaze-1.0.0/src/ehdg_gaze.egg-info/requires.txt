@@ -1,0 +1,12 @@
+setuptools>=61.0
+opencv-python>=4.8.1.78
+numpy>=1.26.1
+omegaconf>=2.3.0
+scipy>=1.13.1
+torch>=2.6.0
+torchvision>=0.21.0
+dlib>=19.24.6
+face-alignment>=1.4.1
+mediapipe>=0.10.21
+pyyaml
+timm>=1.0.15
