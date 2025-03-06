@@ -1,0 +1,13 @@
+README.md
+setup.py
+besmarts/decode.py
+besmarts/decode_rdkit.py
+besmarts/encode_rdkit.py
+besmarts/assign/hierarchy_assign_rdkit.py
+besmarts/codecs/codec_rdkit.py
+besmarts/perception/perception_rdkit.py
+besmarts_rdkit.egg-info/PKG-INFO
+besmarts_rdkit.egg-info/SOURCES.txt
+besmarts_rdkit.egg-info/dependency_links.txt
+besmarts_rdkit.egg-info/requires.txt
+besmarts_rdkit.egg-info/top_level.txt
