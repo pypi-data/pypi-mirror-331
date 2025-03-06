@@ -1,0 +1,14 @@
+[fs.opener]
+sga-dow = relic.sga.v2.opener:EssenceFSV2Opener
+sga-ic = relic.sga.v2.opener:EssenceFSV2Opener
+sga-v2 = relic.sga.v2.opener:EssenceFSV2Opener
+
+[relic.cli.sga]
+v2 = relic.sga.v2.cli:RelicSgaV2Cli
+
+[relic.cli.sga.v2]
+pack = relic.sga.v2.cli:RelicSgaPackV2Cli
+repack = relic.sga.v2.cli:RelicSgaRepackV2Cli
+
+[relic.sga.opener]
+v2.0 = relic.sga.v2.essencefs:EssenceFSV2Opener
