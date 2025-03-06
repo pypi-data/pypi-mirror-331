@@ -1,0 +1,73 @@
+Metadata-Version: 2.3
+Name: openmsimodel
+Version: 0.2.0.dev1
+Summary: OpenMSIModel uses the GEMD (Graphical Expression of Material Data) format to interact with generalized laboratory, analysis, and computational materials data. It allows to structure real scientific workflows into meaningful data structures, model them in graph and relational databases, explore on interactive graphical interfaces, and build long-term, shareable assets stores.
+License: MIT
+Author: Ali Rachidi
+Author-email: arachid1@jhu.edu
+Requires-Python: >=3.9,<3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.7
+Provides-Extra: all
+Requires-Dist: SQLAlchemy (==2.0.17)
+Requires-Dist: charset-normalizer
+Requires-Dist: gemd (==1.13.0)
+Requires-Dist: graphviz
+Requires-Dist: ipycytoscape
+Requires-Dist: ipykernel
+Requires-Dist: ipython
+Requires-Dist: jupyter
+Requires-Dist: matplotlib
+Requires-Dist: methodtools
+Requires-Dist: nbsphinx
+Requires-Dist: networkx
+Requires-Dist: numpy
+Requires-Dist: openai (==0.28)
+Requires-Dist: openpyxl
+Requires-Dist: pandas
+Requires-Dist: prompt_toolkit
+Requires-Dist: pygraphviz
+Requires-Dist: pymssql (==2.2.8)
+Requires-Dist: questionary
+Requires-Dist: sphinx_rtd_theme
+Requires-Dist: transformers
+Requires-Dist: webcolors
+Requires-Dist: yfiles_jupyter_graphs
+Project-URL: Homepage, https://github.com/openmsi/openmsimodel
+Project-URL: Repository, https://github.com/openmsi/openmsimodel
+Description-Content-Type: text/markdown
+
+# openmsimodel
+[![PyPI](https://img.shields.io/pypi/v/openmsimodel)](https://pypi.org/project/openmsimodel/) [License](https://img.shields.io/github/license/openmsi/openmsimodel) 
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/openmsimodel) 
+![CircleCI](https://img.shields.io/circleci/build/github/openmsi/openmsistream/main) [![Documentation Status](https://readthedocs.org/projects/openmsimodel/badge/?version=latest)](https://openmsimodel.readthedocs.io/en/latest/?badge=latest) 
+
+
+OpenMSIModel uses the GEMD (Graphical Expression of Material Data) format to interact with generalized laboratory, analysis, and computational materials data.
+It allows to structure real scientific workflows into meaningful data structures, model them in graph and relational databases, explore on interactive graphical interfaces, and build long-term, shareable assets stores.
+
+Available on PyPI at https://pypi.org/project/openmsimodel and GitHub at https://github.com/openmsi/openmsimodel
+
+Official documentation at https://openmsimodel.readthedocs.io/en/latest/
+
+## Installation:
+
+```
+pip install openmsimodel
+```
+
+for Mac Users:
+
+```
+brew install graphviz
+python -m pip install \
+    --global-option=build_ext \
+    --global-option="-I$(brew --prefix graphviz)/include/" \
+    --global-option="-L$(brew --prefix graphviz)/lib/" \
+    pygraphviz
+pip install openmsimodel
+```
+
