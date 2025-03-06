@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: earth-surface-calculations
+Version: 4.2.0
+Summary: Geospatial utilities for Earth surface calculations
+Author: Hanry Zhang
+Author-email: popdoking@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: scipy
+Requires-Dist: numpy
+
+# Earth Surface Calculations (esc)
+球面几何计算库，提供地球表面点、线、轨迹的空间关系计算
+
+## 功能特性
+- 地球面两点距离计算（可选 haversine/vincenty）
+- 地球面点到线段距离
+- 轨迹相似度度量（可选 Hausdorff/DTW/Fréchet/Lcss/Edr/Owd/Lip/Mean）
+- 轨迹稀释（可选 按距离/按点数）
+- 轨迹插值
+- 地球面区域拓展
+
+## 安装指南
+```bash
+pip install earth-surface-calculations
+```
+
+## 卸载指南
+```bash
+pip uninstall earth-surface-calculations
+```
+
+## 快速入门
+```python
+import esc
+
+# 计算两点间距离
+point1 = (116.3975, 39.9087)  # 北京
+point2 = (121.4737, 31.2304)  # 上海
+print(esc.point_distance(point1, point2, method='vincenty'))
+
+# 计算点到线段距离
+line = [(116.3975, 39.9087), (121.4737, 31.2304)]
+print(esc.point_to_segment_distance((117.2, 36.6), line))
+```
