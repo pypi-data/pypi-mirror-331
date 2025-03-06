@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+print_file/main.py
+print_file/maths.py
+print_file/output.py
+sesi2_sigma.egg-info/PKG-INFO
+sesi2_sigma.egg-info/SOURCES.txt
+sesi2_sigma.egg-info/dependency_links.txt
+sesi2_sigma.egg-info/top_level.txt
