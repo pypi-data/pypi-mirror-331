@@ -1,0 +1,3 @@
+[console_scripts]
+amodbus.simulator=amodbus.server.simulator.main:main
+
