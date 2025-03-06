@@ -1,0 +1,6 @@
+Metadata-Version: 2.2
+Name: pymeshoptimizer
+Version: 0.1.0
+Requires-Dist: numpy>=1.19.0
+Requires-Dist: meshoptimizer==0.2.20a4
+Dynamic: requires-dist
