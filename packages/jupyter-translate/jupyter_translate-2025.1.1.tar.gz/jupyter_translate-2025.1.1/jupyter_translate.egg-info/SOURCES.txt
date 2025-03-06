@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+jupyter_translate.py
+requirements.txt
+setup.cfg
+setup.py
+jupyter_translate.egg-info/PKG-INFO
+jupyter_translate.egg-info/SOURCES.txt
+jupyter_translate.egg-info/dependency_links.txt
+jupyter_translate.egg-info/entry_points.txt
+jupyter_translate.egg-info/requires.txt
+jupyter_translate.egg-info/top_level.txt
+tests/test_integration.py
+tests/test_unit.py
