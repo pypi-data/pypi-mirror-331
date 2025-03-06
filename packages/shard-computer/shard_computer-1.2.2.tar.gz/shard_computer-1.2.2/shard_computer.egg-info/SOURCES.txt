@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+MurmurHash3.cpp
+MurmurHash3.h
+README.md
+setup.py
+shardcomputer.cpp
+shard_computer.egg-info/PKG-INFO
+shard_computer.egg-info/SOURCES.txt
+shard_computer.egg-info/dependency_links.txt
+shard_computer.egg-info/top_level.txt
