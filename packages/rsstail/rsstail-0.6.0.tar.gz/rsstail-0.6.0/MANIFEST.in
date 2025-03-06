@@ -1,0 +1,2 @@
+include etc/rsstail.sh
+include etc/_rsstail
