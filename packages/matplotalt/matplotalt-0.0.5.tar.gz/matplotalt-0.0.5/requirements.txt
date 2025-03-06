@@ -1,0 +1,9 @@
+ipython
+matplotlib
+nbconvert
+nbformat
+numpy
+openai
+Pillow
+python_dateutil
+scipy
