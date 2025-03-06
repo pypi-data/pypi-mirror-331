@@ -1,0 +1,10 @@
+---
+# Prefixes for different entity types
+entity_prefixes:
+  gene: GN
+  protein: PR
+  transcript: TR
+  exon: EX
+  intron: IN
+  variant: VR
+organization: knowledge-informatics-llc

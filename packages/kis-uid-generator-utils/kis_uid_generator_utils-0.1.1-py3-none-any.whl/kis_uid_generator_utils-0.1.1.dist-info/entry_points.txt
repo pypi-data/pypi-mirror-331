@@ -1,0 +1,2 @@
+[console_scripts]
+scp-download-file = kis_uid_generator_utils.download_file:main
