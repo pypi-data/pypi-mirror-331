@@ -1,0 +1,43 @@
+Metadata-Version: 2.2
+Name: mini_version_manager
+Version: 0.0.8
+Summary: A simple version management tool
+Home-page: https://www.deepseek.com/
+Author: bjk
+Author-email: bjk <228558063@qq.com>
+Project-URL: Homepage, https://www.deepseek.com/
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: home-page
+Dynamic: requires-python
+
+# Mini Version Manager
+
+## Introduction
+This is a mini version manager for Python. It allows you to install and manage multiple versions of Python on your system. It's designed to be simple and easy to use, with a focus on simplicity and ease of use.
+
+## Quick Start
+### Install
+To install the latest version of Python, run the following command:
+
+```bash
+pip install mini_version_manager
+```
+
+To install a specific version of Python, run the following command:
+
+```bash
+pip install mini_version_manager==0.0.6
+```
+
+### Usage
+```bash
+import mini_version_manager as mvm
+mvm.version_manager()
+mvm.show_version_history()
+```
