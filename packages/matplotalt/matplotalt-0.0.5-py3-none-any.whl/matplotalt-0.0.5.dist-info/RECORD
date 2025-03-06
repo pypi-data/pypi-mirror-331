@@ -1,0 +1,15 @@
+matplotalt/__init__.py,sha256=o4G1590Q9xAV--KjTrsJus_bmrFz8n1CEsWTHt2W5yk,94
+matplotalt/alttextify_notebook.py,sha256=cuGfOaWlZL0Qe8XJlaZpcjT8c3s_CwvvuKN8kt5tlXI,8392
+matplotalt/api_helpers.py,sha256=eUX4HS933OxnqWo7_Bip7g9AWSj3e-BBdYtgtYP2r9c,4807
+matplotalt/chart_descriptions.py,sha256=mkwmEJG6XVRyT0gIt1rTmZbyxdWU6QFiqNkJ8YBV7r4,69309
+matplotalt/matplotalt.py,sha256=OnbtW4bLT1Xvn_F27ys1x6s8F-eM0uYlYfsqOI7z7Vw,40752
+matplotalt/matplotalt_constants.py,sha256=fJDVJ3QDSGH0V6oqvTAsdPXSJaK_FX7nU86vTjbqjT8,2059
+matplotalt/matplotalt_helpers.py,sha256=3-6vfBF4kSWlyfd59DT0EO1sITsl3kZxXFBr2YcRw9M,14429
+matplotalt/setup.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+matplotalt/stat_helpers.py,sha256=2stBZVsZ6EjTrowG_yrIWUyKAr3ICuQRtot48Zta1E0,5903
+matplotalt/trend_helpers.py,sha256=KvecchrPREtYfZphSrp8ROOA6T8VwgAx7OTZjV9-90w,6295
+matplotalt-0.0.5.dist-info/METADATA,sha256=azTK3S5ZU6wKkHgcjZ2n5gJbsK8lpGDX8mtoC8oV1dg,4969
+matplotalt-0.0.5.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+matplotalt-0.0.5.dist-info/entry_points.txt,sha256=CVRQzNnp5NKBnLjEHbpvhPqFk1Y74Lzk-R7vYv-89vk,67
+matplotalt-0.0.5.dist-info/licenses/LICENSE,sha256=bgXNQU2ER9pggMAzmVk_jHAhLTxIzXd5TN3eSoUbE_c,1087
+matplotalt-0.0.5.dist-info/RECORD,,
