@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+flexi_mysql/__init__.py
+flexi_mysql.egg-info/PKG-INFO
+flexi_mysql.egg-info/SOURCES.txt
+flexi_mysql.egg-info/dependency_links.txt
+flexi_mysql.egg-info/requires.txt
+flexi_mysql.egg-info/top_level.txt
