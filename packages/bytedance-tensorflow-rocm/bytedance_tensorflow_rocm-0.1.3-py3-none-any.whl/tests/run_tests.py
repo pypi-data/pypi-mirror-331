@@ -1,0 +1,19 @@
+import concurrent.futures
+import unittest
+import sys
+
+def run_test_case(test_case):
+    suite = unittest.TestLoader().loadTestsFromTestCase(test_case)
+    runner = unittest.TextTestRunner()
+    runner.run(suite)
+
+if __name__ == "__main__":
+    from tls_test import TLSTest
+    from insecure_test import InsecureTest
+    from jwt_test import JWTTest
+    from queue_test import QueueTest
+
+    test_cases = [TLSTest, JWTTest, InsecureTest, QueueTest]
+
+    with concurrent.futures.ThreadPoolExecutor() as executor:
+        executor.map(run_test_case, test_cases)
