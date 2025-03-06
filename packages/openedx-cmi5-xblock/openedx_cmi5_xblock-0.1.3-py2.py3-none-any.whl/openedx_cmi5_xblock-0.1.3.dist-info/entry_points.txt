@@ -1,0 +1,2 @@
+[xblock.v1]
+openedx_cmi5_xblock = openedx_cmi5_xblock:CMI5XBlock
