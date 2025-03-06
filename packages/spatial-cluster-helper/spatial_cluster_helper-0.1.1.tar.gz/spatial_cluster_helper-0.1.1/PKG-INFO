@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: spatial_cluster_helper
+Version: 0.1.1
+Summary: A package for spatial clustering and analysis
+Home-page: https://github.com/lanselin/notebooks_for_spatial_clustering
+Author: Luc Anselin, Pedro Amaral
+Author-email: Luc Anselin <lanselin@gmail.com>, Pedro Amaral <pedrovma.ufmg@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/lanselin/notebooks_for_spatial_clustering
+Project-URL: Repository, https://github.com/lanselin/notebooks_for_spatial_clustering
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: geopandas
+Requires-Dist: scikit-learn
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+Requires-Dist: libpysal
+
+# spatial-cluster-helper
+Support functions for spatial cluster analysis following Anselin (2024)
