@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+src/PyCloudControl.egg-info/PKG-INFO
+src/PyCloudControl.egg-info/SOURCES.txt
+src/PyCloudControl.egg-info/dependency_links.txt
+src/PyCloudControl.egg-info/top_level.txt
+src/pycloudcontrol/__init__.py

@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "PyCloudControl"
+version = "0.1.0"
+authors = [
+    { name = "Tanix", email = "tanixlu@foxmail.com" }
+]
+description = "Placeholder package for PyCloudControl (Python Cloud Control)"
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+requires-python = ">=3.6"
