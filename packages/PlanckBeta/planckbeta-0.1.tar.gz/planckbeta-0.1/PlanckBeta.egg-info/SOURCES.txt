@@ -1,0 +1,7 @@
+README.md
+setup.py
+PlanckBeta.egg-info/PKG-INFO
+PlanckBeta.egg-info/SOURCES.txt
+PlanckBeta.egg-info/dependency_links.txt
+PlanckBeta.egg-info/requires.txt
+PlanckBeta.egg-info/top_level.txt
