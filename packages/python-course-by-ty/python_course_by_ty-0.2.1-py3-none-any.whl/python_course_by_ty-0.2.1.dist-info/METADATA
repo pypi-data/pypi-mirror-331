@@ -1,0 +1,24 @@
+Metadata-Version: 2.2
+Name: python_course_by_ty
+Version: 0.2.1
+Summary: A package for testing student answers to project questions.
+Home-page: https://github.com/TyGriffiths/python_course_by_ty
+Author: Ty Griffiths
+Author-email: griffiths.ty@yahoo.com
+License: GNU General Public License v3.0
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: requests
+Requires-Dist: bs4
+Requires-Dist: omdb
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: summary
