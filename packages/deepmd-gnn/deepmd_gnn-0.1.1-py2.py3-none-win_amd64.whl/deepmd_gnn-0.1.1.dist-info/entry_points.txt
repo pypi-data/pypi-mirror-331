@@ -1,0 +1,4 @@
+[deepmd.pt]
+mace = deepmd_gnn.mace:MaceModel
+nequip = deepmd_gnn.nequip:NequipModel
+
