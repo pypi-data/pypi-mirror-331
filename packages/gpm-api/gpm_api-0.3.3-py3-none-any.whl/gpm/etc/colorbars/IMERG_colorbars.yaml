@@ -1,0 +1,197 @@
+---
+precipitation:
+  reference: precipitation_rate
+precipitationCal:
+  reference: precipitation_rate
+precipitationUncal:
+  reference: precipitation_rate
+IRprecipitation:
+  reference: precipitation_rate
+HQobservationTime:
+  reference: MWobservationTime
+HQprecipitation:
+  reference: MWprecipitation
+IRkalmanFilterWeight:
+  reference: IRinfluence
+MWprecipitation:
+  cmap:
+    name: STEPS-MCH
+    bad_alpha: 0.4
+    bad_color: gray
+    over_color: darkred
+    under_color: none
+  norm:
+    name: BoundaryNorm
+    boundaries:
+      - 0.08
+      - 0.16
+      - 0.25
+      - 0.4
+      - 0.63
+      - 1
+      - 1.6
+      - 2.5
+      - 4
+      - 6.3
+      - 10
+      - 16
+      - 25
+      - 40
+      - 63
+      - 100
+      - 160
+  cbar:
+    extend: max
+    extendrect: false
+    label: Precipitation intensity [$mm \ hr^{-1}$]
+  auxiliary:
+    category: [GPM, IMERG]
+precipitationQualityIndex:
+  cmap:
+    name: cat3_RdOrGr
+    bad_alpha: 0.5
+    bad_color: gray
+    over_color: none
+    under_color: none
+  norm:
+    name: CategorizeNorm
+    boundaries: [0, 0.5, 0.75, 1]
+    labels: [Highly Uncertain, Uncertain, Reliable]
+  cbar:
+    label: Precipitation Quality Index
+  auxiliary:
+    category: [GPM, IMERG]
+IRinfluence:
+  cmap:
+    name: OrRd
+    bad_alpha: 0.5
+    bad_color: gray
+    over_color: none
+    under_color: none
+  norm:
+    name: BoundaryNorm
+    boundaries: [1, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+  cbar:
+    extend: neither
+    label: IR precipitation influence [%]
+  auxiliary:
+    category: [probability, IMERG]
+    comment: 1 is set to display the 0s transparently
+probabilityLiquidPrecipitation:
+  cmap:
+    name: Blues
+    bad_alpha: 0.5
+    bad_color: gray
+  norm:
+    name: BoundaryNorm
+    boundaries: [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+  cbar:
+    extend: neither
+    label: Probability of Rainfall [%]
+  auxiliary:
+    category: [probability, IMERG]
+randomError:
+  cmap:
+    name: STEPS-MCH
+    bad_alpha: 0.2
+    bad_color: gray
+    over_color: darkred
+    under_color: none
+  norm:
+    name: BoundaryNorm
+    boundaries:
+      - 0.24
+      - 0.4
+      - 0.63
+      - 1
+      - 1.6
+      - 2.5
+      - 4
+      - 6.3
+      - 10
+      - 16
+      - 25
+      - 40
+      - 63
+      - 100
+      - 160
+  cbar:
+    extend: max
+    extendrect: false
+    label: Uncertainty estimate [$mm \ hr^{-1}$]
+  auxiliary:
+    comment: RandomError smallest values is 0.24 mm/hr
+    category: [IMERG, precipitation]
+MWprecipSource:
+  cmap:
+    name: Spectral
+    over_color: none
+    under_color: none
+  norm:
+    name: CategoryNorm
+    categories:
+      1: "TMI"
+      3: "AMSR-2"
+      4: "SSMI (F13, F14, F15)"
+      5: "SSMIS (F16, F17, F18, F19)"
+      6: "AMSU-B"
+      7: "MHS"
+      9: "GMI"
+      11: "ATMS (NOAA20, NPP)"
+      12: "AIRS"
+      13: "TOVS"
+      14: "CRIS"
+      15: "AMSR-E"
+      16: "SSMI (F11)"
+      20: "SAPHIR"
+      21: "ATMS (NOAA21)"
+  cbar:
+    label: PMW Sensor
+  auxiliary:
+    category: [IMERG, PMW]
+MWobservationTime:
+  cmap:
+    name: Spectral
+    bad_alpha: 0
+    bad_color: gray
+    over_color: none
+    under_color: none
+  norm:
+    name: Norm
+    vmin: 0
+    vmax: 29
+  cbar:
+    extend: neither
+    label: PMW observation time lag [$minutes$]
+  auxiliary:
+    category: [probability, IMERG]
+IMERG_Solid:
+  cmap:
+    name: IMERG_Solid
+    bad_alpha: 0.5
+    bad_color: gray
+    over_color: "#8c149c"
+    under_color: none
+  norm:
+    name: BoundaryNorm
+    boundaries: [0.1, 0.2, 0.3, 0.5, 1, 2, 3, 5, 10, 20, 50]
+  cbar:
+    extend: max
+    label: Precipitation intensity [$mm \ hr^{-1}$]
+  auxiliary:
+    category: [GPM, IMERG, precipitation, snowfall]
+IMERG_Liquid:
+  cmap:
+    name: IMERG_Liquid
+    bad_alpha: 0.5
+    bad_color: gray
+    over_color: "#910000"
+    under_color: none
+  norm:
+    name: BoundaryNorm
+    boundaries: [0.1, 0.2, 0.3, 0.5, 1, 2, 3, 5, 10, 20, 50]
+  cbar:
+    extend: max
+    label: Precipitation intensity [$mm \ hr^{-1}$]
+  auxiliary:
+    category: [GPM, IMERG, precipitation, rainfall]
