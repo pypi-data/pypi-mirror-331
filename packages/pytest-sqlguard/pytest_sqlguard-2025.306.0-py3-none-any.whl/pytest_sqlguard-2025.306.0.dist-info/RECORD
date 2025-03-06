@@ -1,0 +1,9 @@
+pytest_sqlguard/__init__.py,sha256=ySXGXKRGhukmNAz4tfkFJufRbvTzaAPKCb8dfxPm_ks,93
+pytest_sqlguard/perf_rec.py,sha256=A_bFMgdxFHWMMdVGczUB8PtbelGB5Kbs6lPz5To0epE,8099
+pytest_sqlguard/sql.py,sha256=sRf2XjCmVA4VLFM7FLSVEQRnx_hbAD7xA9i3wTJsS3g,6007
+pytest_sqlguard/sqlguard.py,sha256=PyUdL3ETk_HVeyLYR_orPDhIJcVae7GFWBUF5i1eiBU,5395
+pytest_sqlguard-2025.306.0.dist-info/METADATA,sha256=eDlz-e6VkWpFDLpcy-CUyctVEkwp-iL0AErZmKkQ8b4,5133
+pytest_sqlguard-2025.306.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+pytest_sqlguard-2025.306.0.dist-info/entry_points.txt,sha256=MbHGwmofDtkop6KqVHcOM5ALXYlUf1gs_9fKaQf92iw,47
+pytest_sqlguard-2025.306.0.dist-info/licenses/LICENSE,sha256=U0eY1I10ZZNbER3RPmmSwb1Tvk_5tvOg9Dwz6mbNdpY,1064
+pytest_sqlguard-2025.306.0.dist-info/RECORD,,
