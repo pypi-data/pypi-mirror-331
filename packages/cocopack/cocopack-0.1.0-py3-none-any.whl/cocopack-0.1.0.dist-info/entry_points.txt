@@ -1,0 +1,3 @@
+[console_scripts]
+cocopack = cocopack.shellpack.cli:main
+color-wrap = cocopack.shellpack.commands:color_wrap
