@@ -1,0 +1,15 @@
+reference_package/__init__.py,sha256=0B2pyDgmxJoGlxvqVKzThwlXBq3ykN_hw3nQYFzZCEs,236
+reference_package/api/__init__.py,sha256=VskpwBKQUkO7pLLZrWvJngWwPVx72vx0xPSCfxKAr3g,41
+reference_package/api/internal.py,sha256=TV5JaRUHC6Nr_SZ55xf7amib0JJp5LcjmsHDtGyDxbk,759
+reference_package/api/public.py,sha256=cQ12wdi-OixMwAYDueL7P7O6MZXBVhL3DwG2JZWeKe4,573
+reference_package/cli/__init__.py,sha256=-_CZzVldUbfxYnJOHRbtJyZG_kJZ1WL7G2Fu1CQc2WE,32
+reference_package/cli/example.py,sha256=APzzwQ9tAMjYvDXiXA89QUL9-FFcTocyaNybAqW_518,539
+reference_package/lib/__init__.py,sha256=c-kh18Hkn-n2YGFLrJTxjv38h5KH9WmV1x4M5OBjKPY,16
+reference_package/lib/constants.py,sha256=C5sIDxTAW1etvS7WMjLaaRfsOsZ4BnVGYe2OTluhF38,826
+reference_package/lib/example.py,sha256=buzp6vlbm6IEIBzVtqhOsygVppUnpIUobznIZbScuqI,419
+reference_package-0.5.15.dist-info/LICENSE,sha256=RbOwAEE8wb02qCx9uWRXbBUb0oAtrdZFvZFO9jARIdg,1070
+reference_package-0.5.15.dist-info/METADATA,sha256=rSZVHhG1wFPmauZM5xSCGkGSTHpnVKEk-RHCJ8ntvvk,14987
+reference_package-0.5.15.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+reference_package-0.5.15.dist-info/entry_points.txt,sha256=10Xk1l84T-snqcF3B5KxXegJsdXN96YTef_M4GcMCVw,63
+reference_package-0.5.15.dist-info/top_level.txt,sha256=iBkvX-8Lh1DuuxdHhDBXGRBlCIx9732kYD7OZEU6dq8,18
+reference_package-0.5.15.dist-info/RECORD,,
