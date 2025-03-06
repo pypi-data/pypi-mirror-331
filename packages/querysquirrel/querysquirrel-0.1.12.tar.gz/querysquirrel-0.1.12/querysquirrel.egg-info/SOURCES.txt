@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+querysquirrel/__init__.py
+querysquirrel/myfunctions.py
+querysquirrel.egg-info/PKG-INFO
+querysquirrel.egg-info/SOURCES.txt
+querysquirrel.egg-info/dependency_links.txt
+querysquirrel.egg-info/requires.txt
+querysquirrel.egg-info/top_level.txt
+tests/__init__.py
+tests/test_myfunctions.py
