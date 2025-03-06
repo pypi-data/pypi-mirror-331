@@ -1,0 +1,17 @@
+Metadata-Version: 2.3
+Name: rocketry-py
+Version: 0.1.0
+Summary: A Python library for rocketry related calculations
+Author: henceiusegentoo
+Author-email: 61363222+henceiusegentoo@users.noreply.github.com
+Requires-Python: >=3.13
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: numpy (>=2.2.3,<3.0.0)
+Description-Content-Type: text/markdown
+
+# rocketry.py
+
+A Python library for rocket related calculations. Currently, it supports the calculation of acceleration,
+velocity and distance of a rocket without drag and gravity given the parameters of the rockets mass flow rate,
+specific impulse, dry mass, propellant mass and the variable of time.

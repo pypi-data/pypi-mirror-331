@@ -1,0 +1,17 @@
+[project]
+name = "rocketry-py"
+version = "0.1.0"
+description = "A Python library for rocketry related calculations"
+authors = [
+    {name = "henceiusegentoo",email = "61363222+henceiusegentoo@users.noreply.github.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "numpy (>=2.2.3,<3.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
