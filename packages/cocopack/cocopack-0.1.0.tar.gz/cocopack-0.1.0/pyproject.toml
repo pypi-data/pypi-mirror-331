@@ -1,0 +1,121 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "cocopack"
+version = "0.1.0"
+description = "Programmatic toolkits for Python and shell scripting"
+readme = "README.md"
+requires-python = ">=3.7"
+license = "GPL-3.0-only"
+authors = [
+    { name = "Colin Conwell", email = "colinconwell@gmail.com" },
+]
+dependencies = [
+    "ipython>=8.0.1",
+    "pillow>=9.0.0",
+    "python-pptx>=0.6.21",
+    "tqdm>=4.62.0",
+    "bibtexparser>=1.4.0",
+    "pybtex>=0.24.0",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.10",
+]
+
+[project.optional-dependencies]
+shell = []
+namespaced = []
+dev = [
+    "pytest>=7.0.0",
+    "black>=23.0.0",
+    "isort>=5.0.0",
+]
+
+[project.scripts]
+cocopack = "cocopack.shellpack.cli:main"
+
+# Direct shell commands (testing)
+color-wrap = "cocopack.shellpack.commands:color_wrap"
+
+[project.urls]
+Homepage = "https://github.com/ColinConwell/Coco-Pack"
+Documentation = "https://github.com/ColinConwell/Coco-Pack/wiki"
+Repository = "https://github.com/ColinConwell/Coco-Pack.git"
+BugTracker = "https://github.com/ColinConwell/Coco-Pack/issues"
+
+[tool.hatch.build]
+packages = ["python/cocopack"]
+# Include shell scripts in package data
+artifacts = [
+    "shell/scripts/*.sh",
+    "shell/helpers/*.sh",
+    "shell/*.sh",
+]
+
+# New section for shell script installation
+[tool.hatch.build.targets.wheel.scripts]
+cocopack-colorcode = "shell/colorcode.sh"
+cocopack-prompt = "shell/prompt.sh"
+cocopack-ezshell = "shell/ezshell.sh"
+cocopack-jekyll = "shell/helpers/jekyll.sh"
+
+[tool.hatch.envs.docs]
+dependencies = [
+    "sphinx>=7.0.0",
+    "pydata-sphinx-theme>=0.13.3",
+    "myst-parser>=1.0.0",
+    "sphinx-copybutton>=0.5.2",
+    "sphinx-design>=0.4.1",
+    "sphinxcontrib-napoleon>=0.7",
+]
+[tool.hatch.envs.docs.scripts]
+build = "sphinx-build -b html docs/source docs/build"
+serve = "python -m http.server --directory docs/build 8000"
+
+[tool.hatch.envs.default]
+dependencies = [
+    "pytest>=7.0.0",
+    "black>=23.0.0",
+    "isort>=5.0.0",
+]
+python = "^3.7"
+
+[tool.hatch.envs.test]
+dependencies = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+]
+[tool.hatch.envs.test.scripts]
+test = "pytest {args:tests}"
+test-cov = "pytest --cov=cocopack {args:tests}"
+
+[tool.hatch.envs.lint]
+dependencies = [
+    "black>=23.0.0",
+    "isort>=5.0.0",
+    "flake8>=6.0.0",
+    "mypy>=1.0.0",
+]
+[tool.hatch.envs.lint.scripts]
+style = [
+    "black {args:.}",
+    "isort {args:.}",
+]
+type = "mypy --install-types --non-interactive {args:python/cocopack}"
+check = ["style", "type"]
+
+[tool.black]
+line-length = 88
+target-version = ["py37"]
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+line_length = 88
+multi_line_output = 3
