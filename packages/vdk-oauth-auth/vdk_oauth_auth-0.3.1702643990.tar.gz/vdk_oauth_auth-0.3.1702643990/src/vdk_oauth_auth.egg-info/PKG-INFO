@@ -1,0 +1,41 @@
+Metadata-Version: 2.2
+Name: vdk-oauth-auth
+Version: 0.3.1702643990
+Summary: Versatile Data Kit SDK plugin adds Oauth support.
+Home-page: https://github.com/vmware/versatile-data-kit
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+Requires-Dist: vdk-core
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: summary
+
+
+The plugin provides Oauth authentication on data job startup.
+
+# Usage
+
+To install the plugin, run:
+
+```bash
+pip install vdk-oauth-auth
+```
+
+## Configuration
+
+The following environment variables can be used to configure this plugin:
+
+| name                 | description                                   |
+|----------------------|-----------------------------------------------|
+| `TEAM_CLIENT_ID`     | Client id to fetch access token from CSP.     |
+| `TEAM_CLIENT_SECRET` | Client secret to fetch access token from CSP. |

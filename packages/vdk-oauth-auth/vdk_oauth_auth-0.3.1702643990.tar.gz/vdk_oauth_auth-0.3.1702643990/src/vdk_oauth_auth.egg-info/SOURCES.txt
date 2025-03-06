@@ -1,0 +1,10 @@
+README.md
+setup.py
+src/vdk/plugin/oauth/oauth_configuration.py
+src/vdk/plugin/oauth/oauth_plugin.py
+src/vdk_oauth_auth.egg-info/PKG-INFO
+src/vdk_oauth_auth.egg-info/SOURCES.txt
+src/vdk_oauth_auth.egg-info/dependency_links.txt
+src/vdk_oauth_auth.egg-info/entry_points.txt
+src/vdk_oauth_auth.egg-info/requires.txt
+src/vdk_oauth_auth.egg-info/top_level.txt
