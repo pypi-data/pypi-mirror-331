@@ -1,0 +1,5 @@
+[console_scripts]
+gencpp = gencpp.__main__:main
+
+[gui_scripts]
+
