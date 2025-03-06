@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "mantis-authz"
+version = "0.1.2"
+description = "M&NTIS library to manipulate OAuth2 and OIDC tokens"
+authors = ["AMOSSYS"]
+packages = [{include = "mantis_authz"}]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+python-jose = "^3.3.0"
+python-keycloak = "^3.7.0"
+fastapi = "^0.115.6"
+aiohttp = "^3.8.1"
+omegaconf = "^2.2.2"
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
