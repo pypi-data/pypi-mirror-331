@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools >= 60.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "alchemica"
+version = "0.0.2-dev"
+authors = [
+    { name = "Grigoriy Gusev", email = "thegrigus@gmail.com" },
+]
+description = "alchemica - SQLAlchemy Logger"
+readme = "README-PYPI.md"
+dependencies = [
+    "greenlet==3.1.1",
+    "SQLAlchemy>=2.0.0",
+    "typing_extensions>=4.5.0",
+]
+requires-python = ">=3.8"
+keywords = [
+    "sqlalchemy",
+    "sql alchemy",
+    "sql alchemy debugger",
+    "sqlalchemy debugger",
+    "sqlalchemy debug",
+    "sqlalchemy log",
+    "sqlalchemy logs",
+    "sqlalchemy logger",
+    "salo",
+    "alchemica",
+]
+classifiers = [
+    "Programming Language :: Python :: 3.10",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/gri-gus/alchemica"
+Source = "https://github.com/gri-gus/alchemica"
+
+[tool.setuptools.packages.find]
+where = ["src"]
