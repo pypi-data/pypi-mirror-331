@@ -1,0 +1,5 @@
+setup.py
+piaggio.egg-info/PKG-INFO
+piaggio.egg-info/SOURCES.txt
+piaggio.egg-info/dependency_links.txt
+piaggio.egg-info/top_level.txt
