@@ -1,0 +1,22 @@
+Metadata-Version: 2.2
+Name: mini_version_manager
+Version: 0.0.6
+Summary: A simple version management tool
+Home-page: https://github.com/bjkjy/UART-analysis-scheme-based-on-RT-Thread-operating-system.git
+Author: bjk
+Author-email: bjk <228558063@qq.com>
+Project-URL: Homepage, https://github.com/bjkjy/UART-analysis-scheme-based-on-RT-Thread-operating-system.git
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: home-page
+Dynamic: requires-python
+
+# Mini Version Manager
+
+This is a mini version manager for Python. It allows you to install and manage multiple versions of Python on your system. It's designed to be simple and easy to use, with a focus on simplicity and ease of use.
+
