@@ -1,0 +1,99 @@
+"""Test handling of objectives, and min/max problems"""
+
+import numpy as np
+import pytest
+from pytest import approx
+
+from entmoot import Enting, ProblemConfig, PyomoOptimizer
+from entmoot.benchmarks import (
+    build_multi_obj_categorical_problem,
+    eval_multi_obj_cat_testfunc,
+)
+
+
+@pytest.mark.pipeline_test
+def test_incorrect_shape_of_observations_raises_error():
+    problem_config = ProblemConfig(rnd_seed=73)
+    build_multi_obj_categorical_problem(problem_config, n_obj=1)
+
+    rnd_sample = problem_config.get_rnd_sample_list(num_samples=20)
+
+    params = {"unc_params": {"dist_metric": "l1", "acq_sense": "penalty"}}
+    enting = Enting(problem_config, params=params)
+
+    with pytest.raises(AssertionError):
+        # too many objectives
+        testfunc_evals = eval_multi_obj_cat_testfunc(rnd_sample, n_obj=2)
+        enting.fit(rnd_sample, testfunc_evals)
+
+    with pytest.raises(AssertionError):
+        # too few observations
+        testfunc_evals = eval_multi_obj_cat_testfunc(rnd_sample, n_obj=1)[:-3]
+        enting.fit(rnd_sample, testfunc_evals)
+
+
+@pytest.mark.pipeline_test
+def test_max_predictions_equal_min_predictions():
+    """The sign of the predicted objective is independent of max/min."""
+    problem_config = ProblemConfig(rnd_seed=73)
+    build_multi_obj_categorical_problem(problem_config, n_obj=1)
+    problem_config.add_min_objective()
+
+    problem_config_max = ProblemConfig(rnd_seed=73)
+    build_multi_obj_categorical_problem(problem_config_max, n_obj=1)
+    problem_config_max.add_max_objective()
+
+    rnd_sample = problem_config.get_rnd_sample_list(num_samples=20)
+    testfunc_evals = eval_multi_obj_cat_testfunc(rnd_sample, n_obj=2)
+
+    params = {"unc_params": {"dist_metric": "l1", "acq_sense": "exploration"}}
+    enting = Enting(problem_config, params=params)
+    enting.fit(rnd_sample, testfunc_evals)
+
+    enting_max = Enting(problem_config_max, params=params)
+    enting_max.fit(rnd_sample, testfunc_evals)
+
+    sample = problem_config.get_rnd_sample_list(num_samples=3)
+    pred = enting.predict(sample)
+    pred_max = enting_max.predict(sample)
+
+    for (m1, u1), (m2, u2) in zip(pred, pred_max):
+        assert np.allclose(m1, m2, rtol=1e-5)
+        assert np.allclose(u1, u2, rtol=1e-5)
+
+
+@pytest.mark.pipeline_test
+def test_max_objective_equals_minus_min_objective():
+    """Assert that the solution found by the minimiser is the same as that of the maximiser for the negative objective function"""
+    problem_config = ProblemConfig(rnd_seed=73)
+    build_multi_obj_categorical_problem(problem_config, n_obj=1)
+
+    problem_config_max = ProblemConfig(rnd_seed=73)
+    build_multi_obj_categorical_problem(problem_config_max, n_obj=0)
+    problem_config_max.add_max_objective()
+
+    rnd_sample = problem_config.get_rnd_sample_list(num_samples=20)
+    testfunc_evals = eval_multi_obj_cat_testfunc(rnd_sample, n_obj=1)
+
+    params = {"unc_params": {"dist_metric": "l1", "acq_sense": "penalty"}}
+    enting = Enting(problem_config, params=params)
+    enting.fit(rnd_sample, testfunc_evals)
+    # pass negative test evaluations to the maximiser
+    enting_max = Enting(problem_config, params=params)
+    enting_max.fit(rnd_sample, -testfunc_evals)
+
+    params_pyomo = {"solver_name": "gurobi"}
+    res = PyomoOptimizer(problem_config, params=params_pyomo).solve(enting)
+    res_max = PyomoOptimizer(problem_config_max, params=params_pyomo).solve(enting)
+
+    assert res.opt_point == approx(res_max.opt_point, rel=1e-5)
+    assert res.opt_val == approx(res_max.opt_val, rel=1e-3)
+
+    # Note that OptResult.opt_val is *not* negated for maximization problems
+    # but enting.predict(x) *is* negated.
+
+    ((mu,), std) = enting.predict([res.opt_point])[0]
+    ((mu_max,), std_max) = enting_max.predict([res.opt_point])[0]
+
+    assert mu == approx(-mu_max, rel=1e-5)
+    assert std == approx(std_max, rel=1e-5)

@@ -1,0 +1,17 @@
+Metadata-Version: 2.2
+Name: entmoot
+Version: 2.0.5
+Home-page: https://github.com/cog-imperial/entmoot
+Author: Alexander Thebelt
+Author-email: alexander.thebelt18@imperial.ac.uk
+License: BSD 3-Clause License
+License-File: LICENSE
+Requires-Dist: numpy~=2.0.0
+Requires-Dist: lightgbm~=4.6.0
+Requires-Dist: gurobipy<12.0.0
+Requires-Dist: pyomo~=6.9.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
