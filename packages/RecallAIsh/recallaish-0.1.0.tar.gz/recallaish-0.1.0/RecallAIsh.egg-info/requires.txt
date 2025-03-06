@@ -1,0 +1,6 @@
+openai
+pinecone-client
+qdrant-client
+beautifulsoup4
+requests
+PyPDF2
