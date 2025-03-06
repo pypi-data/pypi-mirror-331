@@ -1,0 +1,31 @@
+Metadata-Version: 2.2
+Name: aws_utils_vitalii_bozadzhy
+Version: 0.1.0
+Summary: Utility package for AWS operations
+Home-page: https://github.com/VitaliiBozadzhy88/aws_utils
+Author: Vitalii Bozadzhy
+Author-email: VitaliiBozadzhy@icloud.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: boto3
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# dynamodb_dependency
+
+## Описание
+Пакет для удобной работы с AWS DynamoDB.
+
+## Установка
+```bash
+pip install git+https://github.com/VitaliiBozadzhy88/dynamodb_dependency.git
