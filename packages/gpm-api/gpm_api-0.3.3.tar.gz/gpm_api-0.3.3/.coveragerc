@@ -1,0 +1,22 @@
+[run]
+source =
+	gpm
+omit =
+	*docs*
+	*tutorials*
+	gpm/cli/*
+	gpm/encoding/*
+	gpm/etc/*
+	gpm/retrievals/*
+	gpm/visualization/animation.py
+	gpm/utils/pyresample.py
+	gpm/utils/collocation.py
+	gpm/utils/zonal_stats.py
+	gpm/gv/*
+	gpm/_version.py
+
+[report]
+exclude_lines =
+	pragma: no cover
+	def __repr__
+	def __str__
