@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sysdep"
+version = "0.1.2"
+description = "System Dependency Checker for Python Projects"
+readme = "README.md"
+authors = [{name = "Latiful Mousom", email = "latifulmousom@gmail.com"}]
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+keywords = ["dependency", "system", "package", "verification", "installation"]
+requires-python = ">=3.7"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=6.0.0", "black>=21.5b2", "isort>=5.0.0", "mypy>=0.800", "ui"]
+ui = ["tqdm>=4.46.0"]
+
+[project.urls]
+Homepage = "https://github.com/lmousom/sysdep"
+Issues = "https://github.com/lmousom/sysdep/issues"
+
+[project.scripts]
+sysdep = "sysdep.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["sysdep*"]
+
+[tool.black]
+line-length = 88
+target-version = ["py37", "py38", "py39", "py310", "py311"]
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.mypy]
+python_version = "3.7"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true

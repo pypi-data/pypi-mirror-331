@@ -1,0 +1,10 @@
+
+[dev]
+pytest>=6.0.0
+black>=21.5b2
+isort>=5.0.0
+mypy>=0.800
+ui
+
+[ui]
+tqdm>=4.46.0
