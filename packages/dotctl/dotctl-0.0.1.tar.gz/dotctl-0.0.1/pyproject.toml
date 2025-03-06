@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dotctl"
+version = "0.0.1"
+authors = [
+  { name="Pankaj Jackson", email="pankajackson@live.co.uk" },
+]
+description = "Command Line Interface to manage(save, export, import) KDE Plasma settings/configs in form of profile."
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.7"
+dependencies=['PyYAML']
+keywords=['kde', 'plasma', 'config', 'setting', 'settings', 'save', 'saver']
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Operating System :: Unix",
+]
+
+[project.scripts]
+dotctl = "dotctl.dotctl:main"
+
+[project.urls]
+"Homepage" = "https://github.com/pankajackson/dotctl"
+"Bug Tracker" = "https://github.com/pankajackson/dotctl/issues"
+"Source" = "https://github.com/pankajackson/dotctl"

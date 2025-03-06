@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/dotctl/__init__.py
+src/dotctl/dotctl.py
+src/dotctl.egg-info/PKG-INFO
+src/dotctl.egg-info/SOURCES.txt
+src/dotctl.egg-info/dependency_links.txt
+src/dotctl.egg-info/entry_points.txt
+src/dotctl.egg-info/requires.txt
+src/dotctl.egg-info/top_level.txt
