@@ -1,0 +1,10 @@
+haistings/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+haistings/haistings.py,sha256=z6k_YhtcFmJfBpRJehqEDDySEYfFWR6I8ltW28B-fpA,13001
+haistings/k8sreport.py,sha256=S8gFSvzmLotuP5eAbybNjSEl7QswgEJuB7b0TuTtLxw,5873
+haistings/memory.py,sha256=qQHsVb-14gbSU0uBc_yN1LA_7ZPr4DN5961iEGH5kIg,769
+haistings/prompts.py,sha256=hkR2eMEDDKpHFo3EpyKow5oTer4NuGEgQnHSDXnYaLk,5978
+haistings/repo_ingest.py,sha256=vomel5u5bdHzADWHzgnvmGznRo6RlaA_libTf_uSdMM,1030
+haistings-0.0.1.dist-info/METADATA,sha256=3UIy5nBXtSF_wE7txeSbvQjev7-53RkIkJsz7ReL_WU,8165
+haistings-0.0.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+haistings-0.0.1.dist-info/entry_points.txt,sha256=k3CFcp8auZf2jeSP15ACQIXqyy-XqqeczDBJIJP0cuU,54
+haistings-0.0.1.dist-info/RECORD,,
