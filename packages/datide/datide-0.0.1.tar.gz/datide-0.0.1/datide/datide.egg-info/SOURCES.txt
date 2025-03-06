@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+datide/datide.egg-info/PKG-INFO
+datide/datide.egg-info/SOURCES.txt
+datide/datide.egg-info/dependency_links.txt
+datide/datide.egg-info/entry_points.txt
+datide/datide.egg-info/requires.txt
+datide/datide.egg-info/top_level.txt
