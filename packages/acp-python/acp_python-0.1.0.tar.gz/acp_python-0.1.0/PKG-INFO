@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: acp-python
+Version: 0.1.0
+Summary: Actor Communication Protocol (ACP) for Python
+Author-email: Tony Francis <tonyfrancisv@gmail.com>
+License-File: LICENSE
+Requires-Python: >=3.8
+Requires-Dist: anyio>=4.5.2
+Requires-Dist: cryptography>=44.0.1
+Requires-Dist: nats-py[aiohttp,nkeys]>=2.9.0
+Requires-Dist: pydantic>=2.10.6
+Requires-Dist: uvloop>=0.21.0
