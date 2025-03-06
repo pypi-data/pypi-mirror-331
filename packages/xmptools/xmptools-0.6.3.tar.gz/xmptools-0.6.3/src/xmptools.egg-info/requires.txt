@@ -1,0 +1,4 @@
+rdfhelpers>=0.2.4
+Pillow>=9.3.0
+rdflib>=6.0.0
+pdfminer>=20191125
