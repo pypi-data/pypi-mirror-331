@@ -1,0 +1,116 @@
+# NCentralConnection: 
+A Python Class for N-central API Interaction
+The NCentralConnection class is designed to facilitate interactions with the N-central API. This class provides methods to authenticate, retrieve, and update data from the N-central server, making it easier to manage customers, devices, and other resources.
+
+# Class Summary
+API Authentication: Automatically handles API token authentication and manages access tokens.
+Data Retrieval: Fetch data from various N-central endpoints, including organizations, customers, devices, and their properties.
+Data Manipulation: Create or update customers and their associated properties.
+Pagination Support: Automatically handles paginated API responses.
+Debugging: Optional debugging mode to print API responses.
+
+# Command-list
+get_access_token: Retrieves the access token by authenticating with the N-central server.
+get: Makes a GET request to the N-central server and handles pagination.
+post: Makes a POST request to the N-central server to create or update resources.
+put: Makes a PUT request to the N-central server to update resources.
+clean_entry: Removes special characters such as '&', '/', and '"' from the given input string, and strips any leading or trailing whitespace.
+get_organisation: Retrieves the service organization from the N-central server.
+get_organisation_properties: Retrieves the default custom properties for the service organization from the N-central server.
+get_customers: Retrieves all customers and sub-customers from the N-central server.
+get_customer_sites: Retrieves all sites for a specific customer from the N-central server.
+get_customer_devices: Retrieves all devices associated with a specific customer from the N-central server.
+get_device_custom_properties: Retrieves the custom properties of a specific device from the N-central server.
+get_device_assets: Retrieves the asset information of a specific device from the N-central server.
+new_customer: Creates a new customer in the N-central server.
+update_customer_propertie: Updates a specific custom property for a customer in the N-central server.
+update_customer_contract: Updates the contract property for a customer in the N-central server.
+update_customer_sla: Updates the SLA property for a customer in the N-central server.
+
+# To use the NCentralConnection class, you need the following Python libraries:
+requests
+json
+pandas
+time
+Install the required libraries using pip:
+
+# Initialization and Authentication
+Before using any of the methods, initialize the NCentralConnection class with your N-central host and API token.
+from ncentral_connection import NCentralConnection
+ncentral = NCentralConnection(ncentral_host="your-ncentral-host", api_token="your-api-token")
+
+The class automatically retrieves an access token upon initialization, which is used for subsequent API requests.
+
+# Methods
+Get Organization Information
+Retrieve information about the service organization.
+org_info = ncentral.get_organisation(json_output=True)
+print(org_info)
+
+Get Organization Properties
+Retrieve the default custom properties for the service organization.
+org_props = ncentral.get_organisation_properties(json_output=True)
+print(org_props)
+
+Get Customers
+Retrieve all customers and sub-customers.
+customers = ncentral.get_customers(json_output=True)
+print(customers)
+
+Get Customer Sites
+Retrieve all sites for a specific customer.
+customer_id = 12345
+customer_sites = ncentral.get_customer_sites(customerid=customer_id, json_output=True)
+print(customer_sites)
+
+Get Customer Devices
+Retrieve all devices associated with a specific customer. To get all devices, use customerid = 50.
+customer_id = 12345
+customer_devices = ncentral.get_customer_devices(customerid=customer_id, json_output=True)
+print(customer_devices)
+
+Get Device Custom Properties
+Retrieve the custom properties of a specific device.
+device_id = 67890
+device_props = ncentral.get_device_custom_properties(deviceid=device_id, json_output=True)
+print(device_props)
+
+Get Device Assets
+Retrieve the asset information of a specific device with optional filters.
+device_id = 67890
+device_assets = ncentral.get_device_assets(deviceid=device_id, include_os=True, json_output=True)
+print(device_assets)
+
+Create a New Customer
+Create a new customer in the N-central server.
+new_customer = ncentral.new_customer(customername="New Customer", externalid="12345", json_output=True)
+print(new_customer)
+
+Update Customer Property
+Update a specific custom property for a customer.
+property_id = 112233
+customer_id = 12345
+updated_property = ncentral.update_customer_propertie(property_id=property_id, customerid=customer_id, property_value="New Value", json_output=True)
+print(updated_property)
+
+Update Customer Contract
+Update the contract property for a customer.
+customer_id = 12345
+updated_contract = ncentral.update_customer_contract(customerid=customer_id, property_value="New Contract", json_output=True)
+print(updated_contract)
+
+Update Customer SLA
+Update the SLA property for a customer.
+customer_id = 12345
+updated_sla = ncentral.update_customer_sla(customerid=customer_id, property_value="New SLA", json_output=True)
+print(updated_sla)
+
+Error Handling
+The class uses the APIErrorHandler to handle common HTTP errors such as 400 (Bad Request), 401 (Unauthorized), 403 (Forbidden), 404 (Not Found), and 500 (Internal Server Error).
+
+# Debugging
+Enable the debug mode to print the JSON response for any request.
+customers = ncentral.get_customers(debug=True)
+Contributing
+
+Code commands by ChatGPT
