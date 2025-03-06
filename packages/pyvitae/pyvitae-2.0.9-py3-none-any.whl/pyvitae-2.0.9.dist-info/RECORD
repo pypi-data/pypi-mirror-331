@@ -1,0 +1,12 @@
+VITAE/VITAE.py,sha256=700ZwLo5Me1d8OCI_KHs3T4TPpIbX2-gA6rDoR9o5EE,63221
+VITAE/__init__.py,sha256=T_L_dmNNOUKyiYZQDBJD7r2AJzdhQqom_QOS3kldqqU,424
+VITAE/inference.py,sha256=8XGEmpS-LVbQ7-2WrW55rQcVZJtOVRW4BnDyx3pLl50,10629
+VITAE/metric.py,sha256=A2J-IEvvIX34Fen1JRz8jeZ-5WvgsiZoicbXVaQBqDg,4497
+VITAE/model.py,sha256=sk-O4KtjUfJfkuhTSasyOZOiJ38C5vLtwUlOJ9ar-Ks,33741
+VITAE/train.py,sha256=ZyYw0uWFpt7NmuSUc5yZJarqBwtD3ClW48nmL5dHFuE,12940
+VITAE/utils.py,sha256=6X_rAZ4gkp0FTGw2KlIrO6h-0C5bQnSYeqe_QgHzzEI,28522
+pyvitae-2.0.9.dist-info/LICENSE,sha256=2JMaFEHFHEanDiU70hjiBuSZyIgSs8FSBaV-mYbvJSE,1067
+pyvitae-2.0.9.dist-info/METADATA,sha256=N_2YHXCb9wkFsefBs1GsIdq4K8L4xN2TnEfQ6-7f9NE,1509
+pyvitae-2.0.9.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+pyvitae-2.0.9.dist-info/top_level.txt,sha256=h6-ytd3wd52VW00Fm6ibFrfgnejYsbPn5pM2z2ExGkM,6
+pyvitae-2.0.9.dist-info/RECORD,,

@@ -1,0 +1,47 @@
+Metadata-Version: 2.2
+Name: pyvitae
+Version: 2.0.9
+Summary: Joint Trajectory Inference for Single-cell Genomics Using Deep Learning with a Mixture Prior
+Home-page: https://github.com/jaydu1/VITAE
+Author: Jin-Hong Du
+Author-email: jinhongd@andrew.cmu.edu
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: tensorflow>=2.4
+Requires-Dist: tensorflow_probability>=0.12
+Requires-Dist: pandas
+Requires-Dist: jupyter
+Requires-Dist: umap-learn>=0.5.0
+Requires-Dist: matplotlib
+Requires-Dist: numpy==1.23
+Requires-Dist: numba
+Requires-Dist: seaborn
+Requires-Dist: leidenalg
+Requires-Dist: scikit-learn
+Requires-Dist: networkx
+Requires-Dist: statsmodels
+Requires-Dist: scanpy>=1.9.2
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Model-based Trajectory Inference for Single-Cell RNA Sequencing Using Deep Learning with a Mixture Prior
+
+
+This package provides computational tools to perform trajectory inference on scRNA-seq data with Variational Autoencoders. For more details, please refer to https://github.com/jaydu1/VITAE.
+
+# Project Members
+Jin-Hong Du, Tianyu Chen, Ming Gao, and Jingshu Wang
+
+# License
+This project is licensed under the terms of the MIT license.
