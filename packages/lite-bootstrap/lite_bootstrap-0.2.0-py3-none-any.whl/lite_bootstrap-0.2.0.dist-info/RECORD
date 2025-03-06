@@ -1,0 +1,12 @@
+lite_bootstrap/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lite_bootstrap/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lite_bootstrap/bootstraps/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lite_bootstrap/bootstraps/base.py,sha256=QONJZUympjFhmpDZAIYUIATty6OMB7KlYewG5w8JUKk,498
+lite_bootstrap/bootstraps/fastapi_bootstrap.py,sha256=eZh0E9d9YaB0C4h40MEijUfhJJFE-60VveLJgzqUDV0,1743
+lite_bootstrap/instruments/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lite_bootstrap/instruments/base.py,sha256=xBFSxwCuKX3V0KMrRr85-98IHl2Y15lsF5WAleExVyI,227
+lite_bootstrap/instruments/opentelemetry_instrument.py,sha256=8vf1cZNcLz3rTwdKuekl3RX4Ve8FubpenBZZlkKE4So,2856
+lite_bootstrap/instruments/sentry_instrument.py,sha256=4YFRn587QZ3AbKhHE8SREbSTk9PO3GkOUFSLJeXDW2k,1399
+lite_bootstrap-0.2.0.dist-info/METADATA,sha256=Xko_DENq-Bjj68EyL4QRv5qeMaf7zhp6qeegk8Zzw3Y,2014
+lite_bootstrap-0.2.0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+lite_bootstrap-0.2.0.dist-info/RECORD,,
