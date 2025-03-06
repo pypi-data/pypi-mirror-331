@@ -1,0 +1,42 @@
+Metadata-Version: 2.2
+Name: pss_pywaapi
+Version: 1.0.5
+Summary: Helper package for interfacing with Wwise using waapi.
+Home-page: https://github.com/simongumbleton/pss_pywaapi
+Author: Simon Gumbleton
+Author-email: simongumbleton@gmail.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+License-File: LICENCE
+Requires-Dist: waapi_client
+Requires-Dist: PyWave
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: summary
+
+# pss_waapi
+
+Helper package for interfacing with Wwise using waapi.
+
+## Usage
+
+Import the library... 
+"import pss_pywaapi"
+
+Connect to Wwise and get the connection info...
+"result = pss_pywaapi.connect()"
+
+Default port is 8080, Optionally pass in an alternative port for the connection ...
+"result = pss_pywaapi.connect(8080)" 
+
+## Documentation:
+https://pss-pywaapi.readthedocs.io/
+

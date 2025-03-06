@@ -1,0 +1,16 @@
+LICENCE
+MANIFEST.in
+README.md
+pss_pywaapi.py
+setup.py
+pss_helpers/AudioFileReader.py
+pss_helpers/Files.py
+pss_helpers/__init__.py
+pss_helpers/gui.py
+pss_helpers/soundbank_helper.py
+pss_helpers/wwise_settings.py
+pss_pywaapi.egg-info/PKG-INFO
+pss_pywaapi.egg-info/SOURCES.txt
+pss_pywaapi.egg-info/dependency_links.txt
+pss_pywaapi.egg-info/requires.txt
+pss_pywaapi.egg-info/top_level.txt
