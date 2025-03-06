@@ -1,0 +1,50 @@
+Metadata-Version: 2.2
+Name: ntfy
+Version: 2.7.1
+Summary: A utility for sending push notifications
+Home-page: https://github.com/dschep/ntfy
+Author: Daniel Schep
+Author-email: dschep@gmail.com
+License: GPLv3
+Keywords: push notification
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: ruamel.yaml
+Requires-Dist: appdirs
+Requires-Dist: pywin32; sys_platform == "win32"
+Requires-Dist: pyobjc-core; sys_platform == "darwin"
+Requires-Dist: pyobjc; sys_platform == "darwin"
+Provides-Extra: xmpp
+Requires-Dist: sleekxmpp; extra == "xmpp"
+Requires-Dist: dnspython3; extra == "xmpp"
+Provides-Extra: telegram
+Requires-Dist: telegram-send; extra == "telegram"
+Provides-Extra: instapush
+Requires-Dist: instapush; extra == "instapush"
+Provides-Extra: emoji
+Requires-Dist: emoji>=1.6.2; extra == "emoji"
+Provides-Extra: pid
+Requires-Dist: psutil; extra == "pid"
+Provides-Extra: slack
+Requires-Dist: slack_sdk; extra == "slack"
+Provides-Extra: rocketchat
+Requires-Dist: rocketchat-API; extra == "rocketchat"
+Provides-Extra: matrix
+Requires-Dist: matrix_client; extra == "matrix"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: summary
+
+See the repo readme for mor information

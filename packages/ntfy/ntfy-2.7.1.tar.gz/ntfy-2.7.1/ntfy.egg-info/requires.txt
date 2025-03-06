@@ -1,0 +1,35 @@
+requests
+ruamel.yaml
+appdirs
+
+[:sys_platform == "darwin"]
+pyobjc-core
+pyobjc
+
+[:sys_platform == "win32"]
+pywin32
+
+[emoji]
+emoji>=1.6.2
+
+[instapush]
+instapush
+
+[matrix]
+matrix_client
+
+[pid]
+psutil
+
+[rocketchat]
+rocketchat-API
+
+[slack]
+slack_sdk
+
+[telegram]
+telegram-send
+
+[xmpp]
+sleekxmpp
+dnspython3

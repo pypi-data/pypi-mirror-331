@@ -1,0 +1,2 @@
+[console_scripts]
+ntfy = ntfy.cli:main
