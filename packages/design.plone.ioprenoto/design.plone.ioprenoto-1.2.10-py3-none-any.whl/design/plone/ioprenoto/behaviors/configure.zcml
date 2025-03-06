@@ -1,0 +1,29 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="design.plone.ioprenoto"
+    >
+
+  <include
+      package="plone.behavior"
+      file="meta.zcml"
+      />
+
+  <plone:behavior
+      name="design.plone.ioprenoto.behaviors.additional_fields"
+      title="Campi aggiuntivi"
+      description="Campi aggiuntivi al c.t. Cartella Prenotazioni"
+      factory=".additional_fields.AdditionalFields"
+      provides=".additional_fields.IAdditionalFields"
+      marker=".additional_fields.IAdditionalFields"
+      />
+
+  <plone:behavior
+      name="ioprenoto.basic"
+      title="Basic metadata for prenotazione"
+      description="Adds title and description fields."
+      factory="plone.app.dexterity.behaviors.metadata.Basic"
+      provides=".metadata.IBasic"
+      for="redturtle.prenotazioni.content.prenotazione.IPrenotazione"
+      />
+</configure>

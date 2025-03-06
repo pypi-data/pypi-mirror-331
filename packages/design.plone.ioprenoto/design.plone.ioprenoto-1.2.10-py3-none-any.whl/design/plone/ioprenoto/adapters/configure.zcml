@@ -1,0 +1,32 @@
+<configure xmlns="http://namespaces.zope.org/zope">
+
+  <adapter
+      factory=".stringinterp.BookingUrlSubstitution"
+      provides="plone.stringinterp.interfaces.IStringSubstitution"
+      for="plone.stringinterp.interfaces.IContextWrapper"
+      name="booking_print_url"
+      />
+
+  <!-- deprecated, use the same implementation as booking_print_url  -->
+  <adapter
+      factory=".stringinterp.BookingUrlSubstitution"
+      provides="plone.stringinterp.interfaces.IStringSubstitution"
+      for="plone.stringinterp.interfaces.IContextWrapper"
+      name="booking_print_url_with_delete_token"
+      />
+
+  <adapter
+      factory=".stringinterp.BookingOperatorUrlSubstitution"
+      provides="plone.stringinterp.interfaces.IStringSubstitution"
+      for="redturtle.prenotazioni.content.prenotazione.IPrenotazione"
+      name="booking_operator_url"
+      />
+
+  <adapter
+      factory=".stringinterp.BookingUnitaOrganizzativaTitle"
+      provides="plone.stringinterp.interfaces.IStringSubstitution"
+      for="*"
+      name="unita_organizzativa_title"
+      />
+
+</configure>
