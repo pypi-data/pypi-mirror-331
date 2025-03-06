@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+server.py
+higress_ai_search_mcp_server.egg-info/PKG-INFO
+higress_ai_search_mcp_server.egg-info/SOURCES.txt
+higress_ai_search_mcp_server.egg-info/dependency_links.txt
+higress_ai_search_mcp_server.egg-info/entry_points.txt
+higress_ai_search_mcp_server.egg-info/requires.txt
+higress_ai_search_mcp_server.egg-info/top_level.txt
