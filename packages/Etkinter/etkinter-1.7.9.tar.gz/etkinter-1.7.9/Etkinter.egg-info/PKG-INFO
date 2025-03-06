@@ -1,0 +1,12 @@
+Metadata-Version: 2.2
+Name: Etkinter
+Version: 1.7.9
+Summary: tkinter库的简化版
+Home-page: https://github.com/Yanxinle1123/LeleEasyTkinter
+Author: YanXinle
+Author-email: 1020121123@qq.com
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: summary
