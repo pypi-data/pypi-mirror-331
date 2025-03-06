@@ -1,0 +1,12 @@
+semi_colon/__init__.py,sha256=HfThu6B9qtgrpfgsfHWMoKgP0e44MaA5K5BHclLWKeA,254
+semi_colon/bbox.py,sha256=v-Zh7DrRcKmtloOxtkHyzBX3aP04cfNihrSvD6LIJe4,1180
+semi_colon/colab.py,sha256=-YIbki0tcr6XNOLx2LH5V_o_gWQUhOrlfqHPoO0K3pQ,4517
+semi_colon/house.py,sha256=laXI03uQJDzFszRjQsV_Zq18Z-BDndv9Fafoz6vBue0,681
+semi_colon/img2data.py,sha256=5e3nkOd6Jgg3yIMNBUZABXb-s8WrZM-GuRznJEV3MpU,2308
+semi_colon/main.py,sha256=scjfcMurOOQvhsmM-BbJbYJ1Cw04NEtFiVQj0NGxJRw,2179
+semi_colon/resources/boston_house_prices.csv,sha256=BOo-0KpjaRz-3ziDSer8EhPpHgD45NMXR1NGksDxzgI,35230
+semi_colon/resources/descr.rst,sha256=Cjqvv1isjuNEuQAAjQfxyMj2xeAOdtBejHW3C9hGbDg,2395
+semi_colon-0.2.5.dist-info/METADATA,sha256=baGGKY-4Si0OFUEuEpPOzmFaHzMpykPABsYKyLN84zE,2681
+semi_colon-0.2.5.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+semi_colon-0.2.5.dist-info/top_level.txt,sha256=fpQipUXGtO1DO1YIWAFkzUT2FYpdST-hMXkZgXLFQOM,11
+semi_colon-0.2.5.dist-info/RECORD,,
