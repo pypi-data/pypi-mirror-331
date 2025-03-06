@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mabu_electronick.co"
+version = "0.0.1"
+authors = [
+  { name="ElectroNick", email="nick@dsd.dev" },
+]
+description = "Python package to control Mabu's animatronic head. this is a robot from Catalia Health"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICENSE*"]
+
+[project.urls]
+Homepage = "https://github.com/electronick-co/mabu"
+Issues = "https://github.com/electronick-co/mabu/issues"
