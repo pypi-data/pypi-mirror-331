@@ -1,0 +1,16 @@
+setuptools
+z3c.jbot
+plone.api>=1.8.4
+plone.app.dexterity
+redturtle.prenotazioni>=2.2.0.dev0
+design.plone.policy
+plone.restapi>=9.6.0
+
+[test]
+plone.app.testing
+plone.testing>=5.0.0
+plone.app.contenttypes
+plone.app.robotframework[debug]
+collective.MockMailHost
+redturtle.prenotazioni
+design.plone.policy
