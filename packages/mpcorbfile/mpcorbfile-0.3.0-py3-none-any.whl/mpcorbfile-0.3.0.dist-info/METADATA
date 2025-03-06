@@ -1,0 +1,68 @@
+Metadata-Version: 2.3
+Name: mpcorbfile
+Version: 0.3.0
+Summary: Read and write MPCORB files from  minor planet center
+License: MIT
+Author: nachoplus
+Author-email: mas.ignacio@gemail.com
+Maintainer: nachoplus
+Maintainer-email: mas.ignacio@gemail.com
+Requires-Python: >=3.9
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: click (>=8.1.8,<9.0.0)
+Project-URL: Homepage, https://github.com/nachoplus/mpcorbfile
+Project-URL: Repository, https://github.com/nachoplus/mpcorbfile
+Description-Content-Type: text/x-rst
+
+==========
+mpcorbfile
+==========
+
+
+.. image:: https://img.shields.io/pypi/v/mpcorbfile.svg
+        :target: https://pypi.python.org/pypi/mpcorbfile
+
+.. image:: https://img.shields.io/travis/nachoplus/mpcorbfile.svg
+        :target: https://travis-ci.com/nachoplus/mpcorbfile
+
+.. image:: https://readthedocs.org/projects/mpcorbfile/badge/?version=latest
+        :target: https://mpcorbfile.readthedocs.io/en/latest/?version=latest
+        :alt: Documentation Status
+
+
+
+
+Read and write MPCORB files from  minor planet center
+
+
+* Free software: MIT license
+* Documentation: https://mpcorbfile.readthedocs.io.
+
+
+Features
+--------
+
+* TODO
+
+Credits
+-------
+
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+
