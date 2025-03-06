@@ -1,0 +1,82 @@
+# Rustdoc MCP
+
+A Model Context Protocol (MCP) server that provides efficient access to Rust documentation.
+
+## Overview
+
+This server allows LLMs to efficiently access Rust documentation directly, making it easier to provide accurate information about the Rust standard library and external crates. It's designed to help LLMs understand Rust code without having to read through entire source files.
+
+## Features
+
+- Get documentation for Rust standard library items
+- Access documentation for external crates
+- Query specific modules, structs, enums, traits, functions, and methods
+- Supports local project documentation
+- Results are cached for improved performance
+
+## Installation
+
+```bash
+pip install rustdoc-mcp
+```
+
+Or using [uv](https://docs.astral.sh/uv/):
+
+```bash
+uv add rustdoc-mcp
+```
+
+## Requirements
+
+- Python 3.8+
+- Rust and rustup installed and accessible in PATH
+- Cargo must be installed for external crate documentation
+
+## Usage
+
+### Install in Claude Desktop
+
+```bash
+mcp install rustdoc-mcp
+```
+
+### Development Mode
+
+```bash
+mcp dev rustdoc-mcp
+```
+
+### Direct Usage
+
+```bash
+python -m rustdoc_mcp
+```
+
+## Tool Options
+
+When using this tool, you can provide:
+
+- `path`: Path to the Rust crate, module or item (e.g., 'std::collections', 'serde::Deserialize')
+- `target`: (Optional) Specific item to document (struct, enum, function, etc.)
+- `flags`: (Optional) Additional rustdoc command flags
+- `working_dir`: (Optional) Working directory for cargo-aware documentation
+
+## Example Queries
+
+Standard library:
+```
+std::collections::HashMap
+std::vec::Vec
+std::option::Option
+```
+
+Popular crates:
+```
+serde::Serialize
+tokio::runtime
+clap::Parser
+```
+
+## License
+
+MIT

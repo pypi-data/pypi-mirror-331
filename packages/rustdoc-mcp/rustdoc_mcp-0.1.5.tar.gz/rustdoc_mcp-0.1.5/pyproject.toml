@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "rustdoc-mcp"
+version = "0.1.5"
+description = "MCP server for Rust documentation"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Tobias Kragholm" },
+]
+dependencies = [
+    "mcp", # Main MCP SDK
+    "pydantic", # Data validation
+    "rich", # Better terminal output
+    "beautifulsoup4", # HTML parsing
+]
+
+[project.scripts]
+rustdoc-mcp = "rustdoc_mcp.main:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["rustdoc_mcp"]
