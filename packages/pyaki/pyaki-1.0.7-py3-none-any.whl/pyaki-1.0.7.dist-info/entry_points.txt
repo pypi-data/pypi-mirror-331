@@ -1,0 +1,3 @@
+[console_scripts]
+pyaki-cli=pyaki.bin.process_aki_stages:run
+
