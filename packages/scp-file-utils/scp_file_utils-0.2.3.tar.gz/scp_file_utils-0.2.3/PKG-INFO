@@ -1,0 +1,30 @@
+Metadata-Version: 2.2
+Name: scp_file_utils
+Version: 0.2.3
+Summary: A collection of Python scripts for downloading/uploading files via scp.
+Author-email: Jaideep Sundaram <jai.python3@gmail.com>
+Maintainer-email: Jaideep Sundaram <jai.python3@gmail.com>
+License: Not open source
+Project-URL: Homepage, https://github.com/jai-python3/scp-file-utils
+Keywords: scp_file_utils
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.10
+Description-Content-Type: text/x-rst
+License-File: AUTHORS.rst
+Requires-Dist: Click>=7.0
+Requires-Dist: PyYAML
+Requires-Dist: Rich
+Requires-Dist: singleton-decorator
+Provides-Extra: dev
+Requires-Dist: pytest>=6.2; extra == "dev"
+Requires-Dist: pytest-mock>=3.6; extra == "dev"
+Requires-Dist: coverage>=5.5; extra == "dev"
+
+==============
+SCP File Utils
+==============
+
+A collection of Python scripts for downloading/uploading files via scp.
