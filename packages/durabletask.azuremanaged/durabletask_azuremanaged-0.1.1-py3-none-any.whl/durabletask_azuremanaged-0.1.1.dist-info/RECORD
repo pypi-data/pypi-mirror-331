@@ -1,0 +1,9 @@
+durabletask/azuremanaged/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+durabletask/azuremanaged/client.py,sha256=jVFKxQd26rECKVpsNAOZZL1yJrIj4TMSBIueJAuoVI4,1221
+durabletask/azuremanaged/worker.py,sha256=ow2LMY79-lGgSfE8tnktZ7tr65ROgQDm1fka0wGuqss,1185
+durabletask/azuremanaged/internal/access_token_manager.py,sha256=Q8k9A2O8mNMyS-5jGRWoH-ZWFtzQ5Nt4anA_Bida5Kk,2167
+durabletask/azuremanaged/internal/durabletask_grpc_interceptor.py,sha256=U6lHwQfuQ_WgZWouUKH3UbaL-BYjo4iatbbNJjV0i_8,2008
+durabletask_azuremanaged-0.1.1.dist-info/METADATA,sha256=hnJiAQxW-FijltrIhTfU0vSs8UrvbRu5Zo0CO7ZmJyQ,663
+durabletask_azuremanaged-0.1.1.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+durabletask_azuremanaged-0.1.1.dist-info/top_level.txt,sha256=EBVyuKWnjOwq8bJI1Uvb9U3c4fzQxACWj9p83he6fik,12
+durabletask_azuremanaged-0.1.1.dist-info/RECORD,,
