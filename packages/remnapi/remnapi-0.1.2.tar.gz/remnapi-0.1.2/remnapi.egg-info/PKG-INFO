@@ -1,0 +1,73 @@
+Metadata-Version: 2.2
+Name: remnapi
+Version: 0.1.2
+Summary: API Remnawave для Python
+Home-page: https://github.com/nvwrist/remnapi
+Author: nvwrist
+Author-email: faxonq@gmail.com.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: certifi
+Requires-Dist: charset-normalizer
+Requires-Dist: idna
+Requires-Dist: python-dotenv
+Requires-Dist: requests
+Requires-Dist: shortuuid
+Requires-Dist: urllib3
+Requires-Dist: aiohttp
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# RemnAPI
+
+Клиент для работы с API пользователей.
+
+## Установка
+pip install -r requirements.txt
+
+```python
+certifi==2025.1.31
+charset-normalizer==3.4.1
+idna==3.10
+python-dotenv==1.0.1
+requests==2.32.3
+shortuuid==1.0.13
+urllib3==2.3.0
+```
+
+pip install remnapi
+
+## Использование
+```python
+from remnapi import UserManager
+
+async def main():
+    manager = UserManager()
+    
+    # Создание пользователя
+    new_user = await manager.add_user("testuser", days=30) # return JSON
+
+
+    # Получение информации
+    username = await manager.get_user("testuser") # return JSON
+    username_filter = await manager.get_user("testuser", username_filter = True, shortUuid_filter=True, status_filter = True) # return filtred JSON
+
+    # Список всех пользователей
+    users = await manager.get_users() # return JSON
+
+
+    ## Удаление пользователя
+    delete_response = await manager.remove_user("testuser") # return JSON
+
+asyncio.run(main())
