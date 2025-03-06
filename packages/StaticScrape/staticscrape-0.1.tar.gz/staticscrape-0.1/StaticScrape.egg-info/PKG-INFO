@@ -1,0 +1,7 @@
+Metadata-Version: 2.2
+Name: StaticScrape
+Version: 0.1
+Requires-Dist: playwright
+Requires-Dist: beautifulsoup4
+Requires-Dist: lxml
+Dynamic: requires-dist
