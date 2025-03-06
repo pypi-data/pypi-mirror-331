@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: vitesco-datalake-utils
+Version: 0.1.0
+Summary: A package for interacting with the datalake API
+Home-page: https://github.vitesco.io/AI-Manufacturing-Support/labeling
+Author: Adrian Birnea
+Author-email: adrian-ionut.birnea@vitesco.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: boto3
+Requires-Dist: requests
+Requires-Dist: aws-lambda-powertools
+Requires-Dist: mypy-boto3-s3
+
