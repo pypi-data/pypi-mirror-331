@@ -1,0 +1,9 @@
+gitsnitch/__init__.py,sha256=OJ7hixXKUgzTqDFNfLBHi3qQnolNSdnFa8PTyfzKVcs,418
+gitsnitch/__version__.py,sha256=8p9eIzvWcbrp8oUmObsF89V6FKmsTq4C7hCOnsbYkm4,522
+gitsnitch/cli.py,sha256=cWtvRdrdIdmJXhflEkx9OqA_AuBvOBsGwdiNZKFikY8,6133
+gitsnitch-1.0.3.dist-info/LICENSE.txt,sha256=OlgPzGIV2OobGrhmjK7eiGLu08J57B8lrAI-vWt-9s8,1055
+gitsnitch-1.0.3.dist-info/METADATA,sha256=0h5NF31Bwo0k-95bz9xAg1OJFwql9bP9CWxw3hFiFsA,1117
+gitsnitch-1.0.3.dist-info/WHEEL,sha256=-G_t0oGuE7UD0DrSpVZnq1hHMBV9DD2XkS5v7XpmTnk,110
+gitsnitch-1.0.3.dist-info/entry_points.txt,sha256=UsUf0IaFXhBq9qLygQotNNQ0XdzpLEbnty6iyh95ILA,49
+gitsnitch-1.0.3.dist-info/top_level.txt,sha256=KOLZm-IARG3Hb0VE1BMmj1_Iv-RFWObzMinsvDAD7i8,10
+gitsnitch-1.0.3.dist-info/RECORD,,
