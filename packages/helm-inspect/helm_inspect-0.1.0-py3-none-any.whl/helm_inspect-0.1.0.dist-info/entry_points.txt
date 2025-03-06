@@ -1,0 +1,3 @@
+[console_scripts]
+helm-inspect=helm_inspect.main:main
+
