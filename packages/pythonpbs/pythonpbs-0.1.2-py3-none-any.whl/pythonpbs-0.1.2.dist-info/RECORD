@@ -1,0 +1,10 @@
+pybs/.DS_Store,sha256=roQ1spVxYdTWqf4Z3WDk0_W-91dd8qIPg8hHlLoLCL8,6148
+pybs/__init__.py,sha256=5YikB69haobSXooomEpciwe158IsXzjJ8gV9ZOUp7Ks,159
+pybs/console/__init__.py,sha256=tZI4fjTQTtPPjZmmSTTVGuS1sREOGJK-g2aWmIDxQTg,4124
+pybs/console/completion.py,sha256=et3MN8pVp97XLF4ZMPEHDdrhzyG52AQPZegSEAfZG3k,1014
+pybs/server/__init__.py,sha256=nu9nb0ysgPIjeBa5d-pgKGqymei-6cY-3jnYcHVSgV4,7065
+pythonpbs-0.1.2.dist-info/LICENSE,sha256=m5BdPIONZ4e12kE5VTIG2I0pH34KN2lWgUE6xl-WTh8,11345
+pythonpbs-0.1.2.dist-info/METADATA,sha256=arK0mdMtEy1iJgewqQnV_Ynot0r7rGPW6uKgx6HEzrQ,2296
+pythonpbs-0.1.2.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+pythonpbs-0.1.2.dist-info/entry_points.txt,sha256=SfJ5VHbEj0owP4j8l4c8iBV0BaO_j4FMP7ecaIiBOnQ,49
+pythonpbs-0.1.2.dist-info/RECORD,,

@@ -1,0 +1,3 @@
+[console_scripts]
+pybs=pybs.console:entry_point
+
