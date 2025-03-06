@@ -1,0 +1,67 @@
+[build-system]
+requires = ["setuptools >= 64.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jaxili"
+version = "0.1.2"
+authors = [{name = "Sacha Guerrini"}]
+description = "This package provides tools to execute and implement Implicit Likelihood Inference tools in JAX."
+dependencies = [
+    "numpy",
+    "jax[cuda12]",
+    "jax_dataloader",
+    "jupyter",
+    "matplotlib",
+    "cmake",
+    "tensorflow-cpu",
+    "tensorflow-probability",
+    "optax",
+    "distrax",
+    "flax",
+    "optuna",
+    "numpyro",
+    "flowMC",
+    "pytorch-lightning",
+    "getdist"
+]
+readme = "README.md"
+requires-python = ">=3.10, <3.13"
+urls = {Repository = "https://github.com/sachaguer/jaxili"}
+
+[project.optional-dependencies]
+docs = [
+    "myst-parser",
+    "numpydoc",
+    "sphinx",
+    "sphinx-book-theme",
+    "nbsphinx",
+    "tf-keras"
+]
+
+test = [
+    "pytest",
+    "pytest-cov",
+    "pytest-emoji",
+    "pytest-pydocstyle",
+    "sbibm",
+    "sbi==0.23.3",
+]
+
+lint = ["black", "isort"]
+release = ["build", "twine"]
+
+#Install for development
+dev = ["jaxili[docs,lint,release,test]"]
+
+[tool.pydocstyle]
+convention = "numpy"
+
+[tool.pytest.ini_options]
+addopts = ["--verbose"]
+testpaths = ["jaxili"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["jaxili*"]
+exclude = ["jaxili.tests*", "jaxili.notebooks*"]
