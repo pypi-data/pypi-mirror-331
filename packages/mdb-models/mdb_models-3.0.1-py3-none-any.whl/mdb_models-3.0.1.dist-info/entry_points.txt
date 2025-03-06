@@ -1,0 +1,3 @@
+[console_scripts]
+generate-authmodel = mdb_models.generate_authmodel:main
+generate-model = mdb_models.generate_model:main
