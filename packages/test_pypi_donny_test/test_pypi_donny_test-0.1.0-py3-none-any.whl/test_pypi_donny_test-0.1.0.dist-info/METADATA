@@ -1,0 +1,16 @@
+Metadata-Version: 2.2
+Name: test_pypi_donny_test
+Version: 0.1.0
+Summary: Add your description here
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: datasets>=3.3.2
+Requires-Dist: matplotlib>=3.10.1
+Requires-Dist: numpy<2
+Requires-Dist: pandas>=2.2.3
+Requires-Dist: pyarrow>=19.0.1
+Requires-Dist: requests>=2.32.3
+Requires-Dist: safetensors>=0.5.3
+Requires-Dist: seaborn>=0.13.2
+Requires-Dist: torch==2.2.0
+Requires-Dist: transformers>=4.49.0
