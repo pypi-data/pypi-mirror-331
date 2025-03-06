@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+fab_cli/__init__.py
+fab_cli/cli.py
+fab_cli.egg-info/PKG-INFO
+fab_cli.egg-info/SOURCES.txt
+fab_cli.egg-info/dependency_links.txt
+fab_cli.egg-info/entry_points.txt
+fab_cli.egg-info/top_level.txt
