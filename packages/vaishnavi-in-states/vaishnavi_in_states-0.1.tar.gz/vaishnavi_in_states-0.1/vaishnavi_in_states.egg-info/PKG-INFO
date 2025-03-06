@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: vaishnavi_in_states
+Version: 0.1
+Summary: A Django app that provides Indian state choices as a model and form field.
+Author: vaishnavi kamble
+Author-email: vaishnavikamble0106@gmail.com
+License: MIT
+Classifier: Framework :: Django
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: django
