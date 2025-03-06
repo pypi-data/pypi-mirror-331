@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: snakemake-storage-plugin-sharepoint
+Version: 0.4.4
+Summary: Snakemake storage plugin for reading and writing files on Microsoft SharePoint.
+Keywords: snakemake,plugin,storage,sharepoint
+Author-email: Hugo Lapre <hugo.lapre@brabantwater.nl>
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: snakemake-interface-common>=1.14
+Requires-Dist: snakemake-interface-storage-plugins>=3.0
+Project-URL: documentation, https://snakemake.github.io/snakemake-plugin-catalog/plugins/storage/sharepoint.html
+Project-URL: repository, https://github.com/Hugovdberg/snakemake-storage-plugin-sharepoint
+
+# snakemake-storage-plugin-sharepoint
+
+[Snakemake](https://snakemake.github.io/) storage plugin for reading and writing files
+on Microsoft SharePoint sites.
+Documentation is on the snakemake plugin catalog:
+https://snakemake.github.io/snakemake-plugin-catalog/plugins/storage/sharepoint.html
+
