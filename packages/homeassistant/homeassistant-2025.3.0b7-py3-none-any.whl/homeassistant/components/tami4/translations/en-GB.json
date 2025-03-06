@@ -1,0 +1,9 @@
+{
+    "entity": {
+        "button": {
+            "prepare_drink": {
+                "name": "Prepare {drink_name}"
+            }
+        }
+    }
+}

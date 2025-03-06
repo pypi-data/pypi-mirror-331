@@ -1,0 +1,36 @@
+{
+    "config": {
+        "step": {
+            "options": {
+                "data": {
+                    "category": "Additional category as holiday"
+                },
+                "data_description": {
+                    "category": "Select additional categories to include as holidays"
+                }
+            }
+        }
+    },
+    "options": {
+        "step": {
+            "init": {
+                "data": {
+                    "category": "Additional category as holiday"
+                },
+                "data_description": {
+                    "category": "Select additional categories to include as holidays"
+                }
+            }
+        }
+    },
+    "selector": {
+        "category": {
+            "options": {
+                "armed_forces": "Armed forces",
+                "bank": "Bank",
+                "catholic": "Catholic",
+                "chinese": "Chinese"
+            }
+        }
+    }
+}

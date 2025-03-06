@@ -1,0 +1,19 @@
+{
+    "entity": {
+        "sensor": {
+            "dnsip": {
+                "state_attributes": {
+                    "ip_addresses": {
+                        "name": "IP addresses"
+                    },
+                    "querytype": {
+                        "name": "Query type"
+                    },
+                    "resolver": {
+                        "name": "Resolver"
+                    }
+                }
+            }
+        }
+    }
+}

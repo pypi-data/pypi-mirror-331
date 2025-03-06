@@ -1,0 +1,14 @@
+{
+    "entity": {
+        "binary_sensor": {
+            "dc_1_short_circuit_error_status": {
+                "name": "DC 1 short circuit error status"
+            }
+        }
+    },
+    "exceptions": {
+        "inverter_error": {
+            "message": "Inverter returned an error"
+        }
+    }
+}
