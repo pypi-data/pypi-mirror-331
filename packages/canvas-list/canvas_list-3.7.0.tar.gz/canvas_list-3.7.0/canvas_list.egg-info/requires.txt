@@ -1,0 +1,15 @@
+ipywidgets>=7.0.0
+canvas_ux>=3.7.0
+
+[docs]
+jupyter_sphinx
+nbsphinx
+nbsphinx-link
+pytest_check_links
+pypandoc
+recommonmark
+sphinx>=1.5
+sphinx_book_theme
+
+[examples]
+gitpython
