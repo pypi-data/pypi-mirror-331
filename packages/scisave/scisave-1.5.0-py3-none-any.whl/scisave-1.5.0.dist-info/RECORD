@@ -1,0 +1,11 @@
+scisave/__init__.py,sha256=Ti4Veh52Ugk-DdDsyQf70mjbR5C_sUUii3wmKUd9GvU,490
+scisave/ext_json.py,sha256=74pHQQFewWCMegRZmkI8dMy7lcDx_V67ZKB2oNbj-4Q,5635
+scisave/ext_schema.py,sha256=tYTwnk0VtdSgrQGlIE89P6sD7n9rKd8e3UgjDCYwmi8,1967
+scisave/ext_yaml.py,sha256=xyJnHqkoY7E2iytXz_IDS_A-p3psiwCSRj37mSx0LSI,9961
+scisave/scisave.py,sha256=a6k39SX84xwIrb4brK6wtxh22w576h9LxBa3msSM1tw,4518
+scisave/version.txt,sha256=H03AltWPfSHjh1ZxrubymxIKuEIY-kfbLLU7yetbTaw,5
+scisave-1.5.0.dist-info/LICENSE.txt,sha256=jOq61RqaltHGqROljvWch9PbeG5ee8sChTfZjIazUrs,1303
+scisave-1.5.0.dist-info/METADATA,sha256=Gt3IAPfxy2cOIwV6e4tX63CGSi1BftlEIhTW3WMLzRI,4416
+scisave-1.5.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+scisave-1.5.0.dist-info/top_level.txt,sha256=UEBVfpz6oMwHMqG82wii2uhJeIOY-k-Z5_yyuX2OmH8,8
+scisave-1.5.0.dist-info/RECORD,,
