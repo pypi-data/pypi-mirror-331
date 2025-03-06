@@ -1,0 +1,9 @@
+requests
+requests_toolbelt
+pycryptodome
+websockets
+httpx
+websockets-proxy
+
+[flask]
+Flask>=2
