@@ -1,0 +1,9 @@
+PyYAML
+django
+django-environment-settings
+django-static-swagger-ui
+jsonpath-ng
+openapi-pydantic
+openapi-pydantic
+pydantic
+zenutils

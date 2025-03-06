@@ -1,0 +1,297 @@
+Metadata-Version: 2.1
+Name: django-apis
+Version: 0.2.14
+Summary: 基于Django的API接口开发框架。使用pydantic做接口参数验证，自动生成swagger接口管理界面，支持多种返回体封装。
+Author: rRR0VrFP
+Maintainer: rRR0VrFP
+License: Apache License, Version 2.0
+Keywords: django apis
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# django-apis
+
+基于Django的API接口开发框架。使用pydantic做接口参数验证，自动生成swagger接口管理界面，支持多种返回体封装。
+
+## 安装
+
+```
+pip install django-apis
+```
+
+## 兼容性要求
+
+- Python 3.8及以上
+- Django 3.2及以上
+
+## 配置项
+
+- DJANGO_APIS_OPENAPI_LOGIN_URL: Swagger管理界面访问受管理登录保护。在未登录访问时跳转的登录页面地址。
+- DJANGO_APIS_SWAGGER_UI_PATH: Swagger管理界面二级路径（不包括django_apis.urls引入部分）。默认值为`/docs/`。
+- DJANGO_APIS_OPENAPI_TITLES: Swagger标题。
+- DJANGO_APIS_OPENAPI_VERSIONs: Swagger版本号。
+- DJANGO_APIS_OPENAPI_DESCRIPTIONs: Swagger描述。
+- DJANGO_APIS_OPENAPI_TAGS: 自定义标签
+    ```python
+    DJANGO_APIS_OPENAPI_TAGS = {
+        "default": [
+            {"name": "test1", "description": "测试1"},
+        ],
+        "another": [
+            {"name": "test2", "description": "测试2"},
+        ]
+    }
+    ```
+
+- DJANGO_APIS_OPENAPI_SERVERS: Swagger服务器列表。
+
+    ```python
+    DJANGO_APIS_OPENAPI_SERVERS = {
+        "default": [
+            {"url": "http://127.0.0.1:8000", "description": "本地开发环境"},
+            {"url": "http://192.168.1.1", "description": "测试环境"},
+        ],
+        "another": [
+            {"url": "http://192.168.1.1:8000", "description": "本地开发环境"},
+            {"url": "http://192.168.1.1:8001", "description": "测试环境"},
+        ]
+    }
+    ```
+
+- DJANGO_APIS_OPENAPI_SECURITY_DEFINITIONS: Swagger认证列表。
+
+    ```python
+    DJANGO_APIS_OPENAPI_SECURITY_DEFINITIONS = {
+        "default": {
+            "BasicAuth": {
+                "type": "http",
+                "scheme": "basic",
+            },
+            "BearerAuth": {
+                "type": "http",
+                "scheme": "bearer",
+            },
+            "ApikeyAuth": {
+                "type": "apiKey",
+                "name": "X-API-Key",
+                "in": "header",
+            },
+            "OpenID": {
+                "type": "openIdConnect",
+                "openIdConnectUrl": "https://example.com/.well-known/openid-configuration",
+            },
+            "OAuth2": {
+                "type": "oauth2",
+                "flows": {
+                    "authorizationCode": {
+                        "authorizationUrl": "https://example.com/oauth/authorize",
+                        "tokenUrl": "https://example.com/oauth/token",
+                        "scopes": {
+                            "read": "Grants read access",
+                            "write": "Grants write access",
+                            "admin": "Grants access to admin operations",
+                        },
+                    }
+                },
+            },
+        },
+        "another": {
+            "BasicAuth": {
+                "type": "http",
+                "scheme": "basic",
+            },
+            "BearerAuth": {
+                "type": "http",
+                "scheme": "bearer",
+            },
+            "ApikeyAuth": {
+                "type": "apiKey",
+                "name": "X-API-Key",
+                "in": "header",
+            },
+            "OpenID": {
+                "type": "openIdConnect",
+                "openIdConnectUrl": "https://example.com/.well-known/openid-configuration",
+            },
+            "OAuth2": {
+                "type": "oauth2",
+                "flows": {
+                    "authorizationCode": {
+                        "authorizationUrl": "https://example.com/oauth/authorize",
+                        "tokenUrl": "https://example.com/oauth/token",
+                        "scopes": {
+                            "read": "Grants read access",
+                            "write": "Grants write access",
+                            "admin": "Grants access to admin operations",
+                        },
+                    }
+                },
+            },
+        },
+    }
+    ```
+
+
+
+## 如何自定义Apiview类型
+
+### 注意事项
+1. 定义自己的`base_response_class`，并重置自定义的`Apiview`中的`base_response_class`属性。
+1. 重载`Apiview`中的`make_response`和`make_error_response`方法。
+
+### 自定义Apiview类型案例
+
+```python
+from django.http import JsonResponse
+from django_apis.views import Apiview
+from django_apis.schemas import ResponseBase
+from typing import Any
+import pydantic
+
+class ErrorInfo(pydantic.BaseModel):
+    code: int = 0
+    message: str = "OK"
+
+# 响应体格式定义要与make_response及make_error_response实际响应匹配
+class ExampleApiviewResponseBase(ResponseBase):
+    success: bool = True
+    error: ErrorInfo = ErrorInfo()
+    result: Any = None
+
+class ExampleApiview(Apiview):
+    base_response_data_field = "result"
+    base_response_class = ExampleApiviewResponseBase
+
+    def make_response(self, data):
+        return JsonResponse(
+            {
+                "success": True,
+                "error": {
+                    "code": 0,
+                    "message": "OK",
+                },
+                "result": data,
+            },
+            json_dumps_params={
+                "ensure_ascii": False,
+            },
+        )
+
+    # 强制所有响应的http status_code值为200
+    def make_error_response(self, code, message, status_code=200):
+        return JsonResponse(
+            {
+                "success": True,
+                "error": {
+                    "code": code,
+                    "message": message,
+                },
+                "result": None,
+            },
+            json_dumps_params={
+                "ensure_ascii": False,
+            },
+        )
+
+example_apiview = ExampleApiview()
+
+```
+
+## 使用案例
+
+```python
+import pydantic
+from django_apis.views import apiview
+from django_apis.schemas import OptionalUploadedFiles
+
+@apiview()
+def ping() -> str:
+    return "pong"
+
+
+class EchoPayload(pydantic.BaseMode):
+    msg: str
+
+@apiview(methods="post")
+def echo(payload: EchoPayload) -> str:
+    return payload.msg
+
+class ApplyForm(pydantic.BaseMode):
+    name: str
+    start_date: str
+    end_date: str
+    files: OptionalUploadedFiles
+
+@apiview(methods="post")
+def apply(form: ApplyForm) -> bool:
+    return True
+```
+
+## 版本记录
+
+### v0.2.0
+
+- 注意：不兼容0.1.x。
+
+### v0.2.1
+
+- 使用openapi 3.1.0版本.
+- 添加并通过更多关于复合模型的测试用例。
+
+### v0.2.2
+
+- 通过`DJANGO_APIS_SWAGGER_LOGIN_REQUIRED`配置项控制Swagger管理界面是否受登录保护。
+
+### v0.2.3
+
+- 使用typing.Union以兼容python3.9。
+
+### v0.2.4
+
+- 为接口添加security字段。
+
+### v0.2.5
+
+- query字段添加default支持。
+
+### v0.2.6
+
+- get_response_schema结果必须为ResponseBase子类，否则均使用make_generic_response_type进行动态生成。
+
+### v0.2.8
+
+- 修正：是否为HttpResponseBase实例判断错误的问题。
+
+### v0.2.10
+
+- 添加：django_apis.helper.auth模型，提供http_bearer_auth_protect、http_basic_auth_protect、apikey_auth_protect等认证验证方法。
+- 添加：视图级的tags定义支持。
+
+### v0.2.11
+
+- 修正: swagger中支持query参数可选。
+
+### v0.2.12
+
+- 添加：多site支持。
+- 修改：开源协议从MIT调整为Apache License, Version 2.0。
+
+### v0.2.13
+
+- 添加：`Apiview.json_encoder`属性，用于支持自定义json编码器。默认使用`jsonutils.make_simple_json_encoder()`编码器，可支持datetime/django model/django queryset等类型数据的json序列化。
+
+### v0.2.14
+
+- 添加`get_apiview`支持。
+- 添加`django-environment-settings`支持。
+- 添加：http apikey auth支持。
+- 添加：http basic auth支持。
+- 修改：完善接口异常日志。
+- 修正：登录后无法自动返回swagger-ui界面的问题。
+- 文档：更新`DJANGO_APIS_OPENAPI_SECURITY_DEFINITIONS`案例代码。
