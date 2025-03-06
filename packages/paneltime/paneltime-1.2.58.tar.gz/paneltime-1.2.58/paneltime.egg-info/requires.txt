@@ -1,0 +1,7 @@
+numpy>=1.11
+pandas
+mpmath
+paneltime_mp
+
+[linux]
+gcc
