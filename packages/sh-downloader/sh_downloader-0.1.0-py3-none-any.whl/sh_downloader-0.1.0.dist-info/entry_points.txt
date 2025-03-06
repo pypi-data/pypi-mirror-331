@@ -1,0 +1,2 @@
+[console_scripts]
+shdown = sentinelhub_downloader.cli:cli
