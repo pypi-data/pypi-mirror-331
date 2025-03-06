@@ -1,0 +1,3 @@
+[swarmauri.tools]
+swarmauri_tool_jupyterexportmarkdown=swarmauri_tool_jupyterexportmarkdown:JupyterExportMarkdownTool
+
