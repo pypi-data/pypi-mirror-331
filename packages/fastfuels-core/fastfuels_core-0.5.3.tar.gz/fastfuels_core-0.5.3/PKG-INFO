@@ -1,0 +1,64 @@
+Metadata-Version: 2.2
+Name: fastfuels-core
+Version: 0.5.3
+Summary: Core algorithms for the FastFuels project
+Home-page: https://github.com/silvxlabs/fastfuels-core
+License: MIT
+Project-URL: Bug Tracker, https://github.com/silvxlabs/fastfuels-core/issues
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: dask
+Requires-Dist: dask-expr
+Requires-Dist: dask-image
+Requires-Dist: fastparquet
+Requires-Dist: geopandas
+Requires-Dist: nsvb
+Requires-Dist: numba
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: pandera
+Requires-Dist: rasterio
+Requires-Dist: rioxarray
+Requires-Dist: scipy
+Requires-Dist: shapely>=2
+Requires-Dist: xarray
+Provides-Extra: plotting
+Requires-Dist: matplotlib; extra == "plotting"
+Requires-Dist: pyvista; extra == "plotting"
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: matplotlib; extra == "test"
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: project-url
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# fastfuels-core
+Core algorithms for FastFuels
+
+## FastFuels Platform
+
+The algorithms and methods in fastfuels-core serve as the foundation for the FastFuels Platform and the FastFuelsAPI.
+The FastFuels API is a JSON API that connects various data sources to the algorithms in fastfuels-core in order to create, modify, and export fuel data for use in fire behavior models.
+
+Documentation for the FastFuels Platform, including reference documentation for the API can be found at the following links:
+
+1) https://docs.fastfuels.silvxlabs.com/
+2) https://api.fastfuels.silvxlabs.com/redoc
