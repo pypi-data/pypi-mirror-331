@@ -1,0 +1,10 @@
+Metadata-Version: 2.2
+Name: rutu_packages
+Version: 0.0.1
+Description-Content-Type: text/markdown
+License-File: License.txt
+Dynamic: description
+Dynamic: description-content-type
+
+this is read me
+python setup.py sdist bdist_wheel
