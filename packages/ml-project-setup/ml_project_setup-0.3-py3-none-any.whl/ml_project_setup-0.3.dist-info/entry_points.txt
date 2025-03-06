@@ -1,0 +1,2 @@
+[console_scripts]
+mlsetup = ml_project_setup.ml_project_setup:create_project_command
