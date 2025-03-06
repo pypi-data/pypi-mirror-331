@@ -1,0 +1,11 @@
+PyFunceble/ext/process_manager/__about__.py,sha256=hsUuhIgpNb2kdOTFiVzaxpTxPP3aHrVAfkvT8c0LYCQ,2572
+PyFunceble/ext/process_manager/__init__.py,sha256=zbEpvZfB9VZtqyAhAs-SE68osi1byXpyzu3JCTs3XbM,2729
+PyFunceble/ext/process_manager/core.py,sha256=cPS8FGIcK1JIFddxrN_cl__5IX256DCvEAoCB6h9Fcc,40121
+PyFunceble/ext/process_manager/worker/__init__.py,sha256=gdyRTBC5pgefqDgnc9nbOga4jAxQcm596oU0QOMf2uo,2549
+PyFunceble/ext/process_manager/worker/core.py,sha256=RPGvHpTsxLQMOA6Td_NOM0-dK4F8wLPk409ujFz1FM8,39407
+examples/data_filter.py,sha256=C897tl1uXYMgrBdXKAd8qJ8KzgWuTwJqA9L7eNJV8x4,6957
+pyfunceble_process_manager-1.0.8.dist-info/LICENSE,sha256=rE8fp-5WWAbUGya8mg2fMTIkcw3fPA1PNG86URxH3U4,10802
+pyfunceble_process_manager-1.0.8.dist-info/METADATA,sha256=FfYxMSeqAfW4vtJNHPhJ2iVz9_XADlGsqb5rxBau_H0,8587
+pyfunceble_process_manager-1.0.8.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+pyfunceble_process_manager-1.0.8.dist-info/top_level.txt,sha256=A_ex-GuU5_Vb1KOPYPfw-GUEfO8ZL1E_YG9Vota2VWU,20
+pyfunceble_process_manager-1.0.8.dist-info/RECORD,,
