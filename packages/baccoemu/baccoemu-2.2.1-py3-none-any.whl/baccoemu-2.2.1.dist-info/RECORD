@@ -1,0 +1,13 @@
+baccoemu/__init__.py,sha256=H-N3rtnEYx3WCj7DpRQ_O-1AeqJz2Xt20y6eyRRYUCg,550
+baccoemu/_version.py,sha256=4dqvKTDgbqeyzbWj6hYiNdzxsI8j1YOKSLM8vF6a0j4,22
+baccoemu/baryonic_boost.py,sha256=mW8YQF0WwxVGk77cNusbA7oyb7fmdU1vfqknBj88wXg,12460
+baccoemu/lbias_expansion.py,sha256=tT9NiXTHINJffbfKQBi-CXqVoZ4SSDiLfZsJUextgSY,39534
+baccoemu/lbias_expansion_RSD.py,sha256=3EzTzlbA3dH5lF4kzb2Qsy76W4psxoK8N1yNhL3S1QM,55345
+baccoemu/matter_powerspectrum.py,sha256=g5LRO6pVrEn1RoGZQZ3nIQcdqwUJnGheJ3_gWHeRVj8,95448
+baccoemu/utils.py,sha256=vWkEuW3v2nTXW0sDHJxFoxV0SO3cgV0vj14SOQsvQAQ,6727
+baccoemu-2.2.1.dist-info/AUTHORS.rst,sha256=0TjYHSVJrHIOk2vgx2OJAU2QKyn5UEUmhckKBvTdYB8,80
+baccoemu-2.2.1.dist-info/LICENSE,sha256=ZTsUc7KGl1SpTkFukvrvdUQj14X-yomkfNm4y1K-OLs,1075
+baccoemu-2.2.1.dist-info/METADATA,sha256=s2_ZHcIm_gmI_N9vGOdrhlkuo6VvyawQ4BA1kAkbmLo,2264
+baccoemu-2.2.1.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+baccoemu-2.2.1.dist-info/top_level.txt,sha256=hm27sLniqpBWT7WCMXhd_Mm9az_OsD4dhw0khUewDVk,9
+baccoemu-2.2.1.dist-info/RECORD,,
