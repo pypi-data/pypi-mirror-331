@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: pygrafical
+Version: 0.0.7
+Summary: графическая библиотека основаная на Windows API
+Home-page: https://github.com/Ananimys784/Kingurio
+Author: tetredial_9274
+Author-email: system32@mail.ru
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+п»їUTF-8 (EF BB BF)
+# pygrafical (beta)
+
+**pygrafical** - СЌС‚Рѕ РіСЂР°С„РёС‡РµСЃРєР°СЏ Р±РёР±Р»РёРѕС‚РµРєР° РѕСЃРЅРѕРІР°РЅРёСЏ РЅР°  Windows API РЅР°РїРёСЃР°РЅР°СЏ РЅР° РЎ++ СЃРѕР·РґР°РЅР°СЏ РґР»СЏ РѕРїС‚РёРјРёР·Р°С†РёРё РіСЂР°С„РёС‡РµСЃРєРёС… С„СѓРЅРєС†РёР№ 
+
+## РЈСЃС‚Р°РЅРѕРІРєР°
+РґР»СЏ СѓСЃС‚Р°РЅРѕРІРєРё Р±РёР±Р»РёРѕС‚РµРєРё РјРѕР¶РЅРѕ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ  С‚Р°РєСѓСЋ РєРѕРјР°РЅРґСѓ
+```bash
+pip install pygrafical
+```
+## Р¤СѓРЅРєС†РёРё
+РІ СЌС‚РѕР№ Р±РёР±Р»РёРѕС‚С‚РµРєРµ РјРЅРѕР¶РµСЃС‚РІРѕ С„СѓРЅРєС†РёР№
+## Р§РµРіРѕ РЅРѕРІРѕРіРѕ
+РґРѕР±Р°РІР»РµРЅР° С„СѓРЅРєС†РёСЏ РґР»СЏ РїРѕР»СѓС‡РєРЅРёСЏ РїСѓС‚Рё Рє С…СѓРєР°Рј
