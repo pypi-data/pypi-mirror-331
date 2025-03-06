@@ -1,0 +1,82 @@
+TODO 1.1:
+- pygdmUI -> test all functionalities
+(- unit tests !?)
+   
+
+Further TODO:
+
+fixes / tests:
+- multipole development: higher order modes; scattering / extinction
+- electric/magnetic dipole emitter with substrate: H, respectively E-field in farfield
+
+small fixes
+- autoscaling in `visu.structure`: adapt to screen dpi
+- implement field-index info-printing in "simulation" class or in "tools"
+
+
+add:
+- coherent nonlinear effects
+- femtosecond pulse
+
+
+long-term:
+- fully retarded 1-2-3 propagator: Field in layers 1 and 2
+- Improve and test periodic structures "dyads" class:
+   - Implement faster convergence technique for Dyad-calculation (e.g. Chaumet paper 2003)
+   - test non-normal incidence (cf to MEEP?)
+- 3-layer asymptotic propagators (Clément?)
+- cunjugate gradients solver without full inversion. Using lookup-table for Green's functions (for all couples with same R, DeltaZ)?
+- magnetic media (mu!=1) for metamaterial description
+
+
+documentation:
+----- TUTORIALS -----
+- doc: tutorial on "structures": example of inconsistent geometry, e.g half/half in multi-layer environment
+- doc: tutorial multi-materials
+
+- doc: comprehensive explanation of "fieldindex"
+- doc: improve "overview", add equations for physical model behind functions
+
+
+tests:
+- unit-test for propagators
+- unit-tests for every incident field
+- unit-test for "linear" / "nonlinear"
+- unit-test for structures (to guarantee reproducibility)
+- unit-tests for every material class
+- unit-test for tools
+
+
+----- EXAMPLES -----
+- hollow TiO2 sphere (corresp. F. Mersch)
+
+- Further 2D simulations example (spectra?)
+- optical dichroism (RCP / LCP incident field)
+- vector-beams with interface (Y. Brule)
+
+- field-index tutorial
+- EO:
+  - directional antenna
+  - magnetic LDOS ?
+
+
+
+
+
+
+
+===========================================
+upload to pipy:
+
+"--universal": py2/3 package
+
+linux: (source and egg)
+
+## build distribution files
+python3 setup.py sdist bdist_egg
+
+## check validity
+twine check dist/*
+
+## upload to pypi
+twine upload FILE(s)

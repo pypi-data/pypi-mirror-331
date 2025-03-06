@@ -1,0 +1,16 @@
+*.ipynb
+*.pyc
+*.pyf
+*.pkl
+*.ckpt
+*.nbc
+*.nbi
+*.tar.gz
+*events.out.tfevents*
+hparams.yaml
+launch.json
+setting.json
+build/*
+dist/*
+pyGDM2.egg-info/*
+fortranBase/obj/*
