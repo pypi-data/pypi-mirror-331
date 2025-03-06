@@ -1,0 +1,9 @@
+
+[openmm]
+besmarts-openmm
+
+[rdkit]
+besmarts-rdkit
+
+[scipy]
+besmarts-scipy
