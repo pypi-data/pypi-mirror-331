@@ -1,0 +1,11 @@
+Metadata-Version: 2.2
+Name: test_atml
+Version: 0.0.6
+Summary: The test projetc.
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# test
