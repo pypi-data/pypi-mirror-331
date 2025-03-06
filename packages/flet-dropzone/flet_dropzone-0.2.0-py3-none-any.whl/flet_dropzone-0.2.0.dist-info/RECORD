@@ -1,0 +1,13 @@
+flet_dropzone/__init__.py,sha256=EsCPvhOl9nHXVqEpCSPt52vtWJJVKKSfX_XIiaH4o5c,50
+flet_dropzone/flet_dropzone.py,sha256=io3u8UCPLG6kJLYw2fNy8WSGqXz3nRUtaBIexVEprj8,6750
+flutter/flet_dropzone/CHANGELOG.md,sha256=9X7b7p65O4hmk48fxrRqSoZxzuz9T8rvHW8HiZTYi1k,81
+flutter/flet_dropzone/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+flutter/flet_dropzone/README.md,sha256=Xa6m-bfpmZl81krl7q0XEuD8-d6qYXroFpSCzq4glP0,70
+flutter/flet_dropzone/pubspec.yaml,sha256=Yjy2P4SMdn7YoWKYjBQD6NHqywyFFL0fMXezC1Z3VRc,439
+flutter/flet_dropzone/lib/flet_dropzone.dart,sha256=-E9lKjzq2c-OpL2vvowqJSG13YU3vvdJKplSwv8b5Qg,102
+flutter/flet_dropzone/lib/src/create_control.dart,sha256=pI-mCRSoy1OgZD0KudvQ_n17XZ7o1gZEHx8RavpsGnU,533
+flutter/flet_dropzone/lib/src/flet_dropzone.dart,sha256=-06oDfKTRgKkSDAXk9qg8g9nJEJBfm0PaNticbNAhos,2790
+flet_dropzone-0.2.0.dist-info/METADATA,sha256=62Pi7g1M3iYC-8DEaMwjjF8IWFdz6LJwJnayTHO_cDw,1742
+flet_dropzone-0.2.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+flet_dropzone-0.2.0.dist-info/top_level.txt,sha256=mla28lB5qAkZaIY4i-2Z6Ag-OxDJMbz6p1ACypAd6RQ,22
+flet_dropzone-0.2.0.dist-info/RECORD,,
