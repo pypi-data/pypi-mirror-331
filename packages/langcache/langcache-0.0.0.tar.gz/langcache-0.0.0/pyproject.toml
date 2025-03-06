@@ -1,0 +1,7 @@
+[project]
+name = "langcache"
+authors = [
+    {name = "Andrew Brookins", email = "a.m.brookins@gmail.com"},
+]
+version = "0.0.0"
+description = "Coming soon"
