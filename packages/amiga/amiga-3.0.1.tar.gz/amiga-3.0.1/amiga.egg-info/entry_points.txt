@@ -1,0 +1,2 @@
+[console_scripts]
+amiga = amiga.amiga:AMiGA
