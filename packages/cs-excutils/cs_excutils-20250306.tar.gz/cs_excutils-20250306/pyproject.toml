@@ -1,0 +1,200 @@
+[project]
+name = "cs-excutils"
+description = "Convenience facilities for managing exceptions."
+authors = [
+    { name = "Cameron Simpson", email = "cs@cskk.id.au" },
+]
+keywords = [
+    "python2",
+    "python3",
+]
+dependencies = [
+    "cs.deco>=20250306",
+    "cs.gimmicks>=20240316",
+    "cs.py.func>=20240630",
+    "cs.py3>=20220523",
+]
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 2",
+    "Programming Language :: Python :: 3",
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+]
+version = "20250306"
+
+[project.license]
+text = "GNU General Public License v3 or later (GPLv3+)"
+
+[project.urls]
+"Monorepo Hg/Mercurial Mirror" = "https://hg.sr.ht/~cameron-simpson/css"
+"Monorepo Git Mirror" = "https://github.com/cameron-simpson/css"
+"MonoRepo Commits" = "https://bitbucket.org/cameron_simpson/css/commits/branch/main"
+Source = "https://github.com/cameron-simpson/css/blob/main/lib/python/cs/excutils.py"
+
+[project.readme]
+text = """
+Convenience facilities for managing exceptions.
+
+*Latest release 20250306*:
+Drop @safe_property, will be using @property @unattributable instead.
+
+## <a name=\"exc_fold\"></a>`exc_fold(*da, **dkw)`
+
+Decorator to catch specific exception types and return a defined default value.
+
+## <a name=\"logexc\"></a>`logexc(*da, **dkw)`
+
+Decorator to log exceptions and reraise.
+
+## <a name=\"logexc_gen\"></a>`logexc_gen(*da, **dkw)`
+
+Decorator to log exceptions and reraise for generators.
+
+## <a name=\"LogExceptions\"></a>`LogExceptions(log=None, conceal=False)`
+
+Wrapper for `NoExceptions` which reports exceptions and optionally
+suppresses them.
+
+## <a name=\"noexc\"></a>`noexc(func)`
+
+Decorator to wrap a function which should never raise an exception.
+Instead, any raised exception is attempted to be logged.
+
+A significant side effect is of course that if the function raises an
+exception it now returns `None`.
+My primary use case is actually to wrap logging functions,
+which I have had abort otherwise sensible code.
+
+## <a name=\"noexc_gen\"></a>`noexc_gen(func)`
+
+Decorator to wrap a generator which should never raise an exception.
+Instead, any raised exception is attempted to be logged and iteration ends.
+
+My primary use case is wrapping generators chained in a pipeline,
+as in cs.later.Later.pipeline.
+
+## <a name=\"NoExceptions\"></a>Class `NoExceptions`
+
+A context manager to catch _all_ exceptions and log them.
+
+Arguably this should be a bare try...except but that's syntacticly
+noisy and separates the catch from the top.
+For simple function calls `return_exc_info()` is probably better.
+
+*`NoExceptions.__init__(self, handler)`*:
+Initialise the `NoExceptions` context manager.
+
+The `handler` is a callable which
+expects `(exc_type,exc_value,traceback)`
+and returns `True` or `False`
+for the `__exit__` method of the manager.
+If `handler` is `None`, the `__exit__` method
+always returns `True`, suppressing any exception.
+
+## <a name=\"return_exc_info\"></a>`return_exc_info(func, *args, **kwargs)`
+
+Run the supplied function and arguments.
+Return `(func_return, None)`
+in the case of successful operation
+and `(None, exc_info)` in the case of an exception.
+
+`exc_info` is a 3-tuple of `(exc_type, exc_value, exc_traceback)`
+as returned by `sys.exc_info()`.
+If you need to protect a whole suite and would rather not move it
+into its own function, consider the NoExceptions context manager.
+
+## <a name=\"returns_exc_info\"></a>`returns_exc_info(func)`
+
+Decorator function to wrap functions whose exceptions should be caught,
+such as inside event loops or worker threads.
+
+It causes a function to return `(func_return, None)`
+in the case of successful operation
+and `(None, exc_info)` in the case of an exception.
+
+`exc_info` is a 3-tuple of `(exc_type, exc_value, exc_traceback)`
+as returned by `sys.exc_info()`.
+
+## <a name=\"transmute\"></a>`transmute(*da, **dkw)`
+
+Decorator to transmute an inner exception to another exception type.
+
+The motivating use case is properties in a class with a
+`__getattr__` method;
+if some inner operation of the property function raises `AttributeError`
+then the property is bypassed in favour of `__getattr__`.
+Confusion ensues.
+
+In principle this can be an issue with any exception raised
+from \"deeper\" in the call chain, which can be mistaken for a
+\"shallow\" exception raised by the function itself.
+
+## <a name=\"unattributable\"></a>`unattributable(func)`
+
+Decorator to transmute `AttributeError` into a `RuntimeError`.
+
+## <a name=\"unimplemented\"></a>`unimplemented(func)`
+
+Decorator for stub methods that must be implemented by a stub class.
+
+# Release Log
+
+
+
+*Release 20250306*:
+Drop @safe_property, will be using @property @unattributable instead.
+
+*Release 20240630*:
+* LogExceptions: new optinal `log` param for the lgging call.
+* @logexc: use @decorator like other civilised decorators, pass decorator params to LogExceptions.
+
+*Release 20230212.1*:
+Fix imports.
+
+*Release 20230212*:
+Import cs.gimmicks instead of cs.logutils, reduces dependencies.
+
+*Release 20221228*:
+Get warning etc from cs.gimmicks, breaks circular import with cs.logutils.
+
+*Release 20221207*:
+@unattributable: bugfix decorator construction to accomodate callable() @decorator precheck.
+
+*Release 20210123*:
+@transmute: refactor to raise chained exceptions in Python 3+.
+
+*Release 20190812*:
+LogExceptions: drop stack trace noise.
+
+*Release 20190220*:
+New decorator @exc_fold to catch particular exceptions, log an error and return a defined value.
+
+*Release 20190101*:
+@logexc: handle missing func.__name__.
+
+*Release 20170904*:
+Minor updates, improved docstring.
+
+*Release 20160828*:
+* @unattributable and @safe_property decorators, used to protect properties from inner AttributeErrors.
+* Improved exception practices.
+
+*Release 20150118*:
+metadata updates
+
+*Release 20150110*:
+Initial distinfo for pypi release."""
+content-type = "text/markdown"
+
+[build-system]
+build-backend = "flit_core.buildapi"
+requires = [
+    "flit_core >=3.2,<4",
+]
+
+[tool.flit.module]
+name = "cs.excutils"
