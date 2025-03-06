@@ -1,0 +1,40 @@
+amssymb-_mho tipa-_textupsilon
+latex2e-_Delta latex2e-_bigtriangleup latex2e-_triangle amssymb-_vartriangle upgreek-_Updelta stix-_triangle MnSymbol-_medtriangleup mathabx-_smalltriangleup MnSymbol-_smalltriangleup stix-_triangleserifs
+latex2e-_Gamma upgreek-_Upgamma
+latex2e-_Lambda latex2e-_bigwedge latex2e-_land latex2e-_wedge tipa-_textturnv upgreek-_Uplambda mathabx-_wedge stix-_wedge MnSymbol-_wedge fdsymbol-_wedge fdsymbol-_bigwedge stix-_bigwedge MnSymbol-_bigwedge logix-_Nd
+latex2e-_Omega gensymb-_ohm tipa-_textscomega upgreek-_Upomega
+latex2e-_Phi latex2e-_phi tipa-_textphi upgreek-_Upphi upgreek-_upphi
+latex2e-_Pi latex2e-_prod upgreek-_Uppi stix-_prod MnSymbol-_prod fdsymbol-_prod fdsymbol-_varprod MnSymbol-_smallprod
+latex2e-_Psi latex2e-_psi upgreek-_Uppsi upgreek-_uppsi
+latex2e-_Sigma latex2e-_sum upgreek-_Upsigma MnSymbol-_sum fdsymbol-_sum stix-_sum fdsymbol-_varsum
+latex2e-_Theta upgreek-_Uptheta
+latex2e-_Upsilon marvosym-_Aries upgreek-_Upupsilon wasysym-_aries wasysym-_vernal
+latex2e-_Xi upgreek-_Upxi
+latex2e-_alpha upgreek-_upalpha
+latex2e-_beta marvosym-_Shilling tipa-_textbeta upgreek-_upbeta
+latex2e-_bigtriangledown latex2e-_nabla amssymb-_triangledown mathabx-_smalltriangledown MnSymbol-_smalltriangledown MnSymbol-_medtriangledown
+latex2e-_chi tipa-_textchi upgreek-_upchi
+latex2e-_delta upgreek-_updelta
+latex2e-_epsilon latex2e-_in upgreek-_upepsilon fdsymbol-_in stix-_in stix-_smallin
+latex2e-_eta upgreek-_upeta
+latex2e-_gamma upgreek-_upgamma
+latex2e-_iota tipa-_textiota upgreek-_upiota
+latex2e-_kappa upgreek-_upkappa
+latex2e-_lambda amssymb-_leftthreetimes tipa-_textlambda upgreek-_uplambda fdsymbol-_leftthreetimes MnSymbol-_leftthreetimes stix-_leftthreetimes
+latex2e-_mu upgreek-_upmu
+latex2e-_nu amssymb-_mathcal{V}
+latex2e-_omega tipa-_textomega upgreek-_upomega
+latex2e-_pi upgreek-_uppi
+latex2e-_rho upgreek-_uprho upgreek-_upvarrho
+latex2e-_sigma upgreek-_upsigma upgreek-_upvarsigma
+latex2e-_tau upgreek-_uptau
+latex2e-_theta tipa-_texttheta upgreek-_uptheta
+latex2e-_upsilon tipa-_textscriptv upgreek-_upupsilon
+latex2e-_varepsilon amssymb-_mathcal{E} tipa-_textepsilon upgreek-_upvarepsilon
+latex2e-_varphi upgreek-_upvarphi
+latex2e-_varpi upgreek-_upvarpi
+latex2e-_vartheta upgreek-_upvartheta
+latex2e-_xi upgreek-_upxi
+latex2e-_zeta upgreek-_upzeta
+textcomp-_textthreesuperior tipa-_textrevepsilon
+tipa-_textbabygamma tipa-_textgamma tipa-_textramshorns
