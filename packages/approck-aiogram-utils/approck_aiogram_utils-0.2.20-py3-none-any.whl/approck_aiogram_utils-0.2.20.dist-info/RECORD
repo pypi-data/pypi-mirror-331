@@ -1,0 +1,12 @@
+approck_aiogram_utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+approck_aiogram_utils/callback.py,sha256=Bxks1_fD2I_c0eXOpCJ8gnu-RTHHXXHGWth0AJV2jcM,839
+approck_aiogram_utils/integration/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+approck_aiogram_utils/integration/uprock/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+approck_aiogram_utils/integration/uprock/app.py,sha256=c26oNrHjhFu99POIQ3mCASTordyWrIa8iUs05mCeALI,2637
+approck_aiogram_utils/integration/uprock/events.py,sha256=6Bt06GeohcQewg5ADosOsuU_KXEmRA6rteHgTS0vZS4,1353
+approck_aiogram_utils/integration/uprock/handlers.py,sha256=r0BWkwJKh1yjLIRqeqVS1Qn2O1SR4taX4KNufNbusy8,1682
+approck_aiogram_utils/integration/uprock/sentry.py,sha256=pUaosl8-GPrFOhLKZowip2vachR8xB2E4sNGpuCkbtA,471
+approck_aiogram_utils/message.py,sha256=toPZmlXWHC_LpeBe3-Jd8HjXbTBneyNI3ChP798K-cI,8448
+approck_aiogram_utils-0.2.20.dist-info/METADATA,sha256=hVWKEgakOzCWMXMI0aGiNBdWbQqgazuxaRD2AZ0qLFs,1082
+approck_aiogram_utils-0.2.20.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+approck_aiogram_utils-0.2.20.dist-info/RECORD,,
