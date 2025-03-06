@@ -1,0 +1,7 @@
+MANIFEST.in
+setup.py
+py_bdd_test.egg-info/PKG-INFO
+py_bdd_test.egg-info/SOURCES.txt
+py_bdd_test.egg-info/dependency_links.txt
+py_bdd_test.egg-info/requires.txt
+py_bdd_test.egg-info/top_level.txt
