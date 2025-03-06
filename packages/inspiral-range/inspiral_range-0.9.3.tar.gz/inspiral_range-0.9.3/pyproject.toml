@@ -1,0 +1,26 @@
+[build-system]
+requires = [
+    "setuptools>=42",
+    "setuptools_scm[toml]>=3.4",
+    "wheel",
+]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+write_to = "inspiral_range/__version__.py"
+
+[tool.coverage.paths]
+# map any installed path reported in coverage to the source path
+# relative to the project root
+source = [
+    "inspiral_range/",
+    "*/inspiral_range/",
+]
+
+[tool.coverage.report]
+omit = [
+    # don't report coverage for setuptools-scm file
+    "*/__version__.py",
+]
+# print report with one decimal point
+precision = 1

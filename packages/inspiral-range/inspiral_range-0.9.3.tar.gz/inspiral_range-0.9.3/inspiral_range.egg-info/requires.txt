@@ -1,0 +1,11 @@
+astropy
+gpstime
+numpy
+pyyaml
+scipy>=1.8.0
+
+[lal]
+lalsuite
+
+[plot]
+matplotlib
