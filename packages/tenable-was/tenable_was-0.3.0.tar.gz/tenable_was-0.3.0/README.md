@@ -1,0 +1,86 @@
+# tenable-was
+
+A Python client library for interacting with Tenable's Web Application Scanning (WAS) APIs, simplifying tasks like searching configurations, scans, and exporting scan reports.
+
+## Installation
+
+Install via pip:
+
+```bash
+pip install tenable-was
+```
+
+## Usage
+
+### Initialize the Client
+
+Create a client instance with your Tenable API keys:
+
+```python
+from tenable_was import TenableClient
+
+client = TenableClient(
+    access_key="YOUR_ACCESS_KEY",
+    secret_key="YOUR_SECRET_KEY",
+    base_url="https://fedcloud.tenable.com"  # Optional, this is the default
+)
+```
+
+### Search Configurations
+
+Retrieve scan configurations:
+
+```python
+configs = client.search_configs(limit=10)
+print(configs)
+```
+
+### Search Scans
+
+Find completed scans for a specific configuration:
+
+```python
+scans = client.search_scans(config_id="your-config-id", limit=10)
+print(scans)
+```
+
+### Export Scan Reports
+
+Generate and download a scan report:
+
+```python
+report = client.export_scan(scan_id="your-scan-id")
+print(report)
+```
+
+You can also specify the content type:
+
+```python
+# Get report in JSON (default)
+json_report = client.export_scan(scan_id="your-scan-id", content_type="application/json")
+
+# Or get report in other formats
+pdf_report = client.export_scan(scan_id="your-scan-id", content_type="application/pdf")
+```
+
+## Requirements
+
+- Python 3.11+
+- Requests 2.32.3+
+
+## Authors
+
+- **Alec Meyer** - [abmeyer@stackarmor.com](mailto:abmeyer@stackarmor.com)
+- **Megha Patel** - [mpatel@stackarmor.com](mailto:mpatel@stackarmor.com)
+
+## Building and Publishing
+
+### Building with uv
+```bash
+uv build
+```
+
+### Publishing with uv
+```bash
+uv publish --token YOUR_PYPI_TOKEN_HERE
+```

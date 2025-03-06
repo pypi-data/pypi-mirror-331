@@ -1,0 +1,17 @@
+[project]
+name = "tenable-was"
+version = "0.3.0"
+description = "Python client for Tenable Web Application Scanning (WAS) API"
+readme = "README.md"
+authors = [
+    { name = "Alec Meyer", email = "abmeyer@stackarmor.com" },
+    { name = "Megha Patel", email = "mpatel@stackarmor.com"}
+]
+requires-python = ">=3.11"
+dependencies = [
+    "requests>=2.32.3",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
