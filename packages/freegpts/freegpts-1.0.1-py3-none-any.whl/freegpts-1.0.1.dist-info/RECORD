@@ -1,0 +1,8 @@
+freegpts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+freegpts/gpt4.py,sha256=XLawHDHwZCt3U_O0QgbfM5O0UJkStMWM4hKxpBahEkg,267
+freegpts/gpt4omini.py,sha256=aeY73n2XWQEGlVOkg4LmiWW0sZqFEoxx0kEgC-dlEgU,286
+freegpts/searchgpt.py,sha256=I4kEro_5EgChB1M4la1j11m13GysLXd7LSTN30jalwg,270
+freegpts-1.0.1.dist-info/METADATA,sha256=IO_uxIHhpqtjDWIijg0e4WRxhHFktMuEDwgXToE-qxI,329
+freegpts-1.0.1.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+freegpts-1.0.1.dist-info/top_level.txt,sha256=DKESEBh1h-_7JbB7Al0r6MkEPCjXQWb9n-rkIHvNGPU,9
+freegpts-1.0.1.dist-info/RECORD,,
