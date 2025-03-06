@@ -1,0 +1,13 @@
+mm_mongo/__init__.py,sha256=lrxZEwvZ82-m-2P9erTE4vbri3Pe-UFiyQ-_YnjPruI,868
+mm_mongo/codecs.py,sha256=DHgduCf8P6x-6QE_JVinWnNSqVjSm_k7E1b23Cclm-U,448
+mm_mongo/collection.py,sha256=vZ8_2wPCkuJS1kzwtN8bNyS09fWIOVYgF7iPAuMnz7Q,5584
+mm_mongo/connection.py,sha256=dstrU9omRGkxYxeckKT_zs35_SnZfA_QUGMDws-fczQ,443
+mm_mongo/json_.py,sha256=hrGwOF9JdrcaeveeLUMNBRQqgcvn7iO2KKOj1f5glww,1546
+mm_mongo/model.py,sha256=4Y6rcyoa4DfvHmywOrqDFT7eeF3bdozlbzx0I1vkTdY,1127
+mm_mongo/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mm_mongo/pydantic.py,sha256=pEI_WshYFZD8l0n7f3eM4MMyH73gxgc2BVVH4cGtBwc,992
+mm_mongo/types_.py,sha256=M0pV-PwDUcP2ng0XQjkSLjkZcI70xyIO-_HEl0kgD4I,1817
+mm_mongo/utils.py,sha256=hNXtHXZEfORs4KSaJOctKrHKhRKFsRhfLD9shgHJn1U,1573
+mm_mongo-0.3.3.dist-info/METADATA,sha256=7s1ASKWH3OcuFSbTrH00Q4DVCZkDLhOwiotIKBq5p0Q,136
+mm_mongo-0.3.3.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+mm_mongo-0.3.3.dist-info/RECORD,,
