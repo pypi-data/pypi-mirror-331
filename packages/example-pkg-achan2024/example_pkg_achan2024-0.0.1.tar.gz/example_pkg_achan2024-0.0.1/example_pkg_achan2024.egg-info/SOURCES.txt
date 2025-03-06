@@ -1,0 +1,8 @@
+README.md
+setup.py
+example_pkg_achan2024.egg-info/PKG-INFO
+example_pkg_achan2024.egg-info/SOURCES.txt
+example_pkg_achan2024.egg-info/dependency_links.txt
+example_pkg_achan2024.egg-info/top_level.txt
+numbers_properties_pkg/__init__.py
+numbers_properties_pkg/numbers_properties.py
