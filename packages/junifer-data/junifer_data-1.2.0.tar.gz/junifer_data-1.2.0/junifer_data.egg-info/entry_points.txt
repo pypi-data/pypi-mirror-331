@@ -1,0 +1,2 @@
+[console_scripts]
+junifer-data = junifer_data._cli:cli
