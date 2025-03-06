@@ -1,0 +1,3 @@
+[swarmauri.tools]
+jupyterruncelltool=swarmauri_tool_jupyterruncell:JupyterRunCellTool
+
