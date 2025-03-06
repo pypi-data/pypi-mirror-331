@@ -1,0 +1,691 @@
+Metadata-Version: 2.4
+Name: cs-result
+Version: 20250306
+Summary: Result and friends: various subclassable classes for deferred delivery of values.
+Keywords: python2,python3
+Author-email: Cameron Simpson <cs@cskk.id.au>
+Description-Content-Type: text/markdown
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Requires-Dist: cs.deco>=20250306
+Requires-Dist: cs.fsm>=20250120
+Requires-Dist: cs.gimmicks>=20240316
+Requires-Dist: cs.mappings>=20250306
+Requires-Dist: cs.pfx>=20241208
+Requires-Dist: cs.py.func>=20240630
+Requires-Dist: cs.seq>=20250306
+Requires-Dist: cs.threads>=20241005
+Project-URL: MonoRepo Commits, https://bitbucket.org/cameron_simpson/css/commits/branch/main
+Project-URL: Monorepo Git Mirror, https://github.com/cameron-simpson/css
+Project-URL: Monorepo Hg/Mercurial Mirror, https://hg.sr.ht/~cameron-simpson/css
+Project-URL: Source, https://github.com/cameron-simpson/css/blob/main/lib/python/cs/result.py
+
+Result and friends: various subclassable classes for deferred delivery of values.
+
+*Latest release 20250306*:
+Result.__del__: mention str(Result) in the warning.
+
+A `Result` is the base class for several callable subclasses
+which will receive values at a later point in time,
+and can also be used standalone without subclassing.
+
+A call to a `Result` will block until the value is received or the `Result` is cancelled,
+which will raise an exception in the caller.
+A `Result` may be called by multiple users, before or after the value has been delivered;
+if the value has been delivered the caller returns with it immediately.
+A `Result`'s state may be inspected (pending, running, ready, cancelled).
+Callbacks can be registered via a `Result`'s .notify method.
+
+An incomplete `Result` can be told to call a function to compute its value;
+the function return will be stored as the value unless the function raises an exception,
+in which case the exception information is recorded instead.
+If an exception occurred, it will be reraised for any caller of the `Result`.
+
+Trite example:
+
+    R = Result(name="my demo")
+
+Thread 1:
+
+    # this blocks until the Result is ready
+    value = R()
+    print(value)
+    # prints 3 once Thread 2 (below) assigns to it
+
+Thread 2:
+
+    R.result = 3
+
+Thread 3:
+
+    value = R()
+    # returns immediately with 3
+
+You can also collect multiple `Result`s in completion order using the `report()` function:
+
+    Rs = [ ... list of Results of whatever type ... ]
+    ...
+    for R in report(Rs):
+        x = R()     # collect result, will return immediately because
+                    # the Result is complete
+        print(x)    # print result
+
+## <a name="after"></a>`after(Rs, R, func, *a, **kw)`
+
+After the completion of `Rs` call `func(*a,**kw)` and return
+its result via `R`; return the `Result` object.
+
+Parameters:
+* `Rs`: an iterable of Results.
+* `R`: a `Result` to collect to result of calling `func`.
+  If `None`, one will be created.
+* `func`, `a`, `kw`: a callable and its arguments.
+
+## <a name="bg"></a>`bg(func, *a, **kw)`
+
+Dispatch a `Thread` to run `func`, return a `Result` to collect its value.
+
+Parameters:
+* `_name`: optional name for the `Result`, passed to the initialiser
+* `_extra`: optional extra data for the `Result`, passed to the initialiser
+
+Other parameters are passed to `func`.
+
+## <a name="call_in_thread"></a>`call_in_thread(func, *a, **kw)`
+
+Run `func(*a,**kw)` in a separate `Thread` via the `@in_thread` decorator.
+Return or exception is as for the original function.
+
+## <a name="in_thread"></a>`in_thread(func)`
+
+Decorator to evaluate `func` in a separate `Thread`.
+Return or exception is as for the original function.
+
+This exists to step out of the current `Thread's` thread
+local context, such as a database transaction associated
+with Django's implicit per-`Thread` database context.
+
+## <a name="not_cancelled"></a>`not_cancelled(*da, **dkw)`
+
+A decorator for methods to raise `CancellationError` if `self.cancelled`.
+
+## <a name="OnDemandFunction"></a>Class `OnDemandFunction(Result)`
+
+Wrap a callable, run it when required.
+
+<figure>
+    <svg width="347pt" height="221pt"
+   viewBox="0.00 0.00 346.69 221.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 217)">
+  <title>OnDemandFunction State Diagram</title>
+  <polygon fill="white" stroke="none" points="-4,4 -4,-217 342.69,-217 342.69,4 -4,4"/>
+  <!-- PENDING -->
+  <g id="node1" class="node">
+  <title>PENDING</title>
+  <ellipse fill="none" stroke="black" cx="165.68" cy="-195" rx="51.35" ry="18"/>
+  <text text-anchor="middle" x="165.68" y="-189.95" font-family="Times,serif" font-size="14.00">PENDING</text>
+  </g>
+  <!-- CANCELLED -->
+  <g id="node2" class="node">
+  <title>CANCELLED</title>
+  <ellipse fill="none" stroke="black" cx="65.68" cy="-18" rx="65.68" ry="18"/>
+  <text text-anchor="middle" x="65.68" y="-12.95" font-family="Times,serif" font-size="14.00">CANCELLED</text>
+  </g>
+  <!-- PENDING&#45;&gt;CANCELLED -->
+  <g id="edge1" class="edge">
+  <title>PENDING&#45;&gt;CANCELLED</title>
+  <path fill="none" stroke="black" d="M133.99,-180.56C111.56,-169.18 83.07,-150.55 69.18,-124.5 56.6,-100.9 57.22,-69.91 60.09,-47.63"/>
+  <polygon fill="black" stroke="black" points="63.55,-48.17 61.61,-37.75 56.63,-47.1 63.55,-48.17"/>
+  <text text-anchor="middle" x="86.93" y="-101.45" font-family="Times,serif" font-size="14.00">cancel</text>
+  </g>
+  <!-- DONE -->
+  <g id="node3" class="node">
+  <title>DONE</title>
+  <ellipse fill="none" stroke="black" cx="249.68" cy="-18" rx="36.51" ry="18"/>
+  <text text-anchor="middle" x="249.68" y="-12.95" font-family="Times,serif" font-size="14.00">DONE</text>
+  </g>
+  <!-- PENDING&#45;&gt;DONE -->
+  <g id="edge2" class="edge">
+  <title>PENDING&#45;&gt;DONE</title>
+  <path fill="none" stroke="black" d="M192.26,-179.22C200.32,-173.72 208.63,-166.87 214.68,-159 239.76,-126.39 247.06,-78.01 249.08,-47.51"/>
+  <polygon fill="black" stroke="black" points="252.56,-48.06 249.56,-37.9 245.57,-47.72 252.56,-48.06"/>
+  <text text-anchor="middle" x="267.81" y="-101.45" font-family="Times,serif" font-size="14.00">complete</text>
+  </g>
+  <!-- RUNNING -->
+  <g id="node4" class="node">
+  <title>RUNNING</title>
+  <ellipse fill="none" stroke="black" cx="165.68" cy="-106.5" rx="53.4" ry="18"/>
+  <text text-anchor="middle" x="165.68" y="-101.45" font-family="Times,serif" font-size="14.00">RUNNING</text>
+  </g>
+  <!-- PENDING&#45;&gt;RUNNING -->
+  <g id="edge3" class="edge">
+  <title>PENDING&#45;&gt;RUNNING</title>
+  <path fill="none" stroke="black" d="M165.68,-176.91C165.68,-165.26 165.68,-149.55 165.68,-136.02"/>
+  <polygon fill="black" stroke="black" points="169.18,-136.36 165.68,-126.36 162.18,-136.36 169.18,-136.36"/>
+  <text text-anchor="middle" x="188.18" y="-145.7" font-family="Times,serif" font-size="14.00">dispatch</text>
+  </g>
+  <!-- CANCELLED&#45;&gt;CANCELLED -->
+  <g id="edge6" class="edge">
+  <title>CANCELLED&#45;&gt;CANCELLED</title>
+  <path fill="none" stroke="black" d="M125.1,-26.13C139.06,-25.46 149.36,-22.75 149.36,-18 149.36,-14.66 144.27,-12.33 136.4,-11"/>
+  <polygon fill="black" stroke="black" points="136.91,-7.54 126.61,-10.02 136.21,-14.5 136.91,-7.54"/>
+  <text text-anchor="middle" x="166.61" y="-12.95" font-family="Times,serif" font-size="14.00">cancel</text>
+  </g>
+  <!-- DONE&#45;&gt;DONE -->
+  <g id="edge7" class="edge">
+  <title>DONE&#45;&gt;DONE</title>
+  <path fill="none" stroke="black" d="M282.68,-26.29C294.53,-26.47 304.19,-23.7 304.19,-18 304.19,-14.26 300.03,-11.78 293.82,-10.57"/>
+  <polygon fill="black" stroke="black" points="294.43,-7.11 284.19,-9.83 293.89,-14.09 294.43,-7.11"/>
+  <text text-anchor="middle" x="321.44" y="-12.95" font-family="Times,serif" font-size="14.00">cancel</text>
+  </g>
+  <!-- RUNNING&#45;&gt;CANCELLED -->
+  <g id="edge4" class="edge">
+  <title>RUNNING&#45;&gt;CANCELLED</title>
+  <path fill="none" stroke="black" d="M146.87,-89.23C131.74,-76.14 110.27,-57.57 93.21,-42.81"/>
+  <polygon fill="black" stroke="black" points="95.74,-40.38 85.89,-36.48 91.17,-45.67 95.74,-40.38"/>
+  <text text-anchor="middle" x="141.93" y="-57.2" font-family="Times,serif" font-size="14.00">cancel</text>
+  </g>
+  <!-- RUNNING&#45;&gt;DONE -->
+  <g id="edge5" class="edge">
+  <title>RUNNING&#45;&gt;DONE</title>
+  <path fill="none" stroke="black" d="M171.06,-88.23C175.08,-77.44 181.44,-63.79 190.43,-54 196.81,-47.05 204.88,-41.07 213,-36.1"/>
+  <polygon fill="black" stroke="black" points="214.51,-39.27 221.5,-31.31 211.07,-33.17 214.51,-39.27"/>
+  <text text-anchor="middle" x="214.81" y="-57.2" font-family="Times,serif" font-size="14.00">complete</text>
+  </g>
+  </g>
+  </svg>
+  <figcaption>OnDemandFunction State Diagram</figcaption>
+</figure>
+
+
+## <a name="OnDemandResult"></a>Class `OnDemandResult(Result)`
+
+Wrap a callable, run it when required.
+
+<figure>
+    <svg width="347pt" height="221pt"
+   viewBox="0.00 0.00 346.69 221.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 217)">
+  <title>OnDemandResult State Diagram</title>
+  <polygon fill="white" stroke="none" points="-4,4 -4,-217 342.69,-217 342.69,4 -4,4"/>
+  <!-- PENDING -->
+  <g id="node1" class="node">
+  <title>PENDING</title>
+  <ellipse fill="none" stroke="black" cx="165.68" cy="-195" rx="51.35" ry="18"/>
+  <text text-anchor="middle" x="165.68" y="-189.95" font-family="Times,serif" font-size="14.00">PENDING</text>
+  </g>
+  <!-- CANCELLED -->
+  <g id="node2" class="node">
+  <title>CANCELLED</title>
+  <ellipse fill="none" stroke="black" cx="65.68" cy="-18" rx="65.68" ry="18"/>
+  <text text-anchor="middle" x="65.68" y="-12.95" font-family="Times,serif" font-size="14.00">CANCELLED</text>
+  </g>
+  <!-- PENDING&#45;&gt;CANCELLED -->
+  <g id="edge1" class="edge">
+  <title>PENDING&#45;&gt;CANCELLED</title>
+  <path fill="none" stroke="black" d="M133.99,-180.56C111.56,-169.18 83.07,-150.55 69.18,-124.5 56.6,-100.9 57.22,-69.91 60.09,-47.63"/>
+  <polygon fill="black" stroke="black" points="63.55,-48.17 61.61,-37.75 56.63,-47.1 63.55,-48.17"/>
+  <text text-anchor="middle" x="86.93" y="-101.45" font-family="Times,serif" font-size="14.00">cancel</text>
+  </g>
+  <!-- DONE -->
+  <g id="node3" class="node">
+  <title>DONE</title>
+  <ellipse fill="none" stroke="black" cx="249.68" cy="-18" rx="36.51" ry="18"/>
+  <text text-anchor="middle" x="249.68" y="-12.95" font-family="Times,serif" font-size="14.00">DONE</text>
+  </g>
+  <!-- PENDING&#45;&gt;DONE -->
+  <g id="edge2" class="edge">
+  <title>PENDING&#45;&gt;DONE</title>
+  <path fill="none" stroke="black" d="M192.26,-179.22C200.32,-173.72 208.63,-166.87 214.68,-159 239.76,-126.39 247.06,-78.01 249.08,-47.51"/>
+  <polygon fill="black" stroke="black" points="252.56,-48.06 249.56,-37.9 245.57,-47.72 252.56,-48.06"/>
+  <text text-anchor="middle" x="267.81" y="-101.45" font-family="Times,serif" font-size="14.00">complete</text>
+  </g>
+  <!-- RUNNING -->
+  <g id="node4" class="node">
+  <title>RUNNING</title>
+  <ellipse fill="none" stroke="black" cx="165.68" cy="-106.5" rx="53.4" ry="18"/>
+  <text text-anchor="middle" x="165.68" y="-101.45" font-family="Times,serif" font-size="14.00">RUNNING</text>
+  </g>
+  <!-- PENDING&#45;&gt;RUNNING -->
+  <g id="edge3" class="edge">
+  <title>PENDING&#45;&gt;RUNNING</title>
+  <path fill="none" stroke="black" d="M165.68,-176.91C165.68,-165.26 165.68,-149.55 165.68,-136.02"/>
+  <polygon fill="black" stroke="black" points="169.18,-136.36 165.68,-126.36 162.18,-136.36 169.18,-136.36"/>
+  <text text-anchor="middle" x="188.18" y="-145.7" font-family="Times,serif" font-size="14.00">dispatch</text>
+  </g>
+  <!-- CANCELLED&#45;&gt;CANCELLED -->
+  <g id="edge6" class="edge">
+  <title>CANCELLED&#45;&gt;CANCELLED</title>
+  <path fill="none" stroke="black" d="M125.1,-26.13C139.06,-25.46 149.36,-22.75 149.36,-18 149.36,-14.66 144.27,-12.33 136.4,-11"/>
+  <polygon fill="black" stroke="black" points="136.91,-7.54 126.61,-10.02 136.21,-14.5 136.91,-7.54"/>
+  <text text-anchor="middle" x="166.61" y="-12.95" font-family="Times,serif" font-size="14.00">cancel</text>
+  </g>
+  <!-- DONE&#45;&gt;DONE -->
+  <g id="edge7" class="edge">
+  <title>DONE&#45;&gt;DONE</title>
+  <path fill="none" stroke="black" d="M282.68,-26.29C294.53,-26.47 304.19,-23.7 304.19,-18 304.19,-14.26 300.03,-11.78 293.82,-10.57"/>
+  <polygon fill="black" stroke="black" points="294.43,-7.11 284.19,-9.83 293.89,-14.09 294.43,-7.11"/>
+  <text text-anchor="middle" x="321.44" y="-12.95" font-family="Times,serif" font-size="14.00">cancel</text>
+  </g>
+  <!-- RUNNING&#45;&gt;CANCELLED -->
+  <g id="edge4" class="edge">
+  <title>RUNNING&#45;&gt;CANCELLED</title>
+  <path fill="none" stroke="black" d="M146.87,-89.23C131.74,-76.14 110.27,-57.57 93.21,-42.81"/>
+  <polygon fill="black" stroke="black" points="95.74,-40.38 85.89,-36.48 91.17,-45.67 95.74,-40.38"/>
+  <text text-anchor="middle" x="141.93" y="-57.2" font-family="Times,serif" font-size="14.00">cancel</text>
+  </g>
+  <!-- RUNNING&#45;&gt;DONE -->
+  <g id="edge5" class="edge">
+  <title>RUNNING&#45;&gt;DONE</title>
+  <path fill="none" stroke="black" d="M171.06,-88.23C175.08,-77.44 181.44,-63.79 190.43,-54 196.81,-47.05 204.88,-41.07 213,-36.1"/>
+  <polygon fill="black" stroke="black" points="214.51,-39.27 221.5,-31.31 211.07,-33.17 214.51,-39.27"/>
+  <text text-anchor="middle" x="214.81" y="-57.2" font-family="Times,serif" font-size="14.00">complete</text>
+  </g>
+  </g>
+  </svg>
+  <figcaption>OnDemandResult State Diagram</figcaption>
+</figure>
+
+
+## <a name="report"></a>`report(LFs)`
+
+Generator which yields completed `Result`s.
+
+This is a generator that yields `Result`s as they complete,
+useful for waiting for a sequence of `Result`s
+that may complete in an arbitrary order.
+
+## <a name="Result"></a>Class `Result(cs.fsm.FSM)`
+
+Base class for asynchronous collection of a result.
+This is used to make `Result`, `OnDemandFunction`s, `LateFunction`s
+and other objects with asynchronous termination.
+
+In addition to the methods below, for each state value such
+as `self.PENDING` there is a corresponding attribute `is_pending`
+testing whether the `Result` is in that state.
+
+<figure>
+    <svg width="347pt" height="221pt"
+   viewBox="0.00 0.00 346.69 221.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 217)">
+  <title>Result State Diagram</title>
+  <polygon fill="white" stroke="none" points="-4,4 -4,-217 342.69,-217 342.69,4 -4,4"/>
+  <!-- PENDING -->
+  <g id="node1" class="node">
+  <title>PENDING</title>
+  <ellipse fill="none" stroke="black" cx="165.68" cy="-195" rx="51.35" ry="18"/>
+  <text text-anchor="middle" x="165.68" y="-189.95" font-family="Times,serif" font-size="14.00">PENDING</text>
+  </g>
+  <!-- CANCELLED -->
+  <g id="node2" class="node">
+  <title>CANCELLED</title>
+  <ellipse fill="none" stroke="black" cx="65.68" cy="-18" rx="65.68" ry="18"/>
+  <text text-anchor="middle" x="65.68" y="-12.95" font-family="Times,serif" font-size="14.00">CANCELLED</text>
+  </g>
+  <!-- PENDING&#45;&gt;CANCELLED -->
+  <g id="edge1" class="edge">
+  <title>PENDING&#45;&gt;CANCELLED</title>
+  <path fill="none" stroke="black" d="M133.99,-180.56C111.56,-169.18 83.07,-150.55 69.18,-124.5 56.6,-100.9 57.22,-69.91 60.09,-47.63"/>
+  <polygon fill="black" stroke="black" points="63.55,-48.17 61.61,-37.75 56.63,-47.1 63.55,-48.17"/>
+  <text text-anchor="middle" x="86.93" y="-101.45" font-family="Times,serif" font-size="14.00">cancel</text>
+  </g>
+  <!-- DONE -->
+  <g id="node3" class="node">
+  <title>DONE</title>
+  <ellipse fill="none" stroke="black" cx="249.68" cy="-18" rx="36.51" ry="18"/>
+  <text text-anchor="middle" x="249.68" y="-12.95" font-family="Times,serif" font-size="14.00">DONE</text>
+  </g>
+  <!-- PENDING&#45;&gt;DONE -->
+  <g id="edge2" class="edge">
+  <title>PENDING&#45;&gt;DONE</title>
+  <path fill="none" stroke="black" d="M192.26,-179.22C200.32,-173.72 208.63,-166.87 214.68,-159 239.76,-126.39 247.06,-78.01 249.08,-47.51"/>
+  <polygon fill="black" stroke="black" points="252.56,-48.06 249.56,-37.9 245.57,-47.72 252.56,-48.06"/>
+  <text text-anchor="middle" x="267.81" y="-101.45" font-family="Times,serif" font-size="14.00">complete</text>
+  </g>
+  <!-- RUNNING -->
+  <g id="node4" class="node">
+  <title>RUNNING</title>
+  <ellipse fill="none" stroke="black" cx="165.68" cy="-106.5" rx="53.4" ry="18"/>
+  <text text-anchor="middle" x="165.68" y="-101.45" font-family="Times,serif" font-size="14.00">RUNNING</text>
+  </g>
+  <!-- PENDING&#45;&gt;RUNNING -->
+  <g id="edge3" class="edge">
+  <title>PENDING&#45;&gt;RUNNING</title>
+  <path fill="none" stroke="black" d="M165.68,-176.91C165.68,-165.26 165.68,-149.55 165.68,-136.02"/>
+  <polygon fill="black" stroke="black" points="169.18,-136.36 165.68,-126.36 162.18,-136.36 169.18,-136.36"/>
+  <text text-anchor="middle" x="188.18" y="-145.7" font-family="Times,serif" font-size="14.00">dispatch</text>
+  </g>
+  <!-- CANCELLED&#45;&gt;CANCELLED -->
+  <g id="edge6" class="edge">
+  <title>CANCELLED&#45;&gt;CANCELLED</title>
+  <path fill="none" stroke="black" d="M125.1,-26.13C139.06,-25.46 149.36,-22.75 149.36,-18 149.36,-14.66 144.27,-12.33 136.4,-11"/>
+  <polygon fill="black" stroke="black" points="136.91,-7.54 126.61,-10.02 136.21,-14.5 136.91,-7.54"/>
+  <text text-anchor="middle" x="166.61" y="-12.95" font-family="Times,serif" font-size="14.00">cancel</text>
+  </g>
+  <!-- DONE&#45;&gt;DONE -->
+  <g id="edge7" class="edge">
+  <title>DONE&#45;&gt;DONE</title>
+  <path fill="none" stroke="black" d="M282.68,-26.29C294.53,-26.47 304.19,-23.7 304.19,-18 304.19,-14.26 300.03,-11.78 293.82,-10.57"/>
+  <polygon fill="black" stroke="black" points="294.43,-7.11 284.19,-9.83 293.89,-14.09 294.43,-7.11"/>
+  <text text-anchor="middle" x="321.44" y="-12.95" font-family="Times,serif" font-size="14.00">cancel</text>
+  </g>
+  <!-- RUNNING&#45;&gt;CANCELLED -->
+  <g id="edge4" class="edge">
+  <title>RUNNING&#45;&gt;CANCELLED</title>
+  <path fill="none" stroke="black" d="M146.87,-89.23C131.74,-76.14 110.27,-57.57 93.21,-42.81"/>
+  <polygon fill="black" stroke="black" points="95.74,-40.38 85.89,-36.48 91.17,-45.67 95.74,-40.38"/>
+  <text text-anchor="middle" x="141.93" y="-57.2" font-family="Times,serif" font-size="14.00">cancel</text>
+  </g>
+  <!-- RUNNING&#45;&gt;DONE -->
+  <g id="edge5" class="edge">
+  <title>RUNNING&#45;&gt;DONE</title>
+  <path fill="none" stroke="black" d="M171.06,-88.23C175.08,-77.44 181.44,-63.79 190.43,-54 196.81,-47.05 204.88,-41.07 213,-36.1"/>
+  <polygon fill="black" stroke="black" points="214.51,-39.27 221.5,-31.31 211.07,-33.17 214.51,-39.27"/>
+  <text text-anchor="middle" x="214.81" y="-57.2" font-family="Times,serif" font-size="14.00">complete</text>
+  </g>
+  </g>
+  </svg>
+  <figcaption>Result State Diagram</figcaption>
+</figure>
+
+
+*`Result.__init__(self, name=None, *, lock=None, result=None, state=None, extra=None)`*:
+Base initialiser for `Result` objects and subclasses.
+
+Parameter:
+* `name`: optional parameter naming this object.
+* `lock`: optional locking object, defaults to a new `threading.Lock`.
+* `result`: if not `None`, prefill the `.result` property.
+* `extra`: an optional mapping of extra information to
+  associate with the `Result`, useful to provide context
+  when collecting the result; the `Result` has a public
+  attribute `.extra` which is an `AttrableMapping` to hold
+  this information.
+
+*`Result.__call__(self, *a, **kw)`*:
+Call the `Result`: wait for it to be ready and then return or raise.
+
+You can optionally supply a callable and arguments,
+in which case `callable(*args,**kwargs)` will be called
+via `Result.call` and the results applied to this `Result`.
+
+Basic example:
+
+    R = Result()
+    ... hand R to something which will fulfil it later ...
+    x = R() # wait for fulfilment - value lands in x
+
+Direct call:
+
+    R = Result()
+    ... pass R to something which wants the result ...
+    # call func(1,2,z=3), save result in R
+    # ready for collection by whatever received R
+    R(func,1,2,z=3)
+
+*`Result.bg(self, func, *a, **kw)`*:
+Submit a function to compute the result in a separate `Thread`,
+returning the `Thread`.
+
+Keyword arguments for `cs.threads.bg` may be supplied by
+prefixing their names with an underscore, for example:
+
+    T = R.bg(mainloop, _pre_enter_objects=(S, fs))
+
+This dispatches a `Thread` to run `self.run_func(func,*a,**kw)`
+and as such the `Result` must be in "pending" state,
+and transitions to "running".
+
+*`Result.cancel(self, msg: Optional[str] = None)`*:
+Cancel this `Result`.
+
+*`Result.cancelled`*:
+OBSOLETE cancelled
+
+Test whether this `Result` has been cancelled.
+       Obsolete: use `.is_cancelled`.
+
+*`Result.empty(self)`*:
+Analogue to `Queue.empty()`.
+
+*`Result.exc_info`*:
+The exception information from a completed `Result`.
+This is not available before completion.
+Accessing this on a cancelled `Result` raises `CancellationError`.
+
+*`Result.get(self, default=None)`*:
+Wait for readiness; return the result if `self.exc_info` is `None`,
+otherwise `default`.
+
+*`Result.join(self)`*:
+Calling the `.join()` method waits for the function to run to
+completion and returns a tuple of `(result,exc_info)`.
+
+On completion the sequence `(result,None)` is returned.
+If an exception occurred computing the result the sequence
+`(None,exc_info)` is returned
+where `exc_info` is a tuple of `(exc_type,exc_value,exc_traceback)`.
+If the function was cancelled the sequence `(None,None)`
+is returned.
+
+*`Result.notify(self, notifier: Callable[[ForwardRef('Result')], NoneType])`*:
+After the `Result` completes, call `notifier(self)`.
+
+If the `Result` has already completed this will happen immediately.
+If you'd rather `self` got put on some queue `Q`, supply `Q.put`.
+
+*`Result.pending`*:
+OBSOLETE pending
+
+Whether the `Result` is pending.
+       Obsolete: use `.is_pending`.
+
+*`Result.post_notify(self, post_func) -> 'Result'`*:
+Return a secondary `Result` which processes the result of `self`.
+
+After the `self` completes, call `post_func(retval)` where
+`retval` is the result of `self`, and use that to complete
+the secondary `Result`.
+
+*Important note*: because the completion lock object is
+released after the internal `FSM.fsm_event` call, the
+callback used to implement `.post_notify` is fired before
+the lock object is released. As such, it would deadlock as
+it waits for completion of `self` by using that lock.
+Therefore the callback dispatches a separate `Thread` to
+wait for `self` and then run `post_func`.
+
+Example:
+
+    # submit packet to data stream
+    R = submit_packet()
+    # arrange that when the response is received, decode the response
+    R2 = R.post_notify(lambda response: decode(response))
+    # collect decoded response
+    decoded = R2()
+
+If the `Result` has already completed this will happen immediately.
+
+*`Result.put(self, value)`*:
+Store the value. `Queue`-like idiom.
+
+*`Result.raise_(self, exc=None)`*:
+Convenience wrapper for `self.exc_info` to store an exception result `exc`.
+If `exc` is omitted or `None`, uses `sys.exc_info()`.
+
+Examples:
+
+    # complete the result using the current exception state
+    R.raise_()
+
+    # complete the result with an exception type
+    R.raise_(RuntimeError)
+
+    # complete the result with an exception
+    R.raise_(ValueError("bad value!"))
+
+*`Result.ready`*:
+True if the `Result` state is `DONE` or `CANCELLED`..
+
+*`Result.result`*:
+The result.
+This property is not available before completion.
+Accessing this on a cancelled `Result` raises `CancellationError`.
+
+*`Result.run_func(self, func, *a, **kw)`*:
+Fulfil the `Result` by running `func(*a,**kw)`.
+
+*`Result.run_func_in_thread(self, func, *a, **kw)`*:
+Fulfil the `Result` by running `func(*a,**kw)`
+in a separate `Thread`.
+
+This exists to step out of the current `Thread's` thread
+local context, such as a database transaction associated
+with Django's implicit per-`Thread` database context.
+
+*`Result.state`*:
+OBSOLETE state
+
+The `FSM` state (obsolete).
+       Obsolete: use `.fsm_state`.
+
+## <a name="ResultSet"></a>Class `ResultSet(builtins.set)`
+
+A `set` subclass containing `Result`s,
+on which one may iterate as `Result`s complete.
+
+*`ResultSet.__iter__(self)`*:
+Iterating on a `ResultSet` yields `Result`s as they complete.
+
+*`ResultSet.wait(self)`*:
+Convenience function to wait for all the `Result`s.
+
+# Release Log
+
+
+
+*Release 20250306*:
+Result.__del__: mention str(Result) in the warning.
+
+*Release 20250103*:
+New @not_cancelled decorator for methods to raise CancellationError is self.cancelled.
+
+*Release 20241119*:
+OnDemandResult.__call__: bodge: use the private lock name instead of the obsolete lock name.
+
+*Release 20240630*:
+* Move CancellationError from cs.result to cs.fsm.
+* report: avoid iterating over the live set.
+* Result: drop the PREPARE state, allow 'cancel' no-op event in CANCELLED and DONE states.
+* Result.result,exc_info getters: raise CancellationError if the Result is cancelled.
+* Result._complete: fire the 'complete' event after the ._result and ._exc_info attributes are set but still before the self._get_lock.release().
+* Result: preserve message passed to .cancel(), _complete raises RuntimeError if already complete.
+
+*Release 20240412*:
+Result.bg: plumb _foo arguments to cs.threads.bg as foo.
+
+*Release 20240316*:
+Fixed release upload artifacts.
+
+*Release 20240305*:
+Result.__str__: handle early use where __dict__ lacks various entries.
+
+*Release 20231221*:
+Doc update.
+
+*Release 20231129*:
+Result.__del__: issue a warning about no collection instead of raising an exception.
+
+*Release 20230331*:
+Result.join: access self._result instead of the property.
+
+*Release 20230212*:
+* Result._complete: release self._get_lock before firing the event, as the event is what fires the notifiers.
+* Result.notify: when we make a direct notifier call, call the notifier outside the lock and remember to set self.collected=True.
+* Result: new post_notify() method to queue a function of the Result.result, returning a Result for the completion of the post function.
+
+*Release 20221207*:
+CancellationError: accept keyword arguments, apply as attributes.
+
+*Release 20221118*:
+* CancellationError: rename msg to message.
+* Result.run_func_in_thread: new method to run an arbitrary function in a separate Thread and return it via the Result.
+* New @in_thread decorator to cause a function to run in a separate Thread using Result.run_in_thread.
+* New call_in_thread to run an arbitrary function in a distinct Thread.
+* @in_thread: expose the original function as the decorated function's .direct attribute.
+
+*Release 20220918*:
+OnDemandResult: modern "pending" check.
+
+*Release 20220805*:
+Result now subclasses cs.fsm.FSM.
+
+*Release 20220311*:
+* Result: class local Seq instance.
+* Result.call: thread safe runtime check of self.state==pending.
+* New Task and @task decorator, prototype for rerunnable blocking chaining tasks scheme - very alpha.
+
+*Release 20210420*:
+Update dependencies, add docstring.
+
+*Release 20210407*:
+New ResultSet(set) class, with context manager and wait methods, and whose __iter__ iterates completed Results.
+
+*Release 20210123*:
+bg: accept optional _extra parameter for use by the Result.
+
+*Release 20201102*:
+Result: now .extra attribute for associated data and a new optional "extra" parameter in the initialiser.
+
+*Release 20200521*:
+* OnDemandResult: bugfixes and improvements.
+* Result.bg: accept optional _name parameter to specify the Result.name.
+
+*Release 20191007*:
+* Simplify ResultState definition.
+* Result.bg: use cs.threads.bg to dispatch the Thread.
+
+*Release 20190522*:
+* Result.__call__ now accepts an optional callable and args.
+* Result.call: set the Result state to "running" before dispatching the function.
+* Rename OnDemandFunction to OnDemandResult, keep old name around for compatibility.
+* Result._complete: also permitted if state==cancelled.
+
+*Release 20190309*:
+Small bugfix.
+
+*Release 20181231*:
+* Result.call: report baser exceptions than BaseException.
+* Drop _PendingFunction abstract class.
+
+*Release 20181109.1*:
+DISTINFO update.
+
+*Release 20181109*:
+* Derive CancellationError from Exception instead of RuntimeError, fix initialiser.
+* Rename AsynchState to ResultState and make it an Enum.
+* Make Results hashable and comparable for equality for use as mapping keys: equality is identity.
+* New Result.collected attribute, set true if .result or .exc_info are accessed, logs an error if Result.__del__ is called when false, may be set true externally if a Result is not required.
+* Drop `final` parameter; never used and supplanted by Result.notify.
+* Result.join: return the .result and .exc_info properties in order to mark the Result as collected.
+* Result: set .collected to True when a notifier has been called successfully.
+* Bugfix Result.cancel: apply the new cancelled state.
+
+*Release 20171231*:
+* Bugfix Result.call to catch BaseException instead of Exception.
+* New convenience function bg(func) to dispatch `func` in a separate Thread and return a Result to collect its value.
+
+*Release 20171030.1*:
+Fix module requirements specification.
+
+*Release 20171030*:
+New Result.bg(func, *a, **kw) method to dispatch function in separate Thread to compute the Result value.
+
+*Release 20170903*:
+rename cs.asynchron to cs.result
