@@ -1,0 +1,16 @@
+{
+    "schema_version": "0.3.0",
+    "parameter": "array_element_position_utm",
+    "instrument": "MSTN-09",
+    "site": "North",
+    "parameter_version": "2.0.0",
+    "unique_id": null,
+    "value": [
+        217970.0,
+        3185280.3,
+        2196.0
+    ],
+    "unit": "m",
+    "type": "float64",
+    "file": false
+}
