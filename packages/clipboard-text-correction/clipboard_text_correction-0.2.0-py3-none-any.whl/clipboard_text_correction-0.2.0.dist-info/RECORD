@@ -1,0 +1,15 @@
+clipboard_text_correction/__init__.py,sha256=ruULPQI7A5xxFhCYlc2-Yak7eGnabqCYTahYYvxbPtc,19
+clipboard_text_correction/about.py,sha256=4GQQloCoHpdFfIBT8d-DSpSs2cjtWbjifYcZLuZN1M0,534
+clipboard_text_correction/indicator.py,sha256=L1atW5596qkBEtGagisdCJKz4Izu5FZkpq53LQ1Yz_8,23028
+clipboard_text_correction/lib_files.py,sha256=OEZTr8SY2_0Qt1lDk0DdFlMb8pquYVmZST8zWBGuDOw,5591
+clipboard_text_correction/lib_funcs.py,sha256=sMYFBuSDHfdwv87W2rjqVTchtwB2ZiMAEHAiVsG6bI8,12357
+clipboard_text_correction/lib_play.py,sha256=wJqFfV1v9OFJD3AIF7MTKaKnwA_qkPCKUO-3PG6Ed6o,501
+clipboard_text_correction/lib_stats.py,sha256=OwHrUpQWVvtVKDw_-ZvJow93G7GoSIyBRMMD_inl6OM,3332
+clipboard_text_correction/testeQt.py,sha256=jCfMwuj0RYoL29D2T35TYSQG0gpvdkJnRiIgnOxgOCQ,1531
+clipboard_text_correction/icons/logo.png,sha256=Bv_2b2nWuLyon1uzOfMuZ8nXq0UeXjGMx5iJ5nUHawY,37153
+clipboard_text_correction-0.2.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+clipboard_text_correction-0.2.0.dist-info/METADATA,sha256=e-c2s6SQuIgRd_ioHRvZBK0Kwkm1n8VC5SzbPd2qYlY,3268
+clipboard_text_correction-0.2.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+clipboard_text_correction-0.2.0.dist-info/entry_points.txt,sha256=te5lHsxSLi79I-RXr79pE02NemI86FlNf8MAe1hjJM0,97
+clipboard_text_correction-0.2.0.dist-info/top_level.txt,sha256=uN7iQd8oTbjS31DSSjqzliPoQzS5uFHZNn5zc8A_byA,26
+clipboard_text_correction-0.2.0.dist-info/RECORD,,
