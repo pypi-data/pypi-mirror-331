@@ -1,0 +1,11 @@
+github_scrap/__init__.py,sha256=lYccdkqwZ7fmGe1SUQK0dkZNXWhm7mgwSmK-Yy0i-Rk,71
+github_scrap/app/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+github_scrap/app/git_code_scrap.py,sha256=_xv1jZ8J4-ZPJbTnbS_jSXuOjijY6DVtgGsKmJ9p8xQ,7904
+github_scrap/app/main.py,sha256=C5WNiASrbpFuCwkzVTYpDdjxZScMYE7FYJEYdkvX64k,3083
+github_scrap/config/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+github_scrap/config/logging_config.py,sha256=fJ0uIwO3W3NL6Y0KlJC9ouS-cOkeWGWKydIWsJw8QAY,622
+github_scrap-0.1.0.dist-info/LICENSE,sha256=nX9WHssmgaCGDSgTTMkutjX8SBZXKFO8szC88YrwkNI,1076
+github_scrap-0.1.0.dist-info/METADATA,sha256=LOsFy1X_FATGbgAPSaeTZ8sNxlZN_aEcCK_zDoPOH6Q,3221
+github_scrap-0.1.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+github_scrap-0.1.0.dist-info/entry_points.txt,sha256=YGrqX5gsZcRSSohngshW5mRpejBbRT7YrXaGXa23a5A,58
+github_scrap-0.1.0.dist-info/RECORD,,
