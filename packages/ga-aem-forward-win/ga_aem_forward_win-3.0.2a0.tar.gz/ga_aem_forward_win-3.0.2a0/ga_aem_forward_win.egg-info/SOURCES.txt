@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+examples/skytem_example.py
+ga_aem_forward_win.egg-info/PKG-INFO
+ga_aem_forward_win.egg-info/SOURCES.txt
+ga_aem_forward_win.egg-info/dependency_links.txt
+ga_aem_forward_win.egg-info/requires.txt
+ga_aem_forward_win.egg-info/top_level.txt
+gatdaem1d/__init__.py
+gatdaem1d/gatdaem1d.dll
+gatdaem1d/libfftw3-3.dll
+gatdaem1d/libfftw3f-3.dll
