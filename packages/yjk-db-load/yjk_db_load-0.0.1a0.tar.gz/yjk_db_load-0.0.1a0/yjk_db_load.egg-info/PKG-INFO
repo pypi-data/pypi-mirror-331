@@ -1,0 +1,20 @@
+Metadata-Version: 2.2
+Name: yjk_db_load
+Version: 0.0.1a0
+Summary: A package to load .ydb files created by YJK.
+Home-page: https://github.com/your_username/my_package
+Author: Xinyu Gao (Vincent)
+Author-email: just_gxy@163.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-python
+Dynamic: summary
