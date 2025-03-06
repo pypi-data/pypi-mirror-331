@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+src/flet_dropzone/__init__.py
+src/flet_dropzone/flet_dropzone.py
+src/flet_dropzone.egg-info/PKG-INFO
+src/flet_dropzone.egg-info/SOURCES.txt
+src/flet_dropzone.egg-info/dependency_links.txt
+src/flet_dropzone.egg-info/requires.txt
+src/flet_dropzone.egg-info/top_level.txt
+src/flutter/flet_dropzone/CHANGELOG.md
+src/flutter/flet_dropzone/LICENSE
+src/flutter/flet_dropzone/README.md
+src/flutter/flet_dropzone/pubspec.yaml
+src/flutter/flet_dropzone/lib/flet_dropzone.dart
+src/flutter/flet_dropzone/lib/src/create_control.dart
+src/flutter/flet_dropzone/lib/src/flet_dropzone.dart

@@ -1,0 +1,39 @@
+[project]
+name = "flet-dropzone"
+version = "0.2.0"
+description = "Dropzone control for Flet"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+    { name = "KOGA Mitsuhiro", email = "shiena.jp@gmail.com" }
+]
+classifiers = [
+  "License :: OSI Approved :: Apache Software License",
+]
+dependencies = [
+    "flet>=0.27.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/shiena/flet-dropzone"
+Documentation = "https://github.com/shiena/flet-dropzone"
+Repository = "https://github.com/shiena/flet-dropzone"
+Issues = "https://github.com/shiena/flet-dropzone/issues"
+
+[tool.setuptools.package-data]
+"flutter.flet_dropzone" = ["**/*"]
+
+[tool.uv]
+dev-dependencies = [
+    "flet[all]>=0.27.5",
+]
+
+[tool.poetry.group.dev.dependencies]
+flet = {extras = ["all"], version = "0.27.5"}
+
+[tool.setuptools]
+license-files = []
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
