@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="csrf-token" content="" />
+
+        <script src="{% static 'js/htmx.min.js' %}" defer></script>
+        <script src="{% static 'js/alpine.min.js' %}" defer></script>
+        <script src="{% static 'js/prism.min.js' %}" defer></script>
+
+        <link rel='stylesheet' href="{% static 'css/prism.css' %}">
+        <link rel='stylesheet' href="{% static 'css/output.css' %}">
+        <title>shadcn/ui for Django</title>
+    </head>
+
+
+    <body
+       class="min-h-svh bg-background font-sans antialiased"
+       hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'
+    >
+        <div class="relative flex min-h-svh flex-col bg-background">
+
+        <div class="container flex-1 items-start md:grid md:grid-cols-[220px_minmax(0,1fr)] md:gap-6 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-10">
+
+                <aside class="border-grid fixed top-14 z-30 hidden h-[calc(100vh-3.5rem)] w-full shrink-0 border-t md:sticky md:block">
+                    <div class="no-scrollbar h-full overflow-auto py-6 pr-4 lg:py-8">
+                        <div class="flex flex-col gap-6">
+                            <div class="flex flex-col gap-1">
+                                <h4 class="rounded-md px-2 py-1 text-sm font-medium">Getting Started</h4>
+                                <div class="grid grid-flow-row auto-rows-max gap-0.5 text-sm">
+                                    <c-docs.link href="/" class="{% if request.path == '/' or '/introduction' in request.path %}bg-accent{% endif %}">Introduction</c-docs.link>
+                                    <c-docs.link href="/installation" class="{% if 'installation' in request.path %}bg-accent{% endif %}">Installation</c-docs.link>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col gap-1">
+                                <h4 class="rounded-md px-2 py-1 text-sm font-medium">Components</h4>
+                                <div class="grid grid-flow-row auto-rows-max gap-0.5 text-sm">
+                                    <c-docs.link href="/accordion" class="{% if '/accordion' in request.path %}bg-accent{% endif %}">Accordion</c-docs.link>
+                                    <c-docs.link href="/alert" class="{% if '/alert' in request.path %}bg-accent{% endif %}">Alert</c-docs.link>
+                                    <c-docs.link href="/alert-dialog" class="{% if '/alert-dialog' in request.path %}bg-accent{% endif %}">Alert Dialog</c-docs.link>
+                                    <c-docs.link href="/badge" class="{% if '/badge' in request.path %}bg-accent{% endif %}">Badge</c-docs.link>
+                                    <c-docs.link href="/button" class="{% if '/button' in request.path %}bg-accent{% endif %}">Button</c-docs.link>
+                                    <c-docs.link href="/card" class="{% if '/card' in request.path %}bg-accent{% endif %}">Card</c-docs.link>
+                                    <c-docs.link href="/checkbox" class="{% if '/checkbox' in request.path %}bg-accent{% endif %}">Checkbox</c-docs.link>
+                                    <c-docs.link href="/command" class="{% if '/command' in request.path %}bg-accent{% endif %}">Command</c-docs.link>
+                                    <c-docs.link href="/dialog" class="{% if '/dialog' in request.path %}bg-accent{% endif %}">Dialog</c-docs.link>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+                <main class="relative py-6 lg:gap-10 lg:py-8 xl:grid xl:grid-cols-[1fr_300px] mt-10">
+                    {% block body %}{% endblock %}
+                </main>
+
+        </div>
+
+        </div>
+    </body>
+</html>
