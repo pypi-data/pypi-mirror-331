@@ -1,0 +1,10 @@
+Metadata-Version: 2.2
+Name: llm-code-extractor
+Version: 0.1.0
+Summary: A Python library for extracting code snippets using LLMs
+Author-email: Mohammed Muzammil Inamdar <muzammil.inamdar98@gmail.com>
+License: MIT
+Description-Content-Type: text/markdown
+
+# Lasso
+This is a Lasso to make your LLMs behave. llm code extractor
