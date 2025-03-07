@@ -1,0 +1,91 @@
+---
+description: File tree of the project
+globs: 
+---
+[1.1K]  .
+├── [  64]  .benchmarks
+├── [  96]  .cursor
+│   └── [ 224]  rules
+│       ├── [ 821]  0project.mdc
+│       ├── [ 516]  cleanup.mdc
+│       ├── [3.6K]  filetree.mdc
+│       └── [2.0K]  quality.mdc
+├── [  96]  .github
+│   └── [ 128]  workflows
+│       ├── [2.7K]  push.yml
+│       └── [1.4K]  release.yml
+├── [3.5K]  .gitignore
+├── [ 470]  .pre-commit-config.yaml
+├── [  96]  .specstory
+│   └── [ 320]  history
+│       ├── [2.7K]  .what-is-this.md
+│       ├── [146K]  2025-03-04_03-45-refining-todo-list-from-codebase-review.md
+│       ├── [186K]  2025-03-04_04-43-incorporating-ideas-from-ideas-md-into-todo-md.md
+│       ├── [164K]  2025-03-04_05-33-implementing-todo-phases-1,-2,-and-3.md
+│       ├── [242K]  2025-03-04_06-19-implementation-of-todo-md-phases.md
+│       ├── [4.2K]  2025-03-04_07-52-untitled.md
+│       ├── [123K]  2025-03-04_07-59-project-maintenance-and-documentation-update.md
+│       └── [417K]  2025-03-04_08-39-project-documentation-and-cleanup-tasks.md
+├── [7.1K]  CHANGELOG.md
+├── [ 986]  CLEANUP.txt
+├── [ 56K]  IDEAS.md
+├── [1.0K]  LICENSE
+├── [ 153]  MANIFEST.in
+├── [ 12K]  README.md
+├── [188K]  REPO_CONTENT.txt
+├── [5.8K]  TODO.md
+├── [   7]  VERSION.txt
+├── [ 13K]  cleanup.py
+├── [ 192]  dist
+├── [  96]  examples
+│   └── [ 948]  upload_example.py
+├── [ 439]  mypy.ini
+├── [7.0K]  pyproject.toml
+├── [ 128]  src
+│   └── [ 416]  twat_fs
+│       ├── [ 793]  __init__.py
+│       ├── [ 733]  __main__.py
+│       ├── [8.9K]  cli.py
+│       ├── [ 128]  data
+│       │   ├── [1.5K]  _test.jpg
+│       │   └── [383K]  test.jpg
+│       ├── [1.9K]  paths.py
+│       ├── [   1]  py.typed
+│       ├── [ 25K]  upload.py
+│       └── [ 704]  upload_providers
+│           ├── [1.9K]  __init__.py
+│           ├── [6.5K]  async_utils.py
+│           ├── [5.5K]  bashupload.py
+│           ├── [4.9K]  catbox.py
+│           ├── [ 12K]  core.py
+│           ├── [ 24K]  dropbox.py
+│           ├── [5.7K]  factory.py
+│           ├── [7.7K]  fal.py
+│           ├── [6.7K]  filebin.py
+│           ├── [ 11K]  litterbox.py
+│           ├── [6.9K]  pixeldrain.py
+│           ├── [3.9K]  protocols.py
+│           ├── [ 10K]  s3.py
+│           ├── [9.3K]  simple.py
+│           ├── [ 728]  types.py
+│           ├── [5.1K]  uguu.py
+│           ├── [7.6K]  utils.py
+│           └── [5.0K]  www0x0.py
+├── [ 128]  templates
+│   ├── [9.6K]  authenticated_provider_template.py
+│   └── [6.5K]  simple_provider_template.py
+├── [ 416]  tests
+│   ├── [  63]  __init__.py
+│   ├── [  96]  data
+│   │   └── [ 100]  test.txt
+│   ├── [8.6K]  test_async_utils.py
+│   ├── [3.8K]  test_filebin_pixeldrain.py
+│   ├── [ 11K]  test_integration.py
+│   ├── [ 10K]  test_s3_advanced.py
+│   ├── [ 180]  test_twat_fs.py
+│   ├── [ 34K]  test_upload.py
+│   └── [ 13K]  test_utils.py
+├── [2.8K]  update_providers.py
+└── [383K]  uv.lock
+
+17 directories, 68 files

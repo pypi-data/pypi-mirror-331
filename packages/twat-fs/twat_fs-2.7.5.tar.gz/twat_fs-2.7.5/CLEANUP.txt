@@ -1,0 +1,1343 @@
+2025-03-05 12:14:39 - 
+=== PROJECT STATEMENT ===
+2025-03-05 12:14:39 - ---
+description: About this project
+globs:
+---
+# About this project
+
+`twat-fs` is a file system utility library focused on robust and extensible file upload capabilities with multiple provider support. It provides:
+
+- Multi-provider upload system with smart fallback (catbox.moe default, plus Dropbox, S3, etc.)
+- Automatic retry for temporary failures, fallback for permanent ones
+- URL validation and clean developer experience with type hints
+- Simple CLI: `python -m twat_fs upload_file path/to/file.txt`
+- Easy installation: `uv pip install twat-fs` (basic) or `uv pip install 'twat-fs[all,dev]'` (all features)
+
+## Development Notes
+- Uses `uv` for Python package management
+- Quality tools: ruff, mypy, pytest
+- Clear provider protocol for adding new storage backends
+- Strong typing and runtime checks throughout
+
+2025-03-05 12:14:39 - 
+=== Current Status ===
+2025-03-05 12:14:39 - Error: LOG.md is missing
+2025-03-05 12:14:39 - [1.1K]  .
+├── [  64]  .benchmarks
+├── [  96]  .cursor
+│   └── [ 224]  rules
+│       ├── [ 821]  0project.mdc
+│       ├── [ 516]  cleanup.mdc
+│       ├── [3.6K]  filetree.mdc
+│       └── [2.0K]  quality.mdc
+├── [  96]  .github
+│   └── [ 128]  workflows
+│       ├── [2.7K]  push.yml
+│       └── [1.4K]  release.yml
+├── [3.5K]  .gitignore
+├── [ 470]  .pre-commit-config.yaml
+├── [  96]  .specstory
+│   └── [ 320]  history
+│       ├── [2.7K]  .what-is-this.md
+│       ├── [146K]  2025-03-04_03-45-refining-todo-list-from-codebase-review.md
+│       ├── [186K]  2025-03-04_04-43-incorporating-ideas-from-ideas-md-into-todo-md.md
+│       ├── [164K]  2025-03-04_05-33-implementing-todo-phases-1,-2,-and-3.md
+│       ├── [242K]  2025-03-04_06-19-implementation-of-todo-md-phases.md
+│       ├── [4.2K]  2025-03-04_07-52-untitled.md
+│       ├── [123K]  2025-03-04_07-59-project-maintenance-and-documentation-update.md
+│       └── [417K]  2025-03-04_08-39-project-documentation-and-cleanup-tasks.md
+├── [7.1K]  CHANGELOG.md
+├── [ 986]  CLEANUP.txt
+├── [ 56K]  IDEAS.md
+├── [1.0K]  LICENSE
+├── [ 153]  MANIFEST.in
+├── [ 12K]  README.md
+├── [188K]  REPO_CONTENT.txt
+├── [5.8K]  TODO.md
+├── [   7]  VERSION.txt
+├── [ 13K]  cleanup.py
+├── [ 192]  dist
+├── [  96]  examples
+│   └── [ 948]  upload_example.py
+├── [ 439]  mypy.ini
+├── [7.0K]  pyproject.toml
+├── [ 128]  src
+│   └── [ 416]  twat_fs
+│       ├── [ 793]  __init__.py
+│       ├── [ 733]  __main__.py
+│       ├── [8.9K]  cli.py
+│       ├── [ 128]  data
+│       │   ├── [1.5K]  _test.jpg
+│       │   └── [383K]  test.jpg
+│       ├── [1.9K]  paths.py
+│       ├── [   1]  py.typed
+│       ├── [ 25K]  upload.py
+│       └── [ 704]  upload_providers
+│           ├── [1.9K]  __init__.py
+│           ├── [6.5K]  async_utils.py
+│           ├── [5.5K]  bashupload.py
+│           ├── [4.9K]  catbox.py
+│           ├── [ 12K]  core.py
+│           ├── [ 24K]  dropbox.py
+│           ├── [5.7K]  factory.py
+│           ├── [7.7K]  fal.py
+│           ├── [6.7K]  filebin.py
+│           ├── [ 11K]  litterbox.py
+│           ├── [6.9K]  pixeldrain.py
+│           ├── [3.9K]  protocols.py
+│           ├── [ 10K]  s3.py
+│           ├── [9.3K]  simple.py
+│           ├── [ 728]  types.py
+│           ├── [5.1K]  uguu.py
+│           ├── [7.6K]  utils.py
+│           └── [5.0K]  www0x0.py
+├── [ 128]  templates
+│   ├── [9.6K]  authenticated_provider_template.py
+│   └── [6.5K]  simple_provider_template.py
+├── [ 416]  tests
+│   ├── [  63]  __init__.py
+│   ├── [  96]  data
+│   │   └── [ 100]  test.txt
+│   ├── [8.6K]  test_async_utils.py
+│   ├── [3.8K]  test_filebin_pixeldrain.py
+│   ├── [ 11K]  test_integration.py
+│   ├── [ 10K]  test_s3_advanced.py
+│   ├── [ 180]  test_twat_fs.py
+│   ├── [ 34K]  test_upload.py
+│   └── [ 13K]  test_utils.py
+├── [2.8K]  update_providers.py
+└── [383K]  uv.lock
+
+17 directories, 68 files
+
+2025-03-05 12:14:39 - 
+Project structure:
+2025-03-05 12:14:39 - [1.1K]  .
+├── [  64]  .benchmarks
+├── [  96]  .cursor
+│   └── [ 224]  rules
+│       ├── [ 821]  0project.mdc
+│       ├── [ 516]  cleanup.mdc
+│       ├── [3.6K]  filetree.mdc
+│       └── [2.0K]  quality.mdc
+├── [  96]  .github
+│   └── [ 128]  workflows
+│       ├── [2.7K]  push.yml
+│       └── [1.4K]  release.yml
+├── [3.5K]  .gitignore
+├── [ 470]  .pre-commit-config.yaml
+├── [  96]  .specstory
+│   └── [ 320]  history
+│       ├── [2.7K]  .what-is-this.md
+│       ├── [146K]  2025-03-04_03-45-refining-todo-list-from-codebase-review.md
+│       ├── [186K]  2025-03-04_04-43-incorporating-ideas-from-ideas-md-into-todo-md.md
+│       ├── [164K]  2025-03-04_05-33-implementing-todo-phases-1,-2,-and-3.md
+│       ├── [242K]  2025-03-04_06-19-implementation-of-todo-md-phases.md
+│       ├── [4.2K]  2025-03-04_07-52-untitled.md
+│       ├── [123K]  2025-03-04_07-59-project-maintenance-and-documentation-update.md
+│       └── [417K]  2025-03-04_08-39-project-documentation-and-cleanup-tasks.md
+├── [7.1K]  CHANGELOG.md
+├── [ 986]  CLEANUP.txt
+├── [ 56K]  IDEAS.md
+├── [1.0K]  LICENSE
+├── [ 153]  MANIFEST.in
+├── [ 12K]  README.md
+├── [188K]  REPO_CONTENT.txt
+├── [5.8K]  TODO.md
+├── [   7]  VERSION.txt
+├── [ 13K]  cleanup.py
+├── [ 192]  dist
+├── [  96]  examples
+│   └── [ 948]  upload_example.py
+├── [ 439]  mypy.ini
+├── [7.0K]  pyproject.toml
+├── [ 128]  src
+│   └── [ 416]  twat_fs
+│       ├── [ 793]  __init__.py
+│       ├── [ 733]  __main__.py
+│       ├── [8.9K]  cli.py
+│       ├── [ 128]  data
+│       │   ├── [1.5K]  _test.jpg
+│       │   └── [383K]  test.jpg
+│       ├── [1.9K]  paths.py
+│       ├── [   1]  py.typed
+│       ├── [ 25K]  upload.py
+│       └── [ 704]  upload_providers
+│           ├── [1.9K]  __init__.py
+│           ├── [6.5K]  async_utils.py
+│           ├── [5.5K]  bashupload.py
+│           ├── [4.9K]  catbox.py
+│           ├── [ 12K]  core.py
+│           ├── [ 24K]  dropbox.py
+│           ├── [5.7K]  factory.py
+│           ├── [7.7K]  fal.py
+│           ├── [6.7K]  filebin.py
+│           ├── [ 11K]  litterbox.py
+│           ├── [6.9K]  pixeldrain.py
+│           ├── [3.9K]  protocols.py
+│           ├── [ 10K]  s3.py
+│           ├── [9.3K]  simple.py
+│           ├── [ 728]  types.py
+│           ├── [5.1K]  uguu.py
+│           ├── [7.6K]  utils.py
+│           └── [5.0K]  www0x0.py
+├── [ 128]  templates
+│   ├── [9.6K]  authenticated_provider_template.py
+│   └── [6.5K]  simple_provider_template.py
+├── [ 416]  tests
+│   ├── [  63]  __init__.py
+│   ├── [  96]  data
+│   │   └── [ 100]  test.txt
+│   ├── [8.6K]  test_async_utils.py
+│   ├── [3.8K]  test_filebin_pixeldrain.py
+│   ├── [ 11K]  test_integration.py
+│   ├── [ 10K]  test_s3_advanced.py
+│   ├── [ 180]  test_twat_fs.py
+│   ├── [ 34K]  test_upload.py
+│   └── [ 13K]  test_utils.py
+├── [2.8K]  update_providers.py
+└── [383K]  uv.lock
+
+17 directories, 68 files
+
+2025-03-05 12:14:39 - On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   .cursor/rules/filetree.mdc
+	modified:   CLEANUP.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+2025-03-05 12:14:39 - On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   .cursor/rules/filetree.mdc
+	modified:   CLEANUP.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+2025-03-05 12:14:39 - 
+=== Environment Status ===
+2025-03-05 12:14:39 - Setting up virtual environment
+2025-03-05 12:14:41 - Virtual environment created and activated
+2025-03-05 12:14:41 - Installing package with all extras
+2025-03-05 12:14:41 - Setting up virtual environment
+2025-03-05 12:14:42 - Virtual environment created and activated
+2025-03-05 12:14:48 - Package installed successfully
+2025-03-05 12:14:48 - Running code quality checks
+2025-03-05 12:14:48 - >>> Running code fixes...
+2025-03-05 12:14:48 - src/twat_fs/__init__.py:15:47: ARG005 Unused lambda argument: `args`
+   |
+13 |     # Configure twat_cache to use the paths from twat_os
+14 |     # Use the correct API to set the cache directory
+15 |     twat_cache.utils.get_cache_path = lambda *args, **kwargs: get_cache_dir()
+   |                                               ^^^^ ARG005
+16 | except ImportError:
+17 |     pass  # twat_cache is not installed, no configuration needed
+   |
+
+src/twat_fs/__init__.py:15:55: ARG005 Unused lambda argument: `kwargs`
+   |
+13 |     # Configure twat_cache to use the paths from twat_os
+14 |     # Use the correct API to set the cache directory
+15 |     twat_cache.utils.get_cache_path = lambda *args, **kwargs: get_cache_dir()
+   |                                                       ^^^^^^ ARG005
+16 | except ImportError:
+17 |     pass  # twat_cache is not installed, no configuration needed
+   |
+
+src/twat_fs/cli.py:61:9: C901 `status` is too complex (12 > 10)
+   |
+59 |     """Commands for managing upload providers."""
+60 |
+61 |     def status(self, provider_id: str | None = None, online: bool = False) -> None:
+   |         ^^^^^^ C901
+62 |         """
+63 |         Show provider setup status.
+   |
+
+src/twat_fs/cli.py:61:9: PLR0912 Too many branches (15 > 12)
+   |
+59 |     """Commands for managing upload providers."""
+60 |
+61 |     def status(self, provider_id: str | None = None, online: bool = False) -> None:
+   |         ^^^^^^ PLR0912
+62 |         """
+63 |         Show provider setup status.
+   |
+
+src/twat_fs/cli.py:61:9: PLR0915 Too many statements (52 > 50)
+   |
+59 |     """Commands for managing upload providers."""
+60 |
+61 |     def status(self, provider_id: str | None = None, online: bool = False) -> None:
+   |         ^^^^^^ PLR0915
+62 |         """
+63 |         Show provider setup status.
+   |
+
+src/twat_fs/cli.py:61:54: FBT001 Boolean-typed positional argument in function definition
+   |
+59 |     """Commands for managing upload providers."""
+60 |
+61 |     def status(self, provider_id: str | None = None, online: bool = False) -> None:
+   |                                                      ^^^^^^ FBT001
+62 |         """
+63 |         Show provider setup status.
+   |
+
+src/twat_fs/cli.py:61:54: FBT002 Boolean default positional argument in function definition
+   |
+59 |     """Commands for managing upload providers."""
+60 |
+61 |     def status(self, provider_id: str | None = None, online: bool = False) -> None:
+   |                                                      ^^^^^^ FBT002
+62 |         """
+63 |         Show provider setup status.
+   |
+
+src/twat_fs/cli.py:137:21: PLW2901 `with` statement variable `status` overwritten by assignment target
+    |
+136 |                 for provider, info in sorted_providers:
+137 |                     status = (
+    |                     ^^^^^^ PLW2901
+138 |                         "[green]Ready[/green]"
+139 |                         if info.success
+    |
+
+src/twat_fs/cli.py:162:20: FBT001 Boolean-typed positional argument in function definition
+    |
+160 |             console.print(table)
+161 |
+162 |     def list(self, online: bool = False) -> None:
+    |                    ^^^^^^ FBT001
+163 |         """List all available (ready) provider IDs, one per line. If --online is provided, run online tests.
+164 |         In online mode, reconfigure logger so that info messages are printed to stderr."""
+    |
+
+src/twat_fs/cli.py:162:20: FBT002 Boolean default positional argument in function definition
+    |
+160 |             console.print(table)
+161 |
+162 |     def list(self, online: bool = False) -> None:
+    |                    ^^^^^^ FBT002
+163 |         """List all available (ready) provider IDs, one per line. If --online is provided, run online tests.
+164 |         In online mode, reconfigure logger so that info messages are printed to stderr."""
+    |
+
+src/twat_fs/cli.py:180:13: B007 Loop control variable `provider` not used within loop body
+    |
+179 |         # Print each active provider ID, one per line, to stdout
+180 |         for provider in active_providers:
+    |             ^^^^^^^^ B007
+181 |             pass
+    |
+    = help: Rename unused `provider` to `_provider`
+
+src/twat_fs/cli.py:198:9: PLR0913 Too many arguments in function definition (6 > 5)
+    |
+196 |         self.upload_provider = UploadProviderCommands()
+197 |
+198 |     def upload(
+    |         ^^^^^^ PLR0913
+199 |         self,
+200 |         file_path: str | Path,
+    |
+
+src/twat_fs/cli.py:202:9: FBT001 Boolean-typed positional argument in function definition
+    |
+200 |         file_path: str | Path,
+201 |         provider: str | list[str] = PROVIDERS_PREFERENCE,
+202 |         unique: bool = False,
+    |         ^^^^^^ FBT001
+203 |         force: bool = False,
+204 |         remote_path: str | None = None,
+    |
+
+src/twat_fs/cli.py:202:9: FBT002 Boolean default positional argument in function definition
+    |
+200 |         file_path: str | Path,
+201 |         provider: str | list[str] = PROVIDERS_PREFERENCE,
+202 |         unique: bool = False,
+    |         ^^^^^^ FBT002
+203 |         force: bool = False,
+204 |         remote_path: str | None = None,
+    |
+
+src/twat_fs/cli.py:203:9: FBT001 Boolean-typed positional argument in function definition
+    |
+201 |         provider: str | list[str] = PROVIDERS_PREFERENCE,
+202 |         unique: bool = False,
+203 |         force: bool = False,
+    |         ^^^^^ FBT001
+204 |         remote_path: str | None = None,
+205 |         fragile: bool = False,
+    |
+
+src/twat_fs/cli.py:203:9: FBT002 Boolean default positional argument in function definition
+    |
+201 |         provider: str | list[str] = PROVIDERS_PREFERENCE,
+202 |         unique: bool = False,
+203 |         force: bool = False,
+    |         ^^^^^ FBT002
+204 |         remote_path: str | None = None,
+205 |         fragile: bool = False,
+    |
+
+src/twat_fs/cli.py:205:9: FBT001 Boolean-typed positional argument in function definition
+    |
+203 |         force: bool = False,
+204 |         remote_path: str | None = None,
+205 |         fragile: bool = False,
+    |         ^^^^^^^ FBT001
+206 |     ) -> str:
+207 |         """
+    |
+
+src/twat_fs/cli.py:205:9: FBT002 Boolean default positional argument in function definition
+    |
+203 |         force: bool = False,
+204 |         remote_path: str | None = None,
+205 |         fragile: bool = False,
+    |         ^^^^^^^ FBT002
+206 |     ) -> str:
+207 |         """
+    |
+
+src/twat_fs/upload.py:57:5: C901 `_test_provider_online` is too complex (19 > 10)
+   |
+57 | def _test_provider_online(
+   |     ^^^^^^^^^^^^^^^^^^^^^ C901
+58 |     provider_name: str,
+59 | ) -> tuple[bool, str, dict[str, float] | None]:
+   |
+
+src/twat_fs/upload.py:57:5: PLR0911 Too many return statements (11 > 6)
+   |
+57 | def _test_provider_online(
+   |     ^^^^^^^^^^^^^^^^^^^^^ PLR0911
+58 |     provider_name: str,
+59 | ) -> tuple[bool, str, dict[str, float] | None]:
+   |
+
+src/twat_fs/upload.py:57:5: PLR0912 Too many branches (21 > 12)
+   |
+57 | def _test_provider_online(
+   |     ^^^^^^^^^^^^^^^^^^^^^ PLR0912
+58 |     provider_name: str,
+59 | ) -> tuple[bool, str, dict[str, float] | None]:
+   |
+
+src/twat_fs/upload.py:57:5: PLR0915 Too many statements (73 > 50)
+   |
+57 | def _test_provider_online(
+   |     ^^^^^^^^^^^^^^^^^^^^^ PLR0915
+58 |     provider_name: str,
+59 | ) -> tuple[bool, str, dict[str, float] | None]:
+   |
+
+src/twat_fs/upload.py:250:5: C901 `setup_provider` is too complex (13 > 10)
+    |
+250 | def setup_provider(
+    |     ^^^^^^^^^^^^^^ C901
+251 |     provider: str, verbose: bool = False, online: bool = False
+252 | ) -> ProviderInfo:
+    |
+
+src/twat_fs/upload.py:250:5: PLR0911 Too many return statements (7 > 6)
+    |
+250 | def setup_provider(
+    |     ^^^^^^^^^^^^^^ PLR0911
+251 |     provider: str, verbose: bool = False, online: bool = False
+252 | ) -> ProviderInfo:
+    |
+
+src/twat_fs/upload.py:250:5: PLR0912 Too many branches (14 > 12)
+    |
+250 | def setup_provider(
+    |     ^^^^^^^^^^^^^^ PLR0912
+251 |     provider: str, verbose: bool = False, online: bool = False
+252 | ) -> ProviderInfo:
+    |
+
+src/twat_fs/upload.py:251:20: FBT001 Boolean-typed positional argument in function definition
+    |
+250 | def setup_provider(
+251 |     provider: str, verbose: bool = False, online: bool = False
+    |                    ^^^^^^^ FBT001
+252 | ) -> ProviderInfo:
+253 |     """
+    |
+
+src/twat_fs/upload.py:251:20: FBT002 Boolean default positional argument in function definition
+    |
+250 | def setup_provider(
+251 |     provider: str, verbose: bool = False, online: bool = False
+    |                    ^^^^^^^ FBT002
+252 | ) -> ProviderInfo:
+253 |     """
+    |
+
+src/twat_fs/upload.py:251:43: FBT001 Boolean-typed positional argument in function definition
+    |
+250 | def setup_provider(
+251 |     provider: str, verbose: bool = False, online: bool = False
+    |                                           ^^^^^^ FBT001
+252 | ) -> ProviderInfo:
+253 |     """
+    |
+
+src/twat_fs/upload.py:251:43: FBT002 Boolean default positional argument in function definition
+    |
+250 | def setup_provider(
+251 |     provider: str, verbose: bool = False, online: bool = False
+    |                                           ^^^^^^ FBT002
+252 | ) -> ProviderInfo:
+253 |     """
+    |
+
+src/twat_fs/upload.py:268:17: FBT003 Boolean positional value in function call
+    |
+266 |         if provider.lower() == "simple":
+267 |             return ProviderInfo(
+268 |                 False,
+    |                 ^^^^^ FBT003
+269 |                 f"Provider '{provider}' is not available.",
+270 |                 {},
+    |
+
+src/twat_fs/upload.py:279:21: FBT003 Boolean positional value in function call
+    |
+277 |             if not help_info:
+278 |                 return ProviderInfo(
+279 |                     False,
+    |                     ^^^^^ FBT003
+280 |                     f"Provider '{provider}' is not available.",
+281 |                     {},
+    |
+
+src/twat_fs/upload.py:285:17: FBT003 Boolean positional value in function call
+    |
+283 |             setup_info = help_info.get("setup", "")
+284 |             return ProviderInfo(
+285 |                 False,
+    |                 ^^^^^ FBT003
+286 |                 f"Provider '{provider}' is not available.",
+287 |                 {"setup": setup_info},
+    |
+
+src/twat_fs/upload.py:306:21: FBT003 Boolean positional value in function call
+    |
+304 |                 setup_info = help_info.get("setup", "") if help_info else ""
+305 |                 return ProviderInfo(
+306 |                     False,
+    |                     ^^^^^ FBT003
+307 |                     f"Provider '{provider}' needs configuration.",
+308 |                     {"setup": setup_info},
+    |
+
+src/twat_fs/upload.py:329:21: FBT003 Boolean positional value in function call
+    |
+327 |             if (has_async and has_sync) or has_sync:
+328 |                 provider_info = ProviderInfo(
+329 |                     True,
+    |                     ^^^^ FBT003
+330 |                     f"{provider} ({type(client).__name__})"
+331 |                     + (f" - {retention_note}" if retention_note else ""),
+    |
+
+src/twat_fs/upload.py:337:21: FBT003 Boolean positional value in function call
+    |
+335 |                 setup_info = help_info.get("setup", "") if help_info else ""
+336 |                 provider_info = ProviderInfo(
+337 |                     False,
+    |                     ^^^^^ FBT003
+338 |                     f"Provider '{provider}' needs configuration.",
+339 |                     {"setup": setup_info},
+    |
+
+src/twat_fs/upload.py:346:25: FBT003 Boolean positional value in function call
+    |
+344 |                 if not online_status:
+345 |                     provider_info = ProviderInfo(
+346 |                         False,
+    |                         ^^^^^ FBT003
+347 |                         message,
+348 |                         provider_info.help_info,
+    |
+
+src/twat_fs/upload.py:366:17: FBT003 Boolean positional value in function call
+    |
+364 |             setup_info = help_info.get("setup", "") if help_info else ""
+365 |             return ProviderInfo(
+366 |                 False,
+    |                 ^^^^^ FBT003
+367 |                 f"Provider '{provider}' setup failed: {e}",
+368 |                 {"setup": setup_info},
+    |
+
+src/twat_fs/upload.py:374:13: FBT003 Boolean positional value in function call
+    |
+372 |         logger.error(f"Unexpected error setting up provider {provider}: {e}")
+373 |         return ProviderInfo(
+374 |             False,
+    |             ^^^^^ FBT003
+375 |             f"Provider '{provider}' failed: {e}",
+376 |             {},
+    |
+
+src/twat_fs/upload.py:381:5: FBT001 Boolean-typed positional argument in function definition
+    |
+380 | def setup_providers(
+381 |     verbose: bool = False, online: bool = False
+    |     ^^^^^^^ FBT001
+382 | ) -> dict[str, ProviderInfo]:
+383 |     """
+    |
+
+src/twat_fs/upload.py:381:5: FBT002 Boolean default positional argument in function definition
+    |
+380 | def setup_providers(
+381 |     verbose: bool = False, online: bool = False
+    |     ^^^^^^^ FBT002
+382 | ) -> dict[str, ProviderInfo]:
+383 |     """
+    |
+
+src/twat_fs/upload.py:381:28: FBT001 Boolean-typed positional argument in function definition
+    |
+380 | def setup_providers(
+381 |     verbose: bool = False, online: bool = False
+    |                            ^^^^^^ FBT001
+382 | ) -> dict[str, ProviderInfo]:
+383 |     """
+    |
+
+src/twat_fs/upload.py:381:28: FBT002 Boolean default positional argument in function definition
+    |
+380 | def setup_providers(
+381 |     verbose: bool = False, online: bool = False
+    |                            ^^^^^^ FBT002
+382 | ) -> dict[str, ProviderInfo]:
+383 |     """
+    |
+
+src/twat_fs/upload.py:411:5: PLR0913 Too many arguments in function definition (6 > 5)
+    |
+411 | def _try_upload_with_provider(
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^ PLR0913
+412 |     provider_name: str,
+413 |     file_path: str | Path,
+    |
+
+src/twat_fs/upload.py:550:5: PLR0913 Too many arguments in function definition (8 > 5)
+    |
+550 | def _try_next_provider(
+    |     ^^^^^^^^^^^^^^^^^^ PLR0913
+551 |     remaining_providers: Sequence[str],
+552 |     file_path: str | Path,
+    |
+
+src/twat_fs/upload.py:619:5: PLR0913 Too many arguments in function definition (7 > 5)
+    |
+617 |     exceptions=(RetryableError,),  # Only retry on RetryableError
+618 | )
+619 | def upload_file(
+    |     ^^^^^^^^^^^ PLR0913
+620 |     file_path: str | Path,
+621 |     provider: str | Sequence[str] | None = None,
+    |
+
+src/twat_fs/upload.py:687:13: B904 Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling
+    |
+685 |         if fragile or len(providers) == 1:
+686 |             msg = f"Provider {providers[0]} failed: {e}"
+687 |             raise NonRetryableError(msg, providers[0])
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ B904
+688 |
+689 |         # Try remaining providers with circular fallback
+    |
+
+src/twat_fs/upload.py:703:5: PLR0913 Too many arguments in function definition (7 > 5)
+    |
+703 | def _try_upload_with_fallback(
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^ PLR0913
+704 |     provider: str,
+705 |     local_path: str | Path,
+    |
+
+src/twat_fs/upload_providers/__init__.py:11:20: F401 `loguru.logger` imported but unused
+   |
+ 9 | from typing import TYPE_CHECKING
+10 |
+11 | from loguru import logger
+   |                    ^^^^^^ F401
+12 |
+13 | from twat_fs.upload_providers.core import RetryableError, NonRetryableError, UploadError
+   |
+   = help: Remove unused import: `loguru.logger`
+
+src/twat_fs/upload_providers/__init__.py:19:25: F401 `pathlib.Path` imported but unused
+   |
+18 | if TYPE_CHECKING:
+19 |     from pathlib import Path
+   |                         ^^^^ F401
+20 |
+21 | # List of available providers in order of preference
+   |
+   = help: Remove unused import: `pathlib.Path`
+
+src/twat_fs/upload_providers/core.py:163:13: S101 Use of `assert` detected
+    |
+161 |                     time.sleep(delay)
+162 |
+163 |             assert last_exception is not None  # for type checker
+    |             ^^^^^^ S101
+164 |             raise last_exception
+    |
+
+src/twat_fs/upload_providers/core.py:206:13: S101 Use of `assert` detected
+    |
+204 |                     await asyncio.sleep(delay)
+205 |
+206 |             assert last_exception is not None  # for type checker
+    |             ^^^^^^ S101
+207 |             raise last_exception
+    |
+
+src/twat_fs/upload_providers/dropbox.py:123:11: ARG002 Unused method argument: `kwargs`
+    |
+121 |         unique: bool = False,
+122 |         upload_path: str | None = DEFAULT_UPLOAD_PATH,
+123 |         **kwargs: Any,
+    |           ^^^^^^ ARG002
+124 |     ) -> UploadResult:
+125 |         """
+    |
+
+src/twat_fs/upload_providers/fal.py:51:25: RUF012 Mutable class attributes should be annotated with `typing.ClassVar`
+   |
+50 |     # Environment variables
+51 |     REQUIRED_ENV_VARS = ["FAL_KEY"]
+   |                         ^^^^^^^^^^^ RUF012
+52 |     OPTIONAL_ENV_VARS: list[str] = []
+   |
+
+src/twat_fs/upload_providers/fal.py:52:36: RUF012 Mutable class attributes should be annotated with `typing.ClassVar`
+   |
+50 |     # Environment variables
+51 |     REQUIRED_ENV_VARS = ["FAL_KEY"]
+52 |     OPTIONAL_ENV_VARS: list[str] = []
+   |                                    ^^ RUF012
+53 |
+54 |     def __init__(self, key: str) -> None:
+   |
+
+src/twat_fs/upload_providers/fal.py:67:13: B904 Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling
+   |
+65 |             logger.error(f"Failed to create FAL client: {e}")
+66 |             msg = f"Failed to create FAL client: {e}"
+67 |             raise NonRetryableError(msg, self.provider_name)
+   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ B904
+68 |
+69 |     @classmethod
+   |
+
+src/twat_fs/upload_providers/litterbox.py:223:9: PLR0913 Too many arguments in function definition (6 > 5)
+    |
+221 |             raise
+222 |
+223 |     def upload_file(
+    |         ^^^^^^^^^^^ PLR0913
+224 |         self,
+225 |         local_path: str | Path,
+    |
+
+src/twat_fs/upload_providers/litterbox.py:300:5: PLR0913 Too many arguments in function definition (6 > 5)
+    |
+300 | def upload_file(
+    |     ^^^^^^^^^^^ PLR0913
+301 |     local_path: str | Path,
+302 |     remote_path: str | Path | None = None,
+    |
+
+src/twat_fs/upload_providers/s3.py:182:11: ARG002 Unused method argument: `kwargs`
+    |
+180 |         file: BinaryIO,
+181 |         remote_path: str | Path | None = None,
+182 |         **kwargs: Any,
+    |           ^^^^^^ ARG002
+183 |     ) -> UploadResult:
+184 |         """
+    |
+
+src/twat_fs/upload_providers/simple.py:78:9: ARG002 Unused method argument: `remote_path`
+   |
+76 |         self,
+77 |         local_path: str | Path,
+78 |         remote_path: str | Path | None = None,
+   |         ^^^^^^^^^^^ ARG002
+79 |         *,
+80 |         unique: bool = False,
+   |
+
+src/twat_fs/upload_providers/simple.py:80:9: ARG002 Unused method argument: `unique`
+   |
+78 |         remote_path: str | Path | None = None,
+79 |         *,
+80 |         unique: bool = False,
+   |         ^^^^^^ ARG002
+81 |         force: bool = False,
+82 |         upload_path: str | None = None,
+   |
+
+src/twat_fs/upload_providers/simple.py:81:9: ARG002 Unused method argument: `force`
+   |
+79 |         *,
+80 |         unique: bool = False,
+81 |         force: bool = False,
+   |         ^^^^^ ARG002
+82 |         upload_path: str | None = None,
+83 |         **kwargs: Any,
+   |
+
+src/twat_fs/upload_providers/simple.py:82:9: ARG002 Unused method argument: `upload_path`
+   |
+80 |         unique: bool = False,
+81 |         force: bool = False,
+82 |         upload_path: str | None = None,
+   |         ^^^^^^^^^^^ ARG002
+83 |         **kwargs: Any,
+84 |     ) -> UploadResult:
+   |
+
+src/twat_fs/upload_providers/simple.py:83:11: ARG002 Unused method argument: `kwargs`
+   |
+81 |         force: bool = False,
+82 |         upload_path: str | None = None,
+83 |         **kwargs: Any,
+   |           ^^^^^^ ARG002
+84 |     ) -> UploadResult:
+85 |         """
+   |
+
+src/twat_fs/upload_providers/simple.py:123:9: ARG002 Unused method argument: `remote_path`
+    |
+121 |         self,
+122 |         file_path: str | Path,
+123 |         remote_path: str | Path | None = None,
+    |         ^^^^^^^^^^^ ARG002
+124 |         *,
+125 |         unique: bool = False,
+    |
+
+src/twat_fs/upload_providers/simple.py:125:9: ARG002 Unused method argument: `unique`
+    |
+123 |         remote_path: str | Path | None = None,
+124 |         *,
+125 |         unique: bool = False,
+    |         ^^^^^^ ARG002
+126 |         force: bool = False,
+127 |         upload_path: str | None = None,
+    |
+
+src/twat_fs/upload_providers/simple.py:126:9: ARG002 Unused method argument: `force`
+    |
+124 |         *,
+125 |         unique: bool = False,
+126 |         force: bool = False,
+    |         ^^^^^ ARG002
+127 |         upload_path: str | None = None,
+128 |         **kwargs: Any,
+    |
+
+src/twat_fs/upload_providers/simple.py:127:9: ARG002 Unused method argument: `upload_path`
+    |
+125 |         unique: bool = False,
+126 |         force: bool = False,
+127 |         upload_path: str | None = None,
+    |         ^^^^^^^^^^^ ARG002
+128 |         **kwargs: Any,
+129 |     ) -> Coroutine[Any, Any, UploadResult]:
+    |
+
+src/twat_fs/upload_providers/simple.py:128:11: ARG002 Unused method argument: `kwargs`
+    |
+126 |         force: bool = False,
+127 |         upload_path: str | None = None,
+128 |         **kwargs: Any,
+    |           ^^^^^^ ARG002
+129 |     ) -> Coroutine[Any, Any, UploadResult]:
+130 |         """
+    |
+
+src/twat_fs/upload_providers/types.py:1:1: A005 Module `types` shadows a Python standard-library module
+src/twat_fs/upload_providers/utils.py:251:5: FBT001 Boolean-typed positional argument in function definition
+    |
+249 |     provider_name: str,
+250 |     file_path: str | Path,
+251 |     success: bool,
+    |     ^^^^^^^ FBT001
+252 |     error: Exception | None = None,
+253 | ) -> None:
+    |
+
+tests/test_s3_advanced.py:55:27: ARG004 Unused static method argument: `args`
+   |
+54 |         @staticmethod
+55 |         def get_provider(*args: Any, **kwargs: Any) -> MockS3Provider:
+   |                           ^^^^ ARG004
+56 |             """Mock get_provider function."""
+57 |             return MockS3Provider()
+   |
+
+tests/test_s3_advanced.py:55:40: ARG004 Unused static method argument: `kwargs`
+   |
+54 |         @staticmethod
+55 |         def get_provider(*args: Any, **kwargs: Any) -> MockS3Provider:
+   |                                        ^^^^^^ ARG004
+56 |             """Mock get_provider function."""
+57 |             return MockS3Provider()
+   |
+
+tests/test_s3_advanced.py:65:26: ARG004 Unused static method argument: `args`
+   |
+64 |         @staticmethod
+65 |         def upload_file(*args: Any, **kwargs: Any) -> str:
+   |                          ^^^^ ARG004
+66 |             """Mock upload_file function."""
+67 |             return "https://mock-s3-url.com/test.txt"
+   |
+
+tests/test_s3_advanced.py:65:39: ARG004 Unused static method argument: `kwargs`
+   |
+64 |         @staticmethod
+65 |         def upload_file(*args: Any, **kwargs: Any) -> str:
+   |                                       ^^^^^^ ARG004
+66 |             """Mock upload_file function."""
+67 |             return "https://mock-s3-url.com/test.txt"
+   |
+
+tests/test_s3_advanced.py:76:19: S105 Possible hardcoded password assigned to: "TEST_SECRET_KEY"
+   |
+74 | TEST_BUCKET = "test-bucket"
+75 | TEST_ACCESS_KEY = "test_key"
+76 | TEST_SECRET_KEY = "test_secret"
+   |                   ^^^^^^^^^^^^^ S105
+77 |
+78 | # Test data
+   |
+
+tests/test_upload.py:415:9: ARG002 Unused method argument: `mock_dropbox_provider`
+    |
+413 |         test_file: Path,
+414 |         mock_s3_provider: MagicMock,
+415 |         mock_dropbox_provider: MagicMock,
+    |         ^^^^^^^^^^^^^^^^^^^^^ ARG002
+416 |     ) -> None:
+417 |         """Test fallback to next provider on auth failure."""
+    |
+
+tests/test_upload.py:513:32: ARG002 Unused method argument: `mock_s3_provider`
+    |
+512 |     def test_upload_with_s3_provider(
+513 |         self, test_file: Path, mock_s3_provider: MagicMock
+    |                                ^^^^^^^^^^^^^^^^ ARG002
+514 |     ) -> None:
+515 |         """Test upload with S3 provider."""
+    |
+
+tests/test_upload.py:539:32: ARG002 Unused method argument: `mock_s3_provider`
+    |
+538 |     def test_s3_upload_failure(
+539 |         self, test_file: Path, mock_s3_provider: MagicMock
+    |                                ^^^^^^^^^^^^^^^^ ARG002
+540 |     ) -> None:
+541 |         """Test S3 upload failure."""
+    |
+
+tests/test_utils.py:104:55: ARG002 Unused method argument: `mock_access`
+    |
+103 |     @mock.patch("os.access", return_value=False)
+104 |     def test_validate_file_with_unreadable_file(self, mock_access):
+    |                                                       ^^^^^^^^^^^ ARG002
+105 |         """Test that validate_file raises PermissionError for unreadable files."""
+106 |         with tempfile.NamedTemporaryFile(delete=False) as temp_file:
+    |
+
+tests/test_utils.py:340:62: FBT003 Boolean positional value in function call
+    |
+338 |     def test_log_upload_attempt_success(self, mock_logger_info):
+339 |         """Test that log_upload_attempt logs success correctly."""
+340 |         log_upload_attempt("test_provider", "test_file.txt", True)
+    |                                                              ^^^^ FBT003
+341 |
+342 |         mock_logger_info.assert_called_once()
+    |
+
+tests/test_utils.py:349:62: FBT003 Boolean positional value in function call
+    |
+347 |         """Test that log_upload_attempt logs failure correctly."""
+348 |         error = Exception("Test error")
+349 |         log_upload_attempt("test_provider", "test_file.txt", False, error)
+    |                                                              ^^^^^ FBT003
+350 |
+351 |         mock_logger_error.assert_called_once()
+    |
+
+Found 81 errors.
+
+2025-03-05 12:14:48 - 3 files reformatted, 28 files left unchanged
+
+2025-03-05 12:14:48 - >>>Running type checks...
+2025-03-05 12:15:01 - src/twat_fs/paths.py:45: error: Returning Any from function declared to return "Path"  [no-any-return]
+src/twat_fs/paths.py:62: error: Returning Any from function declared to return "Path"  [no-any-return]
+src/twat_fs/paths.py:79: error: Returning Any from function declared to return "Path"  [no-any-return]
+src/twat_fs/upload_providers/factory.py:42: error: Returning Any from function declared to return "Provider | None"  [no-any-return]
+src/twat_fs/upload_providers/factory.py:118: error: Incompatible types in assignment (expression has type Module, variable has type "Provider | None")  [assignment]
+src/twat_fs/upload_providers/async_utils.py:197: error: Returning Any from function declared to return "list[T_co | BaseException]"  [no-any-return]
+src/twat_fs/upload_providers/simple.py:118: error: Argument 1 to "with_url_validation" has incompatible type "Callable[[BaseProvider, str | Path, str | Path | None, DefaultNamedArg(bool, 'unique'), DefaultNamedArg(bool, 'force'), DefaultNamedArg(str | None, 'upload_path'), KwArg(Any)], Awaitable[Coroutine[Any, Any, UploadResult]]]"; expected "Callable[[BaseProvider, str | Path, str | Path | None, DefaultNamedArg(bool, 'unique'), DefaultNamedArg(bool, 'force'), DefaultNamedArg(str | None, 'upload_path'), KwArg(Any)], Awaitable[str | UploadResult]]"  [arg-type]
+src/twat_fs/upload_providers/simple.py:120: error: Return type "Awaitable[UploadResult]" of "async_upload_file" incompatible with return type "Coroutine[Any, Any, Coroutine[Any, Any, UploadResult]]" in supertype "Provider"  [override]
+src/twat_fs/upload_providers/simple.py:156: error: Incompatible return value type (got "UploadResult", expected "Coroutine[Any, Any, UploadResult]")  [return-value]
+src/twat_fs/upload_providers/simple.py:237: error: Need type annotation for "sync_upload"  [var-annotated]
+src/twat_fs/upload_providers/simple.py:237: error: Argument 1 to "to_sync" has incompatible type "Callable[[str | Path, str | Path | None, DefaultNamedArg(bool, 'unique'), DefaultNamedArg(bool, 'force'), DefaultNamedArg(str | None, 'upload_path'), KwArg(Any)], Awaitable[UploadResult]]"; expected "Callable[[str | Path, str | Path | None, DefaultNamedArg(bool, 'unique'), DefaultNamedArg(bool, 'force'), DefaultNamedArg(str | None, 'upload_path'), KwArg(Any)], Coroutine[Any, Any, Never]]"  [arg-type]
+src/twat_fs/upload_providers/simple.py:238: error: Returning Any from function declared to return "UploadResult"  [no-any-return]
+src/twat_fs/upload_providers/simple.py:261: error: Need type annotation for "sync_upload"  [var-annotated]
+src/twat_fs/upload_providers/simple.py:261: error: Argument 1 to "to_sync" has incompatible type "Callable[[str | Path, str | Path | None, DefaultNamedArg(bool, 'unique'), DefaultNamedArg(bool, 'force'), DefaultNamedArg(str | None, 'upload_path'), KwArg(Any)], Awaitable[UploadResult]]"; expected "Callable[[str | Path, str | Path | None, DefaultNamedArg(bool, 'unique'), DefaultNamedArg(bool, 'force'), DefaultNamedArg(str | None, 'upload_path'), KwArg(Any)], Coroutine[Any, Any, Never]]"  [arg-type]
+src/twat_fs/upload_providers/simple.py:262: error: Returning Any from function declared to return "UploadResult"  [no-any-return]
+src/twat_fs/upload_providers/simple.py:273: error: Return type "Coroutine[Any, Any, UploadResult]" of "async_upload_file" incompatible with return type "Coroutine[Any, Any, Coroutine[Any, Any, UploadResult]]" in supertype "Provider"  [override]
+src/twat_fs/upload_providers/uguu.py:71: error: Returning Any from function declared to return "str"  [no-any-return]
+src/twat_fs/upload_providers/litterbox.py:48: error: Cannot override instance variable (previously declared on base class "Provider") with class variable  [misc]
+src/twat_fs/upload_providers/dropbox.py:302: error: Returning Any from function declared to return "dict[str, Any] | None"  [no-any-return]
+src/twat_fs/cli.py:138: error: Incompatible types in assignment (expression has type "str", variable has type "Status")  [assignment]
+src/twat_fs/cli.py:147: error: Incompatible types in assignment (expression has type "str", variable has type "float")  [assignment]
+src/twat_fs/cli.py:152: error: Incompatible types in assignment (expression has type "str", variable has type "float")  [assignment]
+src/twat_fs/cli.py:157: error: Argument 1 to "add_row" of "Table" has incompatible type "*list[object]"; expected "ConsoleRenderable | RichCast | str | None"  [arg-type]
+src/twat_fs/upload_providers/s3.py:62: error: Cannot override instance variable (previously declared on base class "Provider") with class variable  [misc]
+src/twat_fs/upload_providers/s3.py:87: error: Cannot assign to class variable "provider_name" via instance  [misc]
+tests/test_upload.py:24: error: Name "ClientError" already defined (possibly by an import)  [no-redef]
+tests/test_s3_advanced.py:27: error: Name "ClientError" already defined on line 24  [no-redef]
+tests/test_s3_advanced.py:70: error: Incompatible types in assignment (expression has type "MockS3Module", variable has type Module)  [assignment]
+Found 28 errors in 11 files (checked 32 source files)
+
+2025-03-05 12:15:01 - >>> Running tests...
+2025-03-05 12:15:04 - ============================= test session starts ==============================
+platform darwin -- Python 3.12.8, pytest-8.3.5, pluggy-1.5.0 -- /Users/adam/Developer/vcs/github.twardoch/pub/twat-packages/_good/twat/plugins/repos/twat_fs/.venv/bin/python
+cachedir: .pytest_cache
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+rootdir: /Users/adam/Developer/vcs/github.twardoch/pub/twat-packages/_good/twat/plugins/repos/twat_fs
+configfile: pyproject.toml
+plugins: cov-6.0.0, asyncio-0.25.3, anyio-4.8.0, benchmark-5.1.0, timeout-2.3.1, mock-3.14.0, typeguard-4.4.2
+asyncio: mode=Mode.AUTO, asyncio_default_fixture_loop_scope=function
+collecting ... collected 9 items / 5 errors
+
+==================================== ERRORS ====================================
+__________________ ERROR collecting tests/test_async_utils.py __________________
+ImportError while importing test module '/Users/adam/Developer/vcs/github.twardoch/pub/twat-packages/_good/twat/plugins/repos/twat_fs/tests/test_async_utils.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_async_utils.py:12: in <module>
+    from twat_fs.upload_providers.async_utils import (
+src/twat_fs/__init__.py:19: in <module>
+    from twat_fs.cli import main, setup_provider, setup_providers, upload_file
+src/twat_fs/cli.py:21: in <module>
+    from twat_fs.upload import (
+src/twat_fs/upload.py:20: in <module>
+    from twat_fs.upload_providers import (
+src/twat_fs/upload_providers/__init__.py:13: in <module>
+    from twat_fs.upload_providers.core import RetryableError, NonRetryableError, UploadError
+src/twat_fs/upload_providers/core.py:25: in <module>
+    from twat_cache import ucache
+E   ModuleNotFoundError: No module named 'twat_cache'
+______________ ERROR collecting tests/test_filebin_pixeldrain.py _______________
+ImportError while importing test module '/Users/adam/Developer/vcs/github.twardoch/pub/twat-packages/_good/twat/plugins/repos/twat_fs/tests/test_filebin_pixeldrain.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_filebin_pixeldrain.py:14: in <module>
+    from twat_fs.upload_providers import filebin, pixeldrain
+src/twat_fs/__init__.py:19: in <module>
+    from twat_fs.cli import main, setup_provider, setup_providers, upload_file
+src/twat_fs/cli.py:21: in <module>
+    from twat_fs.upload import (
+src/twat_fs/upload.py:20: in <module>
+    from twat_fs.upload_providers import (
+src/twat_fs/upload_providers/__init__.py:13: in <module>
+    from twat_fs.upload_providers.core import RetryableError, NonRetryableError, UploadError
+src/twat_fs/upload_providers/core.py:25: in <module>
+    from twat_cache import ucache
+E   ModuleNotFoundError: No module named 'twat_cache'
+__________________ ERROR collecting tests/test_integration.py __________________
+ImportError while importing test module '/Users/adam/Developer/vcs/github.twardoch/pub/twat-packages/_good/twat/plugins/repos/twat_fs/tests/test_integration.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_integration.py:15: in <module>
+    from twat_fs.upload import setup_provider, setup_providers, upload_file
+src/twat_fs/__init__.py:19: in <module>
+    from twat_fs.cli import main, setup_provider, setup_providers, upload_file
+src/twat_fs/cli.py:21: in <module>
+    from twat_fs.upload import (
+src/twat_fs/upload.py:20: in <module>
+    from twat_fs.upload_providers import (
+src/twat_fs/upload_providers/__init__.py:13: in <module>
+    from twat_fs.upload_providers.core import RetryableError, NonRetryableError, UploadError
+src/twat_fs/upload_providers/core.py:25: in <module>
+    from twat_cache import ucache
+E   ModuleNotFoundError: No module named 'twat_cache'
+____________________ ERROR collecting tests/test_upload.py _____________________
+ImportError while importing test module '/Users/adam/Developer/vcs/github.twardoch/pub/twat-packages/_good/twat/plugins/repos/twat_fs/tests/test_upload.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_upload.py:28: in <module>
+    from twat_fs.upload import (
+src/twat_fs/__init__.py:19: in <module>
+    from twat_fs.cli import main, setup_provider, setup_providers, upload_file
+src/twat_fs/cli.py:21: in <module>
+    from twat_fs.upload import (
+src/twat_fs/upload.py:20: in <module>
+    from twat_fs.upload_providers import (
+src/twat_fs/upload_providers/__init__.py:13: in <module>
+    from twat_fs.upload_providers.core import RetryableError, NonRetryableError, UploadError
+src/twat_fs/upload_providers/core.py:25: in <module>
+    from twat_cache import ucache
+E   ModuleNotFoundError: No module named 'twat_cache'
+_____________________ ERROR collecting tests/test_utils.py _____________________
+ImportError while importing test module '/Users/adam/Developer/vcs/github.twardoch/pub/twat-packages/_good/twat/plugins/repos/twat_fs/tests/test_utils.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_utils.py:16: in <module>
+    from twat_fs.upload_providers.utils import (
+src/twat_fs/__init__.py:19: in <module>
+    from twat_fs.cli import main, setup_provider, setup_providers, upload_file
+src/twat_fs/cli.py:21: in <module>
+    from twat_fs.upload import (
+src/twat_fs/upload.py:20: in <module>
+    from twat_fs.upload_providers import (
+src/twat_fs/upload_providers/__init__.py:13: in <module>
+    from twat_fs.upload_providers.core import RetryableError, NonRetryableError, UploadError
+src/twat_fs/upload_providers/core.py:25: in <module>
+    from twat_cache import ucache
+E   ModuleNotFoundError: No module named 'twat_cache'
+=========================== short test summary info ============================
+ERROR tests/test_async_utils.py
+ERROR tests/test_filebin_pixeldrain.py
+ERROR tests/test_integration.py
+ERROR tests/test_upload.py
+ERROR tests/test_utils.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 5 errors during collection !!!!!!!!!!!!!!!!!!!!
+============================== 5 errors in 1.56s ===============================
+
+2025-03-05 12:15:04 - All checks completed
+2025-03-05 12:15:04 - 
+=== TODO.md ===
+2025-03-05 12:15:04 - ---
+this_file: TODO.md
+---
+
+# TODO
+
+Tip: Periodically run `python ./cleanup.py status` to see results of lints and tests. Use `uv pip ...` not `pip ...`
+
+## High Priority
+
+- [ ] Fix missing dependencies for tests
+  - [ ] Install missing dependencies for tests or implement proper test skipping
+    - Issue: ModuleNotFoundError for 'fal_client', 'botocore', 'responses'
+    - Fix: Add `uv pip install 'twat-fs[test,dev]'` or implement conditional imports with proper test skipping
+    - Affected files:
+      - `tests/test_integration.py`: Needs 'fal_client'
+      - `tests/test_s3_advanced.py`: Needs 'botocore'
+      - `tests/test_upload.py`: Needs 'botocore'
+
+- [ ] Fix failing unit tests
+  - [ ] Fix `TestLogUploadAttempt.test_log_upload_attempt_success` test
+    - Issue: logger.info is not being called in the log_upload_attempt function
+    - Fix: Implement proper logger.info call in the success branch
+  - [ ] Fix `TestGatherWithConcurrency.test_gather_with_concurrency_with_exceptions` test
+    - Issue: Test is failing with RuntimeError instead of ValueError
+    - Fix: Ensure the correct exception type is propagated in gather_with_concurrency
+
+- [ ] Fix boolean argument issues
+  - [ ] Fix FBT001/FBT002 linter errors for boolean positional arguments
+    - Issue: Boolean-typed positional arguments in function definitions
+    - Fix: Convert boolean positional arguments to keyword-only arguments
+    - Affected files:
+      - `utils.py` line 251: `log_upload_attempt` function
+      - `upload.py` lines 251, 381: `setup_provider` and `setup_providers` functions
+      - `cli.py` lines 202, 203, 205: `upload` method
+  - [ ] Fix FBT003 linter errors for boolean positional values in function calls
+    - Affected files:
+      - `upload.py` multiple instances in `ProviderInfo` instantiation
+      - `test_utils.py` lines 340, 349: `log_upload_attempt` calls
+
+- [ ] Fix type annotation issues
+  - [ ] Fix incompatible return types in async methods
+    - Issue: Return type mismatches in async functions
+    - Affected files:
+      - `simple.py` lines 120, 156, 273: Return type incompatibilities
+  - [ ] Fix type mismatches in factory.py
+    - Issue: Incompatible types in assignment (expression has type Module, variable has type "Provider | None")
+  - [ ] Fix missing type annotations
+    - Issue: Need type annotation for variables
+    - Affected files:
+      - `simple.py` lines 237, 261: Missing type annotations for "sync_upload"
+
+## Medium Priority
+
+- [ ] Fix exception handling issues
+  - [ ] Fix B904 linter errors (raise with from)
+    - Issue: Within an `except` clause, raise exceptions with `raise ... from err`
+    - Affected files:
+      - `upload.py` line 687
+      - `fal.py` line 67
+  - [ ] Fix S101 linter errors (use of assert)
+    - Affected files:
+      - `core.py` lines 168, 214
+
+- [ ] Fix unused arguments and imports
+  - [ ] Fix ARG002 linter errors (unused method arguments)
+    - Affected files:
+      - `dropbox.py` line 124: Unused `kwargs`
+      - `s3.py` line 182: Unused `kwargs`
+      - `simple.py` multiple instances: Unused arguments
+  - [ ] Fix F401 linter errors (unused imports)
+    - Affected files:
+      - `__init__.py` lines 11, 19: Unused imports
+
+- [ ] Fix function complexity issues
+  - [ ] Refactor functions with too many arguments (PLR0913)
+    - Affected files:
+      - `cli.py` line 198: `upload` method
+      - `upload.py` lines 411, 550, 619, 703: Multiple functions
+      - `litterbox.py` lines 223, 300: `upload_file` functions
+  - [ ] Refactor complex functions (C901)
+    - Affected files:
+      - `upload.py` lines 57, 250: `_test_provider_online` and `setup_provider` functions
+  - [ ] Fix functions with too many branches/statements/returns (PLR0911, PLR0912, PLR0915)
+    - Affected files:
+      - `upload.py` lines 57, 250: Multiple complexity issues
+
+## Low Priority
+
+- [ ] Fix linter issues in `cleanup.py`
+  - [ ] Address DTZ005: datetime.datetime.now() called without a tz argument
+  - [ ] Fix S603/S607: Subprocess call security issues
+
+- [ ] Update `pyproject.toml` to fix deprecated linter settings
+  - [ ] Update ruff configuration
+  - [ ] Add explicit Python version targets
+  - [ ] Configure mypy settings
+
+- [ ] Fix RUF012 linter errors (mutable class attributes)
+  - Affected files:
+    - `fal.py` lines 51, 52: Mutable class attributes should be annotated with `typing.ClassVar`
+
+- [ ] Fix A005 linter error (module shadows standard library)
+  - Affected files:
+    - `types.py` line 1: Module `types` shadows a Python standard-library module
+
+- [ ] Fix S105 linter error (possible hardcoded password)
+  - Affected files:
+    - `test_s3_advanced.py` line 21: Hardcoded "TEST_SECRET_KEY"
+
+## Documentation
+
+- [ ] Document best practices for creating new providers
+  - [ ] Create comprehensive provider development guide
+  - [ ] Add examples for common provider patterns
+
+- [ ] Update API documentation with latest changes
+
+- [ ] Create troubleshooting guide for common issues
+
+## New Providers
+
+- [ ] Add support for Imgur
+- [ ] Add support for Cloudinary
+- [ ] Add support for Google Drive
+- [ ] Add support for OneDrive
+- [ ] Add support for Box
+- [ ] Add support for Mega
+- [ ] Add support for Backblaze B2
+- [ ] Add support for Wasabi
+
+## Completed Tasks
+
+- [x] Fix `TestCreateProviderInstance` tests
+- [x] Fix `TestGatherWithConcurrency` tests
+- [x] Create `utils.py` module for shared functionality
+- [x] Refactor provider modules to use `utils.py`
+- [x] Create provider templates
+- [x] Implement factory pattern for provider instantiation
+- [x] Standardize async/sync conversion patterns
+- [x] Write unit tests for utility functions
+- [x] Create provider base classes
+- [x] Improve error classification with `RetryableError` and `NonRetryableError` classes
+- [x] Standardize logging patterns with `log_upload_attempt` function
+- [x] Enhance type hints for better IDE support and runtime type checking
+- [x] Improve URL validation to ensure returned URLs are accessible before returning them
+
+
+2025-03-05 12:15:06 - 
+📦 Repomix v0.2.29
+
+No custom config found at repomix.config.json or global config at /Users/adam/.config/repomix/repomix.config.json.
+You can add a config file for additional settings. Please check https://github.com/yamadashy/repomix for more information.
+⠙ Collecting files...
+[2K[1A[2K[G⠹ Collecting files...
+[2K[1A[2K[G⠸ Running security check...
+[2K[1A[2K[G⠼ Running security check... (8/55) src/twat_fs/upload_providers/__init__.py
+[2K[1A[2K[G⠴ Processing files...
+[2K[1A[2K[G⠦ Processing file... (10/55) src/twat_fs/upload_providers/bashupload.py
+[2K[1A[2K[G⠧ Processing file... (40/55) tests/test_twat_fs.py
+[2K[1A[2K[G⠇ Calculating metrics...
+[2K[1A[2K[G⠏ Calculating metrics...
+[2K[1A[2K[G⠋ Calculating metrics...
+[2K[1A[2K[G⠙ Calculating metrics...
+[2K[1A[2K[G⠹ Calculating metrics... (46/55) cleanup.py
+[2K[1A[2K[G✔ Packing completed successfully!
+
+📈 Top 5 Files by Character Count and Token Count:
+──────────────────────────────────────────────────
+1.  IDEAS.md (57,524 chars, 12,212 tokens)
+2.  README.md (11,775 chars, 2,671 tokens)
+3.  tests/test_upload.py (9,627 chars, 2,145 tokens)
+4.  src/twat_fs/upload_providers/dropbox.py (8,192 chars, 1,767 tokens)
+5.  CHANGELOG.md (7,229 chars, 1,485 tokens)
+
+🔎 Security Check:
+──────────────────
+✔ No suspicious files detected.
+
+📊 Pack Summary:
+────────────────
+  Total Files: 55 files
+  Total Chars: 192,195 chars
+ Total Tokens: 44,174 tokens
+       Output: REPO_CONTENT.txt
+     Security: ✔ No suspicious files detected
+
+🎉 All Done!
+Your repository has been successfully packed.
+
+💡 Repomix is now available in your browser! Try it at https://repomix.com
+
+2025-03-05 12:15:06 - Repository content mixed into REPO_CONTENT.txt
