@@ -1,0 +1,7 @@
+[console_scripts]
+
+[flask.commands]
+vite = flask_vite.cli:vite
+
+[gui_scripts]
+
