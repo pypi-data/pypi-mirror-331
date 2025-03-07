@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+telecom_channel_log/__init__.py
+telecom_channel_log/i telecom_channel_log.py
+telecom_channel_log.egg-info/PKG-INFO
+telecom_channel_log.egg-info/SOURCES.txt
+telecom_channel_log.egg-info/dependency_links.txt
+telecom_channel_log.egg-info/requires.txt
+telecom_channel_log.egg-info/top_level.txt
