@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: mYBotAPI
+Version: 0.1.1
+Summary: Ein Modul für den Zugriff auf die mYBot-API.
+Home-page: https://mYBot.yb-tech.de
+Author: Yannic Basin
+Author-email: yannicbasin@gmail.com
+Requires-Dist: requests
+
