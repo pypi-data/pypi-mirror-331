@@ -1,0 +1,2 @@
+[console_scripts]
+icon_resize = icon_resize:entry
