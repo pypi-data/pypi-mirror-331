@@ -1,0 +1,110 @@
+Metadata-Version: 2.2
+Name: baher_hasab
+Version: 1.1.1
+Summary: A python package for calculating Ethiopian holidays and fasting seasons
+Home-page: https://sam23121.github.io/baher_hasab
+Author: Samuel Alene
+Author-email: Samuel Alene <smlalene@gmail.com>
+License: MIT License
+        
+        Copyright (c) [2024] [Samuel]
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+Project-URL: Homepage, https://github.com/sam23121/baher_hasab
+Project-URL: Docs, https://sam23121.github.io/baher_hasab/
+Keywords: baher_hasab,abushar,ethiopia
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Baher Hasab (ባህረ ሃሳብ) 🇪🇹 
+
+## Overview
+
+Ethiopia has its own ancient calendar based on the system called Baher Hasab - ባሕረ ሃሳብ which means the Sea of Ideas. Baher Hasab  also known as Abushakir is a chronological system used for calculating the times of festivals and the beginning and ending of the fasting days throughout the year.
+
+The baher_hasab is a Python package that simplifies the process of working with the Baher Hasab (also known as Abushakir) calendar. This package provides a set of tools and functions to help users easily calculate the dates of festivals and the beginning and ending of fasting days throughout the year.
+
+
+## Links
+- [Documentation](https://sam23121.github.io/baher_hasab/baherhasab/)
+- [Github](https://github.com/sam23121/baher_hasab)
+- [PyPI](https://pypi.org/project/baher_hasab/)
+- [Issues](https://github.com/sam23121/baher_hasab/issues)
+- [Extra Information](https://eotcmk.org/a/%E1%89%A3%E1%88%95%E1%88%A8-%E1%88%80%E1%88%B3%E1%89%A5/)
+
+
+## Key Features
+
+- **Calendar Conversion**: Easily convert between the Gregorian calendar and the Ethiopian calendar.
+- **Festival Calculations**: Automatically determine the dates of major festivals and holidays based on the Baher Hasab calculations.
+- **Fasting Day Tracking**: Effortlessly track the start and end dates of fasting periods throughout the year.
+
+## Installation
+
+To install the package, you can use `pip`:
+```
+pip install baher_hasab
+```
+
+## Usage
+
+Here's a simple example of how to use the package:
+
+```python
+from baher_hasab import BaherHasab
+
+# Create a Bahire Hasab instance
+bh = BaherHasab(given_year=2016)
+
+# Get the date of a specific festival
+event_date = bh.get_event_date('hudade')
+print(event_date) # Outputs Megabit 2
+```
+
+## Contribution
+Contributions to the baher_hasab package are welcome! If you encounter any issues or have suggestions for new features, please feel free to open an issue or submit a pull request on the GitHub repository.
+
+## Note
+Defining some terms to get started:
+- **Baher Hasab**: Also known as Abushakir, is a chronological system used for calculating the times of festivals and the beginning and ending of the fasting days throughout the year.
+- **neneweh** (ነነዌ): is the Ethiopian name for The three day fast that the neneweh people did (Book of Jonah)
+- **Hudade** (ሁዳዴ): also known as abiy_tsome (አብይ ጾም) is the Ethiopian name for the Great Lent.
+- **debrezeit** (ደብረዘይት): is the Ethiopian name for the middle day of the Great lent.
+- **hosana** (ሆሳዕና): is the Ethiopian name for the day of Entrance of Jesus to Jerusalem.
+- **seklet** (ስቅለት): is the Ethiopian name for the holy Friday.
+- **tensae** (ትንሳኤ): is the Ethiopian name for the Easter.
+- **rekeb_kanat** (ርክበ ካህናት): is the Ethiopian name for the "Coming together of the priests".
+- **erget** (ዕርገት): is the Ethiopian name for the day of ascension of Jesus Christ.
+- **piraklitos** (ጰራቅሊጦስ): is the Ethiopian name for the Pentecost.
+- **hawaryat** (ሐዋርያት): is the Ethiopian name for the fast of the apostles.
+- **dehenet** (ድህንነት
+): is the Ethiopian name for the starting day of wenesday and friday fasting.
+- **wengelawyan** (ወንጌላውያን): is the Ethiopian name for the gospel of the year.
+- **awde_kemer** (አውደ ቀመር): its a cycle that comes every 532 years.
+- **awde_mahtot** (አውደ ማሕቶት): its a cycle that comes every 76 years.
+- **awde_tsehay** (አውደ መስከር): its a cycle that comes every 28 years.
+
+
+
+
+
