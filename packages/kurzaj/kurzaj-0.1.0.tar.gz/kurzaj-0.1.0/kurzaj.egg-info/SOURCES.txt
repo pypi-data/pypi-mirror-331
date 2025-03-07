@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+kurzaj.egg-info/PKG-INFO
+kurzaj.egg-info/SOURCES.txt
+kurzaj.egg-info/dependency_links.txt
+kurzaj.egg-info/entry_points.txt
+kurzaj.egg-info/top_level.txt
+kurzajpackage/__init__.py
+kurzajpackage/main.py
