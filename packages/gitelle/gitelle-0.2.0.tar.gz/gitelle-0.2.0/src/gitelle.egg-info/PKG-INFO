@@ -1,0 +1,119 @@
+Metadata-Version: 2.2
+Name: gitelle
+Version: 0.2.0
+Summary: A lightweight, educational implementation of Git in Python
+Home-page: https://github.com/EllE961/gitelle
+Author: EllE961
+Author-email: EllE961 <yahyaalsalmi961@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2025 GitEllE Contributors
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+Project-URL: Homepage, https://github.com/EllE961/gitelle
+Project-URL: Bug Tracker, https://github.com/EllE961/gitelle/issues
+Project-URL: Documentation, https://gitelle.readthedocs.io/
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Topic :: Software Development :: Version Control :: Git
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: click>=8.0.0
+Requires-Dist: zlib-wrapper>=0.1.3
+Requires-Dist: pathlib>=1.0.1
+Requires-Dist: pyyaml>=6.0
+Dynamic: author
+Dynamic: home-page
+Dynamic: requires-python
+
+# GitEllE
+
+[![PyPI version](https://img.shields.io/pypi/v/gitelle.svg?cacheSeconds=0)](https://pypi.org/project/gitelle/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+
+GitEllE is a lightweight, educational implementation of Git written in Python. It aims to provide a clear understanding of Git's internal mechanisms while maintaining compatibility with the original Git commands.
+
+## Features
+
+-   Core Git functionality (init, add, commit, branch, checkout)
+-   Compatible with standard Git workflows
+-   Pure Python implementation
+-   Extensive documentation and tests
+-   Simple, readable codebase for educational purposes
+
+## Installation
+
+```bash
+pip install gitelle
+```
+
+Or install from source:
+
+```bash
+git clone https://github.com/yourusername/gitelle.git
+cd gitelle
+pip install -e .
+```
+
+## Quick Start
+
+```bash
+# Initialize a new repository
+gitelle init
+
+# Add files to the staging area
+gitelle add file.txt
+
+# Commit changes
+gitelle commit -m "Initial commit"
+
+# Create and switch to a new branch
+gitelle branch feature-branch
+gitelle checkout feature-branch
+
+# Check status
+gitelle status
+```
+
+## Documentation
+
+For detailed documentation, visit the [docs](docs/index.md) directory or our [documentation site](https://gitelle.readthedocs.io/).
+
+## Contributing
+
+Contributions are welcome! Please check out our [contribution guidelines](CONTRIBUTING.md) before getting started.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+-   Inspired by the original [Git](https://git-scm.com/) project
+-   Thanks to all contributors who have helped shape GitEllE
