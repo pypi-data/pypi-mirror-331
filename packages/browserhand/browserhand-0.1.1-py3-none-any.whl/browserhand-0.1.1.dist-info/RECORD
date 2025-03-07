@@ -1,0 +1,10 @@
+browserhand/__init__.py,sha256=7tk7cPv0yxZWOSY_cHN9sewO34FSIQ33uF1CruAbLKw,240
+browserhand/actions.py,sha256=d8vGPII045MFzuwKSl2Ch48Q_7RhMzAFbr5GNoRS59E,15781
+browserhand/cli.py,sha256=w2eOIuEAZSXSE7UIcrWvPhj6DSOtks9okDaJ-jiithI,4340
+browserhand/core.py,sha256=xDsgNNk_XVmNqJqqkggzSJgplM0wbsvol4IVRsyTf9U,9112
+browserhand/extractors.py,sha256=eaCdDY-53Yf0wPhYCT56zKjmgKwP0yHL6dRTOCTg35g,6180
+browserhand-0.1.1.dist-info/METADATA,sha256=lqUFJcEGkSs0osECRL0gYPQV5Mz250eG1mP0KjYXCUA,4150
+browserhand-0.1.1.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+browserhand-0.1.1.dist-info/entry_points.txt,sha256=oQHbMOWw0WF-I_AQVpD_q7MQkXcdqrGcbXRU8dXpAm4,53
+browserhand-0.1.1.dist-info/top_level.txt,sha256=H4m88n4BGgEYLOpBzZeMtX-GwS1lDa_l8j7fPgJg-5U,12
+browserhand-0.1.1.dist-info/RECORD,,
