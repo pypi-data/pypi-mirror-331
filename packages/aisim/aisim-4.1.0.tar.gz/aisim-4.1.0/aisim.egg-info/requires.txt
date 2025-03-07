@@ -1,0 +1,15 @@
+numpy<3.0.0,>=1.26.4
+scipy<2.0,>=1.15.1
+matplotlib<4.0.0,>=3.9.4
+
+[dev]
+ruff>=0.9.9
+pre-commit>=4.1.0
+pytest>=8.3.4
+setuptools_scm>=8.1.0
+
+[docs]
+sphinx>=8.2.1
+nbsphinx>=0.9.6
+pygments>=2.4
+sphinx_rtd_theme>=3.0.2
