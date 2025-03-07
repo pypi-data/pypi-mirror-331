@@ -1,0 +1,2 @@
+include pygrafical/lib.so
+recursive-include pygrafical/hooks *.py

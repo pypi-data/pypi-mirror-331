@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+pygrafical/__init__.py
+pygrafical/lib.so
+pygrafical/main.py
+pygrafical.egg-info/PKG-INFO
+pygrafical.egg-info/SOURCES.txt
+pygrafical.egg-info/dependency_links.txt
+pygrafical.egg-info/top_level.txt
+pygrafical/hooks/hook-pygrafical.py
