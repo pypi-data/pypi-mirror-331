@@ -1,0 +1,12 @@
+# this_file: src/twat_search/web/engines/lib_falla/requirements.txt
+# Falla search engine scraper dependencies
+
+beautifulsoup4>=4.12.2
+lxml>=4.9.3
+playwright>=1.40.0
+# Core dependencies
+requests>=2.31.0
+
+# For splash_scrap mode (optional)
+# If you want to use the splash scraper, you'll need to run a splash container:
+# docker run -p 8050:8050 scrapinghub/splash 
