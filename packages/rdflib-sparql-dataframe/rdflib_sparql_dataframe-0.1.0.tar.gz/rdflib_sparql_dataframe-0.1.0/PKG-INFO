@@ -1,0 +1,21 @@
+Metadata-Version: 2.3
+Name: rdflib-sparql-dataframe
+Version: 0.1.0
+Summary: Export results from an rdflib SPARQL query into a `pandas.DataFrame`, using Python types.
+License: Apache-2.0
+Author: Natanael Arndt
+Author-email: arndtn@gmail.com
+Requires-Python: >=3.13,<4.0.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: pandas (>=2.2.3,<3.0.0)
+Requires-Dist: rdflib (>=7.1.3,<8.0.0)
+Description-Content-Type: text/markdown
+
+# RDFLib SPARQL DataFrame
+
+Export results from an rdflib SPARQL query into a `pandas.DataFrame`, using Python types.
+
+Taken from https://github.com/RDFLib/sparqlwrapper/issues/125#issuecomment-704291308 resp. https://github.com/RDFLib/rdflib/issues/1179#issuecomment-704299074 .
+
