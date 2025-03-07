@@ -1,0 +1,14 @@
+polytext/__init__.py,sha256=g0wGQnntMCBr6ytr9jIzTFvVR5S7QxmR0lDtTb70670,577
+polytext/converter/__init__.py,sha256=vtqVbUqoXDhNfhJj4bJM-bkwac0P8hQ0Efkek6oLrro,134
+polytext/converter/pdf.py,sha256=8DX0EiWNWKz_Uwpvf5xMtB6w-JlPgxEcKvHjriD7vxk,9894
+polytext/exceptions/__init__.py,sha256=A7sckwMe832uv7DacjMvCWScT8NKqKrMtHfM8KpKvls,168
+polytext/exceptions/base.py,sha256=AYq-w9aP3ll_3-bePZi5mJNc_1ZL_23ZNACOLBuBiPQ,1819
+polytext/generator/__init__.py,sha256=k2YGkDSsyaJjOxlcj6bkdneGkQG8mb2bHo0aJb8MxXI,161
+polytext/generator/pdf.py,sha256=JyzOdAN8CVz2pQ-GhZHkdIbm0MoLGBSSlqo0ThhmZ8w,7413
+polytext/loader/__init__.py,sha256=WMvYGEviHk1e_dpIw8bwF6KsHHQdNj5W1dcqKRmvA-I,174
+polytext/loader/text.py,sha256=pYoc-pqPJaekNiXu_IdHjXSujvqFRfqQWBqNhFAZfFs,24888
+polytext-0.1.2.dist-info/LICENSE,sha256=n-jK4xSUrmuCR9C0EsG05KUc2vi1N6UE-k2L24pKWS4,1064
+polytext-0.1.2.dist-info/METADATA,sha256=2yXR3feK2PqibJ1CRnUQ-KAY-wO-JJ4W0bc9e9du6oE,2351
+polytext-0.1.2.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+polytext-0.1.2.dist-info/top_level.txt,sha256=dHg5ZsItizIPYaIUCzrzjEBdyx2WBf3TGPLa_iTwWg4,9
+polytext-0.1.2.dist-info/RECORD,,
