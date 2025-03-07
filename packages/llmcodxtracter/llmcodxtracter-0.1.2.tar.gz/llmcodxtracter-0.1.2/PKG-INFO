@@ -1,0 +1,57 @@
+Metadata-Version: 2.2
+Name: llmcodxtracter
+Version: 0.1.2
+Summary: A Python library for extracting code snippets using LLMs
+Author-email: Mohammed Muzammil Inamdar <muzammil.inamdar98@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/DarthMuzammil/Lasso
+Project-URL: Repository, https://github.com/DarthMuzammil/Lasso
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: openai
+
+# Lasso
+
+[![PyPI](https://img.shields.io/pypi/v/lasso.svg)](https://pypi.org/project/lasso/)
+[![License](https://img.shields.io/github/license/DarthMuzammil/Lasso)](LICENSE)
+
+Lasso is a Python package designed to extract code snippets from plain text using Large Language Models (LLMs).
+
+## Installation
+
+Install via pip:
+
+```sh
+pip install lasso
+```
+
+## Usage
+### python
+```py
+from lasso import extractor
+
+text = "Here's some Python code: print('Hello World')"
+code_snippet = extractor.extract_code(text)
+print(code_snippet)
+```
+
+## Features
+- Extracts code snippets from plain text.
+- Supports multiple programming languages.
+- Easily integrates into other LLM-based projects.
+
+## Contributing
+- Fork the repository.
+- Clone it: git clone https://github.com/DarthMuzammil/Lasso.git
+- Install dependencies: pip install -r requirements.txt
+- Submit a pull request!
+
+## License
+This project is licensed under the MIT License.
+
+## Next Steps
+1. Make sure `src/lasso/__init__.py` exists.
+2. Create `pyproject.toml` (or use `setup.py` if preferred).
+3. Build and upload to PyPI using `twine`.
+
+Let me know if you need help with any step! 🚀
