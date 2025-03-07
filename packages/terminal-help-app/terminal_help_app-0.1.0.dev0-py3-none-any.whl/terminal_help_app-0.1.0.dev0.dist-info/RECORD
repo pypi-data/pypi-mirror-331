@@ -1,0 +1,14 @@
+terminal_help_app/__init__.py,sha256=pq116CJh7ztk0QJ7JhXCUOqLXH0rK8FeLoktc2GRjwc,111
+terminal_help_app/chatgpt.py,sha256=yHLgwGg5uJOcaH-3bhyudBiGXFXHKArljQwu7NG2jOg,4577
+terminal_help_app/main.py,sha256=Wh8zJVnPoQUU0wya_Wsw7pGVqv3WYnQQmsDoL0EkND8,5191
+terminal_help_app/settings.py,sha256=Rb5nR6kQ2VkMhmYSG8MhQ_HLEZjFCUCpBruMw7IqaQ0,716
+terminal_help_app/structured_printer.py,sha256=7kb7vv0nbPMa9neQpOpa2EV7F4fu4KyQ0gnSgRFKsYo,1680
+terminal_help_app/helper/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+terminal_help_app/helper/db.py,sha256=rI7A6iE3-3JR1ohLh4WAQu2z_PpdqcedqgAXXFX-KSg,220
+terminal_help_app/helper/partial_json_parse.py,sha256=a9-2FB-mWBi5neZDDyAn1jN9fDKYVJ4s0Mx_BXi8buY,165
+terminal_help_app/helper/serde.py,sha256=U3pwVbbn-b3fc4Hcr33DQCofUIiq8bFEP0hVGA7k6b8,202
+terminal_help_app/helper/system_helper.py,sha256=KR7OMRhNoRqqTl2zFLDFc1P1RVTiJcGzTHqsJpefzm0,349
+terminal_help_app-0.1.0.dev0.dist-info/METADATA,sha256=g7gP-iykneiI8rrDupQKqRayBKh6Z2sd0_mGqsxWZpg,3742
+terminal_help_app-0.1.0.dev0.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+terminal_help_app-0.1.0.dev0.dist-info/entry_points.txt,sha256=YqLMgBkBk6nN2FXkX1-3Tkng-UQ4YmvKp4Uy4sHNqOA,53
+terminal_help_app-0.1.0.dev0.dist-info/RECORD,,

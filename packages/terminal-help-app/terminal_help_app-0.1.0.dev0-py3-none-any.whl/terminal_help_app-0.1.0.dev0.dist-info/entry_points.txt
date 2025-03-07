@@ -1,0 +1,2 @@
+[console_scripts]
+help = terminal_help_app.main:main
