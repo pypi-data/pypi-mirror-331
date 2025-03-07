@@ -1,0 +1,2 @@
+[console_scripts]
+xyztopdb = xyzToPdb.__main__:main
