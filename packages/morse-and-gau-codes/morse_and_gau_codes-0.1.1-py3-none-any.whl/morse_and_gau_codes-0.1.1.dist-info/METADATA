@@ -1,0 +1,13 @@
+Metadata-Version: 2.2
+Name: morse_and_gau_codes
+Version: 0.1.1
+Summary: A simple Morse and Gauß code dictionary package
+Author: Artem
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+License-File: LICENSE
+Dynamic: author
+Dynamic: classifier
+Dynamic: license
+Dynamic: summary
