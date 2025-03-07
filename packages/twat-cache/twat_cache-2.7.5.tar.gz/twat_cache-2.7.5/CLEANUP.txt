@@ -1,0 +1,532 @@
+2025-03-05 12:14:24 - 
+=== PROJECT STATEMENT ===
+2025-03-05 12:14:24 - ---
+description: About this project
+globs:
+---
+# About this project
+
+`twat-fs` is a file system utility library focused on robust and extensible file upload capabilities with multiple provider support. It provides:
+
+- Multi-provider upload system with smart fallback (catbox.moe default, plus Dropbox, S3, etc.)
+- Automatic retry for temporary failures, fallback for permanent ones
+- URL validation and clean developer experience with type hints
+- Simple CLI: `python -m twat_fs upload_file path/to/file.txt`
+- Easy installation: `uv pip install twat-fs` (basic) or `uv pip install 'twat-fs[all,dev]'` (all features)
+
+## Development Notes
+- Uses `uv` for Python package management
+- Quality tools: ruff, mypy, pytest
+- Clear provider protocol for adding new storage backends
+- Strong typing and runtime checks throughout
+
+2025-03-05 12:14:24 - 
+=== Current Status ===
+2025-03-05 12:14:24 - Error: LOG.md is missing
+2025-03-05 12:14:24 - [ 928]  .
+├── [  96]  .cursor
+│   └── [ 224]  rules
+│       ├── [ 821]  0project.mdc
+│       ├── [ 516]  cleanup.mdc
+│       ├── [3.5K]  filetree.mdc
+│       └── [2.0K]  quality.mdc
+├── [  96]  .github
+│   └── [ 128]  workflows
+│       ├── [2.7K]  push.yml
+│       └── [1.4K]  release.yml
+├── [3.6K]  .gitignore
+├── [ 470]  .pre-commit-config.yaml
+├── [  96]  .specstory
+│   └── [ 864]  history
+│       ├── [2.7K]  .what-is-this.md
+│       ├── [302K]  2025-03-04_03-25-codebase-analysis-and-todo-md-update.md
+│       ├── [ 80K]  2025-03-04_05-35-implementation-of-todo-phases-1,-2,-3.md
+│       ├── [115K]  2025-03-04_08-00-project-maintenance-and-documentation-update.md
+│       ├── [146K]  2025-03-04_08-41-managing-todo-md-tasks.md
+│       ├── [5.7K]  2025-03-04_11-30-untitled.md
+│       ├── [ 35K]  caching-strategies-for-twat-cache-library.md
+│       ├── [ 54K]  codebase-improvement-and-dependency-management-plan.md
+│       ├── [124K]  documentation-update-and-task-management.md
+│       ├── [217K]  implementing-todo-item.md
+│       ├── [ 44K]  merging-files-from-wrong-location.md
+│       ├── [238K]  project-documentation-and-command-execution.md
+│       ├── [135K]  project-overview-and-todo-execution.md
+│       ├── [ 13K]  project-review-and-implementation.md
+│       ├── [142K]  project-setup-and-implementation-steps.md
+│       ├── [162K]  project-setup-and-task-implementation.md
+│       ├── [ 56K]  project-setup-and-task-management.md
+│       ├── [ 53K]  refactoring-plan-for-twat-cache-system.md
+│       ├── [173K]  refining-decorators-and-integration-goals-1.md
+│       ├── [282K]  refining-decorators-and-integration-goals.md
+│       ├── [ 95K]  running-lint-fix-command.md
+│       ├── [ 11K]  todo-list-update-and-progress-logging.md
+│       ├── [170K]  update-todo-and-log-for-project.md
+│       ├── [182K]  updating-todo-and-running-development-commands.md
+│       └── [260K]  updating-todos-and-project-documentation.md
+├── [ 25K]  CHANGELOG.md
+├── [ 986]  CLEANUP.txt
+├── [1.0K]  LICENSE
+├── [7.7K]  NEXT.md
+├── [1.2K]  PROMPT.txt
+├── [ 38K]  README.md
+├── [377K]  REPO_CONTENT.txt
+├── [3.7K]  TODO.md
+├── [   7]  VERSION.txt
+├── [ 13K]  cleanup.py
+├── [ 192]  dist
+├── [  96]  docs
+│   └── [7.7K]  context_management.md
+├── [  96]  examples
+│   └── [6.9K]  backend_selection.py
+├── [5.1K]  pyproject.toml
+├── [ 160]  src
+├── [ 544]  tests
+│   ├── [  67]  __init__.py
+│   ├── [ 13K]  test_backend_selector.py
+│   ├── [ 13K]  test_cache.py
+│   ├── [3.3K]  test_config.py
+│   ├── [2.0K]  test_constants.py
+│   ├── [6.0K]  test_context.py
+│   ├── [2.5K]  test_context_simple.py
+│   ├── [ 12K]  test_decorators.py
+│   ├── [4.3K]  test_engines.py
+│   ├── [6.9K]  test_exceptions.py
+│   ├── [2.8K]  test_exceptions_simple.py
+│   ├── [6.3K]  test_fallback.py
+│   ├── [9.5K]  test_redis_cache.py
+│   └── [7.6K]  test_twat_cache.py
+└── [ 90K]  uv.lock
+
+12 directories, 61 files
+
+2025-03-05 12:14:24 - 
+Project structure:
+2025-03-05 12:14:24 - [ 928]  .
+├── [  96]  .cursor
+│   └── [ 224]  rules
+│       ├── [ 821]  0project.mdc
+│       ├── [ 516]  cleanup.mdc
+│       ├── [3.5K]  filetree.mdc
+│       └── [2.0K]  quality.mdc
+├── [  96]  .github
+│   └── [ 128]  workflows
+│       ├── [2.7K]  push.yml
+│       └── [1.4K]  release.yml
+├── [3.6K]  .gitignore
+├── [ 470]  .pre-commit-config.yaml
+├── [  96]  .specstory
+│   └── [ 864]  history
+│       ├── [2.7K]  .what-is-this.md
+│       ├── [302K]  2025-03-04_03-25-codebase-analysis-and-todo-md-update.md
+│       ├── [ 80K]  2025-03-04_05-35-implementation-of-todo-phases-1,-2,-3.md
+│       ├── [115K]  2025-03-04_08-00-project-maintenance-and-documentation-update.md
+│       ├── [146K]  2025-03-04_08-41-managing-todo-md-tasks.md
+│       ├── [5.7K]  2025-03-04_11-30-untitled.md
+│       ├── [ 35K]  caching-strategies-for-twat-cache-library.md
+│       ├── [ 54K]  codebase-improvement-and-dependency-management-plan.md
+│       ├── [124K]  documentation-update-and-task-management.md
+│       ├── [217K]  implementing-todo-item.md
+│       ├── [ 44K]  merging-files-from-wrong-location.md
+│       ├── [238K]  project-documentation-and-command-execution.md
+│       ├── [135K]  project-overview-and-todo-execution.md
+│       ├── [ 13K]  project-review-and-implementation.md
+│       ├── [142K]  project-setup-and-implementation-steps.md
+│       ├── [162K]  project-setup-and-task-implementation.md
+│       ├── [ 56K]  project-setup-and-task-management.md
+│       ├── [ 53K]  refactoring-plan-for-twat-cache-system.md
+│       ├── [173K]  refining-decorators-and-integration-goals-1.md
+│       ├── [282K]  refining-decorators-and-integration-goals.md
+│       ├── [ 95K]  running-lint-fix-command.md
+│       ├── [ 11K]  todo-list-update-and-progress-logging.md
+│       ├── [170K]  update-todo-and-log-for-project.md
+│       ├── [182K]  updating-todo-and-running-development-commands.md
+│       └── [260K]  updating-todos-and-project-documentation.md
+├── [ 25K]  CHANGELOG.md
+├── [ 986]  CLEANUP.txt
+├── [1.0K]  LICENSE
+├── [7.7K]  NEXT.md
+├── [1.2K]  PROMPT.txt
+├── [ 38K]  README.md
+├── [377K]  REPO_CONTENT.txt
+├── [3.7K]  TODO.md
+├── [   7]  VERSION.txt
+├── [ 13K]  cleanup.py
+├── [ 192]  dist
+├── [  96]  docs
+│   └── [7.7K]  context_management.md
+├── [  96]  examples
+│   └── [6.9K]  backend_selection.py
+├── [5.1K]  pyproject.toml
+├── [ 160]  src
+├── [ 544]  tests
+│   ├── [  67]  __init__.py
+│   ├── [ 13K]  test_backend_selector.py
+│   ├── [ 13K]  test_cache.py
+│   ├── [3.3K]  test_config.py
+│   ├── [2.0K]  test_constants.py
+│   ├── [6.0K]  test_context.py
+│   ├── [2.5K]  test_context_simple.py
+│   ├── [ 12K]  test_decorators.py
+│   ├── [4.3K]  test_engines.py
+│   ├── [6.9K]  test_exceptions.py
+│   ├── [2.8K]  test_exceptions_simple.py
+│   ├── [6.3K]  test_fallback.py
+│   ├── [9.5K]  test_redis_cache.py
+│   └── [7.6K]  test_twat_cache.py
+└── [ 90K]  uv.lock
+
+12 directories, 61 files
+
+2025-03-05 12:14:24 - On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   .cursor/rules/filetree.mdc
+	modified:   CLEANUP.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+2025-03-05 12:14:24 - On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   .cursor/rules/filetree.mdc
+	modified:   CLEANUP.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+2025-03-05 12:14:24 - 
+=== Environment Status ===
+2025-03-05 12:14:24 - Setting up virtual environment
+2025-03-05 12:14:25 - Virtual environment created and activated
+2025-03-05 12:14:25 - Installing package with all extras
+2025-03-05 12:14:25 - Setting up virtual environment
+2025-03-05 12:14:25 - Virtual environment created and activated
+2025-03-05 12:14:32 - Package installed successfully
+2025-03-05 12:14:32 - Running code quality checks
+2025-03-05 12:14:32 - >>> Running code fixes...
+2025-03-05 12:14:32 - >>>Running type checks...
+2025-03-05 12:14:32 - >>> Running tests...
+2025-03-05 12:14:39 - ============================= test session starts ==============================
+platform darwin -- Python 3.12.8, pytest-8.3.5, pluggy-1.5.0 -- /Users/adam/Developer/vcs/github.twardoch/pub/twat-packages/_good/twat/plugins/repos/twat_cache/.venv/bin/python
+cachedir: .pytest_cache
+benchmark: 5.1.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+rootdir: /Users/adam/Developer/vcs/github.twardoch/pub/twat-packages/_good/twat/plugins/repos/twat_cache
+configfile: pyproject.toml
+plugins: cov-6.0.0, benchmark-5.1.0, xdist-3.6.1
+collecting ... collected 19 items / 9 errors
+
+==================================== ERRORS ====================================
+_______________ ERROR collecting tests/test_backend_selector.py ________________
+ImportError while importing test module '/Users/adam/Developer/vcs/github.twardoch/pub/twat-packages/_good/twat/plugins/repos/twat_cache/tests/test_backend_selector.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_backend_selector.py:28: in <module>
+    import numpy as np
+E   ModuleNotFoundError: No module named 'numpy'
+_____________________ ERROR collecting tests/test_cache.py _____________________
+ImportError while importing test module '/Users/adam/Developer/vcs/github.twardoch/pub/twat-packages/_good/twat/plugins/repos/twat_cache/tests/test_cache.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_cache.py:30: in <module>
+    from twat_cache.cache import clear_cache, get_stats
+src/twat_cache/__init__.py:5: in <module>
+    from twat_cache.cache import clear_cache, get_stats
+src/twat_cache/cache.py:21: in <module>
+    from .engines.base import BaseCacheEngine
+src/twat_cache/engines/__init__.py:19: in <module>
+    from .manager import get_engine_manager
+src/twat_cache/engines/manager.py:32: in <module>
+    from .klepto import KleptoEngine
+src/twat_cache/engines/klepto.py:18: in <module>
+    from klepto import lru_cache, lfu_cache, rr_cache
+E   ModuleNotFoundError: No module named 'klepto'
+____________________ ERROR collecting tests/test_context.py ____________________
+ImportError while importing test module '/Users/adam/Developer/vcs/github.twardoch/pub/twat-packages/_good/twat/plugins/repos/twat_cache/tests/test_context.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_context.py:18: in <module>
+    from twat_cache.context import engine_context, CacheContext, get_or_create_engine
+src/twat_cache/__init__.py:8: in <module>
+    from twat_cache.context import engine_context, CacheContext, get_or_create_engine
+src/twat_cache/context.py:27: in <module>
+    from twat_cache.engines.manager import get_engine_manager
+src/twat_cache/engines/__init__.py:19: in <module>
+    from .manager import get_engine_manager
+src/twat_cache/engines/manager.py:32: in <module>
+    from .klepto import KleptoEngine
+src/twat_cache/engines/klepto.py:18: in <module>
+    from klepto import lru_cache, lfu_cache, rr_cache
+E   ModuleNotFoundError: No module named 'klepto'
+________________ ERROR collecting tests/test_context_simple.py _________________
+ImportError while importing test module '/Users/adam/Developer/vcs/github.twardoch/pub/twat-packages/_good/twat/plugins/repos/twat_cache/tests/test_context_simple.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_context_simple.py:16: in <module>
+    from twat_cache.context import CacheContext
+src/twat_cache/__init__.py:8: in <module>
+    from twat_cache.context import engine_context, CacheContext, get_or_create_engine
+src/twat_cache/context.py:27: in <module>
+    from twat_cache.engines.manager import get_engine_manager
+src/twat_cache/engines/__init__.py:19: in <module>
+    from .manager import get_engine_manager
+src/twat_cache/engines/manager.py:32: in <module>
+    from .klepto import KleptoEngine
+src/twat_cache/engines/klepto.py:18: in <module>
+    from klepto import lru_cache, lfu_cache, rr_cache
+E   ModuleNotFoundError: No module named 'klepto'
+__________________ ERROR collecting tests/test_decorators.py ___________________
+ImportError while importing test module '/Users/adam/Developer/vcs/github.twardoch/pub/twat-packages/_good/twat/plugins/repos/twat_cache/tests/test_decorators.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_decorators.py:28: in <module>
+    from tests.test_constants import (
+E   ImportError: cannot import name 'CACHE_SIZE' from 'tests.test_constants' (/Users/adam/Developer/vcs/github.twardoch/pub/twat-packages/_good/twat/plugins/repos/twat_cache/tests/test_constants.py)
+____________________ ERROR collecting tests/test_engines.py ____________________
+ImportError while importing test module '/Users/adam/Developer/vcs/github.twardoch/pub/twat-packages/_good/twat/plugins/repos/twat_cache/tests/test_engines.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_engines.py:19: in <module>
+    from twat_cache.engines.manager import EngineManager
+src/twat_cache/__init__.py:8: in <module>
+    from twat_cache.context import engine_context, CacheContext, get_or_create_engine
+src/twat_cache/context.py:27: in <module>
+    from twat_cache.engines.manager import get_engine_manager
+src/twat_cache/engines/__init__.py:19: in <module>
+    from .manager import get_engine_manager
+src/twat_cache/engines/manager.py:32: in <module>
+    from .klepto import KleptoEngine
+src/twat_cache/engines/klepto.py:18: in <module>
+    from klepto import lru_cache, lfu_cache, rr_cache
+E   ModuleNotFoundError: No module named 'klepto'
+___________________ ERROR collecting tests/test_fallback.py ____________________
+ImportError while importing test module '/Users/adam/Developer/vcs/github.twardoch/pub/twat-packages/_good/twat/plugins/repos/twat_cache/tests/test_fallback.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_fallback.py:17: in <module>
+    from tests.test_constants import (
+E   ImportError: cannot import name 'CACHE_SIZE' from 'tests.test_constants' (/Users/adam/Developer/vcs/github.twardoch/pub/twat-packages/_good/twat/plugins/repos/twat_cache/tests/test_constants.py)
+__________________ ERROR collecting tests/test_redis_cache.py __________________
+ImportError while importing test module '/Users/adam/Developer/vcs/github.twardoch/pub/twat-packages/_good/twat/plugins/repos/twat_cache/tests/test_redis_cache.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_redis_cache.py:21: in <module>
+    from twat_cache.engines.redis import RedisCacheEngine
+src/twat_cache/__init__.py:8: in <module>
+    from twat_cache.context import engine_context, CacheContext, get_or_create_engine
+src/twat_cache/context.py:27: in <module>
+    from twat_cache.engines.manager import get_engine_manager
+src/twat_cache/engines/__init__.py:19: in <module>
+    from .manager import get_engine_manager
+src/twat_cache/engines/manager.py:32: in <module>
+    from .klepto import KleptoEngine
+src/twat_cache/engines/klepto.py:18: in <module>
+    from klepto import lru_cache, lfu_cache, rr_cache
+E   ModuleNotFoundError: No module named 'klepto'
+__________________ ERROR collecting tests/test_twat_cache.py ___________________
+ImportError while importing test module '/Users/adam/Developer/vcs/github.twardoch/pub/twat-packages/_good/twat/plugins/repos/twat_cache/tests/test_twat_cache.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests/test_twat_cache.py:25: in <module>
+    from twat_cache.engines.klepto import KleptoEngine
+src/twat_cache/__init__.py:8: in <module>
+    from twat_cache.context import engine_context, CacheContext, get_or_create_engine
+src/twat_cache/context.py:27: in <module>
+    from twat_cache.engines.manager import get_engine_manager
+src/twat_cache/engines/__init__.py:19: in <module>
+    from .manager import get_engine_manager
+src/twat_cache/engines/manager.py:32: in <module>
+    from .klepto import KleptoEngine
+src/twat_cache/engines/klepto.py:18: in <module>
+    from klepto import lru_cache, lfu_cache, rr_cache
+E   ModuleNotFoundError: No module named 'klepto'
+=========================== short test summary info ============================
+ERROR tests/test_backend_selector.py
+ERROR tests/test_cache.py
+ERROR tests/test_context.py
+ERROR tests/test_context_simple.py
+ERROR tests/test_decorators.py
+ERROR tests/test_engines.py
+ERROR tests/test_fallback.py
+ERROR tests/test_redis_cache.py
+ERROR tests/test_twat_cache.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 9 errors during collection !!!!!!!!!!!!!!!!!!!!
+============================== 9 errors in 4.34s ===============================
+
+2025-03-05 12:14:39 - All checks completed
+2025-03-05 12:14:39 - 
+=== TODO.md ===
+2025-03-05 12:14:39 - ---
+this_file: TODO.md
+---
+
+# TODO
+
+## Phase 1
+
+- [ ] Add more defensive programming with better input validation
+  - Validate function arguments more thoroughly
+  - Add type checking for critical parameters
+  - Implement graceful fallbacks for invalid inputs
+- [ ] Refactor complex functions in decorators.py to improve readability
+  - Break down large functions into smaller, focused ones
+  - Improve naming for better self-documentation
+  - Add explanatory comments for complex logic
+- [ ] Increase overall test coverage to 90%
+  - [ ] Add more unit tests for edge cases
+  - [ ] Implement integration tests for all backends
+  - [ ] Add performance regression tests
+
+## Medium Priority
+
+- [ ] Add support for asynchronous cache operations in all engines
+  - Implement async versions of all cache operations
+  - Add async context managers
+  - Ensure compatibility with asyncio event loops
+- [ ] Implement a unified configuration system with environment variable support
+  - Add support for loading config from environment variables
+  - Create a configuration hierarchy (env vars > config files > defaults)
+  - Add validation for configuration values
+- [ ] Create a more intuitive API for cache management operations
+  - Simplify the interface for common operations
+  - Add helper functions for frequent use cases
+  - Improve error messages and feedback
+- [ ] Add decorator factories with more customizable options
+  - Support for custom key generation functions
+  - Add options for cache invalidation strategies
+  - Implement conditional caching based on arguments
+- [ ] Create simpler API for cache statistics and monitoring
+  - Add hit/miss ratio tracking
+  - Implement cache efficiency metrics
+  - Add visualization tools for cache performance
+
+## Performance Optimizations
+
+- [ ] Optimize key generation for better performance
+  - Implement faster hashing algorithms for keys
+  - Add support for custom key generation functions
+  - Optimize key storage and lookup
+- [ ] Implement smart TTL handling with refreshing strategies
+  - Add background refresh for frequently accessed items
+  - Implement sliding TTL windows
+  - Add support for TTL based on access patterns
+- [ ] Add memory usage monitoring to prevent cache bloat
+  - Implement memory usage tracking
+  - Add automatic pruning based on memory pressure
+  - Create alerts for excessive memory usage
+- [ ] Optimize serialization/deserialization for common data types
+  - Add specialized serializers for numpy arrays and pandas DataFrames
+  - Implement compression for large objects
+  - Add support for incremental serialization
+
+## Compatibility and Integration
+
+- [ ] Ensure compatibility with Python 3.12+
+  - Test with latest Python versions
+  - Update type hints to use latest typing features
+  - Address any deprecation warnings
+- [ ] Add support for integration with popular frameworks
+  - Create adapters for Flask, FastAPI, Django
+  - Add middleware for web frameworks
+  - Implement integration examples
+- [ ] Ensure compatibility with container environments
+  - Test in Docker and Kubernetes environments
+  - Add configuration for containerized deployments
+  - Document best practices for containers
+
+## Documentation and Examples
+
+- [ ] Create a comprehensive API reference with examples
+  - Document all public classes and functions
+  - Add usage examples for each feature
+  - Include performance considerations
+- [ ] Add doctest examples in function docstrings
+  - Add executable examples in docstrings
+  - Ensure examples are tested in CI
+  - Keep examples up-to-date with API changes
+- [ ] Create tutorials for advanced use cases
+  - Add step-by-step guides for common scenarios
+  - Create examples for complex configurations
+  - Document performance optimization strategies
+
+
+
+2025-03-05 12:14:42 - 
+📦 Repomix v0.2.29
+
+No custom config found at repomix.config.json or global config at /Users/adam/.config/repomix/repomix.config.json.
+You can add a config file for additional settings. Please check https://github.com/yamadashy/repomix for more information.
+⠙ Searching for files...
+[2K[1A[2K[G⠹ Searching for files...
+[2K[1A[2K[G⠸ Collecting files...
+[2K[1A[2K[G⠼ Collecting files...
+[2K[1A[2K[G⠴ Collecting files...
+[2K[1A[2K[G⠦ Collect file... (2/62) .cursor/rules/cleanup.mdc
+[2K[1A[2K[G⠧ Running security check...
+[2K[1A[2K[G⠇ Running security check...
+[2K[1A[2K[G⠏ Running security check... (24/62) src/twat_cache/__init__.py
+[2K[1A[2K[G⠋ Processing files...
+[2K[1A[2K[G⠙ Processing files...
+[2K[1A[2K[G⠹ Processing file... (7/62) docs/context_management.md
+[2K[1A[2K[G⠸ Processing file... (18/62) src/twat_cache/engines/joblib.py
+[2K[1A[2K[G⠼ Processing file... (36/62) src/twat_cache/type_defs.py
+[2K[1A[2K[G⠴ Processing file... (56/62) LICENSE
+[2K[1A[2K[G⠦ Calculating metrics...
+[2K[1A[2K[G⠧ Calculating metrics...
+[2K[1A[2K[G⠇ Calculating metrics...
+[2K[1A[2K[G⠏ Calculating metrics...
+[2K[1A[2K[G⠋ Calculating metrics...
+[2K[1A[2K[G⠙ Calculating metrics...
+[2K[1A[2K[G⠹ Calculating metrics...
+[2K[1A[2K[G⠸ Calculating metrics... (25/62) src/twat_cache/__main__.py
+[2K[1A[2K[G⠼ Calculating metrics... (53/62) .pre-commit-config.yaml
+[2K[1A[2K[G✔ Packing completed successfully!
+
+📈 Top 5 Files by Character Count and Token Count:
+──────────────────────────────────────────────────
+1.  README.md (38,440 chars, 9,794 tokens)
+2.  CHANGELOG.md (25,198 chars, 5,815 tokens)
+3.  NEXT.md (7,869 chars, 1,723 tokens)
+4.  docs/context_management.md (7,852 chars, 1,676 tokens)
+5.  tests/test_backend_selector.py (6,616 chars, 1,543 tokens)
+
+🔎 Security Check:
+──────────────────
+✔ No suspicious files detected.
+
+📊 Pack Summary:
+────────────────
+  Total Files: 62 files
+  Total Chars: 198,098 chars
+ Total Tokens: 47,961 tokens
+       Output: REPO_CONTENT.txt
+     Security: ✔ No suspicious files detected
+
+🎉 All Done!
+Your repository has been successfully packed.
+
+💡 Repomix is now available in your browser! Try it at https://repomix.com
+
+2025-03-05 12:14:42 - Repository content mixed into REPO_CONTENT.txt

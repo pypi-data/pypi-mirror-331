@@ -1,0 +1,79 @@
+---
+description: File tree of the project
+globs: 
+---
+[ 928]  .
+├── [  96]  .cursor
+│   └── [ 224]  rules
+│       ├── [ 821]  0project.mdc
+│       ├── [ 516]  cleanup.mdc
+│       ├── [3.5K]  filetree.mdc
+│       └── [2.0K]  quality.mdc
+├── [  96]  .github
+│   └── [ 128]  workflows
+│       ├── [2.7K]  push.yml
+│       └── [1.4K]  release.yml
+├── [3.6K]  .gitignore
+├── [ 470]  .pre-commit-config.yaml
+├── [  96]  .specstory
+│   └── [ 864]  history
+│       ├── [2.7K]  .what-is-this.md
+│       ├── [302K]  2025-03-04_03-25-codebase-analysis-and-todo-md-update.md
+│       ├── [ 80K]  2025-03-04_05-35-implementation-of-todo-phases-1,-2,-3.md
+│       ├── [115K]  2025-03-04_08-00-project-maintenance-and-documentation-update.md
+│       ├── [146K]  2025-03-04_08-41-managing-todo-md-tasks.md
+│       ├── [5.7K]  2025-03-04_11-30-untitled.md
+│       ├── [ 35K]  caching-strategies-for-twat-cache-library.md
+│       ├── [ 54K]  codebase-improvement-and-dependency-management-plan.md
+│       ├── [124K]  documentation-update-and-task-management.md
+│       ├── [217K]  implementing-todo-item.md
+│       ├── [ 44K]  merging-files-from-wrong-location.md
+│       ├── [238K]  project-documentation-and-command-execution.md
+│       ├── [135K]  project-overview-and-todo-execution.md
+│       ├── [ 13K]  project-review-and-implementation.md
+│       ├── [142K]  project-setup-and-implementation-steps.md
+│       ├── [162K]  project-setup-and-task-implementation.md
+│       ├── [ 56K]  project-setup-and-task-management.md
+│       ├── [ 53K]  refactoring-plan-for-twat-cache-system.md
+│       ├── [173K]  refining-decorators-and-integration-goals-1.md
+│       ├── [282K]  refining-decorators-and-integration-goals.md
+│       ├── [ 95K]  running-lint-fix-command.md
+│       ├── [ 11K]  todo-list-update-and-progress-logging.md
+│       ├── [170K]  update-todo-and-log-for-project.md
+│       ├── [182K]  updating-todo-and-running-development-commands.md
+│       └── [260K]  updating-todos-and-project-documentation.md
+├── [ 25K]  CHANGELOG.md
+├── [ 986]  CLEANUP.txt
+├── [1.0K]  LICENSE
+├── [7.7K]  NEXT.md
+├── [1.2K]  PROMPT.txt
+├── [ 38K]  README.md
+├── [377K]  REPO_CONTENT.txt
+├── [3.7K]  TODO.md
+├── [   7]  VERSION.txt
+├── [ 13K]  cleanup.py
+├── [ 192]  dist
+├── [  96]  docs
+│   └── [7.7K]  context_management.md
+├── [  96]  examples
+│   └── [6.9K]  backend_selection.py
+├── [5.1K]  pyproject.toml
+├── [ 160]  src
+├── [ 544]  tests
+│   ├── [  67]  __init__.py
+│   ├── [ 13K]  test_backend_selector.py
+│   ├── [ 13K]  test_cache.py
+│   ├── [3.3K]  test_config.py
+│   ├── [2.0K]  test_constants.py
+│   ├── [6.0K]  test_context.py
+│   ├── [2.5K]  test_context_simple.py
+│   ├── [ 12K]  test_decorators.py
+│   ├── [4.3K]  test_engines.py
+│   ├── [6.9K]  test_exceptions.py
+│   ├── [2.8K]  test_exceptions_simple.py
+│   ├── [6.3K]  test_fallback.py
+│   ├── [9.5K]  test_redis_cache.py
+│   └── [7.6K]  test_twat_cache.py
+└── [ 90K]  uv.lock
+
+12 directories, 61 files
