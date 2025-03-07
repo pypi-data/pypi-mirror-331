@@ -1,0 +1,13 @@
+behave
+kafka-python
+parse
+parse_type
+pyhamcrest
+requests
+PyHamcrest
+pyyaml
+python-multipart
+typing
+python-dotenv
+playwright
+kafka-python
