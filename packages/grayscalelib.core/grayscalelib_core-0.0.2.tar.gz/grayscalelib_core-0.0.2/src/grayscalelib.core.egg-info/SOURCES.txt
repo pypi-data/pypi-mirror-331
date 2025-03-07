@@ -1,0 +1,17 @@
+README.md
+pyproject.toml
+src/grayscalelib.core.egg-info/PKG-INFO
+src/grayscalelib.core.egg-info/SOURCES.txt
+src/grayscalelib.core.egg-info/dependency_links.txt
+src/grayscalelib.core.egg-info/requires.txt
+src/grayscalelib.core.egg-info/top_level.txt
+src/grayscalelib/core/__init__.py
+src/grayscalelib/core/concretepixels.py
+src/grayscalelib/core/discretization.py
+src/grayscalelib/core/encodable.py
+src/grayscalelib/core/numpypixels.py
+src/grayscalelib/core/pixels.py
+src/grayscalelib/core/tests/__init__.py
+src/grayscalelib/core/tests/conftest.py
+src/grayscalelib/core/tests/test_discretization.py
+src/grayscalelib/core/tests/test_pixels.py

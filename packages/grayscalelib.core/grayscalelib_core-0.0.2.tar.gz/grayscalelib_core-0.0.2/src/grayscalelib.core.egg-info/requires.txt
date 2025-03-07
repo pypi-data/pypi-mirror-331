@@ -1,0 +1,9 @@
+numpy
+
+[dev]
+isort
+ruff
+pre-commit
+
+[test]
+pytest

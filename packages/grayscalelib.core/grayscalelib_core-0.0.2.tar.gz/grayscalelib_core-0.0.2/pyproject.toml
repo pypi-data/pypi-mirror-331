@@ -1,0 +1,76 @@
+[project]
+name = "grayscalelib.core"
+version = "0.0.2"
+description = "A protocol for manipulating grayscale data."
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "GPL-3.0-or-later"}
+authors = [
+    { name = "Marco Heisig" },
+]
+keywords = ["grayscale", "video", "image", "pixel"]
+dependencies = ["numpy"]
+
+[project.urls]
+Repository = "https://github.com/SandoghdarLab/grayscalelib.core.git"
+
+[project.optional-dependencies]
+dev = [
+    "isort",
+    "ruff",
+    "pre-commit",
+]
+test = [
+    "pytest",
+]
+
+[build-system]
+requires = ["setuptools>=75.6"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.isort]
+atomic = true
+profile = "black"
+line_length = 98
+skip_gitignore = true
+known_first_party = ["grayscalelib"]
+
+[tool.ruff]
+line-length = 98
+indent-width = 4
+target-version = "py311"
+include = ["pyproject.toml", "src/**/*.py"]
+
+[tool.ruff.lint]
+fixable = ["ALL"]
+dummy-variable-rgx = "^(_+)$"
+select = [
+    "F",  # pyflakes
+    "E",  # pycodestyle
+    "B",  # bugbear
+]
+
+ignore = [
+    "B008",  # function calls in argument defaults
+    "E741",  # variables named I, O, or l
+]
+
+[tool.ruff.format]
+indent-style = "space"
+line-ending = "auto"
+docstring-code-format = false
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "src"
+]
+
+[tool.pyright]
+include = ["src"]
+exclude = [".venv"]
+venv = ".venv"
+venvPath = "."
+pythonVersion = "3.11"
