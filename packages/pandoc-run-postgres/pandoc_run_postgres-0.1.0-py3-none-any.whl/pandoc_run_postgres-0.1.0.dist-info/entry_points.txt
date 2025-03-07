@@ -1,0 +1,2 @@
+[console_scripts]
+pandoc-run-postgres = pandoc_run_postgres:main
