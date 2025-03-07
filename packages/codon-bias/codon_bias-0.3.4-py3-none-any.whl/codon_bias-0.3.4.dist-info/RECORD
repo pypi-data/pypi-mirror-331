@@ -1,0 +1,15 @@
+codonbias/__init__.py,sha256=aUsq74sZcvC-QitBdgd7f0L0HRfdvVnRZp5iwHXKnG0,1923
+codonbias/genetic_code_ncbi.csv,sha256=Wy6wDcQ-WBBqfh55yt--LWqUne6DzFrRUDPb72egmkU,3858
+codonbias/optimizers.py,sha256=jzKQOED4SSmmvfxPI0s7XU_119oN_IjgRmtr6nafJV4,5483
+codonbias/pairwise.py,sha256=vuO47P4U75L6sCyxqUch5XeJZ8SnrILtn-nPl449Q9M,6096
+codonbias/random.py,sha256=nupAB1ZknoZfH5220QMQA_nxXbxW7gceVcaLnZ9W13Y,20642
+codonbias/scores.py,sha256=I6tl26VQzyO4nkeuQVTTmPpMFP8IhfLhQdvLW1cQhzc,41397
+codonbias/stats.py,sha256=w5AH9VmqS6Hm7pRax6BANAHeyvBFxL2fpHAx-KoP34U,12088
+codonbias/tAI_svalues_Tuller.csv,sha256=phWcDmxyuam1zRmL1cFdSG060hrm5-Lp1L2h6KvpwUc,253
+codonbias/tAI_svalues_dosReis.csv,sha256=QeL4yHLbD-38OjP_gP0bSyKboZ-HxlWvrm585x4wqBI,237
+codonbias/utils.py,sha256=_YMsF_wpXrnmmIpNnbUh9lpbE_VfAkVu4ooMHCc-PqY,7389
+codon_bias-0.3.4.dist-info/LICENSE,sha256=v7dxldWsDX84F1_wFT6iVQuC-V1cojAeV0YkqI0fKXc,1069
+codon_bias-0.3.4.dist-info/METADATA,sha256=N6eYYLAiLd07icKmVQSWKAg4kuA6HSGkQUCkwG-13gQ,3678
+codon_bias-0.3.4.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+codon_bias-0.3.4.dist-info/top_level.txt,sha256=Gs_bQ0wigvkRwWIUy883gL5MGDzZz5u2sqbKYIddW-U,10
+codon_bias-0.3.4.dist-info/RECORD,,
