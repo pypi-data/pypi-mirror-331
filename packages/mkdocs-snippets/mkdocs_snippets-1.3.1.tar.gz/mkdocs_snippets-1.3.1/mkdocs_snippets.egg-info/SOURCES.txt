@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.py
+mkdocs_snippets/__init__.py
+mkdocs_snippets/plugin.py
+mkdocs_snippets.egg-info/PKG-INFO
+mkdocs_snippets.egg-info/SOURCES.txt
+mkdocs_snippets.egg-info/dependency_links.txt
+mkdocs_snippets.egg-info/entry_points.txt
+mkdocs_snippets.egg-info/requires.txt
+mkdocs_snippets.egg-info/top_level.txt
