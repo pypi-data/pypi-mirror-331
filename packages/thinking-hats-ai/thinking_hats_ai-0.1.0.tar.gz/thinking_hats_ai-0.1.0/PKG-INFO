@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: thinking-hats-ai
+Version: 0.1.0
+Summary: Add your description here
+Author-email: "marctimothy.huber@uzh.ch" <marctimothy.huber@uzh.ch>
+Requires-Python: >=3.9
+Requires-Dist: langchain>=0.3.20
+Description-Content-Type: text/markdown
+
+# thinking-hats-ai
