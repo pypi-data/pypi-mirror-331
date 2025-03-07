@@ -1,0 +1,9 @@
+azure-core
+diracx-core
+isodate
+httpx
+
+[testing]
+diracx-testing
+
+[types]
