@@ -1,0 +1,106 @@
+Metadata-Version: 2.2
+Name: ocroy
+Version: 0.1.2
+Summary: Switch optical character recognition (OCR) tools easily
+Author-email: nikkie <takuyafjp+develop@gmail.com>
+License: MIT License
+Project-URL: Repository, https://github.com/ftnext/ocroy
+Keywords: OCR
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: google
+Requires-Dist: google-cloud-vision; extra == "google"
+Provides-Extra: tesseract
+Requires-Dist: pytesseract; extra == "tesseract"
+Provides-Extra: dev
+Requires-Dist: pip-compile-multi; extra == "dev"
+Requires-Dist: taskipy; extra == "dev"
+Requires-Dist: autoflake; extra == "dev"
+Requires-Dist: pyupgrade; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Requires-Dist: isort; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-randomly; extra == "dev"
+Requires-Dist: flake8; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: types-protobuf; extra == "dev"
+Requires-Dist: types-requests; extra == "dev"
+Requires-Dist: types-Pillow; extra == "dev"
+Requires-Dist: types-cachetools; extra == "dev"
+Requires-Dist: types-pyOpenSSL; extra == "dev"
+Requires-Dist: types-setuptools<75.8.2.20250305; extra == "dev"
+
+# ocroy
+
+おしろい (O-shi-ro-i)
+
+Ocroy is a wrapper of Japanese(日本語) OCR (optical character recognition) tools.  
+It allows for easy switching of tools🍰
+
+⚠️Under developing (Currently, planning phase)
+
+## Supported tools
+
+* Google [Vision API](https://cloud.google.com/vision/docs)
+* [Tesseract](https://tesseract-ocr.github.io/tessdoc/)
+
+## Setup
+
+### Google Vision API
+
+Set up your Google Cloud project and authentication  
+https://cloud.google.com/vision/docs/ocr#set-up-your-google-cloud-project-and-authentication
+
+**Recommended**
+
+```
+% uvx --with 'ocroy[google]' ocroy google_api path/to/image --handle-document
+```
+
+Or install this library and dependencies
+
+```
+% pip install 'ocroy[google]'
+```
+
+Then Run:
+
+```
+% ocroy google_api path/to/image --handle-document
+% # OR
+% python -m ocroy google_api path/to/image --handle-document
+% # OR
+% python -m ocroy.recognizers.google_vision_api path/to/image --handle-document
+```
+
+### Tesseract
+
+Install  
+https://tesseract-ocr.github.io/tessdoc/Installation.html
+
+Install this library and dependencies
+
+```
+% pip install 'ocroy[tesseract]'
+```
+
+Then Run:
+
+```
+% ocroy tesseract path/to/image
+% # OR
+% python -m ocroy tesseract path/to/image
+% # OR
+% python -m ocroy.recognizers.tesseract path/to/image
+```
