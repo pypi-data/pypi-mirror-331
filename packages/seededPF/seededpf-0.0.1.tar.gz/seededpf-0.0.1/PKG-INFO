@@ -1,0 +1,29 @@
+Metadata-Version: 2.3
+Name: seededPF
+Version: 0.0.1
+Summary: SeededPF is a seed guided topic model based on Poisson factorization.
+License: MIT
+Keywords: nlp,topicmodel,topic-modeling,textanalysis,text mining
+Author: Bernd Prostmaier
+Author-email: b.prostmaier@icloud.com
+Requires-Python: >=3.10,<3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: matplotlib (==3.7)
+Requires-Dist: numpy (==2.0)
+Requires-Dist: pandas (==2.2.3)
+Requires-Dist: scikit_learn (==1.6)
+Requires-Dist: scipy (==1.15)
+Requires-Dist: seaborn (==0.13)
+Requires-Dist: tensorflow (==2.18)
+Requires-Dist: tensorflow_probability (==0.25)
+Requires-Dist: tf-keras (==2.18)
+Project-URL: Homepage, https://github.com/BPro2410/Seeded-Poisson-Factorization
+Project-URL: Repository, https://github.com/BPro2410/Seeded-Poisson-Factorization
+Description-Content-Type: text/markdown
+
+# SeededPF
+
+
