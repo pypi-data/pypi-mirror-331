@@ -1,0 +1,51 @@
+[tool.poetry]
+name = "leja-recharge-sdk"
+version = "0.1.2"
+description = "Python SDK for Leja Recharge API"
+authors = ["Leja <contact@leja.co.ke>"]
+readme = "README.md"
+packages = [
+    {include = "leja_recharge_sdk"},
+]
+exclude = [
+    ".github/**/*",
+    "tests/**/*",
+    "docs/**/*",
+    "*.pyc",
+    "**/*.pyc",
+    "**/__pycache__",
+    ".gitignore",
+    ".git/**/*",
+    "*.yml",
+    "*.yaml",
+    ".env*",
+    ".python-version",
+    "Makefile",
+    "docker-compose.yml",
+    ".dockerignore",
+    ".coverage",
+    ".pytest_cache",
+    ".mypy_cache",
+    ".ruff_cache",
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+httpx = "^0.26.0"
+pydantic = "^2.6.1"
+python-dotenv = "^1.0.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.0"
+black = "^24.1.1"
+isort = "^5.13.2"
+mypy = "^1.8.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+# Additional configuration for better package building
+[tool.poetry.urls]
+"Homepage" = "https://github.com/Asilimia/leja-recharge-python-sdk"
+"Bug Tracker" = "https://github.com/Asilimia/leja-recharge-python-sdk/issues"
