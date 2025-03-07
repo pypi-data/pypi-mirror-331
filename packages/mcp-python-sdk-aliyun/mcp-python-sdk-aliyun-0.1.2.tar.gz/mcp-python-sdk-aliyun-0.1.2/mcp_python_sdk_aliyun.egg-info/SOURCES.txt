@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+mcp_python_sdk_aliyun.egg-info/PKG-INFO
+mcp_python_sdk_aliyun.egg-info/SOURCES.txt
+mcp_python_sdk_aliyun.egg-info/dependency_links.txt
+mcp_python_sdk_aliyun.egg-info/entry_points.txt
+mcp_python_sdk_aliyun.egg-info/requires.txt
+mcp_python_sdk_aliyun.egg-info/top_level.txt
