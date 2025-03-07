@@ -1,0 +1,57 @@
+## Installation
+
+```bash
+cd {{ project_name }}
+pip install -e .
+```
+
+## Usage
+
+### Starting the System
+
+```bash
+# Using Docker
+docker-compose -f docker/docker-compose.yml up -d
+
+# Using Python
+# Start the coordinator
+python -m {{ package_name }}.coordinator
+
+# Start workers (in separate terminals)
+python -m {{ package_name }}.worker
+```
+
+## Docker Support
+
+The project includes Docker configurations for easy deployment:
+
+```bash
+# Development environment
+docker-compose -f docker/docker-compose.dev.yml up -d
+
+# Production environment
+docker-compose -f docker/docker-compose.yml up -d
+```
+
+## Development
+
+### Prerequisites
+
+- Python 3.12+
+- Docker and Docker Compose (optional)
+- Redis
+- PostgreSQL (optional)
+
+### Setting Up Development Environment
+
+```bash
+# Create a virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install development dependencies
+pip install -e ".[dev]"
+
+# Run tests
+pytest
+```

@@ -1,0 +1,86 @@
+"""
+Base Task implementation for {{ project_name }}.
+"""
+from typing import Dict, Any, Optional, ClassVar, Type
+from hiveflow import Task
+
+class BaseTask(Task):
+    """
+    Base task implementation for {{ project_name }}.
+    
+    This is a simple task that can be extended for more specific use cases.
+    """
+    
+    def __init__(self, 
+                 data: Dict[str, Any],
+                 task_id: Optional[str] = None,
+                 priority: int = 0,
+                 max_retries: int = 3,
+                 timeout: Optional[int] = None):
+        """
+        Initialize a new BaseTask.
+        
+        Args:
+            data: Data to process
+            task_id: Unique identifier for the task. If None, a UUID will be generated.
+            priority: Priority of the task (higher value means higher priority).
+            max_retries: Maximum number of retries allowed.
+            timeout: Timeout in seconds, or None for no timeout.
+        """
+        super().__init__(task_id=task_id, priority=priority, 
+                        max_retries=max_retries, timeout=timeout)
+        self.data = data
+    
+    def process(self, worker: Any) -> Dict[str, Any]:
+        """
+        Process the task using the provided worker.
+        
+        Args:
+            worker: The worker that will process the task.
+            
+        Returns:
+            Dict[str, Any]: Result of the processing.
+        """
+        # Simple example processing - in a real application,
+        # this would be more complex and use worker services
+        return {
+            "status": "completed",
+            "processed_data": self.data,
+            "message": "Task processed successfully"
+        }
+    
+    def to_dict(self) -> Dict[str, Any]:
+        """
+        Convert the task to a dictionary for serialization.
+        
+        Returns:
+            Dict[str, Any]: Dictionary representation of the task.
+        """
+        base_dict = super().to_dict()
+        base_dict["data"] = self.data
+        return base_dict
+    
+    @classmethod
+    def from_dict(cls, data: Dict[str, Any]) -> 'BaseTask':
+        """
+        Create a task from a dictionary.
+        
+        Args:
+            data: Dictionary containing task data.
+            
+        Returns:
+            BaseTask: A new task instance.
+        """
+        task_data = data.get("data", {})
+        task_id = data.get("task_id")
+        priority = data.get("priority", 0)
+        max_retries = data.get("max_retries", 3)
+        timeout = data.get("timeout")
+        
+        return cls(
+            data=task_data,
+            task_id=task_id,
+            priority=priority,
+            max_retries=max_retries,
+            timeout=timeout
+        )

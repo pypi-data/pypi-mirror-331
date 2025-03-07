@@ -1,0 +1,2 @@
+[console_scripts]
+hiveflow = hiveflow.cli:main
