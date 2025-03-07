@@ -1,0 +1,15 @@
+diracx/cli/__init__.py,sha256=HB9Umd1DXskg8lrRY0ZnSaOBVYPD5Pl4PYRWts-ZR0E,808
+diracx/cli/__main__.py,sha256=yGjYWjRcrrp5mJ0xD0v3rc7VIA9bzDib5D7LPAdH4OI,92
+diracx/cli/auth.py,sha256=e3jl1iGplZrPBXvFM1j1D59BdoyE34wZsSEkDDjUg2Q,4751
+diracx/cli/config.py,sha256=-QPTTuH83epgFviO_af_DJBVjRakIrc6MbxkHg1KLlI,853
+diracx/cli/jobs.py,sha256=qxV7y_WVtYzO6h55lgbWgk_ZC9eN1i1hIFHTpwxC9mE,4760
+diracx/cli/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+diracx/cli/utils.py,sha256=NwhMMHwveKOdW2aoSqpnLnfOKhPnjmPPLpX69naPAzc,855
+diracx/cli/internal/__init__.py,sha256=KZrzVcKu3YhNev2XF2KA2nttAa9ONU3CVUgatVMonJ4,143
+diracx/cli/internal/config.py,sha256=xPT7lnJ3QPqJgaNJuMoUpV6CIIxZY_d7HKFb4uINb_8,6552
+diracx/cli/internal/legacy.py,sha256=sbiWdvIWTLDE4gnuZQJ00xCf1th2rYffPtMsl9X--lU,13181
+diracx_cli-0.0.1a28.dist-info/METADATA,sha256=YTyI_qhZis30sjljxRe0v95YeKq-vVr9Oui7p4Og76o,803
+diracx_cli-0.0.1a28.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+diracx_cli-0.0.1a28.dist-info/entry_points.txt,sha256=b1909GHVOkFUiHVglNlpwia4Ug-7Ncrg-8D5xtYVAlw,169
+diracx_cli-0.0.1a28.dist-info/top_level.txt,sha256=vJx10tdRlBX3rF2Psgk5jlwVGZNcL3m_7iQWwgPXt-U,7
+diracx_cli-0.0.1a28.dist-info/RECORD,,
