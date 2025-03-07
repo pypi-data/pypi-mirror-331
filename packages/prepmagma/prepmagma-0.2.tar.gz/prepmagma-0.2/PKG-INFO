@@ -1,0 +1,20 @@
+Metadata-Version: 2.4
+Name: prepmagma
+Version: 0.2
+Summary: prepare data for running magma from unorganized gwas data
+Project-URL: Homepage, https://github.com/brainfo/cleanmagma
+Project-URL: Issues, https://github.com/brainfo/cleanmagma/issues
+Author-email: brainfo <scilavisher@gmail.com>
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# cleanmagma
+
+- [x] To retrieve the information from GWAS summary statistics file for running magma.
+- [x] To run magma with snp to gene annotation, gene level and gene set level enrichment.
+- [x] To summarize the results for the same input gmt files (named gene list) enriched to multiple GWAS data and plot a heatmap with rows are given input gmt names and columns are different GWAS file names.
+
+See examples in docs/

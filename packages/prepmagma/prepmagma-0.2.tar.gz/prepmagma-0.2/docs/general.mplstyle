@@ -1,0 +1,8 @@
+axes.spines.right: False 
+axes.spines.top: False
+font.family: sans-serif
+font.sans-serif: Arial
+pdf.fonttype: 42
+ps.fonttype: 42
+legend.frameon: False
+figure.frameon: False 
