@@ -1,0 +1,16 @@
+dakara_base/__init__.py,sha256=y4OECgiu-5D_mPUGh8BEWCkQjUKhXghFBWBmuaf7hoY,520
+dakara_base/config.py,sha256=WfBZYDe388M1HVsi0tR6hV0EvEA8SxXIu3efO6N5oSc,10506
+dakara_base/directory.py,sha256=bi4myGzZKFfl3-AGGqaQCxJMF4OYtc_FA3n5zXNDfHA,379
+dakara_base/exceptions.py,sha256=E5J5DJJIvsALFFTo7UZYS129FGjrV1zdjvVzfuOMcp0,4206
+dakara_base/http_client.py,sha256=WN5RU_5dS9wQA4FAaIYzPfzFAaE_K6Mqecu9PNPAxwE,15853
+dakara_base/progress_bar.py,sha256=nJ8GsN6b4XmKXVSbrhyigbmmBTTgEOfMOpqmyRrHuXA,3651
+dakara_base/safe_workers.py,sha256=XKTNT_nUamXnAvUZstxfDtexX-mG3VGDGU8EuJszSDA,20278
+dakara_base/utils.py,sha256=fr9CPMsuBcCLBIglUouMXAHAX0n_vqNtma7k0qpx1mc,4305
+dakara_base/version.py,sha256=SAfWqGkXetQzOll1mBxnClDUJW4qe-wULNh0oBxgvQ8,126
+dakara_base/version_check.py,sha256=Q4PBhGu2y8VIXBsGkpwvcARWJ4j4dSkmQ7DwbAgAe8w,948
+dakara_base/websocket_client.py,sha256=y4G6PS-4UulqUBL-pcuTNi9299WuIKpN6su_srtjqQI,12194
+dakarabase-2.1.0.dist-info/LICENSE,sha256=qQwBLAgTXVsirx6NpiDcciCBM32lptXtge1xxsjNnT0,1071
+dakarabase-2.1.0.dist-info/METADATA,sha256=VrDhYEAY7Fi6wA2mHcD4uKrump3yqYB9aXoRoTsPzVM,4941
+dakarabase-2.1.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+dakarabase-2.1.0.dist-info/top_level.txt,sha256=McQvSVwg5W2I1OIq-iZyXVzHltju2JSSZeXdVokAFoU,12
+dakarabase-2.1.0.dist-info/RECORD,,
