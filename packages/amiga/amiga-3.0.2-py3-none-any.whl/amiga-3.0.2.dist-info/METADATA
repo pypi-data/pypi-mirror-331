@@ -1,0 +1,57 @@
+Metadata-Version: 2.2
+Name: amiga
+Version: 3.0.2
+Summary: Analysis of Microbial Growth Assays
+Author-email: Firas Midani <fsm.promotions@gmail.com>
+License: GNU GPL v3.0
+Project-URL: Homepage, https://github.com/firasmidani/amiga
+Project-URL: Documentation, https://firasmidani.github.io/amiga/
+Project-URL: Repository, https://github.com/firasmidani/amiga
+Project-URL: Issues, https://github.com/firasmidani/amiga/issues
+Requires-Python: <3.13.0,>=3.10.0
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: cycler>=0.11.1
+Requires-Dist: Cython>=3.0.0
+Requires-Dist: decorator>=5.1.0
+Requires-Dist: GPy>=1.10.0
+Requires-Dist: kiwisolver>=1.3.2
+Requires-Dist: matplotlib>=3.5.1
+Requires-Dist: numpy>=1.21.0
+Requires-Dist: pandas>=1.3.0
+Requires-Dist: paramz>=0.9.5
+Requires-Dist: pyparsing>=3.0.0
+Requires-Dist: python-dateutil>=2.8.2
+Requires-Dist: pytz>=2021.3
+Requires-Dist: scipy>=1.8.0
+Requires-Dist: seaborn>=0.11.2
+Requires-Dist: six>=1.16.0
+Requires-Dist: tabulate>=0.8.8
+
+# AMiGA
+
+**A**nalysis of **Mi**crobial **G**rowth **A**ssays is a user-friendly program for analysis of high-throughput microbial growth assays using Gaussian Process regression. Users can interact with `AMiGA` via a command-line interface.
+
+## Documentation:
+
+See [documentation](https://firasmidani.github.io/amiga) for tutorials, technical details, and examples.
+
+## Installation:
+
+See [Installation](https://firasmidani.github.io/amiga/doc/installation.html) for instructions and requirements.
+
+## License
+
+This project is covered under the [GPL-3 license](https://www.gnu.org/licenses/gpl-3.0.en.html).
+
+## Bugs/Feature Requests
+
+Please post issues [here](https://github.com/firasmidani/amiga/issues).
+
+## Manuscript and Citation
+
+FS Midani, J Collins, and RA Britton.  
+__AMiGA: software for automated analysis of microbial growth assays.__  
+*mSystems* (2021). [https://doi.org/10.1128/mSystems.00508-21](https://doi.org/10.1128/mSystems.00508-21)  
+
+To reproduce analysis and figures in the manuscript, see [Manuscript README](https://github.com/firasmidani/amiga/blob/master/examples/manuscript/README.md). 
