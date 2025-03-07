@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+vasp_gibbs
+VaspGibbs.egg-info/PKG-INFO
+VaspGibbs.egg-info/SOURCES.txt
+VaspGibbs.egg-info/dependency_links.txt
+VaspGibbs.egg-info/requires.txt
+VaspGibbs.egg-info/top_level.txt
+tests/test_utils.py
+vaspgibbs/__init__.py
+vaspgibbs/thermo.py
+vaspgibbs/utils.py
