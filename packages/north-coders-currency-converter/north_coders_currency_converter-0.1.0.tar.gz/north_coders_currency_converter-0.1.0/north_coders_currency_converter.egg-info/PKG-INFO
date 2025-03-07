@@ -1,0 +1,15 @@
+Metadata-Version: 2.2
+Name: north_coders_currency_converter
+Version: 0.1.0
+Summary: A simple library for converting currency codes to full names and vice versa.
+Home-page: https://github.com/HusseinAlsakkaf
+Author: Hussein Alsakkaf
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: home-page
+Dynamic: summary

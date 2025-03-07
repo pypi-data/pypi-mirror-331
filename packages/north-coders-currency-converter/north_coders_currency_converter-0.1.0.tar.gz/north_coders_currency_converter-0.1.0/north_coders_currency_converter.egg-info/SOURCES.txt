@@ -1,0 +1,8 @@
+README.md
+setup.py
+currency_converter/__init__.py
+currency_converter/converter.py
+north_coders_currency_converter.egg-info/PKG-INFO
+north_coders_currency_converter.egg-info/SOURCES.txt
+north_coders_currency_converter.egg-info/dependency_links.txt
+north_coders_currency_converter.egg-info/top_level.txt
