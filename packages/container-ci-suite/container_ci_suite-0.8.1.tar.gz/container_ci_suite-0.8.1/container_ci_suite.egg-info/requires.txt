@@ -1,0 +1,5 @@
+pytest
+flexmock
+GitPython
+requests
+PyYAML
