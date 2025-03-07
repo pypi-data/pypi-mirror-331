@@ -1,0 +1,10 @@
+Metadata-Version: 2.2
+Name: rss-feed-gen
+Version: 0.1.2
+Summary: RSS Feed Generator for Podcasts with optional media conversion
+Author-email: Zachariah Jackson <rssgen@me.minecraftchest2.us>
+License: MIT
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: feedgen>=0.9.0
+Requires-Dist: requests>=2.0.0
