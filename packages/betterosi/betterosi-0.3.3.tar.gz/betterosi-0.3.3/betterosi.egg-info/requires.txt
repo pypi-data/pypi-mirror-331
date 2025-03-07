@@ -1,0 +1,8 @@
+betterproto2[all]==0.3.1
+mcap
+mcap-protobuf-support
+protobuf
+matplotlib
+numpy
+typer
+tqdm
