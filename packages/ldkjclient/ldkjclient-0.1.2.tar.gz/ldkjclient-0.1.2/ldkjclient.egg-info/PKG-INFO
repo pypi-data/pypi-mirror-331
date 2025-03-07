@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: ldkjclient
+Version: 0.1.2
+Summary: 凌渡科技客户端
+Home-page: https://www.lingduyun.net/
+Author: xuxiadong
+Author-email: xuxiaodong@lingduyun.net
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.0.0
+
+# ldkjclient
+lingdu sms client.
+
+To send SMS messages to the Lingdu Technology SMS platform.
+
+Release Note:
+
+## 0.1.1
+* requests>=2.0.0
+* refactor package sms -> ldkjsms
+## 0.1.2
+fixed url bug.
