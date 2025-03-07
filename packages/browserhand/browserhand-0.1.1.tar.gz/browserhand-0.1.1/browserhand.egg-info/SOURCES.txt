@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+setup.py
+browserhand/__init__.py
+browserhand/actions.py
+browserhand/cli.py
+browserhand/core.py
+browserhand/extractors.py
+browserhand.egg-info/PKG-INFO
+browserhand.egg-info/SOURCES.txt
+browserhand.egg-info/dependency_links.txt
+browserhand.egg-info/entry_points.txt
+browserhand.egg-info/requires.txt
+browserhand.egg-info/top_level.txt
