@@ -1,0 +1,2 @@
+[console_scripts]
+thinking-hats-ai = thinking_hats_ai:main
