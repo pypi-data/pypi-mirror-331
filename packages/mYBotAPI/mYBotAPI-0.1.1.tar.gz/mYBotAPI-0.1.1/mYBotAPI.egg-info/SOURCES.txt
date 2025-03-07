@@ -1,0 +1,9 @@
+README.md
+setup.py
+mYBotAPI.egg-info/PKG-INFO
+mYBotAPI.egg-info/SOURCES.txt
+mYBotAPI.egg-info/dependency_links.txt
+mYBotAPI.egg-info/requires.txt
+mYBotAPI.egg-info/top_level.txt
+mybotapi/__init__.py
+mybotapi/client.py
