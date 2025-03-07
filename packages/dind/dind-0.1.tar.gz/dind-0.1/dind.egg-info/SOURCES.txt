@@ -1,0 +1,8 @@
+README.md
+setup.py
+dind/__init__.py
+dind.egg-info/PKG-INFO
+dind.egg-info/SOURCES.txt
+dind.egg-info/dependency_links.txt
+dind.egg-info/requires.txt
+dind.egg-info/top_level.txt

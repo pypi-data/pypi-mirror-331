@@ -1,0 +1,40 @@
+Metadata-Version: 2.2
+Name: dind
+Version: 0.1
+Summary: library to import popular data librabries
+Home-page: https://github.com/owlpharoah/dind
+Author: owlpharoah
+Author-email: sreeharirathish128@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: matplotlib.pyplot
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# dind
+
+`dind` is a lightweight Python library that automatically imports NumPy and Pandas as `np` and `pd`.
+
+## Installation
+```sh
+pip install dind
+```
+## Usage
+```sh
+from dind import np, pd
+
+print(np.array([1, 2, 3]))
+print(pd.DataFrame({"A": [1, 2, 3]}))
+
+```
