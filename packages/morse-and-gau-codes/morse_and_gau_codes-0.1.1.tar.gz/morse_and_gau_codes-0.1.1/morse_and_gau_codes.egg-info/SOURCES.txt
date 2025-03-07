@@ -1,0 +1,10 @@
+LICENSE
+README.txt
+setup.py
+Codes_package/Gaus.py
+Codes_package/__init__.py
+Codes_package/morse.py
+morse_and_gau_codes.egg-info/PKG-INFO
+morse_and_gau_codes.egg-info/SOURCES.txt
+morse_and_gau_codes.egg-info/dependency_links.txt
+morse_and_gau_codes.egg-info/top_level.txt
