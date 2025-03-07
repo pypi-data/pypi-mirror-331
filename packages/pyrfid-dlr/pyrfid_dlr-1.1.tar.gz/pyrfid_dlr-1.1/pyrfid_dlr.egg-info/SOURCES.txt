@@ -1,0 +1,11 @@
+COPYING
+LICENSE
+README.md
+setup.py
+pyrfid/__init__.py
+pyrfid/pyrfid.py
+pyrfid_dlr.egg-info/PKG-INFO
+pyrfid_dlr.egg-info/SOURCES.txt
+pyrfid_dlr.egg-info/dependency_links.txt
+pyrfid_dlr.egg-info/requires.txt
+pyrfid_dlr.egg-info/top_level.txt
