@@ -1,0 +1,181 @@
+# this_file: pyproject.toml
+
+# Build System Configuration
+# -------------------------
+[build-system]
+requires = [
+    "hatchling>=1.27.0", # Core build backend for Hatch
+    "hatch-vcs>=0.4.0",  # Version Control System plugin for Hatch
+]
+build-backend = "hatchling.build"
+
+# Project Metadata Configuration
+# ------------------------------
+[project]
+name = "opero"
+dynamic = ["version"]
+description = "Resilient, parallel task orchestration for Python"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+keywords = [
+    "orchestration",
+    "resilience",
+    "retry",
+    "fallback",
+    "parallel",
+    "concurrency",
+    "rate-limiting",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = [
+    "tenacity>=8.0.0",
+    "asynciolimiter>=1.0.0",
+    "twat-cache>=2.3.0",
+    "twat-mp>=2.6.0",
+]
+
+[[project.authors]]
+name = "Adam Twardoch"
+email = "adam@twardoch.com"
+
+[project.urls]
+Documentation = "https://github.com/twardoch/opero#readme"
+Issues = "https://github.com/twardoch/opero/issues"
+Source = "https://github.com/twardoch/opero"
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "pytest-benchmark[histogram]>=4.0.0",
+    "pytest-xdist>=3.5.0",
+    "pytest-asyncio>=0.21.0",
+]
+dev = [
+    "black>=23.1.0",
+    "mypy>=1.0.0",
+    "ruff>=0.1.0",
+    "pre-commit>=3.6.0",
+]
+pathos = ["pathos>=0.3.0"]
+aiomultiprocess = ["aiomultiprocess>=0.9.0"]
+all = ["pathos>=0.3.0", "aiomultiprocess>=0.9.0"]
+
+[project.scripts]
+# CLINAME = "opero.__main__:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/opero"]
+
+[tool.hatch.envs.default]
+dependencies = ["mypy>=1.0.0", "ruff>=0.1.0"]
+
+[tool.hatch.envs.test]
+dependencies = [".[test]"]
+
+[tool.hatch.envs.test.scripts]
+test = "python -m pytest -n auto {args:tests}"
+test-cov = "python -m pytest -n auto --cov-report=term-missing --cov-config=pyproject.toml --cov=src/opero --cov=tests {args:tests}"
+bench = "python -m pytest -v -p no:briefcase tests/test_benchmark.py --benchmark-only"
+bench-save = "python -m pytest -v -p no:briefcase tests/test_benchmark.py --benchmark-only --benchmark-json=benchmark/results.json"
+bench-hist = "python -m pytest -v -p no:briefcase tests/test_benchmark.py --benchmark-only --benchmark-histogram=benchmark/hist"
+bench-compare = "python -m pytest-benchmark compare benchmark/results.json --sort fullname --group-by func"
+
+[tool.hatch.envs.lint]
+detached = true
+dependencies = ["black>=23.1.0", "mypy>=1.0.0", "ruff>=0.1.0"]
+
+[tool.hatch.envs.lint.scripts]
+typing = "mypy --install-types --non-interactive {args:src/opero tests}"
+style = ["ruff check {args:.}", "ruff format {args:.}"]
+fmt = ["ruff format {args:.}", "ruff check --fix {args:.}"]
+all = ["style", "typing"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 88
+lint.extend-select = [
+    "I",   # isort
+    "N",   # pep8-naming
+    "B",   # flake8-bugbear
+    "RUF", # Ruff-specific rules
+]
+lint.ignore = [
+    "ARG001", # Unused function argument
+    "E501",   # Line too long
+    "I001",   # Import block formatting
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "lf"
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101"]
+
+[tool.coverage.run]
+source_pkgs = ["opero", "tests"]
+branch = true
+parallel = true
+omit = ["src/opero/__about__.py"]
+
+[tool.coverage.paths]
+opero = ["src/opero", "*/opero/src/opero"]
+tests = ["tests", "*/opero/tests"]
+
+[tool.coverage.report]
+exclude_lines = ["no cov", "if __name__ == .__main__.:", "if TYPE_CHECKING:"]
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+
+[tool.pytest.ini_options]
+markers = ["benchmark: marks tests as benchmarks (select with '-m benchmark')"]
+addopts = "-v -p no:briefcase"
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+filterwarnings = ["ignore::DeprecationWarning", "ignore::UserWarning"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+
+[tool.pytest-benchmark]
+min_rounds = 100
+min_time = 0.1
+histogram = true
+storage = "file"
+save-data = true
+compare = [
+    "min",    # Minimum time
+    "max",    # Maximum time
+    "mean",   # Mean time
+    "stddev", # Standard deviation
+    "median", # Median time
+    "iqr",    # Inter-quartile range
+    "ops",    # Operations per second
+    "rounds", # Number of rounds
+]
+
+[tool.hatch.version]
+source = "vcs"

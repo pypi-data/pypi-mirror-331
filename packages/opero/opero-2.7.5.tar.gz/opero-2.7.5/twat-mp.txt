@@ -1,0 +1,2477 @@
+This file is a merged representation of a subset of the codebase, containing files not matching ignore patterns, combined into a single document by Repomix. The content has been processed where empty lines have been removed.
+
+================================================================
+File Summary
+================================================================
+
+Purpose:
+--------
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+
+File Format:
+------------
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Multiple file entries, each consisting of:
+  a. A separator line (================)
+  b. The file path (File: path/to/file)
+  c. Another separator line
+  d. The full contents of the file
+  e. A blank line
+
+Usage Guidelines:
+-----------------
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+
+Notes:
+------
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching these patterns are excluded: .specstory/**/*.md, .venv/**, _private/**, CLEANUP.txt, **/*.json, *.lock
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Empty lines have been removed from all files
+
+Additional Info:
+----------------
+
+================================================================
+Directory Structure
+================================================================
+.cursor/
+  rules/
+    0project.mdc
+    cleanup.mdc
+    filetree.mdc
+    quality.mdc
+.github/
+  workflows/
+    push.yml
+    release.yml
+docs/
+  architecture.md
+src/
+  twat_mp/
+    __init__.py
+    async_mp.py
+    mp.py
+tests/
+  test_async_mp.py
+  test_benchmark.py
+  test_twat_mp.py
+.gitignore
+.pre-commit-config.yaml
+API_REFERENCE.md
+CHANGELOG.md
+cleanup.py
+LICENSE
+LOG.md
+pyproject.toml
+README.md
+TODO.md
+VERSION.txt
+
+================================================================
+Files
+================================================================
+
+================
+File: .cursor/rules/0project.mdc
+================
+---
+description: About this project
+globs:
+---
+# About this project
+
+`twat-fs` is a file system utility library focused on robust and extensible file upload capabilities with multiple provider support. It provides:
+
+- Multi-provider upload system with smart fallback (catbox.moe default, plus Dropbox, S3, etc.)
+- Automatic retry for temporary failures, fallback for permanent ones
+- URL validation and clean developer experience with type hints
+- Simple CLI: `python -m twat_fs upload_file path/to/file.txt`
+- Easy installation: `uv pip install twat-fs` (basic) or `uv pip install 'twat-fs[all,dev]'` (all features)
+
+## Development Notes
+- Uses `uv` for Python package management
+- Quality tools: ruff, mypy, pytest
+- Clear provider protocol for adding new storage backends
+- Strong typing and runtime checks throughout
+
+================
+File: .cursor/rules/cleanup.mdc
+================
+---
+description: Run `cleanup.py` script before and after changes
+globs:
+---
+Before you do any changes or if I say "cleanup", run the `cleanup.py update` script in the main folder. Analyze the results, describe recent changes in @LOG.md and edit @TODO.md to update priorities and plan next changes. PERFORM THE CHANGES, then run the `cleanup.py status` script and react to the results.
+
+When you edit @TODO.md, lead in lines with empty GFM checkboxes if things aren't done (`- [ ] `) vs. filled (`- [x] `) if done.
+
+================
+File: .cursor/rules/filetree.mdc
+================
+---
+description: File tree of the project
+globs: 
+---
+[ 928]  .
+├── [  96]  .cursor
+│   └── [ 224]  rules
+│       ├── [ 821]  0project.mdc
+│       ├── [ 515]  cleanup.mdc
+│       ├── [1.9K]  filetree.mdc
+│       └── [2.0K]  quality.mdc
+├── [ 128]  .github
+│   └── [ 128]  workflows
+│       ├── [2.9K]  push.yml
+│       └── [1.4K]  release.yml
+├── [3.0K]  .gitignore
+├── [ 470]  .pre-commit-config.yaml
+├── [  96]  .specstory
+│   └── [ 320]  history
+│       ├── [2.7K]  .what-is-this.md
+│       ├── [ 58K]  2025-03-04_03-11-implementing-todo-md-plan.md
+│       ├── [ 69K]  2025-03-04_03-23-codebase-analysis-and-todo-list-creation.md
+│       ├── [ 15K]  2025-03-04_06-17-fixing-hatch-configuration-error.md
+│       ├── [103K]  2025-03-04_07-16-implementing-todo-md-phases-1-and-2.md
+│       ├── [ 644]  2025-03-04_07-54-untitled.md
+│       ├── [1.2K]  2025-03-04_07-59-project-maintenance-and-documentation-update.md
+│       └── [134K]  2025-03-04_08-26-ruff-linting-errors-and-fixes.md
+├── [ 288]  .venv
+├── [6.0K]  API_REFERENCE.md
+├── [3.8K]  CHANGELOG.md
+├── [ 939]  CLEANUP.txt
+├── [1.0K]  LICENSE
+├── [1.3K]  LOG.md
+├── [ 13K]  README.md
+├── [ 78K]  REPO_CONTENT.txt
+├── [2.2K]  TODO.md
+├── [   7]  VERSION.txt
+├── [ 13K]  cleanup.py
+├── [ 160]  dist
+├── [  96]  docs
+│   └── [6.4K]  architecture.md
+├── [5.3K]  pyproject.toml
+├── [ 128]  src
+│   └── [ 256]  twat_mp
+│       ├── [ 572]  __init__.py
+│       ├── [ 17K]  async_mp.py
+│       └── [ 25K]  mp.py
+└── [ 224]  tests
+    ├── [2.8K]  test_async_mp.py
+    ├── [6.3K]  test_benchmark.py
+    └── [ 13K]  test_twat_mp.py
+
+13 directories, 34 files
+
+================
+File: .cursor/rules/quality.mdc
+================
+---
+description: Quality
+globs:
+---
+- **Verify Information**: Always verify information before presenting it. Do not make assumptions or speculate without clear evidence.
+- **No Apologies**: Never use apologies.
+- **No Whitespace Suggestions**: Don't suggest whitespace changes.
+- **No Inventions**: Don't invent major changes other than what's explicitly requested.
+- **No Unnecessary Confirmations**: Don't ask for confirmation of information already provided in the context.
+- **Preserve Existing Code**: Don't remove unrelated code or functionalities. Pay attention to preserving existing structures.
+- **No Implementation Checks**: Don't ask the user to verify implementations that are visible in the provided context.
+- **No Unnecessary Updates**: Don't suggest updates or changes to files when there are no actual modifications needed.
+- **No Current Implementation**: Don't show or discuss the current implementation unless specifically requested.
+- **Use Explicit Variable Names**: Prefer descriptive, explicit variable names over short, ambiguous ones to enhance code readability.
+- **Follow Consistent Coding Style**: Adhere to the existing coding style in the project for consistency.
+- **Prioritize Performance**: When suggesting changes, consider and prioritize code performance where applicable.
+- **Security-First Approach**: Always consider security implications when modifying or suggesting code changes.
+- **Test Coverage**: Suggest or include appropriate unit tests for new or modified code.
+- **Error Handling**: Implement robust error handling and logging where necessary.
+- **Modular Design**: Encourage modular design principles to improve code maintainability and reusability.
+- **Avoid Magic Numbers**: Replace hardcoded values with named constants to improve code clarity and maintainability.
+- **Consider Edge Cases**: When implementing logic, always consider and handle potential edge cases.
+- **Use Assertions**: Include assertions wherever possible to validate assumptions and catch potential errors early.
+
+================
+File: .github/workflows/push.yml
+================
+name: Build & Test
+on:
+  push:
+    branches: [main]
+    tags-ignore: ["v*"]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: write
+  id-token: write
+# Ensure that only one run per branch/commit is active at once.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  # === QUALITY JOB: Lint and format checks ===
+  quality:
+    name: Code Quality
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Run Ruff lint
+        uses: astral-sh/ruff-action@v3
+        with:
+          version: "latest"
+          args: "check --output-format=github"
+      - name: Run Ruff Format
+        uses: astral-sh/ruff-action@v3
+        with:
+          version: "latest"
+          args: "format --check --respect-gitignore"
+  # === TEST JOB: Run tests ===
+  test:
+    name: Run Tests
+    needs: quality
+    strategy:
+      matrix:
+        python-version: ["3.12"]
+        os: [ubuntu-latest]
+      fail-fast: true
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install UV
+        uses: astral-sh/setup-uv@v5
+        with:
+          version: "latest"
+          python-version: ${{ matrix.python-version }}
+          enable-cache: true
+          cache-suffix: ${{ matrix.os }}-${{ matrix.python-version }}
+      - name: Install test dependencies
+        run: |
+          uv pip install --system --upgrade pip
+          uv pip install --system ".[test]"
+      - name: Run tests with Pytest
+        run: uv run pytest -n auto --maxfail=1 --disable-warnings --cov-report=xml --cov-config=pyproject.toml --cov=src/twat_mp --cov=tests tests/
+      - name: Upload coverage report
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-${{ matrix.python-version }}-${{ matrix.os }}
+          path: coverage.xml
+  # === BUILD JOB: Create distribution artifacts ===
+  build:
+    name: Build Distribution
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install UV
+        uses: astral-sh/setup-uv@v5
+        with:
+          version: "latest"
+          python-version: "3.12"
+          enable-cache: true
+      - name: Install build tools
+        run: uv pip install build hatchling hatch-vcs
+      - name: Build distributions
+        run: uv run python -m build --outdir dist
+      - name: Upload distribution artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist-files
+          path: dist/
+          retention-days: 5
+
+================
+File: .github/workflows/release.yml
+================
+name: Release
+on:
+  push:
+    tags: ["v*"]
+permissions:
+  contents: write
+  id-token: write
+jobs:
+  release:
+    name: Release to PyPI
+    runs-on: ubuntu-latest
+    environment:
+      name: pypi
+      url: https://pypi.org/p/twat-mp
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install UV
+        uses: astral-sh/setup-uv@v5
+        with:
+          version: "latest"
+          python-version: "3.12"
+          enable-cache: true
+      - name: Install build tools
+        run: uv pip install build hatchling hatch-vcs
+      - name: Build distributions
+        run: uv run python -m build --outdir dist
+      - name: Verify distribution files
+        run: |
+          ls -la dist/
+          test -n "$(find dist -name '*.whl')" || (echo "Wheel file missing" && exit 1)
+          test -n "$(find dist -name '*.tar.gz')" || (echo "Source distribution missing" && exit 1)
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          password: ${{ secrets.PYPI_TOKEN }}
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: dist/*
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+================
+File: docs/architecture.md
+================
+# twat-mp Architecture
+
+This document explains the architecture of the `twat-mp` package using simple diagrams.
+
+## Component Overview
+
+```
++---------------------------+
+|       twat-mp Package     |
++---------------------------+
+           |
+           |
+           v
++---------------------------+
+|      Core Components      |
++---------------------------+
+           |
+           +----------------+----------------+
+           |                |                |
+           v                v                v
++------------------+ +---------------+ +---------------+
+|  Process-based   | |  Thread-based | |  Async-based  |
+|  Parallelism     | |  Parallelism  | |  Parallelism  |
++------------------+ +---------------+ +---------------+
+|                  | |               | |               |
+| - MultiPool      | | - ThreadPool  | | - AsyncMultiPool |
+| - ProcessPool    | |               | |               |
+| - pmap, imap,    | |               | | - apmap       |
+|   amap decorators| |               | |               |
++------------------+ +---------------+ +---------------+
+           |                |                |
+           |                |                |
+           v                v                v
++---------------------------+---------------------------+
+|                 Underlying Libraries                  |
++---------------------------+---------------------------+
+|                                                       |
+|  - pathos (ProcessPool, ThreadPool)                   |
+|  - aiomultiprocess (AsyncMultiPool)                   |
+|                                                       |
++-------------------------------------------------------+
+```
+
+## Execution Flow
+
+### Process/Thread Pool Execution Flow
+
+```
++-------------+     +-------------+     +----------------+
+| User Code   |     | Pool        |     | Worker         |
+| with        |---->| Creation    |---->| Processes      |
+| ProcessPool |     | (Context)   |     | or Threads     |
++-------------+     +-------------+     +----------------+
+      |                   |                    |
+      |                   |                    |
+      v                   v                    v
++-------------+     +-------------+     +----------------+
+| Function    |     | Task        |     | Parallel       |
+| to Execute  |---->| Distribution|---->| Execution      |
++-------------+     +-------------+     +----------------+
+                          |                    |
+                          |                    |
+                          v                    v
+                    +-------------+     +----------------+
+                    | Result      |<----| Results        |
+                    | Collection  |     | from Workers   |
+                    +-------------+     +----------------+
+                          |
+                          |
+                          v
+                    +-------------+
+                    | Return      |
+                    | to User     |
+                    +-------------+
+```
+
+### Async Pool Execution Flow
+
+```
++-------------+     +-------------+     +----------------+
+| Async       |     | AsyncMulti  |     | Worker         |
+| User Code   |---->| Pool        |---->| Processes      |
++-------------+     | Creation    |     |                |
+      |             +-------------+     +----------------+
+      |                   |                    |
+      v                   v                    v
++-------------+     +-------------+     +----------------+
+| Async       |     | Task        |     | Parallel       |
+| Function    |---->| Distribution|---->| Execution of   |
++-------------+     +-------------+     | Async Functions|
+                          |             +----------------+
+                          |                    |
+                          v                    v
+                    +-------------+     +----------------+
+                    | Await       |<----| Async Results  |
+                    | Results     |     | from Workers   |
+                    +-------------+     +----------------+
+                          |
+                          |
+                          v
+                    +-------------+
+                    | Return      |
+                    | to User     |
+                    +-------------+
+```
+
+## Decorator Pattern
+
+```
++-------------+     +-------------+     +----------------+
+| Function    |     | Decorator   |     | Wrapped        |
+| Definition  |---->| Application |---->| Function       |
+| @pmap       |     | (mmap)      |     |                |
++-------------+     +-------------+     +----------------+
+                          |                    |
+                          |                    |
+                          v                    v
+                    +-------------+     +----------------+
+                    | Function    |     | MultiPool      |
+                    | Call with   |---->| Creation &     |
+                    | Iterable    |     | Management     |
+                    +-------------+     +----------------+
+                                               |
+                                               |
+                                               v
+                                        +----------------+
+                                        | Parallel       |
+                                        | Execution &    |
+                                        | Result Return  |
+                                        +----------------+
+```
+
+## Class Hierarchy
+
+```
+                  +-------------+
+                  |  MultiPool  |
+                  +-------------+
+                        ^
+                        |
+          +-------------+-------------+
+          |                           |
++-----------------+         +-----------------+
+|  ProcessPool    |         |   ThreadPool    |
++-----------------+         +-----------------+
+
+
++------------------+
+| AsyncMultiPool   |
++------------------+
+```
+
+## Decorator Relationships
+
+```
+                  +-------------+
+                  |    mmap     |
+                  | (factory)   |
+                  +-------------+
+                        |
+                        v
+          +-------------+-------------+-------------+
+          |             |             |             |
++-----------------+  +------+  +------+  +---------+
+|      pmap       |  | imap |  | amap |  |  apmap  |
+| (eager eval)    |  | (lazy)|  |(async)|  |(async) |
++-----------------+  +------+  +------+  +---------+
+```
+
+================
+File: src/twat_mp/__init__.py
+================
+
+
+================
+File: src/twat_mp/async_mp.py
+================
+logger = logging.getLogger(__name__)
+    class AioPool:  # type: ignore
+T = TypeVar("T")
+U = TypeVar("U")
+V = TypeVar("V")
+def _check_aiomultiprocess() -> None:
+        raise ImportError(
+class AsyncMultiPool:
+    def __init__(
+        _check_aiomultiprocess()
+    async def __aenter__(self) -> "AsyncMultiPool":
+                self.pool = aiomultiprocess.Pool(
+                logger.debug(f"Created AsyncMultiPool with {self.processes} processes")
+                logger.error(f"Failed to create AsyncMultiPool: {e}")
+                raise RuntimeError(f"Failed to create AsyncMultiPool: {e}") from e
+    async def __aexit__(self, exc_type: Any, exc_val: Any, exc_tb: Any) -> None:
+            logger.debug("No pool to clean up in __aexit__")
+            logger.warning("Cleanup already attempted, skipping")
+            logger.warning(
+            logger.debug("Attempting graceful pool shutdown with close()")
+            self.pool.close()
+            await self.pool.join()
+            logger.debug("Pool gracefully closed and joined")
+            logger.error(f"Error during graceful pool shutdown: {e}")
+            logger.debug(f"Traceback: {traceback.format_exc()}")
+                logger.debug("Attempting forceful pool termination")
+                self.pool.terminate()
+                logger.debug("Pool forcefully terminated and joined")
+                logger.error(f"Error during forceful pool termination: {e2}")
+            logger.debug("Clearing pool reference")
+            logger.error(error_msg)
+            raise RuntimeError(error_msg) from cleanup_error
+    async def map(
+            raise RuntimeError("Pool not initialized. Use 'async with' statement.")
+            return await self.pool.map(func, iterable)
+            logger.error(f"Error during parallel map operation: {e}")
+            raise RuntimeError(f"Error during parallel map operation: {e}") from e
+    async def starmap(
+            return await self.pool.starmap(func, iterable)
+            logger.error(f"Error during parallel starmap operation: {e}")
+            raise RuntimeError(f"Error during parallel starmap operation: {e}") from e
+    async def imap(
+            async for result in self.pool.imap(func, iterable):
+            logger.error(f"Error during parallel imap operation: {e}")
+            raise RuntimeError(f"Error during parallel imap operation: {e}") from e
+def apmap(
+    @wraps(func)
+    async def wrapper(iterable: Iterable[T]) -> list[U]:
+            async with AsyncMultiPool() as pool:
+                return await pool.map(func, iterable)
+            logger.error(f"Error in apmap decorator: {e}")
+            raise RuntimeError(f"Error in parallel processing: {e}") from e
+
+================
+File: src/twat_mp/mp.py
+================
+logger = logging.getLogger(__name__)
+T = TypeVar("T")
+U = TypeVar("U")
+DEBUG_MODE = os.environ.get("TWAT_MP_DEBUG", "0").lower() in ("1", "true", "yes", "on")
+class WorkerError(Exception):
+    def __init__(
+                f": {type(original_exception).__name__}: {original_exception}"
+        super().__init__(detailed_message)
+def set_debug_mode(enabled: bool = True) -> None:
+        logging.basicConfig(
+            handlers=[logging.StreamHandler(sys.stdout)],
+        logger.setLevel(logging.DEBUG)
+        logger.debug("Debug mode enabled for twat_mp")
+        logger.setLevel(logging.INFO)
+        logger.info("Debug mode disabled for twat_mp")
+def _worker_wrapper(func: Callable[[T], U], item: T, worker_id: int | None = None) -> U:
+        return func(item)
+        tb_str = traceback.format_exc()
+        logger.error(
+        logger.debug(f"Traceback: {tb_str}")
+        raise WorkerError(
+class MultiPool:
+        self.nodes: int = nodes if nodes is not None else mp.cpu_count()  # type: ignore
+            logger.debug(
+    def __enter__(self) -> PathosPool:
+            logger.debug(f"Creating pool with {self.nodes} nodes")
+            self.pool = self.pool_class(nodes=self.nodes)
+                logger.debug(f"Pool created successfully: {self.pool}")
+                logger.error(msg)
+                raise RuntimeError(msg)
+            def enhanced_map(func: Callable[[T], U], iterable: Iterator[T]) -> Any:
+                def wrapped_func(item, idx=None):
+                    return _worker_wrapper(func, item, idx)
+                    return original_map(wrapped_func, iterable)
+                    if isinstance(e, WorkerError):
+                    logger.error(f"Error during parallel map operation: {e}")
+                        logger.debug(f"Traceback: {traceback.format_exc()}")
+                    raise RuntimeError(
+            logger.error(error_msg)
+            raise RuntimeError(error_msg) from e
+    def __exit__(self, exc_type: Any, exc_value: Any, traceback: Any) -> Literal[False]:
+                    self.pool.terminate()
+                    self.pool.join()
+                        logger.debug("Closing pool gracefully")
+                    self.pool.close()
+                        logger.debug("Pool closed and joined successfully")
+                        logger.debug("Pool terminated and joined after cleanup error")
+                        logger.debug(f"Failed to terminate pool: {e2}")
+                        logger.debug("Clearing pool resources")
+                    self.pool.clear()
+                        logger.debug("Pool resources cleared")
+                        logger.debug(f"Error clearing pool resources: {e}")
+                    logger.debug("Pool reference set to None")
+            logger.debug("No pool to clean up")
+class ProcessPool(MultiPool):
+    def __init__(self, nodes: int | None = None, debug: bool | None = None) -> None:
+        super().__init__(pool_class=PathosProcessPool, nodes=nodes, debug=debug)
+class ThreadPool(MultiPool):
+        super().__init__(pool_class=PathosThreadPool, nodes=nodes, debug=debug)
+def mmap(
+        raise ValueError(
+    def decorator(func: Callable[[T], U]) -> Callable[[Iterator[T]], Iterator[U]]:
+        @wraps(func)
+        def wrapper(iterable: Iterator[T], *args: Any, **kwargs: Any) -> Any:
+                    f"Executing {func.__name__} with {how} on {type(iterable).__name__}"
+                with MultiPool(debug=use_debug) as pool:
+                        mapping_method = getattr(pool, how)
+                            logger.debug(f"Using pool method: {how}")
+                        raise ValueError(error_msg) from err
+                            logger.debug(f"Starting parallel execution with {how}")
+                        result = mapping_method(func, iterable)
+                                logger.debug("Getting results from async operation")
+                            result = result.get()
+                            logger.debug("Parallel execution completed successfully")
+                                isinstance(e, WorkerError)
+                            logger.debug("KeyboardInterrupt detected during execution")
+def pmap(func: Callable[[T], U]) -> Callable[[Iterator[T]], Iterator[U]]:
+    return mmap("map")(func)
+def imap(func: Callable[[T], U]) -> Callable[[Iterator[T]], Iterator[U]]:
+    return mmap("imap")(func)
+def amap(func: Callable[[T], U]) -> Callable[[Iterator[T]], Any]:
+    return mmap("amap", get_result=True)(func)
+
+================
+File: tests/test_async_mp.py
+================
+async def async_double(x: int) -> int:
+    await asyncio.sleep(0.01)  # Simulate some async work
+async def async_raise_error(x: Any) -> Any:
+    raise ValueError(f"Error processing {x}")
+async def test_async_multi_pool_map() -> None:
+    async with AsyncMultiPool() as pool:
+        results = await pool.map(async_double, range(5))
+async def test_async_multi_pool_empty() -> None:
+        results = await pool.map(async_double, [])
+async def test_async_multi_pool_error() -> None:
+    with pytest.raises(ValueError):
+            await pool.map(async_raise_error, range(5))
+async def test_async_multi_pool_imap() -> None:
+        async for result in pool.imap(async_double, range(5)):
+            results.append(result)
+async def test_async_multi_pool_starmap() -> None:
+    async def async_sum(*args: int) -> int:
+        await asyncio.sleep(0.01)
+        return sum(args)
+        results = await pool.starmap(async_sum, [(1, 2), (3, 4), (5, 6)])
+async def test_apmap_decorator() -> None:
+    async def double(x: int) -> int:
+    results = await double(range(5))
+async def test_pool_not_initialized() -> None:
+    pool = AsyncMultiPool()
+    with pytest.raises(RuntimeError, match="Pool not initialized"):
+        await pool.map(async_double, range(5))
+async def test_pool_cleanup() -> None:
+
+================
+File: tests/test_benchmark.py
+================
+def _compute_intensive(x: int) -> int:
+    for _ in range(1000):  # Simulate CPU-intensive work
+def _io_intensive(x: int) -> int:
+    time.sleep(0.001)  # Simulate I/O wait
+def generate_data(size: int) -> list[int]:
+    return list(range(size))
+def small_data() -> list[int]:
+    return generate_data(100)
+def medium_data() -> list[int]:
+    return generate_data(1000)
+def large_data() -> list[int]:
+    return generate_data(10000)
+def run_parallel_operation(
+    parallel_func = parallel_impl(func)
+    return list(parallel_func(data))
+class TestComputeIntensiveBenchmarks:
+    def test_sequential_vs_process_pool(self, benchmark, medium_data):
+        def sequential() -> list[int]:
+            return list(map(_compute_intensive, medium_data))
+        def parallel() -> list[int]:
+            with ProcessPool() as pool:
+                return list(pool.map(_compute_intensive, medium_data))
+        result = sequential()  # Run once to get result
+        assert parallel() == result  # Verify results match
+        def run_both() -> tuple[list[int], list[int]]:
+            return sequential(), parallel()
+        benchmark(run_both)
+    @pytest.mark.parametrize("data_size", [100, 1000, 10000])
+    def test_parallel_implementations(self, benchmark, data_size):
+        data = generate_data(data_size)
+        def process_map(
+            return mmap(how="map")(f)
+        def thread_map(
+            def wrapper(iterable: Any) -> Iterator[Any]:
+                with ThreadPool() as pool:
+                    return pool.map(f, iterable)
+            "amap": lambda f: amap(f),
+            "imap": lambda f: imap(f),
+            "pmap": lambda f: pmap(f),
+        reference_result = run_parallel_operation(
+        for name, impl in implementations.items():
+            result = run_parallel_operation(_compute_intensive, data, impl)
+        def run_all() -> dict[str, list[int]]:
+                name: run_parallel_operation(_compute_intensive, data, impl)
+                for name, impl in implementations.items()
+        benchmark(run_all)
+class TestIOIntensiveBenchmarks:
+    def test_thread_vs_process_pool(self, benchmark, medium_data):
+        def process_pool() -> list[int]:
+                return list(pool.map(_io_intensive, medium_data))
+        def thread_pool() -> list[int]:
+        result = process_pool()  # Run once to get result
+        assert thread_pool() == result  # Verify results match
+            return process_pool(), thread_pool()
+class TestScalabilityBenchmarks:
+    @pytest.mark.parametrize("nodes", [2, 4, 8, 16])
+    def test_worker_scaling(self, benchmark, medium_data, nodes):
+        def run_with_workers() -> list[int]:
+            with ProcessPool(nodes=nodes) as pool:
+        benchmark(run_with_workers)
+class TestCompositionBenchmarks:
+    def test_chained_operations(self, benchmark, medium_data):
+        def sequential_chain() -> list[int]:
+            return [_io_intensive(_compute_intensive(x)) for x in medium_data]
+        def parallel_chain() -> list[int]:
+            compute = amap(_compute_intensive)
+            io_op = amap(_io_intensive)
+            return list(io_op(compute(medium_data)))
+        result = sequential_chain()  # Run once to get result
+        assert parallel_chain() == result  # Verify results match
+            return sequential_chain(), parallel_chain()
+
+================
+File: tests/test_twat_mp.py
+================
+T = TypeVar("T")
+U = TypeVar("U")
+def test_version():
+def _square(x: int) -> int:
+def _subs(x: int) -> int:
+isquare = amap(_square)
+isubs = amap(_subs)
+def test_process_pool_context():
+    with ProcessPool() as pool:
+        result = list(pool.map(_square, iter(range(5))))
+def test_thread_pool_context():
+    with ThreadPool() as pool:
+def test_amap_decorator():
+    result = isquare(iter(range(5)))
+def test_pmap_decorator():
+    def square(x: int) -> int:
+    result = list(square(iter(range(5))))
+def test_imap_decorator():
+    iterator = square(iter(range(3)))
+    assert next(iterator) == 0
+    assert next(iterator) == 1
+    assert next(iterator) == 4
+def test_composed_operations():
+    result = list(isubs(isquare(iter(range(5)))))
+def test_pool_nodes_specification():
+    with ProcessPool(nodes=TEST_PROCESS_POOL_SIZE) as pool:
+    with ThreadPool(nodes=TEST_THREAD_POOL_SIZE) as pool:
+def test_parallel_vs_sequential_performance():
+    def slow_square(x: int) -> int:
+        time.sleep(0.01)  # Simulate CPU work
+    start_time = time.time()
+    sequential_result = [slow_square(x) for x in range(20)]
+    sequential_time = time.time() - start_time
+        parallel_result = list(pool.map(slow_square, iter(range(20))))
+    parallel_time = time.time() - start_time
+    print(f"Sequential: {sequential_time:.4f}s, Parallel: {parallel_time:.4f}s")
+def test_mmap_decorator_variants():
+    map_decorator = mmap("map")
+    def square1(x: int) -> int:
+    assert list(square1(iter(range(5)))) == [0, 1, 4, 9, 16]
+    imap_decorator = mmap("imap")
+    def square2(x: int) -> int:
+    assert list(square2(iter(range(5)))) == [0, 1, 4, 9, 16]
+    amap_decorator = mmap("amap", get_result=True)
+    def square3(x: int) -> int:
+    assert square3(iter(range(5))) == [0, 1, 4, 9, 16]
+def test_empty_iterable():
+        result = list(pool.map(_square, iter([])))
+    assert list(square(iter([]))) == []
+    def square_imap(x: int) -> int:
+    assert list(square_imap(iter([]))) == []
+    def square_amap(x: int) -> int:
+    assert square_amap(iter([])) == []
+def test_error_propagation():
+    def error_func(x: int) -> int:
+            raise ValueError("Test error")
+    with pytest.raises(WorkerError) as excinfo:
+            list(pool.map(error_func, iter(range(5))))
+    assert "ValueError" in str(excinfo.value)
+    assert "Test error" in str(excinfo.value)
+    assert "3" in str(excinfo.value)  # Check that the input item is mentioned
+    def error_map(x: int) -> int:
+            raise ValueError("Test error in pmap")
+    with pytest.raises(RuntimeError, match="Failed to create or use pool"):
+        list(error_map(iter(range(5))))
+    def error_imap(x: int) -> int:
+            raise ValueError("Test error in imap")
+    with pytest.raises(ValueError):
+        list(error_imap(iter(range(5))))
+    def error_amap(x: int) -> int:
+            raise ValueError("Test error in amap")
+        error_amap(iter(range(5)))
+def test_debug_mode():
+    with patch("logging.Logger.debug") as mock_debug:
+        set_debug_mode(True)
+            list(pool.map(_square, iter(range(3))))
+        set_debug_mode(False)
+def test_invalid_mapping_method():
+    with pytest.raises(ValueError, match="Invalid mapping method"):
+        mmap("invalid_method")
+    with patch("twat_mp.mp.MultiPool.__enter__") as mock_enter:
+        mock_pool = MagicMock()
+        delattr(mock_pool, valid_method)  # Remove the valid method from the mock
+        decorator = mmap(valid_method)
+        def test_func(x: int) -> int:
+            test_func(iter(range(5)))
+def test_pool_creation_failure():
+    with patch(
+        side_effect=RuntimeError("Test pool creation error"),
+        with pytest.raises(RuntimeError, match="Test pool creation error"):
+            with ProcessPool():
+def test_resource_cleanup_after_exception():
+    class TestError(Exception):
+    with patch("twat_mp.mp.MultiPool.__exit__") as mock_exit:
+                raise TestError("Test exception")
+def test_keyboard_interrupt_handling():
+    with patch("pathos.pools.ProcessPool.terminate") as mock_terminate:
+        with patch("pathos.pools.ProcessPool.join") as mock_join:
+                    raise KeyboardInterrupt()
+def test_large_data_handling():
+    large_data = list(range(1000))
+        result = list(pool.map(_square, iter(large_data)))
+        assert len(result) == 1000
+def test_nested_pools():
+    def nested_pool_func(x: int) -> List[int]:
+        with ThreadPool(nodes=2) as inner_pool:
+            return list(inner_pool.map(_square, iter(range(x + 1))))
+    with ProcessPool(nodes=2) as outer_pool:
+        results = list(outer_pool.map(nested_pool_func, iter(range(3))))
+def test_pool_reuse_failure():
+    with ProcessPool() as p:
+        list(p.map(_square, iter(range(5))))
+            result = list(pool.map(_square, iter(range(3))))
+            print(f"Pool raised exception after context exit: {type(e).__name__}: {e}")
+def test_custom_exception_handling():
+    class CustomError(Exception):
+    def raise_custom_error(x: int) -> int:
+            raise CustomError(f"Value {x} is too large")
+            list(pool.map(raise_custom_error, iter(range(5))))
+    assert "CustomError" in str(excinfo.value)
+    assert "Value 3 is too large" in str(excinfo.value)
+    def decorated_error_func(x: int) -> int:
+            raise CustomError(f"Decorated value {x} is too large")
+        list(decorated_error_func(iter(range(5))))
+
+================
+File: .gitignore
+================
+*_autogen/
+.DS_Store
+__version__.py
+__pycache__/
+_Chutzpah*
+_deps
+_NCrunch_*
+_pkginfo.txt
+_Pvt_Extensions
+_ReSharper*/
+_TeamCity*
+_UpgradeReport_Files/
+!?*.[Cc]ache/
+!.axoCover/settings.json
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!**/[Pp]ackages/build/
+!Directory.Build.rsp
+.*crunch*.local.xml
+.axoCover/*
+.builds
+.cr/personal
+.fake/
+.history/
+.ionide/
+.localhistory/
+.mfractor/
+.ntvs_analysis.dat
+.paket/paket.exe
+.sass-cache/
+.vs/
+.vscode
+.vscode/*
+.vshistory/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+[Bb]in/
+[Bb]uild[Ll]og.*
+[Dd]ebug/
+[Dd]ebugPS/
+[Dd]ebugPublic/
+[Ee]xpress/
+[Ll]og/
+[Ll]ogs/
+[Oo]bj/
+[Rr]elease/
+[Rr]eleasePS/
+[Rr]eleases/
+[Tt]est[Rr]esult*/
+[Ww][Ii][Nn]32/
+*_h.h
+*_i.c
+*_p.c
+*_wpftmp.csproj
+*- [Bb]ackup ([0-9]).rdl
+*- [Bb]ackup ([0-9][0-9]).rdl
+*- [Bb]ackup.rdl
+*.[Cc]ache
+*.[Pp]ublish.xml
+*.[Rr]e[Ss]harper
+*.a
+*.app
+*.appx
+*.appxbundle
+*.appxupload
+*.aps
+*.azurePubxml
+*.bim_*.settings
+*.bim.layout
+*.binlog
+*.btm.cs
+*.btp.cs
+*.build.csdef
+*.cab
+*.cachefile
+*.code-workspace
+*.coverage
+*.coveragexml
+*.d
+*.dbmdl
+*.dbproj.schemaview
+*.dll
+*.dotCover
+*.DotSettings.user
+*.dsp
+*.dsw
+*.dylib
+*.e2e
+*.exe
+*.gch
+*.GhostDoc.xml
+*.gpState
+*.ilk
+*.iobj
+*.ipdb
+*.jfm
+*.jmconfig
+*.la
+*.lai
+*.ldf
+*.lib
+*.lo
+*.log
+*.mdf
+*.meta
+*.mm.*
+*.mod
+*.msi
+*.msix
+*.msm
+*.msp
+*.ncb
+*.ndf
+*.nuget.props
+*.nuget.targets
+*.nupkg
+*.nvuser
+*.o
+*.obj
+*.odx.cs
+*.opendb
+*.opensdf
+*.opt
+*.out
+*.pch
+*.pdb
+*.pfx
+*.pgc
+*.pgd
+*.pidb
+*.plg
+*.psess
+*.publishproj
+*.publishsettings
+*.pubxml
+*.pyc
+*.rdl.data
+*.rptproj.bak
+*.rptproj.rsuser
+*.rsp
+*.rsuser
+*.sap
+*.sbr
+*.scc
+*.sdf
+*.sln.docstates
+*.sln.iml
+*.slo
+*.smod
+*.snupkg
+*.so
+*.suo
+*.svclog
+*.tlb
+*.tlh
+*.tli
+*.tlog
+*.tmp
+*.tmp_proj
+*.tss
+*.user
+*.userosscache
+*.userprefs
+*.vbp
+*.vbw
+*.VC.db
+*.VC.VC.opendb
+*.VisualState.xml
+*.vsp
+*.vspscc
+*.vspx
+*.vssscc
+*.xsd.cs
+**/[Pp]ackages/*
+**/*.DesktopClient/GeneratedArtifacts
+**/*.DesktopClient/ModelManifest.xml
+**/*.HTMLClient/GeneratedArtifacts
+**/*.Server/GeneratedArtifacts
+**/*.Server/ModelManifest.xml
+*~
+~$*
+$tf/
+AppPackages/
+artifacts/
+ASALocalRun/
+AutoTest.Net/
+Backup*/
+BenchmarkDotNet.Artifacts/
+bld/
+BundleArtifacts/
+ClientBin/
+cmake_install.cmake
+CMakeCache.txt
+CMakeFiles
+CMakeLists.txt.user
+CMakeScripts
+CMakeUserPresets.json
+compile_commands.json
+coverage*.info
+coverage*.json
+coverage*.xml
+csx/
+CTestTestfile.cmake
+dlldata.c
+DocProject/buildhelp/
+DocProject/Help/*.hhc
+DocProject/Help/*.hhk
+DocProject/Help/*.hhp
+DocProject/Help/*.HxC
+DocProject/Help/*.HxT
+DocProject/Help/html
+DocProject/Help/Html2
+ecf/
+FakesAssemblies/
+FodyWeavers.xsd
+Generated_Code/
+Generated\ Files/
+healthchecksdb
+install_manifest.txt
+ipch/
+Makefile
+MigrationBackup/
+mono_crash.*
+nCrunchTemp_*
+node_modules/
+nunit-*.xml
+OpenCover/
+orleans.codegen.cs
+Package.StoreAssociation.xml
+paket-files/
+project.fragment.lock.json
+project.lock.json
+publish/
+PublishScripts/
+rcf/
+ScaffoldingReadMe.txt
+ServiceFabricBackup/
+StyleCopReport.xml
+Testing
+TestResult.xml
+UpgradeLog*.htm
+UpgradeLog*.XML
+x64/
+x86/
+# Python coverage
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+.pytest_cache/
+.benchmarks/
+
+_private
+
+================
+File: .pre-commit-config.yaml
+================
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.3.4
+    hooks:
+      - id: ruff
+        args: [--fix]
+      - id: ruff-format
+        args: [--respect-gitignore]
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: check-yaml
+      - id: check-toml
+      - id: check-added-large-files
+      - id: debug-statements
+      - id: check-case-conflict
+      - id: mixed-line-ending
+        args: [--fix=lf]
+
+================
+File: API_REFERENCE.md
+================
+# twat-mp API Reference
+
+This document provides a comprehensive reference for the `twat-mp` package's API.
+
+## Table of Contents
+
+- [Core Classes](#core-classes)
+  - [MultiPool](#multipool)
+  - [ProcessPool](#processpool)
+  - [ThreadPool](#threadpool)
+  - [AsyncMultiPool](#asyncmultipool)
+- [Decorators](#decorators)
+  - [pmap](#pmap)
+  - [imap](#imap)
+  - [amap](#amap)
+  - [apmap](#apmap)
+- [Usage Patterns](#usage-patterns)
+  - [Choosing the Right Pool](#choosing-the-right-pool)
+  - [Error Handling](#error-handling)
+  - [Resource Management](#resource-management)
+
+## Core Classes
+
+### MultiPool
+
+```python
+class MultiPool:
+    def __init__(self, pool_class=PathosProcessPool, nodes=None):
+        ...
+```
+
+Base class for managing Pathos parallel processing pools. This class abstracts the creation and cleanup of a parallel processing pool, automatically choosing the number of nodes (processes or threads) based on the CPU count if not provided.
+
+**Parameters:**
+- `pool_class`: The Pathos pool class to instantiate (default: `PathosProcessPool`)
+- `nodes`: The number of processes/threads to use (default: CPU count)
+
+**Methods:**
+- `__enter__()`: Enter the runtime context and create the pool
+- `__exit__(exc_type, exc_value, traceback)`: Exit the runtime context, ensuring the pool is properly closed and resources are freed
+
+**Example:**
+```python
+with MultiPool(pool_class=PathosProcessPool) as pool:
+    results = pool.map(lambda x: x * 2, range(5))
+print(list(results))
+```
+
+### ProcessPool
+
+```python
+class ProcessPool(MultiPool):
+    def __init__(self, nodes=None):
+        ...
+```
+
+Context manager specifically for creating a process-based pool. This subclass of MultiPool defaults to using the ProcessPool from Pathos.
+
+**Parameters:**
+- `nodes`: Number of processes to use (default: CPU count)
+
+**Example:**
+```python
+with ProcessPool() as pool:
+    results = pool.map(lambda x: x * 2, range(10))
+```
+
+### ThreadPool
+
+```python
+class ThreadPool(MultiPool):
+    def __init__(self, nodes=None):
+        ...
+```
+
+Context manager specifically for creating a thread-based pool. This subclass of MultiPool defaults to using the ThreadPool from Pathos.
+
+**Parameters:**
+- `nodes`: Number of threads to use (default: CPU count)
+
+**Example:**
+```python
+with ThreadPool() as pool:
+    results = pool.map(lambda x: x * 2, range(10))
+```
+
+### AsyncMultiPool
+
+```python
+class AsyncMultiPool:
+    def __init__(self, processes=None, initializer=None, initargs=None, **kwargs):
+        ...
+```
+
+A context manager for managing an aiomultiprocess.Pool. Provides high-level interface for parallel processing with async/await support.
+
+**Parameters:**
+- `processes`: Number of processes to use (default: CPU count)
+- `initializer`: Optional callable to initialize worker processes
+- `initargs`: Arguments to pass to the initializer
+- `**kwargs`: Additional keyword arguments passed to aiomultiprocess.Pool
+
+**Methods:**
+- `__aenter__()`: Enter the async context, creating and starting the pool
+- `__aexit__(exc_type, exc_val, exc_tb)`: Exit the async context, closing and joining the pool
+- `map(func, iterable)`: Apply the function to each item in the iterable in parallel
+- `starmap(func, iterable)`: Like map() but unpacks arguments from the iterable
+- `imap(func, iterable)`: Async iterator version of map()
+
+**Example:**
+```python
+async def process_items():
+    async with AsyncMultiPool() as pool:
+        async def work(x):
+            await asyncio.sleep(0.1)  # Some async work
+            return x * 2
+
+        results = await pool.map(work, range(10))
+        return results
+```
+
+## Decorators
+
+### pmap
+
+```python
+@pmap
+def func(x):
+    ...
+```
+
+Standard parallel map decorator (eager evaluation). Wraps a function so that when it is called with an iterable, the function is applied in parallel using a ProcessPool.
+
+**Example:**
+```python
+@pmap
+def square(x):
+    return x * x
+
+results = list(square(range(10)))
+```
+
+### imap
+
+```python
+@imap
+def func(x):
+    ...
+```
+
+Lazy parallel map decorator that returns an iterator. Results are yielded as they become available.
+
+**Example:**
+```python
+@imap
+def cube(x):
+    return x * x * x
+
+for result in cube(range(5)):
+    print(result)  # Prints results as they become available
+```
+
+### amap
+
+```python
+@amap
+def func(x):
+    ...
+```
+
+Asynchronous parallel map decorator with automatic result retrieval. Uses the 'amap' method of Pathos pools.
+
+**Example:**
+```python
+@amap
+def double(x):
+    return x * 2
+
+results = list(double(range(10)))
+```
+
+### apmap
+
+```python
+@apmap
+async def func(x):
+    ...
+```
+
+Decorator for async functions to run in parallel using AsyncMultiPool. Requires the 'aio' extra to be installed.
+
+**Example:**
+```python
+@apmap
+async def double(x):
+    await asyncio.sleep(0.1)  # Some async work
+    return x * 2
+
+async def main():
+    results = await double(range(10))
+    print(results)
+
+asyncio.run(main())
+```
+
+## Usage Patterns
+
+### Choosing the Right Pool
+
+- **ProcessPool**: Best for CPU-intensive tasks that benefit from parallel execution across multiple cores
+- **ThreadPool**: Best for I/O-bound tasks where threads can efficiently wait for I/O operations
+- **AsyncMultiPool**: Best for combining async/await with multiprocessing, particularly useful for mixed workloads
+
+### Error Handling
+
+All pools provide proper error propagation. Exceptions raised in worker processes/threads are propagated to the main process:
+
+```python
+try:
+    with ProcessPool() as pool:
+        results = list(pool.map(potentially_failing_function, data))
+except Exception as e:
+    print(f"An error occurred: {e}")
+```
+
+### Resource Management
+
+The context manager pattern ensures proper cleanup of resources:
+
+```python
+# Resources are automatically cleaned up when exiting the context
+with ProcessPool() as pool:
+    # Use the pool
+    results = pool.map(func, data)
+
+# Pool is now closed and resources are freed
+```
+
+For async pools:
+
+```python
+async def main():
+    async with AsyncMultiPool() as pool:
+        # Use the pool
+        results = await pool.map(async_func, data)
+
+    # Pool is now closed and resources are freed
+
+asyncio.run(main())
+```
+
+================
+File: CHANGELOG.md
+================
+# Changelog
+
+All notable changes to the `twat-mp` project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [Unreleased]
+
+### Added
+
+- Created comprehensive API reference documentation
+- Added architecture diagrams explaining component relationships and workflows
+- Added real-world examples for image processing, data processing, web scraping, and file operations
+- Implemented better error handling with descriptive error messages and suggestions
+- Added interactive examples in Jupyter notebooks
+- Implemented debug mode with detailed logging
+
+### Changed
+
+- Improved resource cleanup in AsyncMultiPool.__aexit__ using close() instead of terminate()
+- Enhanced error handling during pool cleanup to ensure proper resource management
+- Updated docstrings with more examples and clearer explanations
+- Improved compatibility with Python 3.12+ async features
+- Enhanced exception propagation from worker processes
+- Fixed build system configuration by adding proper `tool.hatch.version` settings
+- Renamed `WorkerException` to `WorkerError` for consistency with Python naming conventions
+- Updated tests to reflect the new error handling behavior
+- Fixed `test_pool_reuse_failure` test to document current behavior
+- Improved code quality by removing unused variables and lambda assignments
+
+### Fixed
+
+- Fixed AttributeError handling in exception handling code
+- Improved graceful shutdown mechanism with better signal handling
+- Fixed keyboard interrupt handling during parallel execution
+- Addressed linter warnings and improved code quality
+- Fixed package build error by adding missing version configuration in pyproject.toml
+- Fixed inconsistent exception naming across the codebase
+- Fixed test assertions to properly check for error messages in `WorkerError`
+
+## [2.5.3] - 2025-03-04
+
+### Added
+
+- Added proper version configuration in pyproject.toml using hatch-vcs
+- Improved build system configuration for better package distribution
+- Created LOG.md file to track development progress (now merged into CHANGELOG.md)
+- Updated TODO.md with prioritized tasks
+
+### Fixed
+
+- Fixed package build error related to missing version configuration
+- Ensured proper version extraction from Git tags
+
+### Changed
+
+- Updated CHANGELOG.md with recent changes
+- Updated README.md with information about recent updates
+
+## [2.0.0] - 2025-02-20
+
+### Added
+
+- Added async support via `aiomultiprocess` integration
+- New `AsyncMultiPool` class for combining async/await with multiprocessing
+- New `apmap` decorator for easy async parallel processing
+- Comprehensive test suite for async functionality
+- Documentation for async features
+
+### Changed
+
+- Updated project dependencies to include optional `aiomultiprocess` support
+- Enhanced type hints and error handling across the codebase
+- Changed version handling to use static version instead of VCS-based versioning
+
+## [1.7.5] - 2025-02-15
+
+### Added
+
+- Implemented AsyncMultiPool class for combining async/await with multiprocessing
+- Added apmap decorator for easy async parallel processing
+- Created comprehensive test suite for async functionality
+
+### Changed
+
+- Optimized CI/CD pipeline with improved GitHub Actions workflow
+- Enhanced stability and performance optimizations in core multiprocessing functions
+- Updated documentation and README with clearer usage examples
+- Updated project dependencies to include optional aiomultiprocess support
+- Enhanced type hints and error handling across the codebase
+
+[Unreleased]: https://github.com/twardoch/twat-mp/compare/v2.5.3...HEAD
+[2.5.3]: https://github.com/twardoch/twat-mp/compare/v2.0.0...v2.5.3
+[2.0.0]: https://github.com/twardoch/twat-mp/compare/v1.7.5...v2.0.0
+[1.7.5]: https://github.com/twardoch/twat-mp/compare/v1.7.3...v1.7.5
+// ... existing references ...
+
+================
+File: cleanup.py
+================
+LOG_FILE = Path("CLEANUP.txt")
+os.chdir(Path(__file__).parent)
+def new() -> None:
+    if LOG_FILE.exists():
+        LOG_FILE.unlink()
+def prefix() -> None:
+    readme = Path(".cursor/rules/0project.mdc")
+    if readme.exists():
+        log_message("\n=== PROJECT STATEMENT ===")
+        content = readme.read_text()
+        log_message(content)
+def suffix() -> None:
+    todo = Path("TODO.md")
+    if todo.exists():
+        log_message("\n=== TODO.md ===")
+        content = todo.read_text()
+def log_message(message: str) -> None:
+    timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
+    with LOG_FILE.open("a") as f:
+        f.write(log_line)
+def run_command(cmd: list[str], check: bool = True) -> subprocess.CompletedProcess:
+        result = subprocess.run(
+            log_message(result.stdout)
+        log_message(f"Command failed: {' '.join(cmd)}")
+        log_message(f"Error: {e.stderr}")
+        return subprocess.CompletedProcess(cmd, 1, "", str(e))
+def check_command_exists(cmd: str) -> bool:
+        return which(cmd) is not None
+class Cleanup:
+    def __init__(self) -> None:
+        self.workspace = Path.cwd()
+    def _print_header(self, message: str) -> None:
+        log_message(f"\n=== {message} ===")
+    def _check_required_files(self) -> bool:
+            if not (self.workspace / file).exists():
+                log_message(f"Error: {file} is missing")
+    def _generate_tree(self) -> None:
+        if not check_command_exists("tree"):
+            log_message("Warning: 'tree' command not found. Skipping tree generation.")
+            rules_dir = Path(".cursor/rules")
+            rules_dir.mkdir(parents=True, exist_ok=True)
+            tree_result = run_command(
+            with open(rules_dir / "filetree.mdc", "w") as f:
+                f.write("---\ndescription: File tree of the project\nglobs: \n---\n")
+                f.write(tree_text)
+            log_message("\nProject structure:")
+            log_message(tree_text)
+            log_message(f"Failed to generate tree: {e}")
+    def _git_status(self) -> bool:
+        result = run_command(["git", "status", "--porcelain"], check=False)
+        return bool(result.stdout.strip())
+    def _venv(self) -> None:
+        log_message("Setting up virtual environment")
+            run_command(["uv", "venv"])
+            if venv_path.exists():
+                os.environ["VIRTUAL_ENV"] = str(self.workspace / ".venv")
+                log_message("Virtual environment created and activated")
+                log_message("Virtual environment created but activation failed")
+            log_message(f"Failed to create virtual environment: {e}")
+    def _install(self) -> None:
+        log_message("Installing package with all extras")
+            self._venv()
+            run_command(["uv", "pip", "install", "-e", ".[test,dev]"])
+            log_message("Package installed successfully")
+            log_message(f"Failed to install package: {e}")
+    def _run_checks(self) -> None:
+        log_message("Running code quality checks")
+            log_message(">>> Running code fixes...")
+            run_command(
+            log_message(">>>Running type checks...")
+            run_command(["python", "-m", "mypy", "src", "tests"], check=False)
+            log_message(">>> Running tests...")
+            run_command(["python", "-m", "pytest", "tests"], check=False)
+            log_message("All checks completed")
+            log_message(f"Failed during checks: {e}")
+    def status(self) -> None:
+        prefix()  # Add README.md content at start
+        self._print_header("Current Status")
+        self._check_required_files()
+        self._generate_tree()
+        result = run_command(["git", "status"], check=False)
+        self._print_header("Environment Status")
+        self._install()
+        self._run_checks()
+        suffix()  # Add TODO.md content at end
+    def venv(self) -> None:
+        self._print_header("Virtual Environment Setup")
+    def install(self) -> None:
+        self._print_header("Package Installation")
+    def update(self) -> None:
+        self.status()
+        if self._git_status():
+            log_message("Changes detected in repository")
+                run_command(["git", "add", "."])
+                run_command(["git", "commit", "-m", commit_msg])
+                log_message("Changes committed successfully")
+                log_message(f"Failed to commit changes: {e}")
+            log_message("No changes to commit")
+    def push(self) -> None:
+        self._print_header("Pushing Changes")
+            run_command(["git", "push"])
+            log_message("Changes pushed successfully")
+            log_message(f"Failed to push changes: {e}")
+def repomix(
+            cmd.append("--compress")
+            cmd.append("--remove-empty-lines")
+            cmd.append("-i")
+            cmd.append(ignore_patterns)
+        cmd.extend(["-o", output_file])
+        run_command(cmd)
+        log_message(f"Repository content mixed into {output_file}")
+        log_message(f"Failed to mix repository: {e}")
+def print_usage() -> None:
+    log_message("Usage:")
+    log_message("  cleanup.py status   # Show current status and run all checks")
+    log_message("  cleanup.py venv     # Create virtual environment")
+    log_message("  cleanup.py install  # Install package with all extras")
+    log_message("  cleanup.py update   # Update and commit changes")
+    log_message("  cleanup.py push     # Push changes to remote")
+def main() -> NoReturn:
+    new()  # Clear log file
+    if len(sys.argv) < 2:
+        print_usage()
+        sys.exit(1)
+    cleanup = Cleanup()
+            cleanup.status()
+            cleanup.venv()
+            cleanup.install()
+            cleanup.update()
+            cleanup.push()
+        log_message(f"Error: {e}")
+    repomix()
+    sys.stdout.write(Path("CLEANUP.txt").read_text())
+    sys.exit(0)  # Ensure we exit with a status code
+    main()
+
+================
+File: LICENSE
+================
+MIT License
+
+Copyright (c) 2025 Adam Twardoch
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+================
+File: LOG.md
+================
+# Development Log
+
+This file tracks the development progress of the `twat-mp` project. For a more structured changelog, see [CHANGELOG.md](CHANGELOG.md).
+
+## 2025-03-04
+
+### Linting and Test Fixes
+
+- Renamed `WorkerException` to `WorkerError` for consistency with Python naming conventions
+- Updated tests to reflect the new error handling behavior
+- Fixed `test_pool_reuse_failure` test to document current behavior
+- Ensured all tests pass with the updated error handling
+- Removed unused variables and improved code quality
+- Updated TODO.md to mark completed tasks
+- Updated CHANGELOG.md with recent changes
+
+### Code Quality Improvements
+
+- Fixed inconsistent exception naming across the codebase
+- Fixed test assertions to properly check for error messages in `WorkerError`
+- Removed lambda assignments in favor of direct function references
+- Improved error handling with more descriptive error messages
+
+### Documentation Updates
+
+- Added "Recently Completed" section to TODO.md
+- Updated CHANGELOG.md with detailed descriptions of recent changes
+- Created LOG.md file to track development progress
+
+## Next Steps
+
+- Continue implementing tasks from TODO.md, focusing on Phase 1 priorities
+- Consider adding a CLI interface for common operations
+- Implement support for cancellation of running tasks
+- Add progress tracking for long-running parallel operations
+
+================
+File: pyproject.toml
+================
+# this_file: twat_mp/pyproject.toml
+# Build System Configuration
+# -------------------------
+# Specifies the build system and its requirements for packaging the project
+# Specifies the build backend and its requirements for building the package
+[build-system]
+requires = [
+    "hatchling>=1.27.0", # Core build backend for Hatch
+    "hatch-vcs>=0.4.0", # Version Control System plugin for Hatch
+
+]
+build-backend = "hatchling.build" # Use Hatchling as the build backend
+
+# Project Metadata Configuration
+# ------------------------------
+# Comprehensive project description, requirements, and compatibility information
+[project]
+name = "twat-mp"
+dynamic = ["version"]
+description = "Parallel processing utilities using Pathos mpprocessing library"
+readme = "README.md"
+requires-python = ">=3.10" # Minimum Python version required
+license = "MIT"
+keywords = ["parallel", "mpprocessing", "pathos", "map", "pool"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+# Runtime Dependencies
+# -------------------
+# External packages required for the project to function
+dependencies = [
+    "pathos>=0.3.3", # Parallel processing library
+    "twat>=1.8.1",
+    "aiomultiprocess>=0.9.1"
+    # Main twat package
+]
+
+[[project.authors]]
+name = "Adam Twardoch"
+email = "adam+github@twardoch.com"
+
+[project.urls]
+Documentation = "https://github.com/twardoch/twat-mp#readme"
+Issues = "https://github.com/twardoch/twat-mp/issues"
+Source = "https://github.com/twardoch/twat-mp"
+
+[project.entry-points."twat.plugins"]
+mp = "twat_mp"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/twat_mp"]
+
+[tool.hatch.envs.default]
+dependencies = ["mypy>=1.0.0", "ruff>=0.1.0"]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "pytest-benchmark[histogram]>=4.0.0",
+    "pytest-xdist>=3.5.0", # For parallel test execution
+    "pandas>=2.0.0", # Required by some test dependencies
+    "numpy>=1.24.0", # Required by pandas
+    "matplotlib>=3.7.0", # For benchmark visualization
+
+]
+dev = ["pre-commit>=3.6.0"]
+all = [
+    "twat>=1.0.0",
+    "pathos>=0.3.3",
+    "aiomultiprocess>=0.9.1"
+    # Include aio in all
+]
+
+[tool.hatch.envs.test]
+dependencies = [".[test]"]
+
+[tool.hatch.envs.test.scripts]
+# Regular tests can run in parallel
+test = "python -m pytest -n auto {args:tests}"
+test-cov = "python -m pytest -n auto --cov-report=term-missing --cov-config=pyproject.toml --cov=src/twat_mp --cov=tests {args:tests}"
+# Benchmarks must run sequentially
+bench = "python -m pytest -v -p no:briefcase tests/test_benchmark.py --benchmark-only"
+bench-save = "python -m pytest -v -p no:briefcase tests/test_benchmark.py --benchmark-only --benchmark-json=benchmark/results.json"
+bench-hist = "python -m pytest -v -p no:briefcase tests/test_benchmark.py --benchmark-only --benchmark-histogram=benchmark/hist"
+bench-compare = "python -m pytest-benchmark compare benchmark/results.json --sort fullname --group-by func"
+
+[tool.hatch.envs.lint]
+detached = true
+dependencies = ["black>=23.1.0", "mypy>=1.0.0", "ruff>=0.1.0"]
+
+[tool.hatch.envs.lint.scripts]
+typing = "mypy --install-types --non-interactive {args:src/twat_mp tests}"
+style = ["ruff check {args:.}", "ruff format {args:.}"]
+fmt = ["ruff format {args:.}", "ruff check --fix {args:.}"]
+all = ["style", "typing"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 88
+lint.extend-select = [
+    "I", # isort
+    "N", # pep8-naming
+    "B", # flake8-bugbear
+    "RUF", # Ruff-specific rules
+
+]
+lint.ignore = [
+    "ARG001", # Unused function argument
+    "E501", # Line too long
+    "I001",
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "lf"
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101"]
+
+[tool.coverage.run]
+source_pkgs = ["twat_mp", "tests"]
+branch = true
+parallel = true
+omit = ["src/twat_mp/__about__.py"]
+
+[tool.coverage.paths]
+twat_mp = ["src/twat_mp", "*/twat-mp/src/twat_mp"]
+tests = ["tests", "*/twat-mp/tests"]
+
+[tool.coverage.report]
+exclude_lines = ["no cov", "if __name__ == .__main__.:", "if TYPE_CHECKING:"]
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+
+[tool.pytest.ini_options]
+markers = ["benchmark: marks tests as benchmarks (select with '-m benchmark')"]
+addopts = "-v -p no:briefcase"
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+filterwarnings = ["ignore::DeprecationWarning", "ignore::UserWarning"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+
+[tool.pytest-benchmark]
+min_rounds = 100
+min_time = 0.1
+histogram = true
+storage = "file"
+save-data = true
+compare = [
+    "min", # Minimum time
+    "max", # Maximum time
+    "mean", # Mean time
+    "stddev", # Standard deviation
+    "median", # Median time
+    "iqr", # Inter-quartile range
+    "ops", # Operations per second
+    "rounds", # Number of rounds
+
+]
+
+[tool.hatch.version]
+source = "vcs"
+
+================
+File: README.md
+================
+# twat-mp
+
+Parallel processing utilities using Pathos and aiomultiprocess libraries. This package provides convenient context managers and decorators for parallel processing, with process-based, thread-based, and async-based pools.
+
+## Features
+
+* Multiple parallel processing options:
+  + `ProcessPool`: For CPU-intensive parallel processing using Pathos
+  + `ThreadPool`: For I/O-bound parallel processing using Pathos
+  + `AsyncMultiPool`: For combined async/await with multiprocessing using aiomultiprocess
+* Decorators for common parallel mapping operations:
+  + `pmap`: Standard parallel map (eager evaluation)
+  + `imap`: Lazy parallel map returning an iterator
+  + `amap`: Asynchronous map with automatic result retrieval
+  + `apmap`: Async parallel map for use with async/await functions
+* Automatic CPU core detection for optimal pool sizing
+* Clean resource management with context managers
+* Full type hints and modern Python features
+* Flexible pool configuration with customizable worker count
+* Graceful error handling and resource cleanup
+* Enhanced exception propagation with detailed context
+* Debug mode with comprehensive logging
+* Optional dependencies to reduce installation footprint
+* Version control system (VCS) based versioning using hatch-vcs
+
+## Recent Updates
+
+* Added debug mode with detailed logging via `set_debug_mode()`
+* Enhanced error handling with `WorkerException` for better context
+* Improved exception propagation from worker processes
+* Added comprehensive docstrings to all public functions and classes
+* Fixed build system configuration with proper version handling
+* Enhanced error handling and resource cleanup
+* Improved compatibility with Python 3.12+ async features
+* Added comprehensive API reference documentation
+* Added real-world examples for various use cases
+
+## Installation
+
+Basic installation:
+```bash
+pip install twat-mp
+```
+
+With async support:
+```bash
+pip install 'twat-mp[aio]'
+```
+
+With all extras and development tools:
+```bash
+pip install 'twat-mp[all,dev]'
+```
+
+## Usage
+
+### Basic Usage
+
+```python
+from twat_mp import ProcessPool, pmap
+
+# Using the pool directly
+with ProcessPool() as pool:
+    results = pool.map(lambda x: x * 2, range(10))
+
+# Using the decorator
+@pmap
+def double(x):
+    return x * 2
+
+results = double(range(10))
+```
+
+### Async Support
+
+The package provides async support through `aiomultiprocess`, allowing you to combine the benefits of async/await with multiprocessing:
+
+```python
+import asyncio
+from twat_mp import AsyncMultiPool, apmap
+
+# Using the pool directly
+async def process_items():
+    async with AsyncMultiPool() as pool:
+        async def work(x):
+            await asyncio.sleep(0.1)  # Some async work
+            return x * 2
+
+        results = await pool.map(work, range(10))
+        return results
+
+# Using the decorator
+@apmap
+async def double(x):
+    await asyncio.sleep(0.1)  # Some async work
+    return x * 2
+
+async def main():
+    results = await double(range(10))
+    print(results)  # [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
+
+asyncio.run(main())
+```
+
+The async support is particularly useful when you need to:
+- Perform CPU-intensive tasks in parallel
+- Handle many concurrent I/O operations
+- Combine async/await with true multiprocessing
+- Process results from async APIs in parallel
+
+### Advanced Async Features
+
+The `AsyncMultiPool` provides additional methods for different mapping strategies:
+
+```python
+import asyncio
+from twat_mp import AsyncMultiPool
+
+async def main():
+    # Using starmap for unpacking arguments
+    async def sum_values(a, b):
+        await asyncio.sleep(0.01)
+        return a + b
+
+    async with AsyncMultiPool() as pool:
+        # Regular map
+        double_results = await pool.map(
+            lambda x: x * 2,
+            range(5)
+        )
+        print(double_results)  # [0, 2, 4, 6, 8]
+
+        # Starmap unpacks arguments
+        sum_results = await pool.starmap(
+            sum_values,
+            [(1, 2), (3, 4), (5, 6)]
+        )
+        print(sum_results)  # [3, 7, 11]
+
+        # imap returns an async iterator
+        async for result in pool.imap(sum_values, [(1, 1), (2, 2), (3, 3)]):
+            print(result)  # Prints 2, 4, 6 as they complete
+
+asyncio.run(main())
+```
+
+### Using Process and Thread Pools
+
+The package provides dedicated context managers for both process and thread pools:
+
+```python
+from twat_mp import ProcessPool, ThreadPool
+
+# For CPU-intensive operations
+with ProcessPool() as pool:
+    results = pool.map(lambda x: x * x, range(10))
+    print(list(results))  # [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+# For I/O-bound operations
+with ThreadPool() as pool:
+    results = pool.map(lambda x: x * 2, range(10))
+    print(list(results))  # [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
+
+# Custom number of workers
+with ProcessPool(nodes=4) as pool:
+    results = pool.map(lambda x: x * x, range(10))
+```
+
+### Using Map Decorators
+
+The package provides three decorators for different mapping strategies:
+
+```python
+from twat_mp import amap, imap, pmap
+
+# Standard parallel map (eager evaluation)
+@pmap
+def square(x: int) -> int:
+    return x * x
+
+results = list(square(range(10)))
+print(results)  # [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+# Lazy parallel map (returns iterator)
+@imap
+def cube(x: int) -> int:
+    return x * x * x
+
+for result in cube(range(5)):
+    print(result)  # Prints results as they become available
+
+# Asynchronous parallel map with automatic result retrieval
+@amap
+def double(x: int) -> int:
+    return x * 2
+
+results = list(double(range(10)))
+print(results)  # [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
+```
+
+### Function Composition
+
+Decorators can be composed for complex parallel operations:
+
+```python
+from twat_mp import amap
+
+@amap
+def compute_intensive(x: int) -> int:
+    result = x
+    for _ in range(1000):  # Simulate CPU-intensive work
+        result = (result * x + x) % 10000
+    return result
+
+@amap
+def io_intensive(x: int) -> int:
+    import time
+    time.sleep(0.001)  # Simulate I/O wait
+    return x * 2
+
+# Chain parallel operations
+results = list(io_intensive(compute_intensive(range(100))))
+```
+
+### Debug Mode and Error Handling
+
+The package provides a debug mode for detailed logging and enhanced error handling:
+
+```python
+from twat_mp import ProcessPool, set_debug_mode
+import time
+import random
+
+def process_item(x):
+    """Process an item with random delay and potential errors."""
+    # Simulate random processing time
+    time.sleep(random.random() * 0.5)
+    
+    # Randomly fail for demonstration
+    if random.random() < 0.2:  # 20% chance of failure
+        raise ValueError(f"Random failure processing item {x}")
+        
+    return x * 10
+
+# Enable debug mode for detailed logging
+set_debug_mode(True)
+
+try:
+    with ProcessPool() as pool:
+        results = list(pool.map(process_item, range(10)))
+        print(f"Processed results: {results}")
+except Exception as e:
+    print(f"Caught exception: {e}")
+    # The exception will include details about which worker and input item caused the error
+finally:
+    # Disable debug mode when done
+    set_debug_mode(False)
+```
+
+The enhanced error handling provides detailed context about failures:
+
+```python
+from twat_mp import ProcessPool
+
+def risky_function(x):
+    if x == 5:
+        raise ValueError("Cannot process item 5")
+    return x * 2
+
+try:
+    with ProcessPool() as pool:
+        results = list(pool.map(risky_function, range(10)))
+except ValueError as e:
+    # The exception will include the worker ID and input item that caused the error
+    print(f"Caught error: {e}")
+    # Handle the error appropriately
+```
+
+## Real-World Examples
+
+### Image Processing
+
+Processing images in parallel can significantly speed up operations like resizing, filtering, or format conversion:
+
+```python
+from twat_mp import ProcessPool
+from PIL import Image
+import os
+
+def resize_image(file_path):
+    """Resize an image to 50% of its original size."""
+    try:
+        with Image.open(file_path) as img:
+            # Get the original size
+            width, height = img.size
+            # Resize to 50%
+            resized = img.resize((width // 2, height // 2))
+            # Save with '_resized' suffix
+            output_path = os.path.splitext(file_path)[0] + '_resized' + os.path.splitext(file_path)[1]
+            resized.save(output_path)
+            return output_path
+    except Exception as e:
+        return f"Error processing {file_path}: {e}"
+
+# Get all image files in a directory
+image_files = [f for f in os.listdir('images') if f.lower().endswith(('.png', '.jpg', '.jpeg'))]
+image_paths = [os.path.join('images', f) for f in image_files]
+
+# Process images in parallel
+with ProcessPool() as pool:
+    results = list(pool.map(resize_image, image_paths))
+
+print(f"Processed {len(results)} images")
+```
+
+### Web Scraping
+
+Thread pools are ideal for I/O-bound operations like web scraping:
+
+```python
+import requests
+from bs4 import BeautifulSoup
+from twat_mp import ThreadPool
+
+def fetch_page_title(url):
+    """Fetch the title of a webpage."""
+    try:
+        response = requests.get(url, timeout=10)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.text, 'html.parser')
+        title = soup.title.string if soup.title else "No title found"
+        return {"url": url, "title": title, "status": response.status_code}
+    except Exception as e:
+        return {"url": url, "error": str(e), "status": None}
+
+# List of URLs to scrape
+urls = [
+    "https://www.python.org",
+    "https://www.github.com",
+    "https://www.stackoverflow.com",
+    "https://www.wikipedia.org",
+    "https://www.reddit.com"
+]
+
+# Use ThreadPool for I/O-bound operations
+with ThreadPool() as pool:
+    results = list(pool.map(fetch_page_title, urls))
+
+# Print results
+for result in results:
+    if "error" in result:
+        print(f"Error fetching {result['url']}: {result['error']}")
+    else:
+        print(f"{result['url']} - {result['title']} (Status: {result['status']})")
+```
+
+### Data Processing with Pandas
+
+Process large datasets in parallel chunks:
+
+```python
+import pandas as pd
+import numpy as np
+from twat_mp import ProcessPool
+
+def process_chunk(chunk_data):
+    """Process a chunk of data."""
+    # Simulate some data processing
+    chunk_data['processed'] = chunk_data['value'] * 2 + np.random.randn(len(chunk_data))
+    chunk_data['category'] = pd.cut(chunk_data['processed'], 
+                                    bins=[-np.inf, 0, 10, np.inf], 
+                                    labels=['low', 'medium', 'high'])
+    # Calculate some statistics
+    result = {
+        'chunk_id': chunk_data['chunk_id'].iloc[0],
+        'mean': chunk_data['processed'].mean(),
+        'median': chunk_data['processed'].median(),
+        'std': chunk_data['processed'].std(),
+        'count': len(chunk_data),
+        'categories': chunk_data['category'].value_counts().to_dict()
+    }
+    return result
+
+# Create a large DataFrame
+n_rows = 1_000_000
+df = pd.DataFrame({
+    'value': np.random.randn(n_rows),
+    'group': np.random.choice(['A', 'B', 'C', 'D'], n_rows)
+})
+
+# Split into chunks for parallel processing
+chunk_size = 100_000
+chunks = []
+for i, chunk_start in enumerate(range(0, n_rows, chunk_size)):
+    chunk_end = min(chunk_start + chunk_size, n_rows)
+    chunk = df.iloc[chunk_start:chunk_end].copy()
+    chunk['chunk_id'] = i
+    chunks.append(chunk)
+
+# Process chunks in parallel
+with ProcessPool() as pool:
+    results = list(pool.map(process_chunk, chunks))
+
+# Combine results
+summary = pd.DataFrame(results)
+print(summary)
+```
+
+### Async File Processing
+
+Combine async I/O with parallel processing:
+
+```python
+import asyncio
+import aiofiles
+import os
+from twat_mp import AsyncMultiPool
+
+async def count_words(filename):
+    """Count words in a file asynchronously."""
+    try:
+        async with aiofiles.open(filename, 'r') as f:
+            content = await f.read()
+            word_count = len(content.split())
+            return {"filename": filename, "word_count": word_count}
+    except Exception as e:
+        return {"filename": filename, "error": str(e)}
+
+async def main():
+    # Get all text files in a directory
+    files = [os.path.join("documents", f) for f in os.listdir("documents") 
+             if f.endswith(".txt")]
+    
+    # Process files in parallel
+    async with AsyncMultiPool() as pool:
+        results = await pool.map(count_words, files)
+    
+    # Calculate total word count
+    total_words = sum(r.get("word_count", 0) for r in results)
+    
+    # Print results
+    for result in results:
+        if "error" in result:
+            print(f"Error processing {result['filename']}: {result['error']}")
+        else:
+            print(f"{result['filename']}: {result['word_count']} words")
+    
+    print(f"Total word count: {total_words}")
+
+# Run the async main function
+asyncio.run(main())
+```
+
+## API Reference
+
+For detailed API documentation, see the [API Reference](API_REFERENCE.md).
+
+## License
+
+MIT
+
+================
+File: TODO.md
+================
+---
+this_file: TODO.md
+---
+
+# TODO
+
+Tip: Periodically run `python ./cleanup.py status` to see results of lints and tests. Use `uv pip ...` not `pip ...`
+
+
+## Phase 1
+
+- [ ] Add a CLI interface for common operations
+- [ ] Add support for cancellation of running tasks
+- [ ] Implement progress tracking for long-running parallel operations
+- [ ] Implement backpressure mechanisms for memory-intensive operations
+- [ ] Add support for process affinity and priority settings
+- [ ] Implement a unified interface for all pool types
+- [ ] Add support for custom serialization/deserialization
+- [ ] Add context manager for automatic resource cleanup across all parallel operations
+- [ ] Implement adaptive pool sizing based on workload and system resources
+- [ ] Add support for task prioritization and scheduling
+
+## Phase 2
+
+- [ ] Increase test coverage to at least 90%
+- [ ] Implement stress tests for high concurrency scenarios
+- [ ] Add tests for resource leaks and memory usage
+- [ ] Add tests for different Python versions and platforms
+- [ ] Implement property-based testing for robustness
+
+## Phase 3
+
+- [ ] Optimize serialization/deserialization for better performance
+- [ ] Optimize memory usage for large datasets
+- [ ] Implement caching mechanisms for repeated operations
+- [ ] Profile and optimize critical code paths
+- [ ] Add performance comparison with native multiprocessing
+- [ ] Implement workload-specific optimization strategies
+
+## Phase 4
+
+- [ ] Implement compatibility with other multiprocessing libraries
+- [ ] Add support for distributed processing across multiple machines
+- [ ] Add support for GPU acceleration where applicable
+- [ ] Implement integration with dask and other distributed computing frameworks
+- [ ] Add support for cloud-based parallel processing
+
+## User Experience
+
+- [ ] Implement automatic pool selection based on workload characteristics
+- [ ] Add progress bars and status reporting for long-running tasks
+- [ ] Create wizard-like interfaces for common operations
+
+## Package Management
+
+- [ ] Create a conda package for easier installation
+- [ ] Implement automated release process with GitHub Actions
+- [ ] Add support for Windows-specific optimizations
+- [ ] Create development documentation for contributors
+
+================
+File: VERSION.txt
+================
+v2.6.2
+
+
+
+================================================================
+End of Codebase
+================================================================

@@ -1,0 +1,48 @@
+---
+title: Opero Project Rules
+glob: "**/*.py"
+---
+
+# Opero Project Rules
+
+## Project Overview
+
+Opero is a Python library for orchestrating function execution with retries, fallbacks, and concurrency control. It provides a flexible way to handle errors and ensure reliable execution of functions.
+
+## Code Style
+
+- Follow PEP 8 for code style
+- Use type hints for all functions and methods
+- Write clear docstrings for all public functions and classes
+- Use f-strings for string formatting
+- Keep functions and methods small and focused
+- Extract complex logic into helper methods
+- Use descriptive variable names
+
+## Error Handling
+
+- Use appropriate exception types
+- Handle errors gracefully with retries and fallbacks
+- Log errors with appropriate context
+- Provide helpful error messages
+
+## Testing
+
+- Write unit tests for all functionality
+- Test edge cases and error conditions
+- Use pytest for testing
+- Aim for high test coverage
+
+## Logging
+
+- Use the built-in logging module
+- Log at appropriate levels (debug, info, warning, error)
+- Include context in log messages
+- Configure logging in a way that doesn't interfere with applications using the library
+
+## Performance
+
+- Optimize critical paths
+- Minimize overhead in the orchestration layer
+- Use async/await for I/O-bound operations
+- Use appropriate concurrency mechanisms for CPU-bound operations 

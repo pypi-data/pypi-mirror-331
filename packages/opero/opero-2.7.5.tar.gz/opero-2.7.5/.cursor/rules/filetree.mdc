@@ -1,0 +1,72 @@
+---
+description: File tree of the project
+globs: 
+---
+[ 992]  .
+├── [  96]  .cursor
+│   └── [ 128]  rules
+│       ├── [1.3K]  0project.mdc
+│       └── [2.9K]  filetree.mdc
+├── [  96]  .github
+│   └── [ 128]  workflows
+│       ├── [2.7K]  push.yml
+│       └── [1.4K]  release.yml
+├── [4.4K]  .gitignore
+├── [ 470]  .pre-commit-config.yaml
+├── [  96]  .specstory
+│   └── [ 384]  history
+│       ├── [2.7K]  .what-is-this.md
+│       ├── [574K]  2025-03-04_03-16-comprehensive-plan-for-opero-package-implementation.md
+│       ├── [4.1K]  2025-03-04_05-40-cleanup-analysis-and-todo-update.md
+│       ├── [157K]  2025-03-04_06-07-implementing-todo-md-phases-1-and-2.md
+│       ├── [129K]  2025-03-04_07-28-implementing-todo-md-phases-1-and-2.md
+│       ├── [ 67K]  2025-03-04_07-59-project-maintenance-and-documentation-update.md
+│       ├── [198K]  2025-03-04_08-40-managing-todo-list-tasks.md
+│       ├── [138K]  2025-03-05_12-35-improving-opero-api-with-new-decorators.md
+│       ├── [2.2K]  2025-03-05_13-36-repository-analysis-and-todo-update.md
+│       └── [574K]  2025-03-05_14-22-implementing-todo-md-for-opero-library.md
+├── [2.0K]  CHANGELOG.md
+├── [1.5K]  CLEANUP.txt
+├── [1.0K]  LICENSE
+├── [2.2K]  PROGRESS.md
+├── [7.0K]  README.md
+├── [349K]  REPO_CONTENT.txt
+├── [2.3K]  TODO.md
+├── [ 13K]  cleanup.py
+├── [ 224]  dist
+│   └── [   0]  .gitkeep
+├── [  96]  examples
+│   └── [9.6K]  basic_usage.py
+├── [2.2M]  get-pip.py
+├── [ 426]  package.toml
+├── [6.0K]  pyproject.toml
+├── [ 128]  src
+│   └── [ 320]  opero
+│       ├── [1.5K]  __init__.py
+│       ├── [ 160]  concurrency
+│       │   ├── [ 439]  __init__.py
+│       │   └── [ 11K]  pool.py
+│       ├── [ 256]  core
+│       │   ├── [ 765]  __init__.py
+│       │   ├── [2.8K]  cache.py
+│       │   ├── [6.4K]  fallback.py
+│       │   ├── [3.4K]  rate_limit.py
+│       │   └── [3.8K]  retry.py
+│       ├── [ 192]  decorators
+│       │   ├── [ 348]  __init__.py
+│       │   ├── [3.8K]  opero.py
+│       │   └── [4.7K]  opmap.py
+│       ├── [ 563]  exceptions.py
+│       └── [ 192]  utils
+│           ├── [ 460]  __init__.py
+│           ├── [2.1K]  async_utils.py
+│           └── [1.6K]  logging.py
+├── [ 192]  tests
+│   ├── [4.6K]  test_core.py
+│   ├── [4.3K]  test_decorators.py
+│   └── [ 139]  test_package.py
+├── [194K]  twat-cache.txt
+├── [ 78K]  twat-mp.txt
+└── [ 91K]  uv.lock
+
+16 directories, 50 files
