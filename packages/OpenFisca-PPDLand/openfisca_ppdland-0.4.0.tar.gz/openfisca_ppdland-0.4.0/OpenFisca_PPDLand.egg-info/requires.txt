@@ -1,0 +1,4 @@
+OpenFisca-Core<44,>=43
+OpenFisca-Survey-Manager<4.0,>=3
+matplotlib
+scipy

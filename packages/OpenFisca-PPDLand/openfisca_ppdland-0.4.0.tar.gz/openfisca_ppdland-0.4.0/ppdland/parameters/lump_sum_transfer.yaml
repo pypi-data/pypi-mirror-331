@@ -1,0 +1,6 @@
+
+description: Lump sum transfer
+unit: currency
+values:
+  2013-01:
+    value: 200
