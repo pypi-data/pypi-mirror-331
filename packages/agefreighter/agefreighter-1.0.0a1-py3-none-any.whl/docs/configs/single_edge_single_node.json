@@ -1,0 +1,19 @@
+{
+  "edge": {
+    "csv_path": "data/airroute/airroute_airport_airport.csv",
+    "type": "AirRoute",
+    "props": ["distance"],
+    "start_vertex": {
+      "csv_path": "data/airroute/airroute_airport_airport.csv",
+      "id": "start_id",
+      "label": "AirPort",
+      "props": []
+    },
+    "end_vertex": {
+      "csv_path": "data/airroute/airroute_airport_airport.csv",
+      "id": "end_id",
+      "label": "AirPort",
+      "props": []
+    }
+  }
+}
