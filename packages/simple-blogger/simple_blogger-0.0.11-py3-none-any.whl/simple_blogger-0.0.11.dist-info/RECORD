@@ -1,0 +1,14 @@
+simple_blogger/CommonBlogger.py,sha256=IM3kF8-4kkUj5aUCjWNuurYcOjmXQFwOPeiQCdy6HfU,11136
+simple_blogger/Journalist.py,sha256=4FCM_ITaS23bwwM5lRCeYbtsE9L2Dj9ZAKN43ve2rRU,1360
+simple_blogger/SimpleBlogger.py,sha256=FY-4W8jcO1FSK0sNMOXm9rY8KApjW-t0FHSPAJi2Qdg,1312
+simple_blogger/__init__.py,sha256=FbjiTTJeZ7WXBZEQFfjDZluo3hyEt7OcmXB3f6UyGwk,112
+simple_blogger/generators/DeepSeekGenerator.py,sha256=BnK9WQjz-14N9x-u8L82XYx102WG7rJc-jB7ffAlzOw,1158
+simple_blogger/generators/GeneratorBase.py,sha256=HQtlp3KKCu1eGNcHCS9Mj7qETgAh5j1ZbeJA8_6YSok,161
+simple_blogger/generators/OpenAIGenerator.py,sha256=Vf_XYgOhiWQiQXMJdpzHR_ix5SvfF1943Nw-HSfE164,2284
+simple_blogger/generators/YandexGenerator.py,sha256=xEgjROYEOCK1jYos9c2_tbbyOYn7hNyTy3PzKachJpk,2161
+simple_blogger/generators/__init__.py,sha256=nLx8EpB9dLEQUcNawM6Lm-dFaI4BNQKx9i2-cgYLMGM,128
+simple_blogger-0.0.11.dist-info/LICENSE,sha256=TwovfC3pX8lI355VAYQigyYklVpW9IcXT9pJ9faPEAo,1092
+simple_blogger-0.0.11.dist-info/METADATA,sha256=_6DXmfCuFirE1P6g9IeZSjvZLD4pVHRRI-HLtI_vPY0,3501
+simple_blogger-0.0.11.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+simple_blogger-0.0.11.dist-info/top_level.txt,sha256=CC2BmMDJuEbXotZoh2_RDhGPXSlYqqlTEJGEfcnhld4,15
+simple_blogger-0.0.11.dist-info/RECORD,,
