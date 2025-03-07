@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: thinking-hats-ai
+Version: 0.1.2
+Summary: Add your description here
+Author-email: Marc Timothy Huber <marctimothy.huber@uzh.ch>
+Maintainer-email: Timon Derboven <timon.derboven@uzh.ch>, Leon Roberto Braga <leonroberto.braga@uzh.ch>
+Requires-Python: >=3.9
+Requires-Dist: langchain>=0.3.20
+Description-Content-Type: text/markdown
+
+# thinking-hats-ai
