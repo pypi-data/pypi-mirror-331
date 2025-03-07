@@ -1,0 +1,9 @@
+# Include Python files from the 'src/python' directory
+recursive-include src/python *.py
+
+# Include JSON files from the 'src/errors' folder
+recursive-include src/errors *.json
+
+# Include README and LICENSE files
+include README.md
+include LICENSE
