@@ -1,0 +1,16 @@
+freetar/backend.py,sha256=xaw0WfCA4ahG4t5_Tjke8O4SWQe47ifhpuMp3QpVP14,2331
+freetar/static/custom.js,sha256=b13eTpL-1rRujVAorabrZ_1PV8C9nY1mwM1Sc_89NDE,6323
+freetar/static/guitar.png,sha256=ofStgS0qfIMJzm_k8kM9ppZkC2ilVdCFjgh1qfB8tqg,26135
+freetar/templates/about.html,sha256=YH_rRRJphv1j80ImX3DqK0o3Wm8aKSSYFrEZsWLO91Y,550
+freetar/templates/base.html,sha256=IuQz_YO__QomnBk_9zj3P7zIKJGKhOgI_eAYmCXf4Bg,4172
+freetar/templates/error.html,sha256=xyCqIbHV9-S0sCxEmlVo4ktdne3p2pu5tkHdQ1pAKK0,83
+freetar/templates/index.html,sha256=N8x7MHYAR14e0nqNwREfr3020-64J2tGDo9U91LDiSA,5523
+freetar/templates/macros.j2,sha256=zvXw9t69WueeWgsOfcRMJZO031KcDdI-CNsg5R90rYo,145
+freetar/templates/tab.html,sha256=euzRr4OAWT_hW_ZiC_nuSXzkPqusJD-VMnvO7N0vXUU,4878
+freetar/ug.py,sha256=TRn7TbN5l6BrZ2sBrtfrPHKS4VqQqOt9XSq6fa_lPzY,8075
+freetar/utils.py,sha256=2NHEe4vn4xo_axC3D2Jf0M0F-HeIPuThs93rWQjyPx4,234
+freetar-0.12.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+freetar-0.12.0.dist-info/METADATA,sha256=kVja5cZDZks4hFgETCD62xWKCnv1-3sKKR06RilwUjk,2825
+freetar-0.12.0.dist-info/WHEEL,sha256=XbeZDeTWKc1w7CSIyre5aMDU_-PohRwTQceYnisIYYY,88
+freetar-0.12.0.dist-info/entry_points.txt,sha256=60bmEh1QDGRIu0Qs-brNb9SaWg0Q3z7e_25EpdDm5Qc,48
+freetar-0.12.0.dist-info/RECORD,,
