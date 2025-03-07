@@ -1,0 +1,70 @@
+[build-system]
+requires = ["setuptools >= 64", "setuptools-scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eazy"
+dynamic = ["version"]
+description = "Pythonic photo-zs"
+readme = "README.rst"
+license = {file = "LICENSE.txt"}
+requires-python = ">=3.8"
+authors = [
+    { name = "G. Brammer", email = "gbrammer@gmail.com" },
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Astronomy",
+]
+dependencies = [
+    "astro-sedpy>=0.3",
+    "astropy",
+    "dust_extinction",
+    "h5py",
+    "matplotlib",
+    "numpy",
+    "peakutils",
+    "scipy",
+    "tqdm",
+]
+
+[project.optional-dependencies]
+# dust = [
+#     "dust_attenuation @ git+https://github.com/karllark/dust_attenuation.git",
+# ]
+docs = [
+    "sphinx",
+    "sphinx-astropy",
+    "toml",
+#    "dust_attenuation @ git+https://github.com/karllark/dust_attenuation.git",
+]
+test = [
+    "flake8",
+    "pytest>=5.1",
+    "coverage",
+]
+vistool = [
+    "dash==2.5.1",
+    "jupyter-dash",
+    "Werkzeug==2.0.3"
+]
+
+[project.urls]
+Documentation = "https://eazy-py.readthedocs.io/"
+Homepage = "https://github.com/gbrammer/eazy-py"
+Source = "https://github.com/gbrammer/eazy-py"
+Tracker = "https://github.com/gbrammer/eazy-py/issues"
+
+[tool.setuptools]
+packages = ["eazy"]
+package-data = {eazy = [
+    "data/*txt",
+    "data/alpha_lyr_stis_008.fits",
+    "data/emlines_info.dat",
+    "data/spectra_kc13_12_tweak.params",
+    "data/zphot.param.default"
+]}
+
+[tool.setuptools_scm]
+version_file = "eazy/version.py"
