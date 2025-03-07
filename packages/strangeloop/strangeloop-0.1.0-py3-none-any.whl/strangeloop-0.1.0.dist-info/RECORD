@@ -1,0 +1,9 @@
+strangeloop/__init__.py,sha256=k9Tg26lTM4BIsGFMwxkYcJhAeFHUO6lyhLczzh8otFQ,189
+strangeloop/cli.py,sha256=h8kOhOxLFm29IjC31g4WpNxikiHWVXSEDYVN31LOyrQ,4880
+strangeloop/config.py,sha256=v4J2robMrGDH4P5UardlwotwKKeaNiA17rDhgmptrQ4,3684
+strangeloop/llm.py,sha256=JoJWFGCoQ8h4el-QHaBh4x6Eym2qhp6oAkeUfoijOA0,3800
+strangeloop-0.1.0.dist-info/METADATA,sha256=mLbRLzIK9AUPqjXcpSZUXhukeXJzixmT7sFFBAAQT3g,2491
+strangeloop-0.1.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+strangeloop-0.1.0.dist-info/entry_points.txt,sha256=uUKyCBC-umEIp6Wf_FKvvck3vJlQSNjrwtFZKPTsy1k,52
+strangeloop-0.1.0.dist-info/top_level.txt,sha256=wKbfZrSYvMTrzREPN1Rypcpmg9doy1NtPr8e1QNquHc,12
+strangeloop-0.1.0.dist-info/RECORD,,
