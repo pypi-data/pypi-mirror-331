@@ -1,0 +1,65 @@
+Metadata-Version: 2.4
+Name: ctf-architect
+Version: 0.1.0a12
+Summary: A CTF challenge management tool
+Author-email: Jus-Codin <70018166+Jus-Codin@users.noreply.github.com>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.11
+Requires-Dist: cyclopts>=3.1.2
+Requires-Dist: pydantic>=2.10.4
+Requires-Dist: pyyaml>=6.0.2
+Requires-Dist: readchar>=4.2.1
+Requires-Dist: rich>=13.9.4
+Requires-Dist: tomlkit>=0.13.2
+Description-Content-Type: text/markdown
+
+# CTF Architect
+
+A CTF challenge management tool
+
+> [!WARNING]
+>  This tool is still a work in progress, bugs are to be expected. If you find any, please open an [issue](https://github.com/Jus-Codin/CTF-Architect/issues)
+
+---
+
+<p align="center">
+    <a href="https://pypi.org/project/ctf-architect/" target="_blank">
+        <img alt="PyPI - Version" src="https://img.shields.io/pypi/v/ctf-architect">
+    </a>
+    <a href="https://pypi.org/project/ctf-architect/" target="_blank">
+        <img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/ctf-architect">
+    </a>
+</p>
+
+---
+
+Github: <a href="https://github.com/Jus-Codin/CTF-Architect" target="_blank">https://github.com/Jus-Codin/CTF-Architect</a>
+
+Documentation: <a href="https://jus-codin.github.io/CTF-Architect/" target="_blank">https://jus-codin.github.io/CTF-Architect/</a>
+
+---
+
+## Getting Started
+- [Introduction](./docs/introduction.md)
+- [Installation](./docs/installation.md)
+
+## Usage
+- [Pacakging challenges](./docs/guides/packaging-challenges.md)
+- [Set up a challenge repository](./docs/guides/repository-setup.md)
+
+## Specifications
+- [Challenge](./docs/spec/challenge.md)
+- [Repository](./docs/spec/repository.md)
