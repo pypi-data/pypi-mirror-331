@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+src/__init__.py
+src/main.py
+src/HALODARIsigma.egg-info/PKG-INFO
+src/HALODARIsigma.egg-info/SOURCES.txt
+src/HALODARIsigma.egg-info/dependency_links.txt
+src/HALODARIsigma.egg-info/requires.txt
+src/HALODARIsigma.egg-info/top_level.txt
