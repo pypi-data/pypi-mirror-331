@@ -1,0 +1,14 @@
+daidai/__init__.py,sha256=IRYmONmb7-PZiXXiSET45draAZSzV8J3AUxThsCL0TM,198
+daidai/artifacts.py,sha256=kJn3NomNUtUOWYvAIT1tE7LccIk3-wv4Txnl-S-M2bE,7503
+daidai/cli.py,sha256=4mkRgoS-29fLrdpuv21tHcAdIlHlyKFlR7HK3rqFJGY,11431
+daidai/config.py,sha256=7p2rJBx-QycOR840oelYNOgE9qXGT9-5T1JP5ET7aog,4865
+daidai/decorators.py,sha256=LlxE-85IU5sEFWxFvgElvqnicsbl_07V9O3t-I2OWCk,13462
+daidai/logs.py,sha256=D20U-CSlAj3I2hPnybP3za1pbmyqLJ-u6QbOAfN6A6A,1255
+daidai/managers.py,sha256=UQmT1y7f2X6CVtoTizH-fccN9A5UktkvtMrmDOvG3vk,17416
+daidai/types.py,sha256=KC0t1RSy9O3WsSUJj9YYQ2ASGcxiQ00Bf-xW8d3V1XI,2225
+daidai/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+daidai-0.0.7.dist-info/METADATA,sha256=E73t3oaQ14BaL0MqfeRYgFsXRawhuDwGY6BYnbAHfuM,33318
+daidai-0.0.7.dist-info/WHEEL,sha256=qtCwoSJWgHk21S1Kb4ihdzI2rlJ1ZKaIurTj_ngOhyQ,87
+daidai-0.0.7.dist-info/entry_points.txt,sha256=Oe_46wsza-hB6nBnJ8tWQXPxFCZrKYV_XMzus56kNh4,42
+daidai-0.0.7.dist-info/licenses/LICENSE,sha256=E_bhJ4Vm7wvTcJZ0DiZfIkQoAKVNr_uJhoA0C-8Z36U,1072
+daidai-0.0.7.dist-info/RECORD,,
