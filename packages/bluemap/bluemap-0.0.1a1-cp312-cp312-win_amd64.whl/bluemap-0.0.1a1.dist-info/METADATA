@@ -1,0 +1,21 @@
+Metadata-Version: 2.2
+Name: bluemap
+Version: 0.0.1a1
+Author-email: Blaumeis03 <dev@blaumeise03.de>
+Maintainer-email: Blaumeis03 <dev@blaumeise03.de>
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: C++
+Classifier: Programming Language :: Cython
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Intended Audience :: Developers
+Classifier: Typing :: Typed
+Requires-Python: >=3.12
+Provides-Extra: cli
+Requires-Dist: Pillow>=11.0.0; extra == "cli"
+Requires-Dist: pymysql>=1.0.0; extra == "cli"
+Provides-Extra: table
+Requires-Dist: Pillow>=11.0.0; extra == "table"
+Provides-Extra: minimal
