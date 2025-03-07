@@ -1,0 +1,281 @@
+#==============================================================================
+# TWAT-AUDIO PACKAGE CONFIGURATION
+# This pyproject.toml defines the package metadata, dependencies, build system,
+# and development environment for the twat-audio package.
+#==============================================================================
+
+#------------------------------------------------------------------------------
+# BUILD SYSTEM CONFIGURATION
+#------------------------------------------------------------------------------
+[build-system]
+requires = [
+    "hatchling>=1.27.0",
+    "hatch-vcs>=0.4.0"
+]
+build-backend = "hatchling.build"
+
+# Wheel build configuration
+# Specifies which packages to include in the wheel distribution
+[tool.hatch.build.targets.wheel]
+packages = ["src/twat_audio"]
+
+#------------------------------------------------------------------------------
+# PROJECT METADATA
+#------------------------------------------------------------------------------
+[project]
+name = "twat-audio"
+dynamic = ["version"]
+description = "Audio processing plugin for TWAT"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+keywords = ["audio", "processing", "twat-plugin"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+]
+
+dependencies = [
+    "twat>=1.8.1",
+]
+
+[[project.authors]]
+name = "Adam Twardoch"
+email = "adam+github@twardoch.com"
+
+# Project URLs
+# ------------
+# Links to project resources for documentation, issues, and source code
+[project.urls]
+Documentation = "https://github.com/twardoch/twat-audio#readme"
+Issues = "https://github.com/twardoch/twat-audio/issues"
+Source = "https://github.com/twardoch/twat-audio"
+
+# Version configuration using VCS (Git)
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.version.raw-options]
+version_scheme = "post-release"
+
+# VCS hook configuration for version file generation
+[tool.hatch.build.hooks.vcs]
+version-file = "src/twat_audio/__version__.py"
+
+# Default development environment configuration
+[tool.hatch.envs.default]
+dependencies = ["pytest", "pytest-cov", "mypy>=1.0.0", "ruff>=0.1.0"]
+
+# Scripts available in the default environment
+[tool.hatch.envs.default.scripts]
+test = "pytest {args:tests}"
+test-cov = "pytest --cov-report=term-missing --cov-config=pyproject.toml --cov=src/twat_audio --cov=tests {args:tests}"
+type-check = "mypy src/twat_audio tests"
+lint = ["ruff check src/twat_audio tests", "ruff format src/twat_audio tests"]
+
+# Python version matrix for testing
+[[tool.hatch.envs.all.matrix]]
+python = ["3.10", "3.11", "3.12"]
+
+# Linting environment configuration
+[tool.hatch.envs.lint]
+detached = true  # Run in isolated environment
+dependencies = [
+    "mypy>=1.15.0",
+    "ruff>=0.9.6",
+    "pyupgrade>=3.19.1",
+    "pyupgrade-directories>=0.3.0"
+]
+
+# Linting environment scripts
+[tool.hatch.envs.lint.scripts]
+typing = "mypy --install-types --non-interactive {args:src/twat_audio tests}"
+style = ["ruff check {args:.}", "ruff format {args:.}"]
+fmt = ["ruff format {args:.}", "ruff check --fix {args:.}"]
+fix = ["find . -name '*.py' -exec pyupgrade --py310-plus {} +", "ruff check --fix --unsafe-fixes {args:.}", "ruff format {args:.}"]
+all = ["style", "typing", "fix", "fmt"]
+
+#------------------------------------------------------------------------------
+# DEVELOPMENT ENVIRONMENTS
+#------------------------------------------------------------------------------
+[tool.hatch.envs.docs]
+features = ["docs"]
+
+[tool.hatch.envs.docs.scripts]
+build = "sphinx-build -b html docs/source docs/build"
+
+[tool.hatch.envs.ci]
+features = ["test"]
+
+[tool.hatch.envs.ci.scripts]
+test = "pytest --cov=src/twat_audio --cov-report=xml"
+
+# Ruff (linter) configuration
+[tool.ruff]
+target-version = "py310"
+line-length = 88
+
+# Ruff lint rules configuration
+[tool.ruff.lint]
+extend-select = [
+    "A",     # flake8-builtins
+    "ARG",   # flake8-unused-arguments
+    "B",     # flake8-bugbear
+    "C",     # flake8-comprehensions
+    "DTZ",   # flake8-datetimez
+    "E",     # pycodestyle errors
+    "EM",    # flake8-errmsg
+    "F",     # pyflakes
+    "FBT",   # flake8-boolean-trap
+    "I",     # isort
+    "ICN",   # flake8-import-conventions
+    "ISC",   # flake8-implicit-str-concat
+    "N",     # pep8-naming
+    "PLC",   # pylint convention
+    "PLE",   # pylint error
+    "PLR",   # pylint refactor
+    "PLW",   # pylint warning
+    "Q",     # flake8-quotes
+    "RUF",   # Ruff-specific rules
+    "S",     # flake8-bandit
+    "T",     # flake8-debugger
+    "TID",   # flake8-tidy-imports
+    "UP",    # pyupgrade
+    "W",     # pycodestyle warnings
+    "YTT",   # flake8-2020
+]
+ignore = [
+    "ARG001", # Unused function argument
+    "E501",   # Line too long
+    "I001",   # Import block formatting
+]
+
+# isort configuration within Ruff
+[tool.ruff.lint.isort]
+known-first-party = ["twat_audio"] # Treat as first-party imports for sorting
+
+# flake8-tidy-imports configuration within Ruff
+[tool.ruff.lint.flake8-tidy-imports]
+ban-relative-imports = "all" # Ban all relative imports for consistency
+
+# File-specific Ruff configurations
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101", "PLR2004", "TID252"]  # Allow assertions, magic values and relative imports in tests
+
+# MyPy (type checker) configuration
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+
+# Coverage.py configuration for test coverage
+[tool.coverage.run]
+source_pkgs = ["twat_audio", "tests"]
+branch = true
+parallel = true
+omit = ["src/twat_audio/__about__.py"]
+
+# Coverage path mappings
+[tool.coverage.paths]
+twat_audio = ["src/twat_audio", "*/twat-audio/src/twat_audio"]
+tests = ["tests", "*/twat-audio/tests"]
+
+# Coverage report configuration
+[tool.coverage.report]
+exclude_lines = ["no cov", "if __name__ == .__main__.:", "if TYPE_CHECKING:"]
+
+# Optional dependencies
+[project.optional-dependencies]
+test = [
+    "pytest>=8.3.4",
+    "pytest-cov>=6.0.0",
+    "pytest-xdist>=3.6.1",                # For parallel test execution
+    "pytest-benchmark[histogram]>=5.1.0",  # For performance testing
+    "pytest-asyncio>=0.25.3",
+    "coverage[toml]>=7.6.12",
+]
+
+dev = [
+    "pre-commit>=4.1.0",
+    "ruff>=0.9.7",
+    "mypy>=1.15.0",
+    "absolufy-imports>=0.3.1",
+    "pyupgrade>=3.19.1",
+    "pyproject-pyupgrade>=0.1.1",
+    "pyupgrade-directories>=0.3.0",
+]
+
+docs = [
+    "sphinx>=7.2.6",
+    "sphinx-rtd-theme>=2.0.0",
+    "sphinx-autodoc-typehints>=2.0.0",
+    "myst-parser>=3.0.0",
+]
+
+all = [
+    "twat>=1.8.1",
+]
+
+# Test environment configuration
+[tool.hatch.envs.test]
+dependencies = [".[test]"]
+
+# Test environment scripts
+[tool.hatch.envs.test.scripts]
+test = "python -m pytest -n auto {args:tests}"
+test-cov = "python -m pytest -n auto --cov-report=term-missing --cov-config=pyproject.toml --cov=src/twat_audio --cov=tests {args:tests}"
+bench = "python -m pytest -v -p no:briefcase tests/test_benchmark.py --benchmark-only"
+bench-save = "python -m pytest -v -p no:briefcase tests/test_benchmark.py --benchmark-only --benchmark-json=benchmark/results.json"
+
+#------------------------------------------------------------------------------
+# TESTING CONFIGURATION
+#------------------------------------------------------------------------------
+[tool.pytest.ini_options]
+addopts = "-v --durations=10 -p no:briefcase"
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+console_output_style = "progress"
+filterwarnings = ["ignore::DeprecationWarning", "ignore::UserWarning"]
+log_cli = true
+log_cli_level = "INFO"
+markers = [
+    "benchmark: marks tests as benchmarks (select with '-m benchmark')",
+    "unit: mark a test as a unit test",
+    "integration: mark a test as an integration test"
+]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+
+# Pytest-benchmark configuration
+[tool.pytest-benchmark]
+min_rounds = 100
+min_time = 0.1
+histogram = true
+storage = "file"
+save-data = true
+compare = [
+    "min",    # Minimum time
+    "max",    # Maximum time
+    "mean",   # Mean time
+    "stddev", # Standard deviation
+    "median", # Median time
+    "iqr",    # Inter-quartile range
+    "ops",    # Operations per second
+    "rounds", # Number of rounds
+]
