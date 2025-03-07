@@ -1,0 +1,17 @@
+geode_numerics/__init__.py,sha256=nsJl52aO4p3Ky5nDIoJgouagqOYswsFLG6vHdupgSJw,165
+geode_numerics/core_numerics.py,sha256=m4L9lzNPO-oWtGRdDxHBesJfYSeS0kyAD896nCUOPtA,167
+geode_numerics/frame_field.py,sha256=iOmfbE_G5vPC8-qmGrmMmvq22l1ggmw-GFzdz5WJ2lk,200
+geode_numerics/scalar_function.py,sha256=MYo8Ry-TnxjjoCduhbcDlMJ-lJ7u04rpDWPzV4E4eiA,187
+geode_numerics/surface_numerics.py,sha256=xRhaRz1sVTrHsRkYLy7sdpLoHHeTQNtmwW3RoQgCpU8,172
+geode_numerics/lib64/geode_numerics_py_core.cpython-310-x86_64-linux-gnu.so,sha256=9o-9LC-1sZN8M114nFKs7YjyrJZOEpQMX7zrGINdi3I,142936
+geode_numerics/lib64/geode_numerics_py_frame_field.cpython-310-x86_64-linux-gnu.so,sha256=aKD2cFfeuluJ4UmLzPlh-meI1NtTsgR94zwbprPCaug,142936
+geode_numerics/lib64/geode_numerics_py_scalar_function.cpython-310-x86_64-linux-gnu.so,sha256=UWjnwkwHp1CU60OZ2QF09Yt6iHScr_W8c0_vNf_VvMs,220936
+geode_numerics/lib64/geode_numerics_py_surface.cpython-310-x86_64-linux-gnu.so,sha256=-g3selZch8u6eInsLB_iMnaOydSSKO_6sg7SV8TQ-8k,151128
+geode_numerics/lib64/libGeode-Numerics_core.so,sha256=IrXs5gYd3x5CEEGEal126VGaKQJjh2raBrjdN7paTag,47592
+geode_numerics/lib64/libGeode-Numerics_frame_field.so,sha256=THKhl7aEpSR2bP0f0XdDpoyU6-Mtv6twYqwV5baZC5Y,5758888
+geode_numerics/lib64/libGeode-Numerics_scalar_function.so,sha256=mZRBgq1crPMX9k5imSyR0TYelwweF4dAOKgGa_FphIY,5700008
+geode_numerics/lib64/libGeode-Numerics_surface.so,sha256=eBEKUiqUK8gV0Uir2RWt0Q6HeHYbaoWXoM1NqChITzE,80568
+geode_numerics-5.4.0rc3.dist-info/METADATA,sha256=4rxTV7_DOozBLHFasuaxSMYyKp3xN0f59xF2ReGXUPU,2173
+geode_numerics-5.4.0rc3.dist-info/WHEEL,sha256=XyGOoyl7gDLOQFnFXyvT0VvwFlkVuFa6lboIov2oj0Y,104
+geode_numerics-5.4.0rc3.dist-info/top_level.txt,sha256=btImDcRfDC3xFt4EkvH1wXfhk4t1qY8t71xeEbMo-qk,15
+geode_numerics-5.4.0rc3.dist-info/RECORD,,
