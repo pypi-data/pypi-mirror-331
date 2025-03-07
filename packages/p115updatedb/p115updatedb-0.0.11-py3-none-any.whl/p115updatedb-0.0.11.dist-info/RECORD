@@ -1,0 +1,12 @@
+LICENSE,sha256=ixuiBLtpoK3iv89l7ylKkg9rs2GzF9ukPH7ynZYzK5s,35148
+p115updatedb/__init__.py,sha256=XJ_ri-_QtAW_vlgOovK3eg8covk8mbSw6dzVP4q2-Rg,216
+p115updatedb/__main__.py,sha256=L8YbR3o_atuWSf0okL1DJWPgA6pR-TmB9dKVhGojoDM,4083
+p115updatedb/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+p115updatedb/query.py,sha256=mzcCw04mrZc2CmkVjdTuOWckNItxNaZMb-3Gc8jdbac,35405
+p115updatedb/updatedb.py,sha256=nvanAYG2ZbFmuDilvrw62fWIhxPOzQfDv4H76QCUqno,48030
+p115updatedb-0.0.11.dist-info/LICENSE,sha256=ixuiBLtpoK3iv89l7ylKkg9rs2GzF9ukPH7ynZYzK5s,35148
+p115updatedb-0.0.11.dist-info/LICENSE_zh,sha256=q-myI00wQhoEr6FKz3tNdaQSXmUpfKM8we90pvvVGJM,28917
+p115updatedb-0.0.11.dist-info/METADATA,sha256=y86iTO-DqLhD3qMs32uVHOkoOS6rJUDGWerZqvd07h4,4093
+p115updatedb-0.0.11.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+p115updatedb-0.0.11.dist-info/entry_points.txt,sha256=JQdkGqVnJmmglUsy8HgDDrOcddoy9rKhwEd_AjJEZng,59
+p115updatedb-0.0.11.dist-info/RECORD,,
