@@ -1,0 +1,36 @@
+---
+description: File tree of the project
+globs: 
+---
+[ 736]  .
+├── [  64]  .benchmarks
+├── [  96]  .cursor
+│   └── [ 224]  rules
+│       ├── [ 821]  0project.mdc
+│       ├── [ 516]  cleanup.mdc
+│       ├── [1.0K]  filetree.mdc
+│       └── [2.0K]  quality.mdc
+├── [  96]  .github
+│   └── [ 128]  workflows
+│       ├── [2.7K]  push.yml
+│       └── [1.4K]  release.yml
+├── [3.5K]  .gitignore
+├── [ 470]  .pre-commit-config.yaml
+├── [1.0K]  CLEANUP.txt
+├── [1.0K]  LICENSE
+├── [ 742]  README.md
+├── [ 33K]  REPO_CONTENT.txt
+├── [   7]  VERSION.txt
+├── [ 13K]  cleanup.py
+├── [ 192]  dist
+│   └── [   1]  .gitkeep
+├── [5.6K]  pyproject.toml
+├── [  96]  src
+│   └── [ 224]  twat_os
+│       ├── [  95]  __init__.py
+│       ├── [7.4K]  paths.py
+│       └── [1.0K]  paths.toml
+└── [ 128]  tests
+    └── [ 145]  test_package.py
+
+10 directories, 20 files
