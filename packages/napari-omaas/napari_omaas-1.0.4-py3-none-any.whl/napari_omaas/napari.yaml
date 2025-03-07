@@ -1,0 +1,53 @@
+name: napari-omaas
+display_name: napari OMAAS
+contributions:
+  commands:
+    - id: napari-omaas.write_multiple
+      python_name: napari_omaas._writer:write_multiple
+      title: Save multi-layer data with napari OMAAS
+    - id: napari-omaas.write_single_image
+      python_name: napari_omaas._writer:write_single_image
+      title: Save image data with napari OMAAS
+    - id: napari-omaas.make_sif_sample_data
+      python_name: napari_omaas._sample_data:make_sif_sample_data
+      title: Load sample data in sif format from napari OMAAS
+    - id: napari-omaas.make_folder_sample_data
+      python_name: napari_omaas._sample_data:make_folder_sample_data
+      title: Load sample data in spooling (binary) format from napari OMAAS    
+    - id: napari-omaas.make_folder_sample_data_dual
+      python_name: napari_omaas._sample_data:make_folder_sample_data_dual
+      title: Load sample data in spooling (binary) format from napari OMAAS    
+    - id: napari-omaas.make_qwidget
+      python_name: napari_omaas._widget:OMAAS
+      title: Optical Mapping Analysis
+    - id: napari-omaas.get_reader
+      python_name: napari_omaas._reader:napari_get_reader
+      title: Open sif data with napari-omaas default reader  
+  writers:
+    - command: napari-omaas.write_multiple
+      layer_types: ['image*','labels*']
+      filename_extensions: []
+    - command: napari-omaas.write_single_image
+      layer_types: ['image']
+      filename_extensions: ['.npy']  
+  sample_data:
+    - command: napari-omaas.make_sif_sample_data
+      display_name: Example SIF Dataset (Singel illumination RED)
+      key: heart_sample_freiburg
+    - command: napari-omaas.make_folder_sample_data
+      display_name: Example spool Dataset (Singel illumination RED)
+      key: heart_sample_single_illumination
+    - command: napari-omaas.make_folder_sample_data_dual
+      display_name: Example spool Dataset (Dual illumination RED/BLUE)
+      key: heart_sample_dual_illumination
+    
+  widgets:
+    - command: napari-omaas.make_qwidget
+      display_name: Optical Mapping Analysis  
+  readers:
+    - command: napari-omaas.get_reader
+      accepts_directories: true
+      filename_patterns: 
+      - '*.sif'
+      - '*.tif'
+      - '*.tiff'
