@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "linearagent"
+version = "0.0.2"
+description = "A framework for making simple linear agents. "
+readme = "README.md"
+license = { text = "MIT" }  
+requires-python = ">=3.6"
+authors = [
+  { name = "Anubhab Chakraborty", email = "anuv@akcanuv.com" }
+]
+dependencies = [
+  "openai>=1.53.0"
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent"
+]
+
+[project.urls]
+homepage = "https://github.com/akcanuv/linearagent"
+
+[project.entry-points.console_scripts]
+supersed = "linearagent.linearagent:main"
