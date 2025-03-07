@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package strique.model.db.amazon_seller;
+
+option java_outer_classname = "AmazonSellerTrendAnalysisProto";
+option java_package = "com.strique.model.db.amazonseller";
+
+// Next Id : 8
+// A protocol buffer message for amazon seller trend analysis data.
+message AmazonSellerDbTrendAnalysis {
+  // date for this record
+  string formatted_date = 1;
+
+  uint64 total_orders = 2;
+
+  uint64 units_ordered = 3;
+
+  double ordered_product_sales = 4;
+
+  float avg_unit_per_order_item = 5;
+
+  float avg_sales_per_order_item = 6;
+
+  float conversion_rate = 7;
+}
