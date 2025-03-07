@@ -1,0 +1,48 @@
+[build-system]
+requires = ["hatchling>=1.5.0", "jupyterlab>=4.0.0,<5"]
+build-backend = "hatchling.build"
+
+[project]
+name = "dotscripts"
+version = "1.0.1"  # Ensure you update this when publishing a new version
+description = "JupyterLab extension to run tagged cells without scrolling"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.8"
+classifiers = [
+    "Framework :: Jupyter",
+    "Framework :: Jupyter :: JupyterLab",
+    "Framework :: Jupyter :: JupyterLab :: 4",
+    "Framework :: Jupyter :: JupyterLab :: Extensions",
+    "Framework :: Jupyter :: JupyterLab :: Extensions :: Prebuilt",
+    "License :: OSI Approved :: BSD License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+
+# ✅ Only JupyterLab is required
+dependencies = ["jupyterlab>=4.0.0,<5"]
+
+[tool.hatch.build.targets.wheel]
+include = [
+    "dotscripts",      # Package directory
+    "dotscripts/**",   # Include all files inside it
+    "pyproject.toml",
+    "README.md",
+    "LICENSE",
+]
+
+[tool.hatch.build.targets.sdist]
+artifacts = ["dotscripts/labextension"]
+exclude = [".github", "binder"]
+
+[tool.hatch.build.targets.wheel.shared-data]
+"dotscripts/labextension" = "share/jupyter/labextensions/dotscripts"
+"install.json" = "share/jupyter/labextensions/dotscripts/install.json"
+
+[tool.check-wheel-contents]
+ignore = ["W002"]
