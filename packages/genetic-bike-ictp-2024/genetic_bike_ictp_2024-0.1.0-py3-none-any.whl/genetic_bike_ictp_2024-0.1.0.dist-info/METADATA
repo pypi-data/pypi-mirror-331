@@ -1,0 +1,12 @@
+Metadata-Version: 2.2
+Name: genetic_bike_ictp_2024
+Version: 0.1.0
+Summary: A bike simulation and optimization package for ICTP 2024
+Author: Your Name
+Author-email: your.email@example.com
+Requires-Dist: numpy==2.1.3
+Requires-Dist: matplotlib==3.9.2
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-dist
+Dynamic: summary

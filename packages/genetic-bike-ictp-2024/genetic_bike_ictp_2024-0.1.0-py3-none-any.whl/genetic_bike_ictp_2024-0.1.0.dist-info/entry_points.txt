@@ -1,0 +1,2 @@
+[console_scripts]
+genetic_bike = main:main
