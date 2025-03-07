@@ -1,0 +1,12 @@
+accord_rs-0.0.5a1.dist-info/METADATA,sha256=oDpT_E_U_NW5SwxpsMogskU9HvMwqxe6trD4DMivII4,2210
+accord_rs-0.0.5a1.dist-info/WHEEL,sha256=T5N8wV_FFFFqNMyMMjqvVZVA4nBXclX-pkxhEjZDV9w,108
+accord_rs-0.0.5a1.dist-info/licenses/LICENSE,sha256=lhoSjm_y2e7F-ISud6qzYYGYg9RD9k0Q11bR7oS_dU8,1068
+accord/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+accord/.gitignore,sha256=hb4XJYR9dELcPt93wdvgfiU74uDvErV0lg_e6gMdALI,4
+accord/__init__.py,sha256=S1gzIZEw_3Otr7VHtpek3JCN_bm65rh28gJR8fTTjjo,297
+accord/data/indel.pyi,sha256=ykZmJx_8VlJMXsFNVSayAXEbkJN1WSZ1FbpzB43Otcw,495
+accord/data/stats.pyi,sha256=Wh1QttELmW6jC510-GIHxWSemNIXk99ZmTdgzhrhSlc,683
+accord/data/__init__.pyi,sha256=XQmKX7sVJ0o6ekJ7Yy65ANCRe21EiP00lgItpJ49wFE,1050
+accord/__init__.pyi,sha256=XvszUZBVSpHCyPtV4Qm5c7oaNPsgK6gqh7XcWfQjUsA,271
+accord/_internal.cpython-310-x86_64-linux-gnu.so,sha256=fP9OHv3ztWhcZMGjNqFQbmCdsPsuj5QhiBJP5RMsorI,7944600
+accord_rs-0.0.5a1.dist-info/RECORD,,
