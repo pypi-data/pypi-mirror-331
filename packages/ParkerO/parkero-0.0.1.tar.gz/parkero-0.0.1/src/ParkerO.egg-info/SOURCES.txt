@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/ParkerO/__init__.py
+src/ParkerO/interfacetovgg.py
+src/ParkerO/plt_tools.py
+src/ParkerO/vggtointerface.py
+src/ParkerO.egg-info/PKG-INFO
+src/ParkerO.egg-info/SOURCES.txt
+src/ParkerO.egg-info/dependency_links.txt
+src/ParkerO.egg-info/top_level.txt
