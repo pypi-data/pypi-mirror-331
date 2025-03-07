@@ -1,0 +1,130 @@
+<!-- vul_report.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Container image vulnerabilities analysis report</title>
+    <script>
+        function toggleSection(id) {
+            var section = document.getElementById(id);
+            if (section.style.display === 'none') {
+                section.style.display = 'block';
+            } else {
+                section.style.display = 'none';
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0e0e0;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header {
+            margin-bottom: 40px;
+        }
+
+        header img {
+            width: 150px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        h1, h2, h3, h4 {
+            color: #444;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 5px 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 0 auto 20px auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            text-align: left;
+            padding: 12px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            color: #333;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #eaeaea;
+        }
+
+        button {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+        }
+
+        /* Style the collapsible content. Note: hidden by default */
+        .details-section {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <img src="https://www.casd.eu/wp/wp-content/themes/tm-bootstrap/images/site2022/casd.svg" alt="CASD">
+    <h1>Vulnerabilities analysis report for container image {{ image_info.image_name }}</h1>
+</header>
+
+<h2>Container image basic information:</h2>
+
+<ul>
+    <li><strong>Image Name:</strong> {{ image_info.image_name }}</li>
+    <li><strong>Image ID:</strong> {{ image_info.image_id }}</li>
+    <li><strong>Creation Time:</strong> {{ image_info.creation_time }}</li>
+    <li><strong>OS Family:</strong> {{ image_info.os_family }}</li>
+    <li><strong>OS Name:</strong> {{ image_info.os_name }}</li>
+    <li><strong>Architecture:</strong> {{ image_info.os_archi }}</li>
+
+</ul>
+
+<h2>CVE details</h2>
+
+{% for cve in cve_list %}
+    <button onclick="toggleSection('{{ cve.target_name }}')">CVE details for {{ cve.target_name }}</button>
+    <div id="{{ cve.target_name }}" style="display: none;">
+        <h3>Vulnerability Report for target: {{ cve.target_name }}</h3>
+        <p><strong>Target Class:</strong> {{ cve.target_class }}</p>
+        <p><strong>Target Type:</strong> {{ cve.target_type }}</p>
+        <h4>Vulnerability details:</h4>
+        {{ cve.target_vul_html|safe }}
+    </div>
+{% endfor %}
+</body>
+</html>

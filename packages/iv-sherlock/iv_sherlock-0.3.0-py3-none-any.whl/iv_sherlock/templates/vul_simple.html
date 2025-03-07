@@ -1,0 +1,25 @@
+<header>
+</header>
+<h2>{{ image_info.image_name }}</h2>
+
+<h3>Container image basic information:</h3>
+
+<ul>
+    <li><strong>Image Name:</strong> {{ image_info.image_name }}</li>
+    <li><strong>Image ID:</strong> {{ image_info.image_id }}</li>
+    <li><strong>Creation Time:</strong> {{ image_info.creation_time }}</li>
+    <li><strong>OS Family:</strong> {{ image_info.os_family }}</li>
+    <li><strong>OS Name:</strong> {{ image_info.os_name }}</li>
+    <li><strong>Architecture:</strong> {{ image_info.os_archi }}</li>
+    <li><strong>Link to details:</strong> <a href= {{ image_link }}> {{ image_link }}</a></li>
+
+</ul>
+
+<button onclick="toggleSection('{{ image_info.image_name }}')">CVE details for {{ image_info.image_name }}</button>
+
+<div id='{{ image_info.image_name }}' style="display: none;">
+    {% for cve in cve_list %}
+        <h4>Summary for target : {{ cve.target_name }}</h4>
+        {{ cve.target_vul_html|safe }}
+    {% endfor %}
+</div>
