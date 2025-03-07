@@ -1,0 +1,27 @@
+[project]
+name = "clearcase2git"
+version = "0.1.0"
+description = "Migration of Perl scripts using Clearcase to Python scripts using Git"
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = []
+
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project.scripts]
+git2cc = "app:main"
+
+[dependency-groups]
+dev = [
+    "black>=23.3.0",
+    "isort>=5.11.5",
+    "pytest>=7.4.4",
+    "pytest-icdiff>=0.9",
+    "pytest-sugar>=1.0.0",
+    "ruff>=0.9.9",
+]
+
+[tool.isort]
+profile = "black"
