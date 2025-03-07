@@ -1,0 +1,2 @@
+[console_scripts]
+git2cc = app:main
