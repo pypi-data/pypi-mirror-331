@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: ovos-lang-parser
+Version: 0.0.2a1
+Summary: OpenVoiceOS's multilingual language parsing and formatting library
+Home-page: https://github.com/OpenVoiceOS/ovos-lang-parser
+Author: JarbasAI
+Author-email: jarbasai@mailfence.com
+License: Apache2.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Text Processing :: Linguistic
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: ovos-utils[extra]
+Requires-Dist: langcodes
+
+
+## Related Projects
+
+- [ovos-number-parser](https://github.com/OpenVoiceOS/ovos-number-parser) - for handling numbers
+- [ovos-date-parser](https://github.com/OpenVoiceOS/ovos-date-parser) - for handling dates and times
+- [ovos-color-parser](https://github.com/OVOSHatchery/ovos-color-parser) - for handling colors
