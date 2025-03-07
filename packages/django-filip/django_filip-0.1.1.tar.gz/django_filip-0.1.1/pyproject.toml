@@ -1,0 +1,33 @@
+[project]
+name = "django-filip"
+version = "0.1.1"
+description = "Utveksling av data mellom regnskapsprogram og nisjesystem."
+authors = [{name = "Erlend D. Handeland", email = "erlend.dietrich.handeland@stavanger.kommune.no"}]
+license = {text = "MIT"}
+dependencies = [
+    "cryptography>=44.0.2",
+    "django>=4.0",
+    "requests>=2.32.3",
+]
+classifiers = [
+    "Framework :: Django",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/django-filip"
+Repository = "https://github.com/yourusername/django-filip.git"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=7.0",
+    "pytest-django>=4.5",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["django_filip"]
