@@ -1,0 +1,9 @@
+README.md
+setup.py
+fiaduzai/__init__.py
+fiaduzai/core.py
+fiaduzai.egg-info/PKG-INFO
+fiaduzai.egg-info/SOURCES.txt
+fiaduzai.egg-info/dependency_links.txt
+fiaduzai.egg-info/requires.txt
+fiaduzai.egg-info/top_level.txt

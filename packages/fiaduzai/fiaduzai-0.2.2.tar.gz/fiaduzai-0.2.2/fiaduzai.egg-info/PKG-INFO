@@ -1,0 +1,22 @@
+Metadata-Version: 2.2
+Name: fiaduzai
+Version: 0.2.2
+Summary: A library to generate content using Google's Gemini model.
+Home-page: https://github.com/fiaduz/fiaduzai
+Author: Fiaduz Zaman
+Author-email: fiaduzzaman2014@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: google-generativeai>=0.3.0
+Requires-Dist: IPython>=8.0.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
