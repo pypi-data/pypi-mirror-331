@@ -1,0 +1,53 @@
+[project]
+name = "gprstudio"
+version = "0.2.2"
+description = "GPR-Studio client library"
+readme = "README.md"
+authors = [
+    { name = "cropphenomics", email = "dev@cropphenomics.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "aiohttp>=3.11.13",
+    "gcsfs>=2025.2.0",
+    "gprlibpy[widgets]",
+    "netcdf4>=1.7.2",
+    "pynmea2>=1.19.0",
+    "requests>=2.32.3",
+    "xarray[complete]>=2025.1.2",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv.sources]
+gprlibpy = { path = "../gprlibpy", editable = true  }
+
+
+[tool.hatch.build]
+exclude = [
+    "tests/",
+    "docs/",
+    "examples/",
+    "assets/",
+    "keys/",
+    ".git/",
+    ".github/",
+    "scripts/",
+    "configs/",
+    "README.md",
+    ".env",
+    "config.json",
+    "*/**/.sh",
+    "Makefile",
+    "cloudbuild.yaml",
+    "*/**/Dockerfile",
+    "Dockerfile",
+    "requirements.txt",
+    "*.sh",
+    "*.yml",
+    "analysis/",
+    "data/",
+    ".cache/",
+]
