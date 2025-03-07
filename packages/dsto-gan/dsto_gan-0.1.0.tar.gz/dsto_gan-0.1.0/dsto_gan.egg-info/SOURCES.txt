@@ -1,0 +1,8 @@
+LICENCE
+README.md
+setup.py
+dsto_gan.egg-info/PKG-INFO
+dsto_gan.egg-info/SOURCES.txt
+dsto_gan.egg-info/dependency_links.txt
+dsto_gan.egg-info/requires.txt
+dsto_gan.egg-info/top_level.txt
