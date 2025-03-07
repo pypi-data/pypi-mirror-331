@@ -1,0 +1,11 @@
+cloudx_proxy/__init__.py,sha256=ZZ2O_m9OFJm18AxMSuYJt4UjSuSqyJlYRaZMoets498,61
+cloudx_proxy/_version.py,sha256=dAYECGus8vEags4_X66QYJmiBFCY-yJJXDyexsFv72w,513
+cloudx_proxy/cli.py,sha256=7wi00p5CUl0Dt8huMEkP85SWgA_vzcoCzch0wctvqHk,3488
+cloudx_proxy/core.py,sha256=XQbVlPaqQQ352Ao_JJlN-PpqIdQtSBec0lNRB1s0JSk,7288
+cloudx_proxy/setup.py,sha256=Ing3UnTG_zeMZAcNI3SQbmTJzrY1UWUHUbu6UT14lao,24178
+cloudx_proxy-0.3.14.dist-info/LICENSE,sha256=i7P2OR4zsJYsMWcCUDe_B9ZfGi9bU0K5I2nKfDrW_N8,1068
+cloudx_proxy-0.3.14.dist-info/METADATA,sha256=qvR4_o1puGZ2WNjb0Y5GLW8Ff2aX_IH7k8YPZx9-ORM,14038
+cloudx_proxy-0.3.14.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+cloudx_proxy-0.3.14.dist-info/entry_points.txt,sha256=HGt743N2lVlKd7O1qWq3C0aEHyS5PjPnxzDHh7hwtSg,54
+cloudx_proxy-0.3.14.dist-info/top_level.txt,sha256=2wtEote1db21j-VvkCJFfT-dLlauuG5indjggYh3xDg,13
+cloudx_proxy-0.3.14.dist-info/RECORD,,
