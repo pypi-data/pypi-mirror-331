@@ -1,0 +1,13 @@
+snbackup/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+snbackup/__main__.py,sha256=ww73hhXznjrknjm8XGQLL9HwBu6M4iuTRIjzisdL7qU,160
+snbackup/backup.py,sha256=FJDJJdp_eC1o-HjifbMNPIJvmLrZirOXHrWlzRnZnOE,9861
+snbackup/files.py,sha256=7bFffXEHIbZvF-1qXMUGV7Y7JXPVWFAETDvAWLBDGtc,2683
+snbackup/helpers.py,sha256=fNnYcsMZiFG2Oq8WMGqZ-2ofgzIe1EkmgV3uVjnpiQo,3876
+snbackup/setup.py,sha256=c-rUn1IRHZNGyngcrMS14gUaz8swRuTLqV1QBcdJK38,4582
+snbackup/utilities.py,sha256=SLoQhjeQLodAHbXpx0dZDyobivAj3RjrieTwvr1DsSI,2457
+snbackup-2.1.1.dist-info/LICENSE,sha256=PnM-4pzKlSA9JG1m9Mntu8TkayIhoQFmlZBSOXeNVfY,11344
+snbackup-2.1.1.dist-info/METADATA,sha256=0beXGQ2PShwsPB-PyPqprRueRLjZH-bql3jE3ja0KaI,9157
+snbackup-2.1.1.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+snbackup-2.1.1.dist-info/entry_points.txt,sha256=SkCdcW5yAiTBD2As7IOoK4dmy-gMA2aNkHx6Tsven0k,52
+snbackup-2.1.1.dist-info/top_level.txt,sha256=RRGeediwcoMrayUDtPKNiU8IiZb1HPlhjs57tbkvYOA,9
+snbackup-2.1.1.dist-info/RECORD,,
