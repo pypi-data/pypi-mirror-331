@@ -1,0 +1,13 @@
+ga4gh/va_spec/__init__.py,sha256=40H6xDoo0lhdx0jQUnt90JTRhSdKz-Cd6oLNSQy3zBk,48
+ga4gh/va_spec/aac_2017/__init__.py,sha256=Y8OTh0SOuUbqdK83Ki3cNBthfEye-2PsgZoDAgMZLjg,344
+ga4gh/va_spec/aac_2017/models.py,sha256=3zExnSD5WMyWnSw2IX4PAex_DyBFok4P8QcQY3mdt64,2125
+ga4gh/va_spec/base/__init__.py,sha256=zHK49mylRj1FgACT2CtWkTsfyFP31-H3sIX9LISbe40,1702
+ga4gh/va_spec/base/caf_study_result.py,sha256=2DXIbwJtXuENwBXxaXRjQ7BF0lzak3voFiYwDiT-L_I,2933
+ga4gh/va_spec/base/core.py,sha256=e69pcIEbfomzLXPln13riWfHyYtzqosfei_q16pMi1Q,27051
+ga4gh/va_spec/base/domain_entities.py,sha256=Pl0Aaq7bIk9gqZN6hfmHFmrGkbvXX6zecEHx1enJCwE,1771
+ga4gh/va_spec/base/experimental_variant_functional_impact.py,sha256=ZzsLaGXxJBiObgSr6AmRzUMiF6BtF09ziNqX5BaiSrU,2384
+ga4gh_va_spec-0.2.0a1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+ga4gh_va_spec-0.2.0a1.dist-info/METADATA,sha256=Mfkqpp0AqnDgL9uW1ZnaxVWWoSCP2HHBsYqCiVKz1bw,18165
+ga4gh_va_spec-0.2.0a1.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+ga4gh_va_spec-0.2.0a1.dist-info/top_level.txt,sha256=dcwOVyhs_HDiP72Eg7DskeWMdcbw70-OwDmjxNuwNKg,6
+ga4gh_va_spec-0.2.0a1.dist-info/RECORD,,
