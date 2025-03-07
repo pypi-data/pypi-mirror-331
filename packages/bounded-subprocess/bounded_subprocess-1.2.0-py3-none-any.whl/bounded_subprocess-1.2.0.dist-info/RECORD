@@ -1,0 +1,9 @@
+bounded_subprocess/__about__.py,sha256=pEID3X6kxq7R6UXOGPlPjZOXPIiaNJpGn2p3cZhcDtA,131
+bounded_subprocess/__init__.py,sha256=2gqZlHhu3maD6nFaMvoDb8ecxN09_Y2NRRK5CjDTgIQ,3225
+bounded_subprocess/bounded_subprocess_async.py,sha256=TqSZHRIgkxi_WCjLU8W942nDK45InENteeMezJJdLvk,3108
+bounded_subprocess/interactive.py,sha256=SURK1IYf9mcVh9aOB1xQ2R7Aq_i4zHnlk5KUHZ7h_FE,4638
+bounded_subprocess-1.2.0.dist-info/LICENSE.txt,sha256=UVerBV0_1vMFt8QkaXuVnZVSlOiKDiBSieK5MNLy4Ls,1086
+bounded_subprocess-1.2.0.dist-info/METADATA,sha256=pZa_nZl3SMx9Tcxp3jaJaQZsqiTIMSqxLezVrjQJNeM,1456
+bounded_subprocess-1.2.0.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+bounded_subprocess-1.2.0.dist-info/top_level.txt,sha256=6d25jdhKr8aTKzX7hGD-w2v0DGylpBsTkClLdAtAoEY,19
+bounded_subprocess-1.2.0.dist-info/RECORD,,
