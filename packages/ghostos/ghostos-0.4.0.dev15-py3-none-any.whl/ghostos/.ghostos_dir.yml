@@ -1,0 +1,7 @@
+dev_contexts:
+  .:
+    title: .
+    desc: dev context of this directory
+  facade.py:
+    title: facade.py
+    desc: file dev context on facade.py
