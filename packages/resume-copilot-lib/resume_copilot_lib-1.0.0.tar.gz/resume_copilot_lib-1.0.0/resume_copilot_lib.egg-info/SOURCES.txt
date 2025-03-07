@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+resume_copilot_lib/__init__.py
+resume_copilot_lib/job_search.py
+resume_copilot_lib.egg-info/PKG-INFO
+resume_copilot_lib.egg-info/SOURCES.txt
+resume_copilot_lib.egg-info/dependency_links.txt
+resume_copilot_lib.egg-info/requires.txt
+resume_copilot_lib.egg-info/top_level.txt
+tests/test_job_search.py
