@@ -1,0 +1,16 @@
+[project]
+name = "strangeloop"
+version = "0.1.0"
+description = "A recursive and self-referential AI agent framework"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "click>=8.1.8",
+    "requests>=2.32.3",
+]
+
+[project.scripts]
+strangeloop = "strangeloop.cli:cli"
+
+[tool.uv]
+package = true
