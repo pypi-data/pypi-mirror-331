@@ -1,0 +1,9 @@
+aorta
+bin
+build
+docs
+env
+ops
+public
+tests
+var
