@@ -1,0 +1,5 @@
+[console_scripts]
+tm = toolmate.main:main
+tml = toolmate.main:lite
+toolmate = toolmate.main:main
+toolmatelite = toolmate.main:lite

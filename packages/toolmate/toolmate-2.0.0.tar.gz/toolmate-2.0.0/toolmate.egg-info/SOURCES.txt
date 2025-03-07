@@ -1,0 +1,12 @@
+setup.py
+toolmate/README.md
+toolmate/config.py
+toolmate/main.py
+toolmate/package_name.txt
+toolmate/requirements.txt
+toolmate.egg-info/PKG-INFO
+toolmate.egg-info/SOURCES.txt
+toolmate.egg-info/dependency_links.txt
+toolmate.egg-info/entry_points.txt
+toolmate.egg-info/requires.txt
+toolmate.egg-info/top_level.txt
