@@ -1,0 +1,78 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "datafact"
+dynamic = ["version"]
+description = ''
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+keywords = []
+authors = [
+    { name = "Hao Wu", email = "haowu@dataset.sh" },
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = [
+    'click',
+    'jinja2',
+    'dataset_sh'
+]
+
+[project.urls]
+Documentation = "https://github.com/Hao Wu/datafact#readme"
+Issues = "https://github.com/Hao Wu/datafact/issues"
+Source = "https://github.com/Hao Wu/datafact"
+
+[tool.hatch]
+# Include package data
+include = [
+    "datafact/templates/*.jinja2"
+]
+
+[tool.hatch.version]
+path = "src/datafact/__about__.py"
+
+[tool.hatch.envs.types]
+extra-dependencies = [
+    "mypy>=1.0.0",
+]
+
+[tool.hatch.envs.datafact]
+dependencies = ["click", "flask"]
+
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:src/datafact tests}"
+
+[project.scripts]
+datafact = "datafact.cli:cli"
+
+[tool.coverage.run]
+source_pkgs = ["datafact", "tests"]
+branch = true
+parallel = true
+omit = [
+    "src/datafact/__about__.py",
+]
+
+[tool.coverage.paths]
+datafact = ["src/datafact", "*/datafact/src/datafact"]
+tests = ["tests", "*/datafact/tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "no cov",
+    "if __name__ == .__main__.:",
+    "if TYPE_CHECKING:",
+]

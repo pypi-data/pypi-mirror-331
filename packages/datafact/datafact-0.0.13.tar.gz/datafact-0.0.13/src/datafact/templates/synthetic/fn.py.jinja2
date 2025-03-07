@@ -1,0 +1,43 @@
+import sys
+import os
+import click
+from openai import OpenAI
+from mkb import def_fn
+
+mkb_openai_api_key = os.environ.get('MKB_OPENAI_API_KEY', None)
+
+if mkb_openai_api_key is None:
+    open_ai_key_file = os.path.expanduser('~/.openai.key')
+    if os.path.exists(open_ai_key_file):
+        with open(open_ai_key_file) as f:
+            mkb_openai_api_key = f.read().strip()
+
+if mkb_openai_api_key is None or mkb_openai_api_key == '':
+    click.secho('Please set MKB_OPENAI_API_KEY environment variable or ~/.openai.key file.', fg='red')
+    sys.exit(1)
+
+from mkb.impl.openai import GptApiOptions
+
+openai_client = OpenAI(api_key=mkb_openai_api_key)
+
+my_gpt_opts = GptApiOptions(temperature=1.0)
+
+
+@def_fn.openai(client=openai_client, opts=my_gpt_opts)
+@def_fn.with_instruction("Given a language, generate a greeting message in that language.")
+@def_fn.with_example(
+    input='English',
+    output='Hello'
+)
+@def_fn.with_example(
+    input='Chinese',
+    output='你好'
+)
+def generate_greeting_message(lang):
+    # any code you wrote here will be ignored.
+    pass
+
+
+if __name__ == "__main__":
+    names = generate_greeting_message('Spanish')
+    print(names.value)
