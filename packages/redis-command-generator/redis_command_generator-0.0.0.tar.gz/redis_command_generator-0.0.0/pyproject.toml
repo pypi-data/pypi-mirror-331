@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "redis_command_generator"
+# version = "0.5.3"
+version = "0.0.0"
+authors = [
+  { name="Itay Tzivony", email="itay.tzivony@redis.com" },
+]
+description = "Commands generator for Redis"
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "License :: Other/Proprietary License",
+]
+dependencies = [
+    "redis",
+    "simple_parsing",
+]
+
+[project.urls]
+Homepage = "https://github.com/redislabsdev/command-generator"
+Issues = "https://github.com/redislabsdev/command-generator/issues"
