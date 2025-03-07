@@ -1,0 +1,8 @@
+database_wrapper_mssql/__init__.py,sha256=QTLMuq3sui_SXeAPmMSC9tkzhStPApBixWd-twM2cZA,641
+database_wrapper_mssql/connector.py,sha256=4s0wFRidsmgyK5mJiB0szntH52HVGDEsfK1ayqS3Sso,2727
+database_wrapper_mssql/db_wrapper_mssql.py,sha256=lB2L2IM_5s6Xmh5wu8xV0Z-7HYsfK_sLGb6dTDU-S5M,1443
+database_wrapper_mssql/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+database_wrapper_mssql-0.1.75.dist-info/METADATA,sha256=FgHBH3SV0c3Z2aiGcNFhbXZwNuYDPoGPePx0jDBQ2dM,2869
+database_wrapper_mssql-0.1.75.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+database_wrapper_mssql-0.1.75.dist-info/top_level.txt,sha256=n7vT2-vpKlPIOINDXhxbC69OR2tv0kxxpCWZOaqlHWg,23
+database_wrapper_mssql-0.1.75.dist-info/RECORD,,
