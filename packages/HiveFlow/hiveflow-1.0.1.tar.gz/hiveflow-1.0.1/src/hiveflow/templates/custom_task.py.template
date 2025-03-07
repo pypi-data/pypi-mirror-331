@@ -1,0 +1,98 @@
+"""
+{{ task_class_name }} implementation.
+"""
+from typing import Dict, Any, Optional, ClassVar, Type
+from hiveflow import Task
+
+class {{ task_class_name }}(Task):
+    """
+    A task for handling {{ task_name }} operations.
+    
+    This task encapsulates all the data and logic needed for {{ task_name }} processing.
+    """
+    
+    def __init__(self, 
+                 data: Dict[str, Any],
+                 task_id: Optional[str] = None,
+                 priority: int = 0,
+                 max_retries: int = 3,
+                 timeout: Optional[int] = None):
+        """
+        Initialize a new {{ task_class_name }}.
+        
+        Args:
+            data: Data to process for {{ task_name }}
+            task_id: Unique identifier for the task. If None, a UUID will be generated.
+            priority: Priority of the task (higher value means higher priority).
+            max_retries: Maximum number of retries allowed.
+            timeout: Timeout in seconds, or None for no timeout.
+        """
+        super().__init__(task_id=task_id, priority=priority, 
+                        max_retries=max_retries, timeout=timeout)
+        self.data = data
+    
+    def process(self, worker: Any) -> Dict[str, Any]:
+        """
+        Process the task using the provided worker.
+        
+        Args:
+            worker: The worker that will process the task.
+            
+        Returns:
+            Dict[str, Any]: Result of the processing.
+        """
+        # TODO: Implement the specific processing logic for {{ task_name }}
+        
+        # Check if worker has the appropriate method for processing
+        if hasattr(worker, 'process_data'):
+            # Use the worker's process_data method
+            processed_data = worker.process_data(self.data)
+            
+            return {
+                "status": "completed",
+                "processed_data": processed_data,
+                "message": "{{ task_name }} task processed successfully"
+            }
+        else:
+            # Fallback processing if worker doesn't have specialized methods
+            return {
+                "status": "completed",
+                "data": self.data,
+                "message": "{{ task_name }} task processed with generic handling"
+            }
+    
+    def to_dict(self) -> Dict[str, Any]:
+        """
+        Convert the task to a dictionary for serialization.
+        
+        Returns:
+            Dict[str, Any]: Dictionary representation of the task.
+        """
+        base_dict = super().to_dict()
+        base_dict["data"] = self.data
+        return base_dict
+    
+    @classmethod
+    def from_dict(cls, data: Dict[str, Any]) -> '{{ task_class_name }}':
+        """
+        Create a task from a dictionary.
+        
+        Args:
+            data: Dictionary containing task data.
+            
+        Returns:
+            {{ task_class_name }}: A new task instance.
+        """
+        task_data = data.get("data", {})
+        task_id = data.get("task_id")
+        priority = data.get("priority", 0)
+        max_retries = data.get("max_retries", 3)
+        timeout = data.get("timeout")
+        
+        return cls(
+            data=task_data,
+            task_id=task_id,
+            priority=priority,
+            max_retries=max_retries,
+            timeout=timeout
+        )

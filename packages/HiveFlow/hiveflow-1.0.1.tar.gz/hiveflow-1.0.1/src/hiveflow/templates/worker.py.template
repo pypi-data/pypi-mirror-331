@@ -1,0 +1,49 @@
+"""
+Base Worker implementation for {{ project_name }}.
+"""
+from typing import Dict, Any, Optional
+
+from hiveflow import Worker, Task
+from {{ package_name }}.tasks.base_task import BaseTask
+
+class BaseWorker(Worker):
+    """
+    Base worker implementation for {{ project_name }}.
+    
+    This worker can process BaseTask instances and serves as a template
+    for more specialized worker implementations.
+    """
+    
+    def setup(self) -> None:
+        """
+        Set up the worker before starting to process tasks.
+        
+        This method initializes any resources needed by the worker.
+        """
+        # Initialize resources here
+        self.resources = {}
+    
+    def can_process(self, task: Task) -> bool:
+        """
+        Check if this worker can process the given task.
+        
+        Args:
+            task: The task to check
+            
+        Returns:
+            bool: True if the worker can process the task, False otherwise
+        """
+        return isinstance(task, BaseTask)
+    
+    def process_task(self, task: Task) -> Dict[str, Any]:
+        """
+        Process a task.
+        
+        Args:
+            task: The task to process
+            
+        Returns:
+            Dict[str, Any]: Result of the processing
+        """
+        # The actual processing is delegated to the task
+        return task.process(self)

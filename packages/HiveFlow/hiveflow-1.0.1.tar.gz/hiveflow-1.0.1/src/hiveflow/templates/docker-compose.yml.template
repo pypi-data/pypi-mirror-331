@@ -1,0 +1,129 @@
+version: '3.8'
+
+services:
+  # Core storage services
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: hiveflow
+      POSTGRES_PASSWORD: hiveflow_password
+      POSTGRES_DB: hiveflow_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./postgres/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U hiveflow -d hiveflow_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - hiveflow_network
+
+  redis:
+    image: redis:7
+    volumes:
+      - redis_data:/data
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - hiveflow_network
+
+  # Coordinator service
+  coordinator:
+    build:
+      context: ..
+      dockerfile: ./docker/coordinator/Dockerfile
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - POSTGRES_HOST=postgres
+      - POSTGRES_PORT=5432
+      - POSTGRES_USER=hiveflow
+      - POSTGRES_PASSWORD=hiveflow_password
+      - POSTGRES_DB=hiveflow_db
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    ports:
+      - "8000:8000"  # API port
+    networks:
+      - hiveflow_network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Web monitoring interface
+  monitor:
+    build:
+      context: ..
+      dockerfile: ./docker/monitor/Dockerfile
+    environment:
+      - COORDINATOR_HOST=coordinator
+      - COORDINATOR_PORT=8000
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - POSTGRES_HOST=postgres
+      - POSTGRES_PORT=5432
+      - POSTGRES_USER=hiveflow
+      - POSTGRES_PASSWORD=hiveflow_password
+      - POSTGRES_DB=hiveflow_db
+    depends_on:
+      - coordinator
+    ports:
+      - "8080:8080"  # Web UI port
+    networks:
+      - hiveflow_network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Worker service (scalable)
+  worker:
+    build:
+      context: ..
+      dockerfile: ./docker/worker/Dockerfile
+    environment:
+      - COORDINATOR_HOST=coordinator
+      - COORDINATOR_PORT=8000
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    depends_on:
+      - coordinator
+    networks:
+      - hiveflow_network
+    restart: unless-stopped
+    # Can be scaled with docker-compose up --scale worker=5
+    deploy:
+      mode: replicated
+      replicas: 2
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:7000/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+networks:
+  hiveflow_network:
+    driver: bridge
+
+volumes:
+  postgres_data:
+  redis_data:

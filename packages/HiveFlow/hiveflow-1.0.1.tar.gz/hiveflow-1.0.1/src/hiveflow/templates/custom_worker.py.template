@@ -1,0 +1,82 @@
+"""
+{{ worker_class_name }} worker implementation.
+"""
+from typing import Dict, Any, Optional
+
+from hiveflow import Worker, Task
+from {{ package_name }}.tasks.base_task import BaseTask
+
+class {{ worker_class_name }}(Worker):
+    """
+    Worker that specializes in processing {{ worker_name }} tasks.
+    
+    This worker implements specific functionality for handling {{ worker_name }}-related tasks.
+    """
+    
+    def setup(self) -> None:
+        """
+        Set up the worker before starting to process tasks.
+        
+        This method initializes any resources needed by the worker.
+        """
+        # Initialize resources specific to this worker
+        self.resources = {}
+        
+        # TODO: Add any initialization code specific to {{ worker_name }}
+        
+        # Example:
+        # self.client = SomeServiceClient()
+        # self.config = self.load_config()
+    
+    def can_process(self, task: Task) -> bool:
+        """
+        Check if this worker can process the given task.
+        
+        Args:
+            task: The task to check
+            
+        Returns:
+            bool: True if the worker can process the task, False otherwise
+        """
+        # TODO: Implement task type checking logic
+        # Example:
+        # return isinstance(task, YourSpecificTaskType)
+        
+        # Default implementation just checks for BaseTask
+        return isinstance(task, BaseTask)
+    
+    def process_task(self, task: Task) -> Dict[str, Any]:
+        """
+        Process a task.
+        
+        Args:
+            task: The task to process
+            
+        Returns:
+            Dict[str, Any]: Result of the processing
+        """
+        # Delegate to task's process method, providing this worker instance
+        return task.process(self)
+    
+    # Add custom methods that can be used by tasks
+    
+    def process_data(self, data: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        Process data with {{ worker_name }}-specific logic.
+        
+        Args:
+            data: The data to process
+            
+        Returns:
+            Dict[str, Any]: Processed data
+        """
+        # TODO: Implement data processing logic specific to {{ worker_name }}
+        
+        # Example implementation
+        processed_data = {
+            **data,
+            "processed_by": "{{ worker_class_name }}",
+            "status": "processed"
+        }
+        
+        return processed_data
