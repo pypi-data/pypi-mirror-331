@@ -1,0 +1,6 @@
+# MANIFEST.in
+
+include src/iv_sherlock/conf/*.toml
+include src/iv_sherlock/conf/*.py
+
+include src/iv_sherlock/templates/*.html
