@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "example2410"
+version = "0.1.34"
+description = "Moneybird SDK for example2024"
+authors = ["Bernd Prostmaier <b.prostmaier@icloud.com>", "Hallo test <htest3212432@web.de>"]
+license = "MIT"
+readme = "pypi.md"
+homepage = "https://github.com/BPro2410/example_workflow"
+repository = "https://github.com/BPro2410/example_workflow"
+keywords = ["nlp", "topicmodel", "poisson factorization", "variational inference", "textanalysis"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.11"
+httpx = "^0.27.2"
+pydantic = "^2.10.6"
+tensorflow = "2.12"
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.11.2"
+types-pygments = "^2.18.0.20240506"
+pytest = "^8.3.3"
+pytest-mock = "^3.14.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
