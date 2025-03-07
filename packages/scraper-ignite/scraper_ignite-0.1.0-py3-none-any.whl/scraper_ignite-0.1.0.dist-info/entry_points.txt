@@ -1,0 +1,2 @@
+[console_scripts]
+scraper_ignite = scraper_ignite.scraper_template:main
