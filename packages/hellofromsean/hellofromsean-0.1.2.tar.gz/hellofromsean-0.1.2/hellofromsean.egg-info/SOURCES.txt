@@ -1,0 +1,7 @@
+README.md
+main.py
+pyproject.toml
+hellofromsean.egg-info/PKG-INFO
+hellofromsean.egg-info/SOURCES.txt
+hellofromsean.egg-info/dependency_links.txt
+hellofromsean.egg-info/top_level.txt
