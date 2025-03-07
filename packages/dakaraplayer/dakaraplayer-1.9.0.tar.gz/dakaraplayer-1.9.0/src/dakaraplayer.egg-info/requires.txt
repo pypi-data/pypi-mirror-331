@@ -1,0 +1,17 @@
+Jinja2<3.2.0,>=3.1.1
+dakarabase<2.2.0,>=2.1.0
+filetype<1.3.0,>=1.2.0
+packaging<25.0,>=24.2
+python-mpv-jsonipc<1.3.0,>=1.2.0
+python-vlc!=3.0.12117,<3.1.0,>=3.0.21203
+
+[dev]
+black<25.2.0,>=25.1.0
+codecov<2.2.0,>=2.1.13
+func_timeout<4.4.0,>=4.3.5
+isort<6.1.0,>=6.0.0
+pdoc<15.1.0,>=15.0.1
+pre-commit<4.2.0,>=4.1.0
+pytest-cov<6.1.0,>=6.0.0
+pytest<8.4.0,>=8.3.4
+ruff<0.10.0,>=0.9.6
