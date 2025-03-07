@@ -1,0 +1,17 @@
+from __future__ import annotations
+
+from enum import Enum
+
+
+class S3StoreEnv(Enum):
+    """
+    S3Store environment
+    """
+
+    ENDPOINT_URL = "DHCORE_S3_ENDPOINT_URL"
+    ACCESS_KEY_ID = "DHCORE_AWS_ACCESS_KEY_ID"
+    SECRET_ACCESS_KEY = "DHCORE_AWS_SECRET_ACCESS_KEY"
+    SESSION_TOKEN = "DHCORE_AWS_SESSION_TOKEN"
+    BUCKET_NAME = "DHCORE_S3_BUCKET"
+    REGION = "DHCORE_S3_REGION"
+    SIGNATURE_VERSION = "DHCORE_S3_SIGNATURE_VERSION"
