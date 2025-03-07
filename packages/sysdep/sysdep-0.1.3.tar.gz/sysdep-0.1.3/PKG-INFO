@@ -1,0 +1,233 @@
+Metadata-Version: 2.2
+Name: sysdep
+Version: 0.1.3
+Summary: System Dependency Checker for Python Projects
+Author: Latiful Mousom
+Author-email: Latiful Mousom <latifulmousom@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/lmousom/sysdep
+Project-URL: Issues, https://github.com/lmousom/sysdep/issues
+Keywords: dependency,system,package,verification,installation
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: pytest>=6.0.0; extra == "dev"
+Requires-Dist: black>=21.5b2; extra == "dev"
+Requires-Dist: isort>=5.0.0; extra == "dev"
+Requires-Dist: mypy>=0.800; extra == "dev"
+Requires-Dist: ui; extra == "dev"
+Provides-Extra: ui
+Requires-Dist: tqdm>=4.46.0; extra == "ui"
+Dynamic: author
+Dynamic: requires-python
+
+# sysdep - System Dependency Checker for Python
+
+`sysdep` is a cross-platform tool to manage and verify non-Python system dependencies required by Python applications. It fills the gap between Python package management and system-level dependencies.
+
+## Problem
+
+While Python package managers like pip, Poetry, or Pipenv handle Python modules well, there's no unified way to:
+
+- Declare system dependencies (like FFmpeg, ImageMagick, or platform libraries)
+- Verify if those dependencies are installed on a user's system
+- Guide users through installation of missing dependencies
+
+## Features
+
+- **Declarative Dependencies**: Specify system requirements in a clear, structured format
+- **Cross-Platform Support**: Works on Linux, macOS, and Windows
+- **Automatic Detection**: Scans for common tools and libraries
+- **Installation Guidance**: Suggests installation commands for missing dependencies
+- **CI Integration**: Easy to integrate with CI/CD pipelines
+- **Development Tool**: Checks dependencies during development or installation
+- **Code Annotations**: Scan Python code for special comments that declare dependencies
+- **Progress Bars**: Visual feedback for long-running operations
+
+## Installation
+
+```bash
+# Basic installation
+pip install sysdep
+
+# Install with UI enhancements (progress bars)
+pip install "sysdep[ui]"
+```
+
+# Install with UI enhancements
+pip install "sysdep[ui]"
+```
+
+## Quick Start
+
+### Create a dependency manifest
+
+Create a file named `system_requirements.txt` in your project:
+
+```
+# Media processing tools
+executable: ffmpeg >= 4.2.0
+executable: imagemagick
+
+# Libraries
+library: libssl >= 1.1.0
+```
+
+### Check dependencies
+
+```bash
+# Check dependencies from manifest file
+sysdep check -f system_requirements.txt
+
+# Scan Python files for dependency annotations
+sysdep check -d ./my_package
+
+# Output in JSON format
+sysdep check -f system_requirements.txt --json
+```
+
+### Install missing dependencies
+
+```bash
+sysdep install -f system_requirements.txt
+```
+
+### Generate manifest
+
+```bash
+# Generate from code annotations
+sysdep generate ./my_package -o system_requirements.txt
+
+# Generate from Python dependencies (requirements.txt, pyproject.toml, setup.py)
+sysdep generate ./ --from-python-deps -o system_requirements.txt
+
+# Map Python packages to system dependencies
+sysdep map numpy pillow opencv-python
+
+# Map packages from requirements.txt
+sysdep map --file requirements.txt
+```
+
+## Dependency Declaration
+
+### Manifest File
+
+The `system_requirements.txt` file uses a simple format:
+
+```
+# Comments start with hash
+dependency_type: name [>= version]
+```
+
+Available dependency types:
+- `executable`: Command-line tools found in PATH
+- `library`: Shared libraries/DLLs
+
+### Automatic Generation from Python Dependencies
+
+`sysdep` can automatically generate system requirements from your Python dependencies:
+
+```bash
+sysdep generate ./ --from-python-deps
+```
+
+This will:
+1. Scan your project for `requirements.txt`, `pyproject.toml`, and `setup.py` files
+2. Extract Python package dependencies
+3. Map those packages to known system dependencies
+4. Generate a `system_requirements.txt` file
+
+Supported mappings include (but not limited to):
+- `pillow` → libjpeg, libpng
+- `opencv-python` → opencv libraries
+- `moviepy`, `pydub` → ffmpeg
+- `numpy`, `scipy` → BLAS, LAPACK
+- `psycopg2` → libpq
+- `lxml` → libxml2, libxslt
+- `tensorflow`, `pytorch` → CUDA libraries
+- And many more!
+
+### Code Annotations
+
+You can declare dependencies directly in your Python code using special comments:
+
+```python
+# sysdep: ffmpeg >= 4.2.0
+import subprocess
+
+def process_video(input_file, output_file):
+    # requires-system: imagemagick
+    subprocess.run(['ffmpeg', '-i', input_file, output_file])
+```
+
+## Integration with Setuptools
+
+`sysdep` integrates with setuptools to automatically check dependencies during package installation:
+
+```python
+# setup.py
+from setuptools import setup, find_packages
+from sysdep.setuptools_integration import setup_integration
+
+setup_kwargs = {
+    'name': 'my-package',
+    'version': '0.1.0',
+    # Other setup parameters...
+}
+
+# Integrate sysdep with setuptools
+setup_integration(setup_kwargs)
+
+# Run setup
+setup(**setup_kwargs)
+```
+
+This adds a `sysdep` command to setuptools and modifies the `install` and `develop` commands to check dependencies first.
+
+```bash
+# Check dependencies
+python setup.py sysdep
+
+# Install package and check dependencies
+python setup.py install
+
+# Use strict mode to fail if dependencies are missing
+python setup.py sysdep --strict
+```
+
+## API Usage
+
+```python
+from sysdep import check_dependencies
+from sysdep.parsers.code_scanner import DependencyScanner
+
+# Check dependencies from manifest file
+results = check_dependencies('system_requirements.txt')
+if not results['all_installed']:
+    print("Missing dependencies:")
+    for dep in results['missing']:
+        print(f"- {dep['name']}")
+
+# Scan for dependencies in code
+scanner = DependencyScanner()
+dependencies = scanner.scan_directory('./my_package')
+```
+
+## License
+
+MIT License
+
+Copyright (c) 2024-2025 [Latiful Mousom](https://github.com/lmousom)
+
+See the [LICENSE](LICENSE) file for details.
