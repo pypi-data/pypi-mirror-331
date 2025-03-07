@@ -1,0 +1,7 @@
+tcfetch-0.5.1.dist-info/METADATA,sha256=4p23lu6JnEumy2AEhywZPz_MXoAbo8fLa36mtuJyDX0,2211
+tcfetch-0.5.1.dist-info/WHEEL,sha256=u9us9wDOMuv-SAcU5xBwcSEz9IBIlPKBMDdSNCJgTRs,106
+tcfetch/__init__.py,sha256=xNYGJOI2oNXceDU1_ePNWIiIcYwT3s49lcmG2e7C_PE,111
+tcfetch/__init__.pyi,sha256=jkzRqF9rIwepWgZ7b8fcAPZe6x7G0igl_Ez9TR80Mb0,536
+tcfetch/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tcfetch/tcfetch.cpython-313-darwin.so,sha256=Iczxj_gfqAbGrN_gyC7Wlcvteh7u4R5NLwcoc7i_doY,7033872
+tcfetch-0.5.1.dist-info/RECORD,,
