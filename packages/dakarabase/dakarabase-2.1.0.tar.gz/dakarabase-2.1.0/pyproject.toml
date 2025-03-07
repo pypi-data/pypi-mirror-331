@@ -1,0 +1,75 @@
+[project]
+name = "dakarabase"
+authors = [
+        {name = "Neraste", email = "neraste.herr10@gmail.com"},
+]
+description = "Collection of helper modules for the Dakara Project"
+readme = "README.md"
+license = {file = "LICENSE"}
+dynamic = ["version"]
+requires-python = ">= 3.9"
+classifiers = [
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
+        "Programming Language :: Python :: 3.13",
+        "Operating System :: OS Independent",
+        "Environment :: Console",
+        "Intended Audience :: Developers",
+]
+dependencies = [
+        "coloredlogs>=15.0.1,<15.1.0",
+        "environs>=14.1.1,<14.2.0",
+        "furl>=2.1.3,<2.2.0",
+        "platformdirs>=4.3.6,<4.4.0",
+        "progressbar2>=4.5.0,<4.6.0",
+        "PyYAML>=6.0.2,<6.1",
+        "requests>=2.32.3,<2.33.0",
+        "websocket-client>=1.8.0,<1.9.0",
+]
+
+[project.optional-dependencies]
+dev = [
+        "black>=25.1.0,<25.2.0",
+        "codecov>=2.1.13,<2.2.0",
+        "isort>=6.0.0,<6.1.0",
+        "pdoc>=15.0.1,<15.2.0",
+        "pre-commit>=4.1.0,<4.2.0",
+        "pytest-cov>=6.0.0,<6.1.0",
+        "pytest>=8.3.4,<8.4.0",
+        "ruff>=0.9.6,<0.10.0",
+]
+# note: update .pre-commit-config.yaml as well
+
+[project.urls]
+Homepage = "https://github.com/DakaraProject/dakara-base"
+Repository = "https://github.com/DakaraProject/dakara-base.git"
+Issues = "https://github.com/DakaraProject/dakara-base/issues"
+Changelog = "https://github.com/DakaraProject/dakara-base/blob/master/CHANGELOG.md"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+version = {attr = "dakara_base.version.__version__" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest]
+addopts = "--cov=dakara_base"
+
+[tool.isort]
+profile = "black"
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "B"]
+ignore = []

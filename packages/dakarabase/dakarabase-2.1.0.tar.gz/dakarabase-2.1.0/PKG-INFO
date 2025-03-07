@@ -1,0 +1,105 @@
+Metadata-Version: 2.2
+Name: dakarabase
+Version: 2.1.0
+Summary: Collection of helper modules for the Dakara Project
+Author-email: Neraste <neraste.herr10@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2025 Dakara Project
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/DakaraProject/dakara-base
+Project-URL: Repository, https://github.com/DakaraProject/dakara-base.git
+Project-URL: Issues, https://github.com/DakaraProject/dakara-base/issues
+Project-URL: Changelog, https://github.com/DakaraProject/dakara-base/blob/master/CHANGELOG.md
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Operating System :: OS Independent
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: coloredlogs<15.1.0,>=15.0.1
+Requires-Dist: environs<14.2.0,>=14.1.1
+Requires-Dist: furl<2.2.0,>=2.1.3
+Requires-Dist: platformdirs<4.4.0,>=4.3.6
+Requires-Dist: progressbar2<4.6.0,>=4.5.0
+Requires-Dist: PyYAML<6.1,>=6.0.2
+Requires-Dist: requests<2.33.0,>=2.32.3
+Requires-Dist: websocket-client<1.9.0,>=1.8.0
+Provides-Extra: dev
+Requires-Dist: black<25.2.0,>=25.1.0; extra == "dev"
+Requires-Dist: codecov<2.2.0,>=2.1.13; extra == "dev"
+Requires-Dist: isort<6.1.0,>=6.0.0; extra == "dev"
+Requires-Dist: pdoc<15.2.0,>=15.0.1; extra == "dev"
+Requires-Dist: pre-commit<4.2.0,>=4.1.0; extra == "dev"
+Requires-Dist: pytest-cov<6.1.0,>=6.0.0; extra == "dev"
+Requires-Dist: pytest<8.4.0,>=8.3.4; extra == "dev"
+Requires-Dist: ruff<0.10.0,>=0.9.6; extra == "dev"
+
+# Dakara Base
+
+<!-- Badges are displayed for the develop branch -->
+[![PyPI version](https://badge.fury.io/py/dakarabase.svg)](https://pypi.python.org/pypi/dakarabase/)
+[![PyPI Python versions](https://img.shields.io/pypi/pyversions/dakarabase.svg)](https://pypi.python.org/pypi/dakarabase/)
+[![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://pypi.python.org/pypi/dakarabase/)
+[![Tests status](https://github.com/DakaraProject/dakara-base/actions/workflows/ci.yml/badge.svg)](https://github.com/DakaraProject/dakara-base/actions/workflows/ci.yml)
+[![Code coverage status](https://codecov.io/gh/DakaraProject/dakara-base/branch/develop/graph/badge.svg)](https://codecov.io/gh/DakaraProject/dakara-base)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
+[![Imports: isort](https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&labelColor=ef8336)](https://pycqa.github.io/isort/)
+
+This project is a collection of tools and helper modules for the Dakara Project.
+
+## Modules available
+
+- `config`: a helper that manages config and loggers;
+- `directory`: a helper to manage application directories;
+- `exceptions`: a base class for exceptions and exception handlers;
+- `http_client`: an HTTP client dedicated to be used with an API;
+- `progress_bar`: a collection of progress bars;
+- `safe_workers`: a library to facilitate the manipulation of threads;
+- `utils`: other various helpers;
+- `version_check`: a checker for the version of a project;
+- `websocket_client`: a Websocket client.
+
+## Install
+
+Install the package with:
+
+```sh
+pip install dakarabase
+```
+
+If you have downloaded the repo, you can install the package directly with:
+
+```sh
+pip install .
+```
+
+## Development
+
+Please read the [developers documentation](CONTRIBUTING.md).
