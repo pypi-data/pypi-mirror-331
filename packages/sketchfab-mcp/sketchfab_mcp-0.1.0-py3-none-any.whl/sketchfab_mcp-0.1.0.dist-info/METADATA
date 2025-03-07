@@ -1,0 +1,29 @@
+Metadata-Version: 2.4
+Name: sketchfab-mcp
+Version: 0.1.0
+Summary: A microservice for interacting with the Sketchfab API using MCP (Model Control Protocol).
+Author-email: Eduardo del Palacio Lirola <eddydpyl@gmail.com>
+Requires-Python: >=3.13
+Requires-Dist: mcp[cli]>=1.3.0
+Requires-Dist: requests>=2.32.3
+Description-Content-Type: text/markdown
+
+# Sketchfab MCP
+
+A microservice for interacting with the Sketchfab API using MCP (Model Control Protocol).
+
+## Features
+
+- Search for downloadable models on Sketchfab
+- Download a model from Sketchfab given a UID
+
+## Environment Variables
+
+- `SKETCHFAB_API_TOKEN`: Your Sketchfab API token
+
+## Running with Docker
+
+```bash
+docker build -t sketchfab-mcp .
+docker run -it --rm -p 8000:8000 -e SKETCHFAB_API_TOKEN=PLACEHOLDER sketchfab-mcp
+```
