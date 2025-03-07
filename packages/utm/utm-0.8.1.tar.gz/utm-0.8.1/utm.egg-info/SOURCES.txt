@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+scripts/utm-converter
+test/test_utm.py
+utm/__init__.py
+utm/_version.py
+utm/conversion.py
+utm/error.py
+utm.egg-info/PKG-INFO
+utm.egg-info/SOURCES.txt
+utm.egg-info/dependency_links.txt
+utm.egg-info/top_level.txt
