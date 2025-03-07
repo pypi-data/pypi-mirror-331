@@ -1,0 +1,3 @@
+graft src/defirl/*
+recursive-include src/defirl *.npy
+recursive-include src/derirl *.txt
