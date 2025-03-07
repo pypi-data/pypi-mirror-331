@@ -1,0 +1,47 @@
+[project]
+name = "glean-requests"
+version = "0.3.0"
+description = "A minimal wrapper of the requests library for Glean's API"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "John Agan", email = "johnagan@gmail.com" }]
+keywords = ["glean", "api", "client", "rest"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = ["requests>=2.32.0"]
+
+[project.urls]
+"Homepage" = "https://github.com/johnagan/glean-requests"
+"Bug Tracker" = "https://github.com/johnagan/glean-requests/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pylint.messages_control]
+disable = ["too-many-arguments", "missing-final-newline"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_classes = "Test*"
+python_functions = "test_*"
+
+[dependency-groups]
+dev = [
+    "pylint>=3.2.7",
+    "pytest>=7.0.0",
+    "pytest-mock>=3.10.0",
+    "responses>=0.23.0",
+]
