@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: topmodels
+Version: 0.0.0
+Summary: Workflow to make modeling easier and more robust.
+Project-URL: homepage, https://github.com/QstBoard/topmodels
+Project-URL: issues, https://github.com/QstBoard/topmodels/issues
+Author-email: Anthony Tedde <antho.tedde@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
