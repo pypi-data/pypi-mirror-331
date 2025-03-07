@@ -1,0 +1,13 @@
+from easytype import TypeBuilder
+from dataset_sh.constants import DEFAULT_COLLECTION_NAME
+
+ColorImage = TypeBuilder.create(
+    'ColorImage',
+    color=str,
+    rgb=tuple[int, int, int],
+    pic=str,
+)
+
+data_types = {
+    DEFAULT_COLLECTION_NAME: ColorImage
+}

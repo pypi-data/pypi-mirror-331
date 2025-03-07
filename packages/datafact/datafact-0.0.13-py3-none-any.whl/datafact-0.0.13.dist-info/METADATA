@@ -1,0 +1,45 @@
+Metadata-Version: 2.4
+Name: datafact
+Version: 0.0.13
+Project-URL: Documentation, https://github.com/Hao Wu/datafact#readme
+Project-URL: Issues, https://github.com/Hao Wu/datafact/issues
+Project-URL: Source, https://github.com/Hao Wu/datafact
+Author-email: Hao Wu <haowu@dataset.sh>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Requires-Dist: click
+Requires-Dist: dataset-sh
+Requires-Dist: jinja2
+Description-Content-Type: text/markdown
+
+# datafact
+
+[![PyPI - Version](https://img.shields.io/pypi/v/datafact.svg)](https://pypi.org/project/datafact)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/datafact.svg)](https://pypi.org/project/datafact)
+
+-----
+
+## Table of Contents
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install datafact
+```
+
+## License
+
+`datafact` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.

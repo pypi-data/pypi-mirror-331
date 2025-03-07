@@ -1,0 +1,2 @@
+[console_scripts]
+datafact = datafact.cli:cli

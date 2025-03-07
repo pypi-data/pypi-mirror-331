@@ -1,0 +1,59 @@
+import sys
+from dataset_sh.constants import DEFAULT_COLLECTION_NAME
+from fn import generate_greeting_message
+
+
+def create_main_collection():
+    languages = [
+        "English",
+        "Spanish",
+        "Mandarin Chinese",
+        "Hindi",
+        "Arabic",
+        "Portuguese",
+        "Bengali",
+        "Russian",
+        "Japanese",
+        "Punjabi",
+        "German",
+        "Javanese",
+        "Korean",
+        "French",
+        "Telugu",
+        "Vietnamese",
+        "Turkish",
+        "Italian",
+        "Tamil",
+        "Urdu"
+    ]
+
+    batch = generate_greeting_message.batch('generate_greeting_message_batch_0')
+
+    if batch.can_start_batch():
+        for lang in languages:
+            batch.add(lang)
+
+        batch.start_batch()
+        print('Batch started, please wait until it was processed.')
+        sys.exit(1)
+    else:
+        print('batch already started.')
+        status = batch.sync_remote()
+        print(status)
+        if status['status'] == 'finished':
+            items = []
+            for input_args, output in batch.iter_outputs():
+                items.append({
+                    'language': input_args['args'][0],
+                    "value": output.value
+                })
+            return items
+        else:
+            print('batch is not finished, exit dataset building process now.')
+            sys.exit(1)
+
+
+def create_data_dict():
+    return {
+        DEFAULT_COLLECTION_NAME: create_main_collection()
+    }

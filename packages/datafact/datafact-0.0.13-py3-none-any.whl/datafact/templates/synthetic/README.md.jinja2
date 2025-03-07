@@ -1,0 +1,43 @@
+# datafact template: synthetic
+
+This dataset is built by the datafact template: `synthetic`,
+
+# Create and publish dataset
+
+This folder contains a project created by datafact (DATAset FACTory),
+
+You can use this project to build and publish your dataset to [dataset.sh](https://dataset.sh)
+
+## How to modify this project
+
+
+You may want to modify the following files as follows:
+
+* data.py
+    Implement a function called `create_data_dict` which produce the content of your dataset.
+
+* type.py
+    Provide your type annotation in the `data_types` dictionary in this file.
+
+* fn.py
+    Provide your mkb function definition.
+
+* README.md
+    Provide the readme document of your dataset in this file.
+
+## Build Dataset
+
+To build your dataset, use command:
+
+```shell
+python project.py build
+```
+
+## Publish Dataset
+
+To publish your dataset, use command:
+
+```shell
+python project.py publish
+```
+
