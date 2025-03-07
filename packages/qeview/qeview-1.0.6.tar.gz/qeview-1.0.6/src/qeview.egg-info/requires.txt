@@ -1,0 +1,4 @@
+qeschema
+tqdm
+matplotlib
+numpy
