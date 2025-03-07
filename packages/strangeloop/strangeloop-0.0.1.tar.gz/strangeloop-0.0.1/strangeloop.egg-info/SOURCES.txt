@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+strangeloop/__init__.py
+strangeloop/cli.py
+strangeloop.egg-info/PKG-INFO
+strangeloop.egg-info/SOURCES.txt
+strangeloop.egg-info/dependency_links.txt
+strangeloop.egg-info/entry_points.txt
+strangeloop.egg-info/requires.txt
+strangeloop.egg-info/top_level.txt
