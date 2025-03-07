@@ -1,0 +1,2 @@
+[console_scripts]
+cursor-utils = cursor_utils.cli:main
