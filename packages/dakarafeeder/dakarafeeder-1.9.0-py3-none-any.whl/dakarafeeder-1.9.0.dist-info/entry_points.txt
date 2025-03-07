@@ -1,0 +1,2 @@
+[console_scripts]
+dakara-feeder = dakara_feeder.__main__:main
