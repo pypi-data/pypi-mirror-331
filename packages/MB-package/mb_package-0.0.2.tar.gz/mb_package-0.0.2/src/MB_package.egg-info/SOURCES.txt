@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+src/MB_package/__init__.py
+src/MB_package/my_module.py
+src/MB_package.egg-info/PKG-INFO
+src/MB_package.egg-info/SOURCES.txt
+src/MB_package.egg-info/dependency_links.txt
+src/MB_package.egg-info/top_level.txt
