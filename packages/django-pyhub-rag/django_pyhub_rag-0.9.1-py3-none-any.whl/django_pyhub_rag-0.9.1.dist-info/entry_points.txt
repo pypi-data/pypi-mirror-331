@@ -1,0 +1,3 @@
+[console_scripts]
+pyhub.llm = pyhub.llm.__main__:app
+pyhub.rag = pyhub.rag.__main__:app
