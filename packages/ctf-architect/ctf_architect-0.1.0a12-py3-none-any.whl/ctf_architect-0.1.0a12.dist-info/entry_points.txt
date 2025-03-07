@@ -1,0 +1,3 @@
+[console_scripts]
+ctf-architect = ctf_architect.cli:main
+ctfa = ctf_architect.cli:main
