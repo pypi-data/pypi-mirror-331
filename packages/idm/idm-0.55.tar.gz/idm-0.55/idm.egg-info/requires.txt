@@ -1,0 +1,10 @@
+argparse
+configset
+pydebugger
+make_colors
+
+[:platform_system == "Windows"]
+pypiwin32
+comtypes
+
+[pyidm]
