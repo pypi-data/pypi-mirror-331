@@ -1,0 +1,14 @@
+iiiflow/__init__.py,sha256=r7iE_n7fG3Sb3TVls9xrlLZt4xXSEaAaKkIT4DclMB8,3644
+iiiflow/conversions.py,sha256=dn_Q3TZ1m_p6vLj8g3dHm7D_872_On_qBi3045UZpMc,2151
+iiiflow/manifest.py,sha256=naJtzADgq4s4r77IjIMkCPm1jBl2vfBYEINyzQ6VnP0,21094
+iiiflow/metadata.py,sha256=3t8talYAZ22-WI5YZhFCFV8Q1GLvMyVnYbsK8ogBgVc,3780
+iiiflow/ptif.py,sha256=nbZnEP2seEA4iKvXnsoT6HNAcYXFZhWF_JBR-W7L_sA,2619
+iiiflow/tesseract.py,sha256=v4OxTIKB_-olV1cf43VHH-HUxNOzwwsLjZY_GJlFSKM,4102
+iiiflow/thumbnail.py,sha256=7lQj1coZ4sEhGbtoWsozJ_--H2fmFG1d15rhutINR68,5049
+iiiflow/transcribe.py,sha256=APPLp4bYj12cwkT_s5nJpRFc5PvD4Qy814GOYsgAnj0,4887
+iiiflow/utils.py,sha256=8LAnzD9D-BN4indht5yho6EUarSPRTwnuDuqJVvTgh4,6364
+iiiflow-0.1.1.dist-info/LICENSE,sha256=ViOkPDejYjm1WCQpQngFvllDAt85z1lJsTTxYzVxEpU,1145
+iiiflow-0.1.1.dist-info/METADATA,sha256=opzrPykJ407U4RVK8EROXvzRiLIBsdhU0C40GWESOW8,1094
+iiiflow-0.1.1.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+iiiflow-0.1.1.dist-info/top_level.txt,sha256=IuHBCBjU9d1ggmSaGUAEEbrAhyhscpNLJR97YxBHscI,8
+iiiflow-0.1.1.dist-info/RECORD,,
