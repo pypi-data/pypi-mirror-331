@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: picflip
+Version: 0.1.0
+Summary: Remove image backgrounds and convert them to PNG!
+Home-page: UNKNOWN
+Author: Divpreet Singh
+Author-email: divpreetsingh68@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: rembg
+Requires-Dist: Pillow
+Requires-Dist: cairosvg
+Requires-Dist: onnxruntime
+
+UNKNOWN
+
