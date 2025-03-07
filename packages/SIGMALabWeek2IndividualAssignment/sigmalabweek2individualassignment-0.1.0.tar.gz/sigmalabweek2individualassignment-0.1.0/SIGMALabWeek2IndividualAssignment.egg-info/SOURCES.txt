@@ -1,0 +1,6 @@
+README.md
+pyproject.toml
+SIGMALabWeek2IndividualAssignment.egg-info/PKG-INFO
+SIGMALabWeek2IndividualAssignment.egg-info/SOURCES.txt
+SIGMALabWeek2IndividualAssignment.egg-info/dependency_links.txt
+SIGMALabWeek2IndividualAssignment.egg-info/top_level.txt
