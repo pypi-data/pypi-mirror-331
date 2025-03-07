@@ -1,0 +1,39 @@
+Metadata-Version: 2.3
+Name: example2410
+Version: 0.1.42
+Summary: Moneybird SDK for example2024
+License: MIT
+Keywords: nlp,topicmodel,poisson factorization,variational inference,textanalysis
+Author: Bernd Prostmaier
+Author-email: b.prostmaier@icloud.com
+Requires-Python: >=3.10,<3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: matplotlib (==3.10)
+Requires-Dist: numpy (==2.0)
+Requires-Dist: pandas (==2.2.3)
+Requires-Dist: scikit_learn (==1.6)
+Requires-Dist: scipy (==1.15)
+Requires-Dist: seaborn (==0.13)
+Requires-Dist: tensorflow (==2.18)
+Requires-Dist: tensorflow_probability (==0.25)
+Requires-Dist: tf-keras (==2.18)
+Project-URL: Homepage, https://github.com/BPro2410/example_workflow
+Project-URL: Repository, https://github.com/BPro2410/example_workflow
+Description-Content-Type: text/markdown
+
+# example2410
+
+This is a example repository for the example2410 package. you can use it the following way:
+
+```python
+pip install example2410
+
+from example2410 import sum_tf as st
+```
+
+This is a nonsense package
+- nonsense
+- nonsense
