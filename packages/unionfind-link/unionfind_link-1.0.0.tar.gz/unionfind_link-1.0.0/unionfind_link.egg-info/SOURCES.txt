@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+tests/test_unionfind-link.py
+unionfind_link/UnionFind.py
+unionfind_link/__init__.py
+unionfind_link.egg-info/PKG-INFO
+unionfind_link.egg-info/SOURCES.txt
+unionfind_link.egg-info/dependency_links.txt
+unionfind_link.egg-info/top_level.txt
