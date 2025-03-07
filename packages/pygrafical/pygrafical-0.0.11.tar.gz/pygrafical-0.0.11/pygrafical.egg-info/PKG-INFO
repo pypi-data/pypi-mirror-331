@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: pygrafical
+Version: 0.0.11
+Summary: графическая библиотека основаная на Windows API
+Home-page: https://github.com/Ananimys784/Kingurio
+Author: tetredial_9274
+Author-email: system32@mail.ru
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+п»ї# pygrafical (beta)
+
+**pygrafical** is a Windows API-based graphics library written in C++ designed to optimize graphical functions 
+
+## Installation
+to install the library, you can use the following command
+```bash
+pip install pygrafical
+```
+## Functions
+there are many functions in this library
+## What's new?
+added a feature to get new paths to hooks
