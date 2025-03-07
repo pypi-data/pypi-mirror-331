@@ -1,0 +1,27 @@
+Metadata-Version: 2.2
+Name: server_3_free_threads
+Version: 0.1.1
+Summary: My first server
+Author: Vadim Kazakov
+Author-email: skolkovoinovations@gmail.com
+Keywords: server
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: python-dotenv==1.0.1
+Requires-Dist: setuptools==75.8.2
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: keywords
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+Server_3_free_threads
+1. python setup.py sdist bdist_wheel
+2. twine upload --repository pypi dist/*
