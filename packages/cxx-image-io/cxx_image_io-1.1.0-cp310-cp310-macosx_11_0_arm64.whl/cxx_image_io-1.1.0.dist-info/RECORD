@@ -1,0 +1,16 @@
+cxx_image_io/cxx_libraw.cpython-310-darwin.so,sha256=v12QLwrCmDC1-TrShQ7gj8AOu89MmTdekvdI55gqGg8,385296
+cxx_image_io/io.py,sha256=L_eBr5an9N0uNnlSJ9ND3XwKZO7QrpIoJy-KQOY5VOs,15205
+cxx_image_io/__init__.py,sha256=n2BA0sqjUJY_S8g_8fyCg_UUYvf7GhzevwLswFu65CI,1355
+cxx_image_io/libexif.dylib,sha256=dBynUJ1JMrDS0Xz8c01HpjvP7yfEG3ysMOPq0H-mXqY,264528
+cxx_image_io/libraw_r.dylib,sha256=w_WqxVsNAQh24gl2ySjrXDiX8pqX4agtuJ8Ai-zX-2U,1503656
+cxx_image_io/utils.py,sha256=OF2L7VjbptFP2TdLBU89anv1CQABAaN5YAcBFPuT7Os,12336
+cxx_image_io/cxx_image.cpython-310-darwin.so,sha256=PpQlf19xUKNB6_WSq6qohVIPyRZSvFpjRraXzGrpzDY,3477008
+cxx_image_io/libraw_r.24.0.0.dylib,sha256=w_WqxVsNAQh24gl2ySjrXDiX8pqX4agtuJ8Ai-zX-2U,1503656
+cxx_image_io/libraw_r.24.dylib,sha256=w_WqxVsNAQh24gl2ySjrXDiX8pqX4agtuJ8Ai-zX-2U,1503656
+cxx_image_io/.dylibs/libexif.dylib,sha256=L1gmV-bxZ_w09DEh4uRKrd3ZJ9soTYsDgiXK0nSY_oM,282672
+cxx_image_io/.dylibs/libraw_r.24.0.0.dylib,sha256=unX5J50vB4SoqKPXnzcuh4gco21b9pMxMEeLA9Nlvqo,1521744
+cxx_image_io-1.1.0.dist-info/LICENSE.md,sha256=N8PvVOBetYqtxJt0prtYKDUCtTD90bUmhaSKxCdePtU,1083
+cxx_image_io-1.1.0.dist-info/RECORD,,
+cxx_image_io-1.1.0.dist-info/WHEEL,sha256=hLbH55LnE-lZ6hAUJpBFCQHBPxPOFGLQuucvsQuUH4M,109
+cxx_image_io-1.1.0.dist-info/top_level.txt,sha256=qfJHhjlSV-6njNwlUODGXv8V6CNBhvGOjZQShPnbsBQ,23
+cxx_image_io-1.1.0.dist-info/METADATA,sha256=dmObFL4YhA1VQWeQYY2Jqip_HuTP3AByTM7BTQrm4ew,19714
