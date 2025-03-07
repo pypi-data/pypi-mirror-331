@@ -1,0 +1,11 @@
+whaller_client/__init__.py,sha256=6u5yQAz6Ld7FzRNiKbHqZ88M6nf4NJBBJuDufN--j3Q,135
+whaller_client/api.py,sha256=TPOqlLzesFHcWoqw6OzT7SWc4aiNIVvp7vDRUNhCO-c,2227
+whaller_client/auth.py,sha256=RtP_iRMIR4cWG1StEeGuDxL1cLiJAu9NGiGAlGHOoRw,1020
+whaller_client/client.py,sha256=Wab6ENrKb84m6VgSL6MQM6kf6peVUAo-PqZOop0prGY,1187
+whaller_client/exceptions.py,sha256=ZiM_AHXUuMraqrLXVFyvCH8PUMAdJSdii_cSBD4kO-w,1102
+whaller_client/logger.py,sha256=sTIZGbjGZx3XqorT621fcIMDMDYLzN6bcJDHg4kQLBA,1423
+whaller_client-0.1.2.dist-info/LICENSE,sha256=Pi_cjDddbWeakLl8tGboikDXJmA3zis7GgnWhsgidvQ,1064
+whaller_client-0.1.2.dist-info/METADATA,sha256=4NOlD5hXcvaaIcTaMu8bIXHF9QX0pSe5OZlWMK6NzuY,4612
+whaller_client-0.1.2.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+whaller_client-0.1.2.dist-info/top_level.txt,sha256=c2FAi6R8pkwtyEL9sJHf1jn0NOgvgYT2ZiOzdKYYe3E,15
+whaller_client-0.1.2.dist-info/RECORD,,
