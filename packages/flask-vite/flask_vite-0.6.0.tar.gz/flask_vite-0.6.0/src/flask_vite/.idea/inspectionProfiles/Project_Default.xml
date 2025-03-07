@@ -1,0 +1,278 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="AppEngineDeprecatedRuntimeInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="AppEngineThreadsafeCGIHandlerInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="AppEngineThreadsafeInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="AssertInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="BashAddShebang" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="BashBuiltInVariable" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="BashDuplicateFunction" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="BashEvaluateArithmeticExpression" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="BashEvaluateExpression" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="BashFixShebang" enabled="false" level="WARNING" enabled_by_default="false">
+      <shebang>/bin/bash</shebang>
+      <shebang>/bin/sh</shebang>
+    </inspection_tool>
+    <inspection_tool class="BashFloatArithmetic" enabled="false" level="INFO" enabled_by_default="false" />
+    <inspection_tool class="BashGlobalLocalVarDef" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="BashGloballyRegisteredVariable" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="BashInternalCommandFunctionOverride" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="BashMissingInclude" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="BashReadOnlyVariable" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="BashRecursiveInclusion" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="BashReplaceWithDoubleBrackets" enabled="false" level="INFO" enabled_by_default="false" />
+    <inspection_tool class="BashSimpleArrayUse" enabled="false" level="INFO" enabled_by_default="false" />
+    <inspection_tool class="BashSimpleVarUsage" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="BashUnknownFileDescriptor" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="BashUnresolvedVariable" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="BashUnusedFunction" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="BashUnusedFunctionParams" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="BashWrapFunction" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="BuildoutUnresolvedPartInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="CheckEmptyScriptTag" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="CheckTagEmptyBody" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="CoffeeScriptArgumentsOutsideFunction" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="ComposeUnknownKeys" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="ComposeUnknownValues" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="CssInvalidAtRule" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="CssUnusedSymbol" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="CucumberExamplesColon" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="CucumberMissedExamples" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="CucumberTableInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="CucumberUndefinedStep" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="DjangoBrokenLineCommentInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="DjangoCloseTagInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="DjangoIncompatibleInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="DjangoOrmInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="DjangoRelationInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="DjangoUnresolvedFilterInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="DjangoUnresolvedLoadInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="DjangoUnresolvedStaticReferenceInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="DjangoUnresolvedTagInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="DjangoUnresolvedTemplateReferenceInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="DjangoUrlArgumentsInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="DockerFileAddOrCopySemantic" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="DockerFileArgumentCount" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="DockerFileAssignments" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="DuplicatedBlockNamesInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="DuplicatedCode" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="EndBlockNamesInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="Eslint" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="ExtendsTagPositionInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="GherkinBrokenTableInspection" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="GherkinMisplacedBackground" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="GherkinScenarioToScenarioOutline" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="HamlNestedTagContent" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="HtmlFormInputWithoutLabel" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="HtmlPresentationalElement" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="39">
+            <item index="0" class="java.lang.String" itemvalue="x-text" />
+            <item index="1" class="java.lang.String" itemvalue="x-for" />
+            <item index="2" class="java.lang.String" itemvalue="x-data" />
+            <item index="3" class="java.lang.String" itemvalue=":key" />
+            <item index="4" class="java.lang.String" itemvalue="xsi:schemalocation" />
+            <item index="5" class="java.lang.String" itemvalue="meld:keydown.enter" />
+            <item index="6" class="java.lang.String" itemvalue="meld:click" />
+            <item index="7" class="java.lang.String" itemvalue="meld:model.defer" />
+            <item index="8" class="java.lang.String" itemvalue="meld:model" />
+            <item index="9" class="java.lang.String" itemvalue="hx-boost" />
+            <item index="10" class="java.lang.String" itemvalue="hx-target" />
+            <item index="11" class="java.lang.String" itemvalue="hx-swap" />
+            <item index="12" class="java.lang.String" itemvalue="hx-trigger" />
+            <item index="13" class="java.lang.String" itemvalue="hx-get" />
+            <item index="14" class="java.lang.String" itemvalue="unicorn:id" />
+            <item index="15" class="java.lang.String" itemvalue="unicorn:name" />
+            <item index="16" class="java.lang.String" itemvalue="unicorn:checksum" />
+            <item index="17" class="java.lang.String" itemvalue="unicorn:key" />
+            <item index="18" class="java.lang.String" itemvalue="unicorn:model" />
+            <item index="19" class="java.lang.String" itemvalue="unicorn:ignore" />
+            <item index="20" class="java.lang.String" itemvalue="unicorn:click" />
+            <item index="21" class="java.lang.String" itemvalue="unicorn:keyup" />
+            <item index="22" class="java.lang.String" itemvalue="unicorn:click.prevent" />
+            <item index="23" class="java.lang.String" itemvalue="unicorn:click.stop" />
+            <item index="24" class="java.lang.String" itemvalue="unicorn:click.discard" />
+            <item index="25" class="java.lang.String" itemvalue="unicorn:keyup.enter" />
+            <item index="26" class="java.lang.String" itemvalue="unicorn:keydown.escape" />
+            <item index="27" class="java.lang.String" itemvalue="unicorn:visible.threshold-25" />
+            <item index="28" class="java.lang.String" itemvalue="unicorn:visible" />
+            <item index="29" class="java.lang.String" itemvalue="unicorn:visible.debounce-1000" />
+            <item index="30" class="java.lang.String" itemvalue="unicorn:visible.threshold-50.debounce-2000" />
+            <item index="31" class="java.lang.String" itemvalue="v-scope" />
+            <item index="32" class="java.lang.String" itemvalue="v-for" />
+            <item index="33" class="java.lang.String" itemvalue="wire:id" />
+            <item index="34" class="java.lang.String" itemvalue="wire:initial-data" />
+            <item index="35" class="java.lang.String" itemvalue="wire:click" />
+            <item index="36" class="java.lang.String" itemvalue="wire:loading.delay" />
+            <item index="37" class="java.lang.String" itemvalue="x-component:hui" />
+            <item index="38" class="java.lang.String" itemvalue="x-modelable" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="HtmlUnknownTag" enabled="false" level="WARNING" enabled_by_default="false">
+      <option name="myValues">
+        <value>
+          <list size="41">
+            <item index="0" class="java.lang.String" itemvalue="nobr" />
+            <item index="1" class="java.lang.String" itemvalue="noembed" />
+            <item index="2" class="java.lang.String" itemvalue="comment" />
+            <item index="3" class="java.lang.String" itemvalue="noscript" />
+            <item index="4" class="java.lang.String" itemvalue="embed" />
+            <item index="5" class="java.lang.String" itemvalue="script" />
+            <item index="6" class="java.lang.String" itemvalue="b-navbar" />
+            <item index="7" class="java.lang.String" itemvalue="b-navbar-toggle" />
+            <item index="8" class="java.lang.String" itemvalue="b-collapse" />
+            <item index="9" class="java.lang.String" itemvalue="b-navbar-nav" />
+            <item index="10" class="java.lang.String" itemvalue="router-link" />
+            <item index="11" class="java.lang.String" itemvalue="b-nav-item" />
+            <item index="12" class="java.lang.String" itemvalue="b-nav-item-dropdown" />
+            <item index="13" class="java.lang.String" itemvalue="b-dropdown-item" />
+            <item index="14" class="java.lang.String" itemvalue="b-dropdown-divider" />
+            <item index="15" class="java.lang.String" itemvalue="b-card" />
+            <item index="16" class="java.lang.String" itemvalue="b-tabs" />
+            <item index="17" class="java.lang.String" itemvalue="b-tab" />
+            <item index="18" class="java.lang.String" itemvalue="b-card-text" />
+            <item index="19" class="java.lang.String" itemvalue="b-button" />
+            <item index="20" class="java.lang.String" itemvalue="b-modal" />
+            <item index="21" class="java.lang.String" itemvalue="router-view" />
+            <item index="22" class="java.lang.String" itemvalue="b-table-simple" />
+            <item index="23" class="java.lang.String" itemvalue="quill-editor" />
+            <item index="24" class="java.lang.String" itemvalue="a-layout" />
+            <item index="25" class="java.lang.String" itemvalue="a-layout-header" />
+            <item index="26" class="java.lang.String" itemvalue="a-menu-item" />
+            <item index="27" class="java.lang.String" itemvalue="a-layout-content" />
+            <item index="28" class="java.lang.String" itemvalue="a-layout-footer" />
+            <item index="29" class="java.lang.String" itemvalue="a-form" />
+            <item index="30" class="java.lang.String" itemvalue="a-select-option" />
+            <item index="31" class="java.lang.String" itemvalue="a-menu-divider" />
+            <item index="32" class="java.lang.String" itemvalue="a-tab-pane" />
+            <item index="33" class="java.lang.String" itemvalue="a-list-item-meta" />
+            <item index="34" class="java.lang.String" itemvalue="a-date-picker" />
+            <item index="35" class="java.lang.String" itemvalue="client-only" />
+            <item index="36" class="java.lang.String" itemvalue="nuxt" />
+            <item index="37" class="java.lang.String" itemvalue="component" />
+            <item index="38" class="java.lang.String" itemvalue="raw" />
+            <item index="39" class="java.lang.String" itemvalue="extends" />
+            <item index="40" class="java.lang.String" itemvalue="block" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="HtmlUnknownTarget" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="InsecureHashInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="JSEqualityComparisonWithCoercion" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="JupyterPackageInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="MongoJSResolveInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="NonAsciiCharacters" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="NpmUsedModulesInstalled" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="Puppet3Deprecations" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="Puppet4Deprecations" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PuppetMultipleHashSetParamsPerResourceInstance" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="PuppetUnresolved" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyArgumentEqualDefaultInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+    <inspection_tool class="PyAugmentAssignmentInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+    <inspection_tool class="PyBehaveInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="PyClassicStyleClassInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="PyCompatibilityInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ourVersions">
+        <value>
+          <list size="3">
+            <item index="0" class="java.lang.String" itemvalue="3.10" />
+            <item index="1" class="java.lang.String" itemvalue="3.11" />
+            <item index="2" class="java.lang.String" itemvalue="3.12" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyMandatoryEncodingInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="PyMethodMayBeStaticInspection" enabled="true" level="INFORMATION" enabled_by_default="true" />
+    <inspection_tool class="PyMissingTypeHintsInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="6">
+            <item index="0" class="java.lang.String" itemvalue="hyperlink" />
+            <item index="1" class="java.lang.String" itemvalue="glom" />
+            <item index="2" class="java.lang.String" itemvalue="python-dotenv" />
+            <item index="3" class="java.lang.String" itemvalue="rdflib" />
+            <item index="4" class="java.lang.String" itemvalue="rich" />
+            <item index="5" class="java.lang.String" itemvalue="spacy-lookups-data" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="E712" />
+          <option value="E711" />
+          <option value="E722" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N801" />
+          <option value="N803" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyRedundantParenthesesInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="myIgnorePercOperator" value="false" />
+      <option name="myIgnoreTupleInReturn" value="false" />
+    </inspection_tool>
+    <inspection_tool class="PyShadowingBuiltinsInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyStubPackagesAdvertiser" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="docutils-stubs==0.0.21" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="str.like" />
+          <option value="datetime.datetime.desc" />
+          <option value="int.in_" />
+          <option value="str.in_" />
+          <option value="str.ilike" />
+          <option value="int.desc" />
+          <option value="app.jobs.crawl.debug" />
+          <option value="datetime.datetime.asc" />
+          <option value="value" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyramidSetupInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="Query_bound_parameters" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="Query_index_required" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="Query_restricted" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="RequiredAttributes" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myAdditionalRequiredHtmlAttributes" value="type,src" />
+    </inspection_tool>
+    <inspection_tool class="Restricted_Python_calls" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="SpellCheckingInspection" enabled="false" level="TYPO" enabled_by_default="false">
+      <option name="processCode" value="true" />
+      <option name="processLiterals" value="true" />
+      <option name="processComments" value="true" />
+    </inspection_tool>
+    <inspection_tool class="SqlDialectInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="SqlNoDataSourceInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="StandardLibraryXmlInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="StandardShellInjectionInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="StrFormatInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="UnnecessaryLocalVariableJS" enabled="false" level="WARNING" enabled_by_default="false">
+      <option name="m_ignoreImmediatelyReturnedVariables" value="false" />
+      <option name="m_ignoreAnnotatedVariables" value="false" />
+    </inspection_tool>
+    <inspection_tool class="UnresolvedReference" enabled="false" level="ERROR" enabled_by_default="false" />
+  </profile>
+</component>

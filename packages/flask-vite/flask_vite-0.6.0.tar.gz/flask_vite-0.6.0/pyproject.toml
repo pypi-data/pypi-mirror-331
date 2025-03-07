@@ -1,0 +1,52 @@
+[project]
+name = "flask-vite"
+version = "0.6.0"
+description = "Flask+Vite integration."
+readme = "README.md"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+authors = [
+    { name = "Abilian SAS", email = "contact@abilian.com" },
+]
+requires-python = "<4.0,>=3.9"
+dependencies = [
+    "flask>2",
+]
+
+[project.urls]
+homepage = "https://github.com/abilian/flask-vite"
+
+[project.entry-points."flask.commands"]
+vite = "flask_vite.cli:vite"
+
+[dependency-groups]
+dev = [
+    "abilian-devtools<1.0.0,>=0.5.13",
+    "devtools<1.0.0,>=0.12.2",
+    "honcho<3.0.0,>=1.1.0",
+    "pytest<9,>=8",
+    "pytest-mock<4,>=3",
+    "tox>=4.24.1",
+]
+
+[tool.isort]
+profile = "black"
+
+[tool.pdm.build]
+includes = [
+    "src/flask_vite",
+    "tests",
+]
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
