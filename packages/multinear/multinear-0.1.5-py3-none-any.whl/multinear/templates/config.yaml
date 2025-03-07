@@ -1,0 +1,7 @@
+project:
+  name: {{ project_name }}
+  id: {{ project_id }}
+  description: {{ description }}
+
+tasks:
+  # Add your evaluations here 

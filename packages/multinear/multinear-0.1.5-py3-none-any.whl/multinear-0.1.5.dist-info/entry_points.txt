@@ -1,0 +1,2 @@
+[console_scripts]
+multinear = multinear.cli.main:main
