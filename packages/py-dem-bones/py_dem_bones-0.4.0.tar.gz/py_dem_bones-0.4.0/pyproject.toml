@@ -1,0 +1,139 @@
+[build-system]
+requires = [
+    "scikit-build-core>=0.5.0",
+    "pybind11>=2.10.0",
+    "numpy>=1.20.0",
+    "setuptools>=42.0.0",
+    "wheel>=0.36.0",
+]
+build-backend = "scikit_build_core.build"
+
+[project]
+name = "py-dem-bones"
+version = "0.4.0"
+description = "Python bindings for the Dem Bones library"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {text = "BSD-3-Clause"}
+authors = [
+    {name = "Long Hao", email = "hal.long@outlook.com"},
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: C++",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Multimedia :: Graphics :: 3D Modeling",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "numpy>=1.20.0,<1.22.0; python_version < '3.8'",
+    "numpy>=1.20.0; python_version >= '3.8'",
+]
+
+[project.optional-dependencies]
+dev = [
+    "nox>=2023.4.22",
+    # Use different commitizen versions based on Python version
+    "commitizen<=2.42.1; python_version < '3.8'",
+    "commitizen>=3.12.0; python_version >= '3.8'",
+]
+test = [
+    "pytest>=6.0.0",
+    "pytest-cov>=2.12.0",
+]
+docs = [
+    "sphinx>=7.0.0",
+    "pydata-sphinx-theme>=0.14.1",
+    "sphinx-autobuild>=2021.3.14",
+    "pybind11-stubgen>=0.16.0",
+    "myst-parser>=2.0.0",
+    "sphinx-gallery>=0.13.0",
+    "pillow>=9.0.0",
+    "matplotlib>=3.5.0",
+    "myst-sphinx-gallery>=0.3.0",
+    "myst-nb>=1.0.0",
+]
+docs-linux = [
+    "cairosvg>=2.7.0",
+]
+lint = [
+    "black<23.3.0",
+    "ruff<0.0.270",
+    "isort<5.12.0",
+    "autoflake>=2.0.0",
+]
+build = [
+    "build>=0.10.0",
+    "twine>=4.0.2",
+]
+
+[project.urls]
+Homepage = "https://github.com/loonghao/py-dem-bones"
+Documentation = "https://py-dem-bones.readthedocs.io"
+Issues = "https://github.com/loonghao/py-dem-bones/issues"
+Changelog = "https://github.com/loonghao/py-dem-bones/blob/main/CHANGELOG.md"
+
+[tool.scikit-build]
+wheel.packages = ["src/py_dem_bones"]
+wheel.exclude = ["tests/*"]
+sdist.include = ["src/py_dem_bones/*", "src/binding/*", "CMakeLists.txt", "LICENSE.md", "README.md", "extern/dem-bones/*", "extern/eigen/*"]
+sdist.exclude = ["tests/data/*"]
+
+[tool.scikit-build.cmake]
+minimum-version = "3.15"
+build-type = "Release"
+
+[tool.scikit-build.cmake.define]
+PYTHON_LIMITED_API = "OFF"
+CMAKE_POSITION_INDEPENDENT_CODE = "ON"
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "0.5.1"
+tag-format = "$version"
+version-files = [
+    "pyproject.toml:version",
+    "src/py_dem_bones/__version__.py",
+    "docs/conf.py:release",
+    "docs/conf.py:version",
+    ".github/CITATION.cff:version",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_classes = "Test*"
+python_functions = "test_*"
+
+[tool.ruff]
+line-length = 120
+target-version = "py37"
+# Ignore extern directory and generated stub files
+exclude = ["extern", "**/*.pyi"]
+src = ["src", "nox_actions", "noxfile.py"]
+select = ["E", "F", "W", "I"]
+ignore = ["W293"]  # Ignore whitespace warnings in blank lines
+
+[tool.ruff.per-file-ignores]
+"__init__.py" = ["F401"]
+"noxfile.py" = ["E402"]
+"docs/conf.py" = ["E402", "F401"]
+
+[tool.isort]
+profile = "black"
+line_length = 120
+skip = ["extern"]
+skip_glob = ["*.pyi"]
