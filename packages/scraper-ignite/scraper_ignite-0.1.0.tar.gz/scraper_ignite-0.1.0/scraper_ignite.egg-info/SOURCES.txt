@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+scraper_ignite/__init__.py
+scraper_ignite/scraper_template.py
+scraper_ignite.egg-info/PKG-INFO
+scraper_ignite.egg-info/SOURCES.txt
+scraper_ignite.egg-info/dependency_links.txt
+scraper_ignite.egg-info/entry_points.txt
+scraper_ignite.egg-info/requires.txt
+scraper_ignite.egg-info/top_level.txt
+tests/test_setup.py
