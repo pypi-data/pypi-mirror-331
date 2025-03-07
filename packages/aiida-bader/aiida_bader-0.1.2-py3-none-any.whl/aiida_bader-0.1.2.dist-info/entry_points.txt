@@ -1,0 +1,12 @@
+[aiida.calculations]
+bader.bader=aiida_bader.calculations:BaderCalculation
+
+[aiida.parsers]
+bader.bader=aiida_bader.parsers:BaderParser
+
+[aiida.workflows]
+bader.qe=aiida_bader.workchains:QeBaderWorkChain
+
+[aiidalab_qe.properties]
+bader=aiida_bader.qeapp:bader
+
