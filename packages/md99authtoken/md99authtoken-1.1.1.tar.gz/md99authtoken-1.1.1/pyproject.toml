@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "md99authtoken"
+version='1.1.1'
+requires-python = ">= 3.8"
+authors = [
+  {name = "Tim Lambert"}
+]
+description="Library for obtaining image Auth Token from MyDesign99 for python and django servers"
+keywords = ["MyDesign99.com", "MD99", "authenticate", "images", "auth", "token", "sdk", "python"]
+readme = "README.md"
+license = {file = "License.txt"}
+
+[project.urls]
+Homepage = "https://mydesign99.com"
+Documentation = "https://mydesign99.com/documentation/intro"
+Repository = "https://github.com/mydesign99/authtoken-sdk-python"
