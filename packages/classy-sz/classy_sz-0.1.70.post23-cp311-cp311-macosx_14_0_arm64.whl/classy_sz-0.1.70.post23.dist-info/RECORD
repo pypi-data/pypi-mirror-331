@@ -1,0 +1,10 @@
+classy_sz.cpython-311-darwin.so,sha256=IOPldIgo-2O2-qGB4_ABSAP6FJIbWX2OL45XFi0mFxo,3606544
+classy_sz.dylibs/libgsl.28.dylib,sha256=uzBMawqnU7dmkJo0C95dC5VRFDKjEYlwyiG-UphK2Vs,2241424
+classy_sz.dylibs/libomp.dylib,sha256=SqDYuUBsCphYvdld4vGW3sxGW-Bpvl5pmcJhfnYTRXQ,735584
+classy_sz.dylibs/libfftw3.3.dylib,sha256=JamWMO_hcpE5OqXkcmCd087baK4frjiR8gmsNYrkHa0,687968
+classy_sz.dylibs/libgslcblas.0.dylib,sha256=3LKbiyrq0qin0-dE02bvI9BKdNSmqmvESzLtv1tWiZw,239760
+classy_sz-0.1.70.post23.dist-info/RECORD,,
+classy_sz-0.1.70.post23.dist-info/LICENSE,sha256=l61CDpgwnoEFi8ZS9pQhSDKJx46PZToiKHZ2X8LSlJ0,1069
+classy_sz-0.1.70.post23.dist-info/WHEEL,sha256=xe5YOpX0jl6nvSQZ_WZl2b9dW4vzn9vPplfKEoDgtPI,136
+classy_sz-0.1.70.post23.dist-info/top_level.txt,sha256=ouSJ3Eta4cEujMAwfhQqPjWdeT7C9AXK1VmJYWAhxls,10
+classy_sz-0.1.70.post23.dist-info/METADATA,sha256=dKhH2YsgaKCiMR5hp8bd-_eqRhAEXJ0Impx18ODMYjM,624
