@@ -1,0 +1,6 @@
+
+{
+  "GENERIC_ERROR": "../errors/generic-error.json",
+  "LLM_GW_ERROR": "../errors/llm-gw-error.json",
+  "CMS_GW_ERROR": "../errors/cms-gw-error.json"
+}
