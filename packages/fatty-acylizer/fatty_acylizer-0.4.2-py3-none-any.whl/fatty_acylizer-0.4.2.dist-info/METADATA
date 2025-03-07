@@ -1,0 +1,73 @@
+Metadata-Version: 2.2
+Name: fatty-acylizer
+Version: 0.4.2
+Summary: Mathematical remodeling model
+Author-email: Janik Kokot <janik.kokot@i-med.ac.at>
+License: MIT License
+        
+        Copyright (c) 2025 Janik Kokot
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: scikit-learn
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: pre-commit; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: pyperf; extra == "dev"
+Requires-Dist: icecream; extra == "dev"
+Requires-Dist: memory_profiler; extra == "dev"
+Provides-Extra: extra
+Requires-Dist: pyarrow; extra == "extra"
+Requires-Dist: pandas; extra == "extra"
+Requires-Dist: polars; extra == "extra"
+Requires-Dist: jupyter; extra == "extra"
+Requires-Dist: matplotlib; extra == "extra"
+Requires-Dist: seaborn; extra == "extra"
+Requires-Dist: rdata; extra == "extra"
+
+# Fatty Acylizer
+
+This is the mathematical model employed by the [Fatty Acylizer web server](https://fatty-acylizer.lipid.at).
+
+## Installation
+
+```bash
+pip install fatty-acylizer
+```
+
+Or alternatively from GitHUB:
+```bash
+pip install git+https://github.com/biochemical-genetics/fatty-acylizer.git
+# or
+git clone https://github.com/biochemical-genetics/fatty-acylizer.git
+cd fatty-acylizer
+pip install .
+```
+
+## License Info
+
+When using the code in a publication, please cite:
