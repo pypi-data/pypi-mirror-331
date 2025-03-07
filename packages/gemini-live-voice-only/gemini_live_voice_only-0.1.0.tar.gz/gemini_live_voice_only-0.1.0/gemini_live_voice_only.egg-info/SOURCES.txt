@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.py
+gemini_live_voice_only/__init__.py
+gemini_live_voice_only/gemini_handler.py
+gemini_live_voice_only/stream_server.py
+gemini_live_voice_only.egg-info/PKG-INFO
+gemini_live_voice_only.egg-info/SOURCES.txt
+gemini_live_voice_only.egg-info/dependency_links.txt
+gemini_live_voice_only.egg-info/requires.txt
+gemini_live_voice_only.egg-info/top_level.txt
