@@ -1,0 +1,3 @@
+cxx-image-io>=1.0.10
+PyQt6>=6.8.0
+pyqtgraph>=0.13.7
