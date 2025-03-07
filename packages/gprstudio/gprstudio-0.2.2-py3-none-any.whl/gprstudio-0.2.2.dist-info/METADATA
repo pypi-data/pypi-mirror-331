@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: gprstudio
+Version: 0.2.2
+Summary: GPR-Studio client library
+Author-email: cropphenomics <dev@cropphenomics.com>
+Requires-Python: >=3.10
+Requires-Dist: aiohttp>=3.11.13
+Requires-Dist: gcsfs>=2025.2.0
+Requires-Dist: gprlibpy[widgets]
+Requires-Dist: netcdf4>=1.7.2
+Requires-Dist: pynmea2>=1.19.0
+Requires-Dist: requests>=2.32.3
+Requires-Dist: xarray[complete]>=2025.1.2
