@@ -1,0 +1,16 @@
+cxx_image_io.libs/libexif-7363d616.so,sha256=nrewrHjCeOMZe-1bJ7UAAQkEDV5Xdg8cIZGxg-jOAe0,398329
+cxx_image_io.libs/libraw_r-fb3e6fbb.so.24.0.0,sha256=Oi5N0s2ive1qEn6oRF3h-8AtxS1UJUD00TTwwqO7P6Y,1805105
+cxx_image_io-1.1.0.dist-info/top_level.txt,sha256=qfJHhjlSV-6njNwlUODGXv8V6CNBhvGOjZQShPnbsBQ,23
+cxx_image_io-1.1.0.dist-info/METADATA,sha256=dmObFL4YhA1VQWeQYY2Jqip_HuTP3AByTM7BTQrm4ew,19714
+cxx_image_io-1.1.0.dist-info/RECORD,,
+cxx_image_io-1.1.0.dist-info/LICENSE.md,sha256=N8PvVOBetYqtxJt0prtYKDUCtTD90bUmhaSKxCdePtU,1083
+cxx_image_io-1.1.0.dist-info/WHEEL,sha256=VsjqVThA4p5GU2Q5exV6kz1Lv54l-3SoJkzZBnCP268,112
+cxx_image_io/cxx_libraw.cpython-39-aarch64-linux-gnu.so,sha256=Kf8Ch5HRcDM7WBzNC8HKJNxl4Ub2JQ-uSExOa0rW-hY,534545
+cxx_image_io/__init__.py,sha256=n2BA0sqjUJY_S8g_8fyCg_UUYvf7GhzevwLswFu65CI,1355
+cxx_image_io/libraw_r.so.24.0.0,sha256=-z5vu6i2CxXfjBFV14qa4t5QyjBMUdmTZNghmN-nYUA,1757504
+cxx_image_io/utils.py,sha256=OF2L7VjbptFP2TdLBU89anv1CQABAaN5YAcBFPuT7Os,12336
+cxx_image_io/cxx_image.cpython-39-aarch64-linux-gnu.so,sha256=1Rise5hhhs_8iFDQYnFu-13Wy10-O2xB8n1kE_LLBeE,4950561
+cxx_image_io/libraw_r.so.24,sha256=-z5vu6i2CxXfjBFV14qa4t5QyjBMUdmTZNghmN-nYUA,1757504
+cxx_image_io/io.py,sha256=L_eBr5an9N0uNnlSJ9ND3XwKZO7QrpIoJy-KQOY5VOs,15205
+cxx_image_io/libraw_r.so,sha256=-z5vu6i2CxXfjBFV14qa4t5QyjBMUdmTZNghmN-nYUA,1757504
+cxx_image_io/libexif.so,sha256=c2PWFmWu5DQRKLx_JAo4nVKmYunyfzwDMe8QKliHlmI,349048
