@@ -1,0 +1,13 @@
+seabirdfilehandler/__init__.py,sha256=8Vk2TURWXv2_NG_U_fR0fIVDFymkFkBipvmlS5ucB3M,147
+seabirdfilehandler/dataframe_meta_accessor.py,sha256=x4mSEN49us6Ezzjdt41fl5Ry8IJR09ORrZ1roOIJbyc,6439
+seabirdfilehandler/datatablefiles.py,sha256=v8vzJ9TBJBYitffuUrdZ7PO8_KVa2M6Um4y-BSDM4TM,31130
+seabirdfilehandler/file_collection.py,sha256=NcpD8UfXpFOn8Eyi2bWzUBXaAwDdf6_U6E_ao-z0BFo,7497
+seabirdfilehandler/logging.yaml,sha256=mXxbhJPio3OGaukTpc3rLGA8Ywq1DNqp0Vn5YCbH6jY,459
+seabirdfilehandler/parameter.py,sha256=hd7dG0aAhI21GUvW2NioGpeDGV7moRsm_R3mQeAmdmg,12835
+seabirdfilehandler/seabirdfiles.py,sha256=EH23sa4U_pytl3XPcumHU6g-NOzuLSX2KtDIhG7wFsI,7280
+seabirdfilehandler/validation_modules.py,sha256=nwiwfkDLltE3S_aQDlqZrMeiNlGVJP9XNNw0abxgjfc,4691
+seabirdfilehandler/xmlfiles.py,sha256=Es0pUCoB0af-meCH-75h-s-r0mEfrthl-8QDjqNBWPk,2441
+seabirdfilehandler-0.4.0.dist-info/LICENSE,sha256=Pz2eACSxkhsGfW9_iN60pgy-enjnbGTj8df8O3ebnQQ,16726
+seabirdfilehandler-0.4.0.dist-info/METADATA,sha256=dEKRrL59_pWlLz-CP2sr_vn_0f4AGRkRXaqQLBG-EwA,1311
+seabirdfilehandler-0.4.0.dist-info/WHEEL,sha256=Nq82e9rUAnEjt98J6MlVmMCZb-t9cYE2Ir1kpBmnWfs,88
+seabirdfilehandler-0.4.0.dist-info/RECORD,,
