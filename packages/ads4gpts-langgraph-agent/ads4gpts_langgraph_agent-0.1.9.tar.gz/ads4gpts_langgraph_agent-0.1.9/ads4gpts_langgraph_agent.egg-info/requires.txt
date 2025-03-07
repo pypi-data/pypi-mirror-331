@@ -1,0 +1,8 @@
+langgraph<0.4.0,>=0.3.1
+ads4gpts-langchain<0.2.0,>=0.1.7
+langgraph-cli<0.2.0,>=0.1.74
+langchain-openai<0.4.0,>=0.3.7
+langchain-anthropic<0.4.0,>=0.3.8
+langchain-groq<0.3.0,>=0.2.4
+python-dotenv<2.0.0,>=1.0.1
+langsmith<0.4.0,>=0.3.11
