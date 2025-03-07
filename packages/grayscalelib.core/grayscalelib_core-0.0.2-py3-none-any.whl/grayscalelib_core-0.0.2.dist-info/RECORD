@@ -1,0 +1,14 @@
+grayscalelib/core/__init__.py,sha256=dxulaZCnW2afdS-ydLkcukFQqrKZCoRHbDq4DqnGOjw,956
+grayscalelib/core/concretepixels.py,sha256=5adFqr7y8ozNKMMnaC8cWGSYf2WLk23EHZDA2y8z6Ic,785
+grayscalelib/core/discretization.py,sha256=PQ8MtMSlcvY6ml8AW2YSXYB9MsFwVDNTqZGogiuqJJM,6208
+grayscalelib/core/encodable.py,sha256=YVBDS4OMOFDjtmM0SrXCRTEdauVYtqFTc8DWPjQfuSk,4642
+grayscalelib/core/numpypixels.py,sha256=CMFe1I6td-KUL0pHqGtP7sgi-gGtSlw-GknmSg_m3zo,10431
+grayscalelib/core/pixels.py,sha256=nFRndPhahivBEEkqNY3JBJGcbrZjPSGqw8mpdmYk5sg,44569
+grayscalelib/core/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+grayscalelib/core/tests/conftest.py,sha256=tfyMR1BFojhykTrM-UslEx4YZ8mQrmBS9LdFW96KQAk,211
+grayscalelib/core/tests/test_discretization.py,sha256=4FpwZAXXbW3LGZfdef2hFfJ6eAgjW70ZhqD6OUUN6fA,1481
+grayscalelib/core/tests/test_pixels.py,sha256=wv4A4ljuVU5nYRFrYN9IU1x-F_PA2jXfFl04LQge0D4,16747
+grayscalelib_core-0.0.2.dist-info/METADATA,sha256=k1sBSf6a1xaEQvyRxbMJ1_B_wtepzerhdWFPwX7EAds,1294
+grayscalelib_core-0.0.2.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+grayscalelib_core-0.0.2.dist-info/top_level.txt,sha256=XafczT0HjNhVHfUr_YzuhHR2_XFPlhTKbQOXBsC_Lig,13
+grayscalelib_core-0.0.2.dist-info/RECORD,,

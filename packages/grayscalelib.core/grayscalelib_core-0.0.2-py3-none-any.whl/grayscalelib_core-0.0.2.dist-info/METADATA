@@ -1,0 +1,47 @@
+Metadata-Version: 2.2
+Name: grayscalelib.core
+Version: 0.0.2
+Summary: A protocol for manipulating grayscale data.
+Author: Marco Heisig
+License: GPL-3.0-or-later
+Project-URL: Repository, https://github.com/SandoghdarLab/grayscalelib.core.git
+Keywords: grayscale,video,image,pixel
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Provides-Extra: dev
+Requires-Dist: isort; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: pre-commit; extra == "dev"
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+
+# grayscalelib.core
+
+This project defines a protocol for working with grayscale images, videos and
+containers of arbitrary rank.  It also provides a reference implementation in
+NumPy.
+
+## Installation
+
+All releases are published on [PyPi](https://pypi.org), so all the popular
+installation methods work out-of-the-box.  For example, here is how you can
+install the library using pip.
+
+```sh
+python -m pip install grayscalelib.core
+```
+
+## Usage
+
+The main data structure of this library is the `Pixels` class.  All other
+functionality is accessible as methods and class methods of this class.
+
+```python
+from grayscalelib.core import Pixels
+
+px = Pixels([0.00, 0.25, 0.50, 0.75 1.00])
+
+# List all methods defined on Pixels
+dir(px)
+```
