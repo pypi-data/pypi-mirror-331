@@ -1,0 +1,7 @@
+Metadata-Version: 2.2
+Name: HALODARIsigma
+Version: 0.1.0
+Summary: Sigma Lab Assignment 2
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: pandas>=2.2.3
