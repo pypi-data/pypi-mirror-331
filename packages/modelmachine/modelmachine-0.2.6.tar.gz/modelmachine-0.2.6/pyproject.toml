@@ -1,0 +1,112 @@
+[build-system]
+requires = ["hatchling>=1.27", "hatch-vcs>=0.3"]
+build-backend = "hatchling.build"
+
+[project]
+name = "modelmachine"
+dynamic = ["version"]
+description = "Model machine emulator"
+readme = "README.md"
+license = { file = "LICENSE.txt" }
+maintainers = [
+    { name = "Vladimir Liutov", email = "vs@lutov.net" },
+    { name = "Fr. Br. George", email = "georgle@altlinux.org" },
+]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Education",
+    "Natural Language :: English",
+    "Natural Language :: Russian",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: Unix",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Education",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Utilities",
+]
+requires-python = ">=3.7"
+dependencies = [
+    "pyparsing==3.1.4", # Python 3.7
+    'tomli~=2.0; python_version<"3.11"',
+]
+
+[project.scripts]
+modelmachine = "modelmachine.__main__:main"
+
+[project.urls]
+Homepage = "https://github.com/cmc-python/modelmachine"
+Repository = "https://github.com/cmc-python/modelmachine.git"
+Documentation = "https://github.com/cmc-python/modelmachine#readme"
+Issues = "https://github.com/cmc-python/modelmachine/issues"
+Changelog = "https://github.com/cmc-python/modelmachine/releases"
+
+[tool.hatch.version]
+source="vcs"
+[tool.hatch.build.hooks.vcs]
+version-file = "modelmachine/__about__.py"
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/modelmachine",
+]
+
+[tool.hatch.envs.dev]
+python = "3.13"
+dependencies = [
+    "mypy==1.15.0",
+    "tomli~=2.0", # For mypy
+    "ipython~=9.0", # For mypy
+    "pytest==7.4.4",  # Python 3.7
+    "ruff==0.9.9",
+]
+[tool.hatch.envs.hatch-test]
+dependencies = [
+    "pytest==7.4.4",  # Python 3.7
+]
+[[tool.hatch.envs.hatch-test.matrix]]
+python = ["3.13", "3.8", "3.7"]
+
+[tool.coverage.run]
+source_pkgs = ["modelmachine", "tests"]
+branch = true
+parallel = true
+omit = [
+    "modelmachine/__about__.py",
+]
+
+[tool.coverage.paths]
+model = ["modelmachine"]
+tests = ["tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "no cov",
+    "if __name__ == .__main__.:",
+    "if TYPE_CHECKING:",
+]
+
+[tool.hatch.envs.hatch-static-analysis]
+config-path = "ruff_defaults.toml"
+dependencies = ["ruff==0.9.9"]
+[tool.ruff]
+extend = "ruff_defaults.toml"
+line-length = 79
+indent-width = 4
+target-version = "py37"
+[tool.ruff.lint]
+preview = true
+ignore = [
+    "S101",
+]
+[tool.ruff.lint.flake8-tidy-imports]
+ban-relative-imports = "parents"
+[tool.ruff.lint.per-file-ignores]
+"**/tests/**/*" = [
+    "PLR2004",
+    "SLF001",
+    "S101",
+]
+
+[tool.mypy]
+plugins = "modelmachine.shared.enum_mixin"
