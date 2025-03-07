@@ -1,0 +1,15 @@
+dlt_source_morphais/__init__.py,sha256=hDAVzSkDFo4x5QV4HBwUtUUsOAm8QrwgpqIg62E9tW8,7803
+dlt_source_morphais/rest_client.py,sha256=fz6eNpoDg0qSqzskWe_tvQOt8vDdLU6OyHveMebh38w,1887
+dlt_source_morphais/settings.py,sha256=OLOhS3owOT6JNIzrryjGjR38DVoLpK3duFi71dItyTU,163
+dlt_source_morphais/type_adapters.py,sha256=GCJzmo5WYoK9pffbmM-s-wge6eQbW4NsHMh5XvyDxnY,239
+dlt_source_morphais/model/__init__.py,sha256=PwFtU0bhzifgElHSQWdQUEO3u2lzU8ap3Txe4c5SzX4,4999
+dlt_source_morphais/model/current_python_major_minor.py,sha256=9KlTIziR4xALtCS9ekzdHlwkoVgKOqw17Fg5isyO_-M,95
+dlt_source_morphais/model/spec.py,sha256=nvr2izrhDZDQ5VqJAKES3trEBC7YGnl_vE9lbFecREg,4736
+dlt_source_morphais/model/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dlt_source_morphais/model/tests/test_my_spec.py,sha256=qBFI574MJDwkSoQV-gVwHTtVD3FkjgSu93Y6b9MuYfE,5108
+dlt_source_morphais/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dlt_source_morphais-0.0.2.dist-info/LICENSE,sha256=dkb6af9giJCKFd6umYkvdOk3wqrja8M_FldeDhXJYCg,1065
+dlt_source_morphais-0.0.2.dist-info/METADATA,sha256=Cs2UM5J2s7JxWdARwiNqyO5qnktJkxt7P41MKnGnLsQ,2504
+dlt_source_morphais-0.0.2.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+dlt_source_morphais-0.0.2.dist-info/top_level.txt,sha256=DNqWSKe_PuQYfi2rUkHqYma3J_nxydHVo4_VmckcOj8,20
+dlt_source_morphais-0.0.2.dist-info/RECORD,,
