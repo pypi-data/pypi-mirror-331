@@ -1,0 +1,2 @@
+[console_scripts]
+list-bdd-steps = py_bdd_test.list_steps:main
