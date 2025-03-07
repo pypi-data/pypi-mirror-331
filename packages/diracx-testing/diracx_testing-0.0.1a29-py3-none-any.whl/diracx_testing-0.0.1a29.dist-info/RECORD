@@ -1,0 +1,11 @@
+diracx/testing/__init__.py,sha256=nGbnGP8m53N9rqHR-hyqDa5vetcsmnQp806HadV6_dE,984
+diracx/testing/dummy_osdb.py,sha256=bNk3LF8KgMuQx3RVFNYuw4hMmpG2A80sZ58rEZqHo7M,907
+diracx/testing/entrypoints.py,sha256=MbH0VLUQz96XPdHzb7XWFwYtWEitAqPrrGM1H1FzDLo,2231
+diracx/testing/mock_osdb.py,sha256=hHuvmQZ3212SaSGX11dQv4ki3ZWsmqJZFYwdn6kg2MA,6029
+diracx/testing/osdb.py,sha256=m6mUBLnGOoQLTCIBie9P2GhmLMybrgzIrlIYfhF1_Ss,3230
+diracx/testing/routers.py,sha256=UW-TnikMQgcNxF5sUZD5DWoucGiCpP6s8mYmuahDiSc,979
+diracx/testing/utils.py,sha256=V2Mcbz_bo2jNEgQB48v4cX_4tsXwX_U6InQspsvZ2E8,24552
+diracx_testing-0.0.1a29.dist-info/METADATA,sha256=QBrVnz6qlvhmUWCaBXAeePfLu5RPcUDJESCjIXpto3M,634
+diracx_testing-0.0.1a29.dist-info/WHEEL,sha256=jB7zZ3N9hIM9adW7qlTAyycLYW9npaWKLRzaoVcLKcM,91
+diracx_testing-0.0.1a29.dist-info/top_level.txt,sha256=vJx10tdRlBX3rF2Psgk5jlwVGZNcL3m_7iQWwgPXt-U,7
+diracx_testing-0.0.1a29.dist-info/RECORD,,
