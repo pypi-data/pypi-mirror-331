@@ -1,0 +1,5 @@
+[console_scripts]
+twat-os = twat_os.__main__:main
+
+[twat.plugins]
+os = twat_os
