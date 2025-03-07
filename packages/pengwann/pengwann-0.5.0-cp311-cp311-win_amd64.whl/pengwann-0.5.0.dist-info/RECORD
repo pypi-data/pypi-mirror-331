@@ -1,0 +1,12 @@
+pengwann-0.5.0.dist-info/METADATA,sha256=fei56Id7ktJthpVWkEqU860KEVxHcHJrmH_gu3oiHUE,6693
+pengwann-0.5.0.dist-info/WHEEL,sha256=FfBmcAWtop0bmP9Ri8DvsApqdaZzji_i0KSrSP4fKhk,96
+pengwann-0.5.0.dist-info/licenses/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+pengwann/descriptors.py,sha256=IcUrZM4xKlD_yUPqEzvGdLsLH1maJH8Iw4Tw0xVIcBs,31042
+pengwann/geometry.py,sha256=3yiKlIqzfwyQXed-6QXHenmo8f05bu3-RUIN5qKIagA,15548
+pengwann/interactions.py,sha256=u-TwHf2teoevAozxrCB5Gu6RPN1HcoKnmGEME_dFR1E,27051
+pengwann/io.py,sha256=cc_PM3pB0iv5f1mCI0qkL08y-kzjLJCMhuc--HLLtkQ,8949
+pengwann/occupations.py,sha256=1rAgghanFNvEgXRPevLUphd5IJTjDMHuCVGeFDo27QE,7070
+pengwann/utils.py,sha256=QcxJxoNF334ACeK9pZ3yD5T9XeFV7WfKu_FHiSAZvuI,4912
+pengwann/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pengwann/_geometry.cp311-win_amd64.pyd,sha256=_6XV5vN198_HMp9tzMpZKTD6AzX5SehBNxX1IbVA5X4,403968
+pengwann-0.5.0.dist-info/RECORD,,
