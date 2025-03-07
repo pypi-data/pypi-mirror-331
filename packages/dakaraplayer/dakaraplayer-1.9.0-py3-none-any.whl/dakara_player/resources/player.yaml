@@ -1,0 +1,166 @@
+# Parameters for the player
+player:
+  # Name of the media player to use ('vlc' or 'mpv')
+  player_name: vlc
+
+  # Path of the karaoke folder
+  kara_folder: /path/to/folder
+
+  # Enable or disable fullscreen mode
+  fullscreen: false
+
+  # Parameters for VLC
+  # You can pass extra options to VLC through the media and/or instance
+  # parameters. Bellow are listed some common ones. For other options, consult
+  # VLC expanded help for a complete list of parameters:
+  #
+  # vlc --longhelp --full-help --advanced
+  #
+  # Not all parameters are allowed though. Some parameters only work on the
+  # instance, others only on the media.
+  vlc:
+    # Extra parameters passed to the media (for each file)
+    media_parameters:
+      # VLC hardware acceleration
+      # It is STRONGLY recommended to enable hardware acceleration if you run the
+      # server and the player on the same computer. You will experience unpleasant
+      # lags otherwise.
+      # You have to choose which hardware acceleration VLC will use, depending on your
+      # graphic card. Ensure that the corresponding drivers are installed on your
+      # system. Selecting the wrong hardware acceleration driver will result into
+      # laggy output or no output at all.
+      #
+      # For Linux:
+      # For Intel and ATI cards, use VA-API:
+      # - avcodec-hw=vaapi
+      # For Nvidia cards, use VDPAU which is chosen automatically by default. You can
+      # explicitely set it:
+      # - avcodec-hw=any
+      #
+      # For Windows:
+      # For any cards, use DirectX:
+      # - avcodec-hw=dxva2
+      #
+      # If for reasons you need to disable hardware acceleration completely:
+      # - avcodec-hw=none
+
+    # Extra parameters passed to the instance (at startup)
+    instance_parameters:
+      # Subtitle rendering
+      # You can force subtitle rendering to use screen resolution instead of video's.
+      # This will enhance subtitles quality on videos of small resolution, but may
+      # slow down the rendering if hardware decoding cannot be properly set.
+      #
+      # On Linux:
+      # - --vout x11
+      #
+      # On Windows:
+      # You should not have this problem.
+
+    # Make VLC manage its own window
+    # By default, a permanent Tkinter window is created and passed to VLC if
+    # possible. In contrast, when VLC manages its window, it will create a new
+    # one for each media, which may result in a blinking effect (especially
+    # visible on Windows).
+    # use_default_window = False
+
+  # Parameters for mpv
+  # You can define specific options for mpv from here
+  # To get a complete list of the available options, consult mpv documentation:
+  #
+  # mpv --list-options
+  mpv:
+    # Force a certain version of mpv.
+    # The project uses mpv differently depending on its version, which is
+    # automatically guessed. You can force the project to use mpv according to
+    # a certain version. Keep in mind that using a different version than the
+    # real current one may lead to crashes. Modify this only if you know what
+    # you are doing.
+    # force_version: 0.34.0
+
+    # Enable the debanding algorithm.
+    # This greatly reduces the amount of visible banding, blocking and other
+    # quantization artifacts, at the expense of very slightly blurring some of the
+    # finest details. In practice, it's virtually always an improvement - the only
+    # reason to disable it would be for performance.
+    deband: yes
+
+  # Parameters for templates
+  # Templates are used to display some information on the idle or the
+  # transition screens in text. They can be anything the media player can handle
+  # as subtitle, we chose the Advanced SubStation Alpha format as it is highly
+  # customizable. Users can create their own files and place them in
+  # ~/.local/share/dakara/playel/templates on Linux, or
+  # $APPDATA\Dakara\player\templates on Windows. Generic files from the package
+  # are used as fallback. The command 'dakara-play create-resources' will copy
+  # the generic files to the user directory.
+  templates:
+    # Name of the template for the transition screen text.
+    # This template displays information about the song to play (artist,
+    # details, etc.).
+    # Default is 'transition.ass'.
+    # transition_template_name: transition.ass
+
+    # Name of the template for the idle sceen text.
+    # This template displays information about the player (Dakara version,
+    # VLC/mpv version).
+    # Default is 'idle.ass'.
+    # idle_template_name: idle.ass
+
+  # Parameters for backgrounds
+  # Backgrounds are used during the idle or the transition screens. They can be
+  # a steady picture or a video, anything the media player can read. In case of
+  # pictures, they will be displayed for a certain amount of time. Users can
+  # use their own files and place them in
+  # ~/.local/share/dakara/playel/backgrounds on Linux, or
+  # $APPDATA\Dakara\player\backgrounds on Windows. Generic files from the
+  # package are used as fallback. The command 'dakara-play create-resources'
+  # will copy the generic files to the user directory.
+  backgrounds:
+    # Name of the background file of the transition screen.
+    # In case of a picture, it will be displayed during
+    # 'durations.transition_duration' seconds.
+    # Default is 'transition.png'.
+    # transition_background_name: transition.png
+
+    # Name of the background file of the idle screen.
+    # Default is 'idle.png'.
+    # idle_background_name: idle.png
+
+  # Parameters for durations
+  durations:
+    # Duration of the transition screen between two songs in seconds, won't work
+    # if the background file is a video.
+    # Default is 2 seconds.
+    # transition_duration: 2
+
+    # Interval of the jump when rewinding or advancing a media.
+    # Default is 10 seconds.
+    # rewind_fast_forward_duration: 10
+
+# Parameters for the server
+server:
+  # Server address (host and port given at the same time)
+  address: 127.0.0.1:8000
+
+  # Server host and port (given distinctly)
+  # host: 127.0.0.1
+  # port: 8000
+
+  # Token for server authentication
+  # You can find your token in "Settings > Token > Player token" on the dakara web client
+  token: tokenValue
+
+  # Use a secured connection
+  # ssl: false
+
+  # Interval to reconnect to the server if connection lost (in seconds)
+  # reconnect_interval: 5
+
+# Other parameters
+
+# Minimal level of messages to log
+# For debug level, you can call the command with the `−d` flag to show
+# traceback on exceptions.
+# Default is 'info'
+# loglevel: info

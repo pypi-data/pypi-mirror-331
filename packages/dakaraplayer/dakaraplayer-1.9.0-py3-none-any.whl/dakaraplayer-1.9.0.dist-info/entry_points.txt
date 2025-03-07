@@ -1,0 +1,2 @@
+[console_scripts]
+dakara-player = dakara_player.__main__:main
