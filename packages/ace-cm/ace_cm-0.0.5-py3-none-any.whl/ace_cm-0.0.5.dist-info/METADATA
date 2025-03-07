@@ -1,0 +1,43 @@
+Metadata-Version: 2.3
+Name: ace-cm
+Version: 0.0.5
+Summary: Access and save cookies from Streamlit for Streamlit
+License: Apache-2.0
+Author: Cem Bakar
+Author-email: cem.bakar@sonova.com
+Requires-Python: >=3.11,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Dist: cryptography (>=43.0.3)
+Requires-Dist: msal (>=1.31.0)
+Requires-Dist: streamlit (>=1.39)
+Description-Content-Type: text/markdown
+
+# ACE Cookie Manager
+
+Access and change browser cookies from Streamlit scripts:
+
+```python
+import os
+import streamlit as st
+from ace_cm import ECM
+
+# This should be on top of your script
+cookies = ECM(
+    prefix="ace/ace-cm/",
+    password=os.environ.get("COOKIES_PASSWORD", "My secret password"),
+)
+if not cookies.ready():
+    st.stop()
+
+st.write("Current cookies:", cookies)
+value = st.text_input("New value for a cookie")
+if st.button("Change the cookie"):
+    cookies['a-cookie'] = value  # This will get saved on next rerun
+    if st.button("No really, change it now"):
+        cookies.save()  # Force saving the cookies now, without a rerun
+```
+
