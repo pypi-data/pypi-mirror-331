@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: mltiming
+Version: 0.0.2
+Summary: A timing context manager for typical ML training.
+Project-URL: Homepage, https://github.com/schneiderkamplab/mltiming
+Project-URL: Bug Tracker, https://github.com/schneiderkamplab/mltiming/issues
+Author: Peter Schneider-Kamp
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+
+# mltiming
+timing context manager for typical ML training
