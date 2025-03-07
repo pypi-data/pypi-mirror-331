@@ -1,0 +1,76 @@
+Metadata-Version: 2.2
+Name: tasking
+Version: 1.0.2
+Summary: Perform time simulation, using scheduled tasks to update current state
+Author-email: revesansparole <revesansparole@gmail.com>
+Maintainer-email: revesansparole <revesansparole@gmail.com>, Jerome Chopard <revesansparole@gmail.com>
+License: cc_by_nc
+Project-URL: repository, https://gitlab.com/revesansparole/tasking
+Project-URL: pip, https://pypi.org/project/tasking/1.0.2/
+Project-URL: conda, https://anaconda.org/revesansparole/tasking
+Project-URL: doc, https://revesansparole.gitlab.io/tasking/
+Project-URL: pypi, https://badge.fury.io/py/tasking
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.7
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+License-File: AUTHORS.rst
+Provides-Extra: doc
+Requires-Dist: sphinx; extra == "doc"
+Requires-Dist: sphinx-gallery; extra == "doc"
+Requires-Dist: sphinx-rtd-theme; extra == "doc"
+Provides-Extra: dvlpt
+Requires-Dist: twine; extra == "dvlpt"
+Provides-Extra: test
+Requires-Dist: coverage; extra == "test"
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-cov; extra == "test"
+Requires-Dist: pytest-mock; extra == "test"
+
+========================
+tasking
+========================
+
+.. {# pkglts, doc
+
+.. image:: https://revesansparole.gitlab.io/tasking/_images/badge_pkging_pip.svg
+    :alt: PyPI version
+    :target: https://pypi.org/project/tasking/1.0.2/
+
+.. image:: https://revesansparole.gitlab.io/tasking/_images/badge_pkging_conda.svg
+    :alt: Conda version
+    :target: https://anaconda.org/revesansparole/tasking
+
+.. image:: https://revesansparole.gitlab.io/tasking/_images/badge_doc.svg
+    :alt: Documentation status
+    :target: https://revesansparole.gitlab.io/tasking/
+
+.. image:: https://badge.fury.io/py/tasking.svg
+    :alt: PyPI version
+    :target: https://badge.fury.io/py/tasking
+
+.. #}
+.. {# pkglts, glabpkg_dev, after doc
+
+main: |main_build|_ |main_coverage|_
+
+.. |main_build| image:: https://gitlab.com/revesansparole/tasking/badges/main/pipeline.svg
+.. _main_build: https://gitlab.com/revesansparole/tasking/commits/main
+
+.. |main_coverage| image:: https://gitlab.com/revesansparole/tasking/badges/main/coverage.svg
+.. _main_coverage: https://gitlab.com/revesansparole/tasking/commits/main
+.. #}
+
+Perform time simulation, using scheduled tasks to update current state
+
