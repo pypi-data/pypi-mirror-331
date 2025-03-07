@@ -1,0 +1,45 @@
+{
+  "openai": {
+    "gpt-4": {
+      "max_input_tokens": 8192,
+      "max_output_tokens": 4096,
+      "context_window": 8192
+    },
+    "gpt-4o": {
+      "max_input_tokens": 128000,
+      "max_output_tokens": 16384,
+      "context_window": 128000
+    },
+    "gpt-4o-mini": {
+      "max_input_tokens": 128000,
+      "max_output_tokens": 16384,
+      "context_window": 128000
+    }
+  },
+  "anthropic": {
+    "claude-3-5-sonnet-latest": {
+      "max_input_tokens": 200000,
+      "max_output_tokens": 8192,
+      "context_window": 200000
+    }
+  },
+    "google": {
+    "gemini-1.5-pro": {
+      "max_input_tokens": 2097152,
+      "max_output_tokens": 8192,
+      "context_window": 2097152
+    }
+  },
+   "deepseek": {
+    "deepseek-chat": {
+      "max_input_tokens": 32768,
+      "max_output_tokens": 4096,
+      "context_window": 32768
+    },
+    "deepseek-coder": {
+      "max_input_tokens": 16384,
+      "max_output_tokens": 4096,
+      "context_window": 16384
+    }
+  }
+}
