@@ -1,0 +1,6 @@
+flake8>=5.0.4
+opentelemetry-api
+pylint>=2.13.9
+pytest>=7.4.4
+requests
+setuptools>=68.0.0

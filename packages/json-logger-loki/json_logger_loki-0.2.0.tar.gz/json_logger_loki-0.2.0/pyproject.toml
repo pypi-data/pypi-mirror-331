@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+
+[project]
+name = "json_logger_loki"
+version = "0.2.0"
+description = "A JSON logger with OpenTelemetry and Loki support"
+authors = [{ name = "Rafael Brandao Ferreira", email = "rafaelbrandaof@gmail.com" }]
+dependencies = [
+    "requests",
+    "opentelemetry-api",
+    "pytest>=7.4.4",
+    "pylint>=2.13.9",
+    "setuptools>=68.0.0",
+    "flake8>=5.0.4",
+]
+requires-python = ">=3.7"
+
+[tool.black]
+line-length = 88
+target-version = ["py38"]
+
+[tool.flake8]
+max-line-length = 88
+ignore = ["E203", "W503"]
