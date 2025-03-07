@@ -1,0 +1,17 @@
+bluemap/_map.cpython-312-darwin.so,sha256=Py86bCz2hh8gGVyzvCdblcRhQCrtr9qcVFFtRRoAhuY,553216
+bluemap/stream.pyx,sha256=8Fj0ZWX2IaP6oYayI-o7nZDdLWiaRuUItdGA--PgW84,3206
+bluemap/__init__.py,sha256=Tx3FqdWWGkQjy0y3pjCLwvPbTYJmKte_VGy0UNxrjLY,157
+bluemap/_map.cpp,sha256=dEK-gp7JfOuqs81TWfG42Z3F5byFeV9JHyWPrNRR8Hg,1866510
+bluemap/_map.pyx,sha256=jsmBRGha39HurxXKF6xm58DJtJfhIyopvqFw7ghEejI,49547
+bluemap/stream.cpython-312-darwin.so,sha256=dbNIvXii1F94ghJ_WL32pSyDqowOa06hXee0E8Juk-Y,159312
+bluemap/stream.pxd,sha256=54G5fFAqxSwODbbn4M6cHLRDyd0P2fp_q8xr3PgcOTA,462
+bluemap/table.py,sha256=yEXp5MaYqGbYCTicAw74XXWz7g5-WN7y3r4QJUIh4kQ,5241
+bluemap/main.py,sha256=eBha2bviIBQvNb48GW2oYjkzQMINmiko2tQDoPwFMGs,15253
+bluemap/stream.c,sha256=FRtngzSf8Z78YbOzpcBeELqE8ezLKUD6N3rzz4RLPxM,552844
+bluemap/.dylibs/libstdc++.6.dylib,sha256=cz8KMwPkn8JOT0DVC2PgXbSCCpE695x0zenM-jHWArc,3401744
+bluemap/.dylibs/libgcc_s.1.1.dylib,sha256=Gaes_xvmaRdK2narVvVJDrqBzxYlORrsfTqwB3DeqaM,220512
+bluemap-0.0.1a1.dist-info/RECORD,,
+bluemap-0.0.1a1.dist-info/WHEEL,sha256=PF3hUI-sxdmRvLLR5zmnFo7NEDbuV3Xm-hds9jLlcYk,136
+bluemap-0.0.1a1.dist-info/entry_points.txt,sha256=mD_7vRgghLX1TtypWJoRY2K8mEV7nCPb1ublvrw_6tc,46
+bluemap-0.0.1a1.dist-info/top_level.txt,sha256=IMJjAgT9NPji03YDuebrqwbe4tIv0ZjT-PCQS-aXaM0,8
+bluemap-0.0.1a1.dist-info/METADATA,sha256=mRTH14QvJ_DvcrgxgHIa6qKLfqmwPRPwp9jiXIEPg9M,800
