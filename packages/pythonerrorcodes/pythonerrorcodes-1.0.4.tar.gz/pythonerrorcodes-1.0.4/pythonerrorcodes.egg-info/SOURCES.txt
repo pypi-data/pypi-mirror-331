@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+pythonerrorcodes.egg-info/PKG-INFO
+pythonerrorcodes.egg-info/SOURCES.txt
+pythonerrorcodes.egg-info/dependency_links.txt
+pythonerrorcodes.egg-info/top_level.txt
+pythonmodule/__init__.py
+pythonmodule/error_codes.py
+src/python/test.py
