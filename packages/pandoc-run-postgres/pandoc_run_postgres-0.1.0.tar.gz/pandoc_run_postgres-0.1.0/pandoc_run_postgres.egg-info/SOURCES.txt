@@ -1,0 +1,9 @@
+README.md
+pandoc_run_postgres.py
+pyproject.toml
+pandoc_run_postgres.egg-info/PKG-INFO
+pandoc_run_postgres.egg-info/SOURCES.txt
+pandoc_run_postgres.egg-info/dependency_links.txt
+pandoc_run_postgres.egg-info/entry_points.txt
+pandoc_run_postgres.egg-info/requires.txt
+pandoc_run_postgres.egg-info/top_level.txt
