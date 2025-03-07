@@ -1,0 +1,47 @@
+Metadata-Version: 2.4
+Name: nmodl-glia
+Version: 4.0.2
+Summary: NMODL Asset Manager for Arbor and NEURON
+Author-email: Robin De Schepper <robingilbert.deschepper@unipv.it>
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+License-File: LICENSE
+Requires-Dist: click~=8.0
+Requires-Dist: appdirs~=1.0
+Requires-Dist: errr~=1.2
+Requires-Dist: cookiecutter~=2.0
+Requires-Dist: black>=24.0
+Requires-Dist: toml~=0.10
+Requires-Dist: nmodl~=0.5;sys_platform != 'win32'
+Requires-Dist: importlib_metadata~=6.5
+Requires-Dist: arbor~=0.9 ; extra == "arbor"
+Requires-Dist: nmodl-glia[test, docs] ; extra == "dev"
+Requires-Dist: pre-commit~=3.5 ; extra == "dev"
+Requires-Dist: isort~=5.12 ; extra == "dev"
+Requires-Dist: bump-my-version~=1.0 ; extra == "dev"
+Requires-Dist: flit~=3.2 ; extra == "dev"
+Requires-Dist: sphinx~=7.0 ; extra == "docs"
+Requires-Dist: furo~=2023.9 ; extra == "docs"
+Requires-Dist: sphinxemoji~=0.2 ; extra == "docs"
+Requires-Dist: sphinx_design~=0.5 ; extra == "docs"
+Requires-Dist: sphinx-copybutton~=0.5 ; extra == "docs"
+Requires-Dist: nrn-patch~=4.0 ; extra == "neuron"
+Requires-Dist: mpi4py~=3.0 ; extra == "parallel"
+Requires-Dist: nmodl-glia[parallel] ; extra == "test"
+Requires-Dist: coverage~=7.0 ; extra == "test"
+Project-URL: Home, https://github.com/dbbs-lab/glia
+Provides-Extra: arbor
+Provides-Extra: dev
+Provides-Extra: docs
+Provides-Extra: neuron
+Provides-Extra: parallel
+Provides-Extra: test
+
+[![Build Status](https://github.com/dbbs-lab/glia/actions/workflows/main.yml/badge.svg)](https://github.com/dbbs-lab/glia)
+[![codecov](https://codecov.io/gh/dbbs-lab/glia/branch/main/graph/badge.svg)](https://codecov.io/gh/dbbs-lab/glia)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Documentation Status](https://readthedocs.org/projects/nrn-glia/badge/?version=latest)](https://nmodl-glia.readthedocs.io/en/latest/)
+
+# Glia: NMODL asset manager
+
+View the online documentation at [https://nmodl-glia.readthedocs.io/en/latest/](https://nmodl-glia.readthedocs.io/en/latest/)
