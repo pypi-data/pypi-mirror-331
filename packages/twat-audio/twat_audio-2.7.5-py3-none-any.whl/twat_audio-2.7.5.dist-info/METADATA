@@ -1,0 +1,99 @@
+Metadata-Version: 2.4
+Name: twat-audio
+Version: 2.7.5
+Summary: Audio processing plugin for TWAT
+Project-URL: Documentation, https://github.com/twardoch/twat-audio#readme
+Project-URL: Issues, https://github.com/twardoch/twat-audio/issues
+Project-URL: Source, https://github.com/twardoch/twat-audio
+Author-email: Adam Twardoch <adam+github@twardoch.com>
+License-Expression: MIT
+License-File: LICENSE
+Keywords: audio,processing,twat-plugin
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.10
+Requires-Dist: twat>=1.8.1
+Provides-Extra: all
+Requires-Dist: twat>=1.8.1; extra == 'all'
+Provides-Extra: dev
+Requires-Dist: absolufy-imports>=0.3.1; extra == 'dev'
+Requires-Dist: mypy>=1.15.0; extra == 'dev'
+Requires-Dist: pre-commit>=4.1.0; extra == 'dev'
+Requires-Dist: pyproject-pyupgrade>=0.1.1; extra == 'dev'
+Requires-Dist: pyupgrade-directories>=0.3.0; extra == 'dev'
+Requires-Dist: pyupgrade>=3.19.1; extra == 'dev'
+Requires-Dist: ruff>=0.9.7; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: myst-parser>=3.0.0; extra == 'docs'
+Requires-Dist: sphinx-autodoc-typehints>=2.0.0; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme>=2.0.0; extra == 'docs'
+Requires-Dist: sphinx>=7.2.6; extra == 'docs'
+Provides-Extra: test
+Requires-Dist: coverage[toml]>=7.6.12; extra == 'test'
+Requires-Dist: pytest-asyncio>=0.25.3; extra == 'test'
+Requires-Dist: pytest-benchmark[histogram]>=5.1.0; extra == 'test'
+Requires-Dist: pytest-cov>=6.0.0; extra == 'test'
+Requires-Dist: pytest-xdist>=3.6.1; extra == 'test'
+Requires-Dist: pytest>=8.3.4; extra == 'test'
+Description-Content-Type: text/markdown
+
+# 
+
+
+
+## Features
+
+- Modern Python packaging with PEP 621 compliance
+- Type hints and runtime type checking
+- Comprehensive test suite and documentation
+- CI/CD ready configuration
+
+## Installation
+
+```bash
+pip install twat-audio
+```
+
+## Usage
+
+```python
+import twat_audio
+```
+
+## Development
+
+This project uses [Hatch](https://hatch.pypa.io/) for development workflow management.
+
+### Setup Development Environment
+
+```bash
+# Install hatch if you haven't already
+pip install hatch
+
+# Create and activate development environment
+hatch shell
+
+# Run tests
+hatch run test
+
+# Run tests with coverage
+hatch run test-cov
+
+# Run linting
+hatch run lint
+
+# Format code
+hatch run format
+```
+
+## License
+
+MIT License  
+.
